@@ -13,6 +13,18 @@
 ; and it launches a new Notepad window (or activates an existing one).  To
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
 
+
+~^s:: 
+  IfWinActive, %A_ScriptName% 
+    { 
+       SplashTextOn,,,Updated script, 
+       Sleep, 200 
+       SplashTextOff 
+       Reload 
+    } 
+return
+
+
 #z::Run www.autohotkey.com
 
 ^!n::
@@ -38,7 +50,7 @@ return
 
 #n::Run Notepad
 
-#v::Run Gvim.bat
+#v::Run Gvim.exe
 
 #c::Run cmd.exe /k "cd %userprofile% & prompt=$p$_%username%@%computername%:$g"
 
@@ -46,3 +58,9 @@ CAPSLOCK::RETURN
 
 ; For some reason below doesn't work won close a window 
 ; ^w::WinKill
+
+; Power Shell command line
+#w::Run powershell.exe
+
+#h::Run chrome.exe
+
