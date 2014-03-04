@@ -1,3 +1,6 @@
+" POSTS ON INTENET ABOUT VIMRC :)
+" http://spf13.com/post/perfect-vimrc-vim-config-file
+
 
 set tabstop=4
 set shiftwidth=4
@@ -32,11 +35,14 @@ let mapleader = ','
 let g:mapleader = ','
 
 
-" Searching
-set ignorecase
 
 " show matching bracket
 set showmatch
+set incsearch
+set ignorecase
+set wildmenu  " show list instead of just completing
+
+
 
 " Turns of annoying sounds
 set noerrorbells
@@ -85,4 +91,5 @@ map <leader>sa zg
 map <leader>s? z=
 imap <C-Space> <C-n>
 
+set cursorline
 
