@@ -75,8 +75,11 @@ set showmatch
 set incsearch
 set ignorecase
 set wildmenu  " show list instead of just completing
+set wildmode=list:longest,full
 
-
+"Status line gnarliness
+set laststatus=2
+set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 
 " Turns of annoying sounds
 set noerrorbells
@@ -89,9 +92,13 @@ colorscheme desert
 set guifont=Consolas:h11
 set encoding=utf8
 
-set nobackup " not ~ files
-set nowb " ???
-set noswapfile " no .swp files :)
+" set nobackup " not ~ files
+" set nowb " ???
+" set noswapfile " no .swp files :)
+
+set backup
+set backupdir=~/.vim/backup
+set directory=~/.vim/tmp
 
 set shiftwidth=3 " ???
 set number " Show line numbers
@@ -176,5 +183,14 @@ if !exists(":DiffOrig")
   command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
 		  \ | wincmd p | diffthis
 endif
+
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+nnoremap <silent> zj o<Esc>
+nnoremap <silent> zk O<Esc>
+
+map N Nzz
+map n nzz
 
 
