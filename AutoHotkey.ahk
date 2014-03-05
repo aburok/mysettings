@@ -14,14 +14,14 @@
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
 
 
-~^s:: 
-  IfWinActive, %A_ScriptName% 
-    { 
-       SplashTextOn,,,Updated script, 
-       Sleep, 200 
-       SplashTextOff 
-       Reload 
-    } 
+~^s::
+  IfWinActive, %A_ScriptName%
+    {
+       SplashTextOn,,,Updated script,
+       Sleep, 200
+       SplashTextOff
+       Reload
+    }
 return
 
 
@@ -48,19 +48,51 @@ return
 ; ! - Alt key
 ; + - Shift key
 
+; ---------------------
+; WINDOWS KEY BINDINGS
+; ---------------------
 #n::Run Notepad
 
-#v::Run Gvim.exe
+#v::Run gvim
 
 #c::Run cmd.exe /k "cd %userprofile% & prompt=$p$_%username%@%computername%:$g"
-
-CAPSLOCK::RETURN
-
-; For some reason below doesn't work won close a window 
-; ^w::WinKill
 
 ; Power Shell command line
 #w::Run powershell.exe
 
-#h::Run chrome.exe
+#g::
+Send, ^c
+Run, http://www.google.com/search?q=%Clipboard%
+Return
+
+#o::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
+
+
+; #s::RunOrActivate("
+
+; ^w::WinKill
+
+; For some reason below doesn't work won close a window
+; Search for users in Active directory
+; %SystemRoot%\SYSTEM32\rundll32.exe dsquery,OpenQueryWindow
+
+
+CAPSLOCK::RETURN
+
+
+F12::
+EnvGet, pathset, Path
+MsgBox % pathset
+return
+
+
+; -----------------------
+; FUNCTIONS
+; -----------------------
+RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
+	IfWinExist, %WinTitle%
+	 	WinActivate, %WinTitle%
+	else
+		Run, %Target%
+}
 

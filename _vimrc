@@ -92,13 +92,13 @@ colorscheme desert
 set guifont=Consolas:h11
 set encoding=utf8
 
-" set nobackup " not ~ files
-" set nowb " ???
-" set noswapfile " no .swp files :)
+set nobackup " not ~ files
+set nowb " ???
+set noswapfile " no .swp files :)
 
-set backup
-set backupdir=~/.vim/backup
-set directory=~/.vim/tmp
+" set backup
+" set backupdir=~/.vim/backup
+" set directory=~/.vim/tmp
 
 set shiftwidth=3 " ???
 set number " Show line numbers
@@ -123,7 +123,7 @@ nmap <M-k> my:m-2<cr>`y
 " Ctrl + k
 " nmap <C-k> myO<esc>`y
 
-" Settings for spell checking 
+" Settings for spell checking
 map <leader>ss :setlocal spell!<CR>
 
 map <leader>sn ]s
