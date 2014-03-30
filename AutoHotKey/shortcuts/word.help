@@ -145,11 +145,11 @@ Ctrl + Delete/Ctrl + Backspace ; Delete one word to the right / to the left
 
 Delete ; Delete one character to the right or delete selection
 
-Ctrl + Shift + &lt;/Ctrl + Shift + &gt; ; Decrease / Increase font size one value
+Ctrl + Shift + < /Ctrl + Shift + > ; Decrease / Increase font size one value
 
 Ctrl + d or Ctrl + Shift + k ; Open the Font dialog box
 
-Ctrl + Shift + &lt;/Ctrl + Shift + &gt; ; Decrease / Increase font size one value
+Ctrl + Shift + </Ctrl + Shift + > ; Decrease / Increase font size one value
 
 Ctrl + [/Ctrl + ] ; Decrease / Increase font size one point
 
@@ -224,6 +224,7 @@ Ctrl + Space ; Remove all manual styles
 Ctrl + Shift + n ; Apply Normal style
 
 Ctrl + Shift + s ; Open Apply Styles task pane (will not close with pressing it a second time)
+
 
 Alt + Ctrl + k ; Start Auto Format
 
