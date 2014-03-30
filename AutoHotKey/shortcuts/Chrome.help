@@ -1,6 +1,5 @@
-// <tr>\_s\+<td[^>]*>\(.*\)<\/td>\_s\+<td>\(.\+\)<\/td>\_s\+<\/tr>
-<title>66 useful Keyboard Shortcuts for Chrome . </title>
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>1. Manage Tabs</th></tr>
+## 66 useful Keyboard Shortcuts for Chrome .
+## 1. Manage Tabs
  Ctrl+t ; Open new tab
 
  Ctrl+w or Ctrl+F4 ; Close tab (or close Chrome if only one tab is open)
@@ -30,10 +29,8 @@
  Drag link to existing tab ; Open link in selected tab
 
  Drag link to tab bar ; Open link in a new tab in the specified position on the tab strip.
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_2"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>2. Address Bar</th></tr>
+
+## 2. Address Bar
  Alt+d (or Ctrl+l) ; Jump to address bar; highlights current webpage URI if available
 
  Ctrl+e (or Ctrl+k) ; Enter search query in address bar
@@ -49,16 +46,11 @@
  Type search term and press Enter ; Perform a search using the search engine associated with the keyword or the URI.
 
  Type name of search engine and press Tab ; Tab-to-Search feature. E.g. Typing in 'yahoo.com' plus tab opens yahoo search. Add/edit search engines via 'Under the Hood' -&gt; Basic -&gt; Search Engines.
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_3"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>3. View Webpages</th></tr>
+
+## 3. View Webpages
  F6 ; Alternate focus between address bar and webpage
-<tr>
-<td class="shortcut">Arrow Down/Arrow Up
-with focus on webpage</td>
-<td>Scroll down / scroll up</td>
-</tr>
+
+ Arrow Down/Arrow Up with focus on webpage ; Scroll down / scroll up
 
  Page Down/Page Up ; Scroll one page down / one page up. Also use space/shift+space
 
@@ -71,10 +63,8 @@ with focus on webpage</td>
  Ctrl+u ; View webpage source
 
  F11 ; Turn full screen on / off
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_4"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>4. Browse between Webpages</th></tr>
+
+## 4. Browse between Webpages
  Alt+Home ; Jump to homepage
 
  Alt+Arrow Left/Arrow Right ; Jump to previous webpage visited / jump to next webpage
@@ -84,14 +74,10 @@ with focus on webpage</td>
  Ctrl+F5 or Shift+F5 ; Reload current webpage with cache override
 
  Esc ; Stop webpage loading
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_5"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>5. Browse within Webpages</th></tr><tr>
-<td class="shortcut">Tab/Shift+Tab
-with focus on webpage</td>
-<td>Jump to next / previous link</td>
-</tr>
+
+ ## 5. Browse within Webpages
+ Tab/Shift+Tab with focus on webpage
+ Jump to next / previous link
 
  Enter on link ; Open link in current tab
 
@@ -108,10 +94,8 @@ with focus on webpage</td>
  Ctrl+a ; Select all content on webpage
 
  Ctrl+c with content selected ; Copy selected content to clipboard
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_6"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>6. Access Browser Features</th></tr>
+
+## 6. Access Browser Features
  Ctrl+p ; Print current webpage (Chrome Print Dialog)
 
  Ctrl+Shift+p ; Print current webpage (Native Windows Print Dialog)
@@ -125,10 +109,8 @@ with focus on webpage</td>
  Ctrl+h ; Open History tab
 
  Ctrl+j ; Open Downloads tab
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_7"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>7. Search</th></tr>
+
+## 7. Search
  Ctrl+f or f3 ; Find text on webpage. Press Enter for
 
  Enter/ Shift+Enter with text found on webpage ; Find next / find previous match
@@ -136,10 +118,8 @@ with focus on webpage</td>
  Ctrl+G/Ctrl+Shift+G with text found on webpage ; Find next / find previous match
 
  Esc ; With focus on Search box: Close Search box
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_8"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>8. Bookmarks Shortcuts</th></tr>
+
+## 8. Bookmarks Shortcuts
  Ctrl+Shift+b ; Show or hide bookmarks bar
 
  Ctrl+d ; Add bookmark for current webpage
@@ -151,10 +131,8 @@ with focus on webpage</td>
  Alt+d, then f6 ; Jump to bookmark toolbar. Use arrow keys and enter to access bookmarks
 
  Alt+f, then b ; Open Bookmark Manager Tab
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_9"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>9. The Rest</th></tr>
+
+## 9. The Rest
  Shift+Alt+t ; Set focus on the toolbar. Use arrow keys to navigate between different buttons on the toolbar.
 
  Ctrl+Shift+i/Ctrl+Shift+j ; Open Developer Tools / JavaScript Console
