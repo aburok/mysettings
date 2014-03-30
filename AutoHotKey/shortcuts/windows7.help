@@ -7,554 +7,184 @@ Win+Arrow Down ; Set window to Restored (if Maximized) or Minimized (if Restored
 Win+Arrow Up ; Maximize window (if Restored)
 Win+Shift+Arrow Down/Win+Shift+Arrow Up ; Maximize Restored window vertically / Restore window to previous state
 
-    <tr>
-<td class="shortcut">Win+Arrow Right/Win+Arrow Left</td>
-<td>Move Restored window to left/center/right. Works across multiple monitors</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Shift+Arrow Right/Win+Shift+Arrow Left</td>
-<td>Move window to left monitor / to right monitor when using multiple monitors</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Space</td>
-<td>Opens the title bar menu</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Space+Enter</td>
-<td>Restore Window</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Space+x</td>
-<td>Maximize Window</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Space+n</td>
-<td>Minimize Window</td>
-    </tr>
-    <tr>
-<td class="shortcut">F11</td>
-<td>Turn full page view on or off</td>
-    </tr>
+    Win+Arrow Right/Win+Arrow Left ; Move Restored window to left/center/right. Works across multiple monitors
+    Win+Shift+Arrow Right/Win+Shift+Arrow Left ; Move window to left monitor / to right monitor when using multiple monitors
+    Alt+Space ; Opens the title bar menu
+    Alt+Space+Enter ; Restore Window
+    Alt+Space+x ; Maximize Window
+    Alt+Space+n ; Minimize Window
+    F11 ; Turn full page view on or off
     <tr><td class="supplemental" colspan="2">'Maximized' means full screen, 'Restored' means variable window size, and 'Minimized' means minimized to taskbar.</td></tr>
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Switch between Applications</th></tr><tr>
-<td class="shortcut">Alt+tab, <br>alt+Shift+Tab</td>
-<td>Cycles through open programs in taskbar. Hold alt and continuously press tab to move forward between applications. Release keys to switch to application selected. Add shift to reverse direction.</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Ctrl+tab, then use arrow keys to select application</td>
-<td>Cycles through open programs in taskbar without needing to hold alt continuously. Press alt+ctrl+tab once, then continue with arrow keys and press enter on application.</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Esc/Alt+Shift+Esc</td>
-<td>Cycle through programs on taskbar in the order they were opened or accessed</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Tab</td>
-<td>Cycle through programs using Aero Flip 3D</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Win+Tab</td>
-<td>Cycle through programs on Taskbar using Aero Flip 3D</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+g</td>
-<td>Cycle through Gadget Window</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Switch between Applications</th></tr>
+    Alt+tab, <br>alt+Shift+Tab ; Cycles through open programs in taskbar. Hold alt and continuously press tab to move forward between applications. Release keys to switch to application selected. Add shift to reverse direction.
+    Alt+Ctrl+tab, then use arrow keys to select application ; Cycles through open programs in taskbar without needing to hold alt continuously. Press alt+ctrl+tab once, then continue with arrow keys and press enter on application.
+    Alt+Esc/Alt+Shift+Esc ; Cycle through programs on taskbar in the order they were opened or accessed
+    Win+Tab ; Cycle through programs using Aero Flip 3D
+    Ctrl+Win+Tab ; Cycle through programs on Taskbar using Aero Flip 3D
+    Win+g ; Cycle through Gadget Window
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Manage Multiple Windows</th></tr><tr>
-<td class="shortcut">Win+d</td>
-<td>Minimize all windows on all Monitors. Press again to restore previous state</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+m</td>
-<td>Minimize all windows on current Monitor</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Shift+m</td>
-<td>Restore previously minimized windows on current Monitor</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Home</td>
-<td>Set all windows to Minimized on current Monitor except active</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Space</td>
-<td>Preview Desktop / make windows transparent (May not work with all Settings)</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Manage Multiple Windows</th></tr>
+    Win+d ; Minimize all windows on all Monitors. Press again to restore previous state
+    Win+m ; Minimize all windows on current Monitor
+    Win+Shift+m ; Restore previously minimized windows on current Monitor
+    Win+Home ; Set all windows to Minimized on current Monitor except active
+    Win+Space ; Preview Desktop / make windows transparent (May not work with all Settings)
 </tbody></table><div></div></div><p class="goto_top">▲ up</p>
 <a name="link_2"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>2. Accessing Windows Features</th></tr><tr>
-    <td class="shortcut">Win+e</td>
-    <td>Start Windows Explorer (in My Computer)</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+r</td>
-    <td>Open the Run window</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+f</td>
-    <td>Open Windows Search. f3 on empty desktop works, too.</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+l</td>
-    <td>Lock the keyboard/ computer</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+F1</td>
-    <td>Display Windows Help</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+Shift</td>
-    <td>Change keyboard language layout if multiple language layouts are active*</td>
-</tr>
-<tr>
-    <td class="shortcut">shift when inserting CD or DVD</td>
-    <td>Prevent CD or DVD from automatically playing</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+p</td>
-    <td>Choose Presentation Display Mode</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+x</td>
-    <td>Open Mobility Center</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>2. Accessing Windows Features</th></tr>
+Win+e ; Start Windows Explorer (in My Computer)
+Win+r ; Open the Run window
+Win+f ; Open Windows Search. f3 on empty desktop works, too.
+Win+l ; Lock the keyboard/ computer
+Win+F1 ; Display Windows Help
+Alt+Shift ; Change keyboard language layout if multiple language layouts are active*
+shift when inserting CD or DVD ; Prevent CD or DVD from automatically playing
+Win+p ; Choose Presentation Display Mode
+Win+x ; Open Mobility Center
 <tr><td class="supplemental" colspan="2">* When working with multiple Keyboards Layouts (e.g. Spanish/English/German). Add unlimited Layouts under Regional settings and activate language bar in Taskbar to see current language. Switch with shortcut any time.</td></tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_3"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>3. Windows 7 Taskbar</th></tr><tr>
-    <td class="shortcut">win or ctrl+Esc</td>
-    <td>Activate Start Button. Then use arrow keys, space and enter to navigate within Start Menu</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+t</td>
-    <td>Go to first item in taskbar, continue with arrow keys</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+b</td>
-    <td>Go to first item in system tray</td>
-</tr>
-<tr>
-    <td class="shortcut">Shift+click on a taskbar item</td>
-    <td>Start new instance of taskbar item</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+Shift+click on a taskbar item</td>
-    <td>Start new instance of taskbar item as administrator</td>
-</tr>
-<tr>
-    <td class="shortcut">Shift+right-click on a taskbar item</td>
-    <td>Show the window menu for the program</td>
-</tr>
-<tr>
-    <td class="shortcut">Win+1...9</td>
-    <td>Switch to application in position N on taskbar (or launch pinned application)</td>
-</tr>
-<tr>
-    <td class="shortcut">Shift+Win+1...9</td>
-    <td>Start new instance of taskbar item in position N on taskbar</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>3. Windows 7 Taskbar</th></tr>
+win or ctrl+Esc ; Activate Start Button. Then use arrow keys, space and enter to navigate within Start Menu
+Win+t ; Go to first item in taskbar, continue with arrow keys
+Win+b ; Go to first item in system tray
+Shift+click on a taskbar item ; Start new instance of taskbar item
+Ctrl+Shift+click on a taskbar item ; Start new instance of taskbar item as administrator
+Shift+right-click on a taskbar item ; Show the window menu for the program
+Win+1...9 ; Switch to application in position N on taskbar (or launch pinned application)
+Shift+Win+1...9 ; Start new instance of taskbar item in position N on taskbar
 <tr><td class="supplemental" colspan="2">Unfortunately, Microsoft removed the possibility to select multiple taskbar items in Windows 7</td></tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_4"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>4. Navigating Desktop</th></tr><tr>
-    <td class="shortcut">Arrow Keys</td>
-    <td>Navigate between and select single icons on desktop (when focus is on the desktop)</td>
-</tr>
-<tr>
-    <td class="shortcut">Home/End</td>
-    <td>Select first / select last object on desktop</td>
-</tr>
-<tr>
-    <td class="shortcut">Enter</td>
-    <td>Launch active icon</td>
-</tr>
-<tr>
-    <td class="shortcut">Shift+F10</td>
-    <td>Activate context menu of active icon by simulates right mouse button. Once in the context menu use arrow keys, a-z and enter to select item</td>
-</tr>
-<tr>
-    <td class="shortcut">tab, shift+tab on empty desktop</td>
-    <td>Navigate between desktop, the quick-launch bar, task bar and notification bar. Then use arrow keys and enter or space to activate specific icons</td>
-</tr>
-<tr>
-    <td class="shortcut">a, b, c, ...</td>
-    <td>Pressing the initial letter of the name of any objects will highlight the respective application or folder. Continue typing the object name if multiple objects start with the same letter</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>4. Navigating Desktop</th></tr>Arrow Keys ; Navigate between and select single icons on desktop (when focus is on the desktop)
+Home/End ; Select first / select last object on desktop
+Enter ; Launch active icon
+Shift+F10 ; Activate context menu of active icon by simulates right mouse button. Once in the context menu use arrow keys, a-z and enter to select item
+tab, shift+tab on empty desktop ; Navigate between desktop, the quick-launch bar, task bar and notification bar. Then use arrow keys and enter or space to activate specific icons
+a, b, c, ... ; Pressing the initial letter of the name of any objects will highlight the respective application or folder. Continue typing the object name if multiple objects start with the same letter
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_5"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>5. Windows Explorer</th></tr></tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Basics</th></tr><tr>
-<td class="shortcut">Win+e</td>
-<td>Start Windows Explorer (My Computer)</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Arrow Up</td>
-<td>Go up one folder</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Arrow Left/Alt+Arrow Right</td>
-<td>Go to previous folder / go to next folder</td>
-    </tr>
-    <tr>
-<td class="shortcut">Tab/Shift+Tab</td>
-<td>Switch focus forward/ backward between Address bar, Search Bar, Toolbar, Navigation Pane, and File List (Default is usually File List)</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+d or f4</td>
-<td>Jump to the Address bar and select absolute address. Copy address with ctrl+c if desired</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+e or ctrl+f</td>
-<td>Jump to Search Box in Explorer</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+n</td>
-<td>Open new instance of Windows Explorer</td>
-    </tr>
-    <tr>
-<td class="shortcut">F11</td>
-<td>Maximize window</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Basics</th></tr>
+    Win+e ; Start Windows Explorer (My Computer)
+    Alt+Arrow Up ; Go up one folder
+    Alt+Arrow Left/Alt+Arrow Right ; Go to previous folder / go to next folder
+    Tab/Shift+Tab ; Switch focus forward/ backward between Address bar, Search Bar, Toolbar, Navigation Pane, and File List (Default is usually File List)
+    Alt+d or f4 ; Jump to the Address bar and select absolute address. Copy address with ctrl+c if desired
+    Ctrl+e or ctrl+f ; Jump to Search Box in Explorer
+    Ctrl+n ; Open new instance of Windows Explorer
+    F11 ; Maximize window
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Navigate File List and Navigation Pane</th></tr><tr>
-<td class="shortcut">Arrow Keys</td>
-<td>Navigate between files and folders</td>
-    </tr>
-    <tr>
-<td class="shortcut">Enter</td>
-<td>Open folder or start application</td>
-    </tr>
-    <tr>
-<td class="shortcut">Home/End</td>
-<td>Jump to first / jump to last item</td>
-    </tr>
-    <tr>
-<td class="shortcut">F2</td>
-<td>Change the file name of active item</td>
-    </tr>
-    <tr>
-<td class="shortcut">f2, then arrow left/Arrow Right</td>
-<td>Move one character to the left / to the right in item name</td>
-    </tr>
-    <tr>
-<td class="shortcut">f2, then ctrl+Arrow Left/Ctrl+Arrow Right</td>
-<td>Jump one word to the left / to the right of item name</td>
-    </tr>
-    <tr>
-<td class="shortcut">f2, then home /End</td>
-<td>Jump to beginning / jump to end of item name</td>
-    </tr>
-    <tr>
-<td class="shortcut">f2, then ctrl+a</td>
-<td>Select complete object name including suffix (default excludes suffix)</td>
-    </tr>
-    <tr>
-<td class="shortcut">Arrow Left/Arrow Right</td>
-<td>Expand folder / collapse folder (navigation pane only)</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Navigate File List and Navigation Pane</th></tr>
+    Arrow Keys ; Navigate between files and folders
+    Enter ; Open folder or start application
+    Home/End ; Jump to first / jump to last item
+    F2 ; Change the file name of active item
+    f2, then arrow left/Arrow Right ; Move one character to the left / to the right in item name
+    f2, then ctrl+Arrow Left/Ctrl+Arrow Right ; Jump one word to the left / to the right of item name
+    f2, then home /End ; Jump to beginning / jump to end of item name
+    f2, then ctrl+a ; Select complete object name including suffix (default excludes suffix)
+    Arrow Left/Arrow Right ; Expand folder / collapse folder (navigation pane only)
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>File List</th></tr><tr>
-<td class="shortcut">Alt+p</td>
-<td>Display or hide Preview Pane</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+v then d</td>
-<td>View details. Check View menu for more options</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+v then x</td>
-<td>View extra-large icons. Check View menu for more options</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+mouse scroll wheel</td>
-<td>Change size of icons</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>File List</th></tr>
+    Alt+p ; Display or hide Preview Pane
+    Alt+v then d ; View details. Check View menu for more options
+    Alt+v then x ; View extra-large icons. Check View menu for more options
+    Ctrl+mouse scroll wheel ; Change size of icons
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Select Items in File List and Navigation Pane</th></tr><tr>
-<td class="shortcut">Shift+Arrow Up/Arrow Down</td>
-<td>Select multiple adjacent items (directly above or below)</td>
-    </tr>
-    <tr>
-<td class="shortcut">ctrl with arrow keys and space</td>
-<td>Select multiple non-adjacent items. Hold ctrl, use arrow keys to move to next item, and press space to add/remove from selection</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+a</td>
-<td>Select all</td>
-    </tr>
-    <tr>
-<td class="shortcut">a ...z and 1..9</td>
-<td>Press the initial letter any item to jump to it. Continue typing the full name if multiple items start with the same letter</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Select Items in File List and Navigation Pane</th></tr>
+    Shift+Arrow Up/Arrow Down ; Select multiple adjacent items (directly above or below)
+    ctrl with arrow keys and space ; Select multiple non-adjacent items. Hold ctrl, use arrow keys to move to next item, and press space to add/remove from selection
+    Ctrl+a ; Select all
+    a ...z and 1..9 ; Press the initial letter any item to jump to it. Continue typing the full name if multiple items start with the same letter
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Manipulate Items in Explorer</th></tr><tr>
-<td class="shortcut">Ctrl+c, ctrl+x, ctrl+v</td>
-<td>ctrl+c for copy, ctrl+x for cut and ctrl+v for paste</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+z</td>
-<td>Undo an action</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+y</td>
-<td>Redo an action</td>
-    </tr>
-    <tr>
-<td class="shortcut">Delete</td>
-<td>Delete an item and place it into the Recycle Bin</td>
-    </tr>
-    <tr>
-<td class="shortcut">Shift+Delete</td>
-<td>Delete an item permanently without placing it into the Recycle Bin</td>
-    </tr>
-    <tr>
-<td class="shortcut">Shift+F10</td>
-<td>Activate context menu of active object. Replaces the right mouse button. Once in the context menu use arrow keys, a-z and enter to get to the selection</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Shift+n</td>
-<td>Create new folder</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Enter</td>
-<td>Open Properties dialog box</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Manipulate Items in Explorer</th></tr>
+    Ctrl+c, ctrl+x, ctrl+v ; ctrl+c for copy, ctrl+x for cut and ctrl+v for paste
+    Ctrl+z ; Undo an action
+    Ctrl+y ; Redo an action
+    Delete ; Delete an item and place it into the Recycle Bin
+    Shift+Delete ; Delete an item permanently without placing it into the Recycle Bin
+    Shift+F10 ; Activate context menu of active object. Replaces the right mouse button. Once in the context menu use arrow keys, a-z and enter to get to the selection
+    Ctrl+Shift+n ; Create new folder
+    Alt+Enter ; Open Properties dialog box
 </tbody></table><div></div></div><p class="goto_top">▲ up</p>
 <a name="link_6"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>6. Photo Viewer</th></tr><tr>
-    <td class="shortcut">Arrow Left/Arrow Right</td>
-    <td>Go to next / go to previous photo</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+.</td>
-    <td>Rotate photo clockwise</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+,</td>
-    <td>Rotate photo counter-clockwise</td>
-</tr>
-<tr>
-    <td class="shortcut">[+]/-</td>
-    <td>Zoom in / zoom out (or mouse wheel)</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+0 (zero)</td>
-    <td>Fit to Window</td>
-</tr>
-<tr>
-    <td class="shortcut">Delete</td>
-    <td>Delete current photo</td>
-</tr>
-<tr>
-    <td class="shortcut">Shift+Delete</td>
-    <td>Permanently delete current photo</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+Enter</td>
-    <td>Show properties of current photo</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+e or ctrl+s</td>
-    <td>Email current photo</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+c</td>
-    <td>Copy current photo file to clipboard</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+o</td>
-    <td>Open current photo in other application (e.g. Paint of Office)</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>6. Photo Viewer</th></tr>
+Arrow Left/Arrow Right ; Go to next / go to previous photo
+Ctrl+. ; Rotate photo clockwise
+Ctrl+, ; Rotate photo counter-clockwise
+[+]/- ; Zoom in / zoom out (or mouse wheel)
+Ctrl+0 (zero) ; Fit to Window
+Delete ; Delete current photo
+Shift+Delete ; Permanently delete current photo
+Alt+Enter ; Show properties of current photo
+Alt+e or ctrl+s ; Email current photo
+Ctrl+c ; Copy current photo file to clipboard
+Alt+o ; Open current photo in other application (e.g. Paint of Office)
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_7"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>7. Dialog Boxes</th></tr><tr>
-    <td class="shortcut">Ctrl+Tab/Ctrl+Shift+Tab</td>
-    <td>Move forward / move backwards through tabs</td>
-</tr>
-<tr>
-    <td class="shortcut">Tab/Shift+Tab</td>
-    <td>Move forward / move backwards through options</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+underlined letter</td>
-    <td>Perform the command (or select the option) that goes with that letter</td>
-</tr>
-<tr>
-    <td class="shortcut">Enter</td>
-    <td>Replaces clicking the mouse for many selected commands</td>
-</tr>
-<tr>
-    <td class="shortcut">Space</td>
-    <td>Select or clear the check box if the active option is a check box</td>
-</tr>
-<tr>
-    <td class="shortcut">Arrow Keys</td>
-    <td>Select a button if the active option is a group of option buttons</td>
-</tr>
-<tr>
-    <td class="shortcut">F4</td>
-    <td>Display the items in the active list</td>
-</tr>
-<tr>
-    <td class="shortcut">Backspace</td>
-    <td>Open a folder one level up if a folder is selected in the Save As or Open dialog box</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>7. Dialog Boxes</th></tr>
+Ctrl+Tab/Ctrl+Shift+Tab ; Move forward / move backwards through tabs
+Tab/Shift+Tab ; Move forward / move backwards through options
+Alt+underlined letter ; Perform the command (or select the option) that goes with that letter
+Enter ; Replaces clicking the mouse for many selected commands
+Space ; Select or clear the check box if the active option is a check box
+Arrow Keys ; Select a button if the active option is a group of option buttons
+F4 ; Display the items in the active list
+Backspace ; Open a folder one level up if a folder is selected in the Save As or Open dialog box
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_8"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>8. Windows Admin</th></tr></tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Admin Tasks</th></tr><tr>
-<td class="shortcut">Ctrl+Win+f</td>
-<td>Search for Computers (with Active Directory activated)</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+pause/break</td>
-<td>Display System Properties which holds system properties, computer name, device manager and so on</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Shift+Esc</td>
-<td>Opens Windows Task Manager</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Admin Tasks</th></tr>
+    Ctrl+Win+f ; Search for Computers (with Active Directory activated)
+    Win+pause/break ; Display System Properties which holds system properties, computer name, device manager and so on
+    Ctrl+Shift+Esc ; Opens Windows Task Manager
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Remote Desktop</th></tr><tr>
-<td class="shortcut">Alt+Page Up/Alt+Page Down</td>
-<td>Move between programs from left to right / from right to left</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Insert</td>
-<td>Cycle through programs in the order that they were started in</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Home</td>
-<td>Display the Start menu</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Alt+pause/break</td>
-<td>Switch between a window and full screen</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Alt+End</td>
-<td>Display the Windows Security dialog box</td>
-    </tr>
-    <tr>
-<td class="shortcut">Alt+Delete</td>
-<td>Display the system menu</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Remote Desktop</th></tr>
+    Alt+Page Up/Alt+Page Down ; Move between programs from left to right / from right to left
+    Alt+Insert ; Cycle through programs in the order that they were started in
+    Alt+Home ; Display the Start menu
+    Ctrl+Alt+pause/break ; Switch between a window and full screen
+    Ctrl+Alt+End ; Display the Windows Security dialog box
+    Alt+Delete ; Display the system menu
 </tbody></table><div></div></div><p class="goto_top">▲ up</p>
 <a name="link_9"></a>
 <table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>9. Windows Help</th></tr><tr>
-    <td class="shortcut">Tab</td>
-    <td>Move between links</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+c</td>
-    <td>Display the Table of Contents</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+n</td>
-    <td>Display the Connection Settings menu</td>
-</tr>
-<tr>
-    <td class="shortcut">F10</td>
-    <td>Display the Options menu</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+Arrow Left/Alt+Arrow Right</td>
-    <td>Move back / move forward to the previously/ next viewed topic</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+a</td>
-    <td>Display the customer support page</td>
-</tr>
-<tr>
-    <td class="shortcut">Alt+Home</td>
-    <td>Display the Help and Support home page</td>
-</tr>
-<tr>
-    <td class="shortcut">Home/End</td>
-    <td>Move to the beginning / to the end of a topic</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+f</td>
-    <td>Search the current topic. Press tab to leave</td>
-</tr>
-<tr>
-    <td class="shortcut">Ctrl+p</td>
-    <td>Print a topic</td>
-</tr>
-<tr>
-    <td class="shortcut">F3</td>
-    <td>Move the cursor to the search box. Press tab to leave</td>
-</tr>
+<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>9. Windows Help</th></tr>
+Tab ; Move between links
+Alt+c ; Display the Table of Contents
+Alt+n ; Display the Connection Settings menu
+F10 ; Display the Options menu
+Alt+Arrow Left/Alt+Arrow Right ; Move back / move forward to the previously/ next viewed topic
+Alt+a ; Display the customer support page
+Alt+Home ; Display the Help and Support home page
+Home/End ; Move to the beginning / to the end of a topic
+Ctrl+f ; Search the current topic. Press tab to leave
+Ctrl+p ; Print a topic
+F3 ; Move the cursor to the search box. Press tab to leave
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_10"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse main"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand main"></span>10. Ease of Access and Magnifier</th></tr></tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Ease of Access</th></tr><tr>
-<td class="shortcut">Win+u</td>
-<td>Open Ease of Access Center</td>
-    </tr>
-    <tr>
-<td class="shortcut">Press shift five times.</td>
-<td>Turn Sticky Keys on or off</td>
-    </tr>
-    <tr>
-<td class="shortcut">Press num lock for five seconds</td>
-<td>Turn Toggle Keys on or off</td>
-    </tr>
-    <tr>
-<td class="shortcut">Right shift for eight seconds</td>
-<td>Turn Filter Keys on or off</td>
-    </tr>
-    <tr>
-<td class="shortcut">left alt + left shift +Num Lock</td>
-<td>Turn Mouse Keys on or off</td>
-    </tr>
-    <tr>
-<td class="shortcut">left alt + left shift + prtScn</td>
-<td>Turn High Contract on or off (Careful, will change theme!)</td>
-    </tr>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Ease of Access</th></tr>
+    Win+u ; Open Ease of Access Center
+    Press shift five times. ; Turn Sticky Keys on or off
+    Press num lock for five seconds ; Turn Toggle Keys on or off
+    Right shift for eight seconds ; Turn Filter Keys on or off
+    left alt + left shift +Num Lock ; Turn Mouse Keys on or off
+    left alt + left shift + prtScn ; Turn High Contract on or off (Careful, will change theme!)
 </tbody></table><div></div><table class="category sub" cellspacing="0">
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Magnifier</th></tr><tr>
-<td class="shortcut">Win+[+]</td>
-<td>Start Magnifier and zoom in</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+-</td>
-<td>Zoom out with Magnifier active</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Alt+i</td>
-<td>Invert colors in Magnifier display</td>
-    </tr>
-    <tr>
-<td class="shortcut">Win+Esc</td>
-<td>Exit Magnifier</td>
-    </tr>
-    <tr>
-<td class="shortcut">Ctrl+Alt+Arrow Keys</td>
-<td>Move the Magnifier windows</td>
-    </tr>
-    <tr><td class="supplemental" colspan="2">Note: Microsoft lists more shortcuts for Magnifier, but not all of them seem to work.</td></tr>
-</tbody></table><div></div></div><p class="goto_top">▲ up</p>
-</div></td></tr><tr><td colspan="2" class="footer"><p><a href="http://www.shortcutworld.com/legal.php">Shortcuts published under Creative Common License where possible.<br>Website: Copyright 2006-2014. <span class="tou">Terms of Use</span></a></p></td></tr></tbody></table></div><script type="text/javascript" src="./128 useful Keyboard Shortcuts for Windows 7._files/display.js"></script>
-<script type="text/javascript" src="./128 useful Keyboard Shortcuts for Windows 7._files/jquery.hotkeys-0.7.9.js"></script>
-<script type="text/javascript" src="./128 useful Keyboard Shortcuts for Windows 7._files/shortcuts_display.js"></script>
-<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));  </script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
-<script type="text/javascript"> try { var pageTracker = _gat._getTracker("UA-6823891-1");  pageTracker._trackPageview();  } catch(err) {}  </script>
-<script type="text/javascript">(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = 'https://apis.google.com/js/plusone.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
-<iframe name="oauth2relay270623099" id="oauth2relay270623099" src="./128 useful Keyboard Shortcuts for Windows 7._files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div class="vimiumReset vimiumHUD" style="right: 150px; opacity: 0; display: none;"></div></body>
+    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Magnifier</th></tr>
+    Win+[+] ; Start Magnifier and zoom in
+    Win+- ; Zoom out with Magnifier active
+    Ctrl+Alt+i ; Invert colors in Magnifier display
+    Win+Esc ; Exit Magnifier
+    Ctrl+Alt+Arrow Keys ; Move the Magnifier windows
