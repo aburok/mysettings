@@ -20,6 +20,7 @@
 :bufdo /searchstr/ ; Search in all open files
 /\v^.+(^.*MUST BE.*$)@<!$ ; Search all lines not containing text 'MUST BE' in it. \v option set escaping opertators like + or ) not needed. @<! operator is negative look-behind
 /^\(.*\)\n\1$ ; Search duplicated lines in text
+<C-R> / ; Copy from search register, last searched term
 
 // Replace
 :%s/old/new/g ; Replace all occurences of old by new in file
