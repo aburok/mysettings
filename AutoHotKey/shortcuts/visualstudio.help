@@ -434,3 +434,79 @@ Ctrl-Alt-X
 	Displays the Toolbox, which contains controls and other items that can be dragged into editor and designer windows
 
 
+Tfs Annotate Move Next Region
+    Alt+PgDn
+Tfs Annotate Move Previous Region
+    Alt+PgUp
+Go To Builds
+    Ctrl+0, Ctrl+B
+    Ctrl+0, B
+Go To Connect
+    Ctrl+0, Ctrl+C
+    Ctrl+0, C
+Go To Documents
+    Ctrl+0, Ctrl+D
+    Ctrl+0, D
+Go To Home
+    Ctrl+0, Ctrl+H
+    Ctrl+0, H
+Go To My Work
+    Ctrl+0, Ctrl+M
+    Ctrl+0, M
+Go To Pending Changes
+    Ctrl+0, Ctrl+P
+    Ctrl+0, P
+Go To Reports
+    Ctrl+0, Ctrl+R
+    Ctrl+0, R
+Go To Settings
+    Ctrl+0, Ctrl+S
+    Ctrl+0, S
+Go To Team Explorer Navigation
+    Alt+Home
+Go To Team Explorer Next Section Content
+    Alt+Down Arrow
+Go To Team Explorer Page Content
+    Alt+0
+Go To Team Explorer Previous Section Content
+    Alt+Up Arrow
+Go To Team Explorer Section1 Content
+    Alt+1
+Go To Team Explorer Section2 Content
+    Alt+2
+Go To Team Explorer Section3 Content
+    Alt+3
+Go To Team Explorer Section4 Content
+    Alt+4
+Go To Team Explorer Section5 Content
+    Alt+5
+Go To Team Explorer Section6 Content
+    Alt+6
+Go To Team Explorer Section7 Content
+    Alt+7
+Go To Team Explorer Section8 Content
+    Alt+8
+Go To Team Explorer Section9 Content
+    Alt+9
+Go To Web Access
+    Ctrl+0, Ctrl+A
+    Ctrl+0, A
+Go To Work Items
+    Ctrl+0, Ctrl+W
+    Ctrl+0, W
+Team Explorer Navigate Backward
+    Alt+Left Arrow
+Team Explorer Navigate Forward
+    Alt+Right Arrow
+Set Focuson Left Window
+    Alt+1
+Set Focuson Result Window
+    Alt+2
+Set Focuson Right Window
+    Alt+3
+Tfs Context My Work Page Create Copy WI
+    Shift+Alt+C
+Tfs Context My Work Page New Linked WI
+    Shift+Alt+L
+
+
