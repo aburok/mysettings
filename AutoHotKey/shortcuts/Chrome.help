@@ -1,54 +1,54 @@
 <title>66 useful Keyboard Shortcuts for Chrome . </title>
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>1. Manage Tabs</th></tr><tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">t</span></td>
-<td>Open new <span class="kbd">t</span>ab</td>
+<td class="shortcut">Ctrl+t</td>
+<td>Open new tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">w</span> or <span class="kbd">Ctrl</span>+<span class="kbd">F4</span></td>
+<td class="shortcut">Ctrl+w or Ctrl+F4</td>
 <td>Close tab (or close Chrome if only one tab is open)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">t</span></td>
+<td class="shortcut">Ctrl+Shift+t</td>
 <td>Reopen last tab closed. Up to 10 tabs.</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">1</span> through <span class="kbd">Ctrl</span>+<span class="kbd">8</span></td>
+<td class="shortcut">Ctrl+1 through Ctrl+8</td>
 <td>Jump to first tab, second tab, etc.</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">9</span></td>
+<td class="shortcut">Ctrl+9</td>
 <td>Switch to the last tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Tab</span>/<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">Tab</span></td>
-<td>Switch to the next / previous tab <br>(or use <span class="kbd">ctrl</span>+<span class="kbd">page up</span>/<span class="kbd">ctrl</span>+<span class="kbd">page down</span>)</td>
+<td class="shortcut">Ctrl+Tab/Ctrl+Shift+Tab</td>
+<td>Switch to the next / previous tab <br>(or use ctrl+page up/ctrl+page down)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">n</span></td>
-<td>Open <span class="kbd">n</span>ew Chrome window</td>
+<td class="shortcut">Ctrl+n</td>
+<td>Open new Chrome window</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">n</span></td>
-<td>Open <span class="kbd">n</span>ew Chrome window in incognito mode</td>
+<td class="shortcut">Ctrl+Shift+n</td>
+<td>Open new Chrome window in incognito mode</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">F4</span></td>
+<td class="shortcut">Alt+F4</td>
 <td>Close current window</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span> and click on link</td>
+<td class="shortcut">Ctrl and click on link</td>
 <td>Open link in a new background tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">ctrl</span> and click on link</td>
+<td class="shortcut">Shift+ctrl and click on link</td>
 <td>Open link in a new foreground tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span> and click on link</td>
+<td class="shortcut">Shift and click on link</td>
 <td>Open link in a new window</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span> and click on link</td>
+<td class="shortcut">Alt and click on link</td>
 <td>Download link</td>
 </tr>
 <tr>
@@ -63,229 +63,229 @@
 <a name="link_2"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>2. Address Bar</th></tr><tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">d</span> (or <span class="kbd">Ctrl</span>+<span class="kbd">l</span>)</td>
-<td>Jump to a<span class="kbd">d</span>dress bar; highlights current webpage URI if available</td>
+<td class="shortcut">Alt+d (or Ctrl+l)</td>
+<td>Jump to address bar; highlights current webpage URI if available</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">e</span> (or <span class="kbd">Ctrl</span>+<span class="kbd">k</span>)</td>
-<td>Enter s<span class="kbd">e</span>arch query in address bar</td>
+<td class="shortcut">Ctrl+e (or Ctrl+k)</td>
+<td>Enter search query in address bar</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Home</span>/<span class="kbd">Rnd</span> in address bar</td>
+<td class="shortcut">Home/Rnd in address bar</td>
 <td>Jump to beginning / end of address bar</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">a</span> in address bar</td>
-<td>Select <span class="kbd">a</span>ll text of address. Also use <span class="kbd">shift</span>+<span class="kbd">end</span> with cursor at beginning or <span class="kbd">shift</span>+<span class="kbd">home</span> with cursor at end</td>
+<td class="shortcut">Ctrl+a in address bar</td>
+<td>Select all text of address. Also use shift+end with cursor at beginning or shift+home with cursor at end</td>
 </tr>
 <tr>
-<td class="shortcut">Type name of site and press <span class="kbd">Ctrl</span>+<span class="kbd">Enter</span></td>
+<td class="shortcut">Type name of site and press Ctrl+Enter</td>
 <td>Add www. to beginning and .com to end of input and opens the web address in current tab.</td>
 </tr>
 <tr>
-<td class="shortcut">Type name of site and press <span class="kbd">Alt</span>+<span class="kbd">Enter</span></td>
+<td class="shortcut">Type name of site and press Alt+Enter</td>
 <td>Add www. to beginning and .com to end of input and opens the web address in new background tab.</td>
 </tr>
 <tr>
-<td class="shortcut">Type search term and press <span class="kbd">Enter</span></td>
+<td class="shortcut">Type search term and press Enter</td>
 <td>Perform a search using the search engine associated with the keyword or the URI.</td>
 </tr>
 <tr>
-<td class="shortcut">Type name of search engine and press <span class="kbd">Tab</span></td>
-<td>Tab-to-Search feature. E.g. Typing in 'yahoo.com' plus <span class="kbd">tab</span> opens yahoo search. Add/edit search engines via 'Under the Hood' -&gt; Basic -&gt; Search Engines.</td>
+<td class="shortcut">Type name of search engine and press Tab</td>
+<td>Tab-to-Search feature. E.g. Typing in 'yahoo.com' plus tab opens yahoo search. Add/edit search engines via 'Under the Hood' -&gt; Basic -&gt; Search Engines.</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_3"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>3. View Webpages</th></tr><tr>
-<td class="shortcut"><span class="kbd">F6</span></td>
+<td class="shortcut">F6</td>
 <td>Alternate focus between address bar and webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Arrow Down</span>/<span class="kbd">Arrow Up</span>
+<td class="shortcut">Arrow Down/Arrow Up
 with focus on webpage</td>
 <td>Scroll down / scroll up</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Page Down</span>/<span class="kbd">Page Up</span></td>
-<td>Scroll one page down / one page up. Also use <span class="kbd">space</span>/<span class="kbd">shift</span>+<span class="kbd">space</span></td>
+<td class="shortcut">Page Down/Page Up</td>
+<td>Scroll one page down / one page up. Also use space/shift+space</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Home</span>/<span class="kbd">End</span></td>
+<td class="shortcut">Home/End</td>
 <td>Jump to beginning / to end of webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">+</span>/<span class="kbd">-</span></td>
-<td>Zoom in / zoom out (or <span class="kbd">ctrl</span>+mousewheel)</td>
+<td class="shortcut">Ctrl++/-</td>
+<td>Zoom in / zoom out (or ctrl+mousewheel)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">0</span> (zero)</td>
+<td class="shortcut">Ctrl+0 (zero)</td>
 <td>Return zoom to normal text size</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">u</span></td>
-<td>View webpage so<span class="kbd">u</span>rce</td>
+<td class="shortcut">Ctrl+u</td>
+<td>View webpage source</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">F11</span></td>
+<td class="shortcut">F11</td>
 <td>Turn full screen on / off</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_4"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>4. Browse between Webpages</th></tr><tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">Home</span></td>
+<td class="shortcut">Alt+Home</td>
 <td>Jump to homepage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">Arrow Left</span>/<span class="kbd">Arrow Right</span></td>
+<td class="shortcut">Alt+Arrow Left/Arrow Right</td>
 <td>Jump to previous webpage visited / jump to next webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">f5</span> or <span class="kbd">Ctrl</span>+<span class="kbd">r</span></td>
+<td class="shortcut">f5 or Ctrl+r</td>
 <td>Reload current webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">F5</span> or <span class="kbd">Shift</span>+<span class="kbd">F5</span></td>
+<td class="shortcut">Ctrl+F5 or Shift+F5</td>
 <td>Reload current webpage with cache override</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Esc</span></td>
+<td class="shortcut">Esc</td>
 <td>Stop webpage loading</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_5"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>5. Browse within Webpages</th></tr><tr>
-<td class="shortcut"><span class="kbd">Tab</span>/<span class="kbd">Shift</span>+<span class="kbd">Tab</span>
+<td class="shortcut">Tab/Shift+Tab
 with focus on webpage</td>
 <td>Jump to next / previous link</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Enter</span> on link</td>
+<td class="shortcut">Enter on link</td>
 <td>Open link in current tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">enter</span> on link</td>
+<td class="shortcut">Ctrl+enter on link</td>
 <td>Open link in a new background tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">Ctrl</span>+<span class="kbd">Enter</span> on link</td>
+<td class="shortcut">Shift+Ctrl+Enter on link</td>
 <td>Open link in a new foreground tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">Enter</span> on link</td>
+<td class="shortcut">Shift+Enter on link</td>
 <td>Open link in a new window</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">Enter</span> on link</td>
+<td class="shortcut">Alt+Enter on link</td>
 <td>Download link</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">F10</span></td>
+<td class="shortcut">Shift+F10</td>
 <td>Open context menu (simulate right mouse button)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">a</span></td>
-<td>Select <span class="kbd">a</span>ll content on webpage</td>
+<td class="shortcut">Ctrl+a</td>
+<td>Select all content on webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">c</span> with content selected</td>
-<td><span class="kbd">C</span>opy selected content to clipboard</td>
+<td class="shortcut">Ctrl+c with content selected</td>
+<td>Copy selected content to clipboard</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_6"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>6. Access Browser Features</th></tr><tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">p</span></td>
-<td><span class="kbd">P</span>rint current webpage (Chrome Print Dialog)</td>
+<td class="shortcut">Ctrl+p</td>
+<td>Print current webpage (Chrome Print Dialog)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">p</span></td>
-<td><span class="kbd">P</span>rint current webpage (Native Windows Print Dialog)</td>
+<td class="shortcut">Ctrl+Shift+p</td>
+<td>Print current webpage (Native Windows Print Dialog)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">o</span></td>
-<td><span class="kbd">O</span>pen file</td>
+<td class="shortcut">Ctrl+o</td>
+<td>Open file</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">s</span></td>
-<td><span class="kbd">S</span>ave current webpage</td>
+<td class="shortcut">Ctrl+s</td>
+<td>Save current webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">f</span></td>
-<td>Open Wrench Menu (I'd call it <span class="kbd">f</span>ile menu to remember the shortcut)</td>
+<td class="shortcut">Alt+f</td>
+<td>Open Wrench Menu (I'd call it file menu to remember the shortcut)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">h</span></td>
-<td>Open <span class="kbd">H</span>istory tab</td>
+<td class="shortcut">Ctrl+h</td>
+<td>Open History tab</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">j</span></td>
+<td class="shortcut">Ctrl+j</td>
 <td>Open Downloads tab</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_7"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>7. Search</th></tr><tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">f</span> or <span class="kbd">f3</span></td>
-<td><span class="kbd">F</span>ind text on webpage. Press <span class="kbd">Enter</span> for</td>
+<td class="shortcut">Ctrl+f or f3</td>
+<td>Find text on webpage. Press Enter for</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Enter</span>/ <span class="kbd">Shift</span>+<span class="kbd">Enter</span> with text found on webpage</td>
+<td class="shortcut">Enter/ Shift+Enter with text found on webpage</td>
 <td>Find next / find previous match</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">G</span>/<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">G</span> with text found on webpage</td>
+<td class="shortcut">Ctrl+G/Ctrl+Shift+G with text found on webpage</td>
 <td>Find next / find previous match</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Esc</span></td>
+<td class="shortcut">Esc</td>
 <td>With focus on Search box: Close Search box</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_8"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>8. Bookmarks Shortcuts</th></tr><tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">b</span></td>
-<td>Show or hide <span class="kbd">b</span>ookmarks bar</td>
+<td class="shortcut">Ctrl+Shift+b</td>
+<td>Show or hide bookmarks bar</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">d</span></td>
-<td>Ad<span class="kbd">d</span> bookmark for current webpage</td>
+<td class="shortcut">Ctrl+d</td>
+<td>Add bookmark for current webpage</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">d</span></td>
-<td>Ad<span class="kbd">d</span> bookmark for current webpage and edit details</td>
+<td class="shortcut">Ctrl+Shift+d</td>
+<td>Add bookmark for current webpage and edit details</td>
 </tr>
 <tr>
 <td class="shortcut">Drag URI to bookmark bar</td>
 <td>Bookmark webpage (can be URI from address bar or link from page)</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">d</span>, then <span class="kbd">f6</span></td>
-<td>Jump to bookmark toolbar. Use <span class="kbd">arrow keys</span> and <span class="kbd">enter</span> to access bookmarks</td>
+<td class="shortcut">Alt+d, then f6</td>
+<td>Jump to bookmark toolbar. Use arrow keys and enter to access bookmarks</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Alt</span>+<span class="kbd">f</span>, then <span class="kbd">b</span></td>
-<td>Open <span class="kbd">B</span>ookmark Manager Tab</td>
+<td class="shortcut">Alt+f, then b</td>
+<td>Open Bookmark Manager Tab</td>
 </tr>
 </tbody></table><p class="goto_top">▲ up</p>
 <a name="link_9"></a>
 <table class="category main" cellspacing="0">
 <tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./66 useful Keyboard Shortcuts for Chrome ._files/minus.gif" class="collapse main"><img src="./66 useful Keyboard Shortcuts for Chrome ._files/plus.gif" alt="plus" class="expand main"></span>9. The Rest</th></tr><tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">Alt</span>+<span class="kbd">t</span></td>
-<td>Set focus on the toolbar. Use <span class="kbd">arrow keys</span> to navigate between different buttons on the toolbar.</td>
+<td class="shortcut">Shift+Alt+t</td>
+<td>Set focus on the toolbar. Use arrow keys to navigate between different buttons on the toolbar.</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">i</span>/<span class="kbd">Ctrl</span>+<span class="kbd">Shift</span>+<span class="kbd">j</span></td>
+<td class="shortcut">Ctrl+Shift+i/Ctrl+Shift+j</td>
 <td>Open Developer Tools / JavaScript Console</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">Shift</span>+<span class="kbd">Esc</span></td>
+<td class="shortcut">Shift+Esc</td>
 <td>View Google Task manager</td>
 </tr>
 <tr>
-<td class="shortcut"><span class="kbd">F1</span></td>
+<td class="shortcut">F1</td>
 <td>Chrome Help</td>
 </tr>
