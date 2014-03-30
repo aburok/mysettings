@@ -1,36 +1,34 @@
-<!DOCTYPE html>
-
-<title>128 useful Keyboard Shortcuts for Windows 7. </title>
-// 1. Managing 'Windows' in Windows 7<tr>
+// 128 useful Keyboard Shortcuts for Windows 7.
+// 1. Managing 'Windows' in Windows 7
 // Move and Resize Active Window
+
 Win+Arrow Down ; Set window to Restored (if Maximized) or Minimized (if Restored)
 Win+Arrow Up ; Maximize window (if Restored)
 Win+Shift+Arrow Down/Win+Shift+Arrow Up ; Maximize Restored window vertically / Restore window to previous state
 
-    Win+Arrow Right/Win+Arrow Left ; Move Restored window to left/center/right. Works across multiple monitors
-    Win+Shift+Arrow Right/Win+Shift+Arrow Left ; Move window to left monitor / to right monitor when using multiple monitors
-    Alt+Space ; Opens the title bar menu
-    Alt+Space+Enter ; Restore Window
-    Alt+Space+x ; Maximize Window
-    Alt+Space+n ; Minimize Window
-    F11 ; Turn full page view on or off
-    ## Switch between Applications
-    Alt+tab, <br>alt+Shift+Tab ; Cycles through open programs in taskbar. Hold alt and continuously press tab to move forward between applications. Release keys to switch to application selected. Add shift to reverse direction.
-    Alt+Ctrl+tab, then use arrow keys to select application ; Cycles through open programs in taskbar without needing to hold alt continuously. Press alt+ctrl+tab once, then continue with arrow keys and press enter on application.
-    Alt+Esc/Alt+Shift+Esc ; Cycle through programs on taskbar in the order they were opened or accessed
-    Win+Tab ; Cycle through programs using Aero Flip 3D
-    Ctrl+Win+Tab ; Cycle through programs on Taskbar using Aero Flip 3D
-    Win+g ; Cycle through Gadget Window
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Manage Multiple Windows
-    Win+d ; Minimize all windows on all Monitors. Press again to restore previous state
-    Win+m ; Minimize all windows on current Monitor
-    Win+Shift+m ; Restore previously minimized windows on current Monitor
-    Win+Home ; Set all windows to Minimized on current Monitor except active
-    Win+Space ; Preview Desktop / make windows transparent (May not work with all Settings)
-</tbody></table><div></div></div><p class="goto_top">▲ up</p>
-<a name="link_2"></a>
-<table class="category main" cellspacing="0">
+Win+Arrow Right/Win+Arrow Left ; Move Restored window to left/center/right. Works across multiple monitors
+Win+Shift+Arrow Right/Win+Shift+Arrow Left ; Move window to left monitor / to right monitor when using multiple monitors
+Alt+Space ; Opens the title bar menu
+Alt+Space+Enter ; Restore Window
+Alt+Space+x ; Maximize Window
+Alt+Space+n ; Minimize Window
+F11 ; Turn full page view on or off
+
+## Switch between Applications
+Alt+tab, Alt+Shift+Tab ; Cycles through open programs in taskbar. Hold alt and continuously press tab to move forward between applications. Release keys to switch to application selected. Add shift to reverse direction.
+Alt+Ctrl+tab, then use arrow keys to select application ; Cycles through open programs in taskbar without needing to hold alt continuously. Press alt+ctrl+tab once, then continue with arrow keys and press enter on application.
+Alt+Esc/Alt+Shift+Esc ; Cycle through programs on taskbar in the order they were opened or accessed
+Win+Tab ; Cycle through programs using Aero Flip 3D
+Ctrl+Win+Tab ; Cycle through programs on Taskbar using Aero Flip 3D
+Win+g ; Cycle through Gadget Window
+
+## Manage Multiple Windows
+Win+d ; Minimize all windows on all Monitors. Press again to restore previous state
+Win+m ; Minimize all windows on current Monitor
+Win+Shift+m ; Restore previously minimized windows on current Monitor
+Win+Home ; Set all windows to Minimized on current Monitor except active
+Win+Space ; Preview Desktop / make windows transparent (May not work with all Settings)
+
 ## 2. Accessing Windows Features
 Win+e ; Start Windows Explorer (in My Computer)
 Win+r ; Open the Run window
@@ -41,10 +39,7 @@ Alt+Shift ; Change keyboard language layout if multiple language layouts are act
 shift when inserting CD or DVD ; Prevent CD or DVD from automatically playing
 Win+p ; Choose Presentation Display Mode
 Win+x ; Open Mobility Center
-<tr><td class="supplemental" colspan="2">* When working with multiple Keyboards Layouts (e.g. Spanish/English/German). Add unlimited Layouts under Regional settings and activate language bar in Taskbar to see current language. Switch with shortcut any time.</td></tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_3"></a>
-<table class="category main" cellspacing="0">
+
 ## 3. Windows 7 Taskbar
 win or ctrl+Esc ; Activate Start Button. Then use arrow keys, space and enter to navigate within Start Menu
 Win+t ; Go to first item in taskbar, continue with arrow keys
@@ -54,65 +49,59 @@ Ctrl+Shift+click on a taskbar item ; Start new instance of taskbar item as admin
 Shift+right-click on a taskbar item ; Show the window menu for the program
 Win+1...9 ; Switch to application in position N on taskbar (or launch pinned application)
 Shift+Win+1...9 ; Start new instance of taskbar item in position N on taskbar
-<tr><td class="supplemental" colspan="2">Unfortunately, Microsoft removed the possibility to select multiple taskbar items in Windows 7</td></tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_4"></a>
-<table class="category main" cellspacing="0">
+
 ## 4. Navigating DesktopArrow Keys ; Navigate between and select single icons on desktop (when focus is on the desktop)
 Home/End ; Select first / select last object on desktop
 Enter ; Launch active icon
 Shift+F10 ; Activate context menu of active icon by simulates right mouse button. Once in the context menu use arrow keys, a-z and enter to select item
 tab, shift+tab on empty desktop ; Navigate between desktop, the quick-launch bar, task bar and notification bar. Then use arrow keys and enter or space to activate specific icons
 a, b, c, ... ; Pressing the initial letter of the name of any objects will highlight the respective application or folder. Continue typing the object name if multiple objects start with the same letter
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_5"></a>
-<table class="category main" cellspacing="0">
-## 5. Windows Explorer</tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    ## Basics
-    Win+e ; Start Windows Explorer (My Computer)
-    Alt+Arrow Up ; Go up one folder
-    Alt+Arrow Left/Alt+Arrow Right ; Go to previous folder / go to next folder
-    Tab/Shift+Tab ; Switch focus forward/ backward between Address bar, Search Bar, Toolbar, Navigation Pane, and File List (Default is usually File List)
-    Alt+d or f4 ; Jump to the Address bar and select absolute address. Copy address with ctrl+c if desired
-    Ctrl+e or ctrl+f ; Jump to Search Box in Explorer
-    Ctrl+n ; Open new instance of Windows Explorer
-    F11 ; Maximize window
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Navigate File List and Navigation Pane
-    Arrow Keys ; Navigate between files and folders
-    Enter ; Open folder or start application
-    Home/End ; Jump to first / jump to last item
-    F2 ; Change the file name of active item
-    f2, then arrow left/Arrow Right ; Move one character to the left / to the right in item name
-    f2, then ctrl+Arrow Left/Ctrl+Arrow Right ; Jump one word to the left / to the right of item name
-    f2, then home /End ; Jump to beginning / jump to end of item name
-    f2, then ctrl+a ; Select complete object name including suffix (default excludes suffix)
-    Arrow Left/Arrow Right ; Expand folder / collapse folder (navigation pane only)
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## File List
-    Alt+p ; Display or hide Preview Pane
-    Alt+v then d ; View details. Check View menu for more options
-    Alt+v then x ; View extra-large icons. Check View menu for more options
-    Ctrl+mouse scroll wheel ; Change size of icons
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Select Items in File List and Navigation Pane
-    Shift+Arrow Up/Arrow Down ; Select multiple adjacent items (directly above or below)
-    ctrl with arrow keys and space ; Select multiple non-adjacent items. Hold ctrl, use arrow keys to move to next item, and press space to add/remove from selection
-    Ctrl+a ; Select all
-    a ...z and 1..9 ; Press the initial letter any item to jump to it. Continue typing the full name if multiple items start with the same letter
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Manipulate Items in Explorer
-    Ctrl+c, ctrl+x, ctrl+v ; ctrl+c for copy, ctrl+x for cut and ctrl+v for paste
-    Ctrl+z ; Undo an action
-    Ctrl+y ; Redo an action
-    Delete ; Delete an item and place it into the Recycle Bin
-    Shift+Delete ; Delete an item permanently without placing it into the Recycle Bin
-    Shift+F10 ; Activate context menu of active object. Replaces the right mouse button. Once in the context menu use arrow keys, a-z and enter to get to the selection
-    Ctrl+Shift+n ; Create new folder
-    Alt+Enter ; Open Properties dialog box
-</tbody></table><div></div></div><p class="goto_top">▲ up</p>
-<a name="link_6"></a>
-<table class="category main" cellspacing="0">
+
+## 5. Windows Explorer
+
+## Basics
+Win+e ; Start Windows Explorer (My Computer)
+Alt+Arrow Up ; Go up one folder
+Alt+Arrow Left/Alt+Arrow Right ; Go to previous folder / go to next folder
+Tab/Shift+Tab ; Switch focus forward/ backward between Address bar, Search Bar, Toolbar, Navigation Pane, and File List (Default is usually File List)
+Alt+d or f4 ; Jump to the Address bar and select absolute address. Copy address with ctrl+c if desired
+Ctrl+e or ctrl+f ; Jump to Search Box in Explorer
+Ctrl+n ; Open new instance of Windows Explorer
+F11 ; Maximize window
+
+## Navigate File List and Navigation Pane
+Arrow Keys ; Navigate between files and folders
+Enter ; Open folder or start application
+Home/End ; Jump to first / jump to last item
+F2 ; Change the file name of active item
+f2, then arrow left/Arrow Right ; Move one character to the left / to the right in item name
+f2, then ctrl+Arrow Left/Ctrl+Arrow Right ; Jump one word to the left / to the right of item name
+f2, then home /End ; Jump to beginning / jump to end of item name
+f2, then ctrl+a ; Select complete object name including suffix (default excludes suffix)
+Arrow Left/Arrow Right ; Expand folder / collapse folder (navigation pane only)
+
+## File List
+Alt+p ; Display or hide Preview Pane
+Alt+v then d ; View details. Check View menu for more options
+Alt+v then x ; View extra-large icons. Check View menu for more options
+Ctrl+mouse scroll wheel ; Change size of icons
+
+## Select Items in File List and Navigation Pane
+Shift+Arrow Up/Arrow Down ; Select multiple adjacent items (directly above or below)
+ctrl with arrow keys and space ; Select multiple non-adjacent items. Hold ctrl, use arrow keys to move to next item, and press space to add/remove from selection
+Ctrl+a ; Select all
+a ...z and 1..9 ; Press the initial letter any item to jump to it. Continue typing the full name if multiple items start with the same letter
+
+## Manipulate Items in Explorer
+Ctrl+c, ctrl+x, ctrl+v ; ctrl+c for copy, ctrl+x for cut and ctrl+v for paste
+Ctrl+z ; Undo an action
+Ctrl+y ; Redo an action
+Delete ; Delete an item and place it into the Recycle Bin
+Shift+Delete ; Delete an item permanently without placing it into the Recycle Bin
+Shift+F10 ; Activate context menu of active object. Replaces the right mouse button. Once in the context menu use arrow keys, a-z and enter to get to the selection
+Ctrl+Shift+n ; Create new folder
+Alt+Enter ; Open Properties dialog box
+
 ## 6. Photo Viewer
 Arrow Left/Arrow Right ; Go to next / go to previous photo
 Ctrl+. ; Rotate photo clockwise
@@ -125,9 +114,7 @@ Alt+Enter ; Show properties of current photo
 Alt+e or ctrl+s ; Email current photo
 Ctrl+c ; Copy current photo file to clipboard
 Alt+o ; Open current photo in other application (e.g. Paint of Office)
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_7"></a>
-<table class="category main" cellspacing="0">
+
 ## 7. Dialog Boxes
 Ctrl+Tab/Ctrl+Shift+Tab ; Move forward / move backwards through tabs
 Tab/Shift+Tab ; Move forward / move backwards through options
@@ -137,25 +124,22 @@ Space ; Select or clear the check box if the active option is a check box
 Arrow Keys ; Select a button if the active option is a group of option buttons
 F4 ; Display the items in the active list
 Backspace ; Open a folder one level up if a folder is selected in the Save As or Open dialog box
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_8"></a>
-<table class="category main" cellspacing="0">
-## 8. Windows Admin</tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    ## Admin Tasks
-    Ctrl+Win+f ; Search for Computers (with Active Directory activated)
-    Win+pause/break ; Display System Properties which holds system properties, computer name, device manager and so on
-    Ctrl+Shift+Esc ; Opens Windows Task Manager
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Remote Desktop
-    Alt+Page Up/Alt+Page Down ; Move between programs from left to right / from right to left
-    Alt+Insert ; Cycle through programs in the order that they were started in
-    Alt+Home ; Display the Start menu
-    Ctrl+Alt+pause/break ; Switch between a window and full screen
-    Ctrl+Alt+End ; Display the Windows Security dialog box
-    Alt+Delete ; Display the system menu
-</tbody></table><div></div></div><p class="goto_top">▲ up</p>
-<a name="link_9"></a>
-<table class="category main" cellspacing="0">
+
+## 8. Windows Admin
+
+## Admin Tasks
+Ctrl+Win+f ; Search for Computers (with Active Directory activated)
+Win+pause/break ; Display System Properties which holds system properties, computer name, device manager and so on
+Ctrl+Shift+Esc ; Opens Windows Task Manager
+
+## Remote Desktop
+Alt+Page Up/Alt+Page Down ; Move between programs from left to right / from right to left
+Alt+Insert ; Cycle through programs in the order that they were started in
+Alt+Home ; Display the Start menu
+Ctrl+Alt+pause/break ; Switch between a window and full screen
+Ctrl+Alt+End ; Display the Windows Security dialog box
+Alt+Delete ; Display the system menu
+
 ## 9. Windows Help
 Tab ; Move between links
 Alt+c ; Display the Table of Contents
@@ -168,21 +152,20 @@ Home/End ; Move to the beginning / to the end of a topic
 Ctrl+f ; Search the current topic. Press tab to leave
 Ctrl+p ; Print a topic
 F3 ; Move the cursor to the search box. Press tab to leave
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_10"></a>
-<table class="category main" cellspacing="0">
-## 10. Ease of Access and Magnifier</tbody></table><div class="subcategories"><table class="category sub" cellspacing="0">
-    ## Ease of Access
-    Win+u ; Open Ease of Access Center
-    Press shift five times. ; Turn Sticky Keys on or off
-    Press num lock for five seconds ; Turn Toggle Keys on or off
-    Right shift for eight seconds ; Turn Filter Keys on or off
-    left alt + left shift +Num Lock ; Turn Mouse Keys on or off
-    left alt + left shift + prtScn ; Turn High Contract on or off (Careful, will change theme!)
-</tbody></table><div></div><table class="category sub" cellspacing="0">
-    ## Magnifier
-    Win+[+] ; Start Magnifier and zoom in
-    Win+- ; Zoom out with Magnifier active
-    Ctrl+Alt+i ; Invert colors in Magnifier display
-    Win+Esc ; Exit Magnifier
-    Ctrl+Alt+Arrow Keys ; Move the Magnifier windows
+
+## 10. Ease of Access and Magnifier
+
+## Ease of Access
+Win+u ; Open Ease of Access Center
+Press shift five times. ; Turn Sticky Keys on or off
+Press num lock for five seconds ; Turn Toggle Keys on or off
+Right shift for eight seconds ; Turn Filter Keys on or off
+left alt + left shift +Num Lock ; Turn Mouse Keys on or off
+left alt + left shift + prtScn ; Turn High Contract on or off (Careful, will change theme!)
+
+## Magnifier
+Win+[+] ; Start Magnifier and zoom in
+Win+- ; Zoom out with Magnifier active
+Ctrl+Alt+i ; Invert colors in Magnifier display
+Win+Esc ; Exit Magnifier
+Ctrl+Alt+Arrow Keys ; Move the Magnifier windows
