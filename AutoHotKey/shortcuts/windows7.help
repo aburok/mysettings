@@ -2,18 +2,11 @@
 
 <title>128 useful Keyboard Shortcuts for Windows 7. </title>
 // 1. Managing 'Windows' in Windows 7<tr>
-    <tbody><tr><th colspan="2"><span class="plus_minus sub"><img alt="minus" src="./128 useful Keyboard Shortcuts for Windows 7._files/minus.gif" class="collapse sub"><img src="./128 useful Keyboard Shortcuts for Windows 7._files/plus.gif" alt="plus" class="expand sub"></span>Move and Resize Active Window</th></tr><tr>
-<td class="shortcut"><span class="kbd">Win</span>+<span class="kbd">Arrow Down</span></td>
-<td>Set window to Restored (if Maximized) or Minimized (if Restored)</td>
-    </tr>
-    <tr>
-<td class="shortcut"><span class="kbd">Win</span>+<span class="kbd">Arrow Up</span></td>
-<td>Maximize window (if Restored)</td>
-    </tr>
-    <tr>
-<td class="shortcut"><span class="kbd">Win</span>+<span class="kbd">Shift</span>+<span class="kbd">Arrow Down</span>/<span class="kbd">Win</span>+<span class="kbd">Shift</span>+<span class="kbd">Arrow Up</span></td>
-<td>Maximize Restored window vertically / Restore window to previous state</td>
-    </tr>
+// Move and Resize Active Window
+Win+Arrow Down ; Set window to Restored (if Maximized) or Minimized (if Restored)
+Win+Arrow Up ; Maximize window (if Restored)
+Win+Shift+Arrow Down/Win+Shift+Arrow Up ; Maximize Restored window vertically / Restore window to previous state
+
     <tr>
 <td class="shortcut"><span class="kbd">Win</span>+<span class="kbd">Arrow Right</span>/<span class="kbd">Win</span>+<span class="kbd">Arrow Left</span></td>
 <td>Move Restored window to left/center/right. Works across multiple monitors</td>
