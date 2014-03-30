@@ -1,846 +1,422 @@
 Ctrl  +  n
 Create new document
-
-Ctrl  +  o
-Open document
-
-Ctrl  +  w
-Close document
-
-Ctrl  +  s
-Save document
-
-F12
-Save document as
-
-Ctrl  +  p
-Print document/ print preview
-
-Ctrl  +  F6
-Switch between multiple Word documents
-
-Alt, then f, r
-Open Recent (file, recent)
-
-    Arrow Left/Arrow Right
-    Jump one character to the left / to the right
-
-Ctrl  +  Arrow Right
-Jump one word to the left / to the right
-
-End/Home
-Jump to the end of a line / beginning of a line
-
-Arrow Down/Arrow Up
-Jump one line down / one line down
-
-Ctrl + Arrow Down/ Ctrl + Arrow Up
-Jump one paragraph down / one paragraph up
-
-Page Down/Page Up
-Jump one screen down/ one screen up
-
-Alt + Ctrl + Page Down/ Alt + Ctrl + Page Up
-Jump to top / to bottom of visible window
-
-Ctrl  +  Home
-Jump to end / to beginning of document
-
-F6
-Cycle through Ribbon/open panes/Status Bar/document window
-
-Ctrl  +  g or f5
-Go to a page, bookmark, footnote, table, comment, graphic, or other location
-
-Alt + Ctrl + z
-Go back to previously edited location in document (up to 4 places)
-
-Shift  +  F5
-Go to a the last change or revision. Also works after opening document.
-
-Ctrl + Shift + F5
-Set, go to and edit bookmarks
-
-Alt + Ctrl + Home
-Set Browse Options. Press the arrow keys to select an option, and then press enter to browse through a document by using the selected option
-
-Ctrl + Page Down/Ctrl + Page Up
-Move to next / move to previous browser object as set in Browse Options
+Ctrl  +  o ; Open document
+Ctrl  +  w ; Close document
+Ctrl  +  s ; Save document
+F12 ; Save document as
+Ctrl  +  p ; Print document/ print preview
+Ctrl  +  F6 ; Switch between multiple Word documents
+Alt, then f, r ; Open Recent (file, recent)
+    Arrow Left/Arrow Right ;     Jump one character to the left / to the right
+Ctrl  +  Arrow Right ; Jump one word to the left / to the right
+End/Home ; Jump to the end of a line / beginning of a line
+Arrow Down/Arrow Up ; Jump one line down / one line down
+Ctrl + Arrow Down/ Ctrl + Arrow Up ; Jump one paragraph down / one paragraph up
+Page Down/Page Up ; Jump one screen down/ one screen up
+Alt + Ctrl + Page Down/ Alt + Ctrl + Page Up ; Jump to top / to bottom of visible window
+Ctrl  +  Home ; Jump to end / to beginning of document
+F6 ; Cycle through Ribbon/open panes/Status Bar/document window
+Ctrl  +  g or f5 ; Go to a page, bookmark, footnote, table, comment, graphic, or other location
+Alt + Ctrl + z ; Go back to previously edited location in document (up to 4 places)
+Shift  +  F5 ; Go to a the last change or revision. Also works after opening document.
+Ctrl + Shift + F5 ; Set, go to and edit bookmarks
+Alt + Ctrl + Home ; Set Browse Options. Press the arrow keys to select an option, and then press enter to browse through a document by using the selected option
+Ctrl + Page Down/Ctrl + Page Up ; Move to next / move to previous browser object as set in Browse Options
     Tab
     Cycle forward through all options and elements
+Shift + Tab ; Cycle backwards through all options and elements
+Ctrl + Tab ; Cycle forward through available pages
+Ctrl + Shift + Tab ; Cycle backwards through available pages
+Alt + underlined letter ; Selects the option indicated by the letter up
+Shift + Arrow Right/ Shift + Arrow Left ; Extend selection one character to the right / to the left
+Ctrl + Shift + Arrow Right/ Ctrl + Shift + Arrow Left ; Extend selection one word to the right / to the left
+    Shift + End/Shift + Home ;     Extend selection to the end / to beginning of a line
 
-Shift + Tab
-Cycle backwards through all options and elements
+    Shift + Arrow Down/ Shift + Arrow Up ;     Extend selection one line down / one line up
 
-Ctrl + Tab
-Cycle forward through available pages
+    Shift + Page Down/ Shift + Page Up ;     Extend selection one screen down / one screen up
 
-Ctrl + Shift + Tab
-Cycle backwards through available pages
+    Ctrl + Shift + End/ Ctrl + Shift + Home ;     Extend selection to end / to beginning of document
 
-Alt + underlined letter
-Selects the option indicated by the letter up
+    Alt + Ctrl + Shift + Page Down/ Alt + Ctrl + Shift + Page Up ;     Extend selection to end / to beginning of visible window
 
-Shift + Arrow Right/ Shift + Arrow Left
-Extend selection one character to the right / to the left
+    Ctrl + a ;     Extend selection to entire document
 
-Ctrl + Shift + Arrow Right/ Ctrl + Shift + Arrow Left
-Extend selection one word to the right / to the left
+    Arrow Keys ;     Cancel selection and return to beginning / to end of selection
 
-    Shift + End/Shift + Home
-    Extend selection to the end / to beginning of a line
+    F8 ;     Turn Extend Mode on: Extend selection without pressing shift
 
+    Arrow keys , Page up/Page down ;     Extend selection in Extended Mode:
 
-    Shift + Arrow Down/ Shift + Arrow Up
-    Extend selection one line down / one line up
+    F8 ;     Extend selection further by word, paragraph, document in Extended Mode
 
+    Shift + F8 ;     Reduce the size of a selection in Extended Mode
 
-    Shift + Page Down/ Shift + Page Up
-    Extend selection one screen down / one screen up
+    Ctrl + Shift + f8, and arrow keys ;     Select a vertical block of text in Extended Mode
 
+    Esc ;     Turn extend mode off
 
-    Ctrl + Shift + End/ Ctrl + Shift + Home
-    Extend selection to end / to beginning of document
+    F8 ;     Extend a selection to a specific location in a document
 
+Ctrl + z ; Undo the last action
 
-    Alt + Ctrl + Shift + Page Down/ Alt + Ctrl + Shift + Page Up
-    Extend selection to end / to beginning of visible window
 
+Ctrl + y ; Redo the last action
 
-    Ctrl + a
-    Extend selection to entire document
+Ctrl + c ; Copy selected text or object
 
+Ctrl + x ; Cut selected text or object
 
-    Arrow Keys
-    Cancel selection and return to beginning / to end of selection
+Ctrl + v ; Paste selected text or object
 
+Ctrl + Shift + c ; Copy text format
 
-    F8
-    Turn Extend Mode on: Extend selection without pressing shift
+Ctrl + Shift + v ; Paste text format
 
+Ctrl + Alt + v ; Paste special
 
-    Arrow keys , Page up/Page down
-    Extend selection in Extended Mode:
+Ctrl + v, then Ctrl, then k ; Paste and keep Source Formatting
 
+Ctrl + v, then Ctrl, then t ; Paste and keep Text only
 
-    F8
-    Extend selection further by word, paragraph, document in Extended Mode
+Ctrl + F3 ; Cut to the Spike (separate clipboard)
 
+Ctrl + Shift + F3 ; Paste from the Spike
 
-    Shift + F8
-    Reduce the size of a selection in Extended Mode
+F3 ; Paste AutoText ( after start typing)
 
+Alt + Shift + r ; Copy the header or footer from previous section of the document
 
-    Ctrl + Shift + f8, and arrow keys
-    Select a vertical block of text in Extended Mode
+Alt + Ctrl + c ; Insert copyright symbol
 
+Alt + Ctrl + r ; Insert registered trademark symbol
 
-    Esc
-    Turn extend mode off
+Alt + Ctrl + t ; Insert trademark symbol
 
+Alt + Ctrl + . (Period) ; Insert horizontal ellipsis (…)
 
-    F8
-    Extend a selection to a specific location in a document
+Alt + Ctrl + - ; Insert em dash
 
-Ctrl + z
-Undo the last action
+Alt + Ctrl + [ + ] ; Insert en dash
 
+Alt, then n,u ; Insert Symbol (insert menu)
 
-Ctrl + y
-Redo the last action
+' or Ctrl + 2x` ; Insert single opening quotation mark
 
+Ctrl + 2x ' ; Insert single closing quotation mark
 
-Ctrl + c
-Copy selected text or object
+Type character code and press Alt + x ; Insert Unicode character, e.g. 20ac
 
+Select character and press alt + x ; Transform character to Unicode
 
-Ctrl + x
-Cut selected text or object
+Alt + character code on numeric keyboard ; Insert ANSI character
 
+Enter ; Insert paragraph break
 
-Ctrl + v
-Paste selected text or object
+Shift + Enter ; Insert line break without breaking paragraph
 
+Ctrl + Enter ; Insert page break
 
-Ctrl + Shift + c
-Copy text format
+Ctrl + Shift + Enter ; Insert column break (break table)
 
+Ctrl + Shift + Space ; Insert nonbreaking space
 
-Ctrl + Shift + v
-Paste text format
+Ctrl + Shift + - (Hyphen) ; Insert nonbreaking hyphen
 
+Ctrl + - ; Insert optional hyphen
 
-Ctrl + Alt + v
-Paste special
+Alt + Ctrl + f ; Insert a footnote
 
+Alt + Ctrl + d ; Insert an endnote
 
-Ctrl + v, then Ctrl, then k
-Paste and keep Source Formatting
+Ctrl + k ; Insert a hyperlink
 
+Alt + Shift + i ; Insert Citation Mark
 
-Ctrl + v, then Ctrl, then t
-Paste and keep Text only
+Alt + Shift + x ; Insert Index Mark
 
+F2, then move to position and press Enter ; Move selected text to different position
 
-Ctrl + F3
-Cut to the Spike (separate clipboard)
+Shift + F2, then move to position and press Enter ; Copy selected text to different position
 
+Delete/Backspace ; Delete one character to the right / to the left (or delete selection)
 
-Ctrl + Shift + F3
-Paste from the Spike
+Ctrl + Delete/Ctrl + Backspace ; Delete one word to the right / to the left
 
+Delete ; Delete one character to the right or delete selection
 
-F3
-Paste AutoText ( after start typing)
+Ctrl + Shift + &lt;/Ctrl + Shift + &gt; ; Decrease / Increase font size one value
 
+Ctrl + d or Ctrl + Shift + k ; Open the Font dialog box
 
-Alt + Shift + r
-Copy the header or footer from previous section of the document
+Ctrl + Shift + &lt;/Ctrl + Shift + &gt; ; Decrease / Increase font size one value
 
-Alt + Ctrl + c
-Insert copyright symbol
+Ctrl + [/Ctrl + ] ; Decrease / Increase font size one point
 
+Ctrl + b ; Apply/remove bold
 
-Alt + Ctrl + r
-Insert registered trademark symbol
+Ctrl + i ; Apply/remove italic
 
+Ctrl + u ; Apply/remove underline
 
-Alt + Ctrl + t
-Insert trademark symbol
+Ctrl + = ; Apply/remove subscript
 
+Ctrl + Shift + = ; Apply/remove superscript
 
-Alt + Ctrl + . (Period)
-Insert horizontal ellipsis (…)
+Ctrl + Shift + C ; Copy formatting
 
+Ctrl + Shift + V ; Paste formatting
 
-Alt + Ctrl + -
-Insert em dash
+Ctrl + Shift + d ; Apply/remove double-underline
 
+Ctrl + Shift + w ; Apply/remove words underline (only words, no spaces)
 
-Alt + Ctrl + [ + ]
-Insert en dash
+Ctrl + Shift + h ; Apply/remove hidden formatting
 
+Ctrl + Shift + a ; Apply/remove all capitals
 
-Alt, then n,u
-Insert Symbol (insert menu)
+Ctrl + Shift + k ; Apply/remove small capitals
 
+Shift + F3 ; Change between all upper-, first letter upper- and all lower-case
 
-' or Ctrl + 2x`
-Insert single opening quotation mark
+Ctrl + d, then Alt + k and enter ; Apply strike-through formatting (font dialog)
 
+Ctrl + Shift + q ; Change the selection to the Symbol font
 
-Ctrl + 2x '
-Insert single closing quotation mark
+Shift + F1 ; Reveal Formatting (show all formats of selection)
 
+Ctrl + Alt + H ; Apply/remove Highlight Text Feature
 
-Type character code and press Alt + x
-Insert Unicode character, e.g. 20ac
+Ctrl + r ; Right-align paragraph
 
+Ctrl + l ; Left-align paragraph
 
-Select character and press alt + x
-Transform character to Unicode
+Ctrl + e ; Center-align paragraph
 
+Ctrl + j ; Justify-align paragraph
 
-Alt + character code on numeric keyboard
-Insert ANSI character
+Ctrl + m/Ctrl + Shift + m ; Indent paragraph from the left and increase / decrease indent
 
-Enter
-Insert paragraph break
+Ctrl + T ; Increase hanging indent
 
+Ctrl + Shift + T ; Decrease hanging indent
 
-Shift + Enter
-Insert line break without breaking paragraph
+Ctrl + 1 ; Set line-spacing to single-space
 
+Ctrl + 2 ; Set line-spacing to double-space
 
-Ctrl + Enter
-Insert page break
+Ctrl + 5 ; Set line-spacing to 1.5
 
+Ctrl + 0 (zero) ; Add or remove one line space preceding a paragraph
 
-Ctrl + Shift + Enter
-Insert column break (break table)
+Alt + Ctrl + Shift + s ; Open or close Styles task pane
 
+Alt + Ctrl + 1 ; Apply Heading 1 style
 
-Ctrl + Shift + Space
-Insert nonbreaking space
+Alt + Ctrl + 2 ; Apply Heading 2 style
 
+Alt + Ctrl + 3 ; Apply Heading 3 style
 
-Ctrl + Shift + - (Hyphen)
-Insert nonbreaking hyphen
+Alt + Shift + Arrow Right/ Alt + Shift + Arrow Left ; Promote / demote Headings
 
+Ctrl + Space ; Remove all manual styles
 
-Ctrl + -
-Insert optional hyphen
+Ctrl + Shift + n ; Apply Normal style
 
-Alt + Ctrl + f
-Insert a footnote
+Ctrl + Shift + s ; Open Apply Styles task pane (will not close with pressing it a second time)
 
+Alt + Ctrl + k ; Start Auto Format
 
-Alt + Ctrl + d
-Insert an endnote
+Ctrl + h ; Open traditional find and replace window
 
+Ctrl + h, then Alt + d ; Open traditional find window
 
-Ctrl + k
-Insert a hyperlink
+Alt + Ctrl + y, or Shift + F4 ; Repeat last find after closing find window
 
+Ctrl + Tab ; Jump between find menu and document
 
-Alt + Shift + i
-Insert Citation Mark
+Alt + Space, Arrow keys and Enter ; Move find menu window
 
+Esc ; Close traditional search window if active
 
-Alt + Shift + x
-Insert Index Mark
+Ctrl + f ; Open (new) search menu in navigation task pane
 
-F2, then move to position and press Enter
-Move selected text to different position
+alt, then w,k ; Open and close Navigation pane (View, Navigation)
 
+Alt + Ctrl + p ; Switch to Print Layout view
 
-Shift + F2, then move to position and press Enter
-Copy selected text to different position
+Alt + Ctrl + o ; Switch to Outline view
 
+Alt + Ctrl + n ; Switch to Draft view (used to be normal view)
 
-Delete/Backspace
-Delete one character to the right / to the left (or delete selection)
+Ctrl + scroll mouse ; Zoom in and zoom out
 
+alt then w, q ; Open Zoom Menu (no native shortcut exists for zoom in/ zoom out)
 
-Ctrl + Delete/Ctrl + Backspace
-Delete one word to the right / to the left
+Alt + Ctrl + s ; Split the document window
 
+Ctrl + F1 ; Show or hide the ribbon
 
-Delete
-Delete one character to the right or delete selection
+f10 or alt ; Select item in Ribbon
 
+Esc ; Leave Ribbon or Submenu
 
-Ctrl + Shift + &lt;/Ctrl + Shift + &gt;
-Decrease / Increase font size one value
+Arrow Left/Arrow Right ; Move left or right between main Ribbon Menus if active
 
-Ctrl + d or Ctrl + Shift + k
-Open the Font dialog box
+Arrow Keys ; Move left/right/up/down between Ribbon Menus and Sub-Menus
 
+space or enter ; When in ribbon Open or activate selected item
 
-Ctrl + Shift + &lt;/Ctrl + Shift + &gt;
-Decrease / Increase font size one value
+Alt, then w,k ; Open and close Navigation pane (View, Navigation)
 
+F6/Shift + F6 ; With Navigation Pane open: Switch forward / backwards between (1) Navigation Pane, (2) Bottom Taskbar, (3) Ribbon, and (4) Document
 
-Ctrl + [/Ctrl + ]
-Decrease / Increase font size one point
+Tab/Shift + Tab ; In Navigation Pane: Move through Navigation Pane options
 
+Arrow Down/Arrow Up ; Jump one row down / one row up
 
-Ctrl + b
-Apply/remove bold
+Tab/Shift + Tab ; Jump to (and select) next / previous table cell
 
+Alt + Home/Alt + End ; Jump to first column/ jump to last column
 
-Ctrl + i
-Apply/remove italic
+Alt + Page Up/Alt + Page Down ; Jump to first row / jump to last row
 
+Ctrl + Arrow Left/Ctrl + Arrow Right ; One cell to the left / to the right
 
-Ctrl + u
-Apply/remove underline
+Shift + End ; Select current table cell
 
+end, then shift + Home ; Select content of current table cell
 
-Ctrl + =
-Apply/remove subscript
+Press and hold shift and press arrow keys repeatedly ; Extend selection to adjacent cells
 
+Ctrl + Shift + f8, then press ; Extend selection or block
 
-Ctrl + Shift + =
-Apply/remove superscript
+Alt + 5 on numeric keypad (with numLock off) ; Select an entire table
 
+Alt + Shift + Arrow Up/Alt + Shift + Arrow Down ; Move current row up or down
 
-Ctrl + Shift + C
-Copy formatting
+In first column, press shift + end ; Select row*
 
+In first row press alt + Shift + Page Down ; Select column
 
-Ctrl + Shift + V
-Paste formatting
+Shift + Del ; Delete rows* with rows selected
 
+Shift + Del ; Delete columns with columns selected
 
-Ctrl + Shift + d
-Apply/remove double-underline
+Alt, j, l, d, r ; Delete row at cursor
 
+Alt, j, l, d, c ; Delete column at cursor
 
-Ctrl + Shift + w
-Apply/remove words underline (only words, no spaces)
+Alt, j, l, a ; Insert row above cursor
 
+Alt, j, l, e ; Insert row below cursor
 
-Ctrl + Shift + h
-Apply/remove hidden formatting
+Alt, j, l, l ; Insert column to the left of cursor
 
+Alt, j, l, r ; Insert column to the right of cursor
 
-Ctrl + Shift + a
-Apply/remove all capitals
+Ctrl + Tab ; Insert tab character
 
+tab in last table cell ; Add row at the end
 
-Ctrl + Shift + k
-Apply/remove small capitals
+Ctrl + Shift + o ; Switch to Outline View
 
+Tab/Shift + Tab ; Promote / Demote a paragraph (or Alt + Shift + Arrow Left/Arrow Right)
 
-Shift + F3
-Change between all upper-, first letter upper- and all lower-case
+Alt + Shift + Arrow Up/ Alt + Shift + Arrow Down ; Move selected paragraphs up / down
 
+Ctrl + Shift + n ; Demote to body text (set style to normal)
 
-Ctrl + d, then Alt + k and enter
-Apply strike-through formatting (font dialog)
+Alt + Shift +  +  / Alt + Shift + - ; Expand / Collapse text under a heading
 
+Alt + Shift + a ; Expand or collapse all text or headings
 
-Ctrl + Shift + q
-Change the selection to the Symbol font
+/ key on the numeric keypad ; Hide or display character formatting
 
+Alt + Shift + l ; Show the first line of body text or all body text
 
-Shift + F1
-Reveal Formatting (show all formats of selection)
+Alt + Shift + 1 ; Show all headings with the Heading 1 style
 
+Alt + Shift + n ; Show all headings up to Heading n
 
-Ctrl + Alt + H
-Apply/remove Highlight Text Feature
+Ctrl + Tab ; Insert a tab character
 
-Ctrl + r
-Right-align paragraph
+F7 ; Choose the Spelling command (Review tab).
 
+Alt + Ctrl + m ; Insert a comment
 
-Ctrl + l
-Left-align paragraph
+Ctrl + Shift + e ; Turn change tracking on or off
 
+Alt + Shift + c ; Close the Reviewing Pane if it is open.
 
-Ctrl + e
-Center-align paragraph
+Ctrl + Shift + * ; Display nonprinting characters.
 
+Alt + F10 ; Display the Selection and Visibility task pane.
 
-Ctrl + j
-Justify-align paragraph
+Ctrl + Shift + g ; Open the Word Count dialog box.
 
+Ctrl + p ; Print a document (print preview)
 
-Ctrl + m/Ctrl + Shift + m
-Indent paragraph from the left and increase / decrease indent
+Esc ; Close print preview
 
+Arrow keys, Page up /Page Down ; Move around the preview pages (with focus on preview page*)
 
-Ctrl + T
-Increase hanging indent
+Ctrl + Home/Ctrl + End ; Move to first page / last page (with focus on preview page)
 
+Alt + Shift + d ; Insert current date (insert DATE field)
 
-Ctrl + Shift + T
-Decrease hanging indent
+Alt + Shift + p ; Insert page number (insert PAGE field)
 
+Alt + Shift + t ; Insert time (insert TIME field)
 
-Ctrl + 1
-Set line-spacing to single-space
+Alt + Ctrl + l ; Insert LISTNUM field
 
+Ctrl + F9 ; Insert an empty field
 
-Ctrl + 2
-Set line-spacing to double-space
+Ctrl + Shift + l ; Insert a LISTNUM field
 
+Shift + F9 ; Show or hide field code/result of selected field
 
-Ctrl + 5
-Set line-spacing to 1.5
+Alt + F9 ; Show or hide field codes/results of all fields in document
 
+F9 ; Update selected fields*
 
-Ctrl + 0 (zero)
-Add or remove one line space preceding a paragraph
+Alt + Shift + F9 ; Run GOTOBUTTON or MACROBUTTON from the field that displays the field results
 
-Alt + Ctrl + Shift + s
-Open or close Styles task pane
+F11/Shift + F11 ; Go to the next field/ previous field
 
+Ctrl + Shift + F7 ; Update linked information in a Microsoft Word source document
 
-Alt + Ctrl + 1
-Apply Heading 1 style
+Ctrl + Shift + F9 ; Unlink a field
 
+Ctrl + F11/Ctrl + Shift + F11 ; Lock a field / Unlock a field
 
-Alt + Ctrl + 2
-Apply Heading 2 style
+Alt + Shift + k ; Preview a mail merge
 
+Alt + Shift + n ; Merge a document
 
-Alt + Ctrl + 3
-Apply Heading 3 style
+Alt + Shift + m ; Print the merged document
 
+Alt + Shift + e ; Edit a mail-merge data document
 
-Alt + Shift + Arrow Right/ Alt + Shift + Arrow Left
-Promote / demote Headings
+Alt + Shift + f ; Insert a merge field
 
+Alt + Shift + k ; Preview a mail merge
 
-Ctrl + Space
-Remove all manual styles
+Alt + Shift + n ; Merge a document
 
+Alt + Shift + m ; Print the merged document
 
-Ctrl + Shift + n
-Apply Normal style
+Alt + Shift + e ; Edit a mail-merge data document
 
+Alt + Shift + f ; Insert a merge field
 
-Ctrl + Shift + s
-Open Apply Styles task pane (will not close with pressing it a second time)
+F1 ; Get Help or visit Microsoft Office.com
 
+Alt + Space ; Open the window menu
 
-Alt + Ctrl + k
-Start Auto Format
+Alt + F4 ; Exit Word
 
-Ctrl + h
-Open traditional find and replace window
+Shift + F10 ; Display a shortcut menu (Simulate right mouse button)
 
-
-Ctrl + h, then Alt + d
-Open traditional find window
-
-
-Alt + Ctrl + y, or Shift + F4
-Repeat last find after closing find window
-
-
-Ctrl + Tab
-Jump between find menu and document
-
-
-Alt + Space, Arrow keys and Enter
-Move find menu window
-
-
-Esc
-Close traditional search window if active
-
-
-Ctrl + f
-Open (new) search menu in navigation task pane
-
-
-alt, then w,k
-Open and close Navigation pane (View, Navigation)
-
-Alt + Ctrl + p
-Switch to Print Layout view
-
-
-Alt + Ctrl + o
-Switch to Outline view
-
-
-Alt + Ctrl + n
-Switch to Draft view (used to be normal view)
-
-
-Ctrl + scroll mouse
-Zoom in and zoom out
-
-
-alt then w, q
-Open Zoom Menu (no native shortcut exists for zoom in/ zoom out)
-
-
-Alt + Ctrl + s
-Split the document window
-
-Ctrl + F1
-Show or hide the ribbon
-
-
-f10 or alt
-Select item in Ribbon
-
-
-Esc
-Leave Ribbon or Submenu
-
-
-Arrow Left/Arrow Right
-Move left or right between main Ribbon Menus if active
-
-
-Arrow Keys
-Move left/right/up/down between Ribbon Menus and Sub-Menus
-
-
-space or enter
-When in ribbon Open or activate selected item
-
-Alt, then w,k
-Open and close Navigation pane (View, Navigation)
-
-
-F6/Shift + F6
-With Navigation Pane open: Switch forward / backwards between (1) Navigation Pane, (2) Bottom Taskbar, (3) Ribbon, and (4) Document
-
-
-Tab/Shift + Tab
-In Navigation Pane: Move through Navigation Pane options
-
-Arrow Down/Arrow Up
-Jump one row down / one row up
-
-
-Tab/Shift + Tab
-Jump to (and select) next / previous table cell
-
-
-Alt + Home/Alt + End
-Jump to first column/ jump to last column
-
-
-Alt + Page Up/Alt + Page Down
-Jump to first row / jump to last row
-
-
-Ctrl + Arrow Left/Ctrl + Arrow Right
-One cell to the left / to the right
-
-Shift + End
-Select current table cell
-
-
-end, then shift + Home
-Select content of current table cell
-
-
-Press and hold shift and press arrow keys repeatedly
-Extend selection to adjacent cells
-
-
-Ctrl + Shift + f8, then press
-Extend selection or block
-
-
-Alt + 5 on numeric keypad (with numLock off)
-Select an entire table
-
-Alt + Shift + Arrow Up/Alt + Shift + Arrow Down
-Move current row up or down
-
-
-In first column, press shift + end
-Select row*
-
-
-In first row press alt + Shift + Page Down
-Select column
-
-
-Shift + Del
-Delete rows* with rows selected
-
-
-Shift + Del
-Delete columns with columns selected
-
-
-Alt, j, l, d, r
-Delete row at cursor
-
-
-Alt, j, l, d, c
-Delete column at cursor
-
-
-Alt, j, l, a
-Insert row above cursor
-
-
-Alt, j, l, e
-Insert row below cursor
-
-
-Alt, j, l, l
-Insert column to the left of cursor
-
-
-Alt, j, l, r
-Insert column to the right of cursor
-
-
-Ctrl + Tab
-Insert tab character
-
-
-tab in last table cell
-Add row at the end
-
-Ctrl + Shift + o
-Switch to Outline View
-
-
-Tab/Shift + Tab
-Promote / Demote a paragraph (or Alt + Shift + Arrow Left/Arrow Right)
-
-
-Alt + Shift + Arrow Up/ Alt + Shift + Arrow Down
-Move selected paragraphs up / down
-
-
-Ctrl + Shift + n
-Demote to body text (set style to normal)
-
-
-Alt + Shift +  +  / Alt + Shift + -
-Expand / Collapse text under a heading
-
-
-Alt + Shift + a
-Expand or collapse all text or headings
-
-
-/ key on the numeric keypad
-Hide or display character formatting
-
-
-Alt + Shift + l
-Show the first line of body text or all body text
-
-
-Alt + Shift + 1
-Show all headings with the Heading 1 style
-
-
-Alt + Shift + n
-Show all headings up to Heading n
-
-
-Ctrl + Tab
-Insert a tab character
-
-F7
-Choose the Spelling command (Review tab).
-
-
-Alt + Ctrl + m
-Insert a comment
-
-
-Ctrl + Shift + e
-Turn change tracking on or off
-
-
-Alt + Shift + c
-Close the Reviewing Pane if it is open.
-
-
-Ctrl + Shift + *
-Display nonprinting characters.
-
-
-Alt + F10
-Display the Selection and Visibility task pane.
-
-
-Ctrl + Shift + g
-Open the Word Count dialog box.
-
-Ctrl + p
-Print a document (print preview)
-
-
-Esc
-Close print preview
-
-
-Arrow keys, Page up /Page Down
-Move around the preview pages (with focus on preview page*)
-
-
-Ctrl + Home/Ctrl + End
-Move to first page / last page (with focus on preview page)
-
-Alt + Shift + d
-Insert current date (insert DATE field)
-
-
-Alt + Shift + p
-Insert page number (insert PAGE field)
-
-
-Alt + Shift + t
-Insert time (insert TIME field)
-
-
-Alt + Ctrl + l
-Insert LISTNUM field
-
-
-Ctrl + F9
-Insert an empty field
-
-
-Ctrl + Shift + l
-Insert a LISTNUM field
-
-
-Shift + F9
-Show or hide field code/result of selected field
-
-
-Alt + F9
-Show or hide field codes/results of all fields in document
-
-
-F9
-Update selected fields*
-
-
-Alt + Shift + F9
-Run GOTOBUTTON or MACROBUTTON from the field that displays the field results
-
-
-F11/Shift + F11
-Go to the next field/ previous field
-
-
-Ctrl + Shift + F7
-Update linked information in a Microsoft Word source document
-
-
-Ctrl + Shift + F9
-Unlink a field
-
-
-Ctrl + F11/Ctrl + Shift + F11
-Lock a field / Unlock a field
-
-Alt + Shift + k
-Preview a mail merge
-
-
-Alt + Shift + n
-Merge a document
-
-
-Alt + Shift + m
-Print the merged document
-
-
-Alt + Shift + e
-Edit a mail-merge data document
-
-
-Alt + Shift + f
-Insert a merge field
-
-
-Alt + Shift + k
-Preview a mail merge
-
-
-Alt + Shift + n
-Merge a document
-
-
-Alt + Shift + m
-Print the merged document
-
-
-Alt + Shift + e
-Edit a mail-merge data document
-
-
-Alt + Shift + f
-Insert a merge field
-
-F1
-Get Help or visit Microsoft Office.com
-
-
-Alt + Space
-Open the window menu
-
-
-Alt + F4
-Exit Word
-
-
-Shift + F10
-Display a shortcut menu (Simulate right mouse button)
-
-
-Alt + F3
-Create new Building block with selected texts
+Alt + F3 ; Create new Building block with selected texts
