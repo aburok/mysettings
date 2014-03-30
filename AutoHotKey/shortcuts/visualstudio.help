@@ -1,0 +1,436 @@
+Ctrl-X or
+Shift-Delete 	Cuts the currently selected item to the clipboard
+Ctrl-C or
+Ctrl-Insert 	Copies the currently selected item to the clipboard
+Ctrl-V or
+Shift-Insert 	Pastes the item in the clipboard at the cursor
+Ctrl-Z or
+Alt-Backspace 	Undo previous editing action
+Ctrl-Y or
+Ctrl-Shift-Z 	Redo the previous undo action
+Ctrl-Shift-V or
+Ctrl-Shift-Insert 	Pastes an item from the clipboard ring tab of the Toolbox at the cursor in the file and automatically selects the pasted item. Cycle through the items on the clipboard by pressing the shortcut keys repeatedly
+Esc
+	Closes a menu or dialog, cancels an operation in progress, or places focus in the current document window
+Ctrl-S
+	Saves the selected files in the current project (usually the file that is being edited)
+Ctrl-Shift-S
+	Saves all documents and projects
+Ctrl-P
+	Displays the Print dialog
+F7
+	Switches from the design view to the code view in the editor
+Shift-F7
+	Switches from the code view to the design view in the editor
+F8
+	Moves the cursor to the next item, for example in the TaskList window or Find Results window
+Shift-F8
+	Moves the cursor to the previous item, for example in the TaskList window or Find Results window
+Shift-F12
+	Finds a reference to the selected item or the item under the cursor
+Ctrl-Shift-G
+	Opens the file whose name is under the cursor or is currently selected
+Ctrl-/
+	Switches focus to the Find/Command box on the Standard toolbar
+Ctrl-Shift-F12
+	Moves to the next task in the TaskList window
+Ctrl-Shift-8
+	Moves backward in the browse history. Available in the object browser or Class View window
+Alt-Left Arrow
+	Go back in the web browser history
+Alt-Right Arrow
+	Go forward in the web browser history
+Left Arrow
+	Moves the cursor one character to the left
+Right Arrow
+	Moves the cursor one character to the right
+Down Arrow
+	Moves the cursor down one line
+Up Arrow
+	Moves the cursor up one line
+Page Down
+	Scrolls down one screen in the editor window
+Page Up
+	Scrolls up one screen in the editor window
+End
+	Moves the cursor to the end of the current line
+Home
+	Moves the cursor to the beginning of the line. If you press Home when the cursor is already at the start of the line, it will toggle the cursor between the first non-whitespace character and the real start of the line
+Ctrl-End
+	Moves the cursor to the end of the document
+Ctrl-Home
+	Moves the cursor to the start of the document
+Ctrl-G
+	Displays the Go to Line dialog. If the debugger is running, the dialog also lets you specify addresses or function names to go to
+Ctrl-]
+	Moves the cursor to the matching brace in the document. If the cursor is on an opening brace, this will move to the corresponding closing brace and vice versa
+Ctrl-K, Ctrl-N
+	Moves to the next bookmark in the document
+Ctrl-K, Ctrl-P
+	Moves to the previous bookmark
+Ctrl-K, Ctrl-I
+	Displays Quick Info, based on the current language
+Ctrl-Down Arrow
+	Scrolls text down one line but does not move the cursor. This is useful for scrolling more text into view without losing your place. Available only in text editors
+Ctrl-Up Arrow
+	Scrolls text up one line but does not move the cursor. Available only in text editors
+Ctrl-Right Arrow
+	Moves the cursor one word to the right
+Ctrl-Left Arrow
+	Moves the cursor one word to the left
+Ctrl-Shift-1
+	Navigates to the next definition, declaration, or reference of an item. Available in the object browser and Class View window. Also available in source editing windows if you have already used the Edit.GoToReference (Shift-F12) shortcut
+Ctrl-Shift-2
+	Navigates to the previous definition, declaration, or reference of an item
+
+
+Enter
+	Inserts a new line
+Delete
+	Deletes one character to the right of the cursor
+Insert
+	Toggles between insert and overtype insertion modes
+Tab
+	Indents the currently selected line or lines by one tab stop. If there is no selection, this inserts a tab stop
+Shift-Tab
+	Moves current line or selected lines one tab stop to the left
+Backspace or
+Shift-Backspace 	Deletes one character to the left of the cursor
+Ctrl-K, Ctrl-C
+	Marks the current line or selected lines of code as a comment, using the correct comment syntax for the programming language
+Ctrl-K, Ctrl-U
+	Removes the comment syntax from the current line or currently selected lines of code
+Ctrl-T or
+Shift-Enter 	Swaps the characters on either side of the cursor. (For example, AC|BD becomes AB|CD.) Available only in text editors
+Ctrl-K, Ctrl-L
+	Removes all unnamed bookmarks in the current document
+Ctrl-M, Ctrl-O
+	Automatically determines logical boundaries for creating regions in code, such as procedures, and then hides them. This collapses all such regions in the current document
+Alt-Right Arrow or
+Ctrl-Spacebar 	Displays statement completion based on the current language or autocompletes word if existing text unambiguously identifies a single symbol
+Ctrl-K, Ctrl-\
+	Removes horizontal whitespace in the selection or deletes whitespace adjacent to the cursor if there is no selection
+Ctrl-K, Ctrl-F
+	Applies the indenting and space formatting for the language as specified on the Formatting pane of the language in the Text Editor section of the Options dialog to the selected text.
+Ctrl-L
+	Cuts all selected lines or the current line if nothing has been selected to the clipboard
+Ctrl-Shift-L
+	Deletes all selected lines or the current line if no selection has been made
+Ctrl-Enter
+	Inserts a blank line above the cursor
+Ctrl-Shift-Enter
+	Inserts a blank line below the cursor
+Shift-Alt-T
+	Moves the line containing the cursor below the next line
+Ctrl-J
+	Lists members for statement completion when editing code
+Ctrl-U
+	Changes the selected text to lowercase characters
+Ctrl-Shift-U 	Changes the selected text to uppercase characters
+Ctrl-Shift-Spacebar
+	Displays a tooltip that contains information for the current parameter, based on the current language
+Ctrl-M, Ctrl-U
+	Removes the outlining information for the currently selected region
+Ctrl-M, Ctrl-P
+	Removes all outlining information from the entire document
+Ctrl-R, Ctrl-P
+	Swaps the anchor and endpoint of the current selection
+Ctrl-M, Ctrl-L
+	Toggles all previously marked hidden text sections between hidden and display states
+Ctrl-K, Ctrl-K
+	Sets or removes a bookmark at the current line
+Ctrl-M, Ctrl-M
+	Toggles the currently selected hidden text section or the section containing the cursor if there is no selection between the hidden and display states
+Ctrl-K, Ctrl-H
+	Sets or removes a shortcut in the tasklist to the current line
+Ctrl-R, Ctrl-R
+	Enables or disables word wrap in an editor
+Ctrl-R, Ctrl-W
+	Shows or hides spaces and tab marks
+Ctrl-Delete
+	Deletes the word to the right of the cursor
+Ctrl-Backspace
+	Deletes the word to the left of the cursor
+Ctrl-Shift-T
+	Transposes the two words that follow the cursor. (For example, |End Sub would be changed to read Sub End|.)
+Ctrl-.[dot] 	Display options on smarttag menu.
+Very useful for showing using/Imports options.
+
+Shift-Left Arrow
+	Moves the cursor to the left one character, extending the selection
+Shift-Alt-Left Arrow
+	Moves the cursor to the left one character, extending the column selection
+Shift-Right Arrow
+	Moves the cursor to the right one character, extending the selection
+Shift-Alt-Right Arrow
+	Moves the cursor to the right one character, extending the column selection
+Ctrl-Shift-End
+	Moves the cursor to the end of the document, extending the selection
+Ctrl-Shift-Home
+	Moves the cursor to the start of the document, extending the selection
+Ctrl-Shift-]
+	Moves the cursor to the next brace, extending the selection
+Shift-Down Arrow
+	Moves the cursor down one line, extending the selection
+Shift-Alt-Down Arrow
+	Moves the cursor down one line, extending the column selection
+Shift-End
+	Moves the cursor to the end of the current line, extending the selection
+Shift-Alt-End
+	Moves the cursor to the end of the line, extending the column selection
+Shift-Home
+	Moves the cursor to the start of the line, extending the selection
+Shift-Alt-Home
+	Moves the cursor to the start of the line, extending the column selection
+Shift-Up Arrow
+	Moves the cursor up one line, extending the selection
+Shift-Alt-Up Arrow
+	Moves the cursor up one line, extending the column selection
+Shift-Page Down
+	Extends selection down one page
+Shift-Page Up
+	Extends selection up one page
+Ctrl-A
+	Selects everything in the current document
+Ctrl-W
+	Selects the word containing the cursor or the word to the right of the cursor
+Ctrl-=
+	Selects from the current location in the editor back to the previous location in the navigation history
+Ctrl-Shift-Page Down
+	Moves the cursor to the last line in view, extending the selection
+Ctrl-Shift-Page Up
+	Moves the cursor to the top of the current window, extending the selection
+Ctrl-Shift-Alt-Right Arrow
+	Moves the cursor to the right one word, extending the column selection
+Ctrl-Shift-Left Arrow
+	Moves the cursor one word to the left, extending the selection
+Ctrl-Shift-Alt-Left Arrow
+	Moves the cursor to the left one word, extending the column selection
+
+Ctrl-Shift-B
+	Builds the solution
+Ctrl-N
+	Displays the New File dialog. Note: files created this way are not associated with a project. Use Ctrl-Shift-A to add a new file in a project
+Ctrl-Shift-N
+	Displays the New Project dialog
+Ctrl-O
+	Displays the Open File dialog
+Ctrl-Shift-O
+	Displays the Open Project dialog
+Shift-Alt-A
+	Displays the Add Existing Item dialog
+Ctrl-Shift-A
+	Displays the Add New Item dialog
+Ctrl-Alt-Insert
+	Allows you to override base class methods in a derived class when an overridable method is highlighted in the Class View pane
+
+Shift-Alt-Enter
+	Toggles full screen mode
+Ctrl-+
+	Goes back to the previous location in the navigation history. (For example, if you press Ctrl-Home to go to the start of a document, this shortcut will take the cursor back to wherever it was before you pressed Ctrl-Home.)
+Ctrl-Shift-+
+	Moves forward in the navigation history. This is effectively an undo for the View.NavigateBackward operation
+Ctrl-F4
+	Closes the current MDI child window
+Shift-Esc
+	Closes the current tool window
+Ctrl-F2
+	Moves the cursor to the navigation bar at the top of a code view
+Ctrl-Tab
+	Cycles through the MDI child windows one window at a time
+Ctrl-F6,
+Ctrl-Shift-Tab 	Moves to the previous MDI child window
+Alt-F6,
+Ctrl-Shift-F6 	Moves to the next tool window
+Shift-Alt-F6
+	Moves to the previously selected window
+F6
+	Moves to the next pane of a split pane view of a single document
+Shift-F6
+	Moves to the previous pane of a document in split pane view
+Ctrl-Pagedown
+	Moves to the next tab in the document or window (e.g., you can use this to switch the HTML editor from its design view to its HTML view
+Ctrl-PageUp
+	Moves to the previous tab in the document or window
+
+Ctrl-Down Arrow
+	Moves the selected control down in increments of one on the design surface
+
+Down Arrow 	Moves the selected control down to the next grid position on the design surface
+Ctrl-Left Arrow
+	Moves the control to the left in increments of one on the design surface
+Left Arrow
+	Moves the control to the left to the next grid position on the design surface
+Ctrl-Right Arrow
+	Moves the control to the right in increments of one on the design surface
+Right Arrow
+	Moves the control to the right into the next grid position on the design surface
+Ctrl-Up Arrow
+	Moves the control up in increments of one on the design surface
+Up Arrow
+	Moves the control up into the next grid position on the design surface
+Tab
+	Moves to the next control in the tab order
+Shift-Tab
+	Moves to the previous control in the tab order
+Ctrl-Shift-Down Arrow
+	Increases the height of the control in increments of one on the design surface
+Shift-Down Arrow
+	Increases the height of the control to the next grid position on the design surface
+Ctrl-Shift-Left Arrow
+	Reduces the width of the control in increments of one on the design surface
+Shift-Left Arrow
+	Reduces the width of the control to the next grid position on the design surface
+Ctrl-Shift-Right Arrow
+	Increases the width of the control in increments of one on the design surface
+Shift-Left Arrow
+	Increases the width of the control to the next grid position on the design surface
+Ctrl-Shift-Up Arrow
+	Decreases the height of the control in increments of one on the design surface
+Shift-Up Arrow
+	Decreases the height of the control to the next grid position on the design surface
+
+Ctrl-F
+	Displays the Find dialog
+Ctrl-Shift-F
+	Displays the Find in Files dialog
+F3
+	Finds the next occurrence of the previous search text
+Ctrl-F3
+	Finds the next occurrence of the currently selected text or the word under the cursor if there is no selection
+Shift-F3
+	Finds the previous occurrence of the search text
+Ctrl-Shift-F3
+	Finds the previous occurrence of the currently selected text or the word under the cursor
+Ctrl-D
+	Places the cursor in the Find/Command line on the Standard toolbar
+Alt-F3, H
+	Selects or clears the Search Hidden Text option for the Find dialog
+Ctrl-I
+	Starts an incremental search—after pressing Ctrl-I, you can type in text, and for each letter you type, VS.NET will find the first occurrence of the sequence of letters you have typed so far. This is a very convenient facility, as it lets you find text by typing in exactly as many characters as are required to locate the text and no more. If you press Ctrl-I a second time without typing any characters, it recalls the previous pattern. If you press it a third time or you press it when an incremental search has already found a match, VS.NET searches for the next occurrence.
+Alt-F3, C
+	Selects or clears the Match Case option for Find and Replace operations
+Alt-F3, R
+	Selects or clears the Regular Expression option so that special characters can be used in Find and Replace operations
+Ctrl-H
+	Displays the Replace dialog
+Ctrl-Shift-H
+	Displays the Replace in Files dialog
+Ctrl-Shift-I
+	Performs an incremental search in reverse direction
+Alt-F3, S
+	Halts the current Find in Files operation
+Alt-F3, B
+	Selects or clears the Search Up option for Find and Replace operations
+Alt-F3, W
+	Selects or clears the Match Whole Word option for Find and Replace operations
+Alt-F3, P
+	Selects or clears the Wildcard option for Find and Replace operations
+
+Ctrl-Alt-V, A
+	Displays the Auto window to view the values of variables currently in the scope of the current line of execution within the current procedure
+Ctrl-Alt-Break
+	Temporarily stops execution of all processes in a debugging session. Available only in run mode
+Ctrl-Alt-B
+	Displays the Breakpoints dialog, where you can add and modify breakpoints
+Ctrl-Alt-C
+	Displays the Call Stack window to display a list of all active procedures or stack frames for the current thread of execution. Available only in break mode
+Ctrl-Shift-F9
+	Clears all of the breakpoints in the project
+Ctrl-Alt-D
+	Displays the Disassembly window
+Ctrl-F9
+	Enables or disables the breakpoint on the current line of code. The line must already have a breakpoint for this to work
+Ctrl-Alt-E
+	Displays the Exceptions dialog
+Ctrl-Alt-I
+	Displays the Immediate window, where you can evaluate expressions and execute individual commands
+Ctrl-Alt-V, L
+	Displays the Locals window to view the variables and their values for the currently selected procedure in the stack frame
+Ctrl-Alt-M, 1
+	Displays the Memory 1 window to view memory in the process being debugged. This is particularly useful when you do not have debugging symbols available for the code you are looking at. It is also helpful for looking at large buffers, strings, and other data that does not display clearly in the Watch or Variables window
+Ctrl-Alt-M, 2
+	Displays the Memory 2 window
+Ctrl-Alt-M, 3
+	Displays the Memory 3 window
+Ctrl-Alt-M, 4
+	Displays the Memory 4 window
+Ctrl-Alt-U
+	Displays the Modules window, which allows you to view the .dll or .exe files loaded by the program. In multiprocess debugging, you can right-click and select Show Modules for all programs
+Ctrl-B
+	Opens the New Breakpoint dialog
+Ctrl-Alt-Q
+	Displays the Quick Watch dialog with the current value of the selected expression. Available only in break mode. Use this command to check the current value of a variable, property, or other expression for which you have not defined a watch expression
+Ctrl-Alt-G
+	Displays the Registers window, which displays CPU register contents
+Ctrl-Shift-F5
+	Terminates the current debugging session, rebuilds if necessary, and then starts a new debugging session. Available in break and run modes
+Ctrl-Alt-N
+	Displays the Running Documents window that displays the set of HTML documents that you are in the process of debugging. Available in break and run modes
+Ctrl-F10
+	Starts or resumes execution of your code and then halts execution when it reaches the selected statement. This starts the debugger if it is not already running
+Ctrl-Shift-F10
+	Sets the execution point to the line of code you choose
+Alt-NUM *
+	Highlights the next statement to be executed
+F5
+	If not currently debugging, this runs the startup project or projects and attaches the debugger. If in break mode, this allows execution to continue (i.e., it returns to run mode).
+Ctrl-F5
+	Runs the code without invoking the debugger. For console applications, this also arranges for the console window to stay open with a "Press any key to continue" prompt when the program finishes
+F11
+	Executes code one statement at a time, tracing execution into function calls
+Shift-F11
+	Executes the remaining lines of a function in which the current execution point lies
+F10
+	Executes the next line of code but does not step into any function calls
+Shift-F5
+	Available in break and run modes, this terminates the debugging session
+Ctrl-Alt-V, T
+	Displays the This window, which allows you to view the data members of the object associated with the current method
+Ctrl-Alt-H
+	Displays the Threads window to view all of the threads for the current process
+F9
+	Sets or removes a breakpoint at the current line
+Ctrl-F11
+	Displays the disassembly information for the current source file. Available only in break mode
+Ctrl-Alt-W, 1
+	Displays the Watch 1 window to view the values of variables or watch expressions
+Ctrl-Alt-W, 2
+	Displays the Watch 2 window
+Ctrl-Alt-W, 3
+	Displays the Watch 3 window
+Ctrl-Alt-W, 4
+	Displays the Watch 4 window
+Ctrl-Alt-P
+	Displays the Processes dialog, which allows you to attach or detach the debugger to one or more running processes
+
+Ctrl-Shift-M
+	Toggles the Command window into or out of a mode allowing text within the window to be selected
+Ctrl-Shift-C
+	Displays the Class View window
+Ctrl-Alt-A
+	Displays the Command window, which allows you to type commands that manipulate the IDE
+Ctrl-Alt-T
+	Displays the Document Outline window to view the flat or hierarchical outline of the current document
+Ctrl-Alt-F
+	Displays the Favorites window, which lists shortcuts to web pages
+Ctrl-Alt-O
+	Displays the Output window to view status messages at runtime
+F4
+	Displays the Properties window, which lists the design-time properties and events for the currently selected item
+Shift-F4
+	Displays the property pages for the item currently selected. (For example, use this to show a project's settings.)
+Ctrl-Shift-E
+	Displays the Resource View window
+Ctrl-Alt-S
+	Displays the Server Explorer window, which allows you to view and manipulate database servers, event logs, message queues, web services, and many other operating system services
+Ctrl-Alt-R
+	Displays the web browser window, which allows you to view pages on the Internet
+Ctrl-Alt-L
+	Displays the Solution Explorer, which lists the projects and files in the current solution
+Ctrl-Alt-K
+	Displays the TaskList window, which displays tasks, comments, shortcuts, warnings, and error messages
+Ctrl-Alt-X
+	Displays the Toolbox, which contains controls and other items that can be dragged into editor and designer windows
+
+
