@@ -1,2 +1,2 @@
-source c:\Dropbox\Tools\Vim\_vimrc
-source c:\Dropbox\Tools\Vim\_vundle
+source c:\Dropbox\mysettings\Vim\_vimrc
+source c:\Dropbox\mysettings\Vim\_vundle

@@ -169,3 +169,11 @@ Win+- ; Zoom out with Magnifier active
 Ctrl+Alt+i ; Invert colors in Magnifier display
 Win+Esc ; Exit Magnifier
 Ctrl+Alt+Arrow Keys ; Move the Magnifier windows
+
+## DEVELOPMENT
+dir %WINDIR%\Microsoft.Net\Framework\v* ; CHECK .NET Framework Versions
+%SystemRoot%\SYSTEM32\rundll32.exe dsquery,OpenQueryWindow  ;   Search for users in Active directory
+C:\Windows\System32\inetsrv\config\applicationHost.config ; IIS CONFIGURATION FILE location
+
+
+

@@ -45,19 +45,23 @@ return
 ; #n::Run Notepad
 
 #a::
-    Run "..\WinSplit Revolution\WinSplit.exe"
+    Run "..\..\Tools\WinSplit Revolution\WinSplit.exe"
     return
 
 #q::
-    Run "..\LINQPad4\LINQPad.exe"
+    Run "..\..\Tools\LINQPad4\LINQPad.exe"
     return
 
 
 #n::Run "C:\Windows\System32\SnippingTool.exe"
 
-#v::Run "C:\Program Files (x86)\Vim73\vim73\gvim.exe"
+#v::
+gvimPath = %PROGRAMFILES%\Vim73\vim73\gvim.exe ; %PROGRAMFILES%\vim\vim74\gvim.exe ; %PROGRAMFILES(x86)%\vim\Vim74\gvim.exe
+TryOpenApplicationFromList(gvimPath, "Gvim.exe")
+return
 
-#t::Run "..\TotalCommander\totalcmd\Totalcmd.exe"
+
+#t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
 
 #c::
 ID := WinExist("A")
@@ -70,24 +74,6 @@ command := "cd /d " . Title . " & prompt=$p$_%username%@%computername%:$g"
 ;MsgBox % command
 Run, cmd.exe /k %command%
 return
-
-;selectedpath := Explorer_GetCurrentPath()
-;selectedpath := selectedpath ? selectedpath : "%userprofile%"
-;command := "cd /d " . selectedpath . " & prompt=$p$_%username%@%computername%:$g"
-;MsgBox % command
-;Run, cmd.exe /k %command%
-;return
-
-;Explorer_GetCurrentPath(){
-    ;ID := WinExist("A")
-    ;WinGetClass, Class, ahk_id %ID%
-    ;WinGetTitle, Title, ahk_ID %ID%
-    ;MsgBox % Title
-    ;ControlGetText, ePath, Edit1, ahk_id %ID%
-    ;MsgBox % ePath
-    ;return ePath
-;}
-
 
 ; Power Shell command line
 ; #w::Run powershell.exe
@@ -118,6 +104,19 @@ selected_file := Explorer_GetSelection()
 Run gvim.exe "%selected_file%"
 return
 
+
+CAPSLOCK::Ctrl
+
+; -----------------------
+; FUNCTIONS
+; -----------------------
+RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
+    IfWinExist, %WinTitle%
+        WinActivate, %WinTitle%
+    else
+        Run, %Target%
+}
+
 Explorer_GetSelection(hwnd="") {
 	hwnd := hwnd ? hwnd : WinExist("A")
 	WinGetClass class, ahk_id %hwnd%
@@ -130,37 +129,15 @@ Explorer_GetSelection(hwnd="") {
 	return Trim(ToReturn,"`n")
 }
 
-    ; ^w::WinKill
-
-    ; CHECK .NET Version:
-    ; dir %WINDIR%\Microsoft.Net\Framework\v*
-
-    ; For some reason below doesn't work won close a window
-    ; Search for users in Active directory
-    ; %SystemRoot%\SYSTEM32\rundll32.exe dsquery,OpenQueryWindow
-
-    ; IIS CONFIGURATION FILE
-    ; C:\Windows\System32\inetsrv\config\applicationHost.config
-
-    ; GRANT ACCESS TO FILE FOR USER
-    ; ICACLS test.txt /grant "IIS AppPool\DefaultAppPool":F
-
-    CAPSLOCK::Ctrl
-
-    ;
-    ; F12::
-    ; EnvGet, pathset, Path
-    ; MsgBox % pathset
-    ; return
-
-
-    ; -----------------------
-    ; FUNCTIONS
-    ; -----------------------
-    RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
-        IfWinExist, %WinTitle%
-            WinActivate, %WinTitle%
-            else
-                Run, %Target%
+TryOpenApplicationFromList(List, LastChance){
+    Loop , parse, List, `;
+    {
+        isFile := FileExist(A_LoopField)
+        if (isFile){
+            Run, %A_LoopField%
+            return
+        }
     }
-
+    ; Last chance
+    Run, %LastChance%
+}
