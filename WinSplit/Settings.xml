@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WinSplit_Settings Version="1.0">
+    <General>
+        <AcceptTopMostWindow Value="False"/>
+        <ShowHotKeysWarnings Value="True"/>
+        <ShowHooksWarnings Value="True"/>
+        <Language Value="9"/>
+        <TempFiles AutoDelete="True" AutoDelTime="0"/>
+    </General>
+    <VirtualNumpad>
+        <Position X="0" Y="0"/>
+        <Style Reduced="False" Transparency="65"/>
+        <Comportment ShowAtBoot="False" SaveAtExit="True" AutoHide="False"/>
+    </VirtualNumpad>
+    <WebUpdate>
+        <AutoCheck Value="False"/>
+        <Frequency Value="1"/>
+        <LastCheck Value="1394532392"/>
+    </WebUpdate>
+    <Drag_N_Go>
+        <Enabled Value="True"/>
+        <TimerFrequency Value="100"/>
+        <DetectionRadius Value="100"/>
+        <ZoneColors Background="#4169E1" Foreground="#FFFFFF"/>
+        <Transparency Value="45"/>
+        <Modifiers Modifier1="Ctrl" Modifier2="Alt"/>
+    </Drag_N_Go>
+    <Miscellaneous>
+        <MouseFollowWindow Value="False"/>
+        <MouseFollowWindowOnlyWhenIn Value="True"/>
+        <MinMaxCycle Value="False"/>
+    </Miscellaneous>
+</WinSplit_Settings>

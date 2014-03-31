@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<WinSplit_AutoPlacement>
+  <Application Name="OUTLOOK.EXE::rctrl_renwnd32" WindowStyle="382664704" x="128" y="0" width="597" height="240" Resize="True"/>
+  <Application Name="WinSplit.exe::wxWindowClassNR" WindowStyle="-1769996288" x="0" y="0" width="0" height="0" Resize="False"/>
+</WinSplit_AutoPlacement>

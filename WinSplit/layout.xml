@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LayoutManager>
+  <Sequence_1 NbCombo="3">
+    <Combo_0 x="0.00" y="50.00" width="50.00" height="50.00"/>
+    <Combo_1 x="0.00" y="50.00" width="33.33" height="50.00"/>
+    <Combo_2 x="0.00" y="50.00" width="66.67" height="50.00"/>
+  </Sequence_1>
+  <Sequence_2 NbCombo="3">
+    <Combo_0 x="0.00" y="50.00" width="100.00" height="50.00"/>
+    <Combo_1 x="0.00" y="50.00" width="50.00" height="50.00"/>
+    <Combo_2 x="50.00" y="50.00" width="50.00" height="50.00"/>
+  </Sequence_2>
+  <Sequence_3 NbCombo="3">
+    <Combo_0 x="50.00" y="50.00" width="50.00" height="50.00"/>
+    <Combo_1 x="66.67" y="50.00" width="33.33" height="50.00"/>
+    <Combo_2 x="33.33" y="50.00" width="66.67" height="50.00"/>
+  </Sequence_3>
+  <Sequence_4 NbCombo="3">
+    <Combo_0 x="0.00" y="0.00" width="50.00" height="100.00"/>
+    <Combo_1 x="0.00" y="0.00" width="33.33" height="100.00"/>
+    <Combo_2 x="0.00" y="0.00" width="66.67" height="100.00"/>
+  </Sequence_4>
+  <Sequence_5 NbCombo="3">
+    <Combo_0 x="0.00" y="0.00" width="100.00" height="100.00"/>
+    <Combo_1 x="33.33" y="0.00" width="33.33" height="100.00"/>
+    <Combo_2 x="16.67" y="0.00" width="66.67" height="100.00"/>
+  </Sequence_5>
+  <Sequence_6 NbCombo="3">
+    <Combo_0 x="50.00" y="0.00" width="50.00" height="100.00"/>
+    <Combo_1 x="66.67" y="0.00" width="33.33" height="100.00"/>
+    <Combo_2 x="33.33" y="0.00" width="66.67" height="100.00"/>
+  </Sequence_6>
+  <Sequence_7 NbCombo="3">
+    <Combo_0 x="0.00" y="0.00" width="50.00" height="50.00"/>
+    <Combo_1 x="0.00" y="0.00" width="33.33" height="50.00"/>
+    <Combo_2 x="0.00" y="0.00" width="66.67" height="50.00"/>
+  </Sequence_7>
+  <Sequence_8 NbCombo="3">
+    <Combo_0 x="0.00" y="0.00" width="100.00" height="50.00"/>
+    <Combo_1 x="0.00" y="0.00" width="50.00" height="50.00"/>
+    <Combo_2 x="50.00" y="0.00" width="50.00" height="50.00"/>
+  </Sequence_8>
+  <Sequence_9 NbCombo="3">
+    <Combo_0 x="50.00" y="0.00" width="50.00" height="50.00"/>
+    <Combo_1 x="66.67" y="0.00" width="33.33" height="50.00"/>
+    <Combo_2 x="33.33" y="0.00" width="66.67" height="50.00"/>
+  </Sequence_9>
+</LayoutManager>

@@ -1,0 +1,77 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=C:\Dropbox\tools\vim\bundle\vundle\
+call vundle#rc()
+" alternatively, pass a path where Vundle should install bundles
+let path = 'C:\Dropbox\tools\vim\bundle\'
+call vundle#rc(path)
+
+" let Vundle manage xVundle, required
+Bundle 'gmarik/vundle'
+Bundle 'scrooloose/nerdtree'
+Bundle 'https://github.com/kshenoy/vim-signature'
+
+" The following are examples of different formats supported.
+" Keep bundle commands between here and filetype plugin indent on.
+" scripts on GitHub repos
+Bundle 'tpope/vim-fugitive'
+Bundle 'Lokaltog/vim-easymotion'
+
+Bundle 'tpope/vim-surround'
+
+Bundle 'https://github.com/xolox/vim-misc'
+Bundle 'https://github.com/xolox/vim-notes'
+Bundle 'https://github.com/lpenz/vimcommander'
+
+Bundle 'vim-scripts/sessionman.vim'
+Bundle 'scrooloose/nerdcommenter'
+
+Bundle 'spf13/vim-autoclose'
+Bundle 'tpope/vim-fugitive'
+
+Bundle 'Lokaltog/vim-easymotion'
+" Bundle 'Valloric/YouCompleteMe'
+
+Bundle "MarcWeber/vim-addon-mw-utils"
+Bundle "tomtom/tlib_vim"
+Bundle "garbas/vim-snipmate"
+Bundle "https://github.com/honza/vim-snippets.git"
+
+Bundle 'https://github.com/kien/rainbow_parentheses.vim'
+
+Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
+" "Bundle 'https://github.com/nosami/Omnisharp'
+
+" Bundle 'tpope/vim-rails.git'
+
+" Fuzzy finding files , Fuzzy Finder doesn't work because it cannt load L9
+" Bundle 'L9'
+" Bundle 'FuzzyFinder'
+" === I've replaced it with CtrlP
+Bundle 'https://github.com/kien/ctrlp.vim.git'
+
+" The sparkup vim script is in a subdirectory of this repo called vim.
+" Pass the path to set the runtimepath properly.
+Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
+" scripts from http://vim-scripts.org/vim/scripts.html
+" scripts not on GitHub
+Bundle 'git://git.wincent.com/command-t.git'
+" git repos on your local machine (i.e. when working on your own plugin)
+" Bundle 'file:///home/gmarik/path/to/plugin'
+" ...
+
+filetype plugin indent on     " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :BundleList          - list configured bundles
+" :BundleInstall(!)    - install (update) bundles
+" :BundleSearch(!) foo - search (or refresh cache first) for foo
+" :BundleClean(!)      - confirm (or auto-approve) removal of unused bundles
+"
+" see :h vundle for more details or wiki for FAQ
+" NOTE: comments after Bundle commands are not allowed.
+" Put your stuff after this line

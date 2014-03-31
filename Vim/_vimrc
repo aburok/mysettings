@@ -1,0 +1,264 @@
+" https://github.com/scrooloose/syntastic
+" :SyntasticInfo  -  see available syntax checkers
+"
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set number " Show line numbers
+set ruler " Show position in file
+set history=100
+
+syntax on " turn on syntax high:wq
+
+set guifont=Consolas:h11
+
+" show matching bracket
+set showmatch
+set incsearch
+set hlsearch
+" Pressing * will select a word and serch for it in a file
+set ignorecase
+set wildmenu  " show list instead of just completing
+set wildmode=list:longest,full
+
+"Status line gnarliness
+set laststatus=2
+set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
+
+" Turns of annoying sounds
+set noerrorbells
+set novisualbell
+set t_vb=
+set tm=500
+
+
+colorscheme desert
+set guifont=Consolas:h11
+set encoding=utf8
+
+set nobackup " not ~ files
+set nowb " ???
+set noswapfile " no .swp files :)
+
+" set backup
+" set backupdir=~/.vim/backup
+" set directory=~/.vim/tmp
+
+" set shiftwidth=3 " ???
+
+set ai " Auto indent
+set si " Smart indent
+set wrap " Wrap lines
+
+" This will fold all blocks by default when file is open
+set foldmethod=indent
+" This will open folds to given level when file is open
+set foldlevel=3
+" zc - close fold,
+" zC - close All faldings
+" zo - open fold,
+" zO - Opens All foldings
+" za - toggle fold
+" zA - Toggle All Foldings
+"
+
+set cursorline
+set autoread
+
+imap jj <esc>
+
+
+" + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
+
+" <C-W>_
+" <C-W>=
+
+" WINDOWS BINDINGS
+" backspace in Visual mode deletes selection
+vnoremap <BS> X
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V>		"+gP
+map <S-Insert>		"+gP
+
+cmap <C-V>		<C-R>+
+cmap <S-Insert>		<C-R>+
+
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+xnoremap <C-A> <C-C>ggVG
+
+" CTRL-Tab is Next window
+noremap <C-Tab> <C-W>w
+inoremap <C-Tab> <C-O><C-W>w
+cnoremap <C-Tab> <C-C><C-W>w
+onoremap <C-Tab> <C-C><C-W>w
+
+" CTRL-S is Save File
+imap <C-S> <Esc>:w!<cr>a
+
+nmap <enter> i<cr><esc>
+
+let g:mapleader = ','
+let mapleader = ','
+
+" map space in normal mode to Search :)
+nnoremap <space> /
+
+map 0 ^
+
+" move a line of text using Alt + [jk]
+nmap <M-j> my:m+<cr>`y
+nmap <M-k> my:m-2<cr>`y
+
+" Inserting blank line below/above current line
+" Ctrl + j
+" nmap <C-j> myo<esc>`y
+" Ctrl + k
+" nmap <C-k> myO<esc>`y
+
+" Settings for spell checking
+map <leader>ss :setlocal spell!<CR>
+
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
+imap <C-Space> <C-n>
+
+
+
+" Only do this part when compiled with support for autocommands.
+if has("autocmd")
+
+  " Enable file type detection.
+  " Use the default filetype settings, so that mail gets 'tw' set to 72,
+  " 'cindent' is on in C files, etc.
+  " Also load indent files, to automatically do language-dependent indenting.
+  filetype plugin indent on
+
+  " Put these in an autocmd group, so that we can delete them easily.
+  augroup vimrcEx
+  au!
+
+  " For all text files set 'textwidth' to 78 characters.
+  autocmd FileType text setlocal textwidth=78
+
+  " When editing a file, always jump to the last known cursor position.
+  " Don't do it when the position is invalid or when inside an event handler
+  " (happens when dropping a file on gvim).
+  " Also don't do it when the mark is in the first line, that is the default
+  " position when opening a file.
+  autocmd BufReadPost *
+    \ if line("'\"") > 1 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  augroup END
+
+else
+
+  set autoindent		" always set autoindenting on
+
+endif " has("autocmd")
+
+" Convenient command to see the difference between the current buffer and the
+" file it was loaded from, thus the changes you made.
+" Only define it when not defined already.
+if !exists(":DiffOrig")
+  command DiffOrig vert new | set bt=nofile | r ++edit # | 0d_ | diffthis
+		  \ | wincmd p | diffthis
+endif
+
+" Remove any trailing whitespace that is in the file
+autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+
+map N Nzz
+map n nzz
+
+" belowe command will make word before cursor UPPERCASE
+" gU - make UPPERCASE
+" iw - the whole word
+" `]a - go to last position and append
+map! <C-F> <Esc>gUiw`]a
+
+" Surround word with STUFF
+" mt - mark current position
+" ciw - cut inner word and go to Inset Mode
+" ( - type ( char
+" <C-R>" - paste content of last buffor from yank or delete
+" ) - type ) char
+" <Esc>`t - escape and go to t mark
+nmap z( mtciw(<C-R>")<Esc>`t
+nmap z[ mtciw[<C-R>"]<Esc>`t
+nmap z' mtciw'<C-R>"'<Esc>`t
+nmap z" mtciw"<C-R>""<Esc>`t
+
+" Insert empty line below / above
+nnoremap <silent> zj mto<Esc>`t
+nnoremap <silent> zk mtO<Esc>`t
+
+" File operations
+nmap <leader>w :w!<cr>
+
+" Automatically open NERDTree when entering vim autocmd vimenter * NERDTree
+" close NERDTree if it's only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Map toggling NERDTree to Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+
+
+" Abbreviations
+iab cwl Console.WriteLine
+iab rtfm Read The Fine Manual
+iab wtf What The Fuck
+iab brb Be Right Back
+iab imho In My Humble Opinion
+iab lol Lought Out Loud
+
+"Find and Replace Text
+vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
+
+
+" vim-notes notes directory"
+" "let g:notes_directory = [']
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+
+
+" For Editing books with code"
+" looking for Open Curly Bracket and intending its content"
+nmap zi /{<cr>vi{>
+"
+" Searching for Open Curly Bracket with not intended content"
+" g/\(\s\+\){\_s\1\S/$vi{>
+
+" Removing Leading spaces in code sections"
+nmap zn /<pre>\_s\s\+<CR>$vit<
+
+" Intending content of Curly Bracket that is not intended"
+nmap zc /\(\s\+\){\_s\1\S<CR>$vi{>
+
+" Intending content of Curly Bracket that is on the left border of screen"
+nmap zb /\_s{\_s\S<CR>jvi{>
+
+" Surround with <pre> tag and remove <p> from each line
+vmap <leader>c S<pre>$movit:s/<p>\(.\+\)<\/p>/\1/g<CR>/Listing<cr>
