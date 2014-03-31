@@ -43,6 +43,10 @@
 Ctrl+a ; Increment number under the cursor
 Ctrl+x ; Decrement number under cursor
 ggVGg? ; Change text to Rot13
+:g/.*#.*/p ; Will print all lines containing # character
+:% g/foo/s/bar/zzz/g ;for every line containing "foo" substitute all "bar" with "zzz."
+:'a,'bg/foo/j ; to join any line containing the string foo to its subsequent line, if it lies between the lines between the 'a' and 'b' marks
+
 
 // Case
 Vu ; Lowercase line
@@ -61,8 +65,10 @@ ggguG ; Set all text to lowercase
 // Read/Write files
 :1,10 w outfile ; Saves lines 1 to 10 in outfile
 :1,10 w >> outfile ; Appends lines 1 to 10 to outfile
-:r infile ; Insert the content of infile
-:23r infile ; Insert the content of infile under line 23
+:r infile ; Read and Insert the content of infile
+:23r infile ; Read and Insert the content of infile under line 23
+:r! <cmd> ; read an aoutput of a command into the current Buffer
+
 
 // File explorer
 :e . ; Open integrated file explorer

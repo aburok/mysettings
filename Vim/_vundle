@@ -2,34 +2,37 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=C:\Dropbox\tools\vim\bundle\vundle\
+set rtp+=C:\Dropbox\mysettings\vim\vundle
 call vundle#rc()
 " alternatively, pass a path where Vundle should install bundles
-let path = 'C:\Dropbox\tools\vim\bundle\'
-call vundle#rc(path)
+" "let path = 'C:\Dropbox\tools\vim\bundle\'
+" "call vundle#rc(path)
 
 " let Vundle manage xVundle, required
 Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'https://github.com/kshenoy/vim-signature'
+Bundle 'https://github.com/PProvost/vim-ps1'
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
+Bundle 'https://github.com/vim-scripts/camelcasemotion'
 
 Bundle 'tpope/vim-surround'
 
 Bundle 'https://github.com/xolox/vim-misc'
 Bundle 'https://github.com/xolox/vim-notes'
-Bundle 'https://github.com/lpenz/vimcommander'
+" "Bundle 'https://github.com/lpenz/vimcommander'
 
 Bundle 'vim-scripts/sessionman.vim'
 Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'spf13/vim-autoclose'
 Bundle 'tpope/vim-fugitive'
+Bundle 'https://github.com/tpope/vim-sensible'
 
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'Valloric/YouCompleteMe'
@@ -37,9 +40,9 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
-Bundle "https://github.com/honza/vim-snippets.git"
 
-Bundle 'https://github.com/kien/rainbow_parentheses.vim'
+" "Bundle "https://github.com/honza/vim-snippets.git"
+" "Bundle 'https://github.com/kien/rainbow_parentheses.vim'
 
 Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
 " "Bundle 'https://github.com/nosami/Omnisharp'
@@ -57,7 +60,7 @@ Bundle 'https://github.com/kien/ctrlp.vim.git'
 Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " scripts from http://vim-scripts.org/vim/scripts.html
 " scripts not on GitHub
-Bundle 'git://git.wincent.com/command-t.git'
+" "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Bundle 'file:///home/gmarik/path/to/plugin'
 " ...

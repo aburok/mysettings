@@ -56,32 +56,33 @@ return
 #n::Run "C:\Windows\System32\SnippingTool.exe"
 
 #v::
-gvimPath = %PROGRAMFILES%\Vim73\vim73\gvim.exe ; %PROGRAMFILES%\vim\vim74\gvim.exe ; %PROGRAMFILES(x86)%\vim\Vim74\gvim.exe
-TryOpenApplicationFromList(gvimPath, "Gvim.exe")
+path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
+path1 = C:\Program Files (x86)\vim\Vim74\gvim.exe
+path2 = %PROGRAMFILES%\Vim73\vim73\gvim.exe
+gvimPath := path1 . "," . path2 . "," . path3
+params := ""
+TryOpenApplicationFromList(gvimPath, "Gvim.exe", params)
 return
 
 
 #t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
 
 #c::
-ID := WinExist("A")
-WinGetTitle, Title, ahk_ID %ID%
-isFile := FileExist( Title)
-;MsgBox % isFile
-
-Title := Title && isFile ? Title : "%USERPROFILE%"
-command := "cd /d " . Title . " & prompt=$p$_%username%@%computername%:$g"
-;MsgBox % command
+Title := GetWorkingDirectory()
+prompt := "prompt=$p$_%username%@%computername%:$g"
+command := "cd /d " . Title . " & " . prompt
 Run, cmd.exe /k %command%
 return
 
+
 ; Power Shell command line
-; #w::Run powershell.exe
 #p::
 ^!p::
-EnvGet, SystemRoot, SystemRoot
-Run %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe -ExecutionPolicy unrestricted,
-    return
+    workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
+    params := " -ExecutionPolicy unrestricted -noexit " . workingDir
+    command = %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe %params%
+    Run , %command%
+return
 
 
 #g::
@@ -129,15 +130,36 @@ Explorer_GetSelection(hwnd="") {
 	return Trim(ToReturn,"`n")
 }
 
-TryOpenApplicationFromList(List, LastChance){
-    Loop , parse, List, `;
+ReturnFirstExistingFile(FileList){
+    Loop , parse, List, `,
     {
         isFile := FileExist(A_LoopField)
         if (isFile){
-            Run, %A_LoopField%
-            return
+            return %A_LoopField%
         }
     }
+    return
+}
+
+TryOpenApplicationFromList(List, LastChance, params = ""){
+    existingFile := ReturnFirstExistingFile(List)
+    if (existingFile)
+        Run, %existingFile%
     ; Last chance
     Run, %LastChance%
+}
+
+GetWorkingDirectory(){
+    dir := GetDirFromWindowTitle()
+    If(dir)
+        return dir
+    return USERPROFILE
+}
+
+GetDirFromWindowTitle(){
+    ID := WinExist("A")
+    WinGetTitle, Title, ahk_ID %ID%
+    if( FileExist(Title))
+        return  Title
+    return
 }

@@ -32,6 +32,9 @@ GetHelpFilePath(){
 
         return "shortcuts\cmd.help"
     }
+    if (windowClass == "CabinetWClass"){
+        return "shortcuts\windows7.help"
+    }
     return
 }
 
@@ -87,6 +90,7 @@ GuiEscape:
 IF ( FilterText == "")
     Gui, Destroy
 ELSE
+    ; If the filter box is not empty it will clear it on first Esc
     GuiControl,, FilterText
 Return
 
