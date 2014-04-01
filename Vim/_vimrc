@@ -246,19 +246,33 @@ noremap <silent> <F11> :cal VimCommanderToggle()<CR>
 
 " For Editing books with code"
 " looking for Open Curly Bracket and intending its content"
-nmap zi /{<cr>vi{>
+nmap <leader>fi /{<cr>vi{>
 "
 " Searching for Open Curly Bracket with not intended content"
 " g/\(\s\+\){\_s\1\S/$vi{>
 
 " Removing Leading spaces in code sections"
-nmap zn /<pre>\_s\s\+<CR>$vit<
+nmap <leader>fn /<pre>\_s\s\+<CR>$vit<
 
 " Intending content of Curly Bracket that is not intended"
-nmap zc /\(\s\+\){\_s\1\S<CR>$vi{>
+nmap <leader>fc /\(\s\+\){\_s\1\S<CR>$vi{>
 
 " Intending content of Curly Bracket that is on the left border of screen"
-nmap zb /\_s{\_s\S<CR>jvi{>
+nmap <leader>fb /\_s{\_s\S<CR>jvi{>
 
 " Surround with <pre> tag and remove <p> from each line
-vmap <leader>c S<pre>$movit:s/<p>\(.\+\)<\/p>/\1/g<CR>/Listing<cr>
+vmap <leader>fp S<pre>$movit:s/<p>\(.\+\)<\/p>/\1/g<CR>/Listing<cr>
+
+map w <Plug>CamelCaseMotion_w
+map b <Plug>CamelCaseMotion_b
+map e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+
+omap iw <Plug>CamelCaseMotion_iw
+xmap iw <Plug>CamelCaseMotion_iw
+omap ib <Plug>CamelCaseMotion_ib
+xmap ib <Plug>CamelCaseMotion_ib
+omap ie <Plug>CamelCaseMotion_ie
+xmap ie <Plug>CamelCaseMotion_ie

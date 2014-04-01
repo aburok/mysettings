@@ -44,14 +44,9 @@ return
 ; ---------------------
 ; #n::Run Notepad
 
-#a::
-    Run "..\..\Tools\WinSplit Revolution\WinSplit.exe"
-    return
+#a:: Run "..\..\Tools\WinSplit Revolution\WinSplit.exe"
 
-#q::
-    Run "..\..\Tools\LINQPad4\LINQPad.exe"
-    return
-
+#q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
 
 #n::Run "C:\Windows\System32\SnippingTool.exe"
 
@@ -60,7 +55,10 @@ path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
 path1 = C:\Program Files (x86)\vim\Vim74\gvim.exe
 path2 = %PROGRAMFILES%\Vim73\vim73\gvim.exe
 gvimPath := path1 . "," . path2 . "," . path3
-params := ""
+
+; Get directory of selected Explorer window to set Gvim Path
+workingDir := GetWorkingDirectory()
+params := " -c ""cd " . workingDir . " "" "
 TryOpenApplicationFromList(gvimPath, "Gvim.exe", params)
 return
 
@@ -144,9 +142,9 @@ ReturnFirstExistingFile(FileList){
 TryOpenApplicationFromList(List, LastChance, params = ""){
     existingFile := ReturnFirstExistingFile(List)
     if (existingFile)
-        Run, %existingFile%
+        Run, %existingFile% %params%
     ; Last chance
-    Run, %LastChance%
+    Run, %LastChance% %params%
 }
 
 GetWorkingDirectory(){
