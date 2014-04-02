@@ -1,0 +1,13 @@
+Auto Hot Key
+    like a common interface keyboard for all applications
+    For Example:
+    Excel uses Ctrl+PgUp / Ctrl + PgDown to move to the next worksheet in
+    current workbook, so Auto Hot Key, could remap those to Ctrl + Tab / Ctrl
+    + Shift + Tab , when this key combinatioon will be pressed inside Excel
+    window
+
+    Auto Hot Key as a keyboard remapping tool for applications
+
+    Create functions that will check if it is given application and will send
+    different keyboard Key set.
+
