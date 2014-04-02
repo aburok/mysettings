@@ -279,6 +279,10 @@ xmap ib <Plug>CamelCaseMotion_ib
 omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
 
+" Execute command recorded in register a by pressing `
+nnoremap ` @a
+" Repeating command on each line of Visual Selection recorded into register a
+vnoremap ` :normal @a<CR>
 
 " vim-notes plugin settings
 let g:notes_directories = ['C:/Dropbox/Notes']
