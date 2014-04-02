@@ -145,7 +145,11 @@ ctrl-t, ctrl-d ; Indent/un-indent in insert mode
 // Selection
 gv ; Repeat last selection, reselect previous selection
 
-
+// Spell
+,ss ; toggle on\off spelling in current buffer
+]s ; Go to next misspelled word
+[s ; Go to previous misspelled word
+z= ; for word under the cursor, suggest correctyl spelled words.
 
 
 // NERDTree
