@@ -35,6 +35,9 @@ GetHelpFilePath(){
     if (windowClass == "CabinetWClass"){
         return "shortcuts\windows7.help"
     }
+    if (windowClass == "XLMAIN"){
+        return "shortcuts\excel.help"
+    }
     return
 }
 
