@@ -22,6 +22,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'https://github.com/vim-scripts/camelcasemotion'
 
 Bundle 'tpope/vim-surround'
+Bundle 'https://github.com/yegappan/mru'
 
 Bundle 'https://github.com/xolox/vim-misc'
 Bundle 'https://github.com/xolox/vim-notes'

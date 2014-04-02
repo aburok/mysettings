@@ -12,8 +12,6 @@ set history=100
 
 syntax on " turn on syntax high:wq
 
-set guifont=Consolas:h11
-
 " show matching bracket
 set showmatch
 set incsearch
@@ -36,6 +34,10 @@ set tm=500
 
 colorscheme desert
 set guifont=Consolas:h11
+set guioptions-=m " remove menu bar
+set guioptions-=T " remove toolbar from window
+set guioptions-=r " remove right-hand scroll bar
+
 set encoding=utf8
 
 set nobackup " not ~ files
@@ -69,7 +71,7 @@ set autoread
 
 imap jj <esc>
 
-
+map Q <nop>
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
@@ -139,10 +141,10 @@ nmap <M-k> my:m-2<cr>`y
 " Settings for spell checking
 map <leader>ss :setlocal spell!<CR>
 
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
+map <leader>sn ]s " Go to next misspelled word
+map <leader>sp [s " Go to previous misspelled word
+"map <leader>sa zg " Add word under cursor to the good words file
+map <leader>s? z=  " Suggest correct word for word under the cursor
 imap <C-Space> <C-n>
 
 
@@ -276,3 +278,12 @@ omap ib <Plug>CamelCaseMotion_ib
 xmap ib <Plug>CamelCaseMotion_ib
 omap ie <Plug>CamelCaseMotion_ie
 xmap ie <Plug>CamelCaseMotion_ie
+
+
+" vim-notes plugin settings
+let g:notes_directories = ['C:/Dropbox/Notes']
+let g:notes_suffix = '.note'
+
+
+
+
