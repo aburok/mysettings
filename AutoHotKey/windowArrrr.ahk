@@ -32,11 +32,12 @@ return
 ^#q::SetWindowPosition("0, 0, 0.5, 0.5") ; Top Left Corner
 ^#w::SetWindowPosition("0, 0, 0.3333, 0.5") ; Top
 ^#e::SetWindowPosition("0.5, 0, 0.5, 0.5") ; Top Right Corner
+^#s::SetWindowPosition("0, 0, 1, 1") ; Maximize window
 ^#z::SetWindowPosition("0, 0.5, 0.5, 0.5") ; Bottom Left Corner
 ^#c::SetWindowPosition("0.5, 0.5, 0.5, 0.5") ; Bottom Right Corner
 
-+#h::Send {LWin down }{ Left down}
-+#l::Send {LWin down}{ Right down}
++#h::Send {Shift down}{LWin down }{ Left down}
++#l::Send {Shift down}{LWin down}{ Right down}
 
 ^#u:: WinMaximize, A
 
@@ -153,7 +154,7 @@ MoveCurrentWindow(left, right, top, bottom){
     monitorH := (bottom - top)
 
     x:= ( monitorW * xScale + left)
-    y:= ( monitorH * yScale )
+    y:= ( monitorH * yScale + top)
     w:= ( monitorW * wScale )
     h:= ( monitorH * hScale )
 
