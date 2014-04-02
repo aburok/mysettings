@@ -276,3 +276,21 @@ S ; in visual mode, add a surrounding but place text on new line + indent it
 :[range]Gbrowse! ; Like :Gbrowse, but put the URL on the clipboard rather than opening it.
 :[range]Gbrowse {revision} ; Like :Gbrowse, but for a given |fugitive-revision|.  A useful value here is -, which ties the URL to the latest commit rather than a volatile branch.
 :[range]Gbrowse [...]@{remote} ; Force using the given remote rather than the remote for the current branch.  The remote is used to determine which GitHub repository to link to.
+
+
+// Vim - Notes
+@ ; automatically triggers tag completion
+' ; becomes ‘ or ’ depending on where you type it
+" ; becomes “ or ” (same goes for these)
+-- ; becomes —
+-> ; becomes →
+<- ; becomes ←
+* - + ; become •
+*** ; the three characters *** in insert mode in quick succession insert a horizontal ruler delimited by empty lines
+Tab and Alt-Right ; increase indentation of list items (works on the current line and selected lines)
+Shift-Tab and Alt-Left ; decrease indentation of list items
+*<cr> ; Enter on a line with only a list bullet removes the bullet and starts a new line below the current line
+\en ; executes :NoteFromSelectedText
+\sn ; executes :SplitNoteFromSelectedText
+\tn ; executes :TabNoteFromSelectedText
+
