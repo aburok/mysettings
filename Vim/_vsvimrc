@@ -1,0 +1,5 @@
+map gb :vsc View.NavigateBackward<CR>
+map gf :vsc View.NavigateForward<CR>
+
+map gp :vsc View.PreviousDocumentWindowNav<CR>
+map gn :vsc View.NextDocumentWindowNav<CR>

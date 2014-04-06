@@ -13,6 +13,7 @@ Bundle 'gmarik/vundle'
 Bundle 'scrooloose/nerdtree'
 Bundle 'https://github.com/kshenoy/vim-signature'
 Bundle 'https://github.com/PProvost/vim-ps1'
+Bundle 'https://github.com/bling/vim-airline'
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.

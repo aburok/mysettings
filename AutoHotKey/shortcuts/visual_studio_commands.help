@@ -1,0 +1,804 @@
+
+Shift+Alt+3 ; Analyze.NavigateBackward
+Shift+Alt+4 ; Analyze.NavigateForward
+Ctrl+\, Ctrl+N ; Architecture.NewDiagram
+
+Ctrl+Shift+B ; Build.BuildSolution
+Ctrl+Break ; Build.Cancel
+Ctrl+F7 ; Build.Compile
+Alt+F11 ; Build.RunCodeAnalysisonSolution
+
+Alt+Enter ; ClassViewContextMenus.ClassViewMultiselectProjectreferencesItems.Properties
+
+Alt+F10 ; Debug.ApplyCodeChanges
+Ctrl+Alt+V, A ; Debug.Autos
+Ctrl+Alt+Break ; Debug.BreakAll
+Ctrl+B ; Debug.BreakatFunction
+Ctrl+Alt+B ; Debug.Breakpoints
+Ctrl+Alt+C ; Debug.CallStack
+Ctrl+Shift+F9 ; Debug.DeleteAllBreakpoints
+Alt+F2 ; Debug.DiagnosticsHub.Launch
+Ctrl+Alt+D ; Debug.Disassembly
+Ctrl+Alt+V, D ; Debug.DOMExplorer
+Ctrl+F9 ; Debug.EnableBreakpoint
+Ctrl+Alt+E ; Debug.Exceptions
+Ctrl+Shift+F11 ; Debug.GoToPreviousCallorIntelliTraceEvent
+Alt+F5 ; Debug.Graphics.StartDiagnostics
+Ctrl+Alt+I ; Debug.Immediate
+Ctrl+Alt+Y, T ; Debug.IntelliTraceCalls
+Ctrl+Alt+Y, F ; Debug.IntelliTraceEvents
+Ctrl+Alt+V, C ; Debug.JavaScriptConsole
+Ctrl+Alt+V, L ; Debug.Locals
+Ctrl+5 ; Debug.LocationToolbar.ProcessCombo
+Ctrl+7 ; Debug.LocationToolbar.StackFrameCombo
+Ctrl+6 ; Debug.LocationToolbar.ThreadCombo
+Ctrl+8 ; Debug.LocationToolbar.ToggleCurrentThreadFlaggedState
+Ctrl+9 ; Debug.LocationToolbar.ToggleFlaggedThreads
+Ctrl+Alt+M, 1 ; Debug.Memory1
+Ctrl+Alt+M, 2 ; Debug.Memory2
+Ctrl+Alt+M, 3 ; Debug.Memory3
+Ctrl+Alt+M, 4 ; Debug.Memory4
+Ctrl+Alt+U ; Debug.Modules
+Ctrl+Shift+D, S ; Debug.ParallelStacks
+Ctrl+Shift+D, 1 ; Debug.ParallelWatch1
+Ctrl+Shift+D, 2 ; Debug.ParallelWatch2
+Ctrl+Shift+D, 3 ; Debug.ParallelWatch3
+Ctrl+Shift+D, 4 ; Debug.ParallelWatch4
+Ctrl+Alt+Z ; Debug.Processes
+Shift+F9 or Ctrl+Alt+Q ; Debug.QuickWatch
+Ctrl+Shift+R ; Debug.RefreshWindowsapp
+Ctrl+Alt+G ; Debug.Registers
+Ctrl+Shift+F5 ; Debug.Restart
+Ctrl+F10 ; Debug.RunToCursor
+Ctrl+Shift+F10 ; Debug.SetNextStatement
+Ctrl+Shift+` ; Debug.ShowCallStackonCodeMap
+Alt+Num * ; Debug.ShowNextStatement
+F5 ; Debug.Start
+Alt+F1 ; Debug.StartWindowsPhoneApplicationAnalysis
+Ctrl+F5 ; Debug.StartWithoutDebugging
+F11 ; Debug.StepInto
+Ctrl+Alt+F11 ; Debug.StepIntoCurrentProcess
+Shift+Alt+F11 ; Debug.StepIntoSpecific
+Shift+F11 ; Debug.StepOut
+Ctrl+Shift+Alt+F11 ; Debug.StepOutCurrentProcess
+F10 ; Debug.StepOver
+Ctrl+Alt+F10 ; Debug.StepOverCurrentProcess
+Shift+F5 ; Debug.StopDebugging
+Shift+Alt+F2 ; Debug.StopPerformanceAnalysis
+Ctrl+Shift+D, K ; Debug.Tasks
+Ctrl+Alt+H ; Debug.Threads
+F9 ; Debug.ToggleBreakpoint
+Ctrl+F11 ; Debug.ToggleDisassembly
+Ctrl+Alt+W, 1 ; Debug.Watch1
+Ctrl+Alt+W, 2 ; Debug.Watch2
+Ctrl+Alt+W, 3 ; Debug.Watch3
+Ctrl+Alt+W, 4 ; Debug.Watch4
+
+Alt+F9, D ; DebuggerContextMenus.BreakpointsWindow.Delete
+Alt+F9, A ; DebuggerContextMenus.BreakpointsWindow.GoToDisassembly
+Alt+F9, S ; DebuggerContextMenus.BreakpointsWindow.GoToSourceCode
+
+Ctrl+Alt+F2 ; DiagnosticsHub.StopCollection
+
+Ctrl+C or Ctrl+Ins ; Edit.Copy
+Ctrl+X or Shift+Delete ; Edit.Cut
+Ctrl+Shift+V or Ctrl+Shift+Ins ; Edit.CycleClipboardRing
+Delete ; Edit.Delete
+Ctrl+F ; Edit.Find
+Shift+F12 ; Edit.FindAllReferences
+Ctrl+Shift+F ; Edit.FindinFiles
+F3 ; Edit.FindNext
+Ctrl+F3 ; Edit.FindNextSelected
+Shift+F3 ; Edit.FindPrevious
+Ctrl+Shift+F3 ; Edit.FindPreviousSelected
+Ctrl+K, Ctrl+M ; Edit.GenerateMethod
+Ctrl+G ; Edit.GoTo
+Ctrl+F12 ; Edit.GoToDeclaration
+F12 ; Edit.GoToDefinition
+Ctrl+D ; Edit.GoToFindCombo
+F8 ; Edit.GoToNextLocation
+Shift+F8 ; Edit.GoToPrevLocation
+Ctrl+K, Ctrl+X ; Edit.InsertSnippet
+Ctrl+Down Arrow ; Edit.MoveControlDown
+Down Arrow ; Edit.MoveControlDownGrid
+Ctrl+Left Arrow ; Edit.MoveControlLeft
+Left Arrow ; Edit.MoveControlLeftGrid
+Ctrl+Right Arrow ; Edit.MoveControlRight
+Right Arrow ; Edit.MoveControlRightGrid
+Ctrl+Up Arrow ; Edit.MoveControlUp
+Up Arrow ; Edit.MoveControlUpGrid
+Ctrl+, ; Edit.NavigateTo
+Ctrl+K, Ctrl+N ; Edit.NextBookmark
+Ctrl+Shift+K, Ctrl+Shift+N ; Edit.NextBookmarkInFolder
+Ctrl+Shift+G ; Edit.OpenFile
+Ctrl+V or Shift+Ins ; Edit.Paste
+Ctrl+K, Ctrl+P ; Edit.PreviousBookmark
+Ctrl+Shift+K, Ctrl+Shift+P ; Edit.PreviousBookmarkInFolder
+Shift+Alt+F12 ; Edit.QuickFindSymbol
+Ctrl+Shift+J ; Edit.RefreshRemoteReferences
+Ctrl+H ; Edit.Replace
+Ctrl+Shift+H ; Edit.ReplaceinFiles
+Ctrl+A ; Edit.SelectAll
+Tab ; Edit.SelectNextControl
+Shift+Tab ; Edit.SelectPreviousControl
+Enter ; Edit.ShowTileGrid
+Ctrl+Shift+Down Arrow ; Edit.SizeControlDown
+Shift+Down Arrow ; Edit.SizeControlDownGrid
+Ctrl+Shift+Left Arrow ; Edit.SizeControlLeft
+Shift+Left Arrow ; Edit.SizeControlLeftGrid
+Ctrl+Shift+Right Arrow ; Edit.SizeControlRight
+Shift+Right Arrow ; Edit.SizeControlRightGrid
+Ctrl+Shift+Up Arrow ; Edit.SizeControlUp
+Shift+Up Arrow ; Edit.SizeControlUpGrid
+Alt+F3, S ; Edit.StopSearch
+Ctrl+K, Ctrl+S ; Edit.SurroundWith
+Ctrl+Z or Alt+Backspace ; Edit.Undo
+
+Alt+F9, L ; EditorContextMenus.CodeWindow.Breakpoint.BreakpointEditlabels
+Ctrl+` ; EditorContextMenus.CodeWindow.CodeMap.ShowItem
+Ctrl+Alt+F5 ; EditorContextMenus.CodeWindow.Execute
+Ctrl+M, Ctrl+G ; EditorContextMenus.CodeWindow.GoToView
+Ctrl+K, Ctrl+O ; EditorContextMenus.CodeWindow.ToggleHeaderCodeFile
+Ctrl+K, Ctrl+T or Ctrl+K, T ; EditorContextMenus.CodeWindow.ViewCallHierarchy
+
+Alt+F4 ; File.Exit
+Ctrl+N ; File.NewFile
+Ctrl+Shift+N ; File.NewProject
+Shift+Alt+N ; File.NewWebSite
+Ctrl+O ; File.OpenFile
+Ctrl+Shift+O ; File.OpenProject
+Shift+Alt+O ; File.OpenWebSite
+Ctrl+P ; File.Print
+Ctrl+Shift+S ; File.SaveAll
+Ctrl+S ; File.SaveSelectedItems
+Ctrl+Shift+W ; File.ViewinBrowser
+
+Ctrl+Alt+F1 ; Help.AddandRemoveHelpContent
+F1 ; Help.F1Help
+Ctrl+F1 ; Help.ViewHelp
+Shift+F1 ; Help.WindowHelp
+
+Ctrl+R, Q ; LoadTest.JumpToCounterPane
+
+Insert ; OtherContextMenus.MicrosoftDataEntityDesignContext.AddNewDiagram
+
+Shift+Alt+A ; Project.AddExistingItem
+Ctrl+Shift+A ; Project.AddNewItem
+Ctrl+Shift+X ; Project.ClassWizard
+Ctrl+Alt+Ins ; Project.Override
+Alt+;, Alt+C ; Project.Previewchanges
+Alt+;, Alt+P ; Project.Publishselectedfiles
+Alt+;, Alt+R ; Project.Replaceselectedfilesfromserver
+Alt+Down Arrow ; ProjectandSolutionContextMenus.Item.MoveDown
+Alt+Up Arrow ; ProjectandSolutionContextMenus.Item.MoveUp
+
+Ctrl+R, Ctrl+E ; Refactor.EncapsulateField
+Ctrl+R, Ctrl+I ; Refactor.ExtractInterface
+Ctrl+R, Ctrl+M ; Refactor.ExtractMethod
+Ctrl+R, Ctrl+V ; Refactor.RemoveParameters
+Ctrl+R, Ctrl+R ; Refactor.Rename
+Ctrl+R, Ctrl+O ; Refactor.ReorderParameters
+
+Ctrl+[, O or Ctrl+[, Ctrl+O ; SolutionExplorer.OpenFilesFilter
+Ctrl+[, P or Ctrl+[, Ctrl+P ; SolutionExplorer.PendingChangesFilter
+Ctrl+[, S or Ctrl+[, Ctrl+S ; SolutionExplorer.SyncWithActiveDocument
+
+Ctrl+0, Ctrl+N or Ctrl+0, N ; Team.Git.GoToGitBranches
+Ctrl+0, Ctrl+G or Ctrl+0, G ; Team.Git.GoToGitChanges
+Ctrl+0, Ctrl+O or Ctrl+0, O ; Team.Git.GoToGitCommits
+Ctrl+' ; Team.TeamExplorerSearch
+
+Ctrl+0, Ctrl+B or Ctrl+0, B ; TeamFoundationContextMenus.Commands.GoToBuilds
+Ctrl+0, Ctrl+C or Ctrl+0, C ; TeamFoundationContextMenus.Commands.GoToConnect
+Ctrl+0, Ctrl+D or Ctrl+0, D ; TeamFoundationContextMenus.Commands.GoToDocuments
+Ctrl+0, Ctrl+H or Ctrl+0, H ; TeamFoundationContextMenus.Commands.GoToHome
+Ctrl+0, Ctrl+M or Ctrl+0, M ; TeamFoundationContextMenus.Commands.GoToMyWork
+Ctrl+0, Ctrl+P or Ctrl+0, P ; TeamFoundationContextMenus.Commands.GoToPendingChanges
+Ctrl+0, Ctrl+R or Ctrl+0, R ; TeamFoundationContextMenus.Commands.GoToReports
+Ctrl+0, Ctrl+S or Ctrl+0, S ; TeamFoundationContextMenus.Commands.GoToSettings
+Ctrl+0, Ctrl+A or Ctrl+0, A ; TeamFoundationContextMenus.Commands.GoToWebAccess
+Ctrl+0, Ctrl+W or Ctrl+0, W ; TeamFoundationContextMenus.Commands.GoToWorkItems
+
+Ctrl+\, Ctrl+C ; Test.UseCodedUITestBuilder
+Ctrl+\, Ctrl+A ; Test.UseExistingActionRecording
+
+Ctrl+R, Ctrl+A ; TestExplorer.DebugAllTests
+Ctrl+R, Ctrl+T ; TestExplorer.DebugAllTestsInContext
+Ctrl+R, L ; TestExplorer.RepeatLastRun
+Ctrl+R, A ; TestExplorer.RunAllTests
+Ctrl+R, T ; TestExplorer.RunAllTestsInContext
+
+Ctrl+Alt+P ; Tools.AttachtoProcess
+Ctrl+K, Ctrl+B ; Tools.CodeSnippetsManager
+Ctrl+Shift+Alt+F12, Ctrl+Shift+Alt+F12 ; Tools.ForceGC
+Ctrl+/ ; Tools.GoToCommandLine
+
+Shift+Alt+M ; View.AllWindows
+Ctrl+\, Ctrl+R ; View.ArchitectureExplorer
+Alt+Left Arrow ; View.Backward
+Ctrl+K, Ctrl+W ; View.BookmarkWindow
+Ctrl+Shift+1 ; View.BrowseNext
+Ctrl+Shift+2 ; View.BrowsePrevious
+Ctrl+Alt+K ; View.CallHierarchy
+Ctrl+Shift+C ; View.ClassView
+Ctrl+K, Ctrl+V ; View.ClassViewGoToSearchCombo
+Ctrl+\, D or Ctrl+\, Ctrl+D ; View.CodeDefinitionWindow
+Ctrl+Alt+A ; View.CommandWindow
+Shift+Alt+D ; View.DataSources
+Ctrl+Alt+T ; View.DocumentOutline
+F2 ; View.EditLabel
+Ctrl+\, E or Ctrl+\, Ctrl+E ; View.ErrorList
+Ctrl+Alt+F ; View.F#Interactive
+Ctrl+Alt+F12 ; View.FindSymbolResults
+Alt+Right Arrow ; View.Forward
+Ctrl+Shift+7 ; View.ForwardBrowseContext
+Shift+Alt+Enter ; View.FullScreen
+Ctrl+- ; View.NavigateBackward
+Ctrl+Shift+- ; View.NavigateForward
+Ctrl+Shift+F12 ; View.NextError
+Ctrl+W, N or Ctrl+W, Ctrl+N ; View.Notifications
+Ctrl+Alt+J ; View.ObjectBrowser
+Ctrl+K, Ctrl+R ; View.ObjectBrowserGoToSearchCombo
+Ctrl+Alt+O ; View.Output
+Ctrl+Shift+8 ; View.PopBrowseContex
+F4 ; View.PropertiesWindow
+Shift+F4 ; View.PropertyPages
+Ctrl+Shift+E ; View.ResourceView
+Ctrl+Alt+S ; View.ServerExplorer
+Shift+Alt+F10 or Ctrl+. ; View.ShowSmartTag
+Ctrl+Alt+L ; View.SolutionExplorer
+Ctrl+\, Ctrl+S ; View.SQLServerObjectExplorer
+Ctrl+\, T or Ctrl+\, Ctrl+T ; View.TaskList
+Ctrl+\, Ctrl+M ; View.TfsTeamExplorer
+Ctrl+Alt+X ; View.Toolbox
+Ctrl+\, Ctrl+U ; View.UMLModelExplorer
+F7 ; View.ViewCode
+Shift+F7 ; View.ViewDesigner
+Ctrl+Alt+R ; View.WebBrowser
+Ctrl+Shift+. ; View.ZoomIn
+Ctrl+Shift+, ; View.ZoomOut
+
+Esc ; Window.ActivateDocumentWindow
+Ctrl+Shift+Alt+Space ; Window.AddTabtoSelection
+Ctrl+F4 ; Window.CloseDocumentWindow
+Shift+Esc ; Window.CloseToolWindow
+Ctrl+Alt+Home ; Window.KeepTabOpen
+Ctrl+F2 ; Window.MovetoNavigationBar
+Ctrl+F6 ; Window.NextDocumentWindow
+Ctrl+Tab ; Window.NextDocumentWindowNav
+Alt+F6 ; Window.NextPane
+F6 ; Window.NextSplitPane
+Ctrl+Alt+PgDn or Ctrl+PgDn ; Window.NextTab
+Ctrl+Shift+Alt+PgDn ; Window.NextTabandAddtoSelection
+Alt+F7 ; Window.NextToolWindowNav
+Ctrl+Shift+F6 ; Window.PreviousDocumentWindow
+Ctrl+Shift+Tab ; Window.PreviousDocumentWindowNav
+Shift+Alt+F6 ; Window.PreviousPane
+Shift+F6 ; Window.PreviousSplitPane
+Ctrl+Alt+PgUp or Ctrl+PgUp ; Window.PreviousTab
+Ctrl+Shift+Alt+PgUp ; Window.PreviousTabandAddtoSelection
+Shift+Alt+F7 ; Window.PreviousToolWindowNav
+Ctrl+Q ; Window.QuickLaunch
+Ctrl+Shift+Q ; Window.QuickLaunchPreviousCategory
+Alt+- ; Window.ShowDockMenu
+Ctrl+Alt+Down Arrow ; Window.ShowEzMDIFileList
+Ctrl+; ; Window.SolutionExplorerSearch
+Alt+` ; Window.WindowSearch
+
+Ctrl+Num *, Ctrl+R ; WindowsAzure.RetryMobileServiceScriptOperation
+Ctrl+Num *, Ctrl+D ; WindowsAzure.ShowMobileServiceScriptErrorDetails
+
+Alt+Down Arrow ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Down
+Alt+PgDn ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Down5
+Alt+End ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.ToBottom
+Alt+Home ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.ToTop
+Alt+Up Arrow ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Up
+Alt+PgUp ; OtherContextMenus.MicrosoftDataEntityDesignContext.MoveProperties.Up5
+Ctrl+R, R ; OtherContextMenus.MicrosoftDataEntityDesignContext.Refactor.Rename
+Shift+Del ; OtherContextMenus.MicrosoftDataEntityDesignContext.RemovefromDiagram
+Ctrl+1 ; View.EntityDataModelBrowser
+Ctrl+2 ; View.EntityDataModelMappingDetails
+
+Num - ; ClassDiagram.Collapse
+Num + ; ClassDiagram.Expand
+Ctrl+Del ; Edit.Delete
+Shift+Alt+B ; Edit.ExpandCollapseBaseTypeList
+Shift+Alt+L ; Edit.NavigateToLollipop
+Delete ; Edit.RemovefromDiagram
+Enter ; View.ViewCode
+
+Ctrl+C ; OtherContextMenus.UITestEditorContextMenu.CopyReferencetoClipboard
+Ctrl+Alt+D ; OtherContextMenus.UITestEditorContextMenu.InsertDelayBefore
+Shift+Alt+L ; OtherContextMenus.UITestEditorContextMenu.LocateAll
+Ctrl+Shift+L ; OtherContextMenus.UITestEditorContextMenu.LocatetheUIControl
+Ctrl+Alt+C ; OtherContextMenus.UITestEditorContextMenu.Movecode
+Ctrl+Shift+T ; OtherContextMenus.UITestEditorContextMenu.Splitintoanewmethod
+
+Insert ; OtherContextMenus.ColumnContext.InsertColumn
+Ctrl+L ; OtherContextMenus.DbTableContext.Add.Column
+
+Keyboard Shortcuts ; Commands
+Ctrl+\, Ctrl+Spacebar ; Diff.IgnoreTrimWhitespace
+Ctrl+\, Ctrl+1 ; Diff.InlineView
+Ctrl+\, Ctrl+3 ; Diff.LeftOnlyView
+F8 ; Diff.NextDifference
+Shift+F8 ; Diff.PreviousDifference
+Ctrl+\, Ctrl+4 ; Diff.RightOnlyView
+Ctrl+\, Ctrl+2 ; Diff.SideBySideView
+Ctrl+\, Ctrl+Tab ; Diff.SwitchBetweenLeftAndRight
+Ctrl+\, Ctrl+Down Arrow ; Diff.SynchronizeViewToggle
+Ctrl+Shift+K ; EditorContextMenus.CodeWindow.AddComment
+Ctrl+Shift+P ; EditorContextMenus.CodeWindow.EditLocalFile
+
+F5 ; DOMExplorer.Refresh
+Ctrl+B ; DOMExplorer.SelectElement
+Ctrl+Shift+I ; DOMExplorer.ShowLayout
+
+Ctrl+Break ; OtherContextMenus.FSIConsoleContext.CancelInteractiveEvaluation
+
+Insert ; ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Add.AddNode
+B ; ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.BothDependencies
+I ; ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.IncomingDependencies
+O ; ArchitectureContextMenus.DirectedGraphContextMenu.Advanced.Select.OutgoingDependencies
+Ctrl+Shift+K or Ctrl+E, C ; ArchitectureContextMenus.DirectedGraphContextMenu.NewComment
+Delete ; ArchitectureContextMenus.DirectedGraphContextMenu.Remove
+F2 ; ArchitectureContextMenus.DirectedGraphContextMenu.Rename
+
+Ctrl+F12 ; Debug.Graphics.CaptureFrame
+Shift+Alt+Down Arrow ; Debug.GraphicsMovePixelSelectionDown
+Shift+Alt+Left Arrow ; Debug.GraphicsMovePixelSelectionLeft
+Shift+Alt+Right Arrow ; Debug.GraphicsMovePixelSelectionRight
+Shift+Alt+Up Arrow ; Debug.GraphicsMovePixelSelectionUp
+Shift+Alt+0 ; Debug.GraphicsResetZoom
+Shift+Alt+= ; Debug.GraphicsZoomIn
+Shift+Alt+- ; Debug.GraphicsZoomOut
+
+Ctrl+M, Ctrl+G ; OtherContextMenus.HTMLContext.GoToController
+
+Ctrl+Down Arrow ; Edit.MoveControlDown
+Ctrl+Up Arrow ; Edit.MoveControlUp
+Ctrl+B ; Format.Bold
+Ctrl+L ; Format.ConverttoHyperlink
+Ctrl+Shift+L ; Format.InsertBookmark
+Ctrl+I ; Format.Italic
+Ctrl+U ; Format.Underline
+Ctrl+M, Ctrl+C ; Project.AddContentPage
+Ctrl+Alt+Left Arrow ; Table.ColumntotheLeft
+Ctrl+Alt+Right Arrow ; Table.ColumntotheRight
+Ctrl+Alt+Up Arrow ; Table.RowAbove
+Ctrl+Alt+Down Arrow ; Table.RowBelow
+Ctrl+Shift+N ; View.ASP.NETNonvisualControls
+Ctrl+M, Ctrl+M ; View.EditMaster
+Ctrl+PgDn ; View.NextView
+Shift+Alt+F10 ; View.ShowSmartTag
+Shift+F7 ; View.ViewMarkup
+Ctrl+PgUp ; Window.PreviousTab
+
+Ctrl+M, Ctrl+G ; OtherContextMenus.HTMLContext.GoToController
+Ctrl+PgDn ; View.NextView
+Ctrl+Shift+Y ; View.SynchronizeViews
+Shift+F7 ; View.ViewDesigner
+Ctrl+PgUp ; Window.PreviousTab
+
+Shift+Delete ; Edit.Delete
+
+F2 ; Edit.EditCell
+Delete ; Edit.Remove
+Ctrl+Delete ; Edit.RemoveRow
+Escape ; Edit.SelectionCancel
+Ctrl+4 ; Resources.Audio
+Ctrl+5 ; Resources.Files
+Ctrl+3 ; Resources.Icons
+Ctrl+2 ; Resources.Images
+Ctrl+6 ; Resources.Other
+Ctrl+1 ; Resources.Strings
+
+Alt+1 ; TeamFoundationContextMenus.MergeContextMenu.SetFocusonLeftWindow
+Alt+2 ; TeamFoundationContextMenus.MergeContextMenu.SetFocusonResultWindow
+Alt+3 ; TeamFoundationContextMenus.MergeContextMenu.SetFocusonRightWindow
+
+Shift+Alt+C ; SQL.SSDTSchemaCompareCompare
+Shift+Alt+G ; SQL.SSDTSchemaCompareGenerateScript
+Shift+Alt+. ; SQL.SSDTSchemaCompareNextChange
+Shift+Alt+, ; SQL.SSDTSchemaComparePreviousChange
+Alt+Break ; SQL.SSDTSchemaCompareStop
+Shift+Alt+U ; SQL.SSDTSchemaCompareWriteUpdates
+
+Shift+Alt+U ; CommitAllEdits
+Ctrl+R, E or Ctrl+R, Ctrl+E ; SQL.ExpandWildcards
+Ctrl+R, Q or Ctrl+R, Ctrl+Q ; SQL.FullyqualifyNames
+Ctrl+R, M or Ctrl+R, Ctrl+M ; SQL.MovetoSchema
+Shift+Alt+PgDn ; ViewFileInScriptPanel
+
+Shift+Alt+U ; CommitAllEdits
+Alt+F5 ; SQL.ExecuteWithDebugger
+Ctrl+R, E or Ctrl+R, Ctrl+E ; SQL.ExpandWildcards
+Ctrl+R, Q or Ctrl+R, Ctrl+Q ; SQL.FullyqualifyNames
+Ctrl+R, M or Ctrl+R, Ctrl+M ; SQL.MovetoSchema
+Alt+Break ; SQL.TSqlEditorCancelQuery
+Ctrl+Shift+E ; SQL.TSqlEditorExecuteQuery
+Ctrl+D, F ; SQL.TSqlEditorResultsAsFile
+Ctrl+D, G ; SQL.TSqlEditorResultsAsGrid
+Ctrl+D, T ; SQL.TSqlEditorResultsAsText
+Ctrl+D, E ; SQL.TSqlEditorShowEstimatedPlan
+Ctrl+D, A ; SQL.TSqlEditorToggleExecutionPlan
+Ctrl+D, R ; SQL.TSqlEditorToggleResultsPane
+Ctrl+Alt+N ; TSqlEditorCloneQuery
+Shift+Alt+PgDn ; TSqlEditorDatabaseCombo
+
+Alt+Break ; SQL.TSqlEditorCancelQuery
+Ctrl+Shift+E ; SQL.TSqlEditorExecuteQuery
+Ctrl+D, F ; SQL.TSqlEditorResultsAsFile
+Ctrl+D, G ; SQL.TSqlEditorResultsAsGrid
+Ctrl+D, T ; SQL.TSqlEditorResultsAsText
+Ctrl+D, E ; SQL.TSqlEditorShowEstimatedPlan
+Ctrl+D, A ; SQL.TSqlEditorToggleExecutionPlan
+Ctrl+D, R ; SQL.TSqlEditorToggleResultsPane
+Ctrl+Alt+N ; TSqlEditorCloneQuery
+Shift+Alt+PgDn ; TSqlEditorDatabaseCombo
+
+F12 ; PageInspector.Minimize
+
+Ctrl+T ; QueryDesigner.CancelRetrievingData
+Ctrl+2 ; QueryDesigner.Criteria
+Ctrl+1 ; QueryDesigner.Diagram
+Ctrl+R ; QueryDesigner.ExecuteSQL
+Ctrl+G ; QueryDesigner.GotoRow
+Ctrl+Shift+J ; QueryDesigner.JoinMode
+Ctrl+4 ; QueryDesigner.Results
+Ctrl+3 ; QueryDesigner.SQL
+
+Alt+End ; SQL.QueryResultsNewRow
+Shift+Alt+R ; SQL.QueryResultsRefresh
+Alt+Break ; SQL.QueryResultsStop
+
+Enter ; Edit.BreakLine
+Left Arrow ; Edit.CharLeft
+Shift+Left Arrow ; Edit.CharLeftExtend
+Right Arrow ; Edit.CharRight
+Shift+Right Arrow ; Edit.CharRightExtend
+Tab ; Edit.InsertTab
+Down Arrow ; Edit.LineDown
+Shift+Down Arrow ; Edit.LineDownExtend
+Up Arrow ; Edit.LineUp
+Shift+Up Arrow ; Edit.LineUpExtend
+Ctrl+Down Arrow ; Edit.MoveControlDown
+Ctrl+Left Arrow ; Edit.MoveControlLeft
+Ctrl+Right Arrow ; Edit.MoveControlRight
+Ctrl+Up Arrow ; Edit.MoveControlUp
+Esc ; Edit.SelectionCancel
+Ctrl+Shift+Down Arrow ; Edit.SizeControlDown
+Ctrl+Shift+Left Arrow ; Edit.SizeControlLeft
+Ctrl+Shift+Right Arrow ; Edit.SizeControlRight
+Ctrl+Shift+Up Arrow ; Edit.SizeControlUp
+Shift+Tab ; Edit.TabLeft
+Ctrl+Alt+D ; View.ReportData
+
+F12 ; ArchitectureDesigner.Sequence.NavigateToCode
+Shift+Del ; Edit.Delete
+
+F2 ; Edit.EditCell
+Ctrl+Delete ; Edit.RemoveRow
+Esc ; Edit.SelectionCancel
+F7 ; View.ViewCode
+
+Ctrl+K, Ctrl+G ; ClassViewContextMenus.ClassViewProject.View.ViewinPageInspector
+
+Delete ; Edit.Delete
+F2 ; File.Rename
+Alt+Home ; TeamFoundationContextMenus.Commands.GoToTeamExplorerNavigation
+Alt+Down Arrow ; TeamFoundationContextMenus.Commands.GoToTeamExplorerNextSectionContent
+Alt+0 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerPageContent
+Alt+Up Arrow ; TeamFoundationContextMenus.Commands.GoToTeamExplorerPreviousSectionContent
+Alt+1 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection1Content
+Alt+2 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection2Content
+Alt+3 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection3Content
+Alt+4 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection4Content
+Alt+5 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection5Content
+Alt+6 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection6Content
+Alt+7 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection7Content
+Alt+8 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection8Content
+Alt+9 ; TeamFoundationContextMenus.Commands.GoToTeamExplorerSection9Content
+Alt+Left Arrow ; TeamFoundationContextMenus.Commands.TeamExplorerNavigateBackward
+Alt+Right Arrow ; TeamFoundationContextMenus.Commands.TeamExplorerNavigateForward
+Shift+Alt+C ; TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageCreateCopyWI
+Shift+Alt+L ; TeamFoundationContextMenus.MyWorkPageInProgress.TfsContextMyWorkPageNewLinkedWI
+F5 ; View.Refresh
+
+F5 ; View.Refresh
+
+F12 ; TestExplorer.OpenTest
+
+Enter or Shift+Enter ; Edit.BreakLine
+Left Arrow ; Edit.CharLeft
+Shift+Left Arrow ; Edit.CharLeftExtend
+Shift+Alt+Left Arrow ; Edit.CharLeftExtendColumn
+Right Arrow ; Edit.CharRight
+Shift+Right Arrow ; Edit.CharRightExtend
+Shift+Alt+Right Arrow ; Edit.CharRightExtendColumn
+Ctrl+T ; Edit.CharTranspose
+Ctrl+K, Ctrl+L ; Edit.ClearBookmarks
+Ctrl+M, Ctrl+A ; Edit.CollapseAllOutlining
+Ctrl+M, Ctrl+S ; Edit.CollapseCurrentRegion
+Ctrl+M, Ctrl+T ; Edit.CollapseTag
+Ctrl+M, Ctrl+O ; Edit.CollapsetoDefinitions
+Ctrl+K, Ctrl+C ; Edit.CommentSelection
+Ctrl+Space or Alt+Right Arrow ; Edit.CompleteWord
+Ctrl+Shift+Alt+C ; Edit.CopyParameterTip
+Alt+, ; Edit.DecreaseFilterLevel
+Backspace or Shift+Bkspce ; Edit.DeleteBackwards
+Ctrl+K, Ctrl+\ ; Edit.DeleteHorizontalWhiteSpace
+Ctrl+End ; Edit.DocumentEnd
+Ctrl+Shift+End ; Edit.DocumentEndExtend
+Ctrl+Home ; Edit.DocumentStart
+Ctrl+Shift+Home ; Edit.DocumentStartExtend
+Ctrl+M, Ctrl+X ; Edit.ExpandAllOutlining
+Ctrl+M, Ctrl+E ; Edit.ExpandCurrentRegion
+Ctrl+K, Ctrl+D ; Edit.FormatDocument
+Ctrl+K, Ctrl+F ; Edit.FormatSelection
+Ctrl+] ; Edit.GotoBrace
+Ctrl+Shift+] ; Edit.GotoBraceExtend
+Ctrl+M, Ctrl+H ; Edit.HideSelection
+Alt+. ; Edit.IncreaseFilterLevel
+Ctrl+I ; Edit.IncrementalSearch
+Tab ; Edit.InsertTab
+Ctrl+L ; Edit.LineCut
+Ctrl+Shift+L ; Edit.LineDelete
+Down Arrow ; Edit.LineDown
+Shift+Down Arrow ; Edit.LineDownExtend
+Shift+Alt+Down Arrow ; Edit.LineDownExtendColumn
+End ; Edit.LineEnd
+Shift+End ; Edit.LineEndExtend
+Shift+Alt+End ; Edit.LineEndExtendColumn
+Ctrl+Enter ; Edit.LineOpenAbove
+Ctrl+Shift+Enter ; Edit.LineOpenBelow
+Home ; Edit.LineStart
+Shift+Home ; Edit.LineStartExtend
+Shift+Alt+Home ; Edit.LineStartExtendColumn
+Shift+Alt+T ; Edit.LineTranspose
+Up Arrow ; Edit.LineUp
+Shift+Up Arrow ; Edit.LineUpExtend
+Shift+Alt+Up Arrow ; Edit.LineUpExtendColumn
+Ctrl+J ; Edit.ListMembers
+Ctrl+U ; Edit.MakeLowercase
+Ctrl+Shift+U ; Edit.MakeUppercase
+Alt+Down Arrow ; Edit.MoveSelectedLinesDown
+Alt+Up Arrow ; Edit.MoveSelectedLinesUp
+Ctrl+Shift+Down Arrow ; Edit.NextHighlightedReference
+Insert ; Edit.OvertypeMode
+PgDn ; Edit.PageDown
+Shift+PgDn ; Edit.PageDownExtend
+PgUp ; Edit.PageUp
+Shift+PgUp ; Edit.PageUpExtend
+Ctrl+Shift+Spacebar ; Edit.ParameterInfo
+Ctrl+Shift+Alt+P ; Edit.PasteParameterTip
+Ctrl+Alt+- ; Edit.PeekBackward
+Alt+F12 ; Edit.PeekDefinition
+Ctrl+Alt+= ; Edit.PeekForward
+Ctrl+Shift+Up Arrow ; Edit.PreviousHighlightedReference
+Ctrl+K, Ctrl+I ; Edit.QuickInfo
+Ctrl+Shift+I ; Edit.ReverseIncrementalSearch
+Ctrl+Down Arrow ; Edit.ScrollLineDown
+Ctrl+Up Arrow ; Edit.ScrollLineUp
+Ctrl+W ; Edit.SelectCurrentWord
+Escape ; Edit.SelectionCancel
+Ctrl+= ; Edit.SelectToLastGoBack
+Alt+` ; Edit.ShowCodeLensMenu
+Ctrl+M, Ctrl+U ; Edit.StopHidingCurrent
+Ctrl+M, Ctrl+P ; Edit.StopOutlining
+Ctrl+K, Ctrl+A ; Edit.SwapAnchor
+Shift+Tab ; Edit.TabLeft
+Ctrl+M, Ctrl+L ; Edit.ToggleAllOutlining
+Ctrl+K, Ctrl+K ; Edit.ToggleBookmark
+Ctrl+Alt+Space ; Edit.ToggleCompletionMode
+Ctrl+M, Ctrl+M ; Edit.ToggleOutliningExpansion
+Ctrl+K, Ctrl+H ; Edit.ToggleTaskListShortcut
+Ctrl+E, Ctrl+W ; Edit.ToggleWordWrap
+Ctrl+K, Ctrl+U ; Edit.UncommentSelection
+Ctrl+PgDn ; Edit.ViewBottom
+Ctrl+Shift+PgDn ; Edit.ViewBottomExtend
+Ctrl+PgUp ; Edit.ViewTop
+Ctrl+Shift+PgUp ; Edit.ViewTopExtend
+Ctrl+R, Ctrl+W ; Edit.ViewWhiteSpace
+Ctrl+Delete ; Edit.WordDeleteToEnd
+Ctrl+Backspace ; Edit.WordDeleteToStart
+Ctrl+Right Arrow ; Edit.WordNext
+Ctrl+Shift+Right Arrow ; Edit.WordNextExtend
+Ctrl+Shift+Alt+Right Arrow ; Edit.WordNextExtendColumn
+Ctrl+Left Arrow ; Edit.WordPrevious
+Ctrl+Shift+Left Arrow ; Edit.WordPreviousExtend
+Ctrl+Shift+Alt+Left Arrow ; Edit.WordPreviousExtendColumn
+Ctrl+Shift+T ; Edit.WordTranspose
+Alt+Enter ; EditorContextMenus.CodeWindow.ExecuteInInteractive
+Alt+' ; EditorContextMenus.CodeWindow.ExecuteLineInInteractive
+Ctrl+K, Ctrl+G ; OtherContextMenus.HTMLContext.ViewinPageInspector
+Alt+PgDn ; TeamFoundationContextMenus.Annotate.TfsAnnotateMoveNextRegion
+Alt+PgUp ; TeamFoundationContextMenus.Annotate.TfsAnnotateMovePreviousRegion
+
+Shift+Del ; Edit.Delete
+
+Shift+Del ; Edit.DeleteFromModel
+
+Shift+Del ; Edit.DeleteFromModel
+
+Shift+Del ; Edit.DeleteFromModel
+
+
+Insert ; Edit.NewAccelerator
+Ctrl+W ; Edit.NextKeyTyped
+
+
+
+Down Arrow ; Edit.MoveControlDown
+Left Arrow ; Edit.MoveControlLeft
+Right Arrow ; Edit.MoveControlRight
+Up Arrow ; Edit.MoveControlUp
+Ctrl+Left Arrow ; Edit.ScrollColumnLeft
+Ctrl+Right Arrow ; Edit.ScrollColumnRight
+Ctrl+Down Arrow ; Edit.ScrollLineDown
+Ctrl+Up Arrow ; Edit.ScrollLineUp
+Shift+Down Arrow ; Edit.SizeControlDown
+Shift+Left Arrow ; Edit.SizeControlLeft
+Shift+Right Arrow ; Edit.SizeControlRight
+Shift+Up Arrow ; Edit.SizeControlUp
+Ctrl+Shift+Down Arrow ; Format.AlignBottoms
+Shift+F9 ; Format.AlignCenters
+Ctrl+Shift+Left Arrow ; Format.AlignLefts
+F9 ; Format.AlignMiddles
+Ctrl+Shift+Right Arrow ; Format.AlignRights
+Ctrl+Shift+Up Arrow ; Format.AlignTops
+Ctrl+B ; Format.ButtonBottom
+Ctrl+R ; Format.ButtonRight
+Ctrl+Shift+F9 ; Format.CenterHorizontal
+Ctrl+F9 ; Format.CenterVertical
+Ctrl+M ; Format.CheckMnemonics
+Shift+F7 ; Format.SizetoContent
+Alt+Right Arrow or Alt+Left Arrow ; Format.SpaceAcross
+Alt+Up Arrow or Alt+Down Arrow ; Format.SpaceDown
+Ctrl+D ; Format.TabOrder
+Ctrl+T ; Format.TestDialog
+Ctrl+G ; Format.ToggleGuides
+
+
+Ctrl+A ; Image.AirbrushTool
+Ctrl+B ; Image.BrushTool
+Ctrl+Shift+U ; Image.CopyandOutlineSelection
+Ctrl+J ; Image.DrawOpaque
+Alt+P ; Image.EllipseTool
+Ctrl+Shift+I ; Image.EraseTool
+Ctrl+Shift+Alt+P ; Image.FilledEllipseTool
+Ctrl+Shift+Alt+R ; Image.FilledRectangleTool
+Ctrl+Shift+Alt+W ; Image.FilledRoundedRectangleTool
+Ctrl+F ; Image.FillTool
+Ctrl+H ; Image.FlipHorizontal
+Shift+Alt+H ; Image.FlipVertical
+Ctrl+= ; Image.LargerBrush
+Ctrl+L ; Image.LineTool
+Ctrl+M ; Image.MagnificationTool
+Ctrl+Shift+M ; Image.Magnify
+Insert ; Image.NewImageType
+Ctrl+] or Ctrl+Right Arrow ; Image.NextColor
+Ctrl+Shift+] or Ctrl+Shift+Right Arrow ; Image.NextRightColor
+Shift+Alt+P ; Image.OutlinedEllipseTool
+Shift+Alt+R ; Image.OutlinedRectangleTool
+Shift+Alt+W ; Image.OutlinedRoundedRectangleTool
+Ctrl+I ; Image.PencilTool
+Ctrl+[ or Ctrl+Left Arrow ; Image.PreviousColor
+Ctrl+Shift+[ or Ctrl+Shift+Left Arrow ; Image.PreviousRightColor
+Shift+Alt+S ; Image.RectangleSelectionTool
+Alt+R ; Image.RectangleTool
+Ctrl+Shift+H ; Image.Rotate90Degrees
+Alt+W ; Image.RoundedRectangleTool
+Ctrl+Alt+S ; Image.ShowGrid
+Ctrl+Shift+Alt+S ; Image.ShowTileGrid
+Ctrl+. ; Image.SmallBrush
+Ctrl+- ; Image.SmallerBrush
+Ctrl+T ; Image.TextTool
+Ctrl+U ; Image.UseSelectionasBrush
+Ctrl+Shift+. or Ctrl+Up Arrow ; Image.ZoomIn
+Ctrl+Shift+, or Ctrl+Down Arrow ; Image.ZoomOut
+
+Insert ; Edit.NewString
+
+Ctrl+T ; QueryDesigner.CancelRetrievingData
+Ctrl+2 ; QueryDesigner.Criteria
+Ctrl+1 ; QueryDesigner.Diagram
+Ctrl+R ; QueryDesigner.ExecuteSQL
+Ctrl+G ; QueryDesigner.GotoRow
+Ctrl+Shift+J ; QueryDesigner.JoinMode
+Ctrl+4 ; QueryDesigner.Results
+Ctrl+3 ; QueryDesigner.SQL
+
+Ctrl+1 ; OtherContextMenus.ORDesignerContext.HideMethodsPane
+
+Enter ; Edit.BreakLine
+Left Arrow ; Edit.CharLeft
+Shift+Left Arrow ; Edit.CharLeftExtend
+Right Arrow ; Edit.CharRight
+Shift+Right Arrow ; Edit.CharRightExtend
+End ; Edit.DocumentEnd
+Shift+End ; Edit.DocumentEndExtend
+Home ; Edit.DocumentStart
+Shift+Home ; Edit.DocumentStartExtend
+Tab ; Edit.InsertTab
+Down Arrow ; Edit.LineDown
+Shift+Up Arrow ; Edit.LineDownExtend
+Up Arrow ; Edit.LineUp
+Shift+Down Arrow ; Edit.LineUpExtend
+Ctrl+Down Arrow ; Edit.MoveControlDown
+Ctrl+Left Arrow ; Edit.MoveControlLeft
+Ctrl+Right Arrow ; Edit.MoveControlRight
+Ctrl+Up Arrow ; Edit.MoveControlUp
+Escape ; Edit.SelectionCancel
+Ctrl+Shift+Down Arrow ; Edit.SizeControlDown
+Ctrl+Shift+Left Arrow ; Edit.SizeControlLeft
+Ctrl+Shift+Right Arrow ; Edit.SizeControlRight
+Ctrl+Shift+Up Arrow ; Edit.SizeControlUp
+Shift+Tab ; Edit.TabLeft
+
+Shift+Alt+C ; Edit.CreateCopyofWorkItem
+F5 ; Edit.RefreshWorkItem
+Shift+Alt+L ; Team.NewLinkedWorkItem
+
+Shift+Alt+C ; Edit.CreateCopyofWorkItem
+Shift+Alt+Right Arrow ; Edit.Indent
+Shift+Alt+Left Arrow ; Edit.Outdent
+Shift+Alt+L ; Team.NewLinkedWorkItem
+F5 ; Team.Refresh
+Shift+Alt+V ; Window.Toggle
+
+Shift+Alt+C ; Edit.CreateCopyofWorkItem
+Shift+Alt+Right Arrow ; Edit.Indent
+Shift+Alt+Left Arrow ; Edit.Outdent
+Shift+Alt+N ; Team.GotoNextWorkItem
+Shift+Alt+P ; Team.GotoPreviousWorkItem
+Shift+Alt+L ; Team.NewLinkedWorkItem
+F5 ; Team.Refresh
+Shift+Alt+V ; Window.Toggle
+
+Alt+, ; Edit.DecreaseFilterLevel
+Alt+. ; Edit.IncreaseFilterLevel
+Ctrl+K, L or Ctrl+K, Ctrl+L or Ctrl+J ; Edit.ListMembers
+
+Ctrl+K, P or Ctrl+K, Ctrl+P or Ctrl+Shift+Spacebar ; Edit.ParameterInfo
+Ctrl+K, I or Ctrl+K, Ctrl+I ; Edit.QuickInfo
+Ctrl+E, Ctrl+F or Ctrl+E, F ; WorkflowDesigner.ConnectNodes
+Ctrl+E, Ctrl+N or Ctrl+E, N ; WorkflowDesigner.CreateVariable
+Ctrl+E, Ctrl+X or Ctrl+E, X ; WorkflowDesigner.ExpandAll
+Ctrl+E, Ctrl+E or Ctrl+E, E ; WorkflowDesigner.ExpandInPlace
+Ctrl+E, Ctrl+P or Ctrl+E, P ; WorkflowDesigner.GoToParent
+Ctrl+E, Ctrl+M or Ctrl+E, M ; WorkflowDesigner.MoveFocus
+Ctrl+Alt+F6 ; WorkflowDesigner.NavigateThroughDesigner
+Ctrl+E, Ctrl+R or Ctrl+E, R ; WorkflowDesigner.Restore
+Ctrl+E, Ctrl+A or Ctrl+E, A ; WorkflowDesigner.ShowHideArgumentDesigner
+Ctrl+E, Ctrl+I or Ctrl+E, I ; WorkflowDesigner.ShowHideImportsDesigner
+Ctrl+E, Ctrl+O or Ctrl+E, O ; WorkflowDesigner.ShowHideOverviewMap
+Ctrl+E, Ctrl+V or Ctrl+E, V ; WorkflowDesigner.ShowHideVariableDesigner
+Ctrl+E, Ctrl+S or Ctrl+E, S ; WorkflowDesigner.ToggleSelection
+Ctrl+Num + ; WorkflowDesigner.ZoomIn
+Ctrl+Num - ; WorkflowDesigner.ZoomOut
+
+
+Ctrl+0 ; Design.FitAll
+F9 ; Design.ShowHandles
+Ctrl+Alt+= ; Design.ZoomIn
+Ctrl+Alt+- ; Design.ZoomOut
+F2 ; Format.EditText
+Ctrl+Shift+R ; Format.ResetLayout.All
+Ctrl+Shift+, ; View.EdgeLeftMoveLeft
+Ctrl+Shift+. ; View.EdgeLeftMoveRight
+Ctrl+Shift+Alt+, ; View.EdgeRightMoveLeft
+Ctrl+Shift+Alt+. ; View.EdgeRightMoveRight
+
+
+Alt+F5 ; XML.StartXSLTDebugging
+Ctrl+Alt+F5 ; XML.StartXSLTWithoutDebugging
+
+Alt+Up Arrow ; GraphView.BottomtoTop
+Alt+Right Arrow ; GraphView.LefttoRight
+Alt+Left Arrow ; GraphView.RighttoLeft
+Alt+Down Arrow ; GraphView.ToptoBottom
+Delete ; OtherContextMenus.GraphView.RemovefromWorkspace
+Ctrl+2 ; XsdDesigner.ShowContentModelView
+Ctrl+3 ; XsdDesigner.ShowGraphView
+Ctrl+1 ; XsdDesigner.ShowStartView
