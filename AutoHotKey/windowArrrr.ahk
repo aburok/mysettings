@@ -23,12 +23,16 @@ global Top_Left_OneThird := " 0, 0, 0.3333, 0.5 "
 global Top_Center_OneThird := " 0.3333, 0, 0.3333, 0.5 "
 global Top_Right_OneThird := " 0.6666, 0, 0.3333, 0.5 "
 
+global Bottom_Left_OneThird := " 0, 0.5, 0.3333, 0.5 "
+global Bottom_Center_OneThird := " 0.3333, 0.5, 0.3333, 0.5 "
+global Bottom_Right_OneThird := " 0.6666, 0.5, 0.3333, 0.5 "
+
 global Next := " | "
 
 ^#h::
 Settings := Left_Half
-    . Next . Top_Left_Half
-    . Next . Bottom_Left_Corner . " | 0, 0, 0.6666, 1"
+    . Next . " 0, 0, 0.3333, 1 "
+    . Next . " 0, 0, 0.6666, 1 "
 ToggleWindowPosition(Settings, "Left")
 return
 
@@ -50,7 +54,7 @@ return
 Settings := Right_Half
     . Next . Top_Right_Corner
     . Next . Bottom_Right_Corner
-    . " | 0.3333, 0, 0.6666, 1 "
+    . Next . " 0.3333, 0, 0.6666, 1 "
 ToggleWindowPosition(Settings, "Right")
 return
 
@@ -89,7 +93,7 @@ return
 ; ---------------
 
 SetWindowPositionTo(Setting){
-    ParseSettings(Setting)
+    ParseScale(Setting)
     PositionWindow()
 }
 
@@ -100,7 +104,7 @@ ToggleWindowPosition(Settings, Side) {
     ResetIfDifferentWindow()
 
     setting := GetSettingOnIndex(Settings, Counter)
-    ParseSettings(setting)
+    ParseScale(setting)
 
     PositionWindow()
 
@@ -139,13 +143,13 @@ global yScale := 0
 global wScale := 0
 global hScale := 0
 
-ParseSettings(Array){
-    StringSplit, Arrangment, Array, `,
+ParseScale(Array){
+    StringSplit, Scale, Array, `,
 
-    xScale := Arrangment1
-    yScale := Arrangment2
-    wScale := Arrangment3
-    hScale := Arrangment4
+    xScale := Scale1
+    yScale := Scale2
+    wScale := Scale3
+    hScale := Scale4
 }
 
 global winCenterX := 0

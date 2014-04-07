@@ -45,8 +45,13 @@ return
 ; #n::Run Notepad
 
 #a::
+<<<<<<< HEAD
 Run "windowArrrr.ahk"
 Run "helpwindow.ahk"
+=======
+Run autohotkey.exe "windowArrrr.ahk"
+Run autohotkey.exe "helpwindow.ahk"
+>>>>>>> origin/master
 return
 
 #q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
@@ -54,9 +59,9 @@ return
 #s::Run "C:\Windows\System32\SnippingTool.exe"
 
 #v::
-path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
 path1 = C:\Program Files (x86)\vim\Vim74\gvim.exe
 path2 = %PROGRAMFILES%\Vim73\vim73\gvim.exe
+path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
 gvimPath := path1 . "," . path2 . "," . path3
 
 ; Get directory of selected Explorer window to set Gvim Path
@@ -133,15 +138,41 @@ RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
 }
 
 Explorer_GetSelection(hwnd="") {
-	hwnd := hwnd ? hwnd : WinExist("A")
-	WinGetClass class, ahk_id %hwnd%
-	if (class="CabinetWClass" or class="ExploreWClass" or class="Progman")
-		for window in ComObjCreate("Shell.Application").Windows
-			if (window.hwnd==hwnd)
-                sel := window.Document.SelectedItems
-	for item in sel
-	ToReturn .= item.path "`n"
+    window := Explorer_GetWindow(whnd)
+    if(window) {
+        sel := window.Document.SelectedItems
+    }
+	for item in sel {
+        ToReturn .= item.path "`n"
+    }
 	return Trim(ToReturn,"`n")
+}
+
+Explorer_GetDirectory(hwnd = ""){
+    window := Explorer_GetWindow(whnd)
+    if(window) {
+        location := window.LocationURL
+        return UnEscape_Chars(location)
+    }
+}
+
+UnEscape_Chars(string){
+    StringReplace string, string, file:///, , All
+    StringReplace string, string, `%20, `  , All
+    StringReplace string, string, `/, `\, All
+    return string
+}
+
+Explorer_GetWindow(hwnd = ""){
+    hwnd := hwnd ? hwnd : WinExist("A")
+    WinGetClass class, ahk_id %hwnd%
+	if (class="CabinetWClass" or class="ExploreWClass" or class="Progman") {
+        for window in ComObjCreate("Shell.Application").Windows {
+            if (window.hwnd==hwnd) {
+                return window
+            }
+        }
+    }
 }
 
 ReturnFirstExistingFile(FileList){
@@ -163,7 +194,7 @@ TryOpenApplicationFromList(List, LastChance, params = ""){
 }
 
 GetWorkingDirectory(){
-    dir := GetDirFromWindowTitle()
+    dir := Explorer_GetDirectory()
     If(dir)
         return dir
     return USERPROFILE
