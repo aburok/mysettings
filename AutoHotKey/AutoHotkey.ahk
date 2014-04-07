@@ -44,11 +44,14 @@ return
 ; ---------------------
 ; #n::Run Notepad
 
-#a:: Run "..\..\Tools\WinSplit Revolution\WinSplit.exe"
+#a::
+Run "windowArrrr.ahk"
+Run "helpwindow.ahk"
+return
 
 #q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
 
-#n::Run "C:\Windows\System32\SnippingTool.exe"
+#s::Run "C:\Windows\System32\SnippingTool.exe"
 
 #v::
 path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
@@ -63,7 +66,21 @@ TryOpenApplicationFromList(gvimPath, "Gvim.exe", params)
 return
 
 
-#t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
+;#t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
+#t::
+Title := "todo.note (C:\Dropbox\Notes) - GVIM"
+Start := "gvim.exe C:\Dropbox\Notes\todo.note"
+RunOrActivate(Title, Start)
+return
+
+#m::
+#o::
+RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
+return
+
+#n::
+
+return
 
 #c::
 Title := GetWorkingDirectory()
@@ -90,7 +107,6 @@ return
 
 #h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
 
-#o::RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
 
 #i::Run gvim c:\settings.txt
 
@@ -141,10 +157,9 @@ ReturnFirstExistingFile(FileList){
 
 TryOpenApplicationFromList(List, LastChance, params = ""){
     existingFile := ReturnFirstExistingFile(List)
-    if (existingFile)
-        Run, %existingFile% %params%
-    ; Last chance
-    Run, %LastChance% %params%
+    path := existingFile ? existingFile : LastChance
+    command := path . " " . params
+    RunOrActivate("ahk_class Vim", command)
 }
 
 GetWorkingDirectory(){

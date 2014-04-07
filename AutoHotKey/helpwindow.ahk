@@ -13,6 +13,7 @@ return
 
 GetHelpFilePath(){
     WinGetClass, windowClass, A
+    WinGetTitle , Title, A
     folder := "shortcuts"
     if ( windowClass == "rctrl_renwnd32" )
     {
@@ -24,7 +25,6 @@ GetHelpFilePath(){
     }
     if (windowClass == "ConsoleWindowClass")
     {
-        WinGetTitle , Title, A
         IfInString, Title, PowerShell
         {
             return "shortcuts\powershell.help"
@@ -37,6 +37,13 @@ GetHelpFilePath(){
     }
     if (windowClass == "XLMAIN"){
         return "shortcuts\excel.help"
+    }
+    IfInString, Title, Visual Studio
+    {
+        IfInString, windowClass, HwndWrapper
+        {
+            return "shortcuts\visualstudio.help"
+        }
     }
     return
 }
@@ -97,6 +104,9 @@ ELSE
     GuiControl,, FilterText
 Return
 
+OnExit:
+    Gui, Destroy
+return
 
 
 ~^s::

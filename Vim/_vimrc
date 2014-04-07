@@ -288,6 +288,9 @@ vnoremap ` :normal @a<CR>
 let g:notes_directories = ['C:/Dropbox/Notes']
 let g:notes_suffix = '.note'
 
+" Marks line with TODO as DONE
+nnoremap <leader>td V:s/TODO/DONE/I<CR>
+nnoremap <leader>tt A - TODO<Esc>
 
 
 

@@ -9,52 +9,91 @@
 ; KEY BINDINGS
 ; ---------------
 
+global Top_Left_Half := " 0, 0, 0.5, 0.5 "
+global Top_Right_Corner := " 0.5, 0, 0.5, 0.5 "
+global Bottom_Left_Corner :=  " 0, 0.5, 0.5, 0.5 "
+global Bottom_Right_Corner := " 0.5, 0.5, 0.5, 0.5 "
+
+global Left_Half := " 0, 0, 0.5, 1 "
+global Right_Half := " 0.5, 0, 0.5, 1 "
+global Top_Half := " 0, 0, 1, 0.5 "
+global Bottom_Half := " 0, 0.5, 1, 0.5 "
+
+global Top_Left_OneThird := " 0, 0, 0.3333, 0.5 "
+global Top_Center_OneThird := " 0.3333, 0, 0.3333, 0.5 "
+global Top_Right_OneThird := " 0.6666, 0, 0.3333, 0.5 "
+
+global Next := " | "
+
 ^#h::
-Settings := "0, 0, 0.5, 1 | 0,0,0.5,0.5 | 0, 0.5, 0.5, 0.5 | 0, 0, 0.6666, 1"
-LoopThroughSettings(Settings, "Left")
+Settings := Left_Half
+    . Next . Top_Left_Half
+    . Next . Bottom_Left_Corner . " | 0, 0, 0.6666, 1"
+ToggleWindowPosition(Settings, "Left")
 return
 
 ^#j::
-Settings := "0, 0.5, 1, 0.5 | 0, 0.5, 0.5, 0.5 | 0.5, 0.5, 0.5, 0.5 "
-LoopThroughSettings(Settings, "Bottom")
+Settings := Bottom_Half
+    . Next . Bottom_Left_Corner
+    . Next . Bottom_Right_Corner
+ToggleWindowPosition(Settings, "Bottom")
 return
 
 ^#k::
-Settings := "0, 0, 1, 0.5 | 0, 0, 0.5, 0.5 | 0.5, 0, 0.5, 0.5 "
-LoopThroughSettings(Settings, "Top")
+Settings := Top_Half
+    . Next . Top_Left_Half
+    . Next . Top_Right_Corner
+ToggleWindowPosition(Settings, "Top")
 return
 
 ^#l::
-Settings := "0.5, 0, 0.5, 1 | 0.5, 0, 0.5, 0.5 | 0.5, 0.5, 0.5, 0.5 | 0.3333, 0, 0.6666, 1 "
-LoopThroughSettings(Settings, "Right")
+Settings := Right_Half
+    . Next . Top_Right_Corner
+    . Next . Bottom_Right_Corner
+    . " | 0.3333, 0, 0.6666, 1 "
+ToggleWindowPosition(Settings, "Right")
 return
 
-^#q::SetWindowPosition("0, 0, 0.5, 0.5") ; Top Left Corner
-^#w::SetWindowPosition("0, 0, 0.3333, 0.5") ; Top
-^#e::SetWindowPosition("0.5, 0, 0.5, 0.5") ; Top Right Corner
-^#s::SetWindowPosition("0, 0, 1, 1") ; Maximize window
-^#z::SetWindowPosition("0, 0.5, 0.5, 0.5") ; Bottom Left Corner
-^#c::SetWindowPosition("0.5, 0.5, 0.5, 0.5") ; Bottom Right Corner
+
+; Q W E
+^#q:: ToggleWindowPosition(Top_Left_Half
+    . Next . Top_Left_OneThird
+    , "Q")
+^#w:: ToggleWindowPosition(Top_Half
+    . Next . Top_Center_OneThird
+    , "W")
+^#e:: ToggleWindowPosition(Top_Right_Corner
+    . Next . Top_Right_OneThird
+    , "E")
+
+; A S D
+^#a:: SetWindowPositionTo(Left_Half)
+^#s:: SetWindowPositionTo("0, 0, 1, 1") ; Maximize window
+^#d:: SetWindowPositionTo(Right_Half)
+
+; Z X C
+^#z:: SetWindowPositionTo(Bottom_Left_Corner)
+^#x:: SetWindowPositionTo(Bottom_Half)
+^#c:: SetWindowPositionTo(Bottom_Right_Corner)
 
 +#h::Send {Shift down}{LWin down }{ Left down}
 +#l::Send {Shift down}{LWin down}{ Right down}
 
 ^#u:: WinMaximize, A
 
-^#d:: WinMinimize, A
-
+;^#d:: WinMinimize, A
 
 
 ; ---------------
 ; FUNCTIONS
 ; ---------------
 
-SetWindowPosition(Setting){
+SetWindowPositionTo(Setting){
     ParseSettings(Setting)
     PositionWindow()
 }
 
-LoopThroughSettings(Settings, Side) {
+ToggleWindowPosition(Settings, Side) {
 
     CurrentMove := Side
     ResetIfCounterOverLimit(Settings)
