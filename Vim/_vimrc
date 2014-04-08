@@ -292,5 +292,11 @@ let g:notes_suffix = '.note'
 nnoremap <leader>td V:s/TODO/DONE/I<CR>
 nnoremap <leader>tt A - TODO<Esc>
 
-
+" go to last used tab
+" store last used tab number in global variable "
+let g:lasttab = 1
+" go to tab with number stored in lasttab"
+nmap gl :exe "tabn ".g:lasttab<CR>
+" on event TabLeave assing tab page number to lasttab"
+au TabLeave * let g:lasttab=tabpagenr()
 
