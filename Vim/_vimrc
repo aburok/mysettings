@@ -300,3 +300,11 @@ nmap gl :exe "tabn ".g:lasttab<CR>
 " on event TabLeave assing tab page number to lasttab"
 au TabLeave * let g:lasttab=tabpagenr()
 
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+
+" auto formatting javascript code"
+map <C-F> gg=G<C-O><C-O>
+
+
