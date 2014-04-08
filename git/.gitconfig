@@ -12,3 +12,7 @@
     lg = "log --graph --oneline --color"
     psm = "push -u origin master"
 
+[credential]
+    helper = store
+
+
