@@ -94,8 +94,8 @@ vnoremap <C-C> "+y
 vnoremap <C-Insert> "+y
 
 " CTRL-V and SHIFT-Insert are Paste
-map <C-V>		"+gP
-map <S-Insert>		"+gP
+map <C-V>		"+gp
+map <S-Insert>		"+gp
 
 cmap <C-V>		<C-R>+
 cmap <S-Insert>		<C-R>+
@@ -271,7 +271,6 @@ map e <Plug>CamelCaseMotion_e
 sunmap w
 sunmap b
 sunmap e
-
 omap iw <Plug>CamelCaseMotion_iw
 xmap iw <Plug>CamelCaseMotion_iw
 omap ib <Plug>CamelCaseMotion_ib

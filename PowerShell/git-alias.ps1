@@ -1,0 +1,1 @@
+function gs { git status }

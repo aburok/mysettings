@@ -45,13 +45,8 @@ return
 ; #n::Run Notepad
 
 #a::
-<<<<<<< HEAD
-Run "windowArrrr.ahk"
-Run "helpwindow.ahk"
-=======
 Run autohotkey.exe "windowArrrr.ahk"
 Run autohotkey.exe "helpwindow.ahk"
->>>>>>> origin/master
 return
 
 #q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
