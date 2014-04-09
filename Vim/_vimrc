@@ -288,9 +288,16 @@ vnoremap ` :normal @a<CR>
 let g:notes_directories = ['C:/Dropbox/Notes']
 let g:notes_suffix = '.note'
 
+" shortcuts for opening notes
+nnoremap <leader>n3 :sp note:3things<CR>
+nnoremap <leader>np :sp note:todo<CR>
+
 " Marks line with TODO as DONE
 nnoremap <leader>td V:s/TODO/DONE/I<CR>
 nnoremap <leader>tt A - TODO<Esc>
+nnoremap <leader>tm jmlkdd/^DONE TASKS$/I<CR>p$a - <Esc><leader>it'l
 
-
+" Insert current date time
+nnoremap <leader>it "=strftime("%c")<CR>p
+inoremap <leader>it <C-R>=strftime("%c")<CR>
 
