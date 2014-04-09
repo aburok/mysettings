@@ -1,0 +1,18 @@
+[user]
+    name=gringo
+    email=dkoruba@gmail.com
+
+[core]
+    editor=gvim
+
+[alias]
+    ci = commit
+    st = status
+    co = checkout
+    lg = "log --graph --oneline --color"
+    psm = "push -u origin master"
+
+[credential]
+    helper = store
+
+

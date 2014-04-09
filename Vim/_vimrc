@@ -301,3 +301,18 @@ nnoremap <leader>tm jmlkdd/^DONE TASKS$/I<CR>p$a - <Esc><leader>it'l
 nnoremap <leader>it "=strftime("%c")<CR>p
 inoremap <leader>it <C-R>=strftime("%c")<CR>
 
+" go to last used tab
+" store last used tab number in global variable "
+let g:lasttab = 1
+" go to tab with number stored in lasttab"
+nmap gl :exe "tabn ".g:lasttab<CR>
+" on event TabLeave assing tab page number to lasttab"
+au TabLeave * let g:lasttab=tabpagenr()
+
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+" auto formatting javascript code"
+map <C-F> gg=G<C-O><C-O>
+
+

@@ -21,6 +21,7 @@ Bundle 'https://github.com/bling/vim-airline'
 Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'https://github.com/vim-scripts/camelcasemotion'
+Bundle 'https://github.com/pangloss/vim-javascript'
 
 Bundle 'tpope/vim-surround'
 Bundle 'https://github.com/yegappan/mru'
