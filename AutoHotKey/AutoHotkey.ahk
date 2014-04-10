@@ -14,19 +14,6 @@
 ; try out these hotkeys, run AutoHotkey again, which will load this file.
 
 
-~^s::
-IfWinActive, %A_ScriptName%
-{
-    SplashTextOn,,,Updated script,
-        Sleep, 200
-            SplashTextOff
-            Reload
-}
-return
-
-
-#z::Run www.autohotkey.comx
-
 ; ^!n::
 ; IfWinExist Untitled - Notepad
 ;	WinActivate
@@ -48,6 +35,56 @@ return
 Run autohotkey.exe "windowArrrr.ahk"
 Run autohotkey.exe "helpwindow.ahk"
 return
+
+#c::
+Title := GetWorkingDirectory()
+prompt := "prompt=$p$_%username%@%computername%:$g"
+command := "cd /d " . Title . " & " . prompt
+Run, cmd.exe /k %command%
+return
+
+#e::
+if (FileExist(clipboard) == "D"){
+    explorer := "explorer /select," clipboard
+    Run, %explorer%
+    return
+}
+Run explorer.exe %userprofile%
+return
+
+
+#g::
+    Send, ^c
+    Run, http://www.google.com/search?q=%Clipboard%
+    Return
+
+
+#h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
+
+
+#i::Run gvim c:\settings.txt
+
+#k::RunOrActivate("ahk_class #32770", "..\KeePass-1.26\KeePass.exe")
+
+#m::
+#o::
+RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
+return
+
+#n::
+
+return
+
+
+; Power Shell command line
+#p::
+^!p::
+    workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
+    params := " -ExecutionPolicy unrestricted -noexit " . workingDir
+    command = %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe %params%
+    Run , %command%
+return
+
 
 #q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
 
@@ -72,45 +109,6 @@ Title := "todo.note (C:\Dropbox\Notes) - GVIM"
 Start := "gvim.exe C:\Dropbox\Notes\todo.note"
 RunOrActivate(Title, Start)
 return
-
-#m::
-#o::
-RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
-return
-
-#n::
-
-return
-
-#c::
-Title := GetWorkingDirectory()
-prompt := "prompt=$p$_%username%@%computername%:$g"
-command := "cd /d " . Title . " & " . prompt
-Run, cmd.exe /k %command%
-return
-
-
-; Power Shell command line
-#p::
-^!p::
-    workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
-    params := " -ExecutionPolicy unrestricted -noexit " . workingDir
-    command = %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe %params%
-    Run , %command%
-return
-
-
-#g::
-    Send, ^c
-    Run, http://www.google.com/search?q=%Clipboard%
-    Return
-
-#h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
-
-
-#i::Run gvim c:\settings.txt
-
-#k::RunOrActivate("ahk_class #32770", "..\KeePass-1.26\KeePass.exe")
 
 #x::RunOrActivate("", "..\ProcessExplorer\procexp.exe")
 
@@ -202,3 +200,15 @@ GetDirFromWindowTitle(){
         return  Title
     return
 }
+
+;Reload script on Ctrl + S (Save)
+~^s::
+IfWinActive, %A_ScriptName%
+{
+    SplashTextOn,,,Updated script,
+    Sleep, 200
+    SplashTextOff
+    Reload
+}
+return
+

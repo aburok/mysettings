@@ -290,6 +290,7 @@ let g:notes_suffix = '.note'
 " shortcuts for opening notes
 nnoremap <leader>n3 :sp note:3things<CR>
 nnoremap <leader>np :sp note:todo<CR>
+nnoremap <leader>nt :sp note:privTodo<CR>
 
 " Marks line with TODO as DONE
 nnoremap <leader>td V:s/TODO/DONE/I<CR>
