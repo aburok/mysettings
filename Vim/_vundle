@@ -3,6 +3,7 @@ filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
 set rtp+=C:\Dropbox\mysettings\vim\vundle
+set rtp+=C:\Dropbox\mysettings\vim
 call vundle#rc()
 " alternatively, pass a path where Vundle should install bundles
 " "let path = 'C:\Dropbox\tools\vim\bundle\'
@@ -44,7 +45,7 @@ Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
 Bundle "garbas/vim-snipmate"
 
-" "Bundle "https://github.com/honza/vim-snippets.git"
+Bundle 'https://github.com/honza/vim-snippets.git'
 " "Bundle 'https://github.com/kien/rainbow_parentheses.vim'
 
 Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
