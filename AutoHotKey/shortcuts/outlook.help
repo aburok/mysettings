@@ -1,131 +1,391 @@
-Ctrl + N ; New Message
-Ctrl + 1 ; Switch to Mail
-Ctrl + 2 ; Swithc to Calendar
-Ctrl + 3 ; Switch to Contacts
-Ctrl + 4 ; Switch to Tasks
-Ctrl + 5 ; Switch to Notes
-Ctrl + 7 ; Swithc to Shortcuts
-Ctrl + Period ; Switch to next message (with message open).
-Ctrl + Comma ; Switch to previous message (with message open).
-Ctrl + Shift + Tab or Shift + Tab ; Move between the Folder Pane, the main Outlook window, the Reading Pane, and the To-Do Bar.
-Tab ; Move between the Outlook window, the smaller panes in the Folder Pane, the Reading Pane, and the sections in the To-Do Bar.
-F6 ; Move between the Outlook window, the smaller panes in the Folder Pane, the Reading Pane, and the sections in the To-Do Bar, and show the access keys in the Outlook ribbon.
-Ctrl + Tab ; Move around message header lines in the Folder Pane or an open message.
-Arrow keys ; Move around within the Folder Pane.
-Ctrl + Y ; Go to a different folder.
-F3 or Ctrl + E ; Go to the Search box.
-Alt + Up Arrow or Ctrl + Comma or Alt + Page Up ; In the Reading Pane, go to the previous message.
-Spacebar ; In the Reading Pane, page down through text.
-Shift + Spacebar ; In the Reading Pane, page up through text.
-<- or -> ; Collapse or expand a group in the email message list.
-Alt + B or Alt + Left Arrow ; Go back to previous view in main Outlook window.
-Alt + Right Arrow ; Go forward to next view in main Outlook window.
-Ctrl + Shift + W ; storySelect the InfoBar and, if available, show the menu of commands.
-Ctrl + E ; Find a message or other item.
-Esc ; Clear the search results.
-Ctrl + Alt + A ; Expand the search to include All Mail Items, All Calendar Items, or All Contact Items, depending on the module you are in.
-Ctrl + Shift + F ; Use Advanced Find.
-Ctrl + Shift + P ; Create a Search Folder.
-F4 ; Search for text within an open item.
-Ctrl + H ; Find and replace text, symbols, or some formatting commands. Works in the Reading Pane on an open item.
-Ctrl + Alt + K ; Expand search to include items from the current folder.
-Ctrl + Alt + Z ; Expand search to include subfolders.
-Ctrl + Shift + A ; Create an appointment.
-Ctrl + Shift + C ; Create a contact.
-Ctrl + Shift + L ; Create a contact group.
-Ctrl + Shift + X ; Create a fax.
-Ctrl + Shift + E ; Create a folder.
-Ctrl + Shift + Q ; Create a meeting request.
-Ctrl + Shift + M ; Create a message.
-Ctrl + Shift + N ; Create a note.
-Ctrl + Shift + H ; Create a Microsoft Office document.
-Ctrl + Shift + S ; Post to this folder.
-Ctrl + T ; Post a reply in this folder.
-Ctrl + Shift + P ; Create a Search Folder.
-Ctrl + Shift + K ; Create a task.
-Ctrl + Shift + U ; Create a task request.
-Ctrl + S or Shift + F12 ; Save (except in Tasks).
-Alt + S ; Save and close (except in Mail).
-F12 ; Save as (only in Mail).
-Ctrl + Z or Alt + Backspace ; Undo.
-Ctrl + D ; Delete an item.
-Ctrl + P ; Print.
-Ctrl + Shift + Y ; Copy an item.
-Ctrl + Shift + V ; Move an item.
-Ctrl + K ; Check names.
-F7 ; Check spelling.
-Ctrl + Shift + G ; Flag for follow-up.
-Ctrl + F ; Forward.
-Alt + S ; Send or post or invite all.
-F2 ; Enable editing in a field (except in Mail or Icon view).
-Ctrl + L ; Left align text.
-Ctrl + E ; Center text.
-Ctrl + R ; Right align text.
-Ctrl + Shift + I ; Switch to Inbox.
-Ctrl + Shift + O ; Switch to Outbox.
-Ctrl + Tab (with focus on the To box), and then Tab to the Accounts button ; Choose the account from which to send a message.
-Ctrl + K ; Check names.
-Alt + S ; Send.
-Ctrl + R ; Reply to a message.
-Ctrl + Shift + R ; Reply all to a message.
-Ctrl + Alt + R ; Reply with meeting request.
-Ctrl + F ; Forward a message.
-Ctrl+ Alt + J ; Mark a message as not junk.
-Ctrl + Shift + I ; Display blocked external content (in a message).
-Ctrl+ Shift + S ; Post to a folder.
-Ctrl + Shift + N ; Apply Normal style.
-Ctrl + M or F9 ; Check for new messages.
-Up Arrow ; Go to the previous message.
-Down Arrow ; Go to the next message.
-Ctrl + N ; Create a message (when in Mail).
-Ctrl + Shift + M ; Create a message (from any Outlook view).
-Ctrl + O ; Open a received message.
-Ctrl + Shift + D ; Delete and Ignore a Conversation.
-Ctrl + Shift + B ; Open the Address Book.
-Insert ; Add a Quick Flag to an unopened message.
-Ctrl + Shift + G ; Display the Flag for Follow Up dialog box.
-Ctrl + Q ; Mark as read.
-Ctrl + U ; Mark as unread.
-Ctrl + Shift + W ; Open the Mail Tip in the selected message.
-F4 ; Find or replace.
-Shift + F4 ; Find next.
-Ctrl + Enter ; Send.
-Ctrl + P ; Print.
-Ctrl + F ; Forward.
-Ctrl + Alt + F ; Forward as attachment.
-Alt + Enter ; Show the properties for the selected item.
+[sc] Ctrl + N
+[def] New Message
+
+[sc] Ctrl + 1
+[def] Switch to Mail
+
+[sc] Ctrl + 2
+[def] Swithc to Calendar
+
+[sc] Ctrl + 3
+[def] Switch to Contacts
+
+[sc] Ctrl + 4
+[def] Switch to Tasks
+
+[sc] Ctrl + 5
+[def] Switch to Notes
+
+[sc] Ctrl + 7
+[def] Swithc to Shortcuts
+
+[sc] Ctrl + Period
+[def] Switch to next message (with message open).
+
+[sc] Ctrl + Comma
+[def] Switch to previous message (with message open).
+
+[sc] Ctrl + Shift + Tab or Shift + Tab
+[def] Move between the Folder Pane, the main Outlook window, the Reading Pane, and the To-Do Bar.
+
+[sc] Tab
+[def] Move between the Outlook window, the smaller panes in the Folder Pane, the Reading Pane, and the sections in the To-Do Bar.
+
+[sc] F6
+[def] Move between the Outlook window, the smaller panes in the Folder Pane, the Reading Pane, and the sections in the To-Do Bar, and show the access keys in the Outlook ribbon.
+
+[sc] Ctrl + Tab
+[def] Move around message header lines in the Folder Pane or an open message.
+
+[sc] Arrow keys
+[def] Move around within the Folder Pane.
+
+[sc] Ctrl + Y
+[def] Go to a different folder.
+
+[sc] F3 or Ctrl + E
+[def] Go to the Search box.
+
+[sc] Alt + Up Arrow or Ctrl + Comma or Alt + Page Up
+[def] In the Reading Pane, go to the previous message.
+
+[sc] Spacebar
+[def] In the Reading Pane, page down through text.
+
+[sc] Shift + Spacebar
+[def] In the Reading Pane, page up through text.
+
+[sc] <- or ->
+[def] Collapse or expand a group in the email message list.
+
+[sc] Alt + B or Alt + Left Arrow
+[def] Go back to previous view in main Outlook window.
+
+[sc] Alt + Right Arrow
+[def] Go forward to next view in main Outlook window.
+
+[sc] Ctrl + Shift + W
+[def] storySelect the InfoBar and, if available, show the menu of commands.
+
+[sc] Ctrl + E
+[def] Find a message or other item.
+
+[sc] Esc
+[def] Clear the search results.
+
+[sc] Ctrl + Alt + A
+[def] Expand the search to include All Mail Items, All Calendar Items, or All Contact Items, depending on the module you are in.
+
+[sc] Ctrl + Shift + F
+[def] Use Advanced Find.
+
+[sc] Ctrl + Shift + P
+[def] Create a Search Folder.
+
+[sc] F4
+[def] Search for text within an open item.
+
+[sc] Ctrl + H
+[def] Find and replace text, symbols, or some formatting commands. Works in the Reading Pane on an open item.
+
+[sc] Ctrl + Alt + K
+[def] Expand search to include items from the current folder.
+
+[sc] Ctrl + Alt + Z
+[def] Expand search to include subfolders.
+
+[sc] Ctrl + Shift + A
+[def] Create an appointment.
+
+[sc] Ctrl + Shift + C
+[def] Create a contact.
+
+[sc] Ctrl + Shift + L
+[def] Create a contact group.
+
+[sc] Ctrl + Shift + X
+[def] Create a fax.
+
+[sc] Ctrl + Shift + E
+[def] Create a folder.
+
+[sc] Ctrl + Shift + Q
+[def] Create a meeting request.
+
+[sc] Ctrl + Shift + M
+[def] Create a message.
+
+[sc] Ctrl + Shift + N
+[def] Create a note.
+
+[sc] Ctrl + Shift + H
+[def] Create a Microsoft Office document.
+
+[sc] Ctrl + Shift + S
+[def] Post to this folder.
+
+[sc] Ctrl + T
+[def] Post a reply in this folder.
+
+[sc] Ctrl + Shift + P
+[def] Create a Search Folder.
+
+[sc] Ctrl + Shift + K
+[def] Create a task.
+
+[sc] Ctrl + Shift + U
+[def] Create a task request.
+
+[sc] Ctrl + S or Shift + F12
+[def] Save (except in Tasks).
+
+[sc] Alt + S
+[def] Save and close (except in Mail).
+
+[sc] F12
+[def] Save as (only in Mail).
+
+[sc] Ctrl + Z or Alt + Backspace
+[def] Undo.
+
+[sc] Ctrl + D
+[def] Delete an item.
+
+[sc] Ctrl + P
+[def] Print.
+
+[sc] Ctrl + Shift + Y
+[def] Copy an item.
+
+[sc] Ctrl + Shift + V
+[def] Move an item.
+
+[sc] Ctrl + K
+[def] Check names.
+
+[sc] F7
+[def] Check spelling.
+
+[sc] Ctrl + Shift + G
+[def] Flag for follow-up.
+
+[sc] Ctrl + F
+[def] Forward.
+
+[sc] Alt + S
+[def] Send or post or invite all.
+
+[sc] F2
+[def] Enable editing in a field (except in Mail or Icon view).
+
+[sc] Ctrl + L
+[def] Left align text.
+
+[sc] Ctrl + E
+[def] Center text.
+
+[sc] Ctrl + R
+[def] Right align text.
+
+[sc] Ctrl + Shift + I
+[def] Switch to Inbox.
+
+[sc] Ctrl + Shift + O
+[def] Switch to Outbox.
+
+[sc] Ctrl + Tab (with focus on the To box), and then Tab to the Accounts button
+[def] Choose the account from which to send a message.
+
+[sc] Ctrl + K
+[def] Check names.
+
+[sc] Alt + S
+[def] Send.
+
+[sc] Ctrl + R
+[def] Reply to a message.
+
+[sc] Ctrl + Shift + R
+[def] Reply all to a message.
+
+[sc] Ctrl + Alt + R
+[def] Reply with meeting request.
+
+[sc] Ctrl + F
+[def] Forward a message.
+
+[sc] Ctrl+ Alt + J
+[def] Mark a message as not junk.
+
+[sc] Ctrl + Shift + I
+[def] Display blocked external content (in a message).
+
+[sc] Ctrl+ Shift + S
+[def] Post to a folder.
+
+[sc] Ctrl + Shift + N
+[def] Apply Normal style.
+
+[sc] Ctrl + M or F9
+[def] Check for new messages.
+
+[sc] Up Arrow
+[def] Go to the previous message.
+
+[sc] Down Arrow
+[def] Go to the next message.
+
+[sc] Ctrl + N
+[def] Create a message (when in Mail).
+
+[sc] Ctrl + Shift + M
+[def] Create a message (from any Outlook view).
+
+[sc] Ctrl + O
+[def] Open a received message.
+
+[sc] Ctrl + Shift + D
+[def] Delete and Ignore a Conversation.
+
+[sc] Ctrl + Shift + B
+[def] Open the Address Book.
+
+[sc] Insert
+[def] Add a Quick Flag to an unopened message.
+
+[sc] Ctrl + Shift + G
+[def] Display the Flag for Follow Up dialog box.
+
+[sc] Ctrl + Q
+[def] Mark as read.
+
+[sc] Ctrl + U
+[def] Mark as unread.
+
+[sc] Ctrl + Shift + W
+[def] Open the Mail Tip in the selected message.
+
+[sc] F4
+[def] Find or replace.
+
+[sc] Shift + F4
+[def] Find next.
+
+[sc] Ctrl + Enter
+[def] Send.
+
+[sc] Ctrl + P
+[def] Print.
+
+[sc] Ctrl + F
+[def] Forward.
+
+[sc] Ctrl + Alt + F
+[def] Forward as attachment.
+
+[sc] Alt + Enter
+[def] Show the properties for the selected item.
+
 Create a multimedia message	Ctrl + Shift + U
-Ctrl + Alt + M ; Mark for Download.
-Ctrl + Alt + U ; Clear Mark for Download.
-Ctrl + B (when a Send/Receive is in progress) ; Display Send/Receive progress.
-Ctrl + N ; Create an appointment (when in Calendar).
-Ctrl + Shift + A ; Create an appointment (in any Outlook view).
-Ctrl + Shift + Q ; Create a meeting request.
-Ctrl + F ; Forward an appointment or meeting.
-Ctrl + R ; Reply to a meeting request with a message.
-Ctrl + Shift + R ; Reply All to a meeting request with a message.
-Alt + 1 ; Show 1 day in the calendar.
-Alt + 2 ; Show 2 days in the calendar.
-Alt + 3 ; Show 3 days in the calendar.
-Alt + 4 ; Show 4 days in the calendar.
-Alt + 5 ; Show 5 days in the calendar.
-Alt + 6 ; Show 6 days in the calendar.
-Alt + 7 ; Show 7 days in the calendar.
-Alt + 8 ; Show 8 days in the calendar.
-Alt + 9 ; Show 9 days in the calendar.
-Alt + 0 ; Show 10 days in the calendar.
-Ctrl + G ; Go to a date.
-Alt+= or Ctrl + Alt + 4 ; Switch to Month view.
-Ctrl + Right Arrow ; Go to the next day.
-Alt + Down Arrow ; Go to the next week.
-Alt + Page Down ; Go to the next month.
-Ctrl + Left Arrow ; Go to the previous day.
-Alt + Up Arrow ; Go to the previous week.
-Alt + Page Up ; Go to the previous month.
-Alt + Home ; Go to the start of the week.
-Alt + End ; Go to the end of the week.
-Alt + Minus Sign or Ctrl + Alt + 3 ; Switch to Full Week view.
-Ctrl + Alt + 2 ; Switch to Work Week view.
-Ctrl + Comma or Ctrl + Shift + Comma ; Go to previous appointment.
-Ctrl + Period or Ctrl + Shift + Period ; Go to next appointment.
-Ctrl + G ; Set up recurrence for an open appointment or meeting.
+[sc] Ctrl + Alt + M
+[def] Mark for Download.
+
+[sc] Ctrl + Alt + U
+[def] Clear Mark for Download.
+
+[sc] Ctrl + B (when a Send/Receive is in progress)
+[def] Display Send/Receive progress.
+
+[sc] Ctrl + N
+[def] Create an appointment (when in Calendar).
+
+[sc] Ctrl + Shift + A
+[def] Create an appointment (in any Outlook view).
+
+[sc] Ctrl + Shift + Q
+[def] Create a meeting request.
+
+[sc] Ctrl + F
+[def] Forward an appointment or meeting.
+
+[sc] Ctrl + R
+[def] Reply to a meeting request with a message.
+
+[sc] Ctrl + Shift + R
+[def] Reply All to a meeting request with a message.
+
+[sc] Alt + 1
+[def] Show 1 day in the calendar.
+
+[sc] Alt + 2
+[def] Show 2 days in the calendar.
+
+[sc] Alt + 3
+[def] Show 3 days in the calendar.
+
+[sc] Alt + 4
+[def] Show 4 days in the calendar.
+
+[sc] Alt + 5
+[def] Show 5 days in the calendar.
+
+[sc] Alt + 6
+[def] Show 6 days in the calendar.
+
+[sc] Alt + 7
+[def] Show 7 days in the calendar.
+
+[sc] Alt + 8
+[def] Show 8 days in the calendar.
+
+[sc] Alt + 9
+[def] Show 9 days in the calendar.
+
+[sc] Alt + 0
+[def] Show 10 days in the calendar.
+
+[sc] Ctrl + G
+[def] Go to a date.
+
+[sc] Alt+= or Ctrl + Alt + 4
+[def] Switch to Month view.
+
+[sc] Ctrl + Right Arrow
+[def] Go to the next day.
+
+[sc] Alt + Down Arrow
+[def] Go to the next week.
+
+[sc] Alt + Page Down
+[def] Go to the next month.
+
+[sc] Ctrl + Left Arrow
+[def] Go to the previous day.
+
+[sc] Alt + Up Arrow
+[def] Go to the previous week.
+
+[sc] Alt + Page Up
+[def] Go to the previous month.
+
+[sc] Alt + Home
+[def] Go to the start of the week.
+
+[sc] Alt + End
+[def] Go to the end of the week.
+
+[sc] Alt + Minus Sign or Ctrl + Alt + 3
+[def] Switch to Full Week view.
+
+[sc] Ctrl + Alt + 2
+[def] Switch to Work Week view.
+
+[sc] Ctrl + Comma or Ctrl + Shift + Comma
+[def] Go to previous appointment.
+
+[sc] Ctrl + Period or Ctrl + Shift + Period
+[def] Go to next appointment.
+
+[sc] Ctrl + G
+[def] Set up recurrence for an open appointment or meeting.
+

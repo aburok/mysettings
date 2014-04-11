@@ -83,10 +83,16 @@ return
 +#h::Send {Shift down}{LWin down }{ Left down}
 +#l::Send {Shift down}{LWin down}{ Right down}
 
-^#u:: WinMaximize, A
+^#m::
+    WinGet MX, MinMax, A
+    IF (MX) {
+        WinRestore A
+        }
+    else
+        WinMaximize A
+return
 
-;^#d:: WinMinimize, A
-
+^#n:: WinMinimize A
 
 ; ---------------
 ; FUNCTIONS

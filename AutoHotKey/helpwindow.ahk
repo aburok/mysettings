@@ -77,31 +77,56 @@ return
 
 FILLLIST:
     LV_Delete()
-    GuiControlGet, FilterText
-    StringReplace, filter, FilterText, %A_Space%, .*, All
-    filter := "i)" . filter
+    filter := GetFilterText()
+    sc := ""
+    def := ""
+    counter := 1
+
     Loop, %Line0%
     {
-        IF(IsLineForDisplay(Line%A_Index%, filter))
-        {
-            StringSplit, Array, Line%A_Index%, `;
-            LV_Add("", Array1, Array2, A_Index)
+        IF(IsLineForDisplay(Line%A_Index%)) {
+            if (IsShortCut(Line%A_Index%)){
+                sc := sc . ";" . Line%A_Index%
+            }
+            if (IsDefinition(Line%A_Index%)){
+                def := Line%A_Index%
+
+                if(IsMatchingFilter(def, filter)){
+                    counter := counter + 1
+                    LV_Add("", sc, def, counter)
+                }
+
+                sc := ""
+            }
         }
     }
 return
 
-IsLineForDisplay(line, filterText)
+GetFilterText(){
+    GuiControlGet, FilterText
+    StringReplace, filter, FilterText, %A_Space%, .*, All
+    filter := "i)" . filter ; Add option to ignore case -> i)
+    return filter
+}
+
+IsLineForDisplay(line)
 {
-    isEmpty := RegExMatch(Line%A_Index%, "^$") > 0
-    isComment := RegExMatch(Line%A_Index%, "^\s*//") > 0
+    notEmpty := RegExMatch(line, "^$") == 0
+    notComment := RegExMatch(line, "^\s*//") == 0
 
-    if(isEmpty || isComment)
-    {
-        return   false
-    }
+    return notEmpty && notComment
+}
 
-    isMatchingFilter := RegExMatch(Line%A_Index%, filterText) > 0
-    return isMatchingFilter
+IsShortCut(line){
+    return RegExMatch(line, "^\[sc\].*") > 0
+}
+
+IsDefinition(line){
+    return RegExMatch(line, "^\[def\].*") > 0
+}
+
+IsMatchingFilter(line, filter){
+    return RegExMatch(line, filter) > 0
 }
 
 GuiEscape:

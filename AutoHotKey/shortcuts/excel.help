@@ -1,205 +1,647 @@
-Arrow Keys ;  Move one cell up, down, left, or right in a worksheet.
-Page Down/Page Up ; Move one screen down / one screen up in a worksheet.
-Alt+Page Down/Alt+Page Up ; Move one screen to the right / to the left in a worksheet.
-Tab/Shift+Tab ; Move one cell to the right / to the left in a worksheet.
-Ctrl+Arrow Keys ; Move to the edge of next data region (cells that contains data)
-Home ; Move to the beginning of a row in a worksheet.
-Ctrl+Home ; Move to the beginning of a worksheet.
-Ctrl+End ; Move to the last cell with content on a worksheet.
-Ctrl+f ; Display the Find and Replace dialog box (with Find selected).
-Ctrl+h ; Display the Find and Replace dialog box (with Replace selected).
-Shift+F4 ; Repeat last find.
-Ctrl+g (or f5) ; Display the 'Go To' dialog box.
-Ctrl+Arrow Left/Ctrl+Arrow Right ; Inside a cell: Move one word to the left / to the right.
-Home/End ; Inside a cell: Move to the beginning / to the end of a cell entry.
-Alt+Arrow Down ; Display the AutoComplete list e.g. in cell with dropdowns or autofilter.
-End ; Turn 'End' mode on. In End mode, press arrow keys to move to the next nonblank cell in the same column or row as the active cell. From here use arrow keys to move by blocks of data, home to move to last cell, or enter to move to the last cell to the right.
+[sc] Arrow Keys
+[def]  Move one cell up, down, left, or right in a worksheet.
 
-Shift+Space ; Select the entire row.
-Ctrl+Space ; Select the entire column.
-Ctrl+Shift+* (asterisk) ; Select the current region around the active cell.
-Ctrl+a (or ctrl+Shift+spacebar) ; Select the entire worksheet or the data-containing area. Pressing ctrl+a a second time then selects entire worksheet.
-Ctrl+Shift+Page Up ; Select the current and previous sheet in a workbook.
-Ctrl+Shift+o ; Select all cells with comments.
-Shift+Arrow Keys ; Extend the selection by one cell.
-Ctrl+Shift+Arrow Key ; Extend the selection to the last cell with content in row or column.
-Shift+Page Down/Shift+Page Up ; Extend the selection down one screen /up one screen.
-Shift+Home ; Extend the selection to the beginning of the row.
-Ctrl+Shift+Home ; Extend the selection to the beginning of the worksheet.
-Ctrl+Shift+End ; Extend the selection to the last used cell on the worksheet (lower-right corner).
-F8 ; Turn on extension of selection with arrow keys without having to keep pressing shift.
-Shift+F8 ; Add another (adjacent or non-adjacent) range of cells to the selection. Use arrow keys and shift+arrow keys to add to selection.
-Shift+Backspace ; Select only the active cell when multiple cells are selected.
-Ctrl+Backspace ; Show active cell within selection.
-Ctrl+. (period) ; Move clockwise to the next corner of the selection.
-Enter/Shift+Enter ; Move active cell down / up in a selection.
-Tab/Shift+Tab ; Move active cell right / left in a selection.
-Ctrl+Alt+Arrow Right/Ctrl+Alt+Arrow Left ; Move to the right / to the left between non-adjacent selections (with multiple ranges selected).
-Esc ; Cancel Selection.
-Shift+Arrow Left/Shift+Arrow Right ; Select or unselect one character to the left / to the right.
-Ctrl+Shift+Arrow Left/Ctrl+Shift+Arrow Right ; Select or unselect one word to the left / to the right.
-Shift+Home/Shift+End ; Select from the insertion point to the beginning / to the end of the cell.
-Ctrl+z ; Undo last action (multiple levels).
-Ctrl+y ; Redo last action (multiple levels).
-Ctrl+c ; Copy contents of selected cells.
-Ctrl+x ; Cut contents of selected cells.
-Ctrl+v ; Paste content from clipboard into selected cell.
-Ctrl+Alt+v ; If data exists in clipboard: Display the Paste Special dialog box.
-Ctrl+Shift+[+] ; If data exists in clipboard: Display the Insert dialog box to insert blank cells.
-F2 ; Edit the active cell with cursor at end of the line.
-Alt+Enter ; Start a new line in the same cell.
-Enter ; Complete a cell entry and move down in the selection. With multiple cells selected: fill cell range with current cell.
-Shift+Enter ; Complete a cell entry and move up in the selection.
-Tab/Shift+Tab ; Complete a cell entry and move to the right / to the left in the selection.
-Esc ; Cancel a cell entry.
-Backspace ; Delete the character to the left of the insertion point, or delete the selection.
-Delete ; Delete the character to the right of the insertion point, or delete the selection.
-Ctrl+Delete ; Delete text to the end of the line.
-Ctrl+; (semicolon) ; Insert current date.
-Ctrl+Shift+: (colon) ; Insert current time.
-Ctrl+t ; Show all content as standard numbers. (So 14:15 becomes 14.25 etc for the entire file) To undo press ctrl + t again
-Ctrl+d ; Fill complete cell down (Copy above cell).
-Ctrl+r ; Fill complete cell to the right (Copy cell from the left).
-Ctrl+" ; Fill cell values down and edit (Copy above cell values).
-Ctrl+' (apostrophe) ; Fill cell formulas down and edit (Copy above cell formulas).
-Ctrl+l ; Insert a table (display Create Table dialog box).
-Ctrl+- ; Delete Cell/Row/Column Menu
-Ctrl+- with row / column selected ; Delete row / delete column.
-Ctrl+Shift++ ; Insert Cell/Row/Column Menu
-Ctrl+Shift++ with row / column selected ; Insert row/ insert column.
-Shift+F2 ; Insert / Edit a cell comment.
-Shift+f10, then m ; Delete comment.
-Alt+F1 ; Create and insert chart with data in current range as embedded Chart Object.
-F11 ; Create and insert chart with data in current range in a separate Chart sheet.
-Ctrl+k ; Insert a hyperlink.
-enter (in a cell with a hyperlink) ; Activate a hyperlink.
-Ctrl+9 ; Hide the selected rows.
-Ctrl+Shift+9 ; Unhide any hidden rows within the selection.
-Ctrl+0 (zero) ; Hide the selected columns.
-Ctrl+Shift+0 (zero) ; Unhide any hidden columns within the selection*.
-Ctrl+` (grave accent) ; Alternate between displaying cell values and displaying cell formulas. Accent grave /not a quotation mark.
-Alt+Shift+Arrow Right ; Group rows or columns.
-Alt+Shift+Arrow Left ; Ungroup rows or columns.
-Ctrl+6 ; Alternate between hiding and displaying objects.
-Ctrl+8 ; Display or hides the outline symbols.
-Ctrl+6 ; Alternate between hiding objects, displaying objects, and displaying placeholders for objects.
-Alt+o, ca ; Adjust Column width to fit content. Select complete column with Ctrl+Space first, otherwise column adjusts to content of current cell). Remember Format, Column Adjust.
-Alt+o, cw ; Adjust Columns width to specific value: Option, Cow, width
-Alt+o, ra ; Adjust Row height to fit content: Option, Row, Adjust
-Alt+o, re ; Adjust Row height to specific value: Option, Row, Height
-Ctrl+1 ; Format cells dialog.
-Ctrl+b (or ctrl+2) ; Apply or remove bold formatting.
-Ctrl+i (or ctrl+3) ; Apply or remove italic formatting.
-Ctrl+u (or ctrl+4) ; Apply or remove an underline.
-Ctrl+5 ; Apply or remove strikethrough formatting.
-Ctrl+Shift+f ; Display the Format Cells with Fonts Tab active. Press tab 3x to get to font-size. Used to be ctrl+shift+p, but that seems just get to the Font Tab in 2010.
-Alt+' (apostrophe / single quote) ; Display the Style dialog box.
-Ctrl+Shift+$ ; Apply the Currency format with two decimal places.
-Ctrl+Shift+~ ; Apply the General number format.
-Ctrl+Shift+% ; Apply the Percentage format with no decimal places.
-Ctrl+Shift+# ; Apply the Date format with the day, month, and year.
-Ctrl+Shift+@ ; Apply the Time format with the hour and minute, and indicate A.M. or P.M.
-Ctrl+Shift+! ; Apply the Number format with two decimal places, thousands separator, and minus sign (-) for negative values.
-Ctrl+Shift+^ ; Apply the Scientific number format with two decimal places.
-F4 ; Repeat last formatting action: Apply previously applied Cell Formatting to a different Cell
-Ctrl+Shift+& ; Apply outline border from cell or selection
-Ctrl+Shift+_ (underscore) ; Remove outline borders from cell or selection
-Ctrl+1, then Ctrl+Arrow Right/Arrow Left ; Access border menu in 'Format Cell' dialog. Once border was selected, it will show up directly on the next Ctrl+1
-Alt+t* ; Set top border
-Alt+b* ; Set bottom Border
-Alt+l* ; Set left Border
-Alt+r* ; Set right Border
-Alt+d* ; Set diagonal and down border
-Alt+u* ; Set diagonal and up border
-Alt+h, ar ; Align Right
-Alt+h, ac ; Align Center
-Alt+h, al ; Align Left
-= ; Start a formula.
-Alt+= ; Insert the AutoSum formula.
-Shift+F3 ; Display the Insert Function dialog box.
-Ctrl+a ; Display Formula Window after typing formula name.
-Ctrl+Shift+a ; Insert Arguments in formula after typing formula name. .
-Shift+F3 ; Insert a function into a formula .
-Ctrl+Shift+Enter ; Enter a formula as an array formula.
-F4 ; After typing cell reference (e.g. =E3) makes reference absolute (=$E$4)
-F9 ; Calculate all worksheets in all open workbooks.
-Shift+F9 ; Calculate the active worksheet.
-Ctrl+Alt+F9 ; Calculate all worksheets in all open workbooks, regardless of whether they have changed since the last calculation.
-Ctrl+Alt+Shift+F9 ; Recheck dependent formulas, and then calculates all cells in all open workbooks, including cells not marked as needing to be calculated.
-Ctrl+Shift+u ; Toggle expand or collapse formula bar.
-Ctrl+` ; Toggle Show formula in cell instead of values
-Ctrl+F3 ; Define a name or dialog.
-Ctrl+Shift+F3 ; Create names from row and column labels.
-F3 ; Paste a defined name into a formula.
-Shift+F11/Alt+Shift+F1 ; Insert a new worksheet in current workbook.
-Ctrl+Page Down/Ctrl+Page Up ; Move to the next / previous worksheet in current workbook.
-Shift+Ctrl+Page Down/Shift+Ctrl+Page Up ; Select the current and next sheet(s) / select and previous sheet(s).
-Alt+o then h r ; Rename current worksheet (format, sheet, rename)
-Alt+e then l ; Delete current worksheet (Edit, delete)
-Alt+e then m ; Move current worksheet (Edit, move)
-F6/Shift+F6 ; Move to the next pane / previous pane in a workbook that has been split.
-Ctrl+F4 ; Close the selected workbook window.
-Ctrl+n ; Create a new blank workbook (Excel File)
-Ctrl+Tab/Ctrl+Shift+Tab ; Move to next / previous workbook window.
-Alt+Space ; Display the Control menu for Main Excel window.
-Ctrl+F9 ; Minimize current workbook window to an icon. Also restores ('un-maximizes') all workbook windows.
-Ctrl+F10 ; Maximize or restores the selected workbook window.
-Ctrl+F7 ; Move Workbook Windows which are not maximized.
-Ctrl+F8 ; Perform size command for workbook windows which are not maximzed.
-Alt+F4 ; Close Excel.
-Ctrl+o ; Open File.
-Ctrl+s ; Save the active file with its current file name, location, and file format.
-F12 ; Display the Save As dialog box.
-f10 (or alt) ; Turn key tips on or off.
-Ctrl+p ; Print File (Opens print menu).
-F1 ; Display the Excel Help task pane.
-F7 ; Display the Spelling dialog box.
-Shift+F7 ; Display the Thesaurus dialog box.
-Alt+F8 ; Display the Macro dialog box.
-Alt+F11 ; Open the Visual Basic Editor to create Macros.
-Ctrl+F1 ; Minimize or restore the Ribbon.s
-Alt/F10 ; Select the active tab of the Ribbon and activate the access keys. Press either of these keys again to move back to the document and cancel the access keys. and then arrow left or arrow right
-Shift+F10 ; Display the shortcut menu  for the selected command.
-Space/Enter ; Activate the selected command or control in the Ribbon, Open the selected menu or gallery in the Ribbon..
-Enter ; Finish modifying a value in a control in the Ribbon, and move focus back to the document.
-F1 ; Get help on the selected command or control in the Ribbon. (If no Help topic is associated with the selected command, the Help table of contents for that program is shown instead.)
-Tab/Shift+Tab ; Move to the next / previous field which can be edited.
-Enter/Shift+Enter ; Move to the first field in the next / previous record.
-Page Down/Page Up ; Move to the same field 10 records forward / back.
-Ctrl+Page Down ; Move to a new record.
-Ctrl+Page Up ; Move to the first record.
-Home/End ; Move to the beginning / end of a field.
-Arrow Keys ; Navigate inside Pivot tables.
-Home/End ; Select the first / last visible item in the list.
-Alt+c ; Move the selected field into the Column area.
-Alt+d ; Move the selected field into the Data area.
-Alt+l ; Display the PivotTable Field dialog box.
-Alt+p ; Move the selected field into the Page area.
-Alt+r ; Move the selected field into the Row area.
-Ctrl+Shift+* (asterisk) ; Select the entire PivotTable report.
-arrow keys to select the cell that contains the field, and then alt+Arrow Down ; Display the list for the current field in a PivotTable report.
-arrow keys to select the page field in a PivotChart report, and then alt+Arrow Down ; Display the list for the current page field in a PivotChart report.
-Enter ; Display the selected item.
-Space ; Select or clear a check box in the list.
-Ctrl+tab  ctrl+Shift+Tab ; select the PivotTable toolbar.
-enter then arrow down /Arrow Up ; On a field button: select the area you want to move the selected field to.
-Alt+Shift+Arrow Right ; Group selected PivotTable items.
-Alt+Shift+Arrow Left ; Ungroup selected PivotTable items.
-Arrow Keys ; Move between options in the active drop-down list box or between some options in a group of options.
-Ctrl+Tab/Ctrl+Shift+Tab ; Switch to the next/ previous tab in dialog box.
-Space ; In a dialog box: perform the action for the selected button, or select/clear a check box.
-Tab/Shift+Tab ; Move to the next / previous option.
-a ... z ; Move to an option in a drop-down list box starting with the letter
-Alt+a ... alt+z ; Select an option, or select or clear a check box.
-Alt+Arrow Down ; Open the selected drop-down list box.
-Enter ; Perform the action assigned to the default command button in the dialog box.
-Esc ; Cancel the command and close the dialog box.
-Alt+Arrow Down ; On the field with column head, display the AutoFilter list for the current column .
-Arrow Down/Arrow Up ; Select the next item / previous item in the AutoFilter list.
-Alt+Arrow Up ; Close the AutoFilter list for the current column.
-Home/End ; Select the first item / last item in the AutoFilter list.
-Enter ; Filter the list by using the selected item in the AutoFilter list.
-Ctrl + Shift + L ; Apply filter on selected column headings.
-Arrow Keys ; Select elements.
-Esc ; Remove Focus from Selection.
-F2 ; Edit Selection Text in if possible (in formula bar).
+[sc] Page Down
+[sc]  Page Up
+[def] Move one screen down / one screen up in a worksheet.
+
+[sc] Alt+Page Down
+[sc] Alt+Page Up
+[def] Move one screen to the right / to the left in a worksheet.
+
+[sc] Tab
+[sc]  Shift+Tab
+[def] Move one cell to the right / to the left in a worksheet.
+
+[sc] Ctrl+Arrow Keys
+[def] Move to the edge of next data region (cells that contains data)
+
+[sc] Home
+[def] Move to the beginning of a row in a worksheet.
+
+[sc] Ctrl+Home
+[def] Move to the beginning of a worksheet.
+
+[sc] Ctrl+End
+[def] Move to the last cell with content on a worksheet.
+
+[sc] Ctrl+f
+[def] Display the Find and Replace dialog box (with Find selected).
+
+[sc] Ctrl+h
+[def] Display the Find and Replace dialog box (with Replace selected).
+
+[sc] Shift+F4
+[def] Repeat last find.
+
+[sc] Ctrl+g (or f5)
+[def] Display the 'Go To' dialog box.
+
+[sc] Ctrl+Arrow Left
+[sc]  Ctrl+Arrow Right
+[def] Inside a cell: Move one word to the left / to the right.
+
+[sc] Home
+[sc] End
+[def] Inside a cell: Move to the beginning / to the end of a cell entry.
+
+[sc] Alt+Arrow Down
+[def] Display the AutoComplete list e.g. in cell with dropdowns or autofilter.
+
+[sc] End
+[def] Turn 'End' mode on. In End mode, press arrow keys to move to the next nonblank cell in the same column or row as the active cell. From here use arrow keys to move by blocks of data, home to move to last cell, or enter to move to the last cell to the right.
+
+
+[sc] Shift+Space
+[def] Select the entire row.
+
+[sc] Ctrl+Space
+[def] Select the entire column.
+
+[sc] Ctrl+Shift+* (asterisk)
+[def] Select the current region around the active cell.
+
+[sc] Ctrl+a (or ctrl+Shift+spacebar)
+[def] Select the entire worksheet or the data-containing area. Pressing ctrl+a a second time then selects entire worksheet.
+
+[sc] Ctrl+Shift+Page Up
+[def] Select the current and previous sheet in a workbook.
+
+[sc] Ctrl+Shift+o
+[def] Select all cells with comments.
+
+[sc] Shift+Arrow Keys
+[def] Extend the selection by one cell.
+
+[sc] Ctrl+Shift+Arrow Key
+[def] Extend the selection to the last cell with content in row or column.
+
+[sc] Shift+Page Down
+[sc] Shift+Page Up
+[def] Extend the selection down one screen /up one screen.
+
+[sc] Shift+Home
+[def] Extend the selection to the beginning of the row.
+
+[sc] Ctrl+Shift+Home
+[def] Extend the selection to the beginning of the worksheet.
+
+[sc] Ctrl+Shift+End
+[def] Extend the selection to the last used cell on the worksheet (lower-right corner).
+
+[sc] F8
+[def] Turn on extension of selection with arrow keys without having to keep pressing shift.
+
+[sc] Shift+F8
+[def] Add another (adjacent or non-adjacent) range of cells to the selection. Use arrow keys and shift+arrow keys to add to selection.
+
+[sc] Shift+Backspace
+[def] Select only the active cell when multiple cells are selected.
+
+[sc] Ctrl+Backspace
+[def] Show active cell within selection.
+
+[sc] Ctrl+. (period)
+[def] Move clockwise to the next corner of the selection.
+
+[sc] Enter
+[sc] Shift+Enter
+[def] Move active cell down / up in a selection.
+
+[sc] Tab
+[sc] Shift+Tab
+[def] Move active cell right / left in a selection.
+
+[sc] Ctrl+Alt+Arrow Right
+[sc] Ctrl+Alt+Arrow Left
+[def] Move to the right / to the left between non-adjacent selections (with multiple ranges selected).
+
+[sc] Esc
+[def] Cancel Selection.
+
+[sc] Shift+Arrow Left
+[sc] Shift+Arrow Right
+[def] Select or unselect one character to the left / to the right.
+
+[sc] Ctrl+Shift+Arrow Left
+[sc] Ctrl+Shift+Arrow Right
+[def] Select or unselect one word to the left / to the right.
+
+[sc] Shift+Home
+[sc] Shift+End
+[def] Select from the insertion point to the beginning / to the end of the cell.
+
+[sc] Ctrl+z
+[def] Undo last action (multiple levels).
+
+[sc] Ctrl+y
+[def] Redo last action (multiple levels).
+
+[sc] Ctrl+c
+[def] Copy contents of selected cells.
+
+[sc] Ctrl+x
+[def] Cut contents of selected cells.
+
+[sc] Ctrl+v
+[def] Paste content from clipboard into selected cell.
+
+[sc] Ctrl+Alt+v
+[def] If data exists in clipboard: Display the Paste Special dialog box.
+
+[sc] Ctrl+Shift+[+]
+[def] If data exists in clipboard: Display the Insert dialog box to insert blank cells.
+
+[sc] F2
+[def] Edit the active cell with cursor at end of the line.
+
+[sc] Alt+Enter
+[def] Start a new line in the same cell.
+
+[sc] Enter
+[def] Complete a cell entry and move down in the selection. With multiple cells selected: fill cell range with current cell.
+
+[sc] Shift+Enter
+[def] Complete a cell entry and move up in the selection.
+
+[sc] Tab
+[sc] Shift+Tab
+[def] Complete a cell entry and move to the right / to the left in the selection.
+
+[sc] Esc
+[def] Cancel a cell entry.
+
+[sc] Backspace
+[def] Delete the character to the left of the insertion point, or delete the selection.
+
+[sc] Delete
+[def] Delete the character to the right of the insertion point, or delete the selection.
+
+[sc] Ctrl+Delete
+[def] Delete text to the end of the line.
+
+[sc] Ctrl+; (semicolon)
+[def] Insert current date.
+
+[sc] Ctrl+Shift+: (colon)
+[def] Insert current time.
+
+[sc] Ctrl+t
+[def] Show all content as standard numbers. (So 14:15 becomes 14.25 etc for the entire file) To undo press ctrl + t again
+
+[sc] Ctrl+d
+[def] Fill complete cell down (Copy above cell).
+
+[sc] Ctrl+r
+[def] Fill complete cell to the right (Copy cell from the left).
+
+[sc] Ctrl+"
+[def] Fill cell values down and edit (Copy above cell values).
+
+[sc] Ctrl+' (apostrophe)
+[def] Fill cell formulas down and edit (Copy above cell formulas).
+
+[sc] Ctrl+l
+[def] Insert a table (display Create Table dialog box).
+
+[sc] Ctrl+-
+[def] Delete Cell/Row/Column Menu
+
+[sc] Ctrl+- with row
+[sc]  column selected
+[def] Delete row / delete column.
+
+[sc] Ctrl+Shift++
+[def] Insert Cell/Row/Column Menu
+
+[sc] Ctrl+Shift++ with row
+[sc]  column selected
+[def] Insert row/ insert column.
+
+[sc] Shift+F2
+[def] Insert / Edit a cell comment.
+
+[sc] Shift+f10, then m
+[def] Delete comment.
+
+[sc] Alt+F1
+[def] Create and insert chart with data in current range as embedded Chart Object.
+
+[sc] F11
+[def] Create and insert chart with data in current range in a separate Chart sheet.
+
+[sc] Ctrl+k
+[def] Insert a hyperlink.
+
+[sc] enter (in a cell with a hyperlink)
+[def] Activate a hyperlink.
+
+[sc] Ctrl+9
+[def] Hide the selected rows.
+
+[sc] Ctrl+Shift+9
+[def] Unhide any hidden rows within the selection.
+
+[sc] Ctrl+0 (zero)
+[def] Hide the selected columns.
+
+[sc] Ctrl+Shift+0 (zero)
+[def] Unhide any hidden columns within the selection*.
+
+[sc] Ctrl+` (grave accent)
+[def] Alternate between displaying cell values and displaying cell formulas. Accent grave /not a quotation mark.
+
+[sc] Alt+Shift+Arrow Right
+[def] Group rows or columns.
+
+[sc] Alt+Shift+Arrow Left
+[def] Ungroup rows or columns.
+
+[sc] Ctrl+6
+[def] Alternate between hiding and displaying objects.
+
+[sc] Ctrl+8
+[def] Display or hides the outline symbols.
+
+[sc] Ctrl+6
+[def] Alternate between hiding objects, displaying objects, and displaying placeholders for objects.
+
+[sc] Alt+o, ca
+[def] Adjust Column width to fit content. Select complete column with Ctrl+Space first, otherwise column adjusts to content of current cell). Remember Format, Column Adjust.
+
+[sc] Alt+o, cw
+[def] Adjust Columns width to specific value: Option, Cow, width
+
+[sc] Alt+o, ra
+[def] Adjust Row height to fit content: Option, Row, Adjust
+
+[sc] Alt+o, re
+[def] Adjust Row height to specific value: Option, Row, Height
+
+[sc] Ctrl+1
+[def] Format cells dialog.
+
+[sc] Ctrl+b (or ctrl+2)
+[def] Apply or remove bold formatting.
+
+[sc] Ctrl+i (or ctrl+3)
+[def] Apply or remove italic formatting.
+
+[sc] Ctrl+u (or ctrl+4)
+[def] Apply or remove an underline.
+
+[sc] Ctrl+5
+[def] Apply or remove strikethrough formatting.
+
+[sc] Ctrl+Shift+f
+[def] Display the Format Cells with Fonts Tab active. Press tab 3x to get to font-size. Used to be ctrl+shift+p, but that seems just get to the Font Tab in 2010.
+
+[sc] Alt+' (apostrophe
+[sc]  single quote)
+[def] Display the Style dialog box.
+
+[sc] Ctrl+Shift+$
+[def] Apply the Currency format with two decimal places.
+
+[sc] Ctrl+Shift+~
+[def] Apply the General number format.
+
+[sc] Ctrl+Shift+%
+[def] Apply the Percentage format with no decimal places.
+
+[sc] Ctrl+Shift+#
+[def] Apply the Date format with the day, month, and year.
+
+[sc] Ctrl+Shift+@
+[def] Apply the Time format with the hour and minute, and indicate A.M. or P.M.
+
+[sc] Ctrl+Shift+!
+[def] Apply the Number format with two decimal places, thousands separator, and minus sign (-) for negative values.
+
+[sc] Ctrl+Shift+^
+[def] Apply the Scientific number format with two decimal places.
+
+[sc] F4
+[def] Repeat last formatting action: Apply previously applied Cell Formatting to a different Cell
+
+[sc] Ctrl+Shift+&
+[def] Apply outline border from cell or selection
+
+[sc] Ctrl+Shift+_ (underscore)
+[def] Remove outline borders from cell or selection
+
+[sc] Ctrl+1, then Ctrl+Arrow Right
+[sc] Arrow Left
+[def] Access border menu in 'Format Cell' dialog. Once border was selected, it will show up directly on the next Ctrl+1
+
+[sc] Alt+t*
+[def] Set top border
+
+[sc] Alt+b*
+[def] Set bottom Border
+
+[sc] Alt+l*
+[def] Set left Border
+
+[sc] Alt+r*
+[def] Set right Border
+
+[sc] Alt+d*
+[def] Set diagonal and down border
+
+[sc] Alt+u*
+[def] Set diagonal and up border
+
+[sc] Alt+h, ar
+[def] Align Right
+
+[sc] Alt+h, ac
+[def] Align Center
+
+[sc] Alt+h, al
+[def] Align Left
+
+[sc] =
+[def] Start a formula.
+
+[sc] Alt+=
+[def] Insert the AutoSum formula.
+
+[sc] Shift+F3
+[def] Display the Insert Function dialog box.
+
+[sc] Ctrl+a
+[def] Display Formula Window after typing formula name.
+
+[sc] Ctrl+Shift+a
+[def] Insert Arguments in formula after typing formula name. .
+
+[sc] Shift+F3
+[def] Insert a function into a formula .
+
+[sc] Ctrl+Shift+Enter
+[def] Enter a formula as an array formula.
+
+[sc] F4
+[def] After typing cell reference (e.g. =E3) makes reference absolute (=$E$4)
+
+[sc] F9
+[def] Calculate all worksheets in all open workbooks.
+
+[sc] Shift+F9
+[def] Calculate the active worksheet.
+
+[sc] Ctrl+Alt+F9
+[def] Calculate all worksheets in all open workbooks, regardless of whether they have changed since the last calculation.
+
+[sc] Ctrl+Alt+Shift+F9
+[def] Recheck dependent formulas, and then calculates all cells in all open workbooks, including cells not marked as needing to be calculated.
+
+[sc] Ctrl+Shift+u
+[def] Toggle expand or collapse formula bar.
+
+[sc] Ctrl+`
+[def] Toggle Show formula in cell instead of values
+
+[sc] Ctrl+F3
+[def] Define a name or dialog.
+
+[sc] Ctrl+Shift+F3
+[def] Create names from row and column labels.
+
+[sc] F3
+[def] Paste a defined name into a formula.
+
+[sc] Shift+F11
+[sc]  Alt+Shift+F1
+[def] Insert a new worksheet in current workbook.
+
+[sc] Ctrl+Page Down
+[sc]  Ctrl+Page Up
+[def] Move to the next / previous worksheet in current workbook.
+
+[sc] Shift+Ctrl+Page Down
+[sc]  Shift+Ctrl+Page Up
+[def] Select the current and next sheet(s) / select and previous sheet(s).
+
+[sc] Alt+o then h r
+[def] Rename current worksheet (format, sheet, rename)
+
+[sc] Alt+e then l
+[def] Delete current worksheet (Edit, delete)
+
+[sc] Alt+e then m
+[def] Move current worksheet (Edit, move)
+
+[sc] F6
+[sc]  Shift+F6
+[def] Move to the next pane / previous pane in a workbook that has been split.
+
+[sc] Ctrl+F4
+[def] Close the selected workbook window.
+
+[sc] Ctrl+n
+[def] Create a new blank workbook (Excel File)
+
+[sc] Ctrl+Tab
+[sc]  Ctrl+Shift+Tab
+[def] Move to next / previous workbook window.
+
+[sc] Alt+Space
+[def] Display the Control menu for Main Excel window.
+
+[sc] Ctrl+F9
+[def] Minimize current workbook window to an icon. Also restores ('un-maximizes') all workbook windows.
+
+[sc] Ctrl+F10
+[def] Maximize or restores the selected workbook window.
+
+[sc] Ctrl+F7
+[def] Move Workbook Windows which are not maximized.
+
+[sc] Ctrl+F8
+[def] Perform size command for workbook windows which are not maximzed.
+
+[sc] Alt+F4
+[def] Close Excel.
+
+[sc] Ctrl+o
+[def] Open File.
+
+[sc] Ctrl+s
+[def] Save the active file with its current file name, location, and file format.
+
+[sc] F12
+[def] Display the Save As dialog box.
+
+[sc] f10 (or alt)
+[def] Turn key tips on or off.
+
+[sc] Ctrl+p
+[def] Print File (Opens print menu).
+
+[sc] F1
+[def] Display the Excel Help task pane.
+
+[sc] F7
+[def] Display the Spelling dialog box.
+
+[sc] Shift+F7
+[def] Display the Thesaurus dialog box.
+
+[sc] Alt+F8
+[def] Display the Macro dialog box.
+
+[sc] Alt+F11
+[def] Open the Visual Basic Editor to create Macros.
+
+[sc] Ctrl+F1
+[def] Minimize or restore the Ribbon.s
+
+[sc] Alt
+[sc]  F10
+[def] Select the active tab of the Ribbon and activate the access keys. Press either of these keys again to move back to the document and cancel the access keys. and then arrow left or arrow right
+
+[sc] Shift+F10
+[def] Display the shortcut menu  for the selected command.
+
+[sc] Space
+[sc]  Enter
+[def] Activate the selected command or control in the Ribbon, Open the selected menu or gallery in the Ribbon..
+
+[sc] Enter
+[def] Finish modifying a value in a control in the Ribbon, and move focus back to the document.
+
+[sc] F1
+[def] Get help on the selected command or control in the Ribbon. (If no Help topic is associated with the selected command, the Help table of contents for that program is shown instead.)
+
+[sc] Tab
+[sc]  Shift+Tab
+[def] Move to the next / previous field which can be edited.
+
+[sc] Enter
+[sc]  Shift+Enter
+[def] Move to the first field in the next / previous record.
+
+[sc] Page Down
+[sc]  Page Up
+[def] Move to the same field 10 records forward / back.
+
+[sc] Ctrl+Page Down
+[def] Move to a new record.
+
+[sc] Ctrl+Page Up
+[def] Move to the first record.
+
+[sc] Home
+[sc]  End
+[def] Move to the beginning / end of a field.
+
+[sc] Arrow Keys
+[def] Navigate inside Pivot tables.
+
+[sc] Home
+[sc]  End
+[def] Select the first / last visible item in the list.
+
+[sc] Alt+c
+[def] Move the selected field into the Column area.
+
+[sc] Alt+d
+[def] Move the selected field into the Data area.
+
+[sc] Alt+l
+[def] Display the PivotTable Field dialog box.
+
+[sc] Alt+p
+[def] Move the selected field into the Page area.
+
+[sc] Alt+r
+[def] Move the selected field into the Row area.
+
+[sc] Ctrl+Shift+* (asterisk)
+[def] Select the entire PivotTable report.
+
+[sc] arrow keys to select the cell that contains the field, and then alt+Arrow Down
+[def] Display the list for the current field in a PivotTable report.
+
+[sc] arrow keys to select the page field in a PivotChart report, and then alt+Arrow Down
+[def] Display the list for the current page field in a PivotChart report.
+
+[sc] Enter
+[def] Display the selected item.
+
+[sc] Space
+[def] Select or clear a check box in the list.
+
+[sc] Ctrl+tab  ctrl+Shift+Tab
+[def] select the PivotTable toolbar.
+
+[sc] Enter then arrow down
+[sc]  Arrow Up
+[def] On a field button: select the area you want to move the selected field to.
+
+[sc] Alt+Shift+Arrow Right
+[def] Group selected PivotTable items.
+
+[sc] Alt+Shift+Arrow Left
+[def] Ungroup selected PivotTable items.
+
+[sc] Arrow Keys
+[def] Move between options in the active drop-down list box or between some options in a group of options.
+
+[sc] Ctrl+Tab
+[sc]  Ctrl+Shift+Tab
+[def] Switch to the next/ previous tab in dialog box.
+
+[sc] Space
+[def] In a dialog box: perform the action for the selected button, or select/clear a check box.
+
+[sc] Tab
+[sc]  Shift+Tab
+[def] Move to the next / previous option.
+
+[sc] a ... z
+[def] Move to an option in a drop-down list box starting with the letter
+
+[sc] Alt+a ... alt+z
+[def] Select an option, or select or clear a check box.
+
+[sc] Alt+Arrow Down
+[def] Open the selected drop-down list box.
+
+[sc] Enter
+[def] Perform the action assigned to the default command button in the dialog box.
+
+[sc] Esc
+[def] Cancel the command and close the dialog box.
+
+[sc] Alt+Arrow Down
+[def] On the field with column head, display the AutoFilter list for the current column .
+
+[sc] Arrow Down
+[sc] Arrow Up
+[def] Select the next item / previous item in the AutoFilter list.
+
+[sc] Alt+Arrow Up
+[def] Close the AutoFilter list for the current column.
+
+[sc] Home
+[sc]  End
+[def] Select the first item / last item in the AutoFilter list.
+
+[sc] Enter
+[def] Filter the list by using the selected item in the AutoFilter list.
+
+[sc] Ctrl + Shift + L
+[def] Apply filter on selected column headings.
+
+[sc] Arrow Keys
+[def] Select elements.
+
+[sc] Esc
+[def] Remove Focus from Selection.
+
+[sc] F2
+[def] Edit Selection Text in if possible (in formula bar).
+

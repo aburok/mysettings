@@ -1,142 +1,207 @@
 ## 66 useful Keyboard Shortcuts for Chrome .
 ## 1. Manage Tabs
- Ctrl+t ; Open new tab
+[sc]  Ctrl+t
+[def] Open new tab
 
- Ctrl+w or Ctrl+F4 ; Close tab (or close Chrome if only one tab is open)
+[sc]  Ctrl+w or Ctrl+F4
+[def] Close tab (or close Chrome if only one tab is open)
 
- Ctrl+Shift+t ; Reopen last tab closed. Up to 10 tabs.
+[sc]  Ctrl+Shift+t
+[def] Reopen last tab closed. Up to 10 tabs.
 
- Ctrl+1 through Ctrl+8 ; Jump to first tab, second tab, etc.
+[sc]  Ctrl+1 through Ctrl+8
+[def] Jump to first tab, second tab, etc.
 
- Ctrl+9 ; Switch to the last tab
+[sc]  Ctrl+9
+[def] Switch to the last tab
 
- Ctrl+Tab/Ctrl+Shift+Tab ; Switch to the next / previous tab <br>(or use ctrl+page up/ctrl+page down)
+[sc]  Ctrl+Tab/Ctrl+Shift+Tab
+[def] Switch to the next / previous tab <br>(or use ctrl+page up/ctrl+page down)
 
- Ctrl+n ; Open new Chrome window
+[sc]  Ctrl+n
+[def] Open new Chrome window
 
- Ctrl+Shift+n ; Open new Chrome window in incognito mode
+[sc]  Ctrl+Shift+n
+[def] Open new Chrome window in incognito mode
 
- Alt+F4 ; Close current window
+[sc]  Alt+F4
+[def] Close current window
 
- Ctrl and click on link ; Open link in a new background tab
+[sc]  Ctrl and click on link
+[def] Open link in a new background tab
 
- Shift+ctrl and click on link ; Open link in a new foreground tab
+[sc]  Shift+ctrl and click on link
+[def] Open link in a new foreground tab
 
- Shift and click on link ; Open link in a new window
+[sc]  Shift and click on link
+[def] Open link in a new window
 
- Alt and click on link ; Download link
+[sc]  Alt and click on link
+[def] Download link
 
- Drag link to existing tab ; Open link in selected tab
+[sc]  Drag link to existing tab
+[def] Open link in selected tab
 
- Drag link to tab bar ; Open link in a new tab in the specified position on the tab strip.
+[sc]  Drag link to tab bar
+[def] Open link in a new tab in the specified position on the tab strip.
 
 ## 2. Address Bar
- Alt+d (or Ctrl+l) ; Jump to address bar; highlights current webpage URI if available
+[sc]  Alt+d (or Ctrl+l) ; Jump to address bar
+[def] highlights current webpage URI if available
 
- Ctrl+e (or Ctrl+k) ; Enter search query in address bar
+[sc]  Ctrl+e (or Ctrl+k)
+[def] Enter search query in address bar
 
- Home/Rnd in address bar ; Jump to beginning / end of address bar
+[sc]  Home/Rnd in address bar
+[def] Jump to beginning / end of address bar
 
- Ctrl+a in address bar ; Select all text of address. Also use shift+end with cursor at beginning or shift+home with cursor at end
+[sc]  Ctrl+a in address bar
+[def] Select all text of address. Also use shift+end with cursor at beginning or shift+home with cursor at end
 
- Type name of site and press Ctrl+Enter ; Add www. to beginning and .com to end of input and opens the web address in current tab.
+[sc]  Type name of site and press Ctrl+Enter
+[def] Add www. to beginning and .com to end of input and opens the web address in current tab.
 
- Type name of site and press Alt+Enter ; Add www. to beginning and .com to end of input and opens the web address in new background tab.
+[sc]  Type name of site and press Alt+Enter
+[def] Add www. to beginning and .com to end of input and opens the web address in new background tab.
 
- Type search term and press Enter ; Perform a search using the search engine associated with the keyword or the URI.
+[sc]  Type search term and press Enter
+[def] Perform a search using the search engine associated with the keyword or the URI.
 
- Type name of search engine and press Tab ; Tab-to-Search feature. E.g. Typing in 'yahoo.com' plus tab opens yahoo search. Add/edit search engines via 'Under the Hood' -&gt; Basic -&gt; Search Engines.
+[sc]  Type name of search engine and press Tab ; Tab-to-Search feature. E.g. Typing in 'yahoo.com' plus tab opens yahoo search. Add/edit search engines via 'Under the Hood' -&gt; Basic -&gt
+[def] Search Engines.
 
 ## 3. View Webpages
- F6 ; Alternate focus between address bar and webpage
+[sc]  F6
+[def] Alternate focus between address bar and webpage
 
- Arrow Down/Arrow Up with focus on webpage ; Scroll down / scroll up
+[sc]  Arrow Down/Arrow Up with focus on webpage
+[def] Scroll down / scroll up
 
- Page Down/Page Up ; Scroll one page down / one page up. Also use space/shift+space
+[sc]  Page Down/Page Up
+[def] Scroll one page down / one page up. Also use space/shift+space
 
- Home/End ; Jump to beginning / to end of webpage
+[sc]  Home/End
+[def] Jump to beginning / to end of webpage
 
- Ctrl++/- ; Zoom in / zoom out (or ctrl+mousewheel)
+[sc]  Ctrl++/-
+[def] Zoom in / zoom out (or ctrl+mousewheel)
 
- Ctrl+0 (zero) ; Return zoom to normal text size
+[sc]  Ctrl+0 (zero)
+[def] Return zoom to normal text size
 
- Ctrl+u ; View webpage source
+[sc]  Ctrl+u
+[def] View webpage source
 
- F11 ; Turn full screen on / off
+[sc]  F11
+[def] Turn full screen on / off
 
 ## 4. Browse between Webpages
- Alt+Home ; Jump to homepage
+[sc]  Alt+Home
+[def] Jump to homepage
 
- Alt+Arrow Left/Arrow Right ; Jump to previous webpage visited / jump to next webpage
+[sc]  Alt+Arrow Left/Arrow Right
+[def] Jump to previous webpage visited / jump to next webpage
 
- f5 or Ctrl+r ; Reload current webpage
+[sc]  f5 or Ctrl+r
+[def] Reload current webpage
 
- Ctrl+F5 or Shift+F5 ; Reload current webpage with cache override
+[sc]  Ctrl+F5 or Shift+F5
+[def] Reload current webpage with cache override
 
- Esc ; Stop webpage loading
+[sc]  Esc
+[def] Stop webpage loading
 
  ## 5. Browse within Webpages
  Tab/Shift+Tab with focus on webpage
  Jump to next / previous link
 
- Enter on link ; Open link in current tab
+[sc]  Enter on link
+[def] Open link in current tab
 
- Ctrl+enter on link ; Open link in a new background tab
+[sc]  Ctrl+enter on link
+[def] Open link in a new background tab
 
- Shift+Ctrl+Enter on link ; Open link in a new foreground tab
+[sc]  Shift+Ctrl+Enter on link
+[def] Open link in a new foreground tab
 
- Shift+Enter on link ; Open link in a new window
+[sc]  Shift+Enter on link
+[def] Open link in a new window
 
- Alt+Enter on link ; Download link
+[sc]  Alt+Enter on link
+[def] Download link
 
- Shift+F10 ; Open context menu (simulate right mouse button)
+[sc]  Shift+F10
+[def] Open context menu (simulate right mouse button)
 
- Ctrl+a ; Select all content on webpage
+[sc]  Ctrl+a
+[def] Select all content on webpage
 
- Ctrl+c with content selected ; Copy selected content to clipboard
+[sc]  Ctrl+c with content selected
+[def] Copy selected content to clipboard
 
 ## 6. Access Browser Features
- Ctrl+p ; Print current webpage (Chrome Print Dialog)
+[sc]  Ctrl+p
+[def] Print current webpage (Chrome Print Dialog)
 
- Ctrl+Shift+p ; Print current webpage (Native Windows Print Dialog)
+[sc]  Ctrl+Shift+p
+[def] Print current webpage (Native Windows Print Dialog)
 
- Ctrl+o ; Open file
+[sc]  Ctrl+o
+[def] Open file
 
- Ctrl+s ; Save current webpage
+[sc]  Ctrl+s
+[def] Save current webpage
 
- Alt+f ; Open Wrench Menu (I'd call it file menu to remember the shortcut)
+[sc]  Alt+f
+[def] Open Wrench Menu (I'd call it file menu to remember the shortcut)
 
- Ctrl+h ; Open History tab
+[sc]  Ctrl+h
+[def] Open History tab
 
- Ctrl+j ; Open Downloads tab
+[sc]  Ctrl+j
+[def] Open Downloads tab
 
 ## 7. Search
- Ctrl+f or f3 ; Find text on webpage. Press Enter for
+[sc]  Ctrl+f or f3
+[def] Find text on webpage. Press Enter for
 
- Enter/ Shift+Enter with text found on webpage ; Find next / find previous match
+[sc]  Enter/ Shift+Enter with text found on webpage
+[def] Find next / find previous match
 
- Ctrl+G/Ctrl+Shift+G with text found on webpage ; Find next / find previous match
+[sc]  Ctrl+G/Ctrl+Shift+G with text found on webpage
+[def] Find next / find previous match
 
- Esc ; With focus on Search box: Close Search box
+[sc]  Esc
+[def] With focus on Search box: Close Search box
 
 ## 8. Bookmarks Shortcuts
- Ctrl+Shift+b ; Show or hide bookmarks bar
+[sc]  Ctrl+Shift+b
+[def] Show or hide bookmarks bar
 
- Ctrl+d ; Add bookmark for current webpage
+[sc]  Ctrl+d
+[def] Add bookmark for current webpage
 
- Ctrl+Shift+d ; Add bookmark for current webpage and edit details
+[sc]  Ctrl+Shift+d
+[def] Add bookmark for current webpage and edit details
 
- Drag URI to bookmark bar ; Bookmark webpage (can be URI from address bar or link from page)
+[sc]  Drag URI to bookmark bar
+[def] Bookmark webpage (can be URI from address bar or link from page)
 
- Alt+d, then f6 ; Jump to bookmark toolbar. Use arrow keys and enter to access bookmarks
+[sc]  Alt+d, then f6
+[def] Jump to bookmark toolbar. Use arrow keys and enter to access bookmarks
 
- Alt+f, then b ; Open Bookmark Manager Tab
+[sc]  Alt+f, then b
+[def] Open Bookmark Manager Tab
 
 ## 9. The Rest
- Shift+Alt+t ; Set focus on the toolbar. Use arrow keys to navigate between different buttons on the toolbar.
+[sc]  Shift+Alt+t
+[def] Set focus on the toolbar. Use arrow keys to navigate between different buttons on the toolbar.
 
- Ctrl+Shift+i/Ctrl+Shift+j ; Open Developer Tools / JavaScript Console
+[sc]  Ctrl+Shift+i/Ctrl+Shift+j
+[def] Open Developer Tools / JavaScript Console
 
- Shift+Esc ; View Google Task manager
+[sc]  Shift+Esc
+[def] View Google Task manager
 
- F1 ; Chrome Help
+[sc]  F1
+[def] Chrome Help

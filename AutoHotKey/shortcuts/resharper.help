@@ -1,630 +1,628 @@
-    Toggle code analysis in the current file
-    Ctrl+Shift+Alt+8
-    Ctrl+Shift+Alt+8
-    ReSharper_EnableDaemon
+Ctrl+Shift+Alt+8
+Ctrl+Shift+Alt+8
+ReSharper_EnableDaemon
+Toggle code analysis in the current file
 
 
-    Go to next code issue (error, warning or suggestion)
-    Alt+PageDown
-    F12
-    ReSharper_GotoNextHighlight
+Alt+PageDown
+F12
+ReSharper_GotoNextHighlight
+Go to next code issue (error, warning or suggestion)
 
 
-    Go to previous code issue (error, warning or suggestion)
-    Alt+PageUp
-    Shift+F12
-    ReSharper_GotoPrevHighlight
+Go to previous code issue (error, warning or suggestion)
+Alt+PageUp
+Shift+F12
+ReSharper_GotoPrevHighlight
 
 
-     Go to next error in file (when solution-wide analysis is off)
-    Shift+Alt+PageDown
-    Alt+F12
-    ReSharper_GotoNextErrorInSolution
+Go to next error in file (when solution-wide analysis is off)
+Shift+Alt+PageDown
+Alt+F12
+ReSharper_GotoNextErrorInSolution
 
 
-    Go to next error in solution
-    Shift+Alt+PageDown
-    Alt+F12
-    ReSharper_GotoNextErrorInSolution
+Go to next error in solution
+Shift+Alt+PageDown
+Alt+F12
+ReSharper_GotoNextErrorInSolution
 
 
-     Go to previous error in file (when solution-wide analysis is off)
-    Shift+Alt+PageUp
-    Shift+Alt+F12
-    ReSharper_GotoPrevErrorInSolution
+Go to previous error in file (when solution-wide analysis is off)
+Shift+Alt+PageUp
+Shift+Alt+F12
+ReSharper_GotoPrevErrorInSolution
 
 
-    Go to previous error in solution
-    Shift+Alt+PageUp
-    Shift+Alt+F12
-    ReSharper_GotoPrevErrorInSolution
+Go to previous error in solution
+Shift+Alt+PageUp
+Shift+Alt+F12
+ReSharper_GotoPrevErrorInSolution
 
 
-    Inspect this
-    Ctrl+Shift+Alt+A
-    Ctrl+Shift+Alt+A
-    ReSharper_InspectThis
+Inspect this
+Ctrl+Shift+Alt+A
+Ctrl+Shift+Alt+A
+ReSharper_InspectThis
 
 
-    View type hierarchy
-    Ctrl+E,H
-    Ctrl+Alt+H
-    ReSharper_TypeHierarchy_Browse
+View type hierarchy
+Ctrl+E,H
+Ctrl+Alt+H
+ReSharper_TypeHierarchy_Browse
 
 
-    Inspection Results window
-    Ctrl+Alt+V
-    Ctrl+Alt+,
-    ReSharper_ShowInspectionWindow
+Inspection Results window
+Ctrl+Alt+V
+Ctrl+Alt+,
+ReSharper_ShowInspectionWindow
 
 
-    Show action list
-    Alt+Enter
-    Alt+Enter
-    ReSharper_AltEnter
+Show action list
+Alt+Enter
+Alt+Enter
+ReSharper_AltEnter
 
 
-    Paste multiple
-    Ctrl+Shift+V
-    Ctrl+Shift+V
-    ReSharper_PasteMultiple
+Paste multiple
+Ctrl+Shift+V
+Ctrl+Shift+V
+ReSharper_PasteMultiple
 
 
-    Code cleanup
-    Ctrl+E,C
-    Ctrl+Alt+F
-    ReSharper_CleanupCode
+Code cleanup
+Ctrl+E,C
+Ctrl+Alt+F
+ReSharper_CleanupCode
 
 
-    Silent code cleanup
-    Ctrl+E,F
-    Ctrl+Shift+Alt+F
-    ReSharper_SilentCleanupCode
+Silent code cleanup
+Ctrl+E,F
+Ctrl+Shift+Alt+F
+ReSharper_SilentCleanupCode
 
 
-    Symbol code completion
-    Ctrl+Space or Alt+Right
-    Ctrl+Space or Alt+Right
-    ReSharper_CompleteCodeBasic
+Symbol code completion
+Ctrl+Space or Alt+Right
+Ctrl+Space or Alt+Right
+ReSharper_CompleteCodeBasic
 
 
-    Smart code completion
-    Ctrl+Alt+Space
-    Ctrl+Shift+Space
-    ReSharper_CompleteCodeSmart
+Smart code completion
+Ctrl+Alt+Space
+Ctrl+Shift+Space
+ReSharper_CompleteCodeSmart
 
 
-    Import symbol completion
-    Shift+Alt+Space
-    Ctrl+Alt+Space
-    ReSharper_CompleteCodeTypeName
+Import symbol completion
+Shift+Alt+Space
+Ctrl+Alt+Space
+ReSharper_CompleteCodeTypeName
 
 
-    Complete statement
-    Ctrl+Shift+Enter
-    Ctrl+Shift+Enter
-    ReSharper_CompleteStatement
+Complete statement
+Ctrl+Shift+Enter
+Ctrl+Shift+Enter
+ReSharper_CompleteStatement
 
 
-    Parameter information: show/go to the next signature
-    Ctrl+Shift+Space
-    Ctrl+P
-    ReSharper_ParameterInfo_Show
+Parameter information: show/go to the next signature
+Ctrl+Shift+Space
+Ctrl+P
+ReSharper_ParameterInfo_Show
 
 
-    Parameter information: go to the previous signature
-    Ctrl+Shift+Alt+Space
-    Ctrl+Shift+P
-    ReSharper_ParameterInfo_GoToPreviousSignature
+Parameter information: go to the previous signature
+Ctrl+Shift+Alt+Space
+Ctrl+Shift+P
+ReSharper_ParameterInfo_GoToPreviousSignature
 
 
-    Quick documentation
-    Ctrl+Shift+F1
-    Ctrl+Q
-    ReSharper_QuickDoc
+Quick documentation
+Ctrl+Shift+F1
+Ctrl+Q
+ReSharper_QuickDoc
 
 
-    Insert live template
-    Ctrl+E,L
-    Ctrl+J
-    ReSharper_LiveTemplates_Insert
+Insert live template
+Ctrl+E,L
+Ctrl+J
+ReSharper_LiveTemplates_Insert
 
 
-    Surround with template
-    Ctrl+E,U
-    Ctrl+Alt+J
-    ReSharper_SurroundWith
+Surround with template
+Ctrl+E,U
+Ctrl+Alt+J
+ReSharper_SurroundWith
 
 
-    Create file from template
-    Ctrl+Alt+Insert
-    Ctrl+Alt+Insert
-    ReSharper_GenerateFileBesides
+Create file from template
+Ctrl+Alt+Insert
+Ctrl+Alt+Insert
+ReSharper_GenerateFileBesides
 
 
-    Generate code
-    Alt+Insert
-    Alt+Insert
-    ReSharper_Generate
+Generate code
+Alt+Insert
+Alt+Insert
+ReSharper_Generate
 
 
-    Move code up
-    Ctrl+Shift+Alt+Up
-    Ctrl+Shift+Alt+Up
-    ReSharper_MoveUp
+Move code up
+Ctrl+Shift+Alt+Up
+Ctrl+Shift+Alt+Up
+ReSharper_MoveUp
 
 
-    Move code down
-    Ctrl+Shift+Alt+Down
-    Ctrl+Shift+Alt+Down
-    ReSharper_MoveDown
+Move code down
+Ctrl+Shift+Alt+Down
+Ctrl+Shift+Alt+Down
+ReSharper_MoveDown
 
 
-    Move code left
-    Ctrl+Shift+Alt+Left
-    Ctrl+Shift+Alt+Left
-    ReSharper_MoveLeft
+Move code left
+Ctrl+Shift+Alt+Left
+Ctrl+Shift+Alt+Left
+ReSharper_MoveLeft
 
 
-    Move code right
-    Ctrl+Shift+Alt+Right
-    Ctrl+Shift+Alt+Right
-    ReSharper_MoveRight
+Move code right
+Ctrl+Shift+Alt+Right
+Ctrl+Shift+Alt+Right
+ReSharper_MoveRight
 
 
-    Extend selection
-    Ctrl+Alt+Right or Ctrl+Shift+W
-    Ctrl+W
-    ReSharper_ExtendSelection
+Extend selection
+Ctrl+Alt+Right or Ctrl+Shift+W
+Ctrl+W
+ReSharper_ExtendSelection
 
 
-    Shrink selection
-    Ctrl+Alt+Left
-    Ctrl+Shift+W
-    ReSharper_ShrinkSelection
+Shrink selection
+Ctrl+Alt+Left
+Ctrl+Shift+W
+ReSharper_ShrinkSelection
 
 
-    Select containing declaration
-    Ctrl+Shift+[
-    Ctrl+Shift+[
-    ReSharper_SelectContainingDeclaration
+Select containing declaration
+Ctrl+Shift+[
+Ctrl+Shift+[
+ReSharper_SelectContainingDeclaration
 
 
-    Duplicate current line or selection
-    Ctrl+D
-    Ctrl+D
-    ReSharper_DuplicateText
+Duplicate current line or selection
+Ctrl+D
+Ctrl+D
+ReSharper_DuplicateText
 
 
-    Comment with line comment
-    Ctrl+Alt+/
-    Ctrl+/
-    ReSharper_LineComment
+Comment with line comment
+Ctrl+Alt+/
+Ctrl+/
+ReSharper_LineComment
 
 
-    Comment with block comment
-    Ctrl+Shift+/
-    Ctrl+Shift+/
-    ReSharper_BlockComment
+Comment with block comment
+Ctrl+Shift+/
+Ctrl+Shift+/
+ReSharper_BlockComment
 
 
-    Extend selection to the next word
-    Ctrl+Shift+Right
-    Ctrl+Shift+Right
-    ReSharper_WordNextExtend
+Extend selection to the next word
+Ctrl+Shift+Right
+Ctrl+Shift+Right
+ReSharper_WordNextExtend
 
 
-    Extend selection to the previous word
-    Ctrl+Shift+Left
-    Ctrl+Shift+Left
-    ReSharper_WordPrevExtend
+Extend selection to the previous word
+Ctrl+Shift+Left
+Ctrl+Shift+Left
+ReSharper_WordPrevExtend
 
 
-    Go to next word
-    Ctrl+Right
-    Ctrl+Right
-    ReSharper_WordNext
+Go to next word
+Ctrl+Right
+Ctrl+Right
+ReSharper_WordNext
 
 
-    Go to previous word
-    Ctrl+Left
-    Ctrl+Left
-    ReSharper_WordPrev
+Go to previous word
+Ctrl+Left
+Ctrl+Left
+ReSharper_WordPrev
 
 
-    Delete text from the start of the word to the caret
-    Ctrl+Back
-    Ctrl+Back
-    ReSharper_WordDeleteToStart
+Delete text from the start of the word to the caret
+Ctrl+Back
+Ctrl+Back
+ReSharper_WordDeleteToStart
 
 
-    Delete text from the caret to the end of the word
-    Ctrl+Delete
-    Ctrl+Delete
-    ReSharper_WordDeleteToEnd
+Delete text from the caret to the end of the word
+Ctrl+Delete
+Ctrl+Delete
+ReSharper_WordDeleteToEnd
 
 
-    Go to everything/type
-    Ctrl+T
-    Ctrl+N
-    ReSharper_GotoType
+Go to everything/type
+Ctrl+T
+Ctrl+N
+ReSharper_GotoType
 
 
-    Go To File
-    Ctrl+Shift+T
-    Ctrl+Shift+N
-    ReSharper_GotoFile
+Go To File
+Ctrl+Shift+T
+Ctrl+Shift+N
+ReSharper_GotoFile
 
 
-    Go to file member
-    Alt+\
-    Ctrl+F12
-    ReSharper_GotoFileMember
+Go to file member
+Alt+\
+Ctrl+F12
+ReSharper_GotoFileMember
 
 
-    Go to symbol
-    Shift+Alt+T
-    Ctrl+Shift+Alt+N
-    ReSharper_GotoSymbol
+Go to symbol
+Shift+Alt+T
+Ctrl+Shift+Alt+N
+ReSharper_GotoSymbol
 
 
-    Navigate To
-    Alt+~
-    Ctrl+Shift+G
-    ReSharper_NavigateTo
+Navigate To
+Alt+~
+Ctrl+Shift+G
+ReSharper_NavigateTo
 
 
-    Go to type of symbol
-    Ctrl+Shift+F11
-    Ctrl+Shift+T
-    ReSharper_GotoTypeDeclaration
+Go to type of symbol
+Ctrl+Shift+F11
+Ctrl+Shift+T
+ReSharper_GotoTypeDeclaration
 
 
-    Go to declaration Overrides Visual Studio command Edit.GotoDefinition. If there is no shortcut assigned to this command,
-    Ctrl+B can be used.
+Go to declaration Overrides Visual Studio command Edit.GotoDefinition. If there is no shortcut assigned to this command,
+Ctrl+B can be used.
 
-    Ctrl+B
-    ReSharper_GotoDeclaration
+Ctrl+B
+ReSharper_GotoDeclaration
 
 
-    Go to implementation
-    Overrides Visual Studio command Edit.GotoDeclaration. If there is no shortcut assigned to this command, Ctrl+Shift+Alt+B can be used.
+Go to implementation
+Overrides Visual Studio command Edit.GotoDeclaration. If there is no shortcut assigned to this command, Ctrl+Shift+Alt+B can be used.
 
-    Ctrl+Shift+Alt+B
-    ReSharper_GotoImplementation
+Ctrl+Shift+Alt+B
+ReSharper_GotoImplementation
 
 
-    Go to base symbols
-    Alt+Home
-    Ctrl+U
-    ReSharper_GotoBase
+Go to base symbols
+Alt+Home
+Ctrl+U
+ReSharper_GotoBase
 
 
-    Go to derived symbols
-    Alt+End
-    Ctrl+Alt+B
-    ReSharper_GotoInheritors
+Go to derived symbols
+Alt+End
+Ctrl+Alt+B
+ReSharper_GotoInheritors
 
 
-    Go to usage
-    Shift+Alt+F12
-    Ctrl+Alt+F7
-    ReSharper_GotoUsage
+Go to usage
+Shift+Alt+F12
+Ctrl+Alt+F7
+ReSharper_GotoUsage
 
 
-    Go to containing declaration
-    Ctrl+[
-    Ctrl+[
-    ReSharper_GotoContainingDeclaration
+Go to containing declaration
+Ctrl+[
+Ctrl+[
+ReSharper_GotoContainingDeclaration
 
 
-    Go to next member/tag
-    Alt+Down
-    Alt+Down
-    ReSharper_GotoNextMethod
+Go to next member/tag
+Alt+Down
+Alt+Down
+ReSharper_GotoNextMethod
 
 
-    Go to previous member/tag
-    Alt+Up
-    Alt+Up
-    ReSharper_GotoPrevMethod
+Go to previous member/tag
+Alt+Up
+Alt+Up
+ReSharper_GotoPrevMethod
 
 
-    Find usages
-    Ctrl+K,R or Shift+F12
-    Alt+F7
-    ReSharper_FindUsages
+Find usages
+Ctrl+K,R or Shift+F12
+Alt+F7
+ReSharper_FindUsages
 
 
-    Find usages (advanced)
-    Ctrl+Shift+Alt+F12
-    Shift+Alt+F7
-    ReSharper_FindUsagesAdvanced
+Find usages (advanced)
+Ctrl+Shift+Alt+F12
+Shift+Alt+F7
+ReSharper_FindUsagesAdvanced
 
 
-    Highlight usages in file
-    Shift+Alt+F11
-    Ctrl+Shift+F7
-    ReSharper_HighlightUsages
+Highlight usages in file
+Shift+Alt+F11
+Ctrl+Shift+F7
+ReSharper_HighlightUsages
 
 
-    Go to previous usage
-    Ctrl+Alt+PageUp
-    Ctrl+Alt+Up
-    ReSharper_ResultList_GoToPrevLocation
+Go to previous usage
+Ctrl+Alt+PageUp
+Ctrl+Alt+Up
+ReSharper_ResultList_GoToPrevLocation
 
 
-    Go to next usage
-    Ctrl+Alt+PageDown
-    Ctrl+Alt+Down
-    ReSharper_ResultList_GoToNextLocation
+Go to next usage
+Ctrl+Alt+PageDown
+Ctrl+Alt+Down
+ReSharper_ResultList_GoToNextLocation
 
 
-    Remove highlighting of usages
-    Esc
-    Esc
-    <td></td>
+Remove highlighting of usages
+Esc
+Esc
+<td></td>
 
 
-    View recent files
-    Ctrl+,
-    Ctrl+E
-    ReSharper_GotoRecentFiles
+View recent files
+Ctrl+,
+Ctrl+E
+ReSharper_GotoRecentFiles
 
 
-    View recent edits
-    Ctrl+Shift+,
-    Ctrl+Shift+Alt+Back
-    ReSharper_GotoRecentEdits
+View recent edits
+Ctrl+Shift+,
+Ctrl+Shift+Alt+Back
+ReSharper_GotoRecentEdits
 
 
-    Go to previous edit
-    Ctrl+Shift+Back
-    Ctrl+Shift+Back
-    ReSharper_GotoLastEditLocation
+Go to previous edit
+Ctrl+Shift+Back
+Ctrl+Shift+Back
+ReSharper_GotoLastEditLocation
 
 
-    Go to related files
-    Ctrl+Alt+F7
-    Ctrl+Shift+Alt+G
-    ReSharper_GotoRelatedFiles
+Go to related files
+Ctrl+Alt+F7
+Ctrl+Shift+Alt+G
+ReSharper_GotoRelatedFiles
 
 
-    View bookmarks
-    Ctrl+~
-    Ctrl+~
-    ReSharper_Bookmarks_BookmarksMenu
+View bookmarks
+Ctrl+~
+Ctrl+~
+ReSharper_Bookmarks_BookmarksMenu
 
 
-    Go to a numbered bookmark X
-    Ctrl+[numeric,key]
-    Ctrl+[numeric,key]
-    ReSharper_Bookmarks_GoToBookmarkX
+Go to a numbered bookmark X
+Ctrl+[numeric,key]
+Ctrl+[numeric,key]
+ReSharper_Bookmarks_GoToBookmarkX
 
 
-    Set/remove a numbered bookmark X
-    Ctrl+Shift+[numeric,key]
-    Ctrl+Shift+[numeric,key]
-    ReSharper_Bookmarks_ToggleBookmarkX
+Set/remove a numbered bookmark X
+Ctrl+Shift+[numeric,key]
+Ctrl+Shift+[numeric,key]
+ReSharper_Bookmarks_ToggleBookmarkX
 
 
-    Find Results window
-    Ctrl+Alt+F12
-    Ctrl+Alt+U
-    ReSharper_ShowFindResults
+Find Results window
+Ctrl+Alt+F12
+Ctrl+Alt+U
+ReSharper_ShowFindResults
 
 
-    File structure
-    Ctrl+Alt+F
-    Ctrl+F11
-    ReSharper_ShowCodeStructure
+File structure
+Ctrl+Alt+F
+Ctrl+F11
+ReSharper_ShowCodeStructure
 
 
-    To-do items
-    Ctrl+Alt+D
-    Ctrl+Alt+.
-    ReSharper_ShowTodoExplorer
+To-do items
+Ctrl+Alt+D
+Ctrl+Alt+.
+ReSharper_ShowTodoExplorer
 
 
-    Stack Trace Explorer
-    Ctrl+E,T
-    Ctrl+Shift+E
-    ReSharper_ExploreStackTrace
+Stack Trace Explorer
+Ctrl+E,T
+Ctrl+Shift+E
+ReSharper_ExploreStackTrace
 
 
-    Locate in Solution Explorer
-    Shift+Alt+L
-    Shift+Alt+L
-    ReSharper_LocateInSolutionExplorer
+Locate in Solution Explorer
+Shift+Alt+L
+Shift+Alt+L
+ReSharper_LocateInSolutionExplorer
 
 
-    Analyze references
-    Ctrl+Alt+Y
-    Ctrl+Alt+Y
-    ReSharper_ShowAnalyzeReferences
+Analyze references
+Ctrl+Alt+Y
+Ctrl+Alt+Y
+ReSharper_ShowAnalyzeReferences
 
 
-    Refactor this
-    Ctrl+Shift+R
-    Ctrl+Shift+R
-    ReSharper_RefactorThis
+Refactor this
+Ctrl+Shift+R
+Ctrl+Shift+R
+ReSharper_RefactorThis
 
 
-    Rename
-    Ctrl+R,R
-    F2 or Shift+F6
-    ReSharper_Rename
+Rename
+Ctrl+R,R
+F2 or Shift+F6
+ReSharper_Rename
 
 
-    Move
-    Ctrl+R,O
-    F6
-    ReSharper_Move
+Move
+Ctrl+R,O
+F6
+ReSharper_Move
 
 
-    Safe delete
-    Ctrl+R,D or Alt+Delete
-    Alt+Delete
-    ReSharper_SafeDelete
+Safe delete
+Ctrl+R,D or Alt+Delete
+Alt+Delete
+ReSharper_SafeDelete
 
 
-    Extract method
-    Ctrl+R,M
-    Ctrl+Alt+M
-    ReSharper_ExtractMethod
+Extract method
+Ctrl+R,M
+Ctrl+Alt+M
+ReSharper_ExtractMethod
 
 
-    Extract interface
-    Ctrl+R,I
-    Ctrl+R,I
-    ReSharper_VSRefactor_ExtractInterface
+Extract interface
+Ctrl+R,I
+Ctrl+R,I
+ReSharper_VSRefactor_ExtractInterface
 
 
-    Introduce variable
-    Ctrl+R,V
-    Ctrl+Alt+V
-    ReSharper_IntroduceVariable
+Introduce variable
+Ctrl+R,V
+Ctrl+Alt+V
+ReSharper_IntroduceVariable
 
 
-    Introduce field
-    Ctrl+R,F
-    Ctrl+Alt+D
-    ReSharper_IntroduceField
+Introduce field
+Ctrl+R,F
+Ctrl+Alt+D
+ReSharper_IntroduceField
 
 
-    Introduce parameter
-    Ctrl+R,P
-    Ctrl+Alt+P
-    ReSharper_IntroParameter
+Introduce parameter
+Ctrl+R,P
+Ctrl+Alt+P
+ReSharper_IntroParameter
 
 
-    Inline variable/method/field
-    Ctrl+R,I
-    Ctrl+Alt+N
-    ReSharper_InlineVariable
+Inline variable/method/field
+Ctrl+R,I
+Ctrl+Alt+N
+ReSharper_InlineVariable
 
 
-    Encapsulate field
-    Ctrl+R,E
-    Ctrl+R,E
-    ReSharper_EncapsulateField
+Encapsulate field
+Ctrl+R,E
+Ctrl+R,E
+ReSharper_EncapsulateField
 
 
-    Change signature
-    Ctrl+R,S
-    Ctrl+F6
-    ReSharper_ChangeSignature
+Change signature
+Ctrl+R,S
+Ctrl+F6
+ReSharper_ChangeSignature
 
 
-    Run unit tests
-    Ctrl+U,R
-    Ctrl+T,R
-    ReSharper_UnitTest_RunContext
+Run unit tests
+Ctrl+U,R
+Ctrl+T,R
+ReSharper_UnitTest_RunContext
 
 
-    Debug unit tests
-    Ctrl+U,D
-    Ctrl+T,D
-    ReSharper_UnitTest_DebugContext
+Debug unit tests
+Ctrl+U,D
+Ctrl+T,D
+ReSharper_UnitTest_DebugContext
 
 
-    Run all tests in solution
-    Ctrl+U,L
-    Ctrl+T,L
-    ReSharper_UnitTest_RunSolution
+Run all tests in solution
+Ctrl+U,L
+Ctrl+T,L
+ReSharper_UnitTest_RunSolution
 
 
-    Run current test session
-    Ctrl+U,Y
-    Ctrl+T,Y
-    ReSharper_UnitTest_RunCurrentSession
+Run current test session
+Ctrl+U,Y
+Ctrl+T,Y
+ReSharper_UnitTest_RunCurrentSession
 
 
-    Repeat previous test run
-    Ctrl+U,U
-    Ctrl+T,T
-    ReSharper_UnitTestSession_RepeatPreviousRun
+Repeat previous test run
+Ctrl+U,U
+Ctrl+T,T
+ReSharper_UnitTestSession_RepeatPreviousRun
 
 
-    Append to test session
-    Ctrl+U,A
-    Ctrl+T,A
-    ReSharper_UnitTestSession_AppendTests
+Append to test session
+Ctrl+U,A
+Ctrl+T,A
+ReSharper_UnitTestSession_AppendTests
 
 
-    Create new test session
-    Ctrl+U,N
-    Ctrl+T,N
-    ReSharper_UnitTestSession_NewSession
+Create new test session
+Ctrl+U,N
+Ctrl+T,N
+ReSharper_UnitTestSession_NewSession
 
 
-    Unit Test Explorer
-    Ctrl+Alt+U
-    Ctrl+Alt+T
-    ReSharper_ShowUnitTestExplorer
+Unit Test Explorer
+Ctrl+Alt+U
+Ctrl+Alt+T
+ReSharper_ShowUnitTestExplorer
 
 
-    Unit Test Sessions
-    Ctrl+Alt+T
-    Ctrl+Alt+R
-    ReSharper_ShowUnitTestSessions
+Unit Test Sessions
+Ctrl+Alt+T
+Ctrl+Alt+R
+ReSharper_ShowUnitTestSessions
 
 
-    File structure
-    Ctrl+Alt+F
-    Ctrl+F11
-    ReSharper_ShowCodeStructure
+File structure
+Ctrl+Alt+F
+Ctrl+F11
+ReSharper_ShowCodeStructure
 
 
-    Find Results window
-    Ctrl+Alt+F12
-    Ctrl+Alt+U
-    ReSharper_ShowFindResults
+Find Results window
+Ctrl+Alt+F12
+Ctrl+Alt+U
+ReSharper_ShowFindResults
 
 
-    Hierarchies window
-    Ctrl+E,H
-    Ctrl+Alt+H
-    ReSharper_TypeHierarchy_Browse
+Hierarchies window
+Ctrl+E,H
+Ctrl+Alt+H
+ReSharper_TypeHierarchy_Browse
 
 
-    Inspection Results window
-    Ctrl+Alt+V
-    Ctrl+Alt+,
-    ReSharper_ShowInspectionWindow
+Inspection Results window
+Ctrl+Alt+V
+Ctrl+Alt+,
+ReSharper_ShowInspectionWindow
 
 
-    Stack Trace Explorer
-    Ctrl+E,T
-    Ctrl+Shift+E
-    ReSharper_ExploreStackTrace
+Stack Trace Explorer
+Ctrl+E,T
+Ctrl+Shift+E
+ReSharper_ExploreStackTrace
 
 
-    To-do items
-    Ctrl+Alt+D
-    Ctrl+Alt+.
-    ReSharper_ShowTodoExplorer
+To-do items
+Ctrl+Alt+D
+Ctrl+Alt+.
+ReSharper_ShowTodoExplorer
 
 
-    Unit Test Explorer
-    Ctrl+Alt+U
-    Ctrl+Alt+T
-    ReSharper_ShowUnitTestExplorer
+Unit Test Explorer
+Ctrl+Alt+U
+Ctrl+Alt+T
+ReSharper_ShowUnitTestExplorer
 
 
-    Unit Test Sessions
-    Ctrl+Alt+T
-    Ctrl+Alt+R
-    ReSharper_ShowUnitTestSessions
+Unit Test Sessions
+Ctrl+Alt+T
+Ctrl+Alt+R
+ReSharper_ShowUnitTestSessions
 
 
-    Close recent tool
-    Ctrl+Shift+F4
-    Ctrl+Shift+F4
-    ReSharper_WindowManager_CloseRecentTool
+Close recent tool
+Ctrl+Shift+F4
+ReSharper_WindowManager_CloseRecentTool
 
 
-    Activate recent tool
-    Ctrl+Alt+Back
-    Ctrl+Alt+Back
-    ReSharper_WindowManager_ActivateRecentTool
+Activate recent tool
+Ctrl+Alt+Back
+ReSharper_WindowManager_ActivateRecentTool

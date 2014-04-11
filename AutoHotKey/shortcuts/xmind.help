@@ -1,491 +1,150 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-<!-- saved from url=(0045)http://www.xmind.net/blog/en/xmind-shortcuts/ -->
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en" class=" js flexbox flexboxlegacy canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths" style="background-color: rgb(48, 48, 48);"><head profile="http://gmpg.org/xfn/11"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+[sc] Ctrl+Shift+N
+[def] New Workbook
 
+[sc] Ctrl+O
+[def] Open Workbook
 
-<title>XMind  » XMind Shortcuts</title>
+[sc] Ctrl+S
+[def] Save Workbook
 
-<meta name="generator" content="WordPress 3.4.1">
+[sc] Ctrl+Shift+S
+[def] Save All Workbooks
 
-<link rel="stylesheet" href="./XMind » XMind Shortcuts_files/reset.css" type="text/css" media="screen">
-<link rel="stylesheet" href="./XMind » XMind Shortcuts_files/style.css" type="text/css" media="screen">
-<link rel="stylesheet" href="./XMind » XMind Shortcuts_files/style(1).css" type="text/css" media="screen">
+[sc] Ctrl+Alt+N
+[def] New From Template
 
-<!-- HTML5 Shiv + detect touch events -->
-<script src="./XMind » XMind Shortcuts_files/modernizr-2.6.2.js"></script><style type="text/css"></style><style type="text/css"></style>
+[sc] Ctrl+W
+[def] Close Workbook
 
-<!--[if lte IE 6]>
-<link rel="stylesheet" href="http://www.xmind.net/blog/en/wp-content/themes/XMind2013/css/legacy.css" type="text/css" media="screen" title="no title" charset="utf-8" />
-<![endif]-->
-<link rel="alternate" type="application/rss+xml" title="XMind RSS Feed" href="http://www.xmind.net/blog/en/feed/">
-<link rel="pingback" href="http://www.xmind.net/blog/en/xmlrpc.php">
-<link rel="shortcut icon" href="http://static.xmind.net/images/favicon.ico" type="image/x-icon" id="IconLink" title="Icon">
-<link rel="alternate" type="application/rss+xml" title="XMind » XMind Shortcuts Comments Feed" href="http://www.xmind.net/blog/en/xmind-shortcuts/feed/">
-<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.xmind.net/blog/en/xmlrpc.php?rsd">
-<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.xmind.net/blog/en/wp-includes/wlwmanifest.xml"> 
-<link rel="prev" title="About XMind" href="http://www.xmind.net/blog/en/about/">
-<meta name="generator" content="WordPress 3.4.1">
-<link rel="canonical" href="./XMind » XMind Shortcuts_files/XMind » XMind Shortcuts.htm">
-	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
-</head>
-<body style=""><div id="StayFocusd-infobar" style="display: none; top: 0px;">
-    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
-    <span id="StayFocusd-infobar-msg"></span>
-    <span id="StayFocusd-infobar-links">
-        <a href="http://www.xmind.net/blog/en/xmind-shortcuts/#" id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="http://www.xmind.net/blog/en/xmind-shortcuts/#" id="StayFocusd-infobar-hide">hide once</a>
-    </span>
-</div>
+[sc] Ctrl+Shift+W
+[def] Close All Workbooks
 
-	<div id="header" class="container clearfix">
+[sc] Ctrl+P
+[def] Print
 
-		<a href="http://www.xmind.net/blog/" id="logo">
-			<img src="./XMind » XMind Shortcuts_files/logo2.png" alt="XMind"> 
-		</a>
-		<div id="main-nav">
+[sc] Ctrl+Z
+[def] Undo
 
-			<ul>
-				<li class="main-nav-home"><a href="http://www.xmind.net/" data-description="All starts here">Home</a></li>
-				<li class="main-nav-download"><a href="http://www.xmind.net/download/" data-description="Get xmind for free">Download</a></li>
-				<li class="main-nav-pricing">
-				    <a href="http://www.xmind.net/pricing/" data-description="upgrade to pro">Pricing</a>
-			    </li>
-				<li class="main-nav-library"><a href="http://www.xmind.net/share/" data-description="Share mind maps">Library</a></li>
-				<li class="main-nav-blog current">
-					<a href="http://www.xmind.net/blog/en/" data-description="English Blog">Blog</a>
-					<ul>
-						<li class="main-nav-blog-cn"><a href="http://www.xmind.net/blog/cn/">中文博客</a></li>
-						<li class="main-nav-blog-de"><a href="http://www.xmind.net/blog/de/">Deutsch Blog</a></li>
-						<li class="main-nav-blog-jp"><a href="http://www.xmind.net/blog/jp/">日本語</a></li>
-					</ul>
+[sc] Ctrl+Y
+[def] Redo
 
-				</li>
-			</ul><select name="global_nav" class="responsive-nav"><option value="">Navigate...</option><option class="main-nav-home" value="/"> Home</option><option class="main-nav-download" value="/download/"> Download</option><option class="main-nav-pricing" value="/pricing/"> Pricing</option><option class="main-nav-library" value="/share/"> Library</option><option class="main-nav-blog current" value="/blog/en/"> Blog</option><option class="main-nav-blog-cn" value="/blog/cn/"> →  中文博客</option><option class="main-nav-blog-de" value="/blog/de/"> →  Deutsch Blog</option><option class="main-nav-blog-jp" value="/blog/jp/"> →  日本語</option></select>
+[sc] Ctrl+X
+[def] Cut
 
-		</div><!-- end #main-nav -->
+[sc] Ctrl+C
+[def] Copy
 
+[sc] Ctrl+V
+[def] Paste
 
-	</div><!-- end #header -->
-	
-	<div id="content" class="container clearfix">
-		<header class="page-header"><h1 class="page-title truncate">Welcome to our blog</h1></header>
-		<div id="search">
-	<!-- 		 -->
-			<form method="get" id="searchform" action="http://www.xmind.net/blog/en/"><div>
-	<input type="text" value="" name="s" id="s">
-	<input type="submit" id="searchsubmit" value="Search">
-</div></form>
-		</div>
-		
-	
+[sc] Delete
+[def] Delete
 
-	<div id="main">
+[sc] Ctrl+Home
+[def] Go To Root Topic / Top of Text
 
-				<div class="post" id="post-58">
-			
-			<div class="post-title">
-				<h2><a href="./XMind » XMind Shortcuts_files/XMind » XMind Shortcuts.htm" rel="bookmark" title="Permanent Link to XMind Shortcuts">XMind Shortcuts</a></h2>
-				<h3>Posted on September 5th, 2009 in  |   <a href="http://www.xmind.net/blog/en/xmind-shortcuts/#respond" title="Comment on XMind Shortcuts">No Comments »</a></h3>
-			</div>
+[sc] Ctrl+A
+[def] Select All Topics / Text
 
-			<div class="post-content">
-				<table border="3" cellspacing="4" cellpadding="4" width="400" align="center">
-<tbody>
-<tr>
-<td>
-<h3>Keys(Windows)</h3>
-</td>
-<td>
-<h3>Keys(Mac)</h3>
-</td>
-<td>
-<h3>Description</h3>
-</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+N</td>
-<td>Command+Shift+N</td>
-<td>New Workbook</td>
-</tr>
-<tr>
-<td>Ctrl+O</td>
-<td>Command+O</td>
-<td>Open Workbook</td>
-</tr>
-<tr>
-<td>Ctrl+S</td>
-<td>Command+S</td>
-<td>Save Workbook</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+S</td>
-<td>Command+Shift+S</td>
-<td>Save All Workbooks</td>
-</tr>
-<tr>
-<td>Ctrl+Alt+N</td>
-<td>Command+Alt+N</td>
-<td>New From Template</td>
-</tr>
-<tr>
-<td>Ctrl+W</td>
-<td>Command+W</td>
-<td>Close Workbook</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+W</td>
-<td>Command+Shift+W</td>
-<td>Close All Workbooks</td>
-</tr>
-<tr>
-<td>Ctrl+P</td>
-<td>Command+P</td>
-<td>Print</td>
-</tr>
-<tr>
-<td>Ctrl+Z</td>
-<td>Command+Z</td>
-<td>Undo</td>
-</tr>
-<tr>
-<td>Ctrl+Y</td>
-<td>Command+Y</td>
-<td>Redo</td>
-</tr>
-<tr>
-<td>Ctrl+X</td>
-<td>Command+X</td>
-<td>Cut</td>
-</tr>
-<tr>
-<td>Ctrl+C</td>
-<td>Command+C</td>
-<td>Copy</td>
-</tr>
-<tr>
-<td>Ctrl+V</td>
-<td>Command+V</td>
-<td>Paste</td>
-</tr>
-<tr>
-<td>Delete</td>
-<td>Delete</td>
-<td>Delete</td>
-</tr>
-<tr>
-<td>Ctrl+Home</td>
-<td>Command+Home</td>
-<td>Go To Root Topic / Top of Text</td>
-</tr>
-<tr>
-<td>Ctrl+A</td>
-<td>Command+A</td>
-<td>Select All Topics / Text</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+A</td>
-<td>Command+Shift+A</td>
-<td>Select Brother Topics</td>
-</tr>
-<tr>
-<td>Ctrl+Alt+A</td>
-<td>Command+Alt+A</td>
-<td>Select Children Topics</td>
-</tr>
-<tr>
-<td>Ctrl+F</td>
-<td>Command+F</td>
-<td>Find / Replace</td>
-</tr>
-<tr>
-<td>Ctrl++</td>
-<td>Command++</td>
-<td>Zoom In</td>
-</tr>
-<tr>
-<td>Ctrl+-</td>
-<td>Command+-</td>
-<td>Zoom Out</td>
-</tr>
-<tr>
-<td>Ctrl+0</td>
-<td>Command+0</td>
-<td>Actual Size</td>
-</tr>
-<tr>
-<td>Alt+Enter</td>
-<td>Alt+Enter</td>
-<td>Properties</td>
-</tr>
-<tr>
-<td>Enter</td>
-<td>Enter</td>
-<td>Insert Topic</td>
-</tr>
-<tr>
-<td>Tab</td>
-<td>Tab</td>
-<td>Insert Subtopic</td>
-</tr>
-<tr>
-<td>Shift+Enter</td>
-<td>Shift+Enter</td>
-<td>Insert Topic Before</td>
-</tr>
-<tr>
-<td>Ctrl+Enter</td>
-<td>Command+Enter</td>
-<td>Insert Parent Topic</td>
-</tr>
-<tr>
-<td>Ctrl+Shift+L</td>
-<td>Command+Shift+L</td>
-<td>Key Assist</td>
-</tr>
-<tr>
-<td>Ctrl+I</td>
-<td>Ctrl+I</td>
-<td>Insert Images From Local File</td>
-</tr>
-<tr>
-<td>Ctrl+H</td>
-<td>Command+Shift+H</td>
-<td>Insert Hyperlink URL</td>
-</tr>
-<tr>
-<td>Ctrl+B</td>
-<td>Command+B</td>
-<td>Insert Boundary</td>
-</tr>
-<tr>
-<td>Ctrl+L</td>
-<td>Command+L</td>
-<td>Insert Relationship</td>
-</tr>
-<tr>
-<td>Ctrl+]</td>
-<td>Command+]</td>
-<td>Insert Summary</td>
-</tr>
-<tr>
-<td>F2</td>
-<td>F2</td>
-<td>Edit Topic</td>
-</tr>
-<tr>
-<td>F3</td>
-<td>F3</td>
-<td>Edit Label</td>
-</tr>
-<tr>
-<td>F4</td>
-<td>F4</td>
-<td>Edit Rich Text Notes</td>
-</tr>
-<tr>
-<td>F5</td>
-<td>F5</td>
-<td>Presentation Mode</td>
-</tr>
-<tr>
-<td>F6</td>
-<td>F6</td>
-<td>Drill Down</td>
-</tr>
-<tr>
-<td>Shift+F6</td>
-<td>Shift+F6</td>
-<td>Drill Up</td>
-</tr>
-<tr>
-<td>F7</td>
-<td>F7</td>
-<td>Map Shot</td>
-</tr>
-<tr>
-<td>+</td>
-<td>+</td>
-<td>Extend Branch</td>
-</tr>
-<tr>
-<td>-</td>
-<td>-</td>
-<td>Collapse Branch</td>
-</tr>
-<tr>
-<td>*</td>
-<td>*</td>
-<td>Extend All Branches</td>
-</tr>
-<tr>
-<td>/</td>
-<td>/</td>
-<td>Collapse All Branches</td>
-</tr>
-<tr>
-<td>Alt+Up</td>
-<td>Alt+Up</td>
-<td>Move Selected Forwards</td>
-</tr>
-<tr>
-<td>Alt+Down</td>
-<td>Alt+Down</td>
-<td>Move Selected Backwards</td>
-</tr>
-<tr>
-<td>Ctrl+T</td>
-<td>Command+T</td>
-<td>New Sheet</td>
-</tr>
-<tr>
-<td>Ctrl+1,2,3,4,5,6</td>
-<td>Command+1,2,3,4,5,6</td>
-<td>Quick Add Priority Markers</td>
-</tr>
-<tr>
-<td>Esc</td>
-<td>Esc</td>
-<td>Exit the pop-up notes dialog/Cancel Map Shot</td>
-</tr>
-<tr>
-<td>Ctrl+Scroll Mouse Wheel</td>
-<td>Command+Scroll Mouse Wheel</td>
-<td>Zoom In/Out</td>
-</tr>
-</tbody>
-</table>
-			</div><div class="tweet-this"><a class="tweet-this-button" title="Tweet this article!" target="_blank" href="http://twitter.com/?status=XMind%20Shortcuts%20http%3A%2F%2Fbit.ly%2F1b4R2Xd%20%23xmind31"></a></div>
-			
-					</div>
+[sc] Ctrl+Shift+A
+[def] Select Brother Topics
 
-				</div>
+[sc] Ctrl+Alt+A
+[def] Select Children Topics
 
-	<ul id="sidebar">
-			<li id="pages-3" class="widget widget_pages"><h2 class="widgettitle"> </h2>
-		<ul>
-			<li class="page_item page-item-2"><a href="http://www.xmind.net/blog/en/about/">About XMind</a></li>
-<li class="page_item page-item-58 current_page_item"><a href="./XMind » XMind Shortcuts_files/XMind » XMind Shortcuts.htm">XMind Shortcuts</a></li>
-		</ul>
-		</li>
-		<li id="recent-posts-3" class="widget widget_recent_entries">		<h2 class="widgettitle">Recent Posts</h2>
-		<ul>
-				<li><a href="http://www.xmind.net/blog/en/2014/02/rewarded-as-compuwaves-top-product/" title="Compuwave GmbH, a good partner">Compuwave GmbH, a good partner</a></li>
-				<li><a href="http://www.xmind.net/blog/en/2014/01/new-xmind-is-arrived/" title="New XMind is arrived">New XMind is arrived</a></li>
-				<li><a href="http://www.xmind.net/blog/en/2014/01/xmind-2013-makes-incremental-improvements-maintains-excellent-usability/" title="XMind 2013 makes incremental improvements, maintains excellent usability">XMind 2013 makes incremental improvements, maintains excellent usability</a></li>
-				<li><a href="http://www.xmind.net/blog/en/2013/12/merry-christmas-happy-new-year/" title="Merry Christmas &amp; Happy New Year">Merry Christmas &amp; Happy New Year</a></li>
-				<li><a href="http://www.xmind.net/blog/en/2013/12/how-to-build-a-concept-map-using-xmind/" title="How to build a Concept Map using XMind">How to build a Concept Map using XMind</a></li>
-				</ul>
-		</li>
-<li id="archives-3" class="widget widget_archive"><h2 class="widgettitle">Archives</h2>
-		<select name="archive-dropdown" onchange="document.location.href=this.options[this.selectedIndex].value;"> <option value="">Select Month</option> 	<option value="http://www.xmind.net/blog/en/2014/02/"> February 2014 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2014/01/"> January 2014 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2013/12/"> December 2013 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2013/11/"> November 2013 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2013/10/"> October 2013 &nbsp;(5)</option>
-	<option value="http://www.xmind.net/blog/en/2013/09/"> September 2013 &nbsp;(7)</option>
-	<option value="http://www.xmind.net/blog/en/2013/08/"> August 2013 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2013/06/"> June 2013 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2013/05/"> May 2013 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2013/04/"> April 2013 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2013/03/"> March 2013 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2013/01/"> January 2013 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2012/12/"> December 2012 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2012/11/"> November 2012 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2012/09/"> September 2012 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2012/08/"> August 2012 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2012/04/"> April 2012 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2012/03/"> March 2012 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2012/02/"> February 2012 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2011/12/"> December 2011 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2011/11/"> November 2011 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2011/10/"> October 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/08/"> August 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/07/"> July 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/05/"> May 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/04/"> April 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/03/"> March 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2011/01/"> January 2011 &nbsp;(1)</option>
-	<option value="http://www.xmind.net/blog/en/2010/12/"> December 2010 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2010/11/"> November 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/10/"> October 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/09/"> September 2010 &nbsp;(5)</option>
-	<option value="http://www.xmind.net/blog/en/2010/08/"> August 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/07/"> July 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/06/"> June 2010 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2010/05/"> May 2010 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2010/04/"> April 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/03/"> March 2010 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2010/02/"> February 2010 &nbsp;(4)</option>
-	<option value="http://www.xmind.net/blog/en/2010/01/"> January 2010 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2009/12/"> December 2009 &nbsp;(4)</option>
-	<option value="http://www.xmind.net/blog/en/2009/11/"> November 2009 &nbsp;(4)</option>
-	<option value="http://www.xmind.net/blog/en/2009/10/"> October 2009 &nbsp;(2)</option>
-	<option value="http://www.xmind.net/blog/en/2009/09/"> September 2009 &nbsp;(3)</option>
-	<option value="http://www.xmind.net/blog/en/2009/08/"> August 2009 &nbsp;(7)</option>
- </select>
-</li>
-<li id="linkcat-2" class="widget widget_links"><h2 class="widgettitle">Blogroll</h2>
+[sc] Ctrl+F
+[def] Find / Replace
 
-	<ul class="xoxo blogroll">
-<li><a href="http://www.biggerplate.com/groups/xmind">A great Mind Map library</a></li>
-<li><a href="http://actsmind.com/blog/" rel="friend">ActsMind</a></li>
-<li><a href="http://mindmappingeverywhere.blogspot.com/" title="Mindmapping everywhere, a webpage to share knowledge about Mindmapping techniques.">Alberto Martinez</a></li>
-<li><a href="http://assistivetek.blogspot.com/">Brian S. Friedlander</a></li>
-<li><a href="http://mindmappingsoftwareblog.com/" rel="friend" title="Mind Mapping Software Blog">Chuck Frey</a></li>
-<li><a href="http://ideamapping.ideamappingsuccess.com/IdeaMappingBlogs/" title="Jamie Nast blog">Idea Mapping</a></li>
-<li><a href="http://blog.iqmatrix.com/" title="Accelerating Your Human Potential ">IQ matrix</a></li>
-<li><a href="http://mindmapsunleashed.com/" rel="friend" title="make your mind(&amp;)maps your personal assistant">Mindmaps Unleashed</a></li>
-<li><a href="http://www.mind-mapping.org/blog/">Vic Gee</a></li>
-<li><a href="http://visualmapper.blogspot.com/" rel="friend" title="Personal, Academic and Business Success using the Tools, Techniques and Mindset of Visual Mapping">Wallace Tait</a></li>
-<li><a href="http://writetodone.com/" title="the craft and the art of writing">Write to Done</a></li>
+[sc] Ctrl++
+[def] Zoom In
 
-	</ul>
-</li>
+[sc] Ctrl+-
+[def] Zoom Out
 
-<li id="linkcat-3" class="widget widget_links"><h2 class="widgettitle">XMind Communities</h2>
+[sc] Ctrl+0
+[def] Actual Size
 
-	<ul class="xoxo blogroll">
-<li><a href="http://groups.google.com/group/xmind-dev" rel="me" title="Here are the discussions about how to develop XMind plugins">XMind Developer Forum</a></li>
-<li><a href="http://www.facebook.com/pages/XMind/83478237101" rel="me">XMind Facebook Page</a></li>
-<li><a href="http://www.linkedin.com/groups?gid=43266&trk=hb_side_g">XMind Linkedin Group</a></li>
-<li><a href="http://xmindusers.ning.com/" rel="me">XMind Ning Group</a></li>
-<li><a href="http://code.google.com/p/xmind3/" rel="me">XMind Project on Google Code</a></li>
-<li><a href="http://groups.google.com/group/xmind" rel="me" title="XMind Users Forum on Google">XMind Users Forum</a></li>
+[sc] Alt+Enter
+[def] Properties
 
-	</ul>
-</li>
+[sc] Enter
+[def] Insert Topic
 
-<li id="tag_cloud-3" class="widget widget_tag_cloud"><h2 class="widgettitle">Categories</h2>
-<div class="tagcloud"><a href="http://www.xmind.net/blog/en/category/daily-map/" class="tag-link-52" title="3 topics" style="font-size: 10.781456953642pt;">Daily Map</a>
-<a href="http://www.xmind.net/blog/en/category/discussion/" class="tag-link-16" title="5 topics" style="font-size: 12.450331125828pt;">Discussion</a>
-<a href="http://www.xmind.net/blog/en/category/faq/" class="tag-link-73" title="2 topics" style="font-size: 9.6688741721854pt;">FAQ</a>
-<a href="http://www.xmind.net/blog/en/category/featured/" class="tag-link-19" title="64 topics" style="font-size: 22pt;">Featured</a>
-<a href="http://www.xmind.net/blog/en/category/new-version/" class="tag-link-27" title="18 topics" style="font-size: 17.086092715232pt;">New Version</a>
-<a href="http://www.xmind.net/blog/en/category/opensource/" class="tag-link-7" title="2 topics" style="font-size: 9.6688741721854pt;">Opensource</a>
-<a href="http://www.xmind.net/blog/en/category/promotion/" class="tag-link-45" title="3 topics" style="font-size: 10.781456953642pt;">promotion</a>
-<a href="http://www.xmind.net/blog/en/category/uncategorized/" class="tag-link-1" title="3 topics" style="font-size: 10.781456953642pt;">Uncategorized</a>
-<a href="http://www.xmind.net/blog/en/category/video/" class="tag-link-55" title="3 topics" style="font-size: 10.781456953642pt;">Video</a>
-<a href="http://www.xmind.net/blog/en/category/xmind-basic/" class="tag-link-12" title="36 topics" style="font-size: 19.774834437086pt;">XMind Basic</a>
-<a href="http://www.xmind.net/blog/en/category/xmind-plugins/" class="tag-link-63" title="1 topic" style="font-size: 8pt;">XMind Plugins</a></div>
-</li>
-<li id="recent-comments-3" class="widget widget_recent_comments"><h2 class="widgettitle">Recent Comments</h2>
-<ul id="recentcomments"><li class="recentcomments">steve on <a href="http://www.xmind.net/blog/en/2013/10/running-xmind-on-the-great-mavericks/comment-page-1/#comment-345356">Running XMind on the great Mavericks</a></li><li class="recentcomments">steve on <a href="http://www.xmind.net/blog/en/2013/11/xmind-2013-official-version-released/comment-page-1/#comment-345351">XMind 2013 is Here</a></li><li class="recentcomments">steve on <a href="http://www.xmind.net/blog/en/2013/09/get-a-sneak-peek-of-xmind-2013/comment-page-1/#comment-345227">Get a Sneak Peek of XMind 2013</a></li><li class="recentcomments">Nikita on <a href="http://www.xmind.net/blog/en/2013/01/freemind-and-mindmanager/comment-page-1/#comment-343924">Working with FreeMind and MindManager files</a></li><li class="recentcomments">Roy on <a href="http://www.xmind.net/blog/en/2014/01/new-xmind-is-arrived/comment-page-1/#comment-342479">New XMind is arrived</a></li></ul></li>
-	</ul>
-</div>
+[sc] Tab
+[def] Insert Subtopic
 
-<div id="footer"><div class="container">
-	<p id="blog-name">Copyright © 2009 <a href="http://www.xmind.net/blog/en">XMind</a></p>
-	<p id="webrevolutionary-link">
-				Powered by <a href="http://webrevolutionary.com/coldblue/">Wordpress</a>, theme based on <a href="http://webrevolutionary.com/coldblue/">ColdBlue</a>
-	</p>
-</div></div>
+[sc] Shift+Enter
+[def] Insert Topic Before
 
-<!-- ColdBlue v1.0 theme designed by WebRevolutionary.com, *Modified by http://chengis.me For i18n support.* -->
+[sc] Ctrl+Enter
+[def] Insert Parent Topic
 
-				
-<script type="text/javascript" src="./XMind » XMind Shortcuts_files/jquery-1.9.1.min.js"></script>
-<script type="text/javascript" src="./XMind » XMind Shortcuts_files/site.src.js"></script><a href="http://www.xmind.net/blog/en/xmind-shortcuts/#" id="back-to-top" title="Back to Top" style="display: none;">Back to Top</a>
-<script type="text/javascript" src="./XMind » XMind Shortcuts_files/tweet-this.js"></script>
+[sc] Ctrl+Shift+L
+[def] Key Assist
 
+[sc] Ctrl+I
+[def] Insert Images From Local File
 
-</body></html>
+[sc] Ctrl+H
+[def] Insert Hyperlink URL
+
+[sc] Ctrl+B
+[def] Insert Boundary
+
+[sc] Ctrl+L
+[def] Insert Relationship
+
+[sc] Ctrl+]
+[def] Insert Summary
+
+[sc] F2
+[def] Edit Topic
+
+[sc] F3
+[def] Edit Label
+
+[sc] F4
+[def] Edit Rich Text Notes
+
+[sc] F5
+[def] Presentation Mode
+
+[sc] F6
+[def] Drill Down
+
+[sc] Shift+F6
+[def] Drill Up
+
+[sc] F7
+[def] Map Shot
+
+[sc] +
+[def] Extend Branch
+
+[sc] -
+[def] Collapse Branch
+
+[sc] *
+[def] Extend All Branches
+
+[sc] /
+[def] Collapse All Branches
+
+[sc] Alt+Up
+[def] Move Selected Forwards
+
+[sc] Alt+Down
+[def] Move Selected Backwards
+
+[sc] Ctrl+T
+[def] New Sheet
+
+[sc] Ctrl+1,2,3,4,5,6
+[def] Quick Add Priority Markers
+
+[sc] Esc
+[def] Exit the pop-up notes dialog/Cancel Map Shot
+
+[sc] Ctrl+Scroll Mouse Wheel
+[def] Zoom In/Out
+

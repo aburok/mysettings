@@ -71,9 +71,9 @@ return
 RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
 return
 
-#n::
+;#n::
 
-return
+;return
 
 
 ; Power Shell command line

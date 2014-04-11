@@ -1,947 +1,558 @@
-<!DOCTYPE html>
-<!-- saved from url=(0056)http://www.shortcutworld.com/en/win/PowerPoint_2007.html -->
-<html lang="en" itemscope="" itemtype="http://schema.org/ItemList"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+[sc] f5
+[def] Start the presentation from the beginning.
 
-<meta itemprop="name" content="ShortcutWorld"><meta itemprop="description" content="Wiki-Style Reference Database for Keyboard Shortcuts"><meta itemprop="image" content="images/shorts_mascot.png"><link rel="stylesheet" href="http://www.shortcutworld.com/styles/display.css" media="all">
-<link rel="shortcut icon" href="http://www.shortcutworld.com/images/favicon.ico">
-<script src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/cb=gapi.loaded_1" async=""></script><script src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/cb=gapi.loaded_0" async=""></script><script type="text/javascript" async="" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plusone.js" gapi_processed="true"></script><script type="text/javascript" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/jquery.min.js"></script>
-<title>200+ useful Keyboard Shortcuts for PowerPoint 2007. </title>
-<meta name="description" content="202 time-saving Keyboard Shortcuts for PowerPoint 2007. Extensive up-to-date reference lists of Keyboard Shortcuts/Hotkeys for Windows, Mac, and Linux. Large Shortcut Database with common applications.">
-<meta name="keywords" content="powerpoint 2007 shortcuts, powerpoint hotkeys, powerpoint hot keys, ms powerpoint shortcuts">
-<style type="text/css"></style><style type="text/css"></style></head><body style=""><div id="StayFocusd-infobar" style="display: none; top: 0px;">
-    <img src="chrome-extension://laankejkbhbdhmipfmgcngdelahlfoji/common/img/eye_19x19_red.png">
-    <span id="StayFocusd-infobar-msg"></span>
-    <span id="StayFocusd-infobar-links">
-        <a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#" id="StayFocusd-infobar-never-show">hide forever</a>&nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#" id="StayFocusd-infobar-hide">hide once</a>
-    </span>
-</div><div class="page_wrapper"><div class="header"><span class="header_ad"><script type="text/javascript"><!--
-															google_ad_client = "ca-pub-7046678033585668";
-															/* SCW Horizontal */
-															google_ad_slot = "4626851055";
-															google_ad_width = 468;
-															google_ad_height = 60;
-															//-->
-															</script>
-															<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-															</script></span><span class="header_logo"><a href="http://www.shortcutworld.com/"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/logo.png" alt="logo" title="Home"></a><span class="header_text">A wiki-style reference database for keyboard shortcuts</span></span></div><table class="wrapper" cellspacing="0"><tbody><tr><td class="hspacer">&nbsp;</td><td class="context_menu"><div class="vspacer">&nbsp;</div><table class="contextmenu_wrapper"><tbody><tr><td><div class="menu_group"><span class="item link"><a href="http://www.shortcutworld.com/en/win/PowerPoint_2003.html">2003</a></span>
-<span class="item link"><a href="http://www.shortcutworld.com/en/win/PowerPoint_2010.html">2010</a></span>
-<span class="item active">PowerPoint&nbsp;2007</span> 
-</div>
-<div class="menu_group"><span class="item active">win</span> 
-</div>
-<div class="menu_group"></div>
-<div class="menu_group"><span class="item link"><a href="http://www.shortcutworld.com/discuss.php?display=forum&id=5&l=en&shortcut_id=14">Comments (10)</a></span>
-</div>
-<div class="menu_group"><span class="item link"><a href="http://www.shortcutworld.com/editor.php?t=ex&m=ope&id=14&action=edit">Edit</a></span>
-<span class="item link"><a href="http://www.shortcutworld.com/editor.php?t=ao&a=5&l=en&action=add_options">Add</a></span>
-</div>
-</td><td class="align_right"><div class="account_info"><p><a href="http://www.shortcutworld.com/user.php?l=en&action=login">login/ register</a></p></div>
-</td></tr></tbody></table></td></tr><tr><td class="navigation"><form class="search" action="http://www.shortcutworld.com/search.php?l=en&p=win" method="POST"><label>Search</label><input type="text" name="search_term" id="search_box" title="Search [S]"><input type="image" id="search_submit" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/search.png" alt="Search [S]" title="Search [S]"></form>
-<ul>
-<li class="heading">Account</li>
-<li><a href="http://www.shortcutworld.com/my_shortcuts.php">My Shortcuts</a></li>
-<li><a href="http://www.shortcutworld.com/user.php?action=login">Login/ Register</a></li>
-</ul><ul>
-<li class="heading">Platforms:</li>
-<li><a href="http://www.shortcutworld.com/show_all.php?p=linux&l=en">Linux Shortcuts</a></li>
-<li><a href="http://www.shortcutworld.com/show_all.php?p=mac&l=en">Mac OS Shortcuts</a></li>
-<li><a href="http://www.shortcutworld.com/show_all.php?p=win&l=en">Windows Shortcuts</a></li>
-<li><a href="http://www.shortcutworld.com/show_all.php?p=web&l=en">Web Applications</a></li>
-</ul><ul><li class="heading">New Windows Shortcuts:</li>
-<li><a href="http://www.shortcutworld.com/en/win/HoneyView_5.03.html">HoneyView&nbsp;5.03</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/Word_2013.html">Microsoft Word&nbsp;2013</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/ALT-Digits-Symbol-Codes.html">ALT+[Digits] Symbol Codes</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/iTunes.html">iTunes</a></li>
-</ul><ul><li class="heading">Site:</li>
-<li><a href="http://www.shortcutworld.com/discuss.php?display=topic&id=200&l=en">About</a></li>
-<li><a href="http://www.shortcutworld.com/discuss.php?display=category&id=2&l=en">Discuss</a></li>
-<li><a href="http://www.shortcutworld.com/editor.php?action=init&t=cp&l=en">Add Page</a></li>
-<li><a href="http://www.shortcutworld.com/request.php">Request Page</a></li>
-<li><a href="http://www.shortcutworld.com/discuss.php?display=topic&id=100&l=en"><em>Give Feedback</em></a></li>
-</ul><br></td><td class="content"><span class="google_plus"><div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; background-color: transparent; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 70px; height: 15px; background-position: initial initial; background-repeat: initial initial;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 70px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 15px;" tabindex="0" vspace="0" width="100%" id="I0_1396042955715" name="I0_1396042955715" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div></span><div class="vspacer">&nbsp;</div><h1>PowerPoint&nbsp;2007&nbsp;Shortcuts&nbsp;&nbsp;<img class="fav_active" hidden="" id="14" title="Add page to &quot;My Shortcuts&quot;" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/favs.png"><img class="fav_inactive hidden " title="Page added to Favorites and available in " my="" shortcuts''="" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/favs_bw.png"><span class="user_token" id="7ad60b29b6858842c3d7"></span></h1>
-<table class="page_info_options">
-<tbody><tr><td><p><span class="avoidwrap">Uploaded by <a href="http://www.shortcutworld.com/user.php?l=en&user=1">bernd</a></span>, <span class="avoidwrap">updated on 11/3/2012&nbsp;by&nbsp;<a href="http://www.shortcutworld.com/user.php?l=en&user=4959" class="">John775</a></span><br><span class="avoidwrap">Platform: <a href="http://localhost/show_all.php?sb=all&l=en&p=win">Windows/ English</a></span></p></td><td class="align_right"><p><span class="avoidwrap"><a class="no_underline" title="Download as PDF" href="http://www.shortcutworld.com/en/win/PowerPoint_2007.pdf" target="_blank">
-<img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/pdf.gif" alt="pdf">&nbsp;PDF
-</a>&nbsp; 
-<a class="no_underline" title="Show printer-friendly Version" id="print" href="http://www.shortcutworld.com/print2.php?id=14" target="_blank">
-<img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/print.gif" alt="printer_friendly">&nbsp;Print</a>&nbsp;
-</span><span class="avoidwrap"><span id="hide_all" title="Collapse Categories">
-<img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" alt="minimize">&nbsp;Hide all</span>&nbsp; 
-<span id="show_all" title="Expand Categories">
-<img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="maximize">&nbsp;Show all</span></span></p></td></tr></tbody></table><div class="maincontent"><div class="toc"><div class="toc_body"><h2>Table of Contents:</h2><ol>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_1">Work with Text and Objects</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_2">Basic Text Navigation and Formatting</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_3">Change Fonts and Formatting</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_4">Manage Open and Save As dialog boxes</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_5">PowerPoint Task Panes</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_6">Move around in Tables</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_7">Manage Smart Tags</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_8">Microsoft Office basics applicable to PowerPoint 2007</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_9">Work with Dialog Boxes</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_10">Work with the Selection pane.</a></li>
-<li><a href="http://www.shortcutworld.com/en/win/PowerPoint_2007.html#link_11">Shortcuts available with PowerPoint ShortcutTools Add-in</a></li>
-</ol>
-</div><div class="toc_ad"><script type="text/javascript"><!--
-							google_ad_client = "ca-pub-7046678033585668";
-							/* Large Rectangle */
-							google_ad_slot = "2566205055";
-							google_ad_width = 336;
-							google_ad_height = 280;
-							//-->
-							</script>
-							<script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
-							</script></div></div></div><div class="shortcuts_body"><table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>PowerPoint&nbsp;2007&nbsp;Shortcuts</th></tr><tr>
-<td class="shortcut"><span class="kbd">f5</span></td>
-<td>Start the presentation from the beginning.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">n</span>, <span class="kbd">enter</span>, <span class="kbd">page down</span>, <span class="kbd">arrow right</span>, <span class="kbd">arrow down</span>, or <span class="kbd">spacebar</span></td>
-<td>Perform the next animation or advance to the next slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">p</span>, <span class="kbd">page up</span>, <span class="kbd">arrow left</span>, <span class="kbd">arrow up</span>, or <span class="kbd">backspace</span></td>
-<td>Perform the previous animation or return to the previous slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">number</span>+<span class="kbd">enter</span></td>
-<td>Go to slide number.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">b</span> or <span class="kbd">.</span></td>
-<td>Display a blank black slide, or return to the presentation from a blank black slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">w</span> or <span class="kbd">,</span></td>
-<td>Display a blank white slide, or return to the presentation from a blank white slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">s</span></td>
-<td>Stop or restart an automatic presentation.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">esc</span> or <span class="kbd">-</span></td>
-<td>End a presentation.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">e</span></td>
-<td>Erase on-screen annotations.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">h</span></td>
-<td>Go to the next slide, if the next slide is hidden.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">t</span></td>
-<td>Set new timings while rehearsing.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">o</span></td>
-<td>Use original timings while rehearsing.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">m</span></td>
-<td>Use a mouse click to advance while rehearsing.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">1</span>+<span class="kbd">enter</span></td>
-<td>Return to the first slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">p</span></td>
-<td>Redisplay hidden pointer or change the pointer to a pen.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">a</span></td>
-<td>Redisplay hidden pointer or change the pointer to an arrow.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">h</span></td>
-<td>Hide the pointer and navigation button immediately.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">u</span></td>
-<td>Hide the pointer and navigation button in 15 seconds.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f10</span></td>
-<td>Display the shortcut menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span></td>
-<td>Go to the first or next hyperlink on a slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Go to the last or previous hyperlink on a slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span> while a hyperlink is selected</td>
-<td>Perform the "mouse click" behavior of the selected hyperlink.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f5</span></td>
-<td>Start the presentation from the slide you are currently on.</td>
-</tr>
-</tbody></table><a name="link_1"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>1. Work with Text and Objects</th></tr><tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">arrow left</span></td>
-<td>Promote a paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">arrow right</span></td>
-<td>Demote a paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">arrow up</span></td>
-<td>Move selected paragraphs up.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">arrow down</span></td>
-<td>Move selected paragraphs down.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">1</span></td>
-<td>Show heading level 1.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">+</span></td>
-<td>Expand text below a heading.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">-</span></td>
-<td>Collapse text below a heading.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow right</span></td>
-<td>Select one character to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow left</span></td>
-<td>Select one character to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">arrow right</span></td>
-<td>Select to the end of a word.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">arrow left</span></td>
-<td>Select to the beginning of a word.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow up</span></td>
-<td>Select one line up.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow down</span></td>
-<td>Select one line down.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">esc</span></td>
-<td>Select an object (with text selected inside the object).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span> or <span class="kbd">shift</span>+<span class="kbd">tab</span> until the object you want is selected</td>
-<td>Select an object (with an object selected).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span></td>
-<td>Select text within an object (with an object selected).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">a</span> (on the Slides tab)</td>
-<td>Select all objects.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">a</span> (in the Slide Sorter view)</td>
-<td>Select all slides.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">a</span> (On the Outline tab)</td>
-<td>Select all text.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">backspace</span></td>
-<td>Delete one character to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">backspace</span></td>
-<td>Delete one word to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">delete</span></td>
-<td>Delete one character to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">delete</span></td>
-<td>Delete one word to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">x</span></td>
-<td>Cut selected object.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">c</span></td>
-<td>Copy selected object.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">v</span></td>
-<td>Paste cut or copied object.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">z</span></td>
-<td>Undo the last action.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">y</span></td>
-<td>Redo the last action.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">c</span></td>
-<td>Copy formatting only.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">v</span></td>
-<td>Paste formatting only.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">alt</span>+<span class="kbd">v</span></td>
-<td>Paste special.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_2"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>2. Basic Text Navigation and Formatting</th></tr><tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">f</span></td>
-<td>Change the font.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">p</span></td>
-<td>Change the font size.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">;</span></td>
-<td>Increase the font size of the selected text.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">;</span></td>
-<td>Decrease the font size of the selected text.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow left</span></td>
-<td>Move one character to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow right</span></td>
-<td>Move one character to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow up</span></td>
-<td>Move one line up.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow down</span></td>
-<td>Move one line down.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow left</span></td>
-<td>Move one word to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow right</span></td>
-<td>Move one word to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">end</span></td>
-<td>Move to the end of a line.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">home</span></td>
-<td>Move to the beginning of a line.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow up</span></td>
-<td>Move up one paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow down</span></td>
-<td>Move down one paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">end</span></td>
-<td>Move to the end of a text box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">home</span></td>
-<td>Move to the beginning of a text box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">enter</span></td>
-<td>In Microsoft Office PowerPoint, move to the next title or body text placeholder. If it is the last placeholder on a slide, this will insert a new slide with the same slide layout as the original slide.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f4</span></td>
-<td>Repeat the last Find action.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f</span></td>
-<td>Open the Find dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">h</span></td>
-<td>Open the Replace dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f4</span></td>
-<td>Repeat the last Find action.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span></td>
-<td>Move to the next cell in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Move to the preceding cell in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow down</span></td>
-<td>Move to the next row in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow up</span></td>
-<td>Move to the preceding row in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">tab</span></td>
-<td>Insert a tab in a cell in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span></td>
-<td>Start a new paragraph in table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span> at the <span class="kbd">end</span> of the last row</td>
-<td>Add a new row at the bottom of the table in table.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_3"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>3. Change Fonts and Formatting</th></tr><tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">f</span></td>
-<td>Open the Font dialog box to change the font.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">p</span></td>
-<td>Open the Font dialog box to change the font size.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">;</span></td>
-<td>Increase the font size.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">;</span></td>
-<td>Decrease the font size.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">t</span></td>
-<td>Open the Font dialog box to change the formatting of characters.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f3</span></td>
-<td>Change the case of letters between sentence, lowercase, or uppercase.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">b</span></td>
-<td>Apply bold formatting.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">u</span></td>
-<td>Apply an underline.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">i</span></td>
-<td>Apply italic formatting.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">=</span></td>
-<td>Apply subscript formatting (automatic spacing).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">+</span></td>
-<td>Apply superscript formatting (automatic spacing).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">spacebar</span></td>
-<td>Remove manual character formatting, such as subscript and superscript.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">k</span></td>
-<td>Insert a hyperlink.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">c</span></td>
-<td>Copy formats.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">v</span></td>
-<td>Paste formats.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">e</span></td>
-<td>Center a paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">j</span></td>
-<td>Justify a paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+L</td>
-<td>Left align a paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">r</span></td>
-<td>Right align a paragraph.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_4"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>4. Manage Open and Save As dialog boxes</th></tr><tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">1</span></td>
-<td>Go to the previous folder.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">2</span></td>
-<td>Up One Level button: Open the folder up one level above the open folder.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">3</span> or <span class="kbd">delete</span></td>
-<td>Delete button: Delete the selected folder or file.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">4</span></td>
-<td>Create New Folder button: Create a new folder.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">5</span></td>
-<td>Views button: Switch among available folder views.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+L</td>
-<td>Tools button: Show the Tools menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f10</span></td>
-<td>Display a shortcut menu for a selected item, such as a folder or file.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span></td>
-<td>Move between options or areas in the dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">f4</span> or <span class="kbd">alt</span>+<span class="kbd">i</span></td>
-<td>Open the Look in list.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">f5</span></td>
-<td>Refresh the file list.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_5"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>5. PowerPoint Task Panes</th></tr><tr>
-<td class="shortcut"><span class="kbd">f6</span></td>
-<td>Move a task pane from another pane in the program window (clockwise direction). You may need to press F6 more than once</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span>, <span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>When a task pane is active, select the next or previous option in the task pane, respectively.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow down</span></td>
-<td>Display the full set of commands on the task pane menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow down</span> or <span class="kbd">arrow up</span></td>
-<td>Move among choices on a selected submenu; move among certain options in a group of options in a dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">spacebar</span> or <span class="kbd">enter</span></td>
-<td>Open the selected menu, or perform the action assigned to the selected button.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f10</span></td>
-<td>Open a shortcut menu; open a drop-down menu for the selected gallery item.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">home</span>, <span class="kbd">end</span></td>
-<td>When a menu or submenu is visible, select the first or last command, respectively, on the menu or submenu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">page up</span>, <span class="kbd">page down</span></td>
-<td>Scroll up or down in the selected gallery list, respectively.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">home</span>, <span class="kbd">end</span></td>
-<td>Move to the top or bottom of the selected gallery list, respectively.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">spacebar</span>, <span class="kbd">c</span></td>
-<td>Close a task pane.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">h</span>, <span class="kbd">f</span>, <span class="kbd">o</span></td>
-<td>Open the Clipboard.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_6"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>6. Move around in Tables</th></tr><tr>
-<td class="shortcut"><span class="kbd">tab</span></td>
-<td>Move to the next cell.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Move to the preceding cell.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow down</span></td>
-<td>Move to the next row.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow up</span></td>
-<td>Move to the preceding row.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">tab</span></td>
-<td>Insert a tab in a cell.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span></td>
-<td>Start a new paragraph.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span> at the <span class="kbd">end</span> of the last row</td>
-<td>Add a new row at the bottom of the table.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>, <span class="kbd">j</span>, <span class="kbd">d</span>, <span class="kbd">a</span>, and then <span class="kbd">p</span>P</td>
-<td>Launch the Selection pane.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_7"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>7. Manage Smart Tags</th></tr><tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">f10</span></td>
-<td>Display the menu or message for a smart tag. If more than one smart tag is present, switch to the next smart tag and display its menu or message.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow down</span></td>
-<td>Select the next item on a smart tag menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow up</span></td>
-<td>Select the previous item on a smart tag menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span></td>
-<td>Perform the action for the selected item on a smart tag menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">esc</span></td>
-<td>Close the smart tag menu or message.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_8"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>8. Microsoft Office basics applicable to PowerPoint 2007</th></tr><tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">tab</span></td>
-<td>Switch to the next window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Switch to the previous window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">w</span> or <span class="kbd">ctrl</span>+<span class="kbd">f4</span></td>
-<td>Close the active window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f5</span></td>
-<td>Restore the size of the active window after you maximize it.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">f6</span></td>
-<td>Move a task pane from another pane in the program window (clockwise direction). You may need to press F6 more than once</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f6</span></td>
-<td>Move to a pane from another pane in the program window (counterclockwise direction).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f6</span></td>
-<td>When more than one window is open, switch to the next window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">f6</span></td>
-<td>Switch to the previous window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f7</span></td>
-<td>When a document window is not maximized, perform the Move command (on the Control menu for the window). Use the arrow keys to move the window and when finished, press ESC.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f8</span></td>
-<td>When a document window is not maximized, perform the Size command (on the Control menu for the window). Press the arrow keys to resize the window and when finished, press ESC.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f9</span></td>
-<td>Minimize a window to an icon (works for only some Microsoft Office programs).</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">f10</span></td>
-<td>Maximize or restore a selected window.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">print screen</span></td>
-<td>Copy a picture of the screen to the Clipboard.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">print screen</span></td>
-<td>Copy a picture of the selected window to the Clipboard.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_9"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>9. Work with Dialog Boxes</th></tr><tr>
-<td class="shortcut"><span class="kbd">tab</span></td>
-<td>Move to the next option or option group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Move to the previous option or option group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">tab</span></td>
-<td>Switch to the next tab in a dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Switch to the previous tab in a dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">arrow down</span></td>
-<td>Open a selected drop-down list.</td>
-</tr>
-<tr>
-<td class="shortcut">First letter of an option in a drop-down list</td>
-<td>Open the list if it is closed and move to an option in the list.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow keys</span></td>
-<td>Move between options in an open drop-down list, or between options in a group of options.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">esc</span></td>
-<td>Close a selected drop-down list; cancel a command and close a dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">spacebar</span></td>
-<td>Perform the action assigned to the selected button; select or clear the selected check box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+ the letter underlined in an option</td>
-<td>Select an option; select or clear a check box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">enter</span></td>
-<td>Perform the action assigned to a default button in a dialog box.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">home</span></td>
-<td>Move to the beginning of the entry.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">end</span></td>
-<td>Move to the end of the entry.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow left</span>, <span class="kbd">arrow right</span></td>
-<td>Move one character to the left or right, respectively.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow left</span></td>
-<td>Move one word to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">arrow right</span></td>
-<td>Move one word to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow left</span></td>
-<td>Select or cancel selection one character to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow right</span></td>
-<td>Select or cancel selection one character to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">arrow left</span></td>
-<td>Select or cancel selection one word to the left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">arrow right</span></td>
-<td>Select or cancel selection one word to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">home</span></td>
-<td>Select from the cursor to the beginning of the entry.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">end</span></td>
-<td>Select from the cursor to the end of the entry.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_10"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>10. Work with the Selection pane.</th></tr><tr>
-<td class="shortcut"><span class="kbd">f6</span></td>
-<td>Cycle the focus through the different panes.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">f10</span></td>
-<td>Display the context menu.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow up</span> or <span class="kbd">arrow down</span></td>
-<td>Move the focus to a single item or group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow left</span></td>
-<td>Move the focus from an item in a group to its parent group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">arrow right</span></td>
-<td>Move the focus from a group to the first item in that group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">*</span> (on numeric keypad only)</td>
-<td>Expand a focused group and all its child groups.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">+</span> (on numeric keypad only)</td>
-<td>Expand a focused group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">-</span> (on numeric keypad only)</td>
-<td>Collapse a focused group.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">arrow up</span> or <span class="kbd">shift</span>+<span class="kbd">arrow down</span></td>
-<td>Move the focus to an item and select it.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">spacebar</span> or <span class="kbd">enter</span></td>
-<td>Select a focused item.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">shift</span>+<span class="kbd">spacebar</span> or <span class="kbd">shift</span>+<span class="kbd">enter</span></td>
-<td>Cancel selection of a focused item.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">f</span></td>
-<td>Move a selected item forward.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">b</span></td>
-<td>Move a selected item backward.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span>+<span class="kbd">shift</span>+<span class="kbd">s</span></td>
-<td>Show or hide a focused item.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">f2</span></td>
-<td>Rename a focused item.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">tab</span> or <span class="kbd">shift</span>+<span class="kbd">tab</span></td>
-<td>Switch the keyboard focus within the Selection pane between tree view and the Show All and Hide All buttons.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">1</span></td>
-<td>Collapse all groups.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span>+<span class="kbd">shift</span>+<span class="kbd">9</span></td>
-<td>Expand all groups.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<a name="link_11"></a>
-<table class="category main" cellspacing="0">
-<tbody><tr><th colspan="2"><span class="plus_minus main"><img alt="minus" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/minus.gif" class="collapse main"><img src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/plus.gif" alt="plus" class="expand main"></span>11. Shortcuts available with PowerPoint ShortcutTools Add-in</th></tr><tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">1</span></td>
-<td>Align objects left.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">2</span></td>
-<td>Align objects center.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">3</span></td>
-<td>Align objects right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span> + <span class="kbd">shift</span> + <span class="kbd">3</span></td>
-<td>Align left edge to right edge.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">R</span></td>
-<td>Duplicate object to the right.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">T</span></td>
-<td>Insert textbox.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">N</span></td>
-<td>Insert rectangle.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">B</span></td>
-<td>Make objects same width / equalize width.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">H</span></td>
-<td>Make objects same height / equalize height.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">ctrl</span> + <span class="kbd">3</span></td>
-<td>Resize/stretch object width to right edge.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">alt</span> + <span class="kbd">F</span></td>
-<td>Select format painter.</td>
-</tr>
-<tr>
-<td class="shortcut"><span class="kbd">F1</span></td>
-<td>Zoom in object.</td>
-</tr>
-<tr>
-<td class="shortcut">...</td>
-<td>Visit <br>	<a href="http://www.shortcutworld.com/en/win/www.shortcuttools.com">www.shortcuttools.com</a><br> for many more keyboard shortcuts.</td>
-</tr>
-</tbody></table><p class="goto_top">▲ up</p>
-<p>&nbsp;</p><p>Sources: <a class="standard_link" href="http://www.shortcuttools.com/">www.shortcuttools.com</a> </p></div></td></tr><tr><td colspan="2" class="footer"><p><a href="http://www.shortcutworld.com/legal.php">Shortcuts published under Creative Common License where possible.<br>Website: Copyright 2006-2014. <span class="tou">Terms of Use</span></a></p></td></tr></tbody></table></div><script type="text/javascript" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/display.js"></script>
-<script type="text/javascript" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/jquery.hotkeys-0.7.9.js"></script>
-<script type="text/javascript" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/shortcuts_display.js"></script>
-<script type="text/javascript"> var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www."); document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));  </script><script src="http://www.google-analytics.com/ga.js" type="text/javascript"></script>
-<script type="text/javascript"> try { var pageTracker = _gat._getTracker("UA-6823891-1");  pageTracker._trackPageview();  } catch(err) {}  </script>
-<script type="text/javascript">(function() {
-var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
-po.src = 'https://apis.google.com/js/plusone.js';
-var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
-})();
-</script>
-<iframe name="oauth2relay873392544" id="oauth2relay873392544" src="./200+ useful Keyboard Shortcuts for PowerPoint 2007._files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><div class="vimiumReset vimiumHUD" style="right: 150px; opacity: 0; display: none;"></div></body></html>
+[sc] n, enter, page down, arrow right, arrow down, or spacebar
+[def] Perform the next animation or advance to the next slide.
+
+[sc] p, page up, arrow left, arrow up, or backspace
+[def] Perform the previous animation or return to the previous slide.
+
+[sc] number+enter
+[def] Go to slide number.
+
+[sc] b or .
+[def] Display a blank black slide, or return to the presentation from a blank black slide.
+
+[sc] w or ,
+[def] Display a blank white slide, or return to the presentation from a blank white slide.
+
+[sc] s
+[def] Stop or restart an automatic presentation.
+
+[sc] esc or -
+[def] End a presentation.
+
+[sc] e
+[def] Erase on-screen annotations.
+
+[sc] h
+[def] Go to the next slide, if the next slide is hidden.
+
+[sc] t
+[def] Set new timings while rehearsing.
+
+[sc] o
+[def] Use original timings while rehearsing.
+
+[sc] m
+[def] Use a mouse click to advance while rehearsing.
+
+[sc] 1+enter
+[def] Return to the first slide.
+
+[sc] ctrl+p
+[def] Redisplay hidden pointer or change the pointer to a pen.
+
+[sc] ctrl+a
+[def] Redisplay hidden pointer or change the pointer to an arrow.
+
+[sc] ctrl+h
+[def] Hide the pointer and navigation button immediately.
+
+[sc] ctrl+u
+[def] Hide the pointer and navigation button in 15 seconds.
+
+[sc] shift+f10
+[def] Display the shortcut menu.
+
+[sc] tab
+[def] Go to the first or next hyperlink on a slide.
+
+[sc] shift+tab
+[def] Go to the last or previous hyperlink on a slide.
+
+[sc] shift+f5
+[def] Start the presentation from the slide you are currently on.
+
+[sc] alt+shift+arrow left
+[def] Promote a paragraph.
+
+[sc] alt+shift+arrow right
+[def] Demote a paragraph.
+
+[sc] alt+shift+arrow up
+[def] Move selected paragraphs up.
+
+[sc] alt+shift+arrow down
+[def] Move selected paragraphs down.
+
+[sc] alt+shift+1
+[def] Show heading level 1.
+
+[sc] alt+shift++
+[def] Expand text below a heading.
+
+[sc] alt+shift+-
+[def] Collapse text below a heading.
+
+[sc] shift+arrow right
+[def] Select one character to the right.
+
+[sc] shift+arrow left
+[def] Select one character to the left.
+
+[sc] ctrl+shift+arrow right
+[def] Select to the end of a word.
+
+[sc] ctrl+shift+arrow left
+[def] Select to the beginning of a word.
+
+[sc] shift+arrow up
+[def] Select one line up.
+
+[sc] shift+arrow down
+[def] Select one line down.
+
+[sc] esc
+[def] Select an object (with text selected inside the object).
+
+[sc] enter
+[def] Select text within an object (with an object selected).
+
+[sc] backspace
+[def] Delete one character to the left.
+
+[sc] ctrl+backspace
+[def] Delete one word to the left.
+
+[sc] delete
+[def] Delete one character to the right.
+
+[sc] ctrl+delete
+[def] Delete one word to the right.
+
+[sc] ctrl+x
+[def] Cut selected object.
+
+[sc] ctrl+c
+[def] Copy selected object.
+
+[sc] ctrl+v
+[def] Paste cut or copied object.
+
+[sc] ctrl+z
+[def] Undo the last action.
+
+[sc] ctrl+y
+[def] Redo the last action.
+
+[sc] ctrl+shift+c
+[def] Copy formatting only.
+
+[sc] ctrl+shift+v
+[def] Paste formatting only.
+
+[sc] ctrl+alt+v
+[def] Paste special.
+
+[sc] ctrl+shift+f
+[def] Change the font.
+
+[sc] ctrl+shift+p
+[def] Change the font size.
+
+[sc] ctrl+shift+;
+[def] Increase the font size of the selected text.
+
+[sc] ctrl+shift+;
+[def] Decrease the font size of the selected text.
+
+[sc] arrow left
+[def] Move one character to the left.
+
+[sc] arrow right
+[def] Move one character to the right.
+
+[sc] arrow up
+[def] Move one line up.
+
+[sc] arrow down
+[def] Move one line down.
+
+[sc] ctrl+arrow left
+[def] Move one word to the left.
+
+[sc] ctrl+arrow right
+[def] Move one word to the right.
+
+[sc] end
+[def] Move to the end of a line.
+
+[sc] home
+[def] Move to the beginning of a line.
+
+[sc] ctrl+arrow up
+[def] Move up one paragraph.
+
+[sc] ctrl+arrow down
+[def] Move down one paragraph.
+
+[sc] ctrl+end
+[def] Move to the end of a text box.
+
+[sc] ctrl+home
+[def] Move to the beginning of a text box.
+
+[sc] ctrl+enter
+[def] In Microsoft Office PowerPoint, move to the next title or body text placeholder. If it is the last placeholder on a slide, this will insert a new slide with the same slide layout as the original slide.
+
+[sc] shift+f4
+[def] Repeat the last Find action.
+
+[sc] ctrl+f
+[def] Open the Find dialog box.
+
+[sc] ctrl+h
+[def] Open the Replace dialog box.
+
+[sc] shift+f4
+[def] Repeat the last Find action.
+
+[sc] tab
+[def] Move to the next cell in table.
+
+[sc] shift+tab
+[def] Move to the preceding cell in table.
+
+[sc] arrow down
+[def] Move to the next row in table.
+
+[sc] arrow up
+[def] Move to the preceding row in table.
+
+[sc] ctrl+tab
+[def] Insert a tab in a cell in table.
+
+[sc] enter
+[def] Start a new paragraph in table.
+
+[sc] ctrl+shift+f
+[def] Open the Font dialog box to change the font.
+
+[sc] ctrl+shift+p
+[def] Open the Font dialog box to change the font size.
+
+[sc] ctrl+shift+;
+[def] Increase the font size.
+
+[sc] ctrl+shift+;
+[def] Decrease the font size.
+
+[sc] ctrl+t
+[def] Open the Font dialog box to change the formatting of characters.
+
+[sc] shift+f3
+[def] Change the case of letters between sentence, lowercase, or uppercase.
+
+[sc] ctrl+b
+[def] Apply bold formatting.
+
+[sc] ctrl+u
+[def] Apply an underline.
+
+[sc] ctrl+i
+[def] Apply italic formatting.
+
+[sc] ctrl+=
+[def] Apply subscript formatting (automatic spacing).
+
+[sc] ctrl+shift++
+[def] Apply superscript formatting (automatic spacing).
+
+[sc] ctrl+spacebar
+[def] Remove manual character formatting, such as subscript and superscript.
+
+[sc] ctrl+k
+[def] Insert a hyperlink.
+
+[sc] ctrl+shift+c
+[def] Copy formats.
+
+[sc] ctrl+shift+v
+[def] Paste formats.
+
+[sc] ctrl+e
+[def] Center a paragraph.
+
+[sc] ctrl+j
+[def] Justify a paragraph.
+
+[sc] ctrl+r
+[def] Right align a paragraph.
+
+[sc] alt+1
+[def] Go to the previous folder.
+
+[sc] alt+2
+[def] Up One Level button: Open the folder up one level above the open folder.
+
+[sc] alt+3 or delete
+[def] Delete button: Delete the selected folder or file.
+
+[sc] alt+4
+[def] Create New Folder button: Create a new folder.
+
+[sc] alt+5
+[def] Views button: Switch among available folder views.
+
+[sc] shift+f10
+[def] Display a shortcut menu for a selected item, such as a folder or file.
+
+[sc] tab
+[def] Move between options or areas in the dialog box.
+
+[sc] f4 or alt+i
+[def] Open the Look in list.
+
+[sc] f5
+[def] Refresh the file list.
+
+[sc] f6
+[def] Move a task pane from another pane in the program window (clockwise direction). You may need to press F6 more than once
+
+[sc] tab, shift+tab
+[def] When a task pane is active, select the next or previous option in the task pane, respectively.
+
+[sc] ctrl+arrow down
+[def] Display the full set of commands on the task pane menu.
+
+[sc] arrow down or arrow up
+[def] Move among choices on a selected submenu; move among certain options in a group of options in a dialog box.
+
+[sc] spacebar or enter
+[def] Open the selected menu, or perform the action assigned to the selected button.
+
+[sc] shift+f10
+[def] Open a shortcut menu; open a drop-down menu for the selected gallery item.
+
+[sc] home, end
+[def] When a menu or submenu is visible, select the first or last command, respectively, on the menu or submenu.
+
+[sc] page up, page down
+[def] Scroll up or down in the selected gallery list, respectively.
+
+[sc] home, end
+[def] Move to the top or bottom of the selected gallery list, respectively.
+
+[sc] ctrl+spacebar, c
+[def] Close a task pane.
+
+[sc] alt+h, f, o
+[def] Open the Clipboard.
+
+[sc] tab
+[def] Move to the next cell.
+
+[sc] shift+tab
+[def] Move to the preceding cell.
+
+[sc] arrow down
+[def] Move to the next row.
+
+[sc] arrow up
+[def] Move to the preceding row.
+
+[sc] ctrl+tab
+[def] Insert a tab in a cell.
+
+[sc] enter
+[def] Start a new paragraph.
+
+[sc] alt+shift+f10
+[def] Display the menu or message for a smart tag. If more than one smart tag is present, switch to the next smart tag and display its menu or message.
+
+[sc] arrow down
+[def] Select the next item on a smart tag menu.
+
+[sc] arrow up
+[def] Select the previous item on a smart tag menu.
+
+[sc] enter
+[def] Perform the action for the selected item on a smart tag menu.
+
+[sc] esc
+[def] Close the smart tag menu or message.
+
+[sc] alt+tab
+[def] Switch to the next window.
+
+[sc] alt+shift+tab
+[def] Switch to the previous window.
+
+[sc] ctrl+w or ctrl+f4
+[def] Close the active window.
+
+[sc] ctrl+f5
+[def] Restore the size of the active window after you maximize it.
+
+[sc] f6
+[def] Move a task pane from another pane in the program window (clockwise direction). You may need to press F6 more than once
+
+[sc] shift+f6
+[def] Move to a pane from another pane in the program window (counterclockwise direction).
+
+[sc] ctrl+f6
+[def] When more than one window is open, switch to the next window.
+
+[sc] ctrl+shift+f6
+[def] Switch to the previous window.
+
+[sc] ctrl+f7
+[def] When a document window is not maximized, perform the Move command (on the Control menu for the window). Use the arrow keys to move the window and when finished, press ESC.
+
+[sc] ctrl+f8
+[def] When a document window is not maximized, perform the Size command (on the Control menu for the window). Press the arrow keys to resize the window and when finished, press ESC.
+
+[sc] ctrl+f9
+[def] Minimize a window to an icon (works for only some Microsoft Office programs).
+
+[sc] ctrl+f10
+[def] Maximize or restore a selected window.
+
+[sc] print screen
+[def] Copy a picture of the screen to the Clipboard.
+
+[sc] alt+print screen
+[def] Copy a picture of the selected window to the Clipboard.
+
+[sc] tab
+[def] Move to the next option or option group.
+
+[sc] shift+tab
+[def] Move to the previous option or option group.
+
+[sc] ctrl+tab
+[def] Switch to the next tab in a dialog box.
+
+[sc] ctrl+shift+tab
+[def] Switch to the previous tab in a dialog box.
+
+[sc] alt+arrow down
+[def] Open a selected drop-down list.
+
+[sc] arrow keys
+[def] Move between options in an open drop-down list, or between options in a group of options.
+
+[sc] esc
+[def] Close a selected drop-down list; cancel a command and close a dialog box.
+
+[sc] spacebar
+[def] Perform the action assigned to the selected button; select or clear the selected check box.
+
+[sc] enter
+[def] Perform the action assigned to a default button in a dialog box.
+
+[sc] home
+[def] Move to the beginning of the entry.
+
+[sc] end
+[def] Move to the end of the entry.
+
+[sc] arrow left, arrow right
+[def] Move one character to the left or right, respectively.
+
+[sc] ctrl+arrow left
+[def] Move one word to the left.
+
+[sc] ctrl+arrow right
+[def] Move one word to the right.
+
+[sc] shift+arrow left
+[def] Select or cancel selection one character to the left.
+
+[sc] shift+arrow right
+[def] Select or cancel selection one character to the right.
+
+[sc] ctrl+shift+arrow left
+[def] Select or cancel selection one word to the left.
+
+[sc] ctrl+shift+arrow right
+[def] Select or cancel selection one word to the right.
+
+[sc] shift+home
+[def] Select from the cursor to the beginning of the entry.
+
+[sc] shift+end
+[def] Select from the cursor to the end of the entry.
+
+[sc] f6
+[def] Cycle the focus through the different panes.
+
+[sc] shift+f10
+[def] Display the context menu.
+
+[sc] arrow up or arrow down
+[def] Move the focus to a single item or group.
+
+[sc] arrow left
+[def] Move the focus from an item in a group to its parent group.
+
+[sc] arrow right
+[def] Move the focus from a group to the first item in that group.
+
+[sc] shift+arrow up or shift+arrow down
+[def] Move the focus to an item and select it.
+
+[sc] spacebar or enter
+[def] Select a focused item.
+
+[sc] shift+spacebar or shift+enter
+[def] Cancel selection of a focused item.
+
+[sc] ctrl+shift+f
+[def] Move a selected item forward.
+
+[sc] ctrl+shift+b
+[def] Move a selected item backward.
+
+[sc] ctrl+shift+s
+[def] Show or hide a focused item.
+
+[sc] f2
+[def] Rename a focused item.
+
+[sc] tab or shift+tab
+[def] Switch the keyboard focus within the Selection pane between tree view and the Show All and Hide All buttons.
+
+[sc] alt+shift+1
+[def] Collapse all groups.
+
+[sc] alt+shift+9
+[def] Expand all groups.
+
+[sc] alt + 1
+[def] Align objects left.
+
+[sc] alt + 2
+[def] Align objects center.
+
+[sc] alt + 3
+[def] Align objects right.
+
+[sc] ctrl + shift + 3
+[def] Align left edge to right edge.
+
+[sc] alt + R
+[def] Duplicate object to the right.
+
+[sc] alt + T
+[def] Insert textbox.
+
+[sc] alt + N
+[def] Insert rectangle.
+
+[sc] alt + B
+[def] Make objects same width / equalize width.
+
+[sc] alt + H
+[def] Make objects same height / equalize height.
+
+[sc] ctrl + 3
+[def] Resize/stretch object width to right edge.
+
+[sc] alt + F
+[def] Select format painter.
+
+[sc] F1
+[def] Zoom in object.
+

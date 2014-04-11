@@ -1,229 +1,687 @@
-ADDUSERS ; Add or list users to/from a CSV file
-ADmodcmd ; Active Directory Bulk Modify
-ARP ; Address Resolution Protocol
-ASSOC ; Change file extension associations•
-ASSOCIAT ; One step file association
-AT ; Schedule a command to run at a specific time
-ATTRIB ; Change file attributes
-BCDBOOT ; Create or repair a system partition
-BCDEDIT ; Manage Boot Configuration Data
-BITSADMIN ; Background Intelligent Transfer Service
-BOOTCFG ; Edit Windows boot settings
-BROWSTAT ; Get domain, browser and PDC info
-CACLS ; Change file permissions
-CALL ; Call one batch program from another•
-CERTREQ ; Request certificate from a certification authority
-CERTUTIL ; Utility for certification authority (CA) files and services
-CD ; Change Directory - move to a specific Folder•
-CHANGE ; Change Terminal Server Session properties
-CHKDSK ; Check Disk - check and repair disk problems
-CHKNTFS ; Check the NTFS file system
-CHOICE ; Accept keyboard input to a batch file
-CIPHER ; Encrypt or Decrypt files/folders
-CleanMgr ; Automated cleanup of Temp files, recycle bin
-CLEARMEM ; Clear memory leaks
-CLIP ; Copy STDIN to the Windows clipboard
-CLS      ; Clear the screen•
-CLUSTER  ; Windows Clustering
-CMD ; Start a new CMD shell
-CMDKEY ; Manage stored usernames/passwords
-COLOR ; Change colors of the CMD window•
-COMP ; Compare the contents of two files or sets of files
-COMPACT ; Compress files or folders on an NTFS partition
-COMPRESS ; Compress one or more files
-CON2PRT ; Connect or disconnect a Printer
-CONVERT ; Convert a FAT drive to NTFS
-COPY ; Copy one or more files to another location•
-CSCcmd ; Client-side caching (Offline Files)
-CSVDE ; Import or Export Active Directory data
-DATE ; Display or set the date•
-DEFRAG ; Defragment hard drive
-DEL ; Delete one or more files•
-DELPROF ; Delete user profiles
-DELTREE ; Delete a folder and all subfolders
-DevCon ; Device Manager Command Line Utility
-DIR ; Display a list of files and folders•
-DIRUSE ; Display disk usage
-DISKPART ; Disk Administration
-DISKSHADOW ; Volume Shadow Copy Service
-DNSSTAT  ; DNS Statistics
-DOSKEY ; Edit command line, recall commands, and create macros
-DriverQuery ; Display installed device drivers
-DSACLs ; Active Directory ACLs
-DSAdd ;    Add items to active directory
-DSGet ;    View items in active directory
-DSQuery  ; Search for items in active directory
-DSMod    ; Modify items in active directory
-DSMove ; Move an Active directory Object
-DSRM ; Remove items from Active Directory
-ECHO ; Display message on screen•
-ENDLOCAL ; End localisation of environment changes in a batch file•
-ERASE ; Delete one or more files•
-EVENTCREATE ; Add a message to the Windows event log
-EXIT ; Quit the current script/routine and set an errorlevel•
-EXPAND ; Uncompress CAB files
-EXTRACT ; Uncompress CAB files
-FC ; Compare two files
-FIND ; Search for a text string in a file
-FINDSTR ; Search for strings in files
-FOR /F ; Loop command: against a set of files•
-FOR /F ; Loop command: against the results of another command•
-FOR ; Loop command: all options Files, Directory, List•
-FORFILES ; Batch process multiple files
-FORMAT ; Format a disk
-FREEDISK ; Check free disk space (in bytes)
-FSUTIL ; File and Volume utilities
-FTP ; File Transfer Protocol
-FTYPE ; File extension file type associations•
-GETMAC ; Display the Media Access Control (MAC) address
-GLOBAL ; Display membership of global groups
-GOTO ; Direct a batch program to jump to a labelled line•
-GPRESULT ; Display Resultant Set of Policy information
-GPUPDATE ; Update Group Policy settings
-HELP ; Online Help
-HOSTNAME ; Display the host name of the computer
-iCACLS ; Change file and folder permissions
-IF ; Conditionally perform a command•
-IFMEMBER ; Is the current user a member of a Workgroup
-IPCONFIG ; Configure IP
-KILL ; Remove a program from memory
-LABEL ; Edit a disk label
-LOCAL ; Display membership of local groups
-LOGEVENT ; Write text to the event viewer
-LOGMAN ; Manage Performance Monitor
-LOGOFF ; Log a user off
-LOGTIME ; Log the date and time in a file
-MAKECAB ; Create .CAB files
-MAPISEND ; Send email from the command line
-MBSAcli ; Baseline Security Analyzer
-MEM ; Display memory usage
-MD ; Create new folders•
-MKLINK ; Create a symbolic link (linkd) •
-MODE ; Configure a system device
-MORE ; Display output, one screen at a time
-MOUNTVOL ; Manage a volume mount point
-MOVE ; Move files from one folder to another•
-MOVEUSER ; Move a user from one domain to another
-MSG ; Send a message
-MSIEXEC ; Microsoft Windows Installer
-MSINFO32 ; System Information
-MSTSC ; Terminal Server Connection (Remote Desktop Protocol)
-MV ; Copy in-use files
-NET ; Manage network resources
-NETDOM ; Domain Manager
-NETSH ; Configure Network Interfaces, Windows Firewall &amp; Remote access
-NETSVC ; Command-line Service Controller
-NBTSTAT ; Display networking statistics (NetBIOS over TCP/IP)
-NETSTAT ; Display networking statistics (TCP/IP)
-NOW ; Display the current Date and Time
-NSLOOKUP ; Name server lookup
-NTBACKUP ; Backup folders to tape
-NTDSUtil ; Active Directory Domain Services management
-NTRIGHTS ; Edit user account rights
-OPENFILES ; Query or display open files
-PATH ; Display or set a search path for executable files•
-PATHPING ; Trace route plus network latency and packet loss
-PAUSE ; Suspend processing of a batch file and display a message•
-PERMS ; Show permissions for a user
-PERFMON ; Performance Monitor
-PING ; Test a network connection
-POPD ; Return to a previous directory saved by PUSHD•
-PORTQRY ; Display the status of ports and services
-POWERCFG ; Configure power settings
-PRINT ; Print a text file
-PRINTBRM ; Print queue Backup/Recovery
-PRNCNFG ; Display, configure or rename a printer
-PRNMNGR ; Add, delete, list printers set the default printer
-PROMPT ; Change the command prompt•
-PsExec ; Execute process remotely
-PsFile ; Show files opened remotely
-PsGetSid ; Display the SID of a computer or a user
-PsInfo ; List information about a system
-PsKill ; Kill processes by name or process ID
-PsList ; List detailed information about processes
-PsLoggedOn ; Who's logged on (locally or via resource sharing)
-PsLogList ; Event log records
-PsPasswd ; Change account password
-PsPing ; Measure network performance
-PsService ; View and control services
-PsShutdown ; Shutdown or reboot a computer
-PsSuspend ; Suspend processes
-PUSHD ; Save and then change the current directory•
-QGREP ; Search file(s) for lines that match a given pattern
-Query Process ; Display processes (TS/Remote Desktop)
-Query Session ; Display all sessions (TS/Remote Desktop)
-Query TermServer ; List all servers (TS/Remote Desktop)
-Query User ; Display user sessions (TS/Remote Desktop)
-RASDIAL ; Manage RAS connections
-RASPHONE ; Manage RAS connections
-RECOVER ; Recover a damaged file from a defective disk
-REG ; Registry: Read, Set, Export, Delete keys and values
-REGEDIT ; Import or export registry settings
-REGSVR32 ; Register or unregister a DLL
-REGINI ; Change Registry Permissions
-REM ; Record comments (remarks) in a batch file•
-REN ; Rename a file or files•
-REPLACE ; Replace or update one file with another
-Reset Session ; Delete a Remote Desktop Session
-RD ; Delete folder(s)•
-RMTSHARE ; Share a folder or a printer
-ROBOCOPY ; Robust File and Folder Copy
-ROUTE ; Manipulate network routing tables
-RUN ; Start | RUN commands
-RUNAS ; Execute a program under a different user account
-RUNDLL32 ; Run a DLL command (add/remove print connections)
-SC ; Service Control
-SCHTASKS ; Schedule a command to run at a specific time
-SCLIST ; Display Services
-SET ; Display, set, or remove session environment variables•
-SETLOCAL ; Control the visibility of environment variables•
-SETX ; Set environment variables
-SFC ; System File Checker
-SHARE ; List or edit a file share or print share
-ShellRunAs ; Run a command under a different user account
-SHIFT ; Shift the position of batch file parameters•
-SHORTCUT ; Create a windows shortcut (.LNK file)
-SHOWGRPS ; List the Workgroups a user has joined
-SHOWMBRS ; List the Users who are members of a Workgroup
-SHUTDOWN ; Shutdown the computer
-SLEEP ; Wait for x seconds
-SLMGR ; Software Licensing Management (Vista/2008)
-SOON ; Schedule a command to run in the near future
-SORT ; Sort input
-START ; Start a program, command or batch file•
-SU ; Switch User
-SUBINACL ; Edit file and folder Permissions, Ownership and Domain
-SUBST ; Associate a path with a drive letter
-SYSTEMINFO ; List system configuration
-TAKEOWN ; Take ownership of a file
-TASKLIST ; List running applications and services
-TASKKILL ; Remove a running process from memory
-TELNET ; Communicate with another host using the TELNET protocol
-TIME ; Display or set the system time•
-TIMEOUT ; Delay processing of a batch file
-TITLE ; Set the window title for a CMD.EXE session•
-TLIST ; Task list with full path
-TOUCH ; Change file timestamps
-TRACERT ; Trace route to a remote host
-TREE     ; Graphical display of folder structure
-TSDISCON ; Disconnect a Remote Desktop Session
-TSSHUTDN ; Remotely shut down or reboot a terminal server
-TYPE ; Display the contents of a text file•
-TypePerf ; Write performance data to a log file
-USRSTAT  ; List domain usernames and last login
-VER ; Display version information•
-VERIFY ; Verify that files have been saved•
-VOL ; Display a disk label•
-WAITFOR ; Wait for or send a signal
-WEVTUTIL ; Clear event logs, enable/disable/query logs
-WHERE ; Locate and display files in a directory tree
-WHOAMI ; Output the current UserName and domain
-WINDIFF ; Compare the contents of two files or sets of files
-WINMSDP ; Windows system report
-WINRM ; Windows Remote Management
-WINRS ; Windows Remote Shell
-WMIC ; WMI Commands
-WUAUCLT ; Windows Update
-XCACLS ; Change file and folder permissions
-XCOPY ; Copy files and folders
-:: ; Comment / Remark•
+[sc] ADDUSERS
+[def] Add or list users to/from a CSV file
+
+[sc] ADmodcmd
+[def] Active Directory Bulk Modify
+
+[sc] ARP
+[def] Address Resolution Protocol
+
+[sc] ASSOC
+[def] Change file extension associations•
+
+[sc] ASSOCIAT
+[def] One step file association
+
+[sc] AT
+[def] Schedule a command to run at a specific time
+
+[sc] ATTRIB
+[def] Change file attributes
+
+[sc] BCDBOOT
+[def] Create or repair a system partition
+
+[sc] BCDEDIT
+[def] Manage Boot Configuration Data
+
+[sc] BITSADMIN
+[def] Background Intelligent Transfer Service
+
+[sc] BOOTCFG
+[def] Edit Windows boot settings
+
+[sc] BROWSTAT
+[def] Get domain, browser and PDC info
+
+[sc] CACLS
+[def] Change file permissions
+
+[sc] CALL
+[def] Call one batch program from another•
+
+[sc] CERTREQ
+[def] Request certificate from a certification authority
+
+[sc] CERTUTIL
+[def] Utility for certification authority (CA) files and services
+
+[sc] CD
+[def] Change Directory - move to a specific Folder•
+
+[sc] CHANGE
+[def] Change Terminal Server Session properties
+
+[sc] CHKDSK
+[def] Check Disk - check and repair disk problems
+
+[sc] CHKNTFS
+[def] Check the NTFS file system
+
+[sc] CHOICE
+[def] Accept keyboard input to a batch file
+
+[sc] CIPHER
+[def] Encrypt or Decrypt files/folders
+
+[sc] CleanMgr
+[def] Automated cleanup of Temp files, recycle bin
+
+[sc] CLEARMEM
+[def] Clear memory leaks
+
+[sc] CLIP
+[def] Copy STDIN to the Windows clipboard
+
+[sc] CLS
+[def] Clear the screen•
+
+[sc] CLUSTER
+[def] Windows Clustering
+
+[sc] CMD
+[def] Start a new CMD shell
+
+[sc] CMDKEY
+[def] Manage stored usernames/passwords
+
+[sc] COLOR
+[def] Change colors of the CMD window•
+
+[sc] COMP
+[def] Compare the contents of two files or sets of files
+
+[sc] COMPACT
+[def] Compress files or folders on an NTFS partition
+
+[sc] COMPRESS
+[def] Compress one or more files
+
+[sc] CON2PRT
+[def] Connect or disconnect a Printer
+
+[sc] CONVERT
+[def] Convert a FAT drive to NTFS
+
+[sc] COPY
+[def] Copy one or more files to another location•
+
+[sc] CSCcmd
+[def] Client-side caching (Offline Files)
+
+[sc] CSVDE
+[def] Import or Export Active Directory data
+
+[sc] DATE
+[def] Display or set the date•
+
+[sc] DEFRAG
+[def] Defragment hard drive
+
+[sc] DEL
+[def] Delete one or more files•
+
+[sc] DELPROF
+[def] Delete user profiles
+
+[sc] DELTREE
+[def] Delete a folder and all subfolders
+
+[sc] DevCon
+[def] Device Manager Command Line Utility
+
+[sc] DIR
+[def] Display a list of files and folders•
+
+[sc] DIRUSE
+[def] Display disk usage
+
+[sc] DISKPART
+[def] Disk Administration
+
+[sc] DISKSHADOW
+[def] Volume Shadow Copy Service
+
+[sc] DNSSTAT
+[def] DNS Statistics
+
+[sc] DOSKEY
+[def] Edit command line, recall commands, and create macros
+
+[sc] DriverQuery
+[def] Display installed device drivers
+
+[sc] DSACLs
+[def] Active Directory ACLs
+
+[sc] DSAdd
+[def]    Add items to active directory
+
+[sc] DSGet
+[def]    View items in active directory
+
+[sc] DSQuery
+[def] Search for items in active directory
+
+[sc] DSMod
+[def] Modify items in active directory
+
+[sc] DSMove
+[def] Move an Active directory Object
+
+[sc] DSRM
+[def] Remove items from Active Directory
+
+[sc] ECHO
+[def] Display message on screen•
+
+[sc] ENDLOCAL
+[def] End localisation of environment changes in a batch file•
+
+[sc] ERASE
+[def] Delete one or more files•
+
+[sc] EVENTCREATE
+[def] Add a message to the Windows event log
+
+[sc] EXIT
+[def] Quit the current script/routine and set an errorlevel•
+
+[sc] EXPAND
+[def] Uncompress CAB files
+
+[sc] EXTRACT
+[def] Uncompress CAB files
+
+[sc] FC
+[def] Compare two files
+
+[sc] FIND
+[def] Search for a text string in a file
+
+[sc] FINDSTR
+[def] Search for strings in files
+
+[sc] FOR /F
+[def] Loop command: against a set of files•
+
+[sc] FOR /F
+[def] Loop command: against the results of another command•
+
+[sc] FOR
+[def] Loop command: all options Files, Directory, List•
+
+[sc] FORFILES
+[def] Batch process multiple files
+
+[sc] FORMAT
+[def] Format a disk
+
+[sc] FREEDISK
+[def] Check free disk space (in bytes)
+
+[sc] FSUTIL
+[def] File and Volume utilities
+
+[sc] FTP
+[def] File Transfer Protocol
+
+[sc] FTYPE
+[def] File extension file type associations•
+
+[sc] GETMAC
+[def] Display the Media Access Control (MAC) address
+
+[sc] GLOBAL
+[def] Display membership of global groups
+
+[sc] GOTO
+[def] Direct a batch program to jump to a labelled line•
+
+[sc] GPRESULT
+[def] Display Resultant Set of Policy information
+
+[sc] GPUPDATE
+[def] Update Group Policy settings
+
+[sc] HELP
+[def] Online Help
+
+[sc] HOSTNAME
+[def] Display the host name of the computer
+
+[sc] iCACLS
+[def] Change file and folder permissions
+
+[sc] IF
+[def] Conditionally perform a command•
+
+[sc] IFMEMBER
+[def] Is the current user a member of a Workgroup
+
+[sc] IPCONFIG
+[def] Configure IP
+
+[sc] KILL
+[def] Remove a program from memory
+
+[sc] LABEL
+[def] Edit a disk label
+
+[sc] LOCAL
+[def] Display membership of local groups
+
+[sc] LOGEVENT
+[def] Write text to the event viewer
+
+[sc] LOGMAN
+[def] Manage Performance Monitor
+
+[sc] LOGOFF
+[def] Log a user off
+
+[sc] LOGTIME
+[def] Log the date and time in a file
+
+[sc] MAKECAB
+[def] Create .CAB files
+
+[sc] MAPISEND
+[def] Send email from the command line
+
+[sc] MBSAcli
+[def] Baseline Security Analyzer
+
+[sc] MEM
+[def] Display memory usage
+
+[sc] MD
+[def] Create new folders•
+
+[sc] MKLINK
+[def] Create a symbolic link (linkd) •
+
+[sc] MODE
+[def] Configure a system device
+
+[sc] MORE
+[def] Display output, one screen at a time
+
+[sc] MOUNTVOL
+[def] Manage a volume mount point
+
+[sc] MOVE
+[def] Move files from one folder to another•
+
+[sc] MOVEUSER
+[def] Move a user from one domain to another
+
+[sc] MSG
+[def] Send a message
+
+[sc] MSIEXEC
+[def] Microsoft Windows Installer
+
+[sc] MSINFO32
+[def] System Information
+
+[sc] MSTSC
+[def] Terminal Server Connection (Remote Desktop Protocol)
+
+[sc] MV
+[def] Copy in-use files
+
+[sc] NET
+[def] Manage network resources
+
+[sc] NETDOM
+[def] Domain Manager
+
+[sc] NETSH ; Configure Network Interfaces, Windows Firewall &amp
+[def] Remote access
+
+[sc] NETSVC
+[def] Command-line Service Controller
+
+[sc] NBTSTAT
+[def] Display networking statistics (NetBIOS over TCP/IP)
+
+[sc] NETSTAT
+[def] Display networking statistics (TCP/IP)
+
+[sc] NOW
+[def] Display the current Date and Time
+
+[sc] NSLOOKUP
+[def] Name server lookup
+
+[sc] NTBACKUP
+[def] Backup folders to tape
+
+[sc] NTDSUtil
+[def] Active Directory Domain Services management
+
+[sc] NTRIGHTS
+[def] Edit user account rights
+
+[sc] OPENFILES
+[def] Query or display open files
+
+[sc] PATH
+[def] Display or set a search path for executable files•
+
+[sc] PATHPING
+[def] Trace route plus network latency and packet loss
+
+[sc] PAUSE
+[def] Suspend processing of a batch file and display a message•
+
+[sc] PERMS
+[def] Show permissions for a user
+
+[sc] PERFMON
+[def] Performance Monitor
+
+[sc] PING
+[def] Test a network connection
+
+[sc] POPD
+[def] Return to a previous directory saved by PUSHD•
+
+[sc] PORTQRY
+[def] Display the status of ports and services
+
+[sc] POWERCFG
+[def] Configure power settings
+
+[sc] PRINT
+[def] Print a text file
+
+[sc] PRINTBRM
+[def] Print queue Backup/Recovery
+
+[sc] PRNCNFG
+[def] Display, configure or rename a printer
+
+[sc] PRNMNGR
+[def] Add, delete, list printers set the default printer
+
+[sc] PROMPT
+[def] Change the command prompt•
+
+[sc] PsExec
+[def] Execute process remotely
+
+[sc] PsFile
+[def] Show files opened remotely
+
+[sc] PsGetSid
+[def] Display the SID of a computer or a user
+
+[sc] PsInfo
+[def] List information about a system
+
+[sc] PsKill
+[def] Kill processes by name or process ID
+
+[sc] PsList
+[def] List detailed information about processes
+
+[sc] PsLoggedOn
+[def] Who's logged on (locally or via resource sharing)
+
+[sc] PsLogList
+[def] Event log records
+
+[sc] PsPasswd
+[def] Change account password
+
+[sc] PsPing
+[def] Measure network performance
+
+[sc] PsService
+[def] View and control services
+
+[sc] PsShutdown
+[def] Shutdown or reboot a computer
+
+[sc] PsSuspend
+[def] Suspend processes
+
+[sc] PUSHD
+[def] Save and then change the current directory•
+
+[sc] QGREP
+[def] Search file(s) for lines that match a given pattern
+
+[sc] Query Process
+[def] Display processes (TS/Remote Desktop)
+
+[sc] Query Session
+[def] Display all sessions (TS/Remote Desktop)
+
+[sc] Query TermServer
+[def] List all servers (TS/Remote Desktop)
+
+[sc] Query User
+[def] Display user sessions (TS/Remote Desktop)
+
+[sc] RASDIAL
+[def] Manage RAS connections
+
+[sc] RASPHONE
+[def] Manage RAS connections
+
+[sc] RECOVER
+[def] Recover a damaged file from a defective disk
+
+[sc] REG
+[def] Registry: Read, Set, Export, Delete keys and values
+
+[sc] REGEDIT
+[def] Import or export registry settings
+
+[sc] REGSVR32
+[def] Register or unregister a DLL
+
+[sc] REGINI
+[def] Change Registry Permissions
+
+[sc] REM
+[def] Record comments (remarks) in a batch file•
+
+[sc] REN
+[def] Rename a file or files•
+
+[sc] REPLACE
+[def] Replace or update one file with another
+
+[sc] Reset Session
+[def] Delete a Remote Desktop Session
+
+[sc] RD
+[def] Delete folder(s)•
+
+[sc] RMTSHARE
+[def] Share a folder or a printer
+
+[sc] ROBOCOPY
+[def] Robust File and Folder Copy
+
+[sc] ROUTE
+[def] Manipulate network routing tables
+
+[sc] RUN
+[def] Start | RUN commands
+
+[sc] RUNAS
+[def] Execute a program under a different user account
+
+[sc] RUNDLL32
+[def] Run a DLL command (add/remove print connections)
+
+[sc] SC
+[def] Service Control
+
+[sc] SCHTASKS
+[def] Schedule a command to run at a specific time
+
+[sc] SCLIST
+[def] Display Services
+
+[sc] SET
+[def] Display, set, or remove session environment variables•
+
+[sc] SETLOCAL
+[def] Control the visibility of environment variables•
+
+[sc] SETX
+[def] Set environment variables
+
+[sc] SFC
+[def] System File Checker
+
+[sc] SHARE
+[def] List or edit a file share or print share
+
+[sc] ShellRunAs
+[def] Run a command under a different user account
+
+[sc] SHIFT
+[def] Shift the position of batch file parameters•
+
+[sc] SHORTCUT
+[def] Create a windows shortcut (.LNK file)
+
+[sc] SHOWGRPS
+[def] List the Workgroups a user has joined
+
+[sc] SHOWMBRS
+[def] List the Users who are members of a Workgroup
+
+[sc] SHUTDOWN
+[def] Shutdown the computer
+
+[sc] SLEEP
+[def] Wait for x seconds
+
+[sc] SLMGR
+[def] Software Licensing Management (Vista/2008)
+
+[sc] SOON
+[def] Schedule a command to run in the near future
+
+[sc] SORT
+[def] Sort input
+
+[sc] START
+[def] Start a program, command or batch file•
+
+[sc] SU
+[def] Switch User
+
+[sc] SUBINACL
+[def] Edit file and folder Permissions, Ownership and Domain
+
+[sc] SUBST
+[def] Associate a path with a drive letter
+
+[sc] SYSTEMINFO
+[def] List system configuration
+
+[sc] TAKEOWN
+[def] Take ownership of a file
+
+[sc] TASKLIST
+[def] List running applications and services
+
+[sc] TASKKILL
+[def] Remove a running process from memory
+
+[sc] TELNET
+[def] Communicate with another host using the TELNET protocol
+
+[sc] TIME
+[def] Display or set the system time•
+
+[sc] TIMEOUT
+[def] Delay processing of a batch file
+
+[sc] TITLE
+[def] Set the window title for a CMD.EXE session•
+
+[sc] TLIST
+[def] Task list with full path
+
+[sc] TOUCH
+[def] Change file timestamps
+
+[sc] TRACERT
+[def] Trace route to a remote host
+
+[sc] TREE
+[def] Graphical display of folder structure
+
+[sc] TSDISCON
+[def] Disconnect a Remote Desktop Session
+
+[sc] TSSHUTDN
+[def] Remotely shut down or reboot a terminal server
+
+[sc] TYPE
+[def] Display the contents of a text file•
+
+[sc] TypePerf
+[def] Write performance data to a log file
+
+[sc] USRSTAT
+[def] List domain usernames and last login
+
+[sc] VER
+[def] Display version information•
+
+[sc] VERIFY
+[def] Verify that files have been saved•
+
+[sc] VOL
+[def] Display a disk label•
+
+[sc] WAITFOR
+[def] Wait for or send a signal
+
+[sc] WEVTUTIL
+[def] Clear event logs, enable/disable/query logs
+
+[sc] WHERE
+[def] Locate and display files in a directory tree
+
+[sc] WHOAMI
+[def] Output the current UserName and domain
+
+[sc] WINDIFF
+[def] Compare the contents of two files or sets of files
+
+[sc] WINMSDP
+[def] Windows system report
+
+[sc] WINRM
+[def] Windows Remote Management
+
+[sc] WINRS
+[def] Windows Remote Shell
+
+[sc] WMIC
+[def] WMI Commands
+
+[sc] WUAUCLT
+[def] Windows Update
+
+[sc] XCACLS
+[def] Change file and folder permissions
+
+[sc] XCOPY
+[def] Copy files and folders
+
+[sc] ::
+[def] Comment / Remark•
+
