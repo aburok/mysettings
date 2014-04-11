@@ -45,6 +45,15 @@ GetHelpFilePath(){
             return "shortcuts\visualstudio.help"
         }
     }
+
+    if (RegExMatch(windowClass, "Chrome.*") > 0 ){
+        return "shortcuts\Chrome.help"
+    }
+
+    if (windowClass == "TTOTAL_CMD") {
+        return "shortcuts\totalcmd.help"
+    }
+
     return
 }
 
