@@ -1,19 +1,19 @@
-[sc] Ctrl + n
+[sc] Ctrl + N
 [def] Create new document
 
-[sc] Ctrl + o
+[sc] Ctrl + O
 [def] Open document
 
-[sc] Ctrl + w
+[sc] Ctrl + W
 [def] Close document
 
-[sc] Ctrl + s
+[sc] Ctrl + S
 [def] Save document
 
 [sc] F12
 [def] Save document as
 
-[sc] Ctrl + p
+[sc] Ctrl + P
 [def] Print document/ print preview
 
 [sc] Ctrl + F6
@@ -55,10 +55,10 @@
 [sc] F6
 [def] Cycle through Ribbon/open panes/Status Bar/document window
 
-[sc] Ctrl + g or f5
+[sc] Ctrl + G or f5
 [def] Go to a page, bookmark, footnote, table, comment, graphic, or other location
 
-[sc] Alt + Ctrl + z
+[sc] Alt + Ctrl + Z
 [def] Go back to previously edited location in document (up to 4 places)
 
 [sc] Shift + F5
@@ -86,7 +86,7 @@
 [sc] Ctrl + Shift + Tab
 [def] Cycle backwards through available pages
 
-[sc] Alt + underlined letter
+[sc] Alt + Underlined letter
 [def] Selects the option indicated by the letter up
 
 [sc] Shift + Arrow Right
@@ -122,7 +122,7 @@
 [def] Extend selection to end / to beginning of visible window
 
 
-[sc] Ctrl + a
+[sc] Ctrl + A
 [def] Extend selection to entire document
 
 
@@ -147,7 +147,7 @@
 [def] Reduce the size of a selection in Extended Mode
 
 
-[sc] Ctrl + Shift + f8, and arrow keys
+[sc] Ctrl + Shift + F8, and arrow keys
 [def] Select a vertical block of text in Extended Mode
 
 
@@ -159,44 +159,44 @@
 [def] Extend a selection to a specific location in a document
 
 
-[sc] Ctrl + z
+[sc] Ctrl + Z
 [def] Undo the last action
 
 
 
-[sc] Ctrl + y
+[sc] Ctrl + Y
 [def] Redo the last action
 
 
-[sc] Ctrl + c
+[sc] Ctrl + C
 [def] Copy selected text or object
 
 
-[sc] Ctrl + x
+[sc] Ctrl + X
 [def] Cut selected text or object
 
 
-[sc] Ctrl + v
+[sc] Ctrl + V
 [def] Paste selected text or object
 
 
-[sc] Ctrl + Shift + c
+[sc] Ctrl + Shift + C
 [def] Copy text format
 
 
-[sc] Ctrl + Shift + v
+[sc] Ctrl + Shift + V
 [def] Paste text format
 
 
-[sc] Ctrl + Alt + v
+[sc] Ctrl + Alt + V
 [def] Paste special
 
 
-[sc] Ctrl + v, then Ctrl, then k
+[sc] Ctrl + V, then Ctrl, then k
 [def] Paste and keep Source Formatting
 
 
-[sc] Ctrl + v, then Ctrl, then t
+[sc] Ctrl + V, then Ctrl, then t
 [def] Paste and keep Text only
 
 
@@ -212,19 +212,19 @@
 [def] Paste AutoText ( after start typing)
 
 
-[sc] Alt + Shift + r
+[sc] Alt + Shift + R
 [def] Copy the header or footer from previous section of the document
 
 
-[sc] Alt + Ctrl + c
+[sc] Alt + Ctrl + C
 [def] Insert copyright symbol
 
 
-[sc] Alt + Ctrl + r
+[sc] Alt + Ctrl + R
 [def] Insert registered trademark symbol
 
 
-[sc] Alt + Ctrl + t
+[sc] Alt + Ctrl + T
 [def] Insert trademark symbol
 
 
@@ -252,15 +252,15 @@
 [def] Insert single closing quotation mark
 
 
-[sc] Type character code and press Alt + x
+[sc] Type character code and press Alt + X
 [def] Insert Unicode character, e.g. 20ac
 
 
-[sc] Select character and press alt + x
+[sc] Select character and press alt + X
 [def] Transform character to Unicode
 
 
-[sc] Alt + character code on numeric keyboard
+[sc] Alt + Character code on numeric keyboard
 [def] Insert ANSI character
 
 
@@ -292,23 +292,23 @@
 [def] Insert optional hyphen
 
 
-[sc] Alt + Ctrl + f
+[sc] Alt + Ctrl + F
 [def] Insert a footnote
 
 
-[sc] Alt + Ctrl + d
+[sc] Alt + Ctrl + D
 [def] Insert an endnote
 
 
-[sc] Ctrl + k
+[sc] Ctrl + K
 [def] Insert a hyperlink
 
 
-[sc] Alt + Shift + i
+[sc] Alt + Shift + I
 [def] Insert Citation Mark
 
 
-[sc] Alt + Shift + x
+[sc] Alt + Shift + X
 [def] Insert Index Mark
 
 
@@ -339,7 +339,7 @@
 [def] Decrease / Increase font size one value
 
 
-[sc] Ctrl + d or Ctrl + Shift + k
+[sc] Ctrl + D or Ctrl + Shift + K
 [def] Open the Font dialog box
 
 
@@ -353,15 +353,15 @@
 [def] Decrease / Increase font size one point
 
 
-[sc] Ctrl + b
+[sc] Ctrl + B
 [def] Apply/remove bold
 
 
-[sc] Ctrl + i
+[sc] Ctrl + I
 [def] Apply/remove italic
 
 
-[sc] Ctrl + u
+[sc] Ctrl + U
 [def] Apply/remove underline
 
 
@@ -381,23 +381,23 @@
 [def] Paste formatting
 
 
-[sc] Ctrl + Shift + d
+[sc] Ctrl + Shift + D
 [def] Apply/remove double-underline
 
 
-[sc] Ctrl + Shift + w
+[sc] Ctrl + Shift + W
 [def] Apply/remove words underline (only words, no spaces)
 
 
-[sc] Ctrl + Shift + h
+[sc] Ctrl + Shift + H
 [def] Apply/remove hidden formatting
 
 
-[sc] Ctrl + Shift + a
+[sc] Ctrl + Shift + A
 [def] Apply/remove all capitals
 
 
-[sc] Ctrl + Shift + k
+[sc] Ctrl + Shift + K
 [def] Apply/remove small capitals
 
 
@@ -405,11 +405,11 @@
 [def] Change between all upper-, first letter upper- and all lower-case
 
 
-[sc] Ctrl + d, then Alt + k and enter
+[sc] Ctrl + D, then Alt + K and enter
 [def] Apply strike-through formatting (font dialog)
 
 
-[sc] Ctrl + Shift + q
+[sc] Ctrl + Shift + Q
 [def] Change the selection to the Symbol font
 
 
@@ -421,24 +421,24 @@
 [def] Apply/remove Highlight Text Feature
 
 
-[sc] Ctrl + r
+[sc] Ctrl + R
 [def] Right-align paragraph
 
 
-[sc] Ctrl + l
+[sc] Ctrl + L
 [def] Left-align paragraph
 
 
-[sc] Ctrl + e
+[sc] Ctrl + E
 [def] Center-align paragraph
 
 
-[sc] Ctrl + j
+[sc] Ctrl + J
 [def] Justify-align paragraph
 
 
-[sc] Ctrl + m
-[sc] Ctrl + Shift + m
+[sc] Ctrl + M
+[sc] Ctrl + Shift + M
 [def] Indent paragraph from the left and increase / decrease indent
 
 
@@ -466,7 +466,7 @@
 [def] Add or remove one line space preceding a paragraph
 
 
-[sc] Alt + Ctrl + Shift + s
+[sc] Alt + Ctrl + Shift + S
 [def] Open or close Styles task pane
 
 
@@ -491,28 +491,28 @@
 [def] Remove all manual styles
 
 
-[sc] Ctrl + Shift + n
+[sc] Ctrl + Shift + N
 [def] Apply Normal style
 
 
-[sc] Ctrl + Shift + s
+[sc] Ctrl + Shift + S
 [def] Open Apply Styles task pane (will not close with pressing it a second time)
 
 
 
-[sc] Alt + Ctrl + k
+[sc] Alt + Ctrl + K
 [def] Start Auto Format
 
 
-[sc] Ctrl + h
+[sc] Ctrl + H
 [def] Open traditional find and replace window
 
 
-[sc] Ctrl + h, then Alt + d
+[sc] Ctrl + H, then Alt + D
 [def] Open traditional find window
 
 
-[sc] Alt + Ctrl + y, or Shift + F4
+[sc] Alt + Ctrl + Y, or Shift + F4
 [def] Repeat last find after closing find window
 
 
@@ -528,7 +528,7 @@
 [def] Close traditional search window if active
 
 
-[sc] Ctrl + f
+[sc] Ctrl + F
 [def] Open (new) search menu in navigation task pane
 
 
@@ -536,19 +536,19 @@
 [def] Open and close Navigation pane (View, Navigation)
 
 
-[sc] Alt + Ctrl + p
+[sc] Alt + Ctrl + P
 [def] Switch to Print Layout view
 
 
-[sc] Alt + Ctrl + o
+[sc] Alt + Ctrl + O
 [def] Switch to Outline view
 
 
-[sc] Alt + Ctrl + n
+[sc] Alt + Ctrl + N
 [def] Switch to Draft view (used to be normal view)
 
 
-[sc] Ctrl + scroll mouse
+[sc] Ctrl + Scroll mouse
 [def] Zoom in and zoom out
 
 
@@ -556,7 +556,7 @@
 [def] Open Zoom Menu (no native shortcut exists for zoom in/ zoom out)
 
 
-[sc] Alt + Ctrl + s
+[sc] Alt + Ctrl + S
 [def] Split the document window
 
 
@@ -636,7 +636,7 @@
 [def] Extend selection to adjacent cells
 
 
-[sc] Ctrl + Shift + f8, then press
+[sc] Ctrl + Shift + F8, then press
 [def] Extend selection or block
 
 
@@ -649,7 +649,7 @@
 [def] Move current row up or down
 
 
-[sc] In first column, press shift + end
+[sc] In first column, press shift + End
 [def] Select row*
 
 
@@ -697,7 +697,7 @@
 [def] Add row at the end
 
 
-[sc] Ctrl + Shift + o
+[sc] Ctrl + Shift + O
 [def] Switch to Outline View
 
 
@@ -711,7 +711,7 @@
 [def] Move selected paragraphs up / down
 
 
-[sc] Ctrl + Shift + n
+[sc] Ctrl + Shift + N
 [def] Demote to body text (set style to normal)
 
 
@@ -720,7 +720,7 @@
 [def] Expand / Collapse text under a heading
 
 
-[sc] Alt + Shift + a
+[sc] Alt + Shift + A
 [def] Expand or collapse all text or headings
 
 
@@ -729,7 +729,7 @@
 [def] Hide or display character formatting
 
 
-[sc] Alt + Shift + l
+[sc] Alt + Shift + L
 [def] Show the first line of body text or all body text
 
 
@@ -737,7 +737,7 @@
 [def] Show all headings with the Heading 1 style
 
 
-[sc] Alt + Shift + n
+[sc] Alt + Shift + N
 [def] Show all headings up to Heading n
 
 
@@ -749,15 +749,15 @@
 [def] Choose the Spelling command (Review tab).
 
 
-[sc] Alt + Ctrl + m
+[sc] Alt + Ctrl + M
 [def] Insert a comment
 
 
-[sc] Ctrl + Shift + e
+[sc] Ctrl + Shift + E
 [def] Turn change tracking on or off
 
 
-[sc] Alt + Shift + c
+[sc] Alt + Shift + C
 [def] Close the Reviewing Pane if it is open.
 
 
@@ -769,11 +769,11 @@
 [def] Display the Selection and Visibility task pane.
 
 
-[sc] Ctrl + Shift + g
+[sc] Ctrl + Shift + G
 [def] Open the Word Count dialog box.
 
 
-[sc] Ctrl + p
+[sc] Ctrl + P
 [def] Print a document (print preview)
 
 
@@ -792,19 +792,19 @@
 [def] Move to first page / last page (with focus on preview page)
 
 
-[sc] Alt + Shift + d
+[sc] Alt + Shift + D
 [def] Insert current date (insert DATE field)
 
 
-[sc] Alt + Shift + p
+[sc] Alt + Shift + P
 [def] Insert page number (insert PAGE field)
 
 
-[sc] Alt + Shift + t
+[sc] Alt + Shift + T
 [def] Insert time (insert TIME field)
 
 
-[sc] Alt + Ctrl + l
+[sc] Alt + Ctrl + L
 [def] Insert LISTNUM field
 
 
@@ -812,7 +812,7 @@
 [def] Insert an empty field
 
 
-[sc] Ctrl + Shift + l
+[sc] Ctrl + Shift + L
 [def] Insert a LISTNUM field
 
 
@@ -850,43 +850,43 @@
 [def] Lock a field / Unlock a field
 
 
-[sc] Alt + Shift + k
+[sc] Alt + Shift + K
 [def] Preview a mail merge
 
 
-[sc] Alt + Shift + n
+[sc] Alt + Shift + N
 [def] Merge a document
 
 
-[sc] Alt + Shift + m
+[sc] Alt + Shift + M
 [def] Print the merged document
 
 
-[sc] Alt + Shift + e
+[sc] Alt + Shift + E
 [def] Edit a mail-merge data document
 
 
-[sc] Alt + Shift + f
+[sc] Alt + Shift + F
 [def] Insert a merge field
 
 
-[sc] Alt + Shift + k
+[sc] Alt + Shift + K
 [def] Preview a mail merge
 
 
-[sc] Alt + Shift + n
+[sc] Alt + Shift + N
 [def] Merge a document
 
 
-[sc] Alt + Shift + m
+[sc] Alt + Shift + M
 [def] Print the merged document
 
 
-[sc] Alt + Shift + e
+[sc] Alt + Shift + E
 [def] Edit a mail-merge data document
 
 
-[sc] Alt + Shift + f
+[sc] Alt + Shift + F
 [def] Insert a merge field
 
 

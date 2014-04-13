@@ -1,177 +1,185 @@
-[sc] alt+home
+[sc] Alt + Home
 [def] Go to Home webpage.
 
-[sc] alt+arrow right / alt+arrow left
+[sc] Alt + Arrow right
+[sc]  Alt + Arrow left
 [def] Go to next / previous webpage.
 
-[sc] alt+d or f6
-[def] Jump to address bar. f6 additionally navigates through window elements.
+[sc] Alt + D or F6
+[def] Jump to address bar. F6 additionally navigates through window elements.
 
-[sc] ctrl+enter
+[sc] Ctrl + Enter
 [def] Complete a .com address in address bar: adds "http://" prefix and a ".com"-suffix, then loads the webpage.
 
-[sc] ctrl+shift+enter
-[def] Complete an URI in address bar with user-defined suffix: adds "http://" prefix and suffix (e.g. .net, .org, .de, ...), then loads the webpage. Set the suffix in tools:options (alt+t, then o), languages (alt+l), and enter to suffix field at bottom.
+[sc] Ctrl + Shift + Enter
+[def] Complete an URI in address bar with user-defined suffix: adds "http://" prefix and suffix (e.g. .net, .org, .de, ...), then loads the webpage. Set the suffix in tools:options (Alt + T, then o), languages (Alt + L), and Enter to suffix field at bottom.
 
-[sc] alt+arrow down or f4
-[def] Open webpages visited in the past when in address bar. Includes Favorites and History. Navigate with arrow keys and enter to visit.
+[sc] Alt + Arrow down or F4
+[def] Open webpages visited in the past when in address bar. Includes Favorites and History. Navigate with Arrow keys and Enter to visit.
 
-[sc] delete or shift+delete
+[sc] delete or Shift + Delete
 [def] Delete past visited webpages from address bar history (also see shortcut above).
 
-[sc] ctrl+t
-[def] Open new tab in same window.
+[sc] Ctrl + T
+[def] Open new Tab in same window.
 
-[sc] ctrl+k
-[def] Duplicate current tab.
+[sc] Ctrl + K
+[def] Duplicate current Tab.
 
-[sc] ctrl+tab / ctrl+shift+tab
-[def] Jump to next / jump to previous browser tab.
+[sc] Ctrl + Tab
+[sc]  Ctrl + Shift + Tab
+[def] Jump to next / jump to previous browser Tab.
 
-[sc] ctrl+w
-[def] Close the current tab.
+[sc] Ctrl + W
+[def] Close the current Tab.
 
-[sc] ctrl+shift+t
-[def] Restore closed tab (open previously closed tab).
+[sc] Ctrl + Shift + T
+[def] Restore closed Tab (open previously closed Tab).
 
-[sc] ctrl+q
-[def] Show Tabs: Open or close quick tab view.
+[sc] Ctrl + Q
+[def] Show Tabs: Open or close quick Tab view.
 
-[sc] ctrl+shift+q
-[def] Show Tabs: Open list of tabs. Then use arrow keys and enter to select or escape to exit.
+[sc] Ctrl + Shift + Q
+[def] Show Tabs: Open list of Tabs. Then use Arrow keys and Enter to select or Escape to exit.
 
-[sc] ctrl+1 ... ctrl+9
-[def] Jump to browser tab 1 - 9.
+[sc] Ctrl + 1 ... Ctrl + 9
+[def] Jump to browser Tab 1 - 9.
 
-[sc] alt+enter
-[def] Open typed webpage address in new background tab.
+[sc] Alt + Enter
+[def] Open typed webpage address in new background Tab.
 
-[sc] arrow down / arrow up
+[sc] Arrow down
+[sc]  Arrow up
 [def] Scroll down / scroll up inside a webpage.
 
-[sc] page up / page down
-[def] Jump one page down / jump one page up (space / shift+space works as well).
+[sc] page up
+[sc]  page down
+[def] Jump one page down / jump one page up (space / Shift + Space works as well).
 
-[sc] home / end
+[sc] home
+[sc]  end
 [def] Move to the beginning or end of a document.
 
-[sc] ctrl++ / ctrl+-
+[sc] Ctrl +  +
+[sc]  Ctrl + -
 [def] Increase text size / decrease text size (zoom in and out).
 
-[sc] ctrl+0
+[sc] Ctrl + 0
 [def] Reset text size to default (zoom to 100%).
 
-[sc] tab / shift+tab
-[def] Move forward / move backwards through items on a webpage. Press and hold tab button to skip through multiple links.
+[sc] Tab
+[sc]  Shift + Tab
+[def] Move forward / move backwards through items on a webpage. Press and hold Tab button to skip through multiple links.
 
-[sc] shift+f10
+[sc] Shift + F10
 [def] When on link: Display a context menu for a link.
 
-[sc] enter
+[sc] Enter
 [def] Activate a selected link.
 
-[sc] tab / shift+tab, and enter or space
+[sc] Tab
+[sc]  Shift + Tab, and Enter or space
 [def] In web forms: move forward / move backwards through form items. Press space to activate action buttons, select boxes, or radio buttons.
 
-[sc] ctrl+a
+[sc] Ctrl + A
 [def] Select all content on webpage.
 
-[sc] f5 or ctrl+r
+[sc] F5 or Ctrl + R
 [def] Refresh the current webpage.
 
-[sc] ctrl+f5
+[sc] Ctrl + F5
 [def] Refresh the current webpage with cache override.
 
-[sc] f7
+[sc] F7
 [def] Turn caret browsing on or off (movable cursor on page).
 
-[sc] esc
+[sc] Esc
 [def] Stop loading webpage.
 
-[sc] ctrl+i
+[sc] Ctrl + I
 [def] Open Favorites box.
 
-[sc] ctrl+shift+i
+[sc] Ctrl + Shift + I
 [def] Open Favorites box in pinned mode.
 
-[sc] ctrl+h
+[sc] Ctrl + H
 [def] Open History box.
 
-[sc] ctrl+shift+h
+[sc] Ctrl + Shift + H
 [def] Open History in pinned mode.
 
-[sc] ctrl+j
+[sc] Ctrl + J
 [def] Open Feeds.
 
-[sc] ctrl+shift+j
+[sc] Ctrl + Shift + J
 [def] Open Feeds in pinned mode.
 
-[sc] ctrl+d
+[sc] Ctrl + D
 [def] Add the current webpage to favorites.
 
-[sc] ctrl+b
-[def] Open the Organize Favorites dialog box. Use tab to navigate and alt and shift+alt to move items up or down in list.
+[sc] Ctrl + B
+[def] Open the Organize Favorites dialog box. Use Tab to navigate and Alt and Shift + Alt to move items up or down in list.
 
-[sc] ctrl+f or f3
-[def] Open find window. Press escape to exit.
+[sc] Ctrl + F or F3
+[def] Open find window. Press Escape to exit.
 
-[sc] ctrl+shift+f
+[sc] Ctrl + Shift + F
 [def] Turn in-private filtering on or off (watch icon change in status bar)
 
-[sc] ctrl+shift+p
+[sc] Ctrl + Shift + P
 [def] Open private browsing window / incognito mode.
 
-[sc] ctrl+shift+delete
+[sc] Ctrl + Shift + Delete
 [def] Open 'Delete Browsing History' Menu.
 
-[sc] alt+space
+[sc] Alt + Space
 [def] Opens the title bar menu.
 
-[sc] alt+space+enter
+[sc] Alt + Space + Enter
 [def] Restore Window (default Windows feature).
 
-[sc] alt+space+x
+[sc] Alt + Space + X
 [def] Maximize Window (default Windows feature).
 
-[sc] alt+space+n
+[sc] Alt + Space + N
 [def] Minimize Window (default Windows feature).
 
-[sc] alt+shift+enter
+[sc] Alt + Shift + Enter
 [def] Toggle regular window / full screen without toolbars
 
-[sc] f11
+[sc] F11
 [def] Turn full page view on or off (default Windows feature).
 
-[sc] f6
+[sc] F6
 [def] Move forward between window elements.
 
-[sc] ctrl+n
+[sc] Ctrl + N
 [def] Open a new browser window.
 
-[sc] f4
+[sc] F4
 [def] Close IE8 Window.
 
-[sc] ctrl+e
+[sc] Ctrl + E
 [def] Jump to the Instant Search box (box on top right corner of browser window).
 
-[sc] ctrl+arrow down
+[sc] Ctrl + Arrow down
 [def] View list of search providers.
 
-[sc] alt+enter
-[def] Open search results in new tab.
+[sc] Alt + Enter
+[def] Open search results in new Tab.
 
-[sc] alt+p
+[sc] Alt + P
 [def] Print the current webpage.
 
-[sc] f12
+[sc] F12
 [def] Open Developer Tools.
 
-[sc] ctrl+o or ctrl+l
+[sc] Ctrl + O or Ctrl + L
 [def] Open location.
 
-[sc] alt+v+c
-[def] View webpage source in default editor (used to be ctrl+u but that was discontinued).
+[sc] Alt + V + C
+[def] View webpage source in default editor (used to be Ctrl + U but that was discontinued).
 
-[sc] f1
+[sc] F1
 [def] Display Internet Explorer Help or to display context Help about an item in a dialog box.
 

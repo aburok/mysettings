@@ -84,12 +84,14 @@ FILLLIST:
 
     Loop, %Line0%
     {
-        IF(IsLineForDisplay(Line%A_Index%)) {
-            if (IsShortCut(Line%A_Index%)){
-                sc := sc . ";" . Line%A_Index%
+        line := Line%A_Index%
+        IF(IsLineForDisplay(line)) {
+            if (IsShortCut(line)){
+                line := RegExReplace(line, "^\[sc\]\s*")
+                sc := sc ?  sc . ";" . line : line
             }
-            if (IsDefinition(Line%A_Index%)){
-                def := Line%A_Index%
+            else if (IsDefinition(line)){
+                def := RegExReplace(line, "^\[def\]\s*")
 
                 if(IsMatchingFilter(def, filter)){
                     counter := counter + 1
@@ -105,8 +107,9 @@ return
 GetFilterText(){
     GuiControlGet, FilterText
     StringReplace, filter, FilterText, %A_Space%, .*, All
-    filter := "i)" . filter ; Add option to ignore case -> i)
-    return filter
+    return filter ; if not empty
+        ? "i)" . filter ; Add option to ignore case -> i)
+        : filter
 }
 
 IsLineForDisplay(line)
@@ -131,11 +134,11 @@ IsMatchingFilter(line, filter){
 
 GuiEscape:
 ; ExitApp - THIS WILL EXIT ALSO THE AHK PROGRAM, NOT ONLU GUI
-IF ( FilterText == "")
-    Gui, Destroy
+IF ( filter )
+    GuiControl,, FilterText
 ELSE
     ; If the filter box is not empty it will clear it on first Esc
-    GuiControl,, FilterText
+    Gui, Destroy
 Return
 
 OnExit:
