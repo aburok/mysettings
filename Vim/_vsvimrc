@@ -10,13 +10,52 @@ map gf :vsc View.NavigateForward<CR>
 nmap gne :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
 nmap gpe :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
 
+"GO to Next/prev code issue"
+nmap gni :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+nmap gpi :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+
+" Go to Next/prev method"
 nmap gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 nmap gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
+" go to next/prev location"
 nmap gnu :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
 nmap gpu :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 
+" Live templates
 nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
-nmap zts :vsc ReSharper.ReSharper_SurroundWith<CR>
+vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
+nmap ztf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
+
+" Move Code Right / Down / Up / Left
+nmap zmh :vsc ReSharper.ReSharper_MoveLeft<CR>
+nmap zmj :vsc ReSharper.ReSharper_MoveDown<CR>
+nmap zmk :vsc ReSharper.ReSharper_MoveUp<CR>
+nmap zml :vsc ReSharper.ReSharper_MoveRight<CR>
+
+"Find usages
+nmap zfu :vsc ReSharper.ReSharper_FindUsages<CR>
+
+" Go to file / member
+nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
+nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
+
+nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+
+" Refactorings
+vmap zem :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nmap zei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+
+vmap zif :vsc ReSharper.ReSharper_IntroduceField<CR>
+vmap zip :vsc ReSharper.ReSharper_IntroParameter<CR>
+vmap ziv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+
+
+" TESTS "
+nmap ztf :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
+nmap zta :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
+nmap zts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
+nmap ztr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
 
 
