@@ -98,7 +98,8 @@ gvimPath := path1 . "," . path2 . "," . path3
 
 ; Get directory of selected Explorer window to set Gvim Path
 workingDir := GetWorkingDirectory()
-params := " -c ""cd " . workingDir . " "" "
+params := " -c ""cd " . workingDir . " "" -S Session.vim "
+
 TryOpenApplicationFromList(gvimPath, "Gvim.exe", params)
 return
 

@@ -1,0 +1,66 @@
+let g:neocomplcache_enable_at_startup = 1
+let g:neocomplcache_enable_camel_case_completion = 1
+let g:neocomplcache_enable_underbar_completion = 1
+" Use smartcase.
+let g:neocomplcache_enable_smart_case = 1
+
+" vim-notes notes directory"
+" "let g:notes_directory = [']
+noremap <silent> <F11> :cal VimCommanderToggle()<CR>
+
+
+" Vim CamelCase {
+map w <Plug>CamelCaseMotion_w
+map b <Plug>CamelCaseMotion_b
+map e <Plug>CamelCaseMotion_e
+sunmap w
+sunmap b
+sunmap e
+omap iw <Plug>CamelCaseMotion_iw
+xmap iw <Plug>CamelCaseMotion_iw
+omap ib <Plug>CamelCaseMotion_ib
+xmap ib <Plug>CamelCaseMotion_ib
+omap ie <Plug>CamelCaseMotion_ie
+xmap ie <Plug>CamelCaseMotion_ie
+" }
+
+
+" Vim-Notes {
+" shortcuts for opening notes
+nnoremap <leader>n3 :sp note:3things<CR>
+nnoremap <leader>np :sp note:todo<CR>
+nnoremap <leader>nt :sp note:privTodo<CR>
+
+" vim-notes plugin settings
+let g:notes_directories = ['C:/Dropbox/Notes']
+let g:notes_suffix = '.note'
+
+" }
+
+" NERDTree {
+" Automatically open NERDTree when entering vim autocmd vimenter * NERDTree
+" close NERDTree if it's only window left
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" Map toggling NERDTree to Ctrl + n
+map <C-n> :NERDTreeToggle<CR>
+
+"
+" For Editing books with code"
+" looking for Open Curly Bracket and intending its content"
+nmap <leader>fi /{<cr>vi{>
+"
+" Searching for Open Curly Bracket with not intended content"
+" g/\(\s\+\){\_s\1\S/$vi{>
+
+" Removing Leading spaces in code sections"
+nmap <leader>fn /<pre>\_s\s\+<CR>$vit<
+
+" Intending content of Curly Bracket that is not intended"
+nmap <leader>fc /\(\s\+\){\_s\1\S<CR>$vi{>
+
+" Intending content of Curly Bracket that is on the left border of screen"
+nmap <leader>fb /\_s{\_s\S<CR>jvi{>
+
+" Surround with <pre> tag and remove <p> from each line
+vmap <leader>fp S<pre>$movit:s/<p>\(.\+\)<\/p>/\1/g<CR>/Listing<cr>
+

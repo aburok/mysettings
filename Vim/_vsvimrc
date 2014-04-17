@@ -1,5 +1,22 @@
+source C:\Dropbox\mysettings\vim\_vimrc
+
 map gb :vsc View.NavigateBackward<CR>
 map gf :vsc View.NavigateForward<CR>
 
-map gp :vsc View.PreviousDocumentWindowNav<CR>
-map gn :vsc View.NextDocumentWindowNav<CR>
+"nmap gp :vsc View.PreviousDocumentWindowNav<CR>
+"nmap gn :vsc View.NextDocumentWindowNav<CR>
+
+" Go To Next Error in Solution"
+nmap gne :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nmap gpe :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+
+nmap gnm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+nmap gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
+nmap gnu :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+nmap gpu :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+
+nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
+nmap zts :vsc ReSharper.resli
+
+

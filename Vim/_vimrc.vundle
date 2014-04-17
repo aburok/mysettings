@@ -40,6 +40,7 @@ Bundle 'https://github.com/tpope/vim-sensible'
 
 Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'Valloric/YouCompleteMe'
+" "Bundle 'https://github.com/Shougo/neocomplcache.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"

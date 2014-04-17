@@ -76,9 +76,15 @@ return
 ^#d:: SetWindowPositionTo(Right_Half)
 
 ; Z X C
-^#z:: SetWindowPositionTo(Bottom_Left_Corner)
-^#x:: SetWindowPositionTo(Bottom_Half)
-^#c:: SetWindowPositionTo(Bottom_Right_Corner)
+^#z:: ToggleWindowPosition(Bottom_Left_Corner
+    . Next . Bottom_Left_OneThird
+    , "Z")
+^#x:: ToggleWindowPosition(Bottom_Half
+    . Next . Bottom_Center_OneThird
+    , "X")
+^#c:: ToggleWindowPosition(Bottom_Right_Corner
+    . Next . Bottom_Right_OneThird
+    , "C")
 
 +#h::Send {Shift down}{LWin down }{ Left down}
 +#l::Send {Shift down}{LWin down}{ Right down}
