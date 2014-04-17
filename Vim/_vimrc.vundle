@@ -19,13 +19,13 @@ Bundle 'https://github.com/bling/vim-airline'
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'https://github.com/vim-scripts/camelcasemotion'
 Bundle 'https://github.com/pangloss/vim-javascript'
 
 Bundle 'tpope/vim-surround'
-Bundle 'https://github.com/yegappan/mru'
+"Bundle 'https://github.com/yegappan/mru'
 
 Bundle 'https://github.com/xolox/vim-misc'
 Bundle 'https://github.com/xolox/vim-notes'
@@ -35,12 +35,12 @@ Bundle 'vim-scripts/sessionman.vim'
 Bundle 'scrooloose/nerdcommenter'
 
 Bundle 'spf13/vim-autoclose'
-Bundle 'tpope/vim-fugitive'
+"Bundle 'tpope/vim-fugitive'
 Bundle 'https://github.com/tpope/vim-sensible'
 
-Bundle 'Lokaltog/vim-easymotion'
 " Bundle 'Valloric/YouCompleteMe'
 " "Bundle 'https://github.com/Shougo/neocomplcache.vim'
+Bundle 'https://github.com/Shougo/neocomplete.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
@@ -49,7 +49,7 @@ Bundle "garbas/vim-snipmate"
 Bundle 'https://github.com/honza/vim-snippets.git'
 " "Bundle 'https://github.com/kien/rainbow_parentheses.vim'
 
-Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
+"Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
 " "Bundle 'https://github.com/nosami/Omnisharp'
 
 " Bundle 'tpope/vim-rails.git'

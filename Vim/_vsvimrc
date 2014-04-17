@@ -17,6 +17,6 @@ nmap gnu :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
 nmap gpu :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 
 nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
-nmap zts :vsc ReSharper.resli
+nmap zts :vsc ReSharper.ReSharper_SurroundWith<CR>
 
 

@@ -90,18 +90,34 @@ return
 
 #s::Run "C:\Windows\System32\SnippingTool.exe"
 
+
+
 #v::
-path1 = C:\Program Files (x86)\vim\Vim74\gvim.exe
-path2 = %PROGRAMFILES%\Vim73\vim73\gvim.exe
-path3 = %PROGRAMFILES%\vim\vim74\gvim.exe
-gvimPath := path1 . "," . path2 . "," . path3
-
-; Get directory of selected Explorer window to set Gvim Path
-workingDir := GetWorkingDirectory()
-params := " -c ""cd " . workingDir . " "" -S Session.vim "
-
-TryOpenApplicationFromList(gvimPath, "Gvim.exe", params)
+    ; Get directory of selected Explorer window to set Gvim Path
+    workingDir := GetWorkingDirectory()
+    params := " -c ""cd " . workingDir . " "" -S Session.vim "
+    Path := FindGvimExe()
+    command := Path . " " . params
+    RunOrActivate("ahk_class Vim", command)
 return
+
+F1::
+    selected_file := Explorer_GetSelection()
+    Path := FindGvimExe()
+    command := Path . " " . selected_file
+    Run , %command%
+return
+
+FindGvimExe(){
+    gvimPath := "C:\Program Files (x86)\vim\Vim74\gvim.exe"
+        . "," . "%PROGRAMFILES%\Vim73\vim73\gvim.exe"
+        . "," .	"%PROGRAMFILES%\vim\vim74\gvim.exe"
+        . "," . "C:\Program Files (x86)\vim\gvim.exe"
+
+    Path := ReturnFirstExistingFile(gvimPath)
+    Path := Path ? Path : "gvim.exe"
+    return Path
+}
 
 
 ;#t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
@@ -113,10 +129,7 @@ return
 
 #x::RunOrActivate("", "..\ProcessExplorer\procexp.exe")
 
-F1::
-selected_file := Explorer_GetSelection()
-Run gvim.exe "%selected_file%"
-return
+
 
 
 CAPSLOCK::Ctrl
@@ -170,7 +183,7 @@ Explorer_GetWindow(hwnd = ""){
 }
 
 ReturnFirstExistingFile(FileList){
-    Loop , parse, List, `,
+    Loop , parse, FileList, `,
     {
         isFile := FileExist(A_LoopField)
         if (isFile){
@@ -180,11 +193,7 @@ ReturnFirstExistingFile(FileList){
     return
 }
 
-TryOpenApplicationFromList(List, LastChance, params = ""){
-    existingFile := ReturnFirstExistingFile(List)
-    path := existingFile ? existingFile : LastChance
-    command := path . " " . params
-    RunOrActivate("ahk_class Vim", command)
+TryOpenApplicationOrDefault(appPath, LastChance, params = ""){
 }
 
 GetWorkingDirectory(){
