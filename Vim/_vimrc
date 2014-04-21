@@ -1,11 +1,37 @@
 imap jj <esc>
 
+inoremap jk <esc>
+inoremap kj <esc>
+
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set number " Show line numbers
+set ruler " Show position in file
+set history=100
+
+" show matching bracket
+set showmatch
+set incsearch
+set hlsearch
+" Pressing * will select a word and serch for it in a file
+set ignorecase
+set wildmenu  " show list instead of just completing
+set wildmode=list:longest,full
+
+set ai " Auto indent
+set si " Smart indent
+set wrap " Wrap lines
+
+set cursorline
+set autoread
+
 let g:mapleader = ','
 let mapleader = ','
 
-" move a line of text using Alt + [jk]
-nmap <M-j> my:m+<cr>`y
-nmap <M-k> my:m-2<cr>`y
+nmap - $
+xmap - $
 
 " map space in normal mode to Search :)
 nnoremap <space> /
@@ -25,5 +51,48 @@ nmap z' mtciW'<C-R>"'<Esc>`t
 nmap z" mtciw"<C-R>""<Esc>`t
 
 " Insert empty line below / above
-nnoremap <silent> zj mto<Esc>`t
-nnoremap <silent> zk mtO<Esc>`t
+nnoremap zj mto<Esc>`t
+nnoremap zk mtO<Esc>`t
+
+" WINDOWS BINDINGS
+" backspace in Visual mode deletes selection
+vnoremap <BS> X
+
+" CTRL-X and SHIFT-Del are Cut
+vnoremap <C-X> "+x
+vnoremap <S-Del> "+x
+
+" CTRL-C and CTRL-Insert are Copy
+vnoremap <C-C> "+y
+vnoremap <C-Insert> "+y
+
+" CTRL-V and SHIFT-Insert are Paste
+map <C-V>		"+gp
+map <S-Insert>		"+gp
+
+cmap <C-V>		<C-R>+
+cmap <S-Insert>		<C-R>+
+
+
+" CTRL-A is Select all
+noremap <C-A> gggH<C-O>G
+inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+cnoremap <C-A> <C-C>gggH<C-O>G
+onoremap <C-A> <C-C>gggH<C-O>G
+snoremap <C-A> <C-C>gggH<C-O>G
+xnoremap <C-A> <C-C>ggVG
+
+" CTRL-Tab is Next window
+noremap <C-Tab> <C-W>w
+inoremap <C-Tab> <C-O><C-W>w
+cnoremap <C-Tab> <C-C><C-W>w
+onoremap <C-Tab> <C-C><C-W>w
+
+" CTRL-S is Save File
+imap <C-S> <Esc>:w!<cr>a
+
+
+" after going to next find , center the screen on the finding "
+map N Nzz
+map n nzz
+

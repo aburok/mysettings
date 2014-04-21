@@ -282,6 +282,7 @@ ReSharper_GotoTypeDeclaration
 
 Go to declaration Overrides Visual Studio command Edit.GotoDefinition. If there is no shortcut assigned to this command,
 Ctrl+B can be used.
+
 Ctrl+B
 ReSharper_GotoDeclaration
 

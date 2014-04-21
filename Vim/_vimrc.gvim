@@ -1,26 +1,15 @@
 
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
-"
 
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
-set expandtab
-set number " Show line numbers
-set ruler " Show position in file
-set history=100
+nmap J <C-W>h
+nmap K <C-W>l
+
+" move a line of text using Alt + [jk]
+nmap <M-j> my:m+<cr>`y
+nmap <M-k> my:m-2<cr>`y
 
 syntax on " turn on syntax high:wq
-
-" show matching bracket
-set showmatch
-set incsearch
-set hlsearch
-" Pressing * will select a word and serch for it in a file
-set ignorecase
-set wildmenu  " show list instead of just completing
-set wildmode=list:longest,full
 
 "Status line gnarliness
 set laststatus=2
@@ -51,10 +40,6 @@ set noswapfile " no .swp files :)
 
 " set shiftwidth=3 " ???
 
-set ai " Auto indent
-set si " Smart indent
-set wrap " Wrap lines
-
 " Folding {
 " This will fold all blocks by default when file is open
 set foldmethod=indent
@@ -80,11 +65,6 @@ set foldlevel=3
     nmap <leader>f9 :set foldlevel=9<CR>
 " }
 
-set cursorline
-set autoread
-
-imap jj <esc>
-
 map Q <nop>
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 nnoremap <C-h> <C-W>h
@@ -94,43 +74,6 @@ nnoremap <C-l> <C-W>l
 
 " <C-W>_
 " <C-W>=
-
-" WINDOWS BINDINGS
-" backspace in Visual mode deletes selection
-vnoremap <BS> X
-
-" CTRL-X and SHIFT-Del are Cut
-vnoremap <C-X> "+x
-vnoremap <S-Del> "+x
-
-" CTRL-C and CTRL-Insert are Copy
-vnoremap <C-C> "+y
-vnoremap <C-Insert> "+y
-
-" CTRL-V and SHIFT-Insert are Paste
-map <C-V>		"+gp
-map <S-Insert>		"+gp
-
-cmap <C-V>		<C-R>+
-cmap <S-Insert>		<C-R>+
-
-
-" CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
-cnoremap <C-A> <C-C>gggH<C-O>G
-onoremap <C-A> <C-C>gggH<C-O>G
-snoremap <C-A> <C-C>gggH<C-O>G
-xnoremap <C-A> <C-C>ggVG
-
-" CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
-
-" CTRL-S is Save File
-imap <C-S> <Esc>:w!<cr>a
 
 map 0 ^
 
@@ -196,15 +139,11 @@ endif
 " Remove any trailing whitespace that is in the file
 autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 
-map N Nzz
-map n nzz
-
 " belowe command will make word before cursor UPPERCASE
 " gU - make UPPERCASE
 " iw - the whole word
 " `]a - go to last position and append
 map! <C-F> <Esc>gUiw`]a
-
 
 " File operations
 nmap <leader>w :w!<cr>
