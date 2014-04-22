@@ -1,5 +1,11 @@
 source C:\Dropbox\mysettings\vim\_vimrc
 
+" REload source file for visual studio"
+nmap zls :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
+
+nmap x :vsc Window.CloseDocumentWindow<CR>
+nmap X :vsc Edit.UndoClose<CR>
+
 nnoremap J :vsc Window.PreviousTab<CR>
 nnoremap K :vsc Window.NextTab<CR>
 
@@ -12,17 +18,24 @@ nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc Window.Close<CR>
 nnoremap gnd :vsc Window.NextDocumentWindow<CR>
 nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
 
-nnoremap zf :vsc Edit.Find<CR>
-nnoremap zb :vsc Build.BuildSolution<CR>
-nnoremap zod :vsc Edit.CollapsetoDefinitions<CR>
-nnoremap zoa :vsc Edit.ToggleAllOutlining<CR>
-nnoremap zot :vsc Edit.ToggleOutliningExpansion<CR>
+nnoremap <Space> :vsc Edit.Find<CR>
 
+nnoremap zb :vsc Build.BuildSolution<CR>
+
+nnoremap zfm :vsc Edit.CollapsetoDefinitions<CR>
+nnoremap zfa :vsc Edit.ToggleAllOutlining<CR>
+nnoremap zft :vsc Edit.ToggleOutliningExpansion<CR>
+
+nnoremap zc :vsc Edit.CommentSelection<CR>
+nnoremap zu :vsc Edit.UncommentSelection<CR>
 
 map gb :vsc View.NavigateBackward<CR>
 nmap <C-O> :vsc View.NavigateBackward<CR>
 map gf :vsc View.NavigateForward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
+
+"nmap zsw :vsc Edit.SelectCurrentWord<CR>
+nmap zs :vsc ReSharper.ReSharper_ExtendSelection<CR>
 
 vnoremap <BS> d
 noremap <C-S>  :update<CR>
@@ -30,16 +43,17 @@ vnoremap <C-S> <C-S>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 
 
+nnoremap zmp :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap zmn :vsc Window.MovetoNextTabGroup<cr>
+nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
+nnoremap zv :vsc Window.NewVerticalTabGroup<CR>
+
 nnoremap gwo :vsc FullScreen<cr>
 nnoremap gws :vsc Window.Split<cr>
 nnoremap gwc :vsc Window.Split<cr>
 nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
-nnoremap gwp :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap gwn :vsc Window.MovetoNextTabGroup<cr>
 nnoremap gwh :vsc Window.NewHorizontalTabGroup<cr>
-nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
 nnoremap gwv :vsc Window.NewVerticalTabGroup<cr>
-nnoremap zv :vsc Window.NewVerticalTabGroup<CR>
 nnoremap gwf :vsc Window.Float<cr>
 nnoremap gwj :vsc Window.NextSplitPane<cr>
 nnoremap gwk :vsc Window.PreviousSplitPane<cr>

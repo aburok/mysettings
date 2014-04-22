@@ -31,6 +31,15 @@
 ; ---------------------
 ; #n::Run Notepad
 
+#IfWinActive ahk_class CabinetWClass
+    F1::
+        selected_file := Explorer_GetSelection()
+        Path := FindGvimExe()
+        command := Path . " " . selected_file
+        Run , %command%
+        return
+#IfWinActive
+
 #a::
 Run autohotkey.exe "windowArrrr.ahk"
 Run autohotkey.exe "helpwindow.ahk"
@@ -101,12 +110,6 @@ return
     RunOrActivate("ahk_class Vim", command)
 return
 
-F1::
-    selected_file := Explorer_GetSelection()
-    Path := FindGvimExe()
-    command := Path . " " . selected_file
-    Run , %command%
-return
 
 FindGvimExe(){
     gvimPath := "C:\Program Files (x86)\vim\Vim74\gvim.exe"

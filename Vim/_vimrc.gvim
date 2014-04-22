@@ -2,8 +2,8 @@
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
 
-nmap J <C-W>h
-nmap K <C-W>l
+"nnoremap J <C-W>h
+"nnoremap K <C-W>l
 
 " move a line of text using Alt + [jk]
 nmap <M-j> my:m+<cr>`y
@@ -189,4 +189,9 @@ nnoremap <S-Tab> gT
 " auto formatting
 map <C-F> gg=G<C-O><C-O>
 
+" CTRL-Tab is Next window
+noremap <C-Tab> <C-W>w
+inoremap <C-Tab> <C-O><C-W>w
+cnoremap <C-Tab> <C-C><C-W>w
+onoremap <C-Tab> <C-C><C-W>w
 

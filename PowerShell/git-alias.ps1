@@ -13,5 +13,5 @@ Set-Alias -Name gir -Value git-reset
 function git-push { git push -u origin master }
 Set-alias -name gip -Value git-push
 
-function git-add { git add -A }
+function git-add { git add -A :/ }
 Set-alias -name gia -Value git-add

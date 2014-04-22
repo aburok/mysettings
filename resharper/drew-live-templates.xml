@@ -1,0 +1,74 @@
+<TemplatesExport>
+  <Folder name="File 'drew-live-templates.xml'">
+    <Template uid="dcf73136-d7dc-47f6-8bd6-1ec6cc440d5f" text="if ($PARAM$.Count == 0)&#xD;&#xA;    throw new System.ArgumentException(&quot;Collection cannot be empty.&quot;, &quot;$PARAM$&quot;);" shortcut="arge" description="Assert collection parameter not empty" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="Statement" />
+      </Context>
+      <Variables>
+        <Variable name="PARAM" expression="parameterOfType(&quot;System.Collections.IList&quot;)" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="2a5bb687-6d25-4960-873a-341722e215a7" text="if ($ARG$==null)&#xD;&#xA;    throw new System.ArgumentNullException(&quot;$ARG$&quot;);&#xD;&#xA;$END$" shortcut="argn" description="Assert parameter not null" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="Statement" />
+      </Context>
+      <Variables>
+        <Variable name="ARG" expression="parameterOfType(&quot;System.Object&quot;)" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="44d8df5e-eaba-4c29-9097-5b231ebf242e" text="[NUnit.Framework.Test]&#xD;&#xA;public void $TEST_NAME$()&#xD;&#xA;{&#xD;&#xA;    $END$&#xD;&#xA;}" shortcut="test" description="NUnit test method" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="TypeMember" />
+      </Context>
+      <Variables>
+        <Variable name="TEST_NAME" expression="" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="c4278185-e1a4-4c5a-b117-daaaa13e9ed9" text="try&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;}&#xD;&#xA;catch ($EXCEPTION$ e)&#xD;&#xA;{&#xD;&#xA;}" shortcut="try" description="Try/catch block" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="Statement" />
+      </Context>
+      <Variables>
+        <Variable name="EXCEPTION" expression="guessExpectedType()" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="41f00a2b-952f-48c8-8b6b-efa8f9f978de" text="if (InvokeRequired)&#xD;&#xA;{&#xD;&#xA;  Invoke(new $DELEGATE$($METHOD_NAME$));&#xD;&#xA;  return;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;$END$" shortcut="inv" description="Handle cross-thread invoke as required on control" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="Statement" />
+      </Context>
+      <Variables>
+        <Variable name="METHOD_NAME" expression="typeMember()" initialRange="-1" />
+        <Variable name="DELEGATE" expression="constant(&quot;MethodInvoker&quot;)" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="2ddc0604-4af8-4f85-b350-724f02bff9a8" text="Expect.Once.On($MOCK$).$COMPLETE$" shortcut="eoo" description="Expect Once On (NMock)" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="Statement" />
+      </Context>
+      <Variables>
+        <Variable name="MOCK" expression="completeSmart()" initialRange="0" />
+        <Variable name="COMPLETE" expression="complete()" initialRange="0" />
+      </Variables>
+      <CustomProperties />
+    </Template>
+    <Template uid="c68c5cb0-7d8e-4733-aa81-53e5de1ec1d6" text="[NUnit.Framework.SetUp]&#xD;&#xA;protected void SetUp()&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;}" shortcut="setup" description="NUnit SetUp method" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="TypeMember" />
+      </Context>
+      <Variables />
+      <CustomProperties />
+    </Template>
+    <Template uid="b945273d-bf4e-4fb1-bc80-228cfd77cf20" text="[NUnit.Framework.TearDown]&#xD;&#xA;protected void TearDown()&#xD;&#xA;{&#xD;&#xA;   $END$&#xD;&#xA;}" shortcut="teardown" description="NUnit TearDown method" reformat="true" shortenQualifiedReferences="true">
+      <Context>
+        <CSharpContext context="TypeMember" />
+      </Context>
+      <Variables />
+      <CustomProperties />
+    </Template>
+  </Folder>
+</TemplatesExport>
