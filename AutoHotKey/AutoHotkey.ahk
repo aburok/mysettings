@@ -99,7 +99,10 @@ return
 
 #s::Run "C:\Windows\System32\SnippingTool.exe"
 
-
+^#v::
+    Path := FindGvimExe()
+    Run %Path%
+return
 
 #v::
     ; Get directory of selected Explorer window to set Gvim Path

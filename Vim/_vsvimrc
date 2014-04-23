@@ -3,8 +3,7 @@ source C:\Dropbox\mysettings\vim\_vimrc
 " REload source file for visual studio"
 nmap zls :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
 
-nmap x :vsc Window.CloseDocumentWindow<CR>
-nmap X :vsc Edit.UndoClose<CR>
+nmap zX :vsc Edit.UndoClose<CR>
 
 nnoremap J :vsc Window.PreviousTab<CR>
 nnoremap K :vsc Window.NextTab<CR>
@@ -20,7 +19,8 @@ nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
 
 nnoremap <Space> :vsc Edit.Find<CR>
 
-nnoremap zb :vsc Build.BuildSolution<CR>
+nnoremap zb :vsc Build.BuildSelection<CR>
+nnoremap zB :vsc Build.BuildSolution<CR>
 
 nnoremap zfm :vsc Edit.CollapsetoDefinitions<CR>
 nnoremap zfa :vsc Edit.ToggleAllOutlining<CR>
@@ -42,9 +42,8 @@ noremap <C-S>  :update<CR>
 vnoremap <C-S> <C-S>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 
-
-nnoremap zmp :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap zmn :vsc Window.MovetoNextTabGroup<cr>
+nnoremap zg :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap zG :vsc Window.MovetoNextTabGroup<cr>
 nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
 nnoremap zv :vsc Window.NewVerticalTabGroup<CR>
 
@@ -63,27 +62,31 @@ nnoremap gwk :vsc Window.PreviousSplitPane<cr>
 "nmap gn :vsc View.NextDocumentWindowNav<CR>
 
 " Go To Next Error in Solution"
-nmap gne :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
-nmap gpe :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+nmap gE :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
 
 "GO to Next/prev code issue"
-nmap gni :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
-nmap gpi :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+nmap gi :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+nmap gI :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
 
 " Go to Next/prev method"
 nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-nmap gpm :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
+noremap <C-J> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+noremap <C-K> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
 
 " Go to file / member
 nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
-nmap gtm :vsc ReSharper.ReSharper_GotoFileMember<CR>
+nmap gF :vsc ReSharper.ReSharper_GotoFileMember<CR>
 
 nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 
 " go to next/prev location"
-nmap gnu :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
-nmap gpu :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+nmap gn :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+nmap gN :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 
 " Live templates
 nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
@@ -106,6 +109,11 @@ nmap zei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
 vmap zif :vsc ReSharper.ReSharper_IntroduceField<CR>
 vmap zip :vsc ReSharper.ReSharper_IntroParameter<CR>
 vmap ziv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+
+nmap zrr :vsc ReSharper.ReSharper_Rename<CR>
+
+nmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
+vmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
 
 
 " TESTS "

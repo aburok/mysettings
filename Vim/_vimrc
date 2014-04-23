@@ -92,3 +92,5 @@ imap <C-S> <Esc>:w!<cr>a
 map N Nzz
 map n nzz
 
+" Close window"
+nnoremap zx :wq<CR>
