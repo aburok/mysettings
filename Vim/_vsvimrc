@@ -35,7 +35,12 @@ map gf :vsc View.NavigateForward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
 
 "nmap zsw :vsc Edit.SelectCurrentWord<CR>
-nmap zs :vsc ReSharper.ReSharper_ExtendSelection<CR>
+noremap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
+vmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
+nmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+noremap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
+noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 
 vnoremap <BS> d
 noremap <C-S>  :update<CR>
@@ -66,8 +71,8 @@ nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
 nmap gE :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
 
 "GO to Next/prev code issue"
-nmap gi :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
-nmap gI :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+nmap gh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+nmap gH :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
 
 " Go to Next/prev method"
 nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
@@ -80,6 +85,8 @@ noremap <C-K> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 " Go to file / member
 nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
 nmap gF :vsc ReSharper.ReSharper_GotoFileMember<CR>
+nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
+nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
 
 nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
@@ -94,23 +101,23 @@ vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
 nmap ztf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
 
 " Move Code Right / Down / Up / Left
-nmap zmh :vsc ReSharper.ReSharper_MoveLeft<CR>
-nmap zmj :vsc ReSharper.ReSharper_MoveDown<CR>
-nmap zmk :vsc ReSharper.ReSharper_MoveUp<CR>
-nmap zml :vsc ReSharper.ReSharper_MoveRight<CR>
+nmap zH :vsc ReSharper.ReSharper_MoveLeft<CR>
+nmap zJ :vsc ReSharper.ReSharper_MoveDown<CR>
+nmap zK :vsc ReSharper.ReSharper_MoveUp<CR>
+nmap zL :vsc ReSharper.ReSharper_MoveRight<CR>
 
 "Find usages
 nmap zfu :vsc ReSharper.ReSharper_FindUsages<CR>
 
 " Refactorings
+nmap zr :vsc ReSharper.ReSharper_Rename<CR>
+nmap zR :vsc ReSharper.ReSharper_RefactorThis<CR>
 vmap zem :vsc ReSharper.ReSharper_ExtractMethod<CR>
 nmap zei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
 
 vmap zif :vsc ReSharper.ReSharper_IntroduceField<CR>
 vmap zip :vsc ReSharper.ReSharper_IntroParameter<CR>
 vmap ziv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
-
-nmap zrr :vsc ReSharper.ReSharper_Rename<CR>
 
 nmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
 vmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
