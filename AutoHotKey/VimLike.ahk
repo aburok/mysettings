@@ -6,6 +6,10 @@
     +n::^PgDn
 #IfWinActive
 
+;#IfWinActive ahk_class Vim
+    ;CAPSLOCK::
+;#IfWinActive
+
 ;Reload script on Ctrl + S (Save)
 ~^s::
 IfWinActive, %A_ScriptName%

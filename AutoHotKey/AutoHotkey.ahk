@@ -73,7 +73,7 @@ return
 
 #i::Run gvim c:\settings.txt
 
-#k::RunOrActivate("ahk_class #32770", "..\KeePass-1.26\KeePass.exe")
+#k::RunOrActivate("ahk_class #32770", "..\..\Tools\KeePass-1.26\KeePass.exe")
 
 #m::
 #o::
@@ -110,7 +110,8 @@ return
     params := " -c ""cd " . workingDir . " "" -S Session.vim "
     Path := FindGvimExe()
     command := Path . " " . params
-    RunOrActivate("ahk_class Vim", command)
+    Run %command%
+    ;RunOrActivate("ahk_class Vim", command)
 return
 
 
@@ -138,7 +139,7 @@ return
 
 
 
-CAPSLOCK::Ctrl
+CAPSLOCK::Escape
 
 ; -----------------------
 ; FUNCTIONS

@@ -2,6 +2,11 @@ imap jj <esc>
 
 inoremap jk <esc>
 inoremap kj <esc>
+nnoremap <Space> /
+
+" map space in normal mode to Search :)
+inoremap <S-space> <esc>
+
 
 set tabstop=4
 set shiftwidth=4
@@ -32,9 +37,6 @@ let mapleader = ','
 
 nmap - $
 xmap - $
-
-" map space in normal mode to Search :)
-nnoremap <space> /
 
 nmap <enter> i<cr><esc>
 
@@ -94,3 +96,7 @@ map n nzz
 
 " Close window"
 nnoremap zx :wq<CR>
+
+"Find and Replace Text
+vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
+

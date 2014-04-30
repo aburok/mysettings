@@ -156,8 +156,6 @@ iab brb Be Right Back
 iab imho In My Humble Opinion
 iab lol Lought Out Loud
 
-"Find and Replace Text
-vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
 
 
 " Execute command recorded in register a by pressing `

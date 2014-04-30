@@ -3,54 +3,23 @@ source C:\Dropbox\mysettings\vim\_vimrc
 " REload source file for visual studio"
 nmap zls :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
 
+nmap zs :vsc Debug.Start<CR>
+nmap zS :vsc Debug.StopDebugging<CR>
+
+" Ctrl + Alt + I - ReSharper generate file beside
+" Ctrl + Alt + S - Resharper surrand with template
+
 nmap zX :vsc Edit.UndoClose<CR>
+
+nnoremap <Space> :vsc Edit.Find<CR>
 
 nnoremap J :vsc Window.PreviousTab<CR>
 nnoremap K :vsc Window.NextTab<CR>
 
-" go to last edited document"
-nnoremap <Tab> :vsc Window.NextDocumentWindowNav<CR>
 nnoremap L :vsc window.NextDocumentWindowNav<CR>
 
 nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc Window.Close<CR>
-
-nnoremap gnd :vsc Window.NextDocumentWindow<CR>
-nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
-
-nnoremap <Space> :vsc Edit.Find<CR>
-
-nnoremap zb :vsc Build.BuildSelection<CR>
-nnoremap zB :vsc Build.BuildSolution<CR>
-
-nnoremap zfm :vsc Edit.CollapsetoDefinitions<CR>
-nnoremap zfa :vsc Edit.ToggleAllOutlining<CR>
-nnoremap zft :vsc Edit.ToggleOutliningExpansion<CR>
-
-nnoremap zc :vsc Edit.CommentSelection<CR>
-nnoremap zu :vsc Edit.UncommentSelection<CR>
-
-map gb :vsc View.NavigateBackward<CR>
-nmap <C-O> :vsc View.NavigateBackward<CR>
-map gf :vsc View.NavigateForward<CR>
-nmap <C-I> :vsc View.NavigateForward<CR>
-
-"nmap zsw :vsc Edit.SelectCurrentWord<CR>
-noremap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
-vmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
-nmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-noremap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
-noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-
-vnoremap <BS> d
-noremap <C-S>  :update<CR>
-vnoremap <C-S> <C-S>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
-
-nnoremap zg :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap zG :vsc Window.MovetoNextTabGroup<cr>
-nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
-nnoremap zv :vsc Window.NewVerticalTabGroup<CR>
+vsczv :vsc Window.NewVerticalTabGroup<CR>
 
 nnoremap gwo :vsc FullScreen<cr>
 nnoremap gws :vsc Window.Split<cr>
@@ -62,9 +31,6 @@ nnoremap gwf :vsc Window.Float<cr>
 nnoremap gwj :vsc Window.NextSplitPane<cr>
 nnoremap gwk :vsc Window.PreviousSplitPane<cr>
 
-
-"nmap gp :vsc View.PreviousDocumentWindowNav<CR>
-"nmap gn :vsc View.NextDocumentWindowNav<CR>
 
 " Go To Next Error in Solution"
 nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
@@ -92,8 +58,8 @@ nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 
 " go to next/prev location"
-nmap gn :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
-nmap gN :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+nmap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+nmap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 
 " Live templates
 nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
@@ -130,3 +96,10 @@ nmap zts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
 nmap ztr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
 
 
+nmap zac :vsc Project.AddClass<CR>
+nmap zar :vsc Project.AddReference<CR>
+
+nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
+nmap gwp :vsc View.PackageManagerConsole<CR>
+
+vmap zs :vsc ReSharper.ReSharper_SurroundWith<CR>

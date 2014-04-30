@@ -68,7 +68,9 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 " "Bundle 'git://git.wincent.com/command-t.git'
 " git repos on your local machine (i.e. when working on your own plugin)
 " Bundle 'file:///home/gmarik/path/to/plugin'
-" ...
+"" ...
+
+Bundle 'https://github.com/groenewege/vim-less'
 
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
