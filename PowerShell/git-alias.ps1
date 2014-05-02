@@ -15,3 +15,5 @@ Set-alias -name gip -Value git-push
 
 function git-add { git add -A :/ }
 Set-alias -name gia -Value git-add
+
+#Set-alias -Name giat -Value git add -n :/

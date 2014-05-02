@@ -4,6 +4,9 @@ inoremap jk <esc>
 inoremap kj <esc>
 nnoremap <Space> /
 
+map 0 ^
+map Q <nop>
+
 " map space in normal mode to Search :)
 inoremap <S-space> <esc>
 
@@ -99,4 +102,6 @@ nnoremap zx :wq<CR>
 
 "Find and Replace Text
 vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
+vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
+
 

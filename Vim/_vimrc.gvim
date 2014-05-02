@@ -2,9 +2,6 @@
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
 
-"nnoremap J <C-W>h
-"nnoremap K <C-W>l
-
 " move a line of text using Alt + [jk]
 nmap <M-j> my:m+<cr>`y
 nmap <M-k> my:m-2<cr>`y
@@ -65,23 +62,11 @@ set foldlevel=3
     nmap <leader>f9 :set foldlevel=9<CR>
 " }
 
-map Q <nop>
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
-
-" <C-W>_
-" <C-W>=
-
-map 0 ^
-
-" Inserting blank line below/above current line
-" Ctrl + j
-" nmap <C-j> myo<esc>`y
-" Ctrl + k
-" nmap <C-k> myO<esc>`y
 
 " Settings for spell checking
 map <leader>ss :setlocal spell!<CR>
@@ -91,7 +76,6 @@ map <leader>sp [s " Go to previous misspelled word
 "map <leader>sa zg " Add word under cursor to the good words file
 map <leader>s? z=  " Suggest correct word for word under the cursor
 imap <C-Space> <C-n>
-
 
 
 " Only do this part when compiled with support for autocommands.
@@ -192,4 +176,7 @@ noremap <C-Tab> <C-W>w
 inoremap <C-Tab> <C-O><C-W>w
 cnoremap <C-Tab> <C-C><C-W>w
 onoremap <C-Tab> <C-C><C-W>w
+
+" GIT mapping
+nnoremap <Leader>gd :!git diff %<CR><Space>
 
