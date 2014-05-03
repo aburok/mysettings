@@ -81,3 +81,10 @@ nmap <leader>fb /\_s{\_s\S<CR>jvi{>
 " Surround with <pre> tag and remove <p> from each line
 vmap <leader>fp S<pre>$movit:s/<p>\(.\+\)<\/p>/\1/g<CR>/Listing<cr>
 
+
+" Vim-AirLine
+function! AirlineInit()
+    let g:airline_section_z = airline#section#create_right(['%2cc %3lr %Lt'])
+endfunction
+autocmd vimenter * call AirlineInit()
+

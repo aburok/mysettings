@@ -42,7 +42,7 @@ GetHelpFilePath(){
     {
         IfInString, windowClass, HwndWrapper
         {
-            return "shortcuts\visualstudio.help"
+            return "shortcuts\vs.help"
         }
     }
 

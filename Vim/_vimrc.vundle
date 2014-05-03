@@ -72,6 +72,8 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 
 Bundle 'https://github.com/groenewege/vim-less'
 
+Bundle 'https://github.com/scrooloose/syntastic'
+
 syntax on
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:

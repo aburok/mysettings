@@ -107,7 +107,7 @@ return
 #v::
     ; Get directory of selected Explorer window to set Gvim Path
     workingDir := GetWorkingDirectory()
-    params := " -c ""cd " . workingDir . " "" -S Session.vim "
+    params := " -c ""cd " . workingDir . " "" " ;"-S Session.vim "
     Path := FindGvimExe()
     command := Path . " " . params
     Run %command%

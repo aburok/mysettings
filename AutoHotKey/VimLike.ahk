@@ -19,4 +19,5 @@ IfWinActive, %A_ScriptName%
     SplashTextOff
     Reload
 }
+
 return

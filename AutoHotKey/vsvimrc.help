@@ -1,0 +1,120 @@
+[sc]zls
+[def] :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
+[sc]zs
+[def] :vsc Debug.Start<CR>
+[sc]zS
+[def] :vsc Debug.StopDebugging<CR>
+[sc]zX
+[def] :vsc Edit.UndoClose<CR>
+[sc]<Space>
+[def] :vsc Edit.Find<CR>
+[sc]J
+[def] :vsc Window.PreviousTab<CR>
+[sc]K
+[def] :vsc Window.NextTab<CR>
+[sc]L
+[def] :vsc window.NextDocumentWindowNav<CR>
+[sc]Q
+[def] :vsc File.SaveSelectedItems<CR> :vsc Window.Close<CR>
+[sc]gwo
+[def] :vsc FullScreen<cr>
+[sc]gws
+[def] :vsc Window.Split<cr>
+[sc]gwc
+[def] :vsc Window.Split<cr>
+[sc]gwC
+[def] :vsc Window.CloseDocumentWindow<cr>
+[sc]gwh
+[def] :vsc Window.NewHorizontalTabGroup<cr>
+[sc]gwv
+[def] :vsc Window.NewVerticalTabGroup<cr>
+[sc]gwf
+[def] :vsc Window.Float<cr>
+[sc]gwj
+[def] :vsc Window.NextSplitPane<cr>
+[sc]gwk
+[def] :vsc Window.PreviousSplitPane<cr>
+[sc]ge
+[def] :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+[sc]gE
+[def] :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+[sc]gh
+[def] :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+[sc]gH
+[def] :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+[sc]gm
+[def] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+[sc]gM
+[def] :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+[sc]<C-J>
+[def] :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+[sc]<C-K>
+[def] :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+[sc]gf
+[def] :vsc ReSharper.ReSharper_GotoFile<CR>
+[sc]gF
+[def] :vsc ReSharper.ReSharper_GotoFileMember<CR>
+[sc]gr
+[def] :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
+[sc]gR
+[def] :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
+[sc]gd
+[def] :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+[sc]gi
+[def] :vsc ReSharper.ReSharper_GotoImplementation<CR>
+[sc]gl
+[def] :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+[sc]gL
+[def] :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+[sc]zti
+[def] :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
+[sc]S
+[def] :vsc ReSharper.ReSharper_SurroundWith<CR>
+[sc]ztf
+[def] :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
+[sc]zH
+[def] :vsc ReSharper.ReSharper_MoveLeft<CR>
+[sc]zJ
+[def] :vsc ReSharper.ReSharper_MoveDown<CR>
+[sc]zK
+[def] :vsc ReSharper.ReSharper_MoveUp<CR>
+[sc]zL
+[def] :vsc ReSharper.ReSharper_MoveRight<CR>
+[sc]zfu
+[def] :vsc ReSharper.ReSharper_FindUsages<CR>
+[sc]zr
+[def] :vsc ReSharper.ReSharper_Rename<CR>
+[sc]zR
+[def] :vsc ReSharper.ReSharper_RefactorThis<CR>
+[sc]zem
+[def] :vsc ReSharper.ReSharper_ExtractMethod<CR>
+[sc]zei
+[def] :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+[sc]zif
+[def] :vsc ReSharper.ReSharper_IntroduceField<CR>
+[sc]zip
+[def] :vsc ReSharper.ReSharper_IntroParameter<CR>
+[sc]ziv
+[def] :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+[sc]zd
+[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
+[sc]zd
+[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
+[sc]ztf
+[def] :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
+[sc]zta
+[def] :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
+[sc]zts
+[def] :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
+[sc]ztr
+[def] :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
+[sc]zac
+[def] :vsc Project.AddClass<CR>
+[sc]zar
+[def] :vsc Project.AddReference<CR>
+[sc]gwt
+[def] :vsc TestExplorer.ShowTestExplorer<CR>
+[sc]gwp
+[def] :vsc View.PackageManagerConsole<CR>
+[sc]zs
+[def] :vsc ReSharper.ReSharper_SurroundWith<CR>
