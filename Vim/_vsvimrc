@@ -103,3 +103,41 @@ nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
 nmap gwp :vsc View.PackageManagerConsole<CR>
 
 vmap zs :vsc ReSharper.ReSharper_SurroundWith<CR>
+
+nnoremap gnd :vsc Window.NextDocumentWindow<CR>
+nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
+
+nnoremap <Space> :vsc Edit.Find<CR>
+
+nnoremap zb :vsc Build.BuildSelection<CR>
+nnoremap zB :vsc Build.BuildSolution<CR>
+
+nnoremap zfm :vsc Edit.CollapsetoDefinitions<CR>
+nnoremap zfa :vsc Edit.ToggleAllOutlining<CR>
+nnoremap zft :vsc Edit.ToggleOutliningExpansion<CR>
+
+nnoremap zc :vsc Edit.CommentSelection<CR>
+nnoremap zu :vsc Edit.UncommentSelection<CR>
+
+map gb :vsc View.NavigateBackward<CR>
+map gB :vsc View.NavigateForward<CR>
+nmap <C-O> :vsc View.NavigateBackward<CR>
+nmap <C-I> :vsc View.NavigateForward<CR>
+
+"nmap zsw :vsc Edit.SelectCurrentWord<CR>
+nmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
+vmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
+nmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+vmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
+noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+
+vnoremap <BS> d
+noremap <C-S>  :update<CR>
+vnoremap <C-S> <C-S>:update<CR>
+inoremap <C-S> <C-O>:update<CR>
+
+nnoremap zg :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap zG :vsc Window.MovetoNextTabGroup<cr>
+nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
+nnoremap zv :vsc Window.NewVerticalTabGroup<CR>

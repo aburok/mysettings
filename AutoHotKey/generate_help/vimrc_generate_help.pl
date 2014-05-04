@@ -11,7 +11,7 @@ open(my $vimrc_help, ">", $ARGV[1]) or die("Cannot open file $ARGV[1].");
 
 while(<$vimrc>){
     #Match any mapping
-    if($_ =~ m/^[vnorei]+map\s+(\S+)\s+(.+)$/){
+    if($_ =~ m/^[vnorei]*map\s+(\S+)\s+(.+)$/){
         print $vimrc_help "[sc]$1\n[def] $2\n";
     }
 }

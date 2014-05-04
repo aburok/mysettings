@@ -108,22 +108,24 @@ return
     ; Get directory of selected Explorer window to set Gvim Path
     workingDir := GetWorkingDirectory()
     params := " -c ""cd " . workingDir . " "" " ;"-S Session.vim "
-    Path := FindGvimExe()
-    command := Path . " " . params
+    GVimPath := FindGvimExe()
+    command := GVimPath . " " . params
     Run %command%
     ;RunOrActivate("ahk_class Vim", command)
 return
 
 
 FindGvimExe(){
-    gvimPath := "C:\Program Files (x86)\vim\Vim74\gvim.exe"
+    gvimPath := "C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe"
+        . "," . "C:\Program Files (x86)\vim\Vim74\gvim.exe"
         . "," . "%PROGRAMFILES%\Vim73\vim73\gvim.exe"
         . "," .	"%PROGRAMFILES%\vim\vim74\gvim.exe"
+        . "," .	"%PROGRAMFILES%\vim\vim73\gvim.exe"
         . "," . "C:\Program Files (x86)\vim\gvim.exe"
 
-    Path := ReturnFirstExistingFile(gvimPath)
-    Path := Path ? Path : "gvim.exe"
-    return Path
+    vimPath := ReturnFirstExistingFile(gvimPath)
+    vimPath := vimPath ? vimPath : "gvim.exe"
+    return vimPath
 }
 
 

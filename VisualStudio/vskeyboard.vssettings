@@ -676,6 +676,7 @@
           <Shortcut Command="ReSharper.ReSharper_ReSharper_UnitTest_DebugContext" Scope="XAML UI Designer">Ctrl+T, Ctrl+D</Shortcut>
           <Shortcut Command="ReSharper_SelectContainingDeclaration" Scope="XAML UI Designer">Ctrl+Shift+[</Shortcut>
           <Shortcut Command="ReSharper.ReSharper_SurroundWith" Scope="Global">Ctrl+Alt+S</Shortcut>
+          <Shortcut Command="ReSharper.ReSharper_GenerateFileBesides" Scope="Global">Ctrl+Alt+I</Shortcut>
         </UserShortcuts>
       </KeyboardShortcuts>
     </Category>
