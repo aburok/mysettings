@@ -27,8 +27,8 @@ Bundle 'https://github.com/pangloss/vim-javascript'
 Bundle 'tpope/vim-surround'
 "Bundle 'https://github.com/yegappan/mru'
 
-Bundle 'https://github.com/xolox/vim-misc'
-Bundle 'https://github.com/xolox/vim-notes'
+"Bundle 'https://github.com/xolox/vim-misc'
+"Bundle 'https://github.com/xolox/vim-notes'
 " "Bundle 'https://github.com/lpenz/vimcommander'
 
 Bundle 'vim-scripts/sessionman.vim'

@@ -29,12 +29,23 @@ global Bottom_Right_OneThird := " 0.6666, 0.5, 0.3333, 0.5 "
 
 global Next := " | "
 
-^#h::
-Settings := Left_Half
-    . Next . " 0, 0, 0.3333, 1 "
-    . Next . " 0, 0, 0.6666, 1 "
-ToggleWindowPosition(Settings, "Left")
-return
++#h::Send {Shift down}{LWin down }{ Left down}
++#l::Send {Shift down}{LWin down}{ Right down}
+
+;^#h::
+;Settings := Left_Half
+    ;. Next . " 0, 0, 0.3333, 1 "
+    ;. Next . " 0, 0, 0.6666, 1 "
+;ToggleWindowPosition(Settings, "Left")
+;return
+
+;^#l::
+;Settings := Right_Half
+    ;. Next . Top_Right_Corner
+    ;. Next . Bottom_Right_Corner
+    ;. Next . " 0.3333, 0, 0.6666, 1 "
+;ToggleWindowPosition(Settings, "Right")
+;return
 
 ^#j::
 Settings := Bottom_Half
@@ -48,14 +59,6 @@ Settings := Top_Half
     . Next . Top_Left_Half
     . Next . Top_Right_Corner
 ToggleWindowPosition(Settings, "Top")
-return
-
-^#l::
-Settings := Right_Half
-    . Next . Top_Right_Corner
-    . Next . Bottom_Right_Corner
-    . Next . " 0.3333, 0, 0.6666, 1 "
-ToggleWindowPosition(Settings, "Right")
 return
 
 
@@ -86,8 +89,6 @@ return
     . Next . Bottom_Right_OneThird
     , "C")
 
-+#h::Send {Shift down}{LWin down }{ Left down}
-+#l::Send {Shift down}{LWin down}{ Right down}
 
 ^#m::
     WinGet MX, MinMax, A
