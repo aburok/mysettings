@@ -3,8 +3,8 @@ source C:\Dropbox\mysettings\vim\_vimrc
 " REload source file for visual studio"
 nmap zls :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
 
-nmap zs :vsc Debug.Start<CR>
-nmap zS :vsc Debug.StopDebugging<CR>
+nmap <leader>s :vsc Debug.Start<CR>
+nmap <leader>S :vsc Debug.StopDebugging<CR>
 
 " Ctrl + Alt + I - ReSharper generate file beside
 " Ctrl + Alt + S - Resharper surrand with template
@@ -66,38 +66,8 @@ nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
 vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
 nmap ztf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
 
-" Move Code Right / Down / Up / Left
-nmap zH :vsc ReSharper.ReSharper_MoveLeft<CR>
-nmap zJ :vsc ReSharper.ReSharper_MoveDown<CR>
-nmap zK :vsc ReSharper.ReSharper_MoveUp<CR>
-nmap zL :vsc ReSharper.ReSharper_MoveRight<CR>
-
 "Find usages
 nmap zfu :vsc ReSharper.ReSharper_FindUsages<CR>
-
-" Refactorings
-nmap zr :vsc ReSharper.ReSharper_Rename<CR>
-nmap zR :vsc ReSharper.ReSharper_RefactorThis<CR>
-vmap zem :vsc ReSharper.ReSharper_ExtractMethod<CR>
-nmap zei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
-
-vmap zif :vsc ReSharper.ReSharper_IntroduceField<CR>
-vmap zip :vsc ReSharper.ReSharper_IntroParameter<CR>
-vmap ziv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
-
-nmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
-vmap zd :vsc ReSharper.ReSharper_DuplicateText<CR>
-
-
-" TESTS "
-nmap ztf :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
-nmap zta :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
-nmap zts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
-nmap ztr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
-
-
-nmap zac :vsc Project.AddClass<CR>
-nmap zar :vsc Project.AddReference<CR>
 
 nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
 nmap gwp :vsc View.PackageManagerConsole<CR>
@@ -109,15 +79,15 @@ nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
 
 nnoremap <Space> :vsc Edit.Find<CR>
 
-nnoremap zb :vsc Build.BuildSelection<CR>
-nnoremap zB :vsc Build.BuildSolution<CR>
+nnoremap <leader>b :vsc Build.BuildSelection<CR>
+nnoremap <leader>B :vsc Build.BuildSolution<CR>
 
-nnoremap zfm :vsc Edit.CollapsetoDefinitions<CR>
-nnoremap zfa :vsc Edit.ToggleAllOutlining<CR>
-nnoremap zft :vsc Edit.ToggleOutliningExpansion<CR>
+nnoremap <leader>fm :vsc Edit.CollapsetoDefinitions<CR>
+nnoremap <leader>fa :vsc Edit.ToggleAllOutlining<CR>
+nnoremap <leader>ft :vsc Edit.ToggleOutliningExpansion<CR>
 
-nnoremap zc :vsc Edit.CommentSelection<CR>
-nnoremap zu :vsc Edit.UncommentSelection<CR>
+nnoremap <Leader>c :vsc Edit.CommentSelection<CR>
+nnoremap <Leader>u :vsc Edit.UncommentSelection<CR>
 
 map gb :vsc View.NavigateBackward<CR>
 map gB :vsc View.NavigateForward<CR>
@@ -125,10 +95,10 @@ nmap <C-O> :vsc View.NavigateBackward<CR>
 nmap <C-I> :vsc View.NavigateForward<CR>
 
 "nmap zsw :vsc Edit.SelectCurrentWord<CR>
-nmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
-vmap zw :vsc ReSharper.ReSharper_ExtendSelection<CR>
-nmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-vmap zW :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+nmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
+vmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
+nmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+vmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
 noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 
@@ -137,7 +107,38 @@ noremap <C-S>  :update<CR>
 vnoremap <C-S> <C-S>:update<CR>
 inoremap <C-S> <C-O>:update<CR>
 
-nnoremap zg :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap zG :vsc Window.MovetoNextTabGroup<cr>
-nnoremap zh :vsc Window.NewHorizontalTabGroup<CR>
-nnoremap zv :vsc Window.NewVerticalTabGroup<CR>
+nnoremap <Leader>g :vsc Window.MovetoPreviousTabGroup<cr>
+nnoremap <Leader>G :vsc Window.MovetoNextTabGroup<cr>
+nnoremap <Leader>h :vsc Window.NewHorizontalTabGroup<CR>
+nnoremap <Leader>v :vsc Window.NewVerticalTabGroup<CR>
+
+nmap <Leader>ww :vsc Edit.ToggleWordWrap<CR>
+
+" TESTS "
+nmap <Leader>tf :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
+nmap <Leader>ta :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
+nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
+nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
+
+" Move Code Right / Down / Up / Left
+nmap <Leader>H :vsc ReSharper.ReSharper_MoveLeft<CR>
+nmap <Leader>J :vsc ReSharper.ReSharper_MoveDown<CR>
+nmap <Leader>K :vsc ReSharper.ReSharper_MoveUp<CR>
+nmap <Leader>L :vsc ReSharper.ReSharper_MoveRight<CR>
+
+" Refactorings
+nmap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
+nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
+vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
+nmap <leader>ei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+
+vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
+vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
+vmap <leader>iv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+
+nmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+vmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+
+nmap <leader>ac :vsc Project.AddClass<CR>
+nmap <leader>ar :vsc Project.AddReference<CR>
+
