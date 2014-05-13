@@ -1,8 +1,8 @@
 [sc]zls
 [def] :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
-[sc]zs
+[sc]<leader>s
 [def] :vsc Debug.Start<CR>
-[sc]zS
+[sc]<leader>S
 [def] :vsc Debug.StopDebugging<CR>
 [sc]zX
 [def] :vsc Edit.UndoClose<CR>
@@ -24,10 +24,6 @@
 [def] :vsc Window.Split<cr>
 [sc]gwC
 [def] :vsc Window.CloseDocumentWindow<cr>
-[sc]gwh
-[def] :vsc Window.NewHorizontalTabGroup<cr>
-[sc]gwv
-[def] :vsc Window.NewVerticalTabGroup<cr>
 [sc]gwf
 [def] :vsc Window.Float<cr>
 [sc]gwj
@@ -72,46 +68,8 @@
 [def] :vsc ReSharper.ReSharper_SurroundWith<CR>
 [sc]ztf
 [def] :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
-[sc]zH
-[def] :vsc ReSharper.ReSharper_MoveLeft<CR>
-[sc]zJ
-[def] :vsc ReSharper.ReSharper_MoveDown<CR>
-[sc]zK
-[def] :vsc ReSharper.ReSharper_MoveUp<CR>
-[sc]zL
-[def] :vsc ReSharper.ReSharper_MoveRight<CR>
 [sc]zfu
 [def] :vsc ReSharper.ReSharper_FindUsages<CR>
-[sc]zr
-[def] :vsc ReSharper.ReSharper_Rename<CR>
-[sc]zR
-[def] :vsc ReSharper.ReSharper_RefactorThis<CR>
-[sc]zem
-[def] :vsc ReSharper.ReSharper_ExtractMethod<CR>
-[sc]zei
-[def] :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
-[sc]zif
-[def] :vsc ReSharper.ReSharper_IntroduceField<CR>
-[sc]zip
-[def] :vsc ReSharper.ReSharper_IntroParameter<CR>
-[sc]ziv
-[def] :vsc ReSharper.ReSharper_IntroduceVariable<CR>
-[sc]zd
-[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
-[sc]zd
-[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
-[sc]ztf
-[def] :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
-[sc]zta
-[def] :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
-[sc]zts
-[def] :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
-[sc]ztr
-[def] :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
-[sc]zac
-[def] :vsc Project.AddClass<CR>
-[sc]zar
-[def] :vsc Project.AddReference<CR>
 [sc]gwt
 [def] :vsc TestExplorer.ShowTestExplorer<CR>
 [sc]gwp
@@ -124,19 +82,19 @@
 [def] :vsc Window.PreviousDocumentWindow<CR>
 [sc]<Space>
 [def] :vsc Edit.Find<CR>
-[sc]zb
+[sc]<leader>b
 [def] :vsc Build.BuildSelection<CR>
-[sc]zB
+[sc]<leader>B
 [def] :vsc Build.BuildSolution<CR>
-[sc]zfm
+[sc]<leader>fm
 [def] :vsc Edit.CollapsetoDefinitions<CR>
-[sc]zfa
+[sc]<leader>fa
 [def] :vsc Edit.ToggleAllOutlining<CR>
-[sc]zft
+[sc]<leader>ft
 [def] :vsc Edit.ToggleOutliningExpansion<CR>
-[sc]zc
+[sc]<Leader>c
 [def] :vsc Edit.CommentSelection<CR>
-[sc]zu
+[sc]<Leader>u
 [def] :vsc Edit.UncommentSelection<CR>
 [sc]gb
 [def] :vsc View.NavigateBackward<CR>
@@ -146,13 +104,13 @@
 [def] :vsc View.NavigateBackward<CR>
 [sc]<C-I>
 [def] :vsc View.NavigateForward<CR>
-[sc]zw
+[sc]<leader>w
 [def] :vsc ReSharper.ReSharper_ExtendSelection<CR>
-[sc]zw
+[sc]<leader>w
 [def] :vsc ReSharper.ReSharper_ExtendSelection<CR>
-[sc]zW
+[sc]<leader>W
 [def] :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-[sc]zW
+[sc]<leader>W
 [def] :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 [sc]<C-W>
 [def] :vsc ReSharper.ReSharper_ExtendSelection<CR>
@@ -166,14 +124,54 @@
 [def] <C-S>:update<CR>
 [sc]<C-S>
 [def] <C-O>:update<CR>
-[sc]zg
+[sc]<Leader>g
 [def] :vsc Window.MovetoPreviousTabGroup<cr>
-[sc]zG
+[sc]<Leader>G
 [def] :vsc Window.MovetoNextTabGroup<cr>
-[sc]zh
+[sc]<Leader>h
 [def] :vsc Window.NewHorizontalTabGroup<CR>
-[sc]zv
+[sc]<Leader>v
 [def] :vsc Window.NewVerticalTabGroup<CR>
+[sc]<Leader>ww
+[def] :vsc Edit.ToggleWordWrap<CR>
+[sc]<Leader>tf
+[def] :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
+[sc]<Leader>ta
+[def] :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
+[sc]<Leader>ts
+[def] :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
+[sc]<Leader>tr
+[def] :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
+[sc]<Leader>H
+[def] :vsc ReSharper.ReSharper_MoveLeft<CR>
+[sc]<Leader>J
+[def] :vsc ReSharper.ReSharper_MoveDown<CR>
+[sc]<Leader>K
+[def] :vsc ReSharper.ReSharper_MoveUp<CR>
+[sc]<Leader>L
+[def] :vsc ReSharper.ReSharper_MoveRight<CR>
+[sc]<leader>r
+[def] :vsc ReSharper.ReSharper_Rename<CR>
+[sc]<leader>R
+[def] :vsc ReSharper.ReSharper_RefactorThis<CR>
+[sc]<leader>em
+[def] :vsc ReSharper.ReSharper_ExtractMethod<CR>
+[sc]<leader>ei
+[def] :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+[sc]<leader>if
+[def] :vsc ReSharper.ReSharper_IntroduceField<CR>
+[sc]<leader>ip
+[def] :vsc ReSharper.ReSharper_IntroParameter<CR>
+[sc]<leader>iv
+[def] :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+[sc]<leader>d
+[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
+[sc]<leader>d
+[def] :vsc ReSharper.ReSharper_DuplicateText<CR>
+[sc]<leader>ac
+[def] :vsc Project.AddClass<CR>
+[sc]<leader>ar
+[def] :vsc Project.AddReference<CR>
 [sc] F7 
 [def] View.ViewCode
 [sc] Shift+F7 

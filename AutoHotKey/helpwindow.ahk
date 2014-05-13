@@ -38,6 +38,9 @@ GetHelpFilePath(){
     if (windowClass == "XLMAIN"){
         return "shortcuts\excel.help"
     }
+    if(windowClass == "OpusApp"){
+        return "shortcuts\word.help"
+    }
     IfInString, Title, Visual Studio
     {
         IfInString, windowClass, HwndWrapper

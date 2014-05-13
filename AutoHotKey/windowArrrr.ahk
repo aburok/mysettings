@@ -74,9 +74,15 @@ return
     , "E")
 
 ; A S D
-^#a:: SetWindowPositionTo(Left_Half)
+^#a:: ToggleWindowPosition(Left_Half
+    . Next . "0, 0, 0.3333, 1"
+    . Next . "0, 0, 0.6666, 1"
+    , "A")
 ^#s:: SetWindowPositionTo("0, 0, 1, 1") ; Maximize window
-^#d:: SetWindowPositionTo(Right_Half)
+^#d:: ToggleWindowPosition(Right_Half
+    . Next . "0.3333, 0, 0.6666, 1"
+    . Next . "0.6666, 0, 0.3333, 1"
+    , "D")
 
 ; Z X C
 ^#z:: ToggleWindowPosition(Bottom_Left_Corner

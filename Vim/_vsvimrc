@@ -3,142 +3,170 @@ source C:\Dropbox\mysettings\vim\_vimrc
 " REload source file for visual studio"
 nmap zls :source C:\Dropbox\mysettings\vim\_vsvimrc<CR>
 
-nmap <leader>s :vsc Debug.Start<CR>
-nmap <leader>S :vsc Debug.StopDebugging<CR>
-
 " Ctrl + Alt + I - ReSharper generate file beside
 " Ctrl + Alt + S - Resharper surrand with template
 
-nmap zX :vsc Edit.UndoClose<CR>
+" File {{{
+    nmap zX :vsc Edit.UndoClose<CR>
+    nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc File.Close<CR>
+" }}}
 
-nnoremap <Space> :vsc Edit.Find<CR>
+" Build {{{
 
-nnoremap J :vsc Window.PreviousTab<CR>
-nnoremap K :vsc Window.NextTab<CR>
+    nnoremap <leader>b :vsc Build.BuildSelection<CR>
+    nnoremap <leader>B :vsc Build.BuildSolution<CR>
 
-nnoremap L :vsc window.NextDocumentWindowNav<CR>
+    nmap <leader>s :vsc Debug.Start<CR>
+    nmap <leader>S :vsc Debug.StopDebugging<CR>
 
-nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc Window.Close<CR>
-vsczv :vsc Window.NewVerticalTabGroup<CR>
+" }}}
 
-nnoremap gwo :vsc FullScreen<cr>
-nnoremap gws :vsc Window.Split<cr>
-nnoremap gwc :vsc Window.Split<cr>
-nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
-nnoremap gwh :vsc Window.NewHorizontalTabGroup<cr>
-nnoremap gwv :vsc Window.NewVerticalTabGroup<cr>
-nnoremap gwf :vsc Window.Float<cr>
-nnoremap gwj :vsc Window.NextSplitPane<cr>
-nnoremap gwk :vsc Window.PreviousSplitPane<cr>
-
-
-" Go To Next Error in Solution"
-nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
-nmap gE :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
-
-"GO to Next/prev code issue"
-nmap gh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
-nmap gH :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
-
-" Go to Next/prev method"
-nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-
-noremap <C-J> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-noremap <C-K> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-
-
-" Go to file / member
-nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
-nmap gF :vsc ReSharper.ReSharper_GotoFileMember<CR>
-nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
-nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
-
-nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
-nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
-
-" go to next/prev location"
-nmap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
-nmap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
-
-" Live templates
-nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
-vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
-nmap ztf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
-
-"Find usages
-nmap zfu :vsc ReSharper.ReSharper_FindUsages<CR>
+" TESTS {{{
 
 nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
-nmap gwp :vsc View.PackageManagerConsole<CR>
 
-vmap zs :vsc ReSharper.ReSharper_SurroundWith<CR>
-
-nnoremap gnd :vsc Window.NextDocumentWindow<CR>
-nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
-
-nnoremap <Space> :vsc Edit.Find<CR>
-
-nnoremap <leader>b :vsc Build.BuildSelection<CR>
-nnoremap <leader>B :vsc Build.BuildSolution<CR>
-
-nnoremap <leader>fm :vsc Edit.CollapsetoDefinitions<CR>
-nnoremap <leader>fa :vsc Edit.ToggleAllOutlining<CR>
-nnoremap <leader>ft :vsc Edit.ToggleOutliningExpansion<CR>
-
-nnoremap <Leader>c :vsc Edit.CommentSelection<CR>
-nnoremap <Leader>u :vsc Edit.UncommentSelection<CR>
-
-map gb :vsc View.NavigateBackward<CR>
-map gB :vsc View.NavigateForward<CR>
-nmap <C-O> :vsc View.NavigateBackward<CR>
-nmap <C-I> :vsc View.NavigateForward<CR>
-
-"nmap zsw :vsc Edit.SelectCurrentWord<CR>
-nmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
-vmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
-nmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-vmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
-noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
-
-vnoremap <BS> d
-noremap <C-S>  :update<CR>
-vnoremap <C-S> <C-S>:update<CR>
-inoremap <C-S> <C-O>:update<CR>
-
-nnoremap <Leader>g :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap <Leader>G :vsc Window.MovetoNextTabGroup<cr>
-nnoremap <Leader>h :vsc Window.NewHorizontalTabGroup<CR>
-nnoremap <Leader>v :vsc Window.NewVerticalTabGroup<CR>
-
-nmap <Leader>ww :vsc Edit.ToggleWordWrap<CR>
-
-" TESTS "
 nmap <Leader>tf :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
 nmap <Leader>ta :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
 nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
 nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
 
-" Move Code Right / Down / Up / Left
-nmap <Leader>H :vsc ReSharper.ReSharper_MoveLeft<CR>
-nmap <Leader>J :vsc ReSharper.ReSharper_MoveDown<CR>
-nmap <Leader>K :vsc ReSharper.ReSharper_MoveUp<CR>
-nmap <Leader>L :vsc ReSharper.ReSharper_MoveRight<CR>
+" }}}
 
-" Refactorings
-nmap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
-nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
-vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
-nmap <leader>ei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+" Navigation {{{
 
-vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
-vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
-vmap <leader>iv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+    nnoremap <Space> :vsc Edit.Find<CR>
+    "Find usages
+    nmap zfu :vsc ReSharper.ReSharper_FindUsages<CR>
 
-nmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
-vmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+    map gb :vsc View.NavigateBackward<CR>
+    map gB :vsc View.NavigateForward<CR>
+    nmap <C-O> :vsc View.NavigateBackward<CR>
+    nmap <C-I> :vsc View.NavigateForward<CR>
 
-nmap <leader>ac :vsc Project.AddClass<CR>
-nmap <leader>ar :vsc Project.AddReference<CR>
+    " Go to Next/prev method"
+    nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+    noremap <C-H> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+
+    nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+    noremap <C-L> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+
+    nnoremap gnd :vsc Window.NextDocumentWindow<CR>
+    nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
+
+    nnoremap J :vsc Window.PreviousTab<CR>
+    nnoremap K :vsc Window.NextTab<CR>
+    nnoremap L :vsc window.NextDocumentWindowNav<CR>
+
+    " Go to file / member
+    nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
+    nmap gF :vsc ReSharper.ReSharper_GotoFileMember<CR>
+    nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
+    nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
+
+    nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+    nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+
+    " go to next/prev location"
+    nmap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+    nmap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+
+    " Go To Next Error in Solution"
+    nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+    noremap <C-E> :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
+    nmap gE :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+
+    "GO to Next/prev code issue"
+    nmap gh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+    nmap gH :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+"}}}
+
+
+" Code View {{{
+    nnoremap <leader>fm :vsc Edit.CollapsetoDefinitions<CR>
+    nnoremap <leader>fa :vsc Edit.ToggleAllOutlining<CR>
+    nnoremap <leader>ft :vsc Edit.ToggleOutliningExpansion<CR>
+
+    nmap <Leader>ww :vsc Edit.ToggleWordWrap<CR>
+" }}}
+
+" Code Edit {{{
+    nnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    vnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+    vnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
+
+    " Move Code Right / Down / Up / Left
+    nmap <Leader>H :vsc ReSharper.ReSharper_MoveLeft<CR>
+    nmap <Leader>J :vsc ReSharper.ReSharper_MoveDown<CR>
+    nmap <Leader>K :vsc ReSharper.ReSharper_MoveUp<CR>
+    nmap <Leader>L :vsc ReSharper.ReSharper_MoveRight<CR>
+
+    nmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+    vmap <leader>d :vsc ReSharper.ReSharper_DuplicateText<CR>
+" }}}
+
+" Refactorings {{{
+    nmap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
+    nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
+    vmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
+    vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
+    nmap <leader>ei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+
+    vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
+    vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
+    vmap <leader>iv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+
+    nmap <leader>ac :vsc Project.AddClass<CR>
+    nmap <leader>ar :vsc Project.AddReference<CR>
+" }}}
+
+" Live templates {{{
+    nmap zti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
+    vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
+    nmap ztf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
+" }}}
+
+
+" Windows {{{
+
+nmap gwp :vsc View.PackageManagerConsole<CR>
+
+" }}}
+
+" Window Managment {{{
+
+    nnoremap gwo :vsc FullScreen<cr>
+    nnoremap gws :vsc Window.Split<cr>
+    nnoremap gwc :vsc Window.Split<cr>
+    nnoremap gwC :vsc Window.CloseDocumentWindow<cr>
+    nnoremap gwf :vsc Window.Float<cr>
+    nnoremap gwj :vsc Window.NextSplitPane<cr>
+    nnoremap gwk :vsc Window.PreviousSplitPane<cr>
+
+    nnoremap <Leader>wN :vsc Window.MovetoPreviousTabGroup<cr>
+    nnoremap <Leader>wn :vsc Window.MovetoNextTabGroup<cr>
+    nnoremap <Leader>wh :vsc Window.NewHorizontalTabGroup<CR>
+    nnoremap <Leader>wv :vsc Window.NewVerticalTabGroup<CR>
+
+" }}}
+
+
+" Visual {{{
+    vnoremap at :vsc ReSharper.ReSharper_SelectContainingDeclaration<CR>
+    "nmap zsw :vsc Edit.SelectCurrentWord<CR>
+
+    nmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
+    vmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
+    nmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+    vmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+    noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
+    noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
+" }}}
+
+" MVC {{{
+    nnoremap <leader>gv :vsc EditorContextMenus.CodeWindow.GoToView<CR>
+    nnoremap <Leader>gc :vsc OtherContextMenus.HTMLContext.GoToController<CR>
+
+    nnoremap <Leader>av :vsc EditorContextMenus.CodeWindow.AddView<CR>
+" }}}
 

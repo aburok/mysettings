@@ -1,7 +1,12 @@
-imap jj <esc>
+augroup filetype_vim
+    autocmd!
+    autocmd FileType vim setlocal foldmethod=marker
+augroup END
 
-inoremap jk <esc>
-inoremap kj <esc>
+" Vim script {{{
+imap jj <esc>
+" }}}
+
 nnoremap <Space> /
 
 map 0 ^
@@ -32,6 +37,9 @@ set ai " Auto indent
 set si " Smart indent
 set wrap " Wrap lines
 
+" Disable inserting new line characters in long lines
+set textwidth=0 wrapmargin=0
+
 set cursorline
 set autoread
 
@@ -43,19 +51,6 @@ xmap - $
 
 nmap <enter> i<cr><esc>
 
-" Surround word with STUFF
-" mt - mark current position
-" ciw - cut inner word and go to Inset Mode
-" ( - type ( char
-" <C-R>" - paste content of last buffor from yank or delete
-" ) - type ) char
-" <Esc>`t - escape and go to t mark
-nmap z( mtcaW(<C-R>")<Esc>`t
-nmap z[ mtcaW[<C-R>"]<Esc>`t
-nmap z' mtciW'<C-R>"'<Esc>`t
-nmap z" mtciw"<C-R>""<Esc>`t
-
-" Insert empty line below / above
 nnoremap zo mto<Esc>`t
 nnoremap zO mtO<Esc>`t
 
@@ -98,10 +93,18 @@ map N Nzz
 map n nzz
 
 " Close window"
+"============="
 nnoremap zx :wq<CR>
 
 "Find and Replace Text
 vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 
+nmap <leader>sc :set nohlsearch<CR>
+    \Yp
+    \V:s/[^\"\n]/=/g<CR>
+    \kP
+    \V:s/[^\"\n]/=/g<CR>
+    \:let @/=""<CR>
+    \:set hlsearch<CR>
 
