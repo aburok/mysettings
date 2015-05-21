@@ -3,8 +3,10 @@ augroup filetype_vim
     autocmd FileType vim setlocal foldmethod=marker
 augroup END
 
-" Vim script {{{
-imap jj <esc>
+" Vim ESCAPE Combinations{{{
+	imap jj <esc>
+	imap <S-Space> <Esc>
+	vnoremap <S-Space> <Esc>
 " }}}
 
 nnoremap <Space> /
@@ -51,8 +53,8 @@ xmap - $
 
 nmap <enter> i<cr><esc>
 
-nnoremap zo mto<Esc>`t
-nnoremap zO mtO<Esc>`t
+nnoremap <Leader>o mto<Esc>`t
+nnoremap <Leader>O mtO<Esc>`t
 
 nnoremap zj :join<CR>
 
@@ -74,6 +76,7 @@ map <S-Insert>		"+gp
 
 cmap <C-V>		<C-R>+
 cmap <S-Insert>		<C-R>+
+" nnoremap p i<C-R>0<Esc> - DELETED - to much confusion with default behavior
 
 
 " CTRL-A is Select all
@@ -108,3 +111,6 @@ nmap <leader>sc :set nohlsearch<CR>
     \:let @/=""<CR>
     \:set hlsearch<CR>
 
+" Pasting & replacing from 0 yank register 
+nnoremap <Leader>p "0p
+nnoremap <Leader>r viW"0p

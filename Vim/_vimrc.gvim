@@ -6,6 +6,8 @@
 nmap <M-j> my:m+<cr>`y
 nmap <M-k> my:m-2<cr>`y
 
+map <F5> <Esc>:w<CR>:!%:p<CR>
+
 syntax on " turn on syntax high:wq
 
 "Status line gnarliness
@@ -180,3 +182,5 @@ onoremap <C-Tab> <C-C><C-W>w
 " GIT mapping
 nnoremap <Leader>gd :!git diff %<CR><Space>
 
+" Insert commented horizontal line
+nnoremap <Leader>l i<C-O>79i=<Esc>

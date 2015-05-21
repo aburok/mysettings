@@ -11,7 +11,7 @@ $scripts = $poshGit, $gitAlias
 $scripts | %{ Write-Host $_.Name }
 $scripts | %{ . $_ }
 
-Write-Host "Custom scripts loaded"
+#Write-Host "Custom scripts loaded"
 
 
 function global:prompt {
