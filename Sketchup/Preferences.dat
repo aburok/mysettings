@@ -1,0 +1,49 @@
+[Accelerator]
+Count=31
+0 0 0 I selectImageIglooTool:
+0 0 1 Z viewZoomExtents:
+0 0 0 A selectArcTool:
+0 0 0 C selectCircleTool:
+0 0 0 E selectEraseTool:
+0 0 0 B selectPaintTool:
+0 0 0 P selectPushPullTool:
+0 0 0 R selectRectangleTool:
+0 0 0 Space selectSelectionTool:
+0 0 0 L selectLineTool:
+0 0 0 K View/Edge Style/Back Edges
+0 0 0 M selectMoveTool:
+0 0 0 G Edit/Make Component...
+0 0 0 T selectMeasureTool:
+0 0 0 F selectOffsetTool:
+0 0 0 Q selectRotateTool:
+0 0 0 S selectScaleTool:
+0 0 0 Z selectDollyTool:
+0 0 0 X selectOrbitTool:
+0 1 0 E Window/Entity Info
+1 0 0 M Window/Materials
+1 0 0 L Window/Layers
+0 1 0 X View/Face Style/X-ray
+0 1 0 S Window/Scenes
+0 0 1 A selectLineTool:
+0 0 1 R selectRotateTool:
+0 0 1 V selectMoveTool:
+0 0 1 S selectPushPullTool:
+0 0 1 X editDelete:
+0 0 1 W Edit/Item/Reverse Faces
+0 0 1 D selectDimensionTool:
+[File Locations]
+Models=C:\Users\qwerty\Documents\
+Classifications=C:\Users\qwerty\AppData\Roaming\SketchUp\SketchUp 2014\SketchUp\Classifications\
+Components=C:\Users\qwerty\Documents\
+Materials=C:\Users\qwerty\Documents\
+Styles=C:\Users\qwerty\Documents\
+Textures=C:\Users\qwerty\Documents\
+Images=C:\Users\qwerty\Documents\
+ImportExport=C:\Users\qwerty\Documents\
+ComponentBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
+ComponentBrowser1=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\Dynamic Components Training\
+ComponentBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
+MaterialsBrowser=C:\PROGRA~2\SketchUp\SKETCH~1\Materials\Colors-Named\
+MaterialsBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\
+StylesBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\
+StylesBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\

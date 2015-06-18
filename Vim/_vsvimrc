@@ -8,8 +8,6 @@
 " }}}
 
 " Build {{{
-
-    nnoremap <leader>b :vsc Build.BuildSelection<CR>
     nnoremap <leader>B :vsc Build.BuildSolution<CR>
 
     nmap <leader>s :vsc Debug.Start<CR>
@@ -17,15 +15,24 @@
 
 " }}}
 
+" Debug {{{
+	nmap <leader>bd :vsc Debug.DisableAllBreakpoints<CR>
+	nmap <leader>be :vsc Debug.EnableAllBreakpoints<CR>
+	nmap <leader>bi :vsc Debug.ToggleBreakpoint<CR>
+" }}}
+
 " TESTS {{{
 
 nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
 
-nmap <Leader>tc :vsc ReSharper.ReSharper_UnitTest_RunContext<CR>
-nmap <Leader>ta :vsc ReSharper.ReSharper_UnitTest_RunSolution<CR>
-nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTest_RunCurrentSession<CR>
-nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
+nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nmap <Leader>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
+" }}}
+
+" Search Selected Text {{{
+	vnoremap // y/<C-R>"<CR>
 " }}}
 
 " Navigation {{{
@@ -45,10 +52,10 @@ nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
 
 	" Go to Next/prev method"
     nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-    noremap <C-H> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+    nnoremap <M-h> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
     nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-    noremap <C-L> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+    nnoremap <M-l> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
     nnoremap gnd :vsc Window.NextDocumentWindow<CR>
     nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
@@ -132,8 +139,9 @@ nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestSession_RepeatPreviousRun<CR>
 
 " Windows {{{
 
-nmap gwp :vsc View.PackageManagerConsole<CR>
-nmap gwo :vsc View.Output<CR>
+	nmap gwp :vsc View.PackageManagerConsole<CR>
+	nmap gwo :vsc View.Output<CR>
+	nmap gcs :vsc Debug.CallStack<CR>
 
 " }}}
 
@@ -180,3 +188,5 @@ nmap <Leader>ap :vsc Tools.AttachtoProcess<CR>
 nmap <leader>p :vsc Window.PinTab<CR>
 
 nmap <leader>q :vsc Window.CloseDocumentWindow<CR>
+
+nmap gc :vsc View.ViewCode<CR>

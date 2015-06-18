@@ -51,6 +51,10 @@ let mapleader = ','
 nmap - $
 xmap - $
 
+" Movement of cursorline
+noremap <M-j> 10j
+noremap <M-k> 10k
+
 nmap <enter> i<cr><esc>
 
 nnoremap <Leader>o mto<Esc>`t
