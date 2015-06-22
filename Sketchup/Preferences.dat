@@ -1,8 +1,7 @@
 [Accelerator]
-Count=31
+Count=34
 0 0 0 I selectImageIglooTool:
 0 0 1 Z viewZoomExtents:
-0 0 0 A selectArcTool:
 0 0 0 C selectCircleTool:
 0 0 0 E selectEraseTool:
 0 0 0 B selectPaintTool:
@@ -19,18 +18,22 @@ Count=31
 0 0 0 S selectScaleTool:
 0 0 0 Z selectDollyTool:
 0 0 0 X selectOrbitTool:
-0 1 0 E Window/Entity Info
 1 0 0 M Window/Materials
 1 0 0 L Window/Layers
 0 1 0 X View/Face Style/X-ray
 0 1 0 S Window/Scenes
-0 0 1 A selectLineTool:
 0 0 1 R selectRotateTool:
 0 0 1 V selectMoveTool:
 0 0 1 S selectPushPullTool:
 0 0 1 X editDelete:
 0 0 1 W Edit/Item/Reverse Faces
 0 0 1 D selectDimensionTool:
+0 0 1 A selectArcTool:
+0 0 0 A selectLineTool:
+1 0 0 Q pageNext:
+1 0 1 Q pagePrevious:
+0 1 0 E View/Edge Style/Edges
+0 0 1 E selectMeasureTool:
 [File Locations]
 Models=C:\Users\qwerty\Documents\
 Classifications=C:\Users\qwerty\AppData\Roaming\SketchUp\SketchUp 2014\SketchUp\Classifications\
@@ -43,7 +46,7 @@ ImportExport=C:\Users\qwerty\Documents\
 ComponentBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
 ComponentBrowser1=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\Dynamic Components Training\
 ComponentBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
-MaterialsBrowser=C:\PROGRA~2\SketchUp\SKETCH~1\Materials\Colors-Named\
+MaterialsBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\Brick and Cladding\
 MaterialsBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\
 StylesBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\
 StylesBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\
