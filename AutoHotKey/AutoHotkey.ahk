@@ -31,6 +31,9 @@
 ; ---------------------
 ; #n::Run Notepad
 
+DropBoxDir := "C:\Dropbox"
+ToolsDir := DropBoxDir . "\Tools"
+
 #IfWinActive ahk_class CabinetWClass
     F1::
         selected_file := Explorer_GetSelection()
@@ -40,19 +43,19 @@
         return
 #IfWinActive
 
-#a::
+#+a::
 Run autohotkey.exe "windowArrrr.ahk"
 Run autohotkey.exe "helpwindow.ahk"
 return
 
-#c::
+#+c::
 Title := GetWorkingDirectory()
 prompt := "prompt=$p$_%username%@%computername%:$g"
 command := "cd /d " . Title . " & " . prompt
 Run, cmd.exe /k %command%
 return
 
-#e::
+#+e::
 if (FileExist(clipboard) == "D"){
     explorer := "explorer /select," clipboard
     Run, %explorer%
@@ -62,23 +65,16 @@ Run explorer.exe %userprofile%
 return
 
 
-#g::
-    Send, ^c
-    Run, http://www.google.com/search?q=%Clipboard%
-    Return
+#+h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
 
+#+i::Run gvim c:\settings.txt
 
-#h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
-
-
-#i::Run gvim c:\settings.txt
-
-#k::RunOrActivate("ahk_class #32770", "..\..\Tools\KeePass-1.26\KeePass.exe")
-
-#m::
-#o::
+#+o::
 RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
 return
+
+#PgUp::Send {Volume_Up 1}
+#PgDn::Send {Volume_Down 1}
 
 ;#n::
 
@@ -95,9 +91,9 @@ return
 return
 
 
-#q:: Run "..\..\Tools\LINQPad4\LINQPad.exe"
+#+q:: Run ToolsDir . "\LINQPad4\LINQPad.exe"
 
-#s::Run "C:\Windows\System32\SnippingTool.exe"
+#+s::Run "C:\Windows\System32\SnippingTool.exe"
 
 ^#v::
     Path := FindGvimExe()
@@ -116,29 +112,21 @@ return
 
 
 FindGvimExe(){
-    gvimPath := "C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe"
-        . "," . "C:\Program Files (x86)\vim\Vim74\gvim.exe"
+    gvimPath := ToolsDir . "\vim73-zlib-win32\gvim.exe"
+        . "," . "%PROGRAMFILES(x86)%\vim\Vim74\gvim.exe"
         . "," . "%PROGRAMFILES%\Vim73\vim73\gvim.exe"
         . "," .	"%PROGRAMFILES%\vim\vim74\gvim.exe"
         . "," .	"%PROGRAMFILES%\vim\vim73\gvim.exe"
-        . "," . "C:\Program Files (x86)\vim\gvim.exe"
+        . "," . "%PROGRAMFILES(x86)%\vim\gvim.exe"
 
     vimPath := ReturnFirstExistingFile(gvimPath)
     vimPath := vimPath ? vimPath : "gvim.exe"
     return vimPath
 }
 
+#+t::Run ToolsDir . "\TotalCommander\totalcmd\Totalcmd.exe"
 
-;#t::Run "..\..\Tools\TotalCommander\totalcmd\Totalcmd.exe"
-#t::
-Title := "todo.note (C:\Dropbox\Notes) - GVIM"
-Start := "gvim.exe C:\Dropbox\Notes\todo.note"
-RunOrActivate(Title, Start)
-return
-
-#x::RunOrActivate("", "..\ProcessExplorer\procexp.exe")
-
-
+#+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 
 
 CAPSLOCK::Escape

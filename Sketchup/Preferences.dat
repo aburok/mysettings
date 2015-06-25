@@ -1,5 +1,5 @@
 [Accelerator]
-Count=34
+Count=44
 0 0 0 I selectImageIglooTool:
 0 0 1 Z viewZoomExtents:
 0 0 0 C selectCircleTool:
@@ -15,7 +15,6 @@ Count=34
 0 0 0 T selectMeasureTool:
 0 0 0 F selectOffsetTool:
 0 0 0 Q selectRotateTool:
-0 0 0 S selectScaleTool:
 0 0 0 Z selectDollyTool:
 0 0 0 X selectOrbitTool:
 1 0 0 M Window/Materials
@@ -23,8 +22,6 @@ Count=34
 0 1 0 X View/Face Style/X-ray
 0 1 0 S Window/Scenes
 0 0 1 R selectRotateTool:
-0 0 1 V selectMoveTool:
-0 0 1 S selectPushPullTool:
 0 0 1 X editDelete:
 0 0 1 W Edit/Item/Reverse Faces
 0 0 1 D selectDimensionTool:
@@ -34,6 +31,19 @@ Count=34
 1 0 1 Q pagePrevious:
 0 1 0 E View/Edge Style/Edges
 0 0 1 E selectMeasureTool:
+0 1 0 D View/Component Edit/Hide Rest Of Model
+0 0 0 V selectMoveTool:
+0 0 1 S selectScaleTool:
+0 0 0 S selectPushPullTool:
+0 1 0 A Camera/Parallel Projection
+0 1 0 Z renderTextures:
+0 1 1 Z renderHiddenLine:
+0 1 0 1 viewTop:
+0 1 0 2 viewFront:
+0 1 0 3 viewLeft:
+0 1 0 4 viewRight:
+0 1 0 5 viewBack:
+0 1 0 6 viewIso:
 [File Locations]
 Models=C:\Users\qwerty\Documents\
 Classifications=C:\Users\qwerty\AppData\Roaming\SketchUp\SketchUp 2014\SketchUp\Classifications\
@@ -46,7 +56,7 @@ ImportExport=C:\Users\qwerty\Documents\
 ComponentBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
 ComponentBrowser1=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\Dynamic Components Training\
 ComponentBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Components\
-MaterialsBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\Brick and Cladding\
+MaterialsBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\Asphalt and Concrete\
 MaterialsBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Materials\
 StylesBrowser=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\
 StylesBrowser2=C:\Program Files (x86)\SketchUp\SketchUp 2014\Styles\
