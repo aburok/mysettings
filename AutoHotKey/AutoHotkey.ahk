@@ -37,7 +37,7 @@ ToolsDir := DropBoxDir . "\Tools"
 #IfWinActive ahk_class CabinetWClass
     F1::
         selected_file := Explorer_GetSelection()
-        Path := FindGvimExe()
+        Path := ToolsDir . "\vim73-zlib-win32\gvim.exe"
         command := Path . " " . selected_file
         Run , %command%
         return
@@ -82,8 +82,7 @@ return
 
 
 ; Power Shell command line
-#p::
-^!p::
+^#p::
     workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
     params := " -ExecutionPolicy unrestricted -noexit " . workingDir
     command = %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe %params%
@@ -128,6 +127,7 @@ FindGvimExe(){
 
 #+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 
+#+n::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 
 CAPSLOCK::Escape
 

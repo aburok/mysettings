@@ -52,8 +52,8 @@ nmap - $
 xmap - $
 
 " Movement of cursorline
-noremap <M-j> 10j
-noremap <M-k> 10k
+nmap <M-j> 10j
+nmap <M-k> 10k
 
 nmap <enter> i<cr><esc>
 
@@ -115,6 +115,6 @@ nmap <leader>sc :set nohlsearch<CR>
     \:let @/=""<CR>
     \:set hlsearch<CR>
 
-" Pasting & replacing from 0 yank register 
+" Pasting & replacing from 0 yank register
 nnoremap <Leader>p "0p
 nnoremap <Leader>r viW"0p
