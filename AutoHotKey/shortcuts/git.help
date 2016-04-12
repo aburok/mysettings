@@ -1,6 +1,0 @@
-
-[sc]  git log --oneline --graph --color --all
-[def]  show, show full version tree, commit history, all branches,  in command line
-
-[sc]  git checkout -b <newBranchName>
-[def] Creates new branch and also switches the working directory to it

@@ -45,7 +45,7 @@ ToolsDir := DropBoxDir . "\Tools"
 
 #+a::
 Run autohotkey.exe "windowArrrr.ahk"
-Run autohotkey.exe "helpwindow.ahk"
+Run autohotkey.exe "..\..\shortcut-assistant\shortcut-assistant.ahk"
 return
 
 #+c::
@@ -85,14 +85,13 @@ return
 ^#p::
     workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
     params := " -ExecutionPolicy unrestricted -noexit " . workingDir
-    command = %SystemRoot%\system32\WindowsPowerShell\v1.0\powershell.exe %params%
+    command = powershell.exe %params%
     Run , %command%
 return
 
 
 #+q:: Run ToolsDir . "\LINQPad4\LINQPad.exe"
 
-#+s::Run "C:\Windows\System32\SnippingTool.exe"
 
 ^#v::
     Path := FindGvimExe()
@@ -128,6 +127,8 @@ FindGvimExe(){
 #+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 
 #+n::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
+
+#+^s::RunOrActivate("Slack - The Cogworks", "C:\Users\Dawid\AppData\Local\slack\Update.exe --processStart slack.exe")
 
 CAPSLOCK::Escape
 

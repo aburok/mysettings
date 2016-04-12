@@ -118,3 +118,7 @@ nmap <leader>sc :set nohlsearch<CR>
 " Pasting & replacing from 0 yank register
 nnoremap <Leader>p "0p
 nnoremap <Leader>r viW"0p
+
+nnoremap <Leader>s" bi"<esc>ea"<Esc>b
+nnoremap <Leader>s( bi(<esc>ea)<Esc>b
+nnoremap <Leader>s{ bi{<esc>ea}<Esc>b

@@ -1,6 +1,8 @@
 [Accelerator]
-Count=47
+Count=55
+0 0 0 H selectDollyTool:
 0 0 0 I selectImageIglooTool:
+0 0 0 O selectOrbitTool:
 0 0 1 Z viewZoomExtents:
 0 0 0 C selectCircleTool:
 0 0 0 E selectEraseTool:
@@ -47,9 +49,14 @@ Count=47
 0 1 0 S Edit/Item/Zoom Selection
 0 0 0 F selectFreehandTool:
 0 0 1 F selectOffsetTool:
+0 0 0 N Tools/Interact
+1 0 1 A selectAxisTool:
+1 0 0 U Window/Outliner
+1 0 0 R Window/Ruby Console
+1 0 0 H editHide:
+1 0 1 H Edit/Unhide/All
 [File Locations]
 Models=C:\Users\qwerty\Documents\
-Classifications=C:\Users\qwerty\AppData\Roaming\SketchUp\SketchUp 2014\SketchUp\Classifications\
 Components=C:\Users\qwerty\Documents\
 Materials=C:\Users\qwerty\Documents\
 Styles=C:\Users\qwerty\Documents\

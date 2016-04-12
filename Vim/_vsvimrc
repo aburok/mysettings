@@ -19,6 +19,8 @@
 	nmap <leader>bd :vsc Debug.DisableAllBreakpoints<CR>
 	nmap <leader>be :vsc Debug.EnableAllBreakpoints<CR>
 	nmap <leader>bi :vsc Debug.ToggleBreakpoint<CR>
+
+    map <leader>dw :vsc Debug.AddWatch<CR>
 " }}}
 
 " TESTS {{{
@@ -41,6 +43,9 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     "Find usages
     nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 	nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+	
+	nmap <Leader>fl :vsc Favorites.Addalltofavorites<CR>
+	nmap <Leader>fd :vsc Favorites.Addtofavorites<CR>
 
 	nmap <leader>N :vsc ReSharper.ReSharper_NavigateTo<CR>
     map gb :vsc View.NavigateBackward<CR>
@@ -51,11 +56,11 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 	nmap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
 
 	" Go to Next/prev method"
-    nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-    nnoremap <M-h> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+    " In favor of go to member    nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+    nnoremap <M-j> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
     nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-    nnoremap <M-l> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+    nnoremap <M-k> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
     nnoremap gnd :vsc Window.NextDocumentWindow<CR>
     nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
@@ -66,7 +71,7 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
     " Go to file / member
     nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
-    nmap gF :vsc ReSharper.ReSharper_GotoFileMember<CR>
+    nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
     nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
     nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
 
@@ -126,32 +131,32 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
     vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
     vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
-    vmap <leader>iv :vsc ReSharper.ReSharper_IntroduceVariable<CR>
+    vmap <leader>iv :vsc ReSharper.ReSharper_IntroVariable<CR>
 
     nmap <leader>ac :vsc Project.AddClass<CR>
+    nmap <leader>ai :vsc Project.AddInterface<CR>
     nmap <leader>ar :vsc Project.AddReference<CR>
 " }}}
 
 " Live templates {{{
     nmap <leader>ti :vsc ReSharper.ReSharper_LiveTemplates_Insert<CR>
-    vmap S :vsc ReSharper.ReSharper_SurroundWith<CR>
+    vmap <leader>s :vsc ReSharper.ReSharper_SurroundWith<CR>
     nmap <leader>tf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
 " }}}
 
 
 " Views {{{
-    nmap gvc :vsc Debug.CallStack<CR>
+    nmap gwc :vsc Debug.CallStack<CR>
+    nmap gwd :vsc Debug.Watch1<CR>
+    nmap gwe :vsc View.ErrorList<CR>
+    nmap gwf :vsc View.FindResults1<CR>
 
-    nmap gve :vsc View.ErrorList<CR>
-    nmap gvf :vsc View.FindResults1<CR>
-
-    nmap gvn :vsc Project.ManageNuGetPackages<CR>
-	nmap gvo :vsc View.Output<CR>
-	nmap gvp :vsc View.PackageManagerConsole<CR>
-	nmap gcs :vsc View.SolutionExplorer<CR>
-    nmap gvt :vsc View.TaskList<CR>
-
-    nmap gfs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
+    nmap gwn :vsc Project.ManageNuGetPackages<CR>
+	nmap gwo :vsc View.Output<CR>
+	nmap gwp :vsc View.PackageManagerConsole<CR>
+	nmap gws :vsc View.SolutionExplorer<CR>
+    
+    nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
 
 " }}}
 
@@ -200,3 +205,6 @@ nmap <leader>p :vsc Window.PinTab<CR>
 nmap <leader>q :vsc Window.CloseDocumentWindow<CR>
 
 nmap gc :vsc View.ViewCode<CR>
+
+" ARDUINO 
+nmap <Leader>mb :vsc VisualMicro.SketchCompileUpload<CR>
