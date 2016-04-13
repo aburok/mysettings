@@ -44,8 +44,9 @@ ToolsDir := DropBoxDir . "\Tools"
 #IfWinActive
 
 #+a::
-Run autohotkey.exe "windowArrrr.ahk"
+Run "..\..\window-layout\window-layout.ahk"
 Run autohotkey.exe "..\..\shortcut-assistant\shortcut-assistant.ahk"
+SetWorkingDir, "."
 return
 
 #+c::
@@ -93,13 +94,16 @@ return
 #+q:: Run ToolsDir . "\LINQPad4\LINQPad.exe"
 
 
-^#v::
-    Path := FindGvimExe()
-    Run %Path%
+!#v::
+    WinActivate, ahk_exe C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe
 return
 
 !#s:: 
     WinActivate, Slack
+return
+
+!#n::
+	WinActivate, ahk_exe ONENOTE.exe
 return
 
 #v::
@@ -126,7 +130,7 @@ FindGvimExe(){
     return vimPath
 }
 
-#+t::Run ToolsDir . "\TotalCommander\totalcmd\Totalcmd.exe"
+#!t::Run ToolsDir . "\TotalCommander\totalcmd\Totalcmd.exe"
 
 #+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 
