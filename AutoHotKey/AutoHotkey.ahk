@@ -98,6 +98,10 @@ return
     Run %Path%
 return
 
+!#s:: 
+    WinActivate, Slack
+return
+
 #v::
     ; Get directory of selected Explorer window to set Gvim Path
     workingDir := GetWorkingDirectory()
