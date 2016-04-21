@@ -1,4 +1,7 @@
 
+au GUIEnter * simalt ~x
+autocmd TabEnter * NERDTree
+
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
 
@@ -174,13 +177,18 @@ nnoremap <S-Tab> gT
 map <C-F> gg=G<C-O><C-O>
 
 " CTRL-Tab is Next window
-noremap <C-Tab> <C-W>w
-inoremap <C-Tab> <C-O><C-W>w
-cnoremap <C-Tab> <C-C><C-W>w
-onoremap <C-Tab> <C-C><C-W>w
+noremap <C-Tab> :tabnext<CR>
+noremap <C-S-Tab> :tabprevious<CR>
+
 
 " GIT mapping
 nnoremap <Leader>gd :!git diff %<CR><Space>
 
 " Insert commented horizontal line
 nnoremap <Leader>l i<C-O>79i=<Esc>
+
+set mouse=a
+
+autocmd VimEnter * NERDTree
+
+imap <C-Space> <Plug>snipMateNextOrTrigger

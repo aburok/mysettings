@@ -95,7 +95,9 @@ return
 
 
 !#v::
-    WinActivate, ahk_exe C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe
+    workingDir := GetWorkingDirectory()
+    params := " -c ""cd " . workingDir . " "" " ;"-S Session.vim "
+    RunOrActivate("ahk_exe gvim.exe", "C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe")
 return
 
 !#s:: 
@@ -106,29 +108,6 @@ return
 	WinActivate, ahk_exe ONENOTE.exe
 return
 
-#v::
-    ; Get directory of selected Explorer window to set Gvim Path
-    workingDir := GetWorkingDirectory()
-    params := " -c ""cd " . workingDir . " "" " ;"-S Session.vim "
-    GVimPath := FindGvimExe()
-    command := GVimPath . " " . params
-    Run %command%
-    ;RunOrActivate("ahk_class Vim", command)
-return
-
-
-FindGvimExe(){
-    gvimPath := ToolsDir . "\vim73-zlib-win32\gvim.exe"
-        . "," . "%PROGRAMFILES(x86)%\vim\Vim74\gvim.exe"
-        . "," . "%PROGRAMFILES%\Vim73\vim73\gvim.exe"
-        . "," .	"%PROGRAMFILES%\vim\vim74\gvim.exe"
-        . "," .	"%PROGRAMFILES%\vim\vim73\gvim.exe"
-        . "," . "%PROGRAMFILES(x86)%\vim\gvim.exe"
-
-    vimPath := ReturnFirstExistingFile(gvimPath)
-    vimPath := vimPath ? vimPath : "gvim.exe"
-    return vimPath
-}
 
 #!t::Run ToolsDir . "\TotalCommander\totalcmd\Totalcmd.exe"
 
@@ -144,6 +123,7 @@ CAPSLOCK::Escape
 ; FUNCTIONS
 ; -----------------------
 RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
+    OutputDebug, %WinTitle% %Target%
     IfWinExist, %WinTitle%
         WinActivate, %WinTitle%
     else

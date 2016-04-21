@@ -10,7 +10,7 @@ call vundle#rc()
 " "call vundle#rc(path)
 
 " let Vundle manage xVundle, required
-Bundle 'gmarik/vundle'
+" Bundle 'gmarik/Vundle.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'https://github.com/kshenoy/vim-signature'
 Bundle 'https://github.com/PProvost/vim-ps1'
@@ -20,11 +20,11 @@ Bundle 'https://github.com/bling/vim-airline'
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 "Bundle 'tpope/vim-fugitive'
-Bundle 'Lokaltog/vim-easymotion'
+Bundle 'https://github.com/easymotion/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/camelcasemotion'
 Bundle 'https://github.com/pangloss/vim-javascript'
 
-Bundle 'tpope/vim-surround'
+Bundle 'https://github.com/tpope/vim-surround'
 "Bundle 'https://github.com/yegappan/mru'
 
 "Bundle 'https://github.com/xolox/vim-misc'
@@ -44,7 +44,7 @@ Bundle 'https://github.com/Shougo/neocomplete.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "garbas/vim-snipmate"
+Bundle "https://github.com/garbas/vim-snipmate"
 
 Bundle 'https://github.com/honza/vim-snippets.git'
 " "Bundle 'https://github.com/kien/rainbow_parentheses.vim'
@@ -73,6 +73,8 @@ Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
 Bundle 'https://github.com/groenewege/vim-less'
 
 Bundle 'https://github.com/scrooloose/syntastic'
+
+Bundle 'https://github.com/plasticboy/vim-markdown.git'
 
 syntax on
 filetype plugin indent on     " required

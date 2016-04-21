@@ -1,6 +1,4 @@
 [user]
-    name=gringo
-    email=dkoruba@gmail.com
 
 [core]
     editor=gvim
@@ -14,5 +12,12 @@
 
 [credential]
     helper = store
+	
+[color]
+	ui = true
+[color "status"]
+	changed = red bold
+    untracked = red bold
+    added = green bold
 
 

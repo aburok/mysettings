@@ -24,7 +24,7 @@ cinst ccleaner
 
 cinst console2
 
-cinst filezilla 
+cinst filezilla
 
 
 cinst paint.net

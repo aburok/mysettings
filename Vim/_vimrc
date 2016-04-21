@@ -122,3 +122,9 @@ nnoremap <Leader>r viW"0p
 nnoremap <Leader>s" bi"<esc>ea"<Esc>b
 nnoremap <Leader>s( bi(<esc>ea)<Esc>b
 nnoremap <Leader>s{ bi{<esc>ea}<Esc>b
+
+set shell=powershell
+set shellcmdflag=-command
+
+set visualbell
+set t_vb=
