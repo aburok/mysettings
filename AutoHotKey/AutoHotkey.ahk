@@ -117,6 +117,8 @@ return
 
 #+^s::RunOrActivate("Slack - The Cogworks", "C:\Users\Dawid\AppData\Local\slack\Update.exe --processStart slack.exe")
 
+#/::RunOrActivate("MainWindow", ToolsDir . "\QuickHelper\QuickHelper.exe")
+
 CAPSLOCK::Escape
 
 ; -----------------------

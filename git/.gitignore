@@ -180,3 +180,5 @@ FakesAssemblies/
 
 #vim files
 Session.vim
+
+.*.sw*

@@ -27,8 +27,8 @@ Bundle 'https://github.com/pangloss/vim-javascript'
 Bundle 'https://github.com/tpope/vim-surround'
 "Bundle 'https://github.com/yegappan/mru'
 
-"Bundle 'https://github.com/xolox/vim-misc'
-"Bundle 'https://github.com/xolox/vim-notes'
+Bundle 'https://github.com/xolox/vim-misc'
+Bundle 'https://github.com/xolox/vim-notes'
 " "Bundle 'https://github.com/lpenz/vimcommander'
 
 Bundle 'vim-scripts/sessionman.vim'
@@ -51,8 +51,6 @@ Bundle 'https://github.com/honza/vim-snippets.git'
 
 "Bundle 'https://github.com/vim-scripts/Conque-Shell.git'
 " "Bundle 'https://github.com/nosami/Omnisharp'
-
-" Bundle 'tpope/vim-rails.git'
 
 " Fuzzy finding files , Fuzzy Finder doesn't work because it cannt load L9
 " Bundle 'L9'

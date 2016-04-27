@@ -1,8 +1,3 @@
-$SCRIPTPATH = "C:\Dropbox\Tools"
-$VIMPATH    = $SCRIPTPATH + "\vim73-zlib-win32\vim.exe"
-
-Set-Alias vi   $VIMPATH
-Set-Alias vim  $VIMPATH
 
 # for editing your PowerShell profile
 Function Edit-Profile
@@ -15,5 +10,12 @@ Function Edit-Vimrc
 {
     vim $home\_vimrc
 }
+
+Copy-IfMissing ($env:DropboxSettingsVim + "\host_vimrc") ($env:USERPROFILE + "\_vimrc")
+Copy-IfMissing ($env:DropboxSettingsVim + "\host_gvimrc") ($env:USERPROFILE + "\_gvimrc")
+Copy-IfMissing ($env:DropboxSettingsVim + "\host_vsvimrc") ($env:USERPROFILE + "\_vsvimrc")
+
+Set-Alias vi   $env:Vim
+Set-Alias vim  $env:Vim
 
 

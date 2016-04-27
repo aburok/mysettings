@@ -60,6 +60,10 @@ let g:notes_suffix = '.note'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
 map <C-n> :NERDTreeToggle<CR>
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowBookmarks=1
+
 
 "
 " For Editing books with code"
