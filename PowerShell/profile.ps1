@@ -1,18 +1,4 @@
-$env:Dropbox="C:\Dropbox"
-$env:DropboxTools= $env:Dropbox + "\Tools"
-$env:Path += ";" + $env:DropboxTools + "\curl\bin"
-
-$env:DropboxSettings = $env:Dropbox + "\mysettings"
-$env:DropboxSettingsPS = $env:DropboxSettings + "\PowerShell"
-$env:DropboxSettingsVim = $env:DropboxSettings + "\vim"
-
-$env:Path += ";" + $env:WinDir + "\Microsoft.NET\Framework64\v4.0.30319"
-$env:path += ";" + $env:ProgramFiles + "\Git\bin"
-$env:path += ";" + $env:ProgramFiles + "\Git\usr\bin"
-
-$env:Vim= $env:DropboxTools + "\vim73-zlib-win32\vim.exe"
-
-$PScript = $env:DropboxSettingsPS
+. C:\Dropbox\mysettings\PowerShell\variables.ps1
 
 . ($PScript + "\common.functions.ps1")
 
@@ -23,5 +9,19 @@ $PScript = $env:DropboxSettingsPS
 . ($PScript + "\vim-editor.ps1")
 
 
+function global:prompt {
+  $cdelim = [ConsoleColor]::DarkCyan
+  $chost = [ConsoleColor]::Green
+  $cloc = [ConsoleColor]::Cyan
 
+  write-host (split-path (pwd) -Qualifier ) -n -f $cloc
+  Write-Host "\..\" -n -f $cloc
+  write-host (split-path (pwd) -Leaf) -n -f $cloc
 
+  Write-VcsStatus
+
+  $global:LASTEXITCODE = $realLASTEXITCODE
+  return "> "
+}
+
+Write-Host "Dropbox profile loaded..."

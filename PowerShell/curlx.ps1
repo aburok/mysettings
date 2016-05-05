@@ -1,5 +1,5 @@
 Function curlx([string] $url, [string]$user, [string]$pass){
-    $pair=("{0}:{1}" -f $username,$password)
+    $pair=("{0}:{1}" -f $user, $pass)
     $pairBytes=[Text.Encoding]::ASCII.GetBytes($pair)
     $base64AuthInfo = [Convert]::ToBase64String($pairBytes)
 

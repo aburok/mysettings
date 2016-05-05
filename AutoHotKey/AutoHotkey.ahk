@@ -100,7 +100,7 @@ return
     RunOrActivate("ahk_exe gvim.exe", "C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe")
 return
 
-!#s:: 
+!#s::
     WinActivate, Slack
 return
 
@@ -117,8 +117,6 @@ return
 
 #+^s::RunOrActivate("Slack - The Cogworks", "C:\Users\Dawid\AppData\Local\slack\Update.exe --processStart slack.exe")
 
-#/::RunOrActivate("MainWindow", ToolsDir . "\QuickHelper\QuickHelper.exe")
-
 CAPSLOCK::Escape
 
 ; -----------------------
@@ -126,7 +124,7 @@ CAPSLOCK::Escape
 ; -----------------------
 RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
     OutputDebug, %WinTitle% %Target%
-    IfWinExist, %WinTitle%
+    If WinExist( WinTitle )
         WinActivate, %WinTitle%
     else
         Run, %Target%
