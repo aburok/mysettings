@@ -117,6 +117,7 @@ return
 
 #+^s::RunOrActivate("Slack - The Cogworks", "C:\Users\Dawid\AppData\Local\slack\Update.exe --processStart slack.exe")
 
+
 CAPSLOCK::Escape
 
 ; -----------------------

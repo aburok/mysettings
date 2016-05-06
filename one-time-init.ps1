@@ -12,3 +12,4 @@ IF(-not (Test-Path "${env:StartUpDirectory}\${quickHelperLinkName}")){
 Copy-Item "${env:DropboxSettingsPS}\profile_host.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\profile.ps1" `
     -Force
+
