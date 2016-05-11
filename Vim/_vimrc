@@ -5,8 +5,6 @@ augroup END
 
 " Vim ESCAPE Combinations{{{
 	imap jj <esc>
-	imap <S-Space> <Esc>
-	vnoremap <S-Space> <Esc>
 " }}}
 
 nnoremap <Space> /
@@ -106,6 +104,9 @@ nnoremap zx :wq<CR>
 "Find and Replace Text
 vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
+
+" Find selected text / Search for visual selected text
+vnoremap // y/<C-R>"<CR>
 
 nmap <leader>sc :set nohlsearch<CR>
     \Yp
