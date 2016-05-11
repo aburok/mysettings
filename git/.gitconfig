@@ -2,6 +2,7 @@
 
 [core]
     editor=gvim
+    autocrlf=true
 
 [alias]
     ci = commit
@@ -12,7 +13,7 @@
 
 [credential]
     helper = store
-	
+
 [color]
 	ui = true
 [color "status"]
