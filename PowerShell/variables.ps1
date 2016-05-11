@@ -23,3 +23,19 @@ $env:UserDocumentsPath = "${env:USERPROFILE}\Documents"
 $env:StartUpDirectory = "${env:USERPROFILE}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
 
 
+$initFile = "${env:USERPROFILE}\Documents\_poshSettings.xml"
+
+function save-poshsettings(){
+    $global:poshSettings | ConvertTo-Json | Set-Content $initFile
+}
+
+if(Test-Path $initFile){
+     $global:poshSettings = Get-Content $initFile | ConvertFrom-Json
+}
+else{
+    echo "Creating posh settings file in ${initFile}"
+    $props = @{}
+    $props.lastDirectory = ""
+    $global:poshSettings = New-Object PSObject -Property $props
+    save-poshsettings
+}

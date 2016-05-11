@@ -8,6 +8,7 @@
 
 . ($PScript + "\vim-editor.ps1")
 
+. ($PScript + "\events.ps1")
 
 function global:prompt {
   $cdelim = [ConsoleColor]::DarkCyan
@@ -22,6 +23,10 @@ function global:prompt {
 
   $global:LASTEXITCODE = $realLASTEXITCODE
   return "> "
+}
+
+if($global:poshSettings.lastDirectory){
+    Set-Location $global:poshSettings.lastDirectory
 }
 
 Write-Host "Dropbox profile loaded..."
