@@ -9,6 +9,10 @@ IF(-not (Test-Path "${env:StartUpDirectory}\${quickHelperLinkName}")){
         -Value "${env:DropboxTools}\QuickHelper\QuickHelper.exe"
 }
 
+IF(-not (Test-Path "${env:USERPROFILE}\Documents\WindowsPowerShell\")){
+	New-Item -ItemType directory -Path "${env:USERPROFILE}\Documents\WindowsPowerShell\"
+}
+
 Copy-Item "${env:DropboxSettingsPS}\profile_host.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\profile.ps1" `
     -Force
