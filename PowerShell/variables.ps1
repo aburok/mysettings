@@ -13,6 +13,7 @@ $env:Dropbox="C:\Dropbox"
 $env:DropboxTools="${env:Dropbox}\Tools"
 $env:DropboxSettings="${env:Dropbox}\mysettings"
 $env:DropboxSettingsPS="${env:DropboxSettings}\PowerShell"
+$env:DropboxSettingsPSHost="${env:DropboxSettingsPS}\host_files"
 $PScript = "${env:DropboxSettingsPS}"
 $env:DropboxSettingsVim="${env:DropboxSettings}\vim"
 AddToPath(";${env:DropboxTools}\curl\bin")

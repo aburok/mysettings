@@ -13,8 +13,12 @@ IF(-not (Test-Path "${env:USERPROFILE}\Documents\WindowsPowerShell\")){
 	New-Item -ItemType directory -Path "${env:USERPROFILE}\Documents\WindowsPowerShell\"
 }
 
-Copy-Item "${env:DropboxSettingsPS}\profile_host.ps1" `
+Copy-Item "${env:DropboxSettingsPSHost}\profile.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\profile.ps1" `
+    -Force
+
+Copy-Item "${env:DropboxSettingsPSHost}\Microsoft.PowerShell_profile.ps1" `
+    -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1" `
     -Force
 
 Copy-Item "${env:DropboxSettingsVim}\host_vimrc"`
@@ -28,4 +32,11 @@ Copy-Item "${env:DropboxSettingsVim}\host_vsvimrc" `
 Copy-Item "${env:DropboxSettingsVim}\host_gvimrc" `
     -Destination "${env:USERPROFILE}\_gvimrc" `
     -Force
+
+if ($host.Name -eq 'ConsoleHost')
+{
+    Import-Module PSReadline -Force
+}
+
+Install-Module posh-git
 

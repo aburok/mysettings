@@ -2,13 +2,12 @@
 
 . ($PScript + "\common.functions.ps1")
 
-. ($PScript + "\scripts\posh-git\install.ps1")
-. ($PScript + "\scripts\posh-git\profile.example.ps1")
 . ($PScript + ".\git-alias.ps1")
 
 . ($PScript + "\vim-editor.ps1")
 
 . ($PScript + "\events.ps1")
+
 
 function global:prompt {
   $cdelim = [ConsoleColor]::DarkCyan
@@ -28,5 +27,15 @@ function global:prompt {
 if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory
 }
+
+Import-Module posh-git
+
+. ($PScript + "\posh-git-config.ps1")
+
+# PSReadline
+#
+Set-PSReadlineKeyHandler -Key Ctrl+Tab -Function PossibleCompletions
+Set-PSReadlineKeyHandler -Key Tab -Function Complete
+
 
 Write-Host "Dropbox profile loaded..."
