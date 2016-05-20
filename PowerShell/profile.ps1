@@ -1,32 +1,16 @@
+$PScriptConfig = "${PScript}\config"
+
 . C:\Dropbox\mysettings\PowerShell\variables.ps1
 
 . ($PScript + "\common.functions.ps1")
+. ($PScriptConfig + "\events.ps1")
 
-. ($PScript + ".\git-alias.ps1")
+. ($PScriptConfig + ".\git-alias.ps1")
+. ($PScriptConfig + "\vim-editor.ps1")
+. ($PScriptConfig + "\iis-config.ps1")
+. ($PScriptConfig + "\ps-read-line-config.ps1")
 
-. ($PScript + "\vim-editor.ps1")
-
-. ($PScript + "\events.ps1")
-
-. ($PScript + "\iis-config.ps1")
-
-. ($PScript + "\ps-read-line-config.ps1")
-
-function global:prompt {
-  $cdelim = [ConsoleColor]::DarkCyan
-  $chost = [ConsoleColor]::Green
-  $cloc = [ConsoleColor]::Cyan
-
-  write-host (split-path (pwd) -Qualifier ) -n -f $cloc
-  Write-Host "\..\" -n -f $cloc
-  write-host (split-path (pwd) -Leaf) -n -f $cloc
-
-  Write-VcsStatus
-
-  $global:LASTEXITCODE = $realLASTEXITCODE
-  return "> "
-}
-
+. ($PScript + "\prompt-config.ps1")
 if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory
 }
