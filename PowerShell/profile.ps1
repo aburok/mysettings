@@ -8,6 +8,9 @@
 
 . ($PScript + "\events.ps1")
 
+. ($PScript + "\iis-config.ps1")
+
+. ($PScript + "\ps-read-line-config.ps1")
 
 function global:prompt {
   $cdelim = [ConsoleColor]::DarkCyan
@@ -28,14 +31,9 @@ if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory
 }
 
-Import-Module posh-git
 
 . ($PScript + "\posh-git-config.ps1")
 
-# PSReadline
-#
-Set-PSReadlineKeyHandler -Key Ctrl+Tab -Function PossibleCompletions
-Set-PSReadlineKeyHandler -Key Tab -Function Complete
 
 
 Write-Host "Dropbox profile loaded..."

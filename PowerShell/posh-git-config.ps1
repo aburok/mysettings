@@ -1,4 +1,6 @@
 
+Import-Module posh-git
+
 $Global:GitPromptSettings.LocalWorkingStatusForegroundColor = [ConsoleColor]::Red
 $Global:GitPromptSettings.IndexForegroundColor = [ConsoleColor]::Green
 $Global:GitPromptSettings.WorkingForegroundColor = [ConsoleColor]::Red
