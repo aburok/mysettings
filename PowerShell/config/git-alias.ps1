@@ -1,55 +1,89 @@
-function gts { git status }
+############################################
+############# Creating Array of all commands
 
+$myCommands = New-Object System.Collections.ArrayList
+
+function AddGitAlias([string] $alias, [string] $commandText, [string] $command ){
+    $myCommands.Add([pscustomobject] @{
+        alias="$alias";
+        commandText="$commandText";
+        command=$command}) `
+    > $null
+}
+
+############################################
+########### Defining commands ############
+
+$gitStatusCmd =  ' git status '
+function git-status {
+    Write-Command $gitStatusCmd
+    Invoke-Expression $gitStatusCmd
+}
+AddGitAlias "gts" "$gitStatusCmd" "git-status"
+
+
+$gitDiffCmd = 'git diff'
 function gtd {
     Write-Info "git diff"
-    git diff
+    iex $gitDiffCmd
     git diff --staged
 }
 
-function git-branchName { git rev-parse --abbrev-ref HEAD }
 
-function git-commit ($message){
-    Write-Info "Adding all unstaged files to stage (git add .)"
-    git add .
-    Write-Info "Commiting staged files..."
-    git commit -m $message
+$gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
+function git-branchName { iex $gitBranchNameCmd }
+
+
+$gitAddCmd = 'git add .'
+$gitCommitCmd = 'git commit -m '
+function git-commit ([string] $message){
+    Write-Info "Adding all unstaged files to stage "
+    Write-Command $gitAddCmd
+
+    iex $gitAddCmd
+
+    Write-Info "Commiting staged files... "
+    Write-Command $gitCommitCmd
+
+    iex $gitCommitCmd $message
 }
+AddGitAlias "gtc"  "$gitCommitCmd"  "git-commit"
 
+
+$gitResetCmd = 'git reset HEAD --hard'
+$gitCheckoutStarCmd = 'git checkout *'
 function git-clean {
-    Write-Info "Reseting all staged changes (git reset HEAD --hard)"
-    git reset HEAD --hard
-    Write-Info "Unding unstaged changes (git checkout *)"
-    git checkout *
-}
+    Write-Info "Reseting all staged changes "
+    Write-Command $gitResetComd
+    iex $gitResetCmd
 
+    Write-Info "Undoing unstaged changes "
+    Write-Command $gitCheckoutStarCmd
+    iex $gitCheckoutStarCmd
+}
+AddGitAlias "gtcln"  "$gitResetCmd ; $gitCheckoutStarCmd"  "git-clean"
+
+
+$gitUndoLastCommitCmd = 'git reset HEAD^'
 function git-undoLastCommit {
-    Write-Info "Undoing last commit, moving HEAD one step behind (git reset HEAD^)"
-    git reset HEAD^
-}
+    Write-Info "Undoing last commit, moving HEAD one step behind"
+    Write-Command $gitUndoLastCommitCmd
 
+    iex $gitUndoLastCommitCmd
+}
+AddGitAlias "gtu"  "$gitUndoLastCommitCmd"  "git-undoLastCommit"
+
+
+$gitPushCmd = 'git push -u origin $branchName'
 function git-push () {
     $branchName = git-branchName
-    Write-Info "Pushing changes from '${branchName}' to origin."
-    git push -u origin $branchName
+    Write-Info "Pushing changes from '$branchName' to origin."
+    Write-Command $gitPushCmd
+    iex $gitPushCmd
 }
-
-function git-add { git add -A :/ }
+AddGitAlias "gtp"  "$gitPushCmd"  "git-push"
 
 function git-grep ([string] $pattern) { git grep $pattern }
-
-
-Set-alias -name gta -Value git-add
-Set-Alias -Name gtc -Value git-commit
-Set-Alias -Name gtcln -Value git-clean
-Set-Alias -Name gtg -Value git-grep
-Set-alias -name gtp -Value git-push
-Set-Alias -Name gtr -Value git-reset
-Set-alias -Name gtuc -Value git-undoLastCommit
-
-#Set-alias -Name giat -Value git add -n :/
-
-Copy-IfMissing ($env:DropboxSettings + "\git\.gitignore") ($env:USERPROFILE + "\.gitignore")
-Copy-IfMissing  ($env:DropboxSettings + "\git\.gitconfig") ($env:USERPROFILE + "\.gitconfig")
 
 function git-all()
 {
@@ -77,4 +111,22 @@ function git-fetchall()
 	}
 	git status
 }
+
+
+
+####### Import Cogworks specific commands  ####
+. ($PScriptConfig + "\cogworks-git-alias.ps1")
+################################################
+
+
+# Help function
+function MyGitHelp(){
+    Write-Info "My git commands"
+    $myCommands | ForEach { "\t '" + $_.alias + "' - '" + $_.commandText + "'"}
+}
+
+
+# Setting Aliases
+$myCommands | ForEach { Set-Alias -Name $_.alias -Value $_.command }
+
 

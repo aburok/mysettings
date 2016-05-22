@@ -13,7 +13,6 @@ $PScriptConfig = "${PScript}\config"
 . ($PScriptConfig + "\prompt-config.ps1")
 
 . ($PScriptConfig + "\git-alias.ps1")
-. ($PScriptConfig + "\cogworks-git-alias.ps1")
 
 if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory

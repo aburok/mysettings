@@ -16,10 +16,18 @@ Set-Alias Format-Json FormatJsonPy
 
 $props = @{}
 $props.WriteHostColor = [ConsoleColor]::Green
+$props.WriteCommandForeColor = [ConsoleColor]::Green
+
 $global:PoShConfig = New-Object PSObject -Property $props
 
 Function Write-Info ([string] $msg){
     $text = "Info:    ${msg}"
     Write-Host $text `
         -ForeGround $global:PoShConfig.WriteHostColor
+}
+
+Function Write-Command ([string] $command){
+    $text = "command: $command"
+    Write-Host $text `
+        -ForeGround $global:PoShConfig.WriteCommandForeColor
 }

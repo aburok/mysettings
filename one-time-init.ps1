@@ -33,6 +33,12 @@ Copy-Item "${env:DropboxSettingsVim}\host_gvimrc" `
     -Destination "${env:USERPROFILE}\_gvimrc" `
     -Force
 
+Copy-IfMissing ($env:DropboxSettings + "\git\.gitignore") `
+    ($env:USERPROFILE + "\.gitignore")
+Copy-IfMissing  ($env:DropboxSettings + "\git\.gitconfig") `
+    ($env:USERPROFILE + "\.gitconfig")
+
+
 if ($host.Name -eq 'ConsoleHost')
 {
     Import-Module PSReadline -Force
