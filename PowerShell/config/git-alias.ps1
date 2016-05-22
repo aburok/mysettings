@@ -1,28 +1,38 @@
 function gts { git status }
 
-function gtd { git diff }
+function gtd {
+    Write-Host "git diff"
+    git diff
+    git diff --staged
+}
+
+function git-branchName { git rev-parse --abbrev-ref HEAD }
 
 function git-commit ($message){
     git commit -m $message
 }
-Set-Alias -Name gtc -Value git-commit
 
 function git-reset { git reset HEAD --hard }
-Set-Alias -Name gtr -Value git-reset
 
 function git-undoLastCommit { git reset HEAD^ }
-Set-alias -Name gulc -Value git-undoLastCommit
 
-function git-push ([string] $branch) { git push -u origin $branch }
-Set-alias -name gpo -Value git-push
-
-
+function git-push () {
+    $branchName = git-branchName
+    Write-Host "Pushing changes from '${branchName}' to origin."
+    git push -u origin $branchName
+}
 
 function git-add { git add -A :/ }
-Set-alias -name gta -Value git-add
 
 function git-grep ([string] $pattern) { git grep $pattern }
-Set-Alias -Name gg -Value git-grep
+
+
+Set-alias -name gta -Value git-add
+Set-Alias -Name gtc -Value git-commit
+Set-Alias -Name gtg -Value git-grep
+Set-alias -name gtp -Value git-push
+Set-Alias -Name gtr -Value git-reset
+Set-alias -Name gtuc -Value git-undoLastCommit
 
 #Set-alias -Name giat -Value git add -n :/
 
