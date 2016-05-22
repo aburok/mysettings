@@ -1,12 +1,12 @@
 function git-pushDev {
     $branchName = git-branchName
-    Write-Host "Pushing changes from '${branchName}' to env-dev."
+    Write-Info "Pushing changes from '${branchName}' to env-dev."
     git push -u origin $branchName:env-dev
 }
 
 function git-pushStaging {
     $branchName = git-branchName
-    Write-Host "Pushing changes from '${branchName}' to env-staging."
+    Write-Info "Pushing changes from '${branchName}' to env-staging."
     git push -u origin $branchName:env-staging
 }
 

@@ -13,3 +13,13 @@ Function FormatJsonPy($file) {
 }
 
 Set-Alias Format-Json FormatJsonPy
+
+$props = @{}
+$props.WriteHostColor = [ConsoleColor]::Green
+$global:PoShConfig = New-Object PSObject -Property $props
+
+Function Write-Info ([string] $msg){
+    $text = "Info:    ${msg}"
+    Write-Host $text `
+        -ForeGround $global:PoShConfig.WriteHostColor
+}

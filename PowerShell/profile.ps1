@@ -19,4 +19,5 @@ if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory
 }
 
+
 Write-Host "Dropbox profile loaded..."

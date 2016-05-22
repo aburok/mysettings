@@ -1,7 +1,7 @@
 function gts { git status }
 
 function gtd {
-    Write-Host "git diff"
+    Write-Info "git diff"
     git diff
     git diff --staged
 }
@@ -9,27 +9,27 @@ function gtd {
 function git-branchName { git rev-parse --abbrev-ref HEAD }
 
 function git-commit ($message){
-    Write-Host "Adding all unstaged files to stage (git add .)"
+    Write-Info "Adding all unstaged files to stage (git add .)"
     git add .
-    Write-Host "Commiting staged files..."
+    Write-Info "Commiting staged files..."
     git commit -m $message
 }
 
 function git-clean {
-    Write-Host "Reseting all staged changes (git reset HEAD --hard)"
+    Write-Info "Reseting all staged changes (git reset HEAD --hard)"
     git reset HEAD --hard
-    Write-Host "Unding unstaged changes (git checkout *)"
+    Write-Info "Unding unstaged changes (git checkout *)"
     git checkout *
 }
 
 function git-undoLastCommit {
-    Write-Host "Undoing last commit, moving HEAD one step behind (git reset HEAD^)"
+    Write-Info "Undoing last commit, moving HEAD one step behind (git reset HEAD^)"
     git reset HEAD^
 }
 
 function git-push () {
     $branchName = git-branchName
-    Write-Host "Pushing changes from '${branchName}' to origin."
+    Write-Info "Pushing changes from '${branchName}' to origin."
     git push -u origin $branchName
 }
 
