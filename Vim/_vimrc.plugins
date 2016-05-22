@@ -97,4 +97,5 @@ autocmd vimenter * call AirlineInit()
 au BufRead,BufNewFile *.janki set filetype=json
 au BufRead,BufNewFile *.janki set syntax=json
 
+" Set syntax for less files
 au BufRead,BufNewFile *.less set filetype=less.css
