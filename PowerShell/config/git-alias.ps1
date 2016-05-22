@@ -9,12 +9,23 @@ function gtd {
 function git-branchName { git rev-parse --abbrev-ref HEAD }
 
 function git-commit ($message){
+    Write-Host "Adding all unstaged files to stage (git add .)"
+    git add .
+    Write-Host "Commiting staged files..."
     git commit -m $message
 }
 
-function git-reset { git reset HEAD --hard }
+function git-clean {
+    Write-Host "Reseting all staged changes (git reset HEAD --hard)"
+    git reset HEAD --hard
+    Write-Host "Unding unstaged changes (git checkout *)"
+    git checkout *
+}
 
-function git-undoLastCommit { git reset HEAD^ }
+function git-undoLastCommit {
+    Write-Host "Undoing last commit, moving HEAD one step behind (git reset HEAD^)"
+    git reset HEAD^
+}
 
 function git-push () {
     $branchName = git-branchName
@@ -29,6 +40,7 @@ function git-grep ([string] $pattern) { git grep $pattern }
 
 Set-alias -name gta -Value git-add
 Set-Alias -Name gtc -Value git-commit
+Set-Alias -Name gtcln -Value git-clean
 Set-Alias -Name gtg -Value git-grep
 Set-alias -name gtp -Value git-push
 Set-Alias -Name gtr -Value git-reset
