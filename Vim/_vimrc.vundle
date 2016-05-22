@@ -75,6 +75,7 @@ Bundle 'https://github.com/scrooloose/syntastic'
 Bundle 'https://github.com/plasticboy/vim-markdown.git'
 
 syntax on
+filetype on
 filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on

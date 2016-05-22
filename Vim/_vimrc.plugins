@@ -96,3 +96,5 @@ autocmd vimenter * call AirlineInit()
 " Set custom fileType for Anki (Flash cards)
 au BufRead,BufNewFile *.janki set filetype=json
 au BufRead,BufNewFile *.janki set syntax=json
+
+au BufRead,BufNewFile *.less set filetype=less.css
