@@ -3,11 +3,15 @@
 
 $myCommands = New-Object System.Collections.ArrayList
 
-function AddGitAlias([string] $alias, [string] $commandText, [string] $command ){
+function AddGitAlias([string] $alias,
+    [string] $commandText,
+    [string] $command,
+    [string] $description){
     $myCommands.Add([pscustomobject] @{
         alias="$alias";
         commandText="$commandText";
-        command=$command}) `
+        command=$command;
+        description=$description}) `
     > $null
 }
 
@@ -35,33 +39,58 @@ function git-branchName { iex $gitBranchNameCmd }
 
 
 $gitAddCmd = 'git add .'
-$gitCommitCmd = 'git commit -m '
+$gitCommitCmd = 'git commit -m "{0}"'
 function git-commit ([string] $message){
     Write-Info "Adding all unstaged files to stage "
     Write-Command $gitAddCmd
-
     iex $gitAddCmd
 
     Write-Info "Commiting staged files... "
-    Write-Command $gitCommitCmd
+    Write-Command $gitCommitCmd -f $message
 
-    iex $gitCommitCmd $message
+    iex ($gitCommitCmd -f $message)
 }
 AddGitAlias "gtc"  "$gitCommitCmd"  "git-commit"
 
 
 $gitResetCmd = 'git reset HEAD --hard'
-$gitCheckoutStarCmd = 'git checkout *'
-function git-clean {
-    Write-Info "Reseting all staged changes "
-    Write-Command $gitResetComd
+$gitResetDesc =  "Unstaging all staged changes "
+Function git-reset {
+    Write-Info $gitResetDesc
+    Write-Command $gitResetCmd
     iex $gitResetCmd
+}
+AddGitAlias "gtrst" $gitResetCmd "git-reset" $gitResetDesc
 
-    Write-Info "Undoing unstaged changes "
+
+$gitCheckoutStarCmd = 'git checkout *'
+$gitCheckoutStarDesc = "Undoing unstaged changes to tracked files / directories"
+function git-checkout {
+    Write-Info $gitCheckoutStarDesc
     Write-Command $gitCheckoutStarCmd
     iex $gitCheckoutStarCmd
 }
-AddGitAlias "gtcln"  "$gitResetCmd ; $gitCheckoutStarCmd"  "git-clean"
+AddGitAlias "gtcs"  $gitCheckoutStarCmd  "git-clean" $gitCheckoutStarDesc
+
+
+$gitCleanCmd = 'git clean -fd'
+$gitCleanDescription =  "Cleaning all untracked changes in files / directories / ignored."
+function git-clean {
+    Write-Info $gitCleanDescription
+    Write-Command $gitCleanCmd
+    iex $gitCleanCmd
+}
+AddGitAlias "gtcln" $gitCleanCmd "git-clean" $gitCleanDescription
+
+
+$gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
+function git-revertAll {
+    Write-Info $gitRevertAllDesc
+    git-reset
+    git-checkout
+    git-clean
+}
+AddGitAlias "gtrvrt" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
 
 
 $gitUndoLastCommitCmd = 'git reset HEAD^'
@@ -74,14 +103,24 @@ function git-undoLastCommit {
 AddGitAlias "gtu"  "$gitUndoLastCommitCmd"  "git-undoLastCommit"
 
 
-$gitPushCmd = 'git push -u origin $branchName'
+$gitPushCmd = 'git push -u origin {0}'
 function git-push () {
     $branchName = git-branchName
     Write-Info "Pushing changes from '$branchName' to origin."
-    Write-Command $gitPushCmd
-    iex $gitPushCmd
+    Write-Command $gitPushCmd -f $branchName
+    iex ($gitPushCmd -f $branchName)
 }
 AddGitAlias "gtp"  "$gitPushCmd"  "git-push"
+
+
+$gitHistoryCmd = 'git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+Function git-history([number] $lastNCommits = 20){
+    Write-Info "Getting history "
+    Write-Command $gitHistoryCmd
+    iex $gitHistoryCmd | Select -First $lastNCommits
+}
+AddGitAlias "gtlog" $gitHistoryCmd "git-history"
+
 
 function git-grep ([string] $pattern) { git grep $pattern }
 
@@ -122,7 +161,7 @@ function git-fetchall()
 # Help function
 function MyGitHelp(){
     Write-Info "My git commands"
-    $myCommands | ForEach { "\t '" + $_.alias + "' - '" + $_.commandText + "'"}
+    $myCommands | ForEach { "   " + $_.alias + "   " + $_.commandText + ""}
 }
 
 
