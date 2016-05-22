@@ -1,14 +1,19 @@
-function gs { git status }
+function gts { git status }
+
+function gtd { git diff }
 
 function git-commit ($message){
     git commit -m $message
 }
-Set-Alias -Name gic -Value git-commit
+Set-Alias -Name gtc -Value git-commit
 
 function git-reset { git reset HEAD --hard }
-Set-Alias -Name gir -Value git-reset
+Set-Alias -Name gtr -Value git-reset
 
-function git-push([string] $branch) { git push -u origin $branch }
+function git-undoLastCommit { git reset HEAD^ }
+Set-alias -Name gulc -Value git-undoLastCommit
+
+function git-push ([string] $branch) { git push -u origin $branch }
 Set-alias -name gpo -Value git-push
 
 
@@ -61,6 +66,7 @@ function git-all()
 function git-fetchall()
 {
 	$remotes = git remote
+
 	if($remotes){
 		$remotes | foreach {
 			Write-Host 'Fetching from' $_
