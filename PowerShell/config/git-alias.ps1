@@ -19,7 +19,7 @@ Set-alias -name gpo -Value git-push
 
 
 function git-add { git add -A :/ }
-Set-alias -name gia -Value git-add
+Set-alias -name gta -Value git-add
 
 function git-grep ([string] $pattern) { git grep $pattern }
 Set-Alias -Name gg -Value git-grep
@@ -28,28 +28,6 @@ Set-Alias -Name gg -Value git-grep
 
 Copy-IfMissing ($env:DropboxSettings + "\git\.gitignore") ($env:USERPROFILE + "\.gitignore")
 Copy-IfMissing  ($env:DropboxSettings + "\git\.gitconfig") ($env:USERPROFILE + "\.gitconfig")
-
-
-# Setting up posh-git colors
-function global:prompt {
-    $realLASTEXITCODE = $LASTEXITCODE
-
-    # Reset color, which can be messed up by Enable-GitColors
-    $Host.UI.RawUI.ForegroundColor = $GitPromptSettings.DefaultForegroundColor
-
-    Write-Host($pwd.ProviderPath) -nonewline
-
-    Write-VcsStatus
-
-    $global:LASTEXITCODE = $realLASTEXITCODE
-    Write-Host("> ")
-    return ""
-}
-
-
-$global:GitAllSettings = New-Object PSObject -Property @{
-	FolderForegroundColor       = [ConsoleColor]::Cyan
-}
 
 function git-all()
 {
