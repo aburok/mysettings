@@ -4,6 +4,8 @@ function AddToPath([string] $path){
     }
 }
 
+Import-Module -Name Pscx
+
 AddToPath(";${env:WinDir}\Microsoft.NET\Framework64\v4.0.30319")
 AddToPath(";${env:ProgramFiles}\Git\bin")
 AddToPath(";${env:ProgramFiles}\Git\usr\bin")
