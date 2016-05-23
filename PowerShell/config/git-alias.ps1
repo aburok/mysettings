@@ -163,11 +163,11 @@ $gitLogGraphCmd = "git log --graph " +
     "--abbrev-commit " +
     "--decorate "+
     "--format=format:'" +
-        "%C(bold yellow)%d%C(reset) " +    # branch name
-        "%C(bold green)(%ar)%C(reset) " +  # date of commit
-        "%n      " +                       # new line
-        "%C(bold blue)%h%C(reset) - " +    # short hash of commit
-        "%C(white)%s%C(reset) " +          # commit message
+        "%C(bold yellow)%d%C(reset) " +       # branch name
+        "%C(bold green)(%ar)%C(reset) " +     # date of commit
+        "%n      " +                          # new line
+        "%C(bold blue)%h%C(reset) - " +       # short hash of commit
+        "%C(white)%s%C(reset) " +             # commit message
         "%C(dim white)   [%an]%C(reset)" +    # author name
         "' --all"
 function git-logGraph(){
