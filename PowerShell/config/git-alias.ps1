@@ -145,7 +145,7 @@ AddGitAlias "ggp" $gitPushCmd  "git-push" $gitPushDesc
 
 
 $gitPullCmd = 'git pull origin {0}'
-$gitPullDesc =  "Pulling changes from origin to current branch "
+$gitPullDesc =  "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
 function git-pull () {
     $branchName = git-branchName
     Write-Info $gitPullDesc
@@ -233,9 +233,20 @@ AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
 
 
 # Help function
-function MyGitHelp(){
+function MyGitHelp([string] $filter){
     Write-Info "My git commands"
-    $myCommands `
+    $filteredCommands = $myCommands
+
+    if($filter){
+        $likeFilter =  "*$filter*"
+        $filteredCommands = $filteredCommands | Where {
+            ($_.alias -like $likeFilter) `
+            -or ($_.commandText -like $likeFilter) `
+            -or ($_.description -like $likeFilter)
+        }
+    }
+
+    $filteredCommands `
         | Sort-Object Alias `
         | ForEach {
         "`t" + $_.alias +
@@ -243,7 +254,7 @@ function MyGitHelp(){
         "`n`t`t" + $_.commandText +
         "`n"}
 }
-AddGitAlias "gghelp" "Displays this help text" "MyGitHelp"
+AddGitAlias "gge" "Displays this help text" "MyGitHelp"
 
 
 # Setting Aliases

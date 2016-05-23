@@ -22,7 +22,7 @@ $gitCheckoutWorkCmd = 'git checkout work'
 $gitPullWorkCmd = 'git pull origin work'
 $gitNewBranchCmd = 'git checkout -b {0}'
 $gitNewBranchDesc = "Create new branch from updated work branch"
-function git-newBranch([string] $branch){
+function git-newBranch([string] $branch, [string] $branchType){
     if(!$branch){
         Write-Err "Please provide name for new branch !!!"
         return
@@ -38,3 +38,14 @@ function git-newBranch([string] $branch){
     iex ($gitNewBranchCmd -f $branch)
 }
 AddGitAlias "ggnb" "$gitCheckoutWorkCmd; $gitPullWorkCmd; $gitNewBranchCmd" "git-newBranch" $gitNewBranchDesc
+
+
+function git-newFeatureBranch([string] $branch){
+    git-newBranch $branch "feature"
+}
+AddGitAlias "ggnbf" $gitNewBranchCmd "git-newFeatureBranch" "create new feature branch"
+
+function git-newBugFixBranch([string] $branch){
+    git-newBranch $branch "bugfix"
+}
+AddGitAlias "ggnbbf" $gitNewBranchCmd "git-newBugFixBranch" "create new bug fix branch"
