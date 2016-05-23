@@ -227,8 +227,15 @@ AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
 # Help function
 function MyGitHelp(){
     Write-Info "My git commands"
-    $myCommands | ForEach { "   " + $_.alias + "   " + $_.commandText + ""}
+    $myCommands `
+        | Sort-Object Alias `
+        | ForEach {
+        "`t" + $_.alias +
+        "`t- " + $_.description +
+        "`n`t`t" + $_.commandText +
+        "`n"}
 }
+AddGitAlias "gghelp" "Displays this help text" "MyGitHelp"
 
 
 # Setting Aliases
