@@ -46,7 +46,7 @@ function git-commit ([string] $message){
     iex $gitAddCmd
 
     Write-Info "Commiting staged files... "
-    Write-Command $gitCommitCmd -f $message
+    Write-Command ($gitCommitCmd -f $message)
 
     iex ($gitCommitCmd -f $message)
 }
@@ -103,14 +103,15 @@ function git-undoLastCommit {
 AddGitAlias "gtu"  "$gitUndoLastCommitCmd"  "git-undoLastCommit"
 
 
-$gitPushCmd = 'git push -u origin {0}'
+$gitPushCmd = 'git push origin {0}'
+$gitPushDesc =  "Pushing changes from current branch to origin."
 function git-push () {
     $branchName = git-branchName
-    Write-Info "Pushing changes from '$branchName' to origin."
-    Write-Command $gitPushCmd -f $branchName
+    Write-Info $gitPushDesc
+    Write-Command ($gitPushCmd -f $branchName)
     iex ($gitPushCmd -f $branchName)
 }
-AddGitAlias "gtp"  "$gitPushCmd"  "git-push"
+AddGitAlias "gtp"  "$gitPushCmd"  "git-push" $gitPushDesc
 
 
 $gitHistoryCmd = 'git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
@@ -152,6 +153,27 @@ function git-fetchall()
 }
 
 
+# Format options :
+# %d: ref names, like the --decorate option of git-log[1] - branch names
+# %ar: author date, relative
+# %h: abbreviated commit hash
+# %s: subject - commit message
+# %an: author name - of a commit
+$gitLogGraphCmd = "git log --graph " +
+    "--abbrev-commit " +
+    "--decorate "+
+    "--format=format:'" +
+        "%C(bold yellow)%d%C(reset) " +    # branch name
+        "%C(bold green)(%ar)%C(reset) " +  # date of commit
+        "%n      " +                       # new line
+        "%C(bold blue)%h%C(reset) - " +    # short hash of commit
+        "%C(white)%s%C(reset) " +          # commit message
+        "%C(dim white)   [%an]%C(reset)" +    # author name
+        "' --all"
+function git-logGraph(){
+    Write-Info "Getting branch tree "
+    iex $gitLogGraphCmd
+}
 
 ####### Import Cogworks specific commands  ####
 . ($PScriptConfig + "\cogworks-git-alias.ps1")
