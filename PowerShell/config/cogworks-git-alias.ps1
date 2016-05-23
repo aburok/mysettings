@@ -6,7 +6,7 @@ function git-pushDev {
     Write-Command ($gitPushDevCmd -f $branchName)
     iex ($gitPushDevCmd -f $branchName)
 }
-AddGitAlias "gtpdev"  $gitPushDevCmd  "git-pushDev"
+AddGitAlias "ggpdev"  $gitPushDevCmd  "git-pushDev" $gitPushDevDesc
 
 
 $gitPushStagingCmd = 'git push origin work:env-staging --force'
@@ -16,13 +16,17 @@ function git-pushStaging {
     Write-Command $gitPushStagingCmd
     iex $gitPushStagingCmd
 }
-AddGitAlias "gtpstag"  $gitPushStagingCmd  "git-pushStaging" $gitPushStagingDesc
+AddGitAlias "ggpstag"  $gitPushStagingCmd  "git-pushStaging" $gitPushStagingDesc
 
 $gitCheckoutWorkCmd = 'git checkout work'
 $gitPullWorkCmd = 'git pull origin work'
 $gitNewBranchCmd = 'git checkout -b {0}'
 $gitNewBranchDesc = "Create new branch from updated work branch"
 function git-newBranch([string] $branch){
+    if(!$branch){
+        Write-Err "Please provide name for new branch !!!"
+        return
+    }
     Write-Info $gitNewBranchDesc
     Write-Command $gitCheckoutWorkCmd
     iex $gitCheckoutWorkCmd
@@ -33,4 +37,4 @@ function git-newBranch([string] $branch){
     Write-Command ($gitNewBranchCmd -f $branch)
     iex ($gitNewBranchCmd -f $branch)
 }
-AddGitAlias "gtnb" "$gitCheckoutWorkCmd; $gitPullWorkCmd; $gitNewBranchCmd" "git-newBranch" $gitNewBranchDesc
+AddGitAlias "ggnb" "$gitCheckoutWorkCmd; $gitPullWorkCmd; $gitNewBranchCmd" "git-newBranch" $gitNewBranchDesc

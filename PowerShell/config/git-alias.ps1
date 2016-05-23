@@ -23,15 +23,16 @@ function git-status {
     Write-Command $gitStatusCmd
     Invoke-Expression $gitStatusCmd
 }
-AddGitAlias "gts" "$gitStatusCmd" "git-status"
+AddGitAlias "ggs" "$gitStatusCmd" "git-status"
 
 
 $gitDiffCmd = 'git diff'
-function gtd {
+function git-diff {
     Write-Info "git diff"
     iex $gitDiffCmd
     git diff --staged
 }
+AddGitAlias "ggd" $gitDiffCmd "git-diff" "show changes in files"
 
 
 $gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
@@ -40,17 +41,20 @@ function git-branchName { iex $gitBranchNameCmd }
 
 $gitAddCmd = 'git add .'
 $gitCommitCmd = 'git commit -m "{0}"'
+$gitAddAndCommitDesc = "Adding all unstaged files to stage,  Commiting staged files... "
 function git-commit ([string] $message){
-    Write-Info "Adding all unstaged files to stage "
+    if(!$message){
+        Write-Err "Please provide a message for the commit !!!"
+        return
+    }
+    Write-Info $gitAddAndCommitDesc
     Write-Command $gitAddCmd
     iex $gitAddCmd
 
-    Write-Info "Commiting staged files... "
     Write-Command ($gitCommitCmd -f $message)
-
     iex ($gitCommitCmd -f $message)
 }
-AddGitAlias "gtc"  "$gitCommitCmd"  "git-commit"
+AddGitAlias "ggc" $gitCommitCmd  "git-commit" $gitAddAndCommitDesc
 
 
 $gitResetCmd = 'git reset HEAD --hard'
@@ -60,18 +64,44 @@ Function git-reset {
     Write-Command $gitResetCmd
     iex $gitResetCmd
 }
-AddGitAlias "gtrst" $gitResetCmd "git-reset" $gitResetDesc
+AddGitAlias "ggrst" $gitResetCmd "git-reset" $gitResetDesc
 
+#######################################
+#####  CHECKOUT
 
-$gitCheckoutStarCmd = 'git checkout *'
-$gitCheckoutStarDesc = "Undoing unstaged changes to tracked files / directories"
-function git-checkout {
-    Write-Info $gitCheckoutStarDesc
-    Write-Command $gitCheckoutStarCmd
-    iex $gitCheckoutStarCmd
+$gitCheckoutCmd = 'git checkout {0}'
+$gitCheckoutDesc = "Switching to branch {0}"
+function git-checkout([string] $branchName) {
+    IF(!$branchName){
+        $branchName = git-branchName
+    }
+    Write-Info ($gitCheckoutDesc -f $branchName)
+    Write-Command ($gitCheckoutCmd -f $branchName)
+    iex ($gitCheckoutCmd -f $branchName)
+
+    git-pull
 }
-AddGitAlias "gtcs"  $gitCheckoutStarCmd  "git-clean" $gitCheckoutStarDesc
+AddGitAlias "ggch"  $gitCheckoutCmd  "git-checkout" $gitCheckoutDesc
 
+
+function git-checkoutStar {
+    git-checkout "*"
+}
+AddGitAlias "ggcs"  $gitCheckoutCmd  "git-checkoutStar" $gitCheckoutDesc
+
+
+function git-checkoutWork {
+    git-checkout "work"
+}
+AddGitAlias "ggw" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
+
+
+function git-checkoutMaster {
+    git-checkout "master"
+}
+AddGitAlias "ggm" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
+
+################################################
 
 $gitCleanCmd = 'git clean -fd'
 $gitCleanDescription =  "Cleaning all untracked changes in files / directories / ignored."
@@ -80,7 +110,7 @@ function git-clean {
     Write-Command $gitCleanCmd
     iex $gitCleanCmd
 }
-AddGitAlias "gtcln" $gitCleanCmd "git-clean" $gitCleanDescription
+AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
 
 
 $gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
@@ -90,7 +120,7 @@ function git-revertAll {
     git-checkout
     git-clean
 }
-AddGitAlias "gtrvrt" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
+AddGitAlias "ggrevert" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
 
 
 $gitUndoLastCommitCmd = 'git reset HEAD^'
@@ -100,7 +130,7 @@ function git-undoLastCommit {
 
     iex $gitUndoLastCommitCmd
 }
-AddGitAlias "gtu"  "$gitUndoLastCommitCmd"  "git-undoLastCommit"
+AddGitAlias "ggundo" $gitUndoLastCommitCmd  "git-undoLastCommit"
 
 
 $gitPushCmd = 'git push origin {0}'
@@ -111,7 +141,18 @@ function git-push () {
     Write-Command ($gitPushCmd -f $branchName)
     iex ($gitPushCmd -f $branchName)
 }
-AddGitAlias "gtp"  "$gitPushCmd"  "git-push" $gitPushDesc
+AddGitAlias "ggp" $gitPushCmd  "git-push" $gitPushDesc
+
+
+$gitPullCmd = 'git pull origin {0}'
+$gitPullDesc =  "Pulling changes from origin to current branch "
+function git-pull () {
+    $branchName = git-branchName
+    Write-Info $gitPullDesc
+    Write-Command ($gitPullCmd -f $branchName)
+    iex ($gitPullCmd -f $branchName)
+}
+AddGitAlias "ggu" $gitPullCmd  "git-pull" $gitPullDesc
 
 
 $gitHistoryCmd = 'git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
@@ -120,7 +161,7 @@ Function git-history([number] $lastNCommits = 20){
     Write-Command $gitHistoryCmd
     iex $gitHistoryCmd | Select -First $lastNCommits
 }
-AddGitAlias "gtlog" $gitHistoryCmd "git-history"
+AddGitAlias "ggh" $gitHistoryCmd "git-history"
 
 
 function git-grep ([string] $pattern) { git grep $pattern }
@@ -164,16 +205,19 @@ $gitLogGraphCmd = "git log --graph " +
     "--decorate "+
     "--format=format:'" +
         "%C(bold yellow)%d%C(reset) " +       # branch name
-        "%C(bold green)(%ar)%C(reset) " +     # date of commit
         "%n      " +                          # new line
-        "%C(bold blue)%h%C(reset) - " +       # short hash of commit
+        "%C(bold green)(%ar)%C(reset) " +     # date of commit
+        "%C(dim white) [%an]%C(reset) - " +   # author name
         "%C(white)%s%C(reset) " +             # commit message
-        "%C(dim white)   [%an]%C(reset)" +    # author name
+        "%C(bold blue)[%h]%C(reset)" +        # short hash of commit
         "' --all"
+$gitLogGraphDesc = "Getting branch tree "
 function git-logGraph(){
-    Write-Info "Getting branch tree "
+    Write-Info $gitLogGraphDesc
     iex $gitLogGraphCmd
 }
+AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
+
 
 ####### Import Cogworks specific commands  ####
 . ($PScriptConfig + "\cogworks-git-alias.ps1")
