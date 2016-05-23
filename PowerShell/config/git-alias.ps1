@@ -164,6 +164,14 @@ Function git-history([number] $lastNCommits = 20){
 AddGitAlias "ggh" $gitHistoryCmd "git-history"
 
 
+$gitSaveDesc = "Save current work with generic message"
+Function git-save{
+    $time = Get-Date -format u
+    git-commit "Save at $time"
+}
+AddGitAlias "ggv" $gitCommitCmd "git-save" $gitSaveDesc
+
+
 function git-grep ([string] $pattern) { git grep $pattern }
 
 function git-all()
