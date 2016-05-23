@@ -152,7 +152,7 @@ function git-fetchall()
 	git status
 }
 
-
+# git log man : https://git-scm.com/docs/git-log
 # Format options :
 # %d: ref names, like the --decorate option of git-log[1] - branch names
 # %ar: author date, relative
