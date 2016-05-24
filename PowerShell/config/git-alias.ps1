@@ -15,13 +15,21 @@ function AddGitAlias([string] $alias,
     > $null
 }
 
+
+function git-execCommand([string] $command, [string] $description){
+    if($description){
+        Write-Info $description
+    }
+    Write-Command $command
+    iex $command
+}
+
 ############################################
 ########### Defining commands ############
 
 $gitStatusCmd =  ' git status '
 function git-status {
-    Write-Command $gitStatusCmd
-    Invoke-Expression $gitStatusCmd
+    git-execCommand $gitStatusCmd
 }
 AddGitAlias "ggs" "$gitStatusCmd" "git-status"
 
@@ -47,12 +55,8 @@ function git-commit ([string] $message){
         Write-Err "Please provide a message for the commit !!!"
         return
     }
-    Write-Info $gitAddAndCommitDesc
-    Write-Command $gitAddCmd
-    iex $gitAddCmd
-
-    Write-Command ($gitCommitCmd -f $message)
-    iex ($gitCommitCmd -f $message)
+    git-execCommand $gitAddCmd $gitAddAndCommitDesc
+    git-execCommand ($gitCommitCmd -f $message)
 }
 AddGitAlias "ggc" $gitCommitCmd  "git-commit" $gitAddAndCommitDesc
 
@@ -60,9 +64,7 @@ AddGitAlias "ggc" $gitCommitCmd  "git-commit" $gitAddAndCommitDesc
 $gitResetCmd = 'git reset HEAD --hard'
 $gitResetDesc =  "Unstaging all staged changes "
 Function git-reset {
-    Write-Info $gitResetDesc
-    Write-Command $gitResetCmd
-    iex $gitResetCmd
+    git-execCommand $gitResetCmd $gitResetDesc
 }
 AddGitAlias "ggrst" $gitResetCmd "git-reset" $gitResetDesc
 
@@ -75,10 +77,7 @@ function git-checkout([string] $branchName) {
     IF(!$branchName){
         $branchName = git-branchName
     }
-    Write-Info ($gitCheckoutDesc -f $branchName)
-    Write-Command ($gitCheckoutCmd -f $branchName)
-    iex ($gitCheckoutCmd -f $branchName)
-
+    git-execCommand ($gitCheckoutCmd -f $branchName) ($gitCheckoutDesc -f $branchName)
     git-pull
 }
 AddGitAlias "ggch"  $gitCheckoutCmd  "git-checkout" $gitCheckoutDesc
@@ -106,9 +105,7 @@ AddGitAlias "ggcm" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
 $gitCleanCmd = 'git clean -fd'
 $gitCleanDescription =  "Cleaning all untracked changes in files / directories / ignored."
 function git-clean {
-    Write-Info $gitCleanDescription
-    Write-Command $gitCleanCmd
-    iex $gitCleanCmd
+    git-execCommand $gitCleanCmd $gitCleanDescription
 }
 AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
 
@@ -126,21 +123,24 @@ AddGitAlias "ggrevert" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git
 $gitUndoLastCommitCmd = "git reset HEAD^"
 $gitUndoLastCommitDesc = "Undoing last commit, moving HEAD to previous commit."
 function git-undoLastCommit {
-    Write-Info $gitUndoLastCommitDesc
-    Write-Command $gitUndoLastCommitCmd
-
-    iex $gitUndoLastCommitCmd
+    git-execCommand $gitUndoLastCommitCmd $gitUndoLastCommitDesc
 }
 AddGitAlias "ggundo" $gitUndoLastCommitCmd  "git-undoLastCommit" $gitUndoLastCommitDesc
+
+#
+# http://stackoverflow.com/questions/6934752/combining-multiple-commits-before-pushing-in-git
+$gitSquashCmd = "git rebase -i origin/{0}"
+function git-squash {
+    $currentBranch = git-branchName
+    git-execCommand ($gitSquashCmd -f $currentBranch )
+}
 
 
 $gitPushCmd = "git push origin {0}"
 $gitPushDesc =  "Pushing changes from current branch to origin."
 function git-push () {
     $branchName = git-branchName
-    Write-Info $gitPushDesc
-    Write-Command ($gitPushCmd -f $branchName)
-    iex ($gitPushCmd -f $branchName)
+    git-execCommand ($gitPushCmd -f $branchName) $gitPushDesc
 }
 AddGitAlias "ggp" $gitPushCmd  "git-push" $gitPushDesc
 
@@ -149,19 +149,21 @@ $gitPullCmd = "git pull origin {0}"
 $gitPullDesc =  "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
 function git-pull () {
     $branchName = git-branchName
-    Write-Info $gitPullDesc
-    Write-Command ($gitPullCmd -f $branchName)
-    iex ($gitPullCmd -f $branchName)
+    git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
 }
 AddGitAlias "ggu" $gitPullCmd  "git-pull" $gitPullDesc
 
 
-$gitHistoryCmd = 'git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+$gitHistoryCmd = "git log " +
+    " --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]'" +
+    " --since='{0}'"
+    " --decorate"
 $gitHistoryDesc =  "Getting commit history of current branch."
-Function git-history([number] $lastNCommits = 20){
-    Write-Info $gitHistoryDesc
-    Write-Command $gitHistoryCmd
-    iex $gitHistoryCmd | Select -First $lastNCommits
+Function git-history{
+    param($sinceDays = 30)
+
+    $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $sinceDays)
+    git-execCommand ($gitHistoryCmd -f $sinceDate) $gitHistoryDesc
 }
 AddGitAlias "ggh" $gitHistoryCmd "git-history" $gitHistoryDesc
 
@@ -181,10 +183,7 @@ function git-merge([string] $mergeFromBranch){
         Write-Err "Please provide source branch for merge"
         return
     }
-
-    Write-Command ($gitMergeCmd -f $mergeFromBranch)
-    iex ($gitMergeCmd -f $mergeFromBranch)
-
+    git-execCommand ($gitMergeCmd -f $mergeFromBranch)
     git-push
 }
 AddGitAlias "ggm" $gitMergeDesc "git-merge" $gitMergeDesc
@@ -236,11 +235,14 @@ $gitLogGraphCmd = "git log --graph " +
         "%C(dim white) [%an]%C(reset) - " +   # author name
         "%C(white)%s%C(reset) " +             # commit message
         "%C(bold blue)[%h]%C(reset)" +        # short hash of commit
-        "' --all"
+        "' --all" +
+        " --since='{0}'"
 $gitLogGraphDesc = "Getting branch tree "
-function git-logGraph(){
-    Write-Info $gitLogGraphDesc
-    iex $gitLogGraphCmd
+function git-logGraph{
+    param($fromLastDays = 14)
+
+    $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $fromLastDays)
+    git-execCommand ($gitLogGraphCmd -f $sinceDate) $gitLogGraphDesc
 }
 AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
 
