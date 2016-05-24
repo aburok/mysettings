@@ -49,3 +49,10 @@ function git-newBugFixBranch([string] $branch){
     git-newBranch $branch "bugfix"
 }
 AddGitAlias "ggnbbf" $gitNewBranchCmd "git-newBugFixBranch" "create new bug fix branch"
+
+
+function git-mergeWorkToMaster(){
+    git-checkout "master"
+    git-merge "work"
+}
+AddGitAlias "ggmwm" $gitMergeCmd "git-mergeWorkToMaster" "Merge work branch into master branch"

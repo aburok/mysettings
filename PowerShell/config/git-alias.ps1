@@ -99,7 +99,7 @@ AddGitAlias "ggw" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
 function git-checkoutMaster {
     git-checkout "master"
 }
-AddGitAlias "ggm" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
+AddGitAlias "ggcm" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
 
 ################################################
 
@@ -123,17 +123,18 @@ function git-revertAll {
 AddGitAlias "ggrevert" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
 
 
-$gitUndoLastCommitCmd = 'git reset HEAD^'
+$gitUndoLastCommitCmd = "git reset HEAD^"
+$gitUndoLastCommitDesc = "Undoing last commit, moving HEAD to previous commit."
 function git-undoLastCommit {
-    Write-Info "Undoing last commit, moving HEAD one step behind"
+    Write-Info $gitUndoLastCommitDesc
     Write-Command $gitUndoLastCommitCmd
 
     iex $gitUndoLastCommitCmd
 }
-AddGitAlias "ggundo" $gitUndoLastCommitCmd  "git-undoLastCommit"
+AddGitAlias "ggundo" $gitUndoLastCommitCmd  "git-undoLastCommit" $gitUndoLastCommitDesc
 
 
-$gitPushCmd = 'git push origin {0}'
+$gitPushCmd = "git push origin {0}"
 $gitPushDesc =  "Pushing changes from current branch to origin."
 function git-push () {
     $branchName = git-branchName
@@ -144,7 +145,7 @@ function git-push () {
 AddGitAlias "ggp" $gitPushCmd  "git-push" $gitPushDesc
 
 
-$gitPullCmd = 'git pull origin {0}'
+$gitPullCmd = "git pull origin {0}"
 $gitPullDesc =  "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
 function git-pull () {
     $branchName = git-branchName
@@ -156,12 +157,13 @@ AddGitAlias "ggu" $gitPullCmd  "git-pull" $gitPullDesc
 
 
 $gitHistoryCmd = 'git log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate'
+$gitHistoryDesc =  "Getting commit history of current branch."
 Function git-history([number] $lastNCommits = 20){
-    Write-Info "Getting history "
+    Write-Info $gitHistoryDesc
     Write-Command $gitHistoryCmd
     iex $gitHistoryCmd | Select -First $lastNCommits
 }
-AddGitAlias "ggh" $gitHistoryCmd "git-history"
+AddGitAlias "ggh" $gitHistoryCmd "git-history" $gitHistoryDesc
 
 
 $gitSaveDesc = "Save current work with generic message"
@@ -170,6 +172,22 @@ Function git-save{
     git-commit "Save at $time"
 }
 AddGitAlias "ggv" $gitCommitCmd "git-save" $gitSaveDesc
+
+
+$gitMergeDesc = "Merge branch '{0}' to current branch '{1}'"
+$gitMergeCmd = "git merge {0}"
+function git-merge([string] $mergeFromBranch){
+    if(! $mergeFromBranch){
+        Write-Err "Please provide source branch for merge"
+        return
+    }
+
+    Write-Command ($gitMergeCmd -f $mergeFromBranch)
+    iex ($gitMergeCmd -f $mergeFromBranch)
+
+    git-push
+}
+AddGitAlias "ggm" $gitMergeDesc "git-merge" $gitMergeDesc
 
 
 function git-grep ([string] $pattern) { git grep $pattern }
