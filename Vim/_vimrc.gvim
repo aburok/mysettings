@@ -1,6 +1,6 @@
 
 au GUIEnter * simalt ~x
-autocmd TabEnter * NERDTree
+" autocmd TabEnter * NERDTree
 
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
@@ -188,7 +188,5 @@ nnoremap <Leader>gd :!git diff %<CR><Space>
 nnoremap <Leader>l i<C-O>79i=<Esc>
 
 set mouse=a
-
-autocmd VimEnter * NERDTree
 
 imap <C-Space> <Plug>snipMateNextOrTrigger

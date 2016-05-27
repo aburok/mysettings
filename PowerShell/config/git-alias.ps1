@@ -172,10 +172,14 @@ function git-merge([string] $mergeFromBranch){
     git-execCommand ($gitMergeCmd -f $mergeFromBranch)
     git-push
 }
-AddGitAlias "ggmerge" $gitMergeDesc "git-merge" $gitMergeDesc
+AddGitAlias "ggmerge" $gitMergeCmd "git-merge" $gitMergeDesc
 
 
-function git-grep ([string] $pattern) { git grep $pattern }
+$gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} {2} "
+function git-grep ([string] $pattern, $before = 0, $after = 0) { 
+    git-execCommand ($gitGrepCmd -f $before, $after, $pattern )
+}
+AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository" 
 
 function git-all()
 {
