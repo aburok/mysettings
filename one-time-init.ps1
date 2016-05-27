@@ -46,3 +46,4 @@ if ($host.Name -eq 'ConsoleHost')
 
 Install-Module posh-git
 
+. "${env:DropboxSettingsPS}\initialization\edit-with-vim-context-menu.ps1"

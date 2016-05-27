@@ -154,20 +154,6 @@ function git-pull () {
 AddGitAlias "ggu" $gitPullCmd  "git-pull" $gitPullDesc
 
 
-$gitHistoryCmd = "git log " +
-    " --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]'" +
-    " --since='{0}'"
-    " --decorate"
-$gitHistoryDesc =  "Getting commit history of current branch."
-Function git-history{
-    param($sinceDays = 30)
-
-    $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $sinceDays)
-    git-execCommand ($gitHistoryCmd -f $sinceDate) $gitHistoryDesc
-}
-AddGitAlias "ggh" $gitHistoryCmd "git-history" $gitHistoryDesc
-
-
 $gitSaveDesc = "Save current work with generic message"
 Function git-save{
     $time = Get-Date -format u
@@ -245,6 +231,25 @@ function git-logGraph{
     git-execCommand ($gitLogGraphCmd -f $sinceDate) $gitLogGraphDesc
 }
 AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
+
+
+$gitHistoryCmd = "git log " +
+    " --pretty=format:'" +
+    "%C(bold blue)%h%C(reset)" +        # short hash of commit
+    "%C(bold yellow)%d%C(reset) \\ " +
+    "%C(dim white) [%an]%C(reset) - " +   # author name
+    "%C(white)%s%C(reset) " +             # commit message
+    "' --since='{0}'" +
+    " --decorate "
+$gitHistoryDesc =  "Getting commit history of current branch."
+Function git-history{
+    param($sinceDays = 30)
+
+    $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $sinceDays)
+    git-execCommand ($gitHistoryCmd -f $sinceDate) $gitHistoryDesc
+}
+AddGitAlias "ggh" $gitHistoryCmd "git-history" $gitHistoryDesc
+
 
 
 ####### Import Cogworks specific commands  ####
