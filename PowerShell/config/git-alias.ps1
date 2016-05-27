@@ -58,7 +58,7 @@ function git-commit ([string] $message){
     git-execCommand $gitAddCmd $gitAddAndCommitDesc
     git-execCommand ($gitCommitCmd -f $message)
 }
-AddGitAlias "ggc" $gitCommitCmd  "git-commit" $gitAddAndCommitDesc
+AddGitAlias "ggcommit" $gitCommitCmd  "git-commit" $gitAddAndCommitDesc
 
 
 $gitResetCmd = 'git reset HEAD --hard'
@@ -66,7 +66,7 @@ $gitResetDesc =  "Unstaging all staged changes "
 Function git-reset {
     git-execCommand $gitResetCmd $gitResetDesc
 }
-AddGitAlias "ggrst" $gitResetCmd "git-reset" $gitResetDesc
+AddGitAlias "ggreset" $gitResetCmd "git-reset" $gitResetDesc
 
 #######################################
 #####  CHECKOUT
@@ -92,7 +92,7 @@ AddGitAlias "ggcs"  $gitCheckoutCmd  "git-checkoutStar" $gitCheckoutDesc
 function git-checkoutWork {
     git-checkout "work"
 }
-AddGitAlias "ggw" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
+AddGitAlias "ggwork" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
 
 
 function git-checkoutMaster {
@@ -142,7 +142,7 @@ function git-push () {
     $branchName = git-branchName
     git-execCommand ($gitPushCmd -f $branchName) $gitPushDesc
 }
-AddGitAlias "ggp" $gitPushCmd  "git-push" $gitPushDesc
+AddGitAlias "ggpush" $gitPushCmd  "git-push" $gitPushDesc
 
 
 $gitPullCmd = "git pull origin {0}"
@@ -151,7 +151,7 @@ function git-pull () {
     $branchName = git-branchName
     git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
 }
-AddGitAlias "ggu" $gitPullCmd  "git-pull" $gitPullDesc
+AddGitAlias "ggpull" $gitPullCmd  "git-pull" $gitPullDesc
 
 
 $gitSaveDesc = "Save current work with generic message"
@@ -159,7 +159,7 @@ Function git-save{
     $time = Get-Date -format u
     git-commit "Save at $time"
 }
-AddGitAlias "ggv" $gitCommitCmd "git-save" $gitSaveDesc
+AddGitAlias "ggsave" $gitCommitCmd "git-save" $gitSaveDesc
 
 
 $gitMergeDesc = "Merge branch '{0}' to current branch '{1}'"
@@ -172,7 +172,7 @@ function git-merge([string] $mergeFromBranch){
     git-execCommand ($gitMergeCmd -f $mergeFromBranch)
     git-push
 }
-AddGitAlias "ggm" $gitMergeDesc "git-merge" $gitMergeDesc
+AddGitAlias "ggmerge" $gitMergeDesc "git-merge" $gitMergeDesc
 
 
 function git-grep ([string] $pattern) { git grep $pattern }
@@ -230,7 +230,7 @@ function git-logGraph{
     $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $fromLastDays)
     git-execCommand ($gitLogGraphCmd -f $sinceDate) $gitLogGraphDesc
 }
-AddGitAlias "ggb" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
+AddGitAlias "ggbranchlog" $gitLogGraphCmd "git-logGraph" $gitLogGraphDesc
 
 
 $gitHistoryCmd = "git log " +
@@ -248,7 +248,7 @@ Function git-history{
     $sinceDate = "{0:yyyy-MM-dd}" -f (Get-Date).AddDays(-1 * $sinceDays)
     git-execCommand ($gitHistoryCmd -f $sinceDate) $gitHistoryDesc
 }
-AddGitAlias "ggh" $gitHistoryCmd "git-history" $gitHistoryDesc
+AddGitAlias "gghist" $gitHistoryCmd "git-history" $gitHistoryDesc
 
 
 
@@ -279,7 +279,7 @@ function MyGitHelp([string] $filter){
         "`n`t`t" + $_.commandText +
         "`n"}
 }
-AddGitAlias "gge" "Displays this help text" "MyGitHelp"
+AddGitAlias "gghelp" "Displays this help text" "MyGitHelp"
 
 
 # Setting Aliases
