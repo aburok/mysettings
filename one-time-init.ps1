@@ -1,4 +1,5 @@
-﻿. C:\Dropbox\mysettings\PowerShell\variables.ps1
+﻿. C:\Dropbox\mysettings\PowerShell\modules.ps1
+. C:\Dropbox\mysettings\PowerShell\variables.ps1
 
 $quickHelperLinkName ="QuickHelper.lnk"
 
@@ -37,13 +38,5 @@ Copy-IfMissing ($env:DropboxSettings + "\git\.gitignore") `
     ($env:USERPROFILE + "\.gitignore")
 Copy-IfMissing  ($env:DropboxSettings + "\git\.gitconfig") `
     ($env:USERPROFILE + "\.gitconfig")
-
-
-if ($host.Name -eq 'ConsoleHost')
-{
-    Import-Module PSReadline -Force
-}
-
-Install-Module posh-git
 
 . "${env:DropboxSettingsPS}\initialization\edit-with-vim-context-menu.ps1"

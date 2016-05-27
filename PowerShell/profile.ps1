@@ -1,8 +1,10 @@
 # First thing in this file
 . C:\Dropbox\mysettings\PowerShell\variables.ps1
 
+
 $PScriptConfig = "${PScript}\config"
 
+. ($PScript + "\modules.ps1")
 . ($PScript + "\common.functions.ps1")
 . ($PScript + "\events.ps1")
 
