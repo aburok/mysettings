@@ -190,3 +190,9 @@ nnoremap <Leader>l i<C-O>79i=<Esc>
 set mouse=a
 
 imap <C-Space> <Plug>snipMateNextOrTrigger
+
+" guit tab label
+" http://stackoverflow.com/questions/2468939/how-to-let-tab-display-only-file-name-rather-than-the-full-path-in-vim
+
+set guitablabel=\[%N\]\ %t\ %M
+
