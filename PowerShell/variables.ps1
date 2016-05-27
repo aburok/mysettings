@@ -4,6 +4,8 @@ function AddToPath([string] $path){
     }
 }
 
+Import-Module -Name Pscx
+
 AddToPath(";${env:WinDir}\Microsoft.NET\Framework64\v4.0.30319")
 AddToPath(";${env:ProgramFiles}\Git\bin")
 AddToPath(";${env:ProgramFiles}\Git\usr\bin")
@@ -13,6 +15,7 @@ $env:Dropbox="C:\Dropbox"
 $env:DropboxTools="${env:Dropbox}\Tools"
 $env:DropboxSettings="${env:Dropbox}\mysettings"
 $env:DropboxSettingsPS="${env:DropboxSettings}\PowerShell"
+$env:DropboxSettingsPSHost="${env:DropboxSettingsPS}\host_files"
 $PScript = "${env:DropboxSettingsPS}"
 $env:DropboxSettingsVim="${env:DropboxSettings}\vim"
 AddToPath(";${env:DropboxTools}\curl\bin")
