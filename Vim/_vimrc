@@ -130,3 +130,5 @@ set shellcmdflag=-command
 set visualbell
 set t_vb=
 
+nnoremap <Leader>cd :cd %:p:h<CR>
+

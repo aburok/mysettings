@@ -158,9 +158,16 @@ $gitSaveDesc = "Save current work with generic message"
 Function git-save {
     $time = Get-Date -format u
     git-commit "Save at $time"
-    git-push
 }
 AddGitAlias "ggsave" $gitCommitCmd "git-save" $gitSaveDesc
+
+
+$gitSavePushDesc = "Save current changes and push them into otigin"
+Function git-savePush {
+    git-save
+    git-push
+}
+AddGitAlias "ggsave" $gitCommitCmd "git-savePush" $gitSavePushDesc
 
 
 $gitMergeDesc = "Merge branch '{0}' to current branch '{1}'"

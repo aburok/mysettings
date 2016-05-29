@@ -75,7 +75,7 @@ Bundle 'https://github.com/groenewege/vim-less'
 
 Bundle 'https://github.com/scrooloose/syntastic'
 
-Bundle 'https://github.com/plasticboy/vim-markdown.git'
+" "Bundle 'https://github.com/plasticboy/vim-markdown.git'
 
 syntax on
 filetype on
