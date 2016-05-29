@@ -18,7 +18,7 @@ Copy-Item "${env:DropboxSettingsPSHost}\profile.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\profile.ps1" `
     -Force
 
-Copy-Item "${env:DropboxSettingsPSHost}\Microsoft.PowerShell_profile.ps1" `
+Copy-Item "${env:DropboxSettingsPSHost}\profile.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\Microsoft.PowerShell_profile.ps1" `
     -Force
 
