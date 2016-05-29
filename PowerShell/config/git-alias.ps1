@@ -31,7 +31,7 @@ $gitStatusCmd =  ' git status '
 function git-status {
     git-execCommand $gitStatusCmd
 }
-AddGitAlias "ggs" "$gitStatusCmd" "git-status"
+AddGitAlias "ggst" "$gitStatusCmd" "git-status"
 
 
 $gitDiffCmd = 'git diff'
@@ -40,7 +40,7 @@ function git-diff {
     iex $gitDiffCmd
     git diff --staged
 }
-AddGitAlias "ggd" $gitDiffCmd "git-diff" "show changes in files"
+AddGitAlias "ggdf" $gitDiffCmd "git-diff" "show changes in files"
 
 
 $gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
@@ -138,26 +138,27 @@ function git-squash {
 
 $gitPushCmd = "git push origin {0}"
 $gitPushDesc =  "Pushing changes from current branch to origin."
-function git-push () {
+function git-push {
     $branchName = git-branchName
     git-execCommand ($gitPushCmd -f $branchName) $gitPushDesc
 }
-AddGitAlias "ggpush" $gitPushCmd  "git-push" $gitPushDesc
+AddGitAlias "ggph" $gitPushCmd  "git-push" $gitPushDesc
 
 
 $gitPullCmd = "git pull origin {0}"
 $gitPullDesc =  "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
-function git-pull () {
+function git-pull {
     $branchName = git-branchName
     git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
 }
-AddGitAlias "ggpull" $gitPullCmd  "git-pull" $gitPullDesc
+AddGitAlias "ggpl" $gitPullCmd  "git-pull" $gitPullDesc
 
 
 $gitSaveDesc = "Save current work with generic message"
-Function git-save{
+Function git-save {
     $time = Get-Date -format u
     git-commit "Save at $time"
+    git-push
 }
 AddGitAlias "ggsave" $gitCommitCmd "git-save" $gitSaveDesc
 
@@ -176,10 +177,10 @@ AddGitAlias "ggmerge" $gitMergeCmd "git-merge" $gitMergeDesc
 
 
 $gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} {2} "
-function git-grep ([string] $pattern, $before = 0, $after = 0) { 
+function git-grep ([string] $pattern, $before = 0, $after = 0) {
     git-execCommand ($gitGrepCmd -f $before, $after, $pattern )
 }
-AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository" 
+AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
 
 function git-all()
 {

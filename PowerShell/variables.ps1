@@ -20,6 +20,7 @@ $env:DropboxSettingsVim="${env:DropboxSettings}\vim"
 AddToPath(";${env:DropboxTools}\curl\bin")
 
 $env:Vim="${env:DropboxTools}\vim73-zlib-win32\vim.exe"
+$env:GVim="${env:DropboxTools}\vim73-zlib-win32\gvim.exe"
 
 $env:UserDocumentsPath = "${env:USERPROFILE}\Documents"
 $env:StartUpDirectory = "${env:USERPROFILE}\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup"
