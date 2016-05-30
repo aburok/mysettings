@@ -1,4 +1,9 @@
 # First thing in this file
+#
+if ($global:DropboxProfileLoaded -eq 1) {
+    return
+}
+
 . C:\Dropbox\mysettings\PowerShell\variables.ps1
 
 
@@ -22,3 +27,4 @@ if($global:poshSettings.lastDirectory){
 
 
 Write-Host "Dropbox profile loaded..."
+$global:DropboxProfileLoaded=1
