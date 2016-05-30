@@ -199,32 +199,6 @@ Function git-refresh {
 AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
 
 
-function git-all()
-{
-	$s = $global:GitAllSettings
-	dir -r -i .git -fo | % {
-		pushd $_.fullname
-		cd ..
-		write-host -fore $s.FolderForegroundColor (get-location).Path
-		git-fetchall
-		popd
-	}
-}
-
-function git-fetchall()
-{
-	$remotes = git remote
-
-	if($remotes){
-		$remotes | foreach {
-			Write-Host 'Fetching from' $_
-			git fetch $_ --all
-		}
-	}else{
-		Write-Host 'No remotes for this repository'
-	}
-	git status
-}
 
 # git log man : https://git-scm.com/docs/git-log
 # Format options :
