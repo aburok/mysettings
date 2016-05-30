@@ -189,6 +189,16 @@ function git-grep ([string] $pattern, $before = 0, $after = 0) {
 }
 AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
 
+
+
+$gitRefreshDesc = "Refresh master and work branches by pulling all changes from them"
+Function git-refresh {
+    git-checkoutMaster
+    git-checkoutWork
+}
+AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
+
+
 function git-all()
 {
 	$s = $global:GitAllSettings
