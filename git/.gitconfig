@@ -1,8 +1,10 @@
 [user]
-
+    name=dkoruba
+    email=dawid.koruba@thecogworks.com
 [core]
     editor=gvim
     autocrlf=true
+    editor=gvim
 
 [alias]
     ci = commit
@@ -12,7 +14,7 @@
     psm = "push -u origin master"
 
 [credential]
-    helper = store
+    helper = "cache --timeout=86400"
 
 [color]
 	ui = true
@@ -21,4 +23,7 @@
     untracked = red bold
     added = green bold
 
-
+[merge]
+	tool = p4merge
+[diff]
+	guitool = p4merge

@@ -34,9 +34,9 @@ Copy-Item "${env:DropboxSettingsVim}\host_gvimrc" `
     -Destination "${env:USERPROFILE}\_gvimrc" `
     -Force
 
-Copy-IfMissing ($env:DropboxSettings + "\git\.gitignore") `
-    ($env:USERPROFILE + "\.gitignore")
-Copy-IfMissing  ($env:DropboxSettings + "\git\.gitconfig") `
-    ($env:USERPROFILE + "\.gitconfig")
+Copy-Item "${env:DropboxSettings}\git\.gitignore" `
+    "${env:USERPROFILE}\.gitignore"
+Copy-Item "${env:DropboxSettings}\git\.gitconfig" `
+    "${env:USERPROFILE}\.gitconfig"
 
 . "${env:DropboxSettingsPS}\initialization\edit-with-vim-context-menu.ps1"
