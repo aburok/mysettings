@@ -47,7 +47,7 @@ $gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
 function git-branchName { iex $gitBranchNameCmd }
 
 
-$gitAddCmd = 'git add .'
+$gitAddCmd = 'git add -A'
 $gitCommitCmd = 'git commit -m "{0}"'
 $gitAddAndCommitDesc = "Adding all unstaged files to stage,  Commiting staged files... "
 function git-commit ([string] $message){
