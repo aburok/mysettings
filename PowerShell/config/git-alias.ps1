@@ -183,9 +183,24 @@ function git-merge([string] $mergeFromBranch){
 AddGitAlias "ggmerge" $gitMergeCmd "git-merge" $gitMergeDesc
 
 
-$gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} {2} "
-function git-grep ([string] $pattern, $before = 0, $after = 0) {
-    git-execCommand ($gitGrepCmd -f $before, $after, $pattern )
+$gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} '{2}' -- './{3}' "
+function git-grep () {
+    param(
+        [string] $pattern,
+        [int] $before = 0,
+        [int] $after = 0,
+        [string] $include = "*",
+        [string] $exclude = $null,
+        [switch] $excludeRB
+    )
+    $gitGrepCmdResult = $gitGrepCmd
+    if($excludeRB){
+        $exclude = "*.css,rbdotcom*.js,dist/**"
+    }
+    if($exclude){
+        "$exclude".Split("{,}") | % { $gitGrepCmdResult += (" ':(exclude)*/{0}'" -f $_ ) }
+    }
+    git-execCommand ($gitGrepCmdResult -f $before, $after, $pattern, $include )
 }
 AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
 
