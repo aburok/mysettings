@@ -124,6 +124,10 @@ nnoremap <Leader>s" bi"<esc>ea"<Esc>b
 nnoremap <Leader>s( bi(<esc>ea)<Esc>b
 nnoremap <Leader>s{ bi{<esc>ea}<Esc>b
 
+"
+" Those lines need to be commented when you try to do BundleUpdate
+" Other wise it will throw the vundle_last_status error
+" https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
 set shell=powershell
 set shellcmdflag=-command
 
