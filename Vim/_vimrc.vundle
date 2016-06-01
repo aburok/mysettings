@@ -59,7 +59,10 @@ Bundle 'https://github.com/honza/vim-snippets.git'
 " Bundle 'L9'
 " Bundle 'FuzzyFinder'
 " === I've replaced it with CtrlP
-Bundle 'https://github.com/kien/ctrlp.vim.git'
+"
+" Kien version of this is not maintained any more.
+"Bundle 'https://github.com/kien/ctrlp.vim.git'
+Bundle 'https://github.com/ctrlpvim/ctrlp.vim'
 
 " The sparkup vim script is in a subdirectory of this repo called vim.
 " Pass the path to set the runtimepath properly.
