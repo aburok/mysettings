@@ -12,6 +12,8 @@
     co = checkout
     lg = "log --graph --oneline --color"
     psm = "push -u origin master"
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
 
 [credential]
     helper = "cache --timeout=86400"
