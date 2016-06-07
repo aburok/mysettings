@@ -27,7 +27,7 @@ function git-execCommand([string] $command, [string] $description){
 ############################################
 ########### Defining commands ############
 
-$gitStatusCmd =  ' git status '
+$gitStatusCmd =  ' git status --short'
 function git-status {
     git-execCommand $gitStatusCmd
 }
@@ -112,10 +112,14 @@ AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
 
 $gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
 function git-revertAll {
+    param ([switch] $clean)
+
     Write-Info $gitRevertAllDesc
     git-reset
     git-checkout
-    git-clean
+    if($clean){
+        git-clean
+    }
 }
 AddGitAlias "ggrevert" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
 
@@ -208,8 +212,10 @@ AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
 
 $gitRefreshDesc = "Refresh master and work branches by pulling all changes from them"
 Function git-refresh {
+    $currentBranch = git-branchName
     git-checkoutMaster
     git-checkoutWork
+    git-checkout $currentBranch
 }
 AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
 
@@ -261,6 +267,12 @@ Function git-history{
 }
 AddGitAlias "gghist" $gitHistoryCmd "git-history" $gitHistoryDesc
 
+
+$gitTortoiseResolveCmd =  "TortoiseGitProc.exe /command:resolve"
+Function git-resolve{
+    Invoke-Expression "$gitTortoiseResolveCmd"
+}
+AddGitAlias "ggresolve" $gitTortoiseResolveCmd "git-resolve"
 
 
 ####### Import Cogworks specific commands  ####

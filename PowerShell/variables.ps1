@@ -27,6 +27,8 @@ AddToPath(";${env:ProgramFiles}\Git\usr\bin")
 AddToPath(";${env:DropboxTools}\curl\bin")
 AddToPath(";$vimExePath")
 
+## This sould be dependant on TortoiseGit installation path
+AddToPath(";${env:DropboxTools}\TortoiseGit\bin")
 
 
 $initFile = "${env:USERPROFILE}\Documents\_poshSettings.xml"
