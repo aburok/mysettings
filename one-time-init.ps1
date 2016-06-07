@@ -14,6 +14,7 @@ IF(-not (Test-Path "${env:USERPROFILE}\Documents\WindowsPowerShell\")){
 	New-Item -ItemType directory -Path "${env:USERPROFILE}\Documents\WindowsPowerShell\"
 }
 
+
 Copy-Item "${env:DropboxSettingsPSHost}\profile.ps1" `
     -Destination "${env:USERPROFILE}\Documents\WindowsPowerShell\profile.ps1" `
     -Force
@@ -40,3 +41,10 @@ Copy-Item "${env:DropboxSettings}\git\.gitconfig" `
     "${env:USERPROFILE}\.gitconfig"
 
 . "${env:DropboxSettingsPS}\initialization\edit-with-vim-context-menu.ps1"
+
+## Set Explorer settings
+$key = 'HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced'
+Set-ItemProperty $key Hidden 1
+Set-ItemProperty $key HideFileExt 0
+Set-ItemProperty $key ShowSuperHidden 1
+Stop-Process -processname explorer
