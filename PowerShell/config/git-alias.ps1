@@ -220,6 +220,14 @@ Function git-refresh {
 AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
 
 
+$gitRefreshAllDesc = "Refresh master and work branches by pulling all changes from them"
+Function git-refreshAll {
+    $allRemoteBranches = git-execCommand "git branch --remote --list"
+
+    $allRemoteBranches | %{ git-checkout $_ }
+}
+AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
+
 
 # git log man : https://git-scm.com/docs/git-log
 # Format options :
@@ -274,6 +282,12 @@ Function git-resolve{
 }
 AddGitAlias "ggresolve" $gitTortoiseResolveCmd "git-resolve"
 
+
+$gitTortoiseStatusCmd =  "TortoiseGitProc.exe /command:repostatus"
+Function git-tgStatus{
+    Invoke-Expression "$gitTortoiseStatusCmd"
+}
+AddGitAlias "ggvst" $gitTortoiseStatusCmd "git-tgStatus"
 
 ####### Import Cogworks specific commands  ####
 . ($PScriptConfig + "\cogworks-git-alias.ps1")

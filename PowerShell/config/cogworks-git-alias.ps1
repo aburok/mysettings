@@ -1,5 +1,5 @@
 
-$gitPushDevCmd = 'git push origin {0}:env-dev'
+$gitPushDevCmd = 'git push origin {0}:env-dev --force'
 $gitPushDevDesc =  "Pushing changes from current branch ({0}) to env-dev."
 function git-pushDev {
     $branchName = git-branchName
