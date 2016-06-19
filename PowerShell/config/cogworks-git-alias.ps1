@@ -1,10 +1,9 @@
 
-$gitPushDevCmd = 'git push origin {0}:env-dev'
+$gitPushDevCmd = 'git push origin {0}:env-dev --force'
 $gitPushDevDesc =  "Pushing changes from current branch ({0}) to env-dev."
 function git-pushDev {
     $branchName = git-branchName
-    $command = ($gitPushDevDesc -f $branchName)
-    git-execCommand $command
+    git-execCommand ($gitPushDevCmd -f $branchName) ($gitPushDevDesc -f $branchName)
 }
 AddGitAlias "ggpdev"  $gitPushDevCmd  "git-pushDev" $gitPushDevDesc
 
@@ -27,7 +26,7 @@ function git-newBranch([string] $branch, [string] $branchType){
     }
     git-execCommand $gitCheckoutWorkCmd $gitNewBranchDesc
     git-execCommand $gitPullWorkCmd
-    git-execCommand ($gitNewBranchCmd -f $branch)
+    git-execCommand ($gitNewBranchCmd -f "$branchType/$branch")
 }
 AddGitAlias "ggnb" "$gitCheckoutWorkCmd; $gitPullWorkCmd; $gitNewBranchCmd" "git-newBranch" $gitNewBranchDesc
 
@@ -48,3 +47,14 @@ function git-mergeWorkToMaster(){
     git-merge "work"
 }
 AddGitAlias "ggmwm" $gitMergeCmd "git-mergeWorkToMaster" "Merge work branch into master branch"
+
+
+
+Function Cg-CopyStyles(){
+    Copy-Item .\dist\styles\* ..\Source\Application.Web\css\ -Verbose -Force
+
+    Copy-Item .\dist\fonts\* ..\Source\Application.Web\fonts\ -Verbose -Force
+    Copy-Item .\dist\scripts\* ..\Source\Application.Web\scripts\ -Verbose -Force
+    Copy-Item .\dist\images\* ..\Source\Application.Web\images\ -Verbose -Force
+}
+

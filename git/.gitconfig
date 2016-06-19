@@ -1,8 +1,10 @@
 [user]
-
+    name=dkoruba
+    email=dawid.koruba@thecogworks.com
 [core]
     editor=gvim
     autocrlf=true
+    editor=gvim
 
 [alias]
     ci = commit
@@ -10,9 +12,11 @@
     co = checkout
     lg = "log --graph --oneline --color"
     psm = "push -u origin master"
+    ignore = update-index --assume-unchanged
+    unignore = update-index --no-assume-unchanged
 
 [credential]
-    helper = store
+    helper = "cache --timeout=86400"
 
 [color]
 	ui = true
@@ -21,4 +25,7 @@
     untracked = red bold
     added = green bold
 
-
+[merge]
+	tool = p4merge
+[diff]
+	guitool = p4merge

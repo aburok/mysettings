@@ -9,7 +9,6 @@ augroup END
 
 nnoremap <Space> /
 
-map 0 ^
 map Q <nop>
 
 " map space in normal mode to Search :)
@@ -124,9 +123,17 @@ nnoremap <Leader>s" bi"<esc>ea"<Esc>b
 nnoremap <Leader>s( bi(<esc>ea)<Esc>b
 nnoremap <Leader>s{ bi{<esc>ea}<Esc>b
 
+"
+" Those lines need to be commented when you try to do BundleUpdate
+" Other wise it will throw the vundle_last_status error
+" https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
 set shell=powershell
 set shellcmdflag=-command
 
 set visualbell
 set t_vb=
 
+nnoremap <Leader>cd :cd %:p:h<CR>
+
+" This will add header comment with default # sign
+nnoremap <Leader>ch :center 80<CR>3hv0r#A<Space><Space><Esc>40A#<Esc>d80<Bar>YppVr#kk.

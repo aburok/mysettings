@@ -27,7 +27,7 @@ function git-execCommand([string] $command, [string] $description){
 ############################################
 ########### Defining commands ############
 
-$gitStatusCmd =  ' git status '
+$gitStatusCmd =  ' git status --short'
 function git-status {
     git-execCommand $gitStatusCmd
 }
@@ -47,7 +47,7 @@ $gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
 function git-branchName { iex $gitBranchNameCmd }
 
 
-$gitAddCmd = 'git add .'
+$gitAddCmd = 'git add -A'
 $gitCommitCmd = 'git commit -m "{0}"'
 $gitAddAndCommitDesc = "Adding all unstaged files to stage,  Commiting staged files... "
 function git-commit ([string] $message){
@@ -112,10 +112,14 @@ AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
 
 $gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
 function git-revertAll {
+    param ([switch] $clean)
+
     Write-Info $gitRevertAllDesc
     git-reset
     git-checkout
-    git-clean
+    if($clean){
+        git-clean
+    }
 }
 AddGitAlias "ggrevert" "$gitResetCmd ; $gitCheckoutStarCmd ; $gitCleanCmd " "git-revertAll" $gitRevertAllDesc
 
@@ -158,9 +162,16 @@ $gitSaveDesc = "Save current work with generic message"
 Function git-save {
     $time = Get-Date -format u
     git-commit "Save at $time"
-    git-push
 }
 AddGitAlias "ggsave" $gitCommitCmd "git-save" $gitSaveDesc
+
+
+$gitSavePushDesc = "Save current changes and push them into otigin"
+Function git-savePush {
+    git-save
+    git-push
+}
+AddGitAlias "ggsave" $gitCommitCmd "git-savePush" $gitSavePushDesc
 
 
 $gitMergeDesc = "Merge branch '{0}' to current branch '{1}'"
@@ -176,38 +187,40 @@ function git-merge([string] $mergeFromBranch){
 AddGitAlias "ggmerge" $gitMergeCmd "git-merge" $gitMergeDesc
 
 
-$gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} {2} "
-function git-grep ([string] $pattern, $before = 0, $after = 0) {
-    git-execCommand ($gitGrepCmd -f $before, $after, $pattern )
+$gitGrepCmd = "git grep --ignore-case --line-number -B {0} -A {1} '{2}' -- './{3}' "
+function git-grep () {
+    param(
+        [string] $pattern,
+        [int] $before = 0,
+        [int] $after = 0,
+        [string] $include = "*",
+        [string] $exclude = $null,
+        [switch] $excludeRB
+    )
+    $gitGrepCmdResult = $gitGrepCmd
+    if($excludeRB){
+        $exclude = "*.css,rbdotcom*.js,dist/**"
+    }
+    if($exclude){
+        "$exclude".Split("{,}") | % { $gitGrepCmdResult += (" ':(exclude)*/{0}'" -f $_ ) }
+    }
+    git-execCommand ($gitGrepCmdResult -f $before, $after, $pattern, $include )
 }
 AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
 
-function git-all()
-{
-	$s = $global:GitAllSettings
-	dir -r -i .git -fo | % {
-		pushd $_.fullname
-		cd ..
-		write-host -fore $s.FolderForegroundColor (get-location).Path
-		git-fetchall
-		popd
-	}
-}
 
-function git-fetchall()
-{
-	$remotes = git remote
 
-	if($remotes){
-		$remotes | foreach {
-			Write-Host 'Fetching from' $_
-			git fetch $_ --all
-		}
-	}else{
-		Write-Host 'No remotes for this repository'
-	}
-	git status
+$gitRefreshDesc = "Refresh master and work branches by pulling all changes from them"
+Function git-refresh {
+    $currentBranch = git-branchName
+    git-checkoutMaster
+    git-checkoutWork
+    git-checkout $currentBranch
 }
+AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
+
+
+
 
 # git log man : https://git-scm.com/docs/git-log
 # Format options :
@@ -256,10 +269,54 @@ Function git-history{
 AddGitAlias "gghist" $gitHistoryCmd "git-history" $gitHistoryDesc
 
 
+$gitTortoiseResolveCmd =  "TortoiseGitProc.exe /command:resolve"
+Function git-resolve{
+    Invoke-Expression "$gitTortoiseResolveCmd"
+}
+AddGitAlias "ggresolve" $gitTortoiseResolveCmd "git-resolve"
+
+
+$gitTortoiseStatusCmd =  "TortoiseGitProc.exe /command:repostatus"
+Function git-tgStatus{
+    Invoke-Expression "$gitTortoiseStatusCmd"
+}
+AddGitAlias "ggvst" $gitTortoiseStatusCmd "git-tgStatus"
 
 ####### Import Cogworks specific commands  ####
 . ($PScriptConfig + "\cogworks-git-alias.ps1")
 ################################################
+
+
+#################################################################################
+################################# BLOG Scripts  #################################
+#################################################################################
+
+Function git-GetAllRemoteBranches {
+    iex "git branch -r"                                <# get all remote branches #> `
+        | % { $_ -Match "origin\/(?'name'\S+)" }       <# select only names of the branches #> `
+        | %{ Out-Null; $matches['name'] }              <# write does names #>
+}
+
+Function git-CheckoutAllBranches {
+    git-GetAllRemoteBranches `
+        | % { iex "git checkout $_" }                  <# execute ' git checkout <branch>' #>
+}
+
+Function git-MergeMasterToAll {
+    git-GetAllRemoteBranches `
+        | % { iex "git checkout $_";       <# checkout branch that will be merged with master #> `
+            iex "git merge master";        <# merge master branch into branch #> `
+            iex "git push origin $_"; }    <# push merge into origin #>
+
+    git-checkoutMaster
+}
+
+$gitRefreshAllDesc = "Refresh master and work branches by pulling all changes from them"
+Function git-refreshAll {
+    git-GetAllRemoteBranches | % { git-checkout $_ }
+    git-checkoutMaster
+}
+AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
 
 
 # Help function
