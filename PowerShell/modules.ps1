@@ -4,7 +4,7 @@ function ImportOrInstallModule([string] $moduleName){
         Import-Module -Name $moduleName
     }
     else{
-        Install-Module -Name $moduleName
+        Install-Module -Name $moduleName -Force
     }
 }
 

@@ -98,7 +98,7 @@ AddGitAlias "ggwork" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
 function git-checkoutMaster {
     git-checkout "master"
 }
-AddGitAlias "ggcm" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
+AddGitAlias "ggmaster" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
 
 ################################################
 
@@ -108,6 +108,16 @@ function git-clean {
     git-execCommand $gitCleanCmd $gitCleanDescription
 }
 AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
+
+
+$gitCleanUSyncCmd = 'git clean -fd .\Source\Application.Web\uSync\ '
+$gitCheckoutUSyncCmd = 'git checkout .\Source\Application.Web\uSync\* '
+$gitCleanDescription =  "Cleaning all untracked changes in files / directories / ignored."
+function git-cleanUSync {
+    git-execCommand $gitCleanUSyncCmd
+    git-execCommand $gitCheckoutUSyncCmd
+}
+AddGitAlias "ggcleanusync" ($gitCleanUSyncCmd + $gitCheckoutUSyncCmd) "git-cleanUSync" $gitCleanDescription
 
 
 $gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
@@ -154,6 +164,7 @@ $gitPullDesc =  "Pulling changes from origin to current branch. This will update
 function git-pull {
     $branchName = git-branchName
     git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
+    git-execCommand ("git pull origin --tags") "pulling tags"
 }
 AddGitAlias "ggpl" $gitPullCmd  "git-pull" $gitPullDesc
 
@@ -195,15 +206,17 @@ function git-grep () {
         [int] $after = 0,
         [string] $include = "*",
         [string] $exclude = $null,
-        [switch] $excludeRB
+        [switch] $includeRB
     )
     $gitGrepCmdResult = $gitGrepCmd
-    if($excludeRB){
+    if(! $includeRB){
         $exclude = "*.css,rbdotcom*.js,dist/**"
     }
+
     if($exclude){
         "$exclude".Split("{,}") | % { $gitGrepCmdResult += (" ':(exclude)*/{0}'" -f $_ ) }
     }
+
     git-execCommand ($gitGrepCmdResult -f $before, $after, $pattern, $include )
 }
 AddGitAlias "ggfind" $gitGrepCmd "git-grep"  "search for a string in repository"
@@ -220,13 +233,6 @@ Function git-refresh {
 AddGitAlias "ggrefresh" $gitPushCmd "git-refresh" $gitResetDesc
 
 
-$gitRefreshAllDesc = "Refresh master and work branches by pulling all changes from them"
-Function git-refreshAll {
-    $allRemoteBranches = git-execCommand "git branch --remote --list"
-
-    $allRemoteBranches | %{ git-checkout $_ }
-}
-AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
 
 
 # git log man : https://git-scm.com/docs/git-log
@@ -292,6 +298,65 @@ AddGitAlias "ggvst" $gitTortoiseStatusCmd "git-tgStatus"
 ####### Import Cogworks specific commands  ####
 . ($PScriptConfig + "\cogworks-git-alias.ps1")
 ################################################
+
+
+#################################################################################
+################################# BLOG Scripts  #################################
+#################################################################################
+
+Function git-GetAllRemoteBranches {
+    iex "git branch -r"                                <# get all remote branches #> `
+        | % { $_ -Match "origin\/(?'name'\S+)" }       <# select only names of the branches #> `
+        | %{ Out-Null; $matches['name'] }              <# write does names #>
+}
+
+Function git-CheckoutAllBranches {
+    git-GetAllRemoteBranches `
+        | % { iex "git checkout $_" }                  <# execute ' git checkout <branch>' #>
+}
+
+Function git-MergeMasterToAll {
+    git-GetAllRemoteBranches `
+        | % { iex "git checkout $_";       <# checkout branch that will be merged with master #> `
+            iex "git merge master";        <# merge master branch into branch #> `
+            iex "git push origin $_"; }    <# push merge into origin #>
+
+    git-checkoutMaster
+}
+
+$gitRefreshAllDesc = "Refresh master and work branches by pulling all changes from them"
+Function git-refreshAll {
+    git-GetAllRemoteBranches | % { git-checkout $_ }
+    git-checkoutMaster
+}
+AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
+
+
+$gitPushTagsCmd = "git push origin --tags"
+$gitPushTagsDesc = "Pushes all local tags to origin"
+Function git-pushTags {
+    git-execCommand $gitPushTagsCmd
+}
+AddGitAlias "ggptags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
+
+$gitCreateTagCmd = "git tag -a '{0}' -m '{1}'"
+$gitCreateTagDesc = "Create tag on current branch"
+Function git-createTag {
+    param($tagName, $tagDescription)
+    git-execCommand ($gitCreateTagCmd -f "$tagName", "$tagDescription" )
+}
+AddGitAlias "ggctag" $gitCreateTagCmd "git-createTag" $gitCreateTagDesc
+
+
+$gitPushWorkToMasterCmd = 'git push origin work:master '
+Function git-pushToMasterAndTag{
+    param($tagName, $tagDescription)
+
+    git-execCommand $gitPushWorkToMasterCmd
+    git-createTag $tagName $tagDescription
+    git-pushTags
+}
+AddGitAlias "ggpushwork2master" $gitPushWorkToMasterCmd "git-pushToMasterAndTag"
 
 
 # Help function

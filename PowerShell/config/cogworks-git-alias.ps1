@@ -3,7 +3,7 @@ $gitPushDevCmd = 'git push origin {0}:env-dev --force'
 $gitPushDevDesc =  "Pushing changes from current branch ({0}) to env-dev."
 function git-pushDev {
     $branchName = git-branchName
-    git-execCommand ($gitPushDevCmd -f $branchName) $gitPushDevDesc
+    git-execCommand ($gitPushDevCmd -f $branchName) ($gitPushDevDesc -f $branchName)
 }
 AddGitAlias "ggpdev"  $gitPushDevCmd  "git-pushDev" $gitPushDevDesc
 
@@ -11,6 +11,7 @@ AddGitAlias "ggpdev"  $gitPushDevCmd  "git-pushDev" $gitPushDevDesc
 $gitPushStagingCmd = 'git push origin work:env-staging --force'
 $gitPushStagingDesc =  "Pushing changes from work branch to env-staging ."
 function git-pushStaging {
+    git-checkoutWork
     git-execCommand $gitPushStagingCmd $gitPushStagingDesc
 }
 AddGitAlias "ggpstag"  $gitPushStagingCmd  "git-pushStaging" $gitPushStagingDesc
@@ -47,3 +48,14 @@ function git-mergeWorkToMaster(){
     git-merge "work"
 }
 AddGitAlias "ggmwm" $gitMergeCmd "git-mergeWorkToMaster" "Merge work branch into master branch"
+
+
+
+Function Cogworks-CopyStyles(){
+    Copy-Item .\dist\styles\* ..\Source\Application.Web\css\ -Verbose -Force
+
+    Copy-Item .\dist\fonts\* ..\Source\Application.Web\fonts\ -Verbose -Force
+    Copy-Item .\dist\scripts\* ..\Source\Application.Web\scripts\ -Verbose -Force
+    Copy-Item .\dist\images\* ..\Source\Application.Web\images\ -Verbose -Force
+}
+

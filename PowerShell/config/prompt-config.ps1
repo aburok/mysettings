@@ -1,12 +1,12 @@
 function global:prompt {
     $cdelim = [ConsoleColor]::DarkCyan
     $chost = [ConsoleColor]::Green
-    $cloc = [ConsoleColor]::Cyan
+    $cloc = [ConsoleColor]::White
     $ctime = [ConsoleColor]::Green
 
     $currentTime = $(Get-Date).ToString("HH:MM:ss")
 
-
+    Write-Host "==========================================" # Line to destinguish commands
     Write-Host "[$currentTime] " -n -f $ctime               # Write current time without a date
     write-host (split-path (pwd) -Qualifier ) -n -f $cloc   # Disk letter (C:\)
     Write-Host "\..\" -n -f $cloc                           # ...
@@ -16,5 +16,5 @@ function global:prompt {
     Write-Host ""                                           # New line
 
     $global:LASTEXITCODE = $realLASTEXITCODE
-    return "> "
+    return ">>> "
 }

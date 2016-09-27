@@ -21,6 +21,12 @@ $PScriptConfig = "${PScript}\config"
 
 . ($PScriptConfig + "\git-alias.ps1")
 
+$PSfunctions = "${PScript}\functions"
+
+### Include all scripts from function Directory
+ls $PSfunctions -Recursive | % {. (Join-Path $PSfunctions $_.Name)} | Out-Null
+
+
 if($global:poshSettings.lastDirectory){
     Set-Location $global:poshSettings.lastDirectory
 }

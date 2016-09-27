@@ -13,8 +13,8 @@ call vundle#rc()
 " Bundle 'gmarik/Vundle.vim'
 "
 " NerdTree is replace by native gvim explorer
-" "Bundle 'scrooloose/nerdtree'
-"
+Bundle 'https://github.com/scrooloose/nerdtree'
+
 Bundle 'https://github.com/kshenoy/vim-signature'
 Bundle 'https://github.com/PProvost/vim-ps1'
 Bundle 'https://github.com/bling/vim-airline'
