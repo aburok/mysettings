@@ -10,6 +10,8 @@ augroup END
 nnoremap <Space> /
 
 map Q <nop>
+nmap P "0p
+vmap P "0p
 
 " map space in normal mode to Search :)
 "inoremap <S-space> <esc>

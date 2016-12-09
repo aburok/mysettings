@@ -24,7 +24,7 @@ $PScriptConfig = "${PScript}\config"
 $PSfunctions = "${PScript}\functions"
 
 ### Include all scripts from function Directory
-ls $PSfunctions -Recursive | % {. (Join-Path $PSfunctions $_.Name)} | Out-Null
+ls $PSfunctions -Recurse | % {. (Join-Path $PSfunctions $_.Name)} | Out-Null
 
 
 if($global:poshSettings.lastDirectory){

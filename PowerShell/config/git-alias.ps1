@@ -152,19 +152,24 @@ function git-squash {
 
 $gitPushCmd = "git push origin {0}"
 $gitPushDesc =  "Pushing changes from current branch to origin."
-function git-push {
-    $branchName = git-branchName
+function git-push ([string] $branchName) {
+    IF(!$branchName){
+        $branchName = git-branchName
+    }
     git-execCommand ($gitPushCmd -f $branchName) $gitPushDesc
+	git-pushTags $branchName
 }
 AddGitAlias "ggph" $gitPushCmd  "git-push" $gitPushDesc
 
 
 $gitPullCmd = "git pull origin {0}"
 $gitPullDesc =  "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
-function git-pull {
-    $branchName = git-branchName
+function git-pull ([string] $branchName) {
+    IF(!$branchName){
+        $branchName = git-branchName
+    }
     git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
-    git-execCommand ("git pull origin --tags") "pulling tags"
+    git-pullTags $branchName
 }
 AddGitAlias "ggpl" $gitPullCmd  "git-pull" $gitPullDesc
 
@@ -332,12 +337,21 @@ Function git-refreshAll {
 AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
 
 
-$gitPushTagsCmd = "git push origin --tags"
+$gitPushTagsCmd = "git push origin {0} --tags"
 $gitPushTagsDesc = "Pushes all local tags to origin"
 Function git-pushTags {
     git-execCommand $gitPushTagsCmd
 }
-AddGitAlias "ggptags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
+AddGitAlias "ggphtags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
+
+
+$gitPullTagsCmd = "git pull origin {0} --tags"
+$gitPullTagsDesc = "Pulls all local tags from origin"
+Function git-pullTags {
+    git-execCommand $gitPullTagsCmd
+}
+AddGitAlias "ggpltags" $gitPullTagsCmd "git-pullTags" $gitPullTagsDesc
+
 
 $gitCreateTagCmd = "git tag -a '{0}' -m '{1}'"
 $gitCreateTagDesc = "Create tag on current branch"

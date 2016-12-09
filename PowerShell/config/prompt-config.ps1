@@ -4,7 +4,7 @@ function global:prompt {
     $cloc = [ConsoleColor]::White
     $ctime = [ConsoleColor]::Green
 
-    $currentTime = $(Get-Date).ToString("HH:MM:ss")
+    $currentTime = $(Get-Date).ToString("MM.dd HH:mm:ss")
 
     Write-Host "==========================================" # Line to destinguish commands
     Write-Host "[$currentTime] " -n -f $ctime               # Write current time without a date
