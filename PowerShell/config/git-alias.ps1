@@ -343,7 +343,7 @@ Function git-pushTags([string] $branchName) {
 	IF(!$branchName){
         $branchName = git-branchName
     }
-    git-execCommand $gitPushTagsCmd
+    git-execCommand ($gitPushTagsCmd -f $branchName)
 }
 AddGitAlias "ggphtags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
 
@@ -354,7 +354,7 @@ Function git-pullTags([string] $branchName) {
     IF(!$branchName){
         $branchName = git-branchName
     }
-    git-execCommand $gitPullTagsCmd
+    git-execCommand ($gitPullTagsCmd -f $branchName)
 }
 AddGitAlias "ggpltags" $gitPullTagsCmd "git-pullTags" $gitPullTagsDesc
 
