@@ -339,7 +339,10 @@ AddGitAlias "ggrefreshAll" $gitPushCmd "git-refresh" $gitResetDesc
 
 $gitPushTagsCmd = "git push origin {0} --tags"
 $gitPushTagsDesc = "Pushes all local tags to origin"
-Function git-pushTags {
+Function git-pushTags([string] $branchName) {
+	IF(!$branchName){
+        $branchName = git-branchName
+    }
     git-execCommand $gitPushTagsCmd
 }
 AddGitAlias "ggphtags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
@@ -347,7 +350,10 @@ AddGitAlias "ggphtags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
 
 $gitPullTagsCmd = "git pull origin {0} --tags"
 $gitPullTagsDesc = "Pulls all local tags from origin"
-Function git-pullTags {
+Function git-pullTags([string] $branchName) {
+    IF(!$branchName){
+        $branchName = git-branchName
+    }
     git-execCommand $gitPullTagsCmd
 }
 AddGitAlias "ggpltags" $gitPullTagsCmd "git-pullTags" $gitPullTagsDesc
