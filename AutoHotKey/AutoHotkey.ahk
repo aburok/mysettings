@@ -109,7 +109,7 @@ return
 return
 
 
-#!t::Run ToolsDir . "\TotalCommander\totalcmd\Totalcmd.exe"
+#!t::Run "C:\Program Files (x86)\Microsoft VS Code\code.exe" C:\Dropbox\mysettings\
 
 #+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
 

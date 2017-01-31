@@ -1,0 +1,29 @@
+// Place your settings in this file to overwrite the default settings
+{
+    "vim.easymotion": true,
+
+    "vim.hlsearch": true,
+
+    "vim.useSystemClipboard": true,
+
+    "vim.leader": ",",
+    "window.zoomLevel": 0,
+
+    "vim.otherModesKeyBindingsNonRecursive": [{
+            "before": ["leader", "w", "n"],
+            "after": [],
+            "commands": [{
+                "command": "workbench.action.moveEditorToNextGroup",
+                "args": []
+            }]
+        },
+        {
+            "before": ["leader", "w", "N"],
+            "after": [],
+            "commands": [{
+                "command": "workbench.action.moveEditorToPreviousGroup",
+                "args": []
+            }]
+        }
+    ]
+}

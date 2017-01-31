@@ -169,6 +169,7 @@ function git-pull ([string] $branchName) {
         $branchName = git-branchName
     }
     git-execCommand ($gitPullCmd -f $branchName) $gitPullDesc
+    git-execCommand "git submodule update --recursive --remote"
     git-pullTags $branchName
 }
 AddGitAlias "ggpl" $gitPullCmd  "git-pull" $gitPullDesc

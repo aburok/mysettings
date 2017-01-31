@@ -109,6 +109,9 @@ vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 " Find selected text / Search for visual selected text
 vnoremap // y/<C-R>"<CR>
 
+"Find a WORD under cursor with vimgrep"
+" "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
+
 nmap <leader>sc :set nohlsearch<CR>
     \Yp
     \V:s/[^\"\n]/=/g<CR>

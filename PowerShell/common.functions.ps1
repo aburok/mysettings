@@ -38,3 +38,8 @@ Function Write-Err ([string] $errorMsg){
     Write-Host $text `
         -ForeGround $global:PoShConfig.WriteErrorForeColor
 }
+
+Function Show-EnvVariables([string] $text){
+    $variables = Get-ChildItem $Env | grep $text
+    Write-Host $variables
+}

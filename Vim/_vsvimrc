@@ -56,14 +56,15 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 	nmap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
 
 	" Go to Next/prev method"
-    " In favor of go to member    nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+    " In favor of go to member    
+	nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
     nnoremap <M-j> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
     nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
     nnoremap <M-k> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
 
-    nnoremap gnd :vsc Window.NextDocumentWindow<CR>
-    nnoremap gpd :vsc Window.PreviousDocumentWindow<CR>
+    nnoremap gwd :vsc Window.NextDocumentWindow<CR>
+    nnoremap gwD :vsc Window.PreviousDocumentWindow<CR>
 
     nnoremap J :vsc Window.PreviousTab<CR>
     nnoremap K :vsc Window.NextTab<CR>
@@ -127,11 +128,16 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
-    nmap <leader>ei :vsc ReSharper.ReSharper_VSRefactor_ExtractInterface<CR>
+    " nmap <leader>ei :vsc ReSharper.ReSharper_ExtractInter<CR>
+	nmap <leader>ei :vsc Refactor.ExtractInterface<CR>
 
     vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
     vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
     vmap <leader>iv :vsc ReSharper.ReSharper_IntroVariable<CR>
+	
+	nmap <leader>if vaW:vsc ReSharper.ReSharper_IntroduceField<CR>
+	nmap <leader>iv vaW:vsc ReSharper.ReSharper_IntroVariable<CR>
+	nmap <leader>ip vaW:vsc ReSharper.ReSharper_IntroParameter<CR>
 
     nmap <leader>ac :vsc Project.AddClass<CR>
     nmap <leader>ai :vsc Project.AddInterface<CR>
@@ -147,7 +153,7 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
 " Views {{{
     nmap gwc :vsc Debug.CallStack<CR>
-    nmap gwd :vsc Debug.Watch1<CR>
+    " nmap gwd :vsc Debug.Watch1<CR> In favour of go to next document
     nmap gwe :vsc View.ErrorList<CR>
     nmap gwf :vsc View.FindResults1<CR>
 

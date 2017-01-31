@@ -35,6 +35,10 @@ Copy-Item "${env:DropboxSettingsVim}\host_gvimrc" `
     -Destination "${env:USERPROFILE}\_gvimrc" `
     -Force
 
+Copy-Item "${env:DropboxSettingsVim}\host_gvimrc" `
+    -Destination "${env:USERPROFILE}\_gvimrc" `
+    -Force
+
 Copy-Item "${env:DropboxSettings}\git\.gitignore" `
     "${env:USERPROFILE}\.gitignore"
 Copy-Item "${env:DropboxSettings}\git\.gitconfig" `

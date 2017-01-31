@@ -1,0 +1,30 @@
+// Place your key bindings in this file to overwrite the defaults
+[{
+        "key": "ctrl+1",
+        "command": "workbench.action.focusFirstEditorGroup"
+    },
+
+    {
+        "key": "shift+l",
+        "command": "workbench.action.focusNextGroup",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "shift+h",
+        "command": "workbench.action.focusPreviousGroup",
+        "when": "editorTextFocus && vim.mode != 'Insert'"
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "workbench.action.files.saveAll",
+        "when": ""
+    },
+    {
+        "key": "ctrl+shift+s",
+        "command": "-workbench.action.files.saveAs"
+    },
+    {
+        "key": "alt+shift+l",
+        "command": "workbench.files.action.showActiveFileInExplorer"
+    }
+]
