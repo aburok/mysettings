@@ -2,4 +2,4 @@ source C:\Dropbox\mysettings\vim\_vimrc
 source C:\Dropbox\mysettings\vim\_vsvimrc
 
 " REload source file for visual studio"
-nmap <Leader>ls :source C:\Users\qwerty\_vsvimrc<CR>
+nmap <Leader>ls :source C:\Users\Dawid\_vsvimrc<CR>

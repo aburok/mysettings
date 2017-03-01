@@ -46,6 +46,8 @@ AddGitAlias "ggdf" $gitDiffCmd "git-diff" "show changes in files"
 $gitBranchNameCmd = ' git rev-parse --abbrev-ref HEAD '
 function git-branchName { iex $gitBranchNameCmd }
 
+$gitBranchAllCmd = ' git branch -a'
+function git-branchAll { iex $gitBranchAllCmd }
 
 $gitAddCmd = 'git add -A'
 $gitCommitCmd = 'git commit -m "{0}"'
@@ -148,6 +150,18 @@ function git-squash {
     $currentBranch = git-branchName
     git-execCommand ($gitSquashCmd -f $currentBranch )
 }
+
+
+# http://stackoverflow.com/questions/1274057/how-to-make-git-forget-about-a-file-that-was-tracked-but-is-now-in-gitignore
+$gitForgetIgnoredCmd = "git rm --cached {0} -r"
+function git-forget([string] $fileName) {
+    if(!$fileName){
+        Write-Err "Please provide a file to forget about!!"
+        return
+    }
+    git-execCommand ($gitForgetIgnoredCmd -f $fileName )
+}
+AddGitAlias "ggforget" $gitForgetIgnoredCmd  "git-forget" $gitForgetIgnoredCmd
 
 
 $gitPushCmd = "git push origin {0}"

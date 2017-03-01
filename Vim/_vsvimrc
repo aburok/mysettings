@@ -40,6 +40,13 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 " Navigation {{{
 
     nnoremap <Space> :vsc Edit.Find<CR>
+	vnoremap <Space> y/<C-R>"<CR>
+
+    " Visual Studio doesn't work well with switching to next document window
+    " It does nothing
+    " nnoremap <Tab> :vsc Window.NextDocumentWindowNav<CR>
+
+
     "Find usages
     nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 	nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>

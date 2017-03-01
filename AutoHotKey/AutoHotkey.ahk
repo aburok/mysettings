@@ -1,19 +1,6 @@
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
-; This script has a special filename and path because it is automatically
-; launched when you run the program directly.  Also, any text file whose
-; name ends in .ahk is associated with the program, which means that it
-; can be launched simply by double-clicking it.  You can have as many .ahk
-; files as you want, located in any folder.  You can also run more than
-; one .ahk file simultaneously and each will get its own tray icon.
-
-; SAMPLE HOTKEYS: Below are two sample hotkeys.  The first is Win+Z and it
-; launches a web site in the default browser.  The second is Control+Alt+N
-; and it launches a new Notepad window (or activates an existing one).  To
-; try out these hotkeys, run AutoHotkey again, which will load this file.
-
-
 ; ^!n::
 ; IfWinExist Untitled - Notepad
 ;	WinActivate
@@ -31,91 +18,87 @@
 ; ---------------------
 ; #n::Run Notepad
 
+; Match window names by part of the title
+SetTitleMatchMode RegEx
+
+; Set Lock keys permanently
+SetNumlockState, AlwaysOn
+SetCapsLockState, AlwaysOff
+SetScrollLockState, AlwaysOff
+return
+
 DropBoxDir := "C:\Dropbox"
 ToolsDir := DropBoxDir . "\Tools"
 
-#IfWinActive ahk_class CabinetWClass
-    F1::
-        selected_file := Explorer_GetSelection()
-        Path := ToolsDir . "\vim73-zlib-win32\gvim.exe"
-        command := Path . " " . selected_file
-        Run , %command%
-        return
-#IfWinActive
-
-#+a::
-Run "..\..\window-layout\window-layout.ahk"
-Run autohotkey.exe "..\..\shortcut-assistant\shortcut-assistant.ahk"
-SetWorkingDir, "."
-return
-
-#+c::
-Title := GetWorkingDirectory()
-prompt := "prompt=$p$_%username%@%computername%:$g"
-command := "cd /d " . Title . " & " . prompt
-Run, cmd.exe /k %command%
-return
-
-#+e::
-if (FileExist(clipboard) == "D"){
-    explorer := "explorer /select," clipboard
-    Run, %explorer%
-    return
-}
-Run explorer.exe %userprofile%
-return
-
-
-#+h::RunOrActivate("ahk_class Chrome_WidgetWin_1", "chrome.exe")
-
-#+i::Run gvim c:\settings.txt
-
-#+o::
-RunOrActivate("ahk_class rctrl_renwnd32", "outlook.exe")
-return
+;  #+a::
+;  Run "..\..\window-layout\window-layout.ahk"
+;  Run autohotkey.exe "..\..\shortcut-assistant\shortcut-assistant.ahk"
+;  SetWorkingDir, "."
+;  retrn
 
 #PgUp::Send {Volume_Up 1}
 #PgDn::Send {Volume_Down 1}
 
-;#n::
-
-;return
-
-
-; Power Shell command line
-^#p::
-    workingDir :=  " -command "" cd '" . GetWorkingDirectory() . "' """
-    params := " -ExecutionPolicy unrestricted -noexit " . workingDir
-    command = powershell.exe %params%
-    Run , %command%
+!#v::
++#v::
+    WinActivate, ^.*( - Microsoft Visual Studio).*$
 return
 
-
-#+q:: Run ToolsDir . "\LINQPad4\LINQPad.exe"
-
-
-!#v::
-    workingDir := GetWorkingDirectory()
-    params := " -c ""cd " . workingDir . " "" " ;"-S Session.vim "
-    RunOrActivate("ahk_exe gvim.exe", "C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe")
+!#t::
++#t::
+    WinActivate, ^.*(Total Commander).*$
 return
 
 !#s::
     WinActivate, Slack
 return
 
-!#n::
-	WinActivate, ahk_exe ONENOTE.exe
++#o::
++#e::
+	WinActivate, .*( - OneNote)$
 return
 
+!#c::
++#c::
+	WinActivate, .*( - Google Chrome)$
+return
 
-#!t::Run "C:\Program Files (x86)\Microsoft VS Code\code.exe" C:\Dropbox\mysettings\
+; Visua Studio Code
+!#d::
++#d::
+	WinActivate, .*( - Visual Studio Code)$
+return
 
-#+x::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
+!#i::
+	WinActivate, ^(Internet Information Services).*$
+return
 
-#+n::RunOrActivate("", ToolsDir . "\ProcessExplorer\procexp.exe")
+!#n::
++#n::
+	WinActivate, ^.*(Notepad\+\+)$
+return
 
-#+^s::RunOrActivate("Slack - The Cogworks", "C:\Users\Dawid\AppData\Local\slack\Update.exe --processStart slack.exe")
+#!q::
+#+q::
+	WinActivate, ^.*(Microsoft SQL Server Management Studio).*$
+return
+
+#!r::
+#+r::
+	WinActivate, ^.*(Windows PowerShell).*$
+return
+
+#!b::
+    Run "http://build.tools.tcwdigital.co.uk:8181" 
+return
+
+#!l::
+    Run "https://trello.com/b/E4Twkqe5/4-development"
+return
+
+#!m::
+    Run "C:\Program Files (x86)\Microsoft VS Code\code.exe" C:\Dropbox\mysettings\
+return
 
 
 CAPSLOCK::Escape
@@ -131,25 +114,6 @@ RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
         Run, %Target%
 }
 
-Explorer_GetSelection(hwnd="") {
-    window := Explorer_GetWindow(whnd)
-    if(window) {
-        sel := window.Document.SelectedItems
-    }
-	for item in sel {
-        ToReturn .= item.path "`n"
-    }
-	return Trim(ToReturn,"`n")
-}
-
-Explorer_GetDirectory(hwnd = ""){
-    window := Explorer_GetWindow(whnd)
-    if(window) {
-        location := window.LocationURL
-        return UnEscape_Chars(location)
-    }
-}
-
 UnEscape_Chars(string){
     StringReplace string, string, file:///, , All
     StringReplace string, string, `%20, `  , All
@@ -161,11 +125,11 @@ Explorer_GetWindow(hwnd = ""){
     hwnd := hwnd ? hwnd : WinExist("A")
     WinGetClass class, ahk_id %hwnd%
 	if (class="CabinetWClass" or class="ExploreWClass" or class="Progman") {
-        for window in ComObjCreate("Shell.Application").Windows {
-            if (window.hwnd==hwnd) {
-                return window
-            }
-        }
+        ;  for window in ComObjCreate("Shell.Application").Windows {
+        ;      if (window.hwnd==hwnd) {
+        ;          return window
+        ;      }
+        ;  }
     }
 }
 
@@ -181,13 +145,6 @@ ReturnFirstExistingFile(FileList){
 }
 
 TryOpenApplicationOrDefault(appPath, LastChance, params = ""){
-}
-
-GetWorkingDirectory(){
-    dir := Explorer_GetDirectory()
-    If(dir)
-        return dir
-    return USERPROFILE
 }
 
 GetDirFromWindowTitle(){

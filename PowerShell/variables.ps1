@@ -25,6 +25,7 @@ AddToPath(";${env:WinDir}\Microsoft.NET\Framework64\v4.0.30319")
 AddToPath(";${env:ProgramFiles}\Git\bin")
 AddToPath(";${env:ProgramFiles}\Git\usr\bin")
 AddToPath(";${env:DropboxTools}\curl\bin")
+AddToPath(";${env:DropboxTools}\advanced_renamer_portable\")
 AddToPath(";$vimExePath")
 
 ## This sould be dependant on TortoiseGit installation path

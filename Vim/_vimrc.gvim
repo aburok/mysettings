@@ -20,7 +20,6 @@ set statusline=%F%m%r%h%w\ (%{&ff}){%Y}\ [%l,%v][%p%%]
 " Turns of annoying sounds
 set noerrorbells
 set novisualbell
-set t_vb=
 set tm=500
 
 
