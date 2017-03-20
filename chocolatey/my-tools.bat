@@ -52,3 +52,5 @@ cinst autohotkey.portable
 cinst xmind
 
 cinst truecrypt
+
+choco install sigil 
