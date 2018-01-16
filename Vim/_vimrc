@@ -124,7 +124,8 @@ nmap <leader>sc :set nohlsearch<CR>
 nnoremap <Leader>p "0p
 nnoremap <Leader>r viW"0p
 vmap rr "_dhP
-vmap ra "dd"ap
+vmap ra "ddh"ap
+vmap a "ay
 
 nnoremap <Leader>s" bi"<esc>ea"<Esc>b
 nnoremap <Leader>s( bi(<esc>ea)<Esc>b

@@ -49,6 +49,7 @@ return
     WinActivate, ^.*(Total Commander).*$
 return
 
++#a::
 !#s::
     WinActivate, Slack
 return
@@ -66,7 +67,7 @@ return
 ; Visua Studio Code
 !#d::
 +#d::
-	WinActivate, .*( - Visual Studio Code)$
+	WinActivate, ^(Todoist).*$
 return
 
 !#i::
@@ -85,7 +86,17 @@ return
 
 #!r::
 #+r::
-	WinActivate, ^.*(Windows PowerShell).*$
+	WinActivate, ^PS::.*$
+return
+
+#!w::
+#+w::
+	WinActivate, ^.*(Tasks).*$
+return
+
+#!z::
+#+z::
+	WinActivate, ^IPOX.*$
 return
 
 #!b::

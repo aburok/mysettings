@@ -9,4 +9,4 @@ $Global:GitPromptSettings.LocalDefaultStatusForegroundColor = [ConsoleColor]::Gr
 $Global:GitPromptSettings.DefaultForegroundColor = [ConsoleColor]::Yellow
 
 $Global:GitPromptSettings.EnableStashStatus = $true
-$Global:GitPromptSettings.EnableWindowTitle = 'Windows PowerShell ~ '
+$Global:GitPromptSettings.EnableWindowTitle = 'PS::'

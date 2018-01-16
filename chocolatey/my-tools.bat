@@ -54,3 +54,5 @@ cinst xmind
 cinst truecrypt
 
 choco install sigil 
+
+choco install jing

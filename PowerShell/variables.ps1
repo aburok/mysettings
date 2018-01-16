@@ -21,12 +21,22 @@ function AddToPath([string] $path){
     }
 }
 
+## .NET Framework
 AddToPath(";${env:WinDir}\Microsoft.NET\Framework64\v4.0.30319")
+
+## Git 
 AddToPath(";${env:ProgramFiles}\Git\bin")
 AddToPath(";${env:ProgramFiles}\Git\usr\bin")
+
 AddToPath(";${env:DropboxTools}\curl\bin")
 AddToPath(";${env:DropboxTools}\advanced_renamer_portable\")
 AddToPath(";$vimExePath")
+
+## GacUtil tool 
+$gacutilPath = "${Env:ProgramFiles(x86)}\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools\"
+if(Test-Path $gacutilPath){
+    AddToPath(";$gacutilPath")
+}
 
 ## This sould be dependant on TortoiseGit installation path
 AddToPath(";${env:DropboxTools}\TortoiseGit\bin")

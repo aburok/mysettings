@@ -1,30 +1,78 @@
 # First thing in this file
-#
-if ($global:DropboxProfileLoaded -eq 1) {
+
+param([switch] $Force)
+
+if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
+    Write-Verbose "Profile Already loaded."
     return
 }
 
 . C:\Dropbox\mysettings\PowerShell\variables.ps1
 
+Function Import-Functions ($Path) {
+    Import-Module $Path -WarningAction @{}
+}
 
-$PScriptConfig = "${PScript}\config"
+Function Initialize-Config() {
+    param(
+        [string] $path,
+        [string] $excludePattern,
+        [string] $preInitFile,
+        [string] $postInitFile)
+
+    if(!$preInitFile){
+        $preInitFile = "pre_init.psm1"
+    }
+    $preInitFilePath = [io.path]::combine($path ,$preInitFile)
+
+    if(!$postInitFile){
+        $postInitFile = "post_init.psm1"
+    }
+    $postInitFilePath = ([io.path]::combine($path ,$postInitFile))
+
+    if(Test-Path $preInitFilePath){
+        Write-Host "Executing pre init file $preinitFilePath"
+        Import-Functions $preInitFilePath
+    }
+
+    if($excludePattern){
+        $files = ls $path -Recurse -Exclude $excludePattern
+    }
+    else{
+        $files = ls $path -Recurse 
+    }
+    
+    $files `
+        | ? {$_.Name -ne $preInitFile -and $_.Name -ne $postInitFile } `
+        | Sort-Object `
+        | % {
+            $filePath = Join-Path $path $_.Name
+            Write-Host "Executing file $filePath" 
+            Import-Functions $filePath
+        } `
+        | Out-Null
+
+    if(Test-Path $postInitFilePath){
+        Write-Host "Executing post init file $postInitFilePath"
+        Import-Functions $postInitFilePath
+    }
+}
 
 . ($PScript + "\modules.ps1")
 . ($PScript + "\common.functions.ps1")
 . ($PScript + "\events.ps1")
+. ($PScript + "\clean-files.ps1")
 
-. ($PScriptConfig + "\posh-git-config.ps1")
-. ($PScriptConfig + "\vim-editor-config.ps1")
-. ($PScriptConfig + "\iis-config.ps1")
-. ($PScriptConfig + "\ps-read-line-config.ps1")
-. ($PScriptConfig + "\prompt-config.ps1")
+### Varia 
+Initialize-Config "${PScript}\config"
 
-. ($PScriptConfig + "\git-alias.ps1")
-
-$PSfunctions = "${PScript}\functions"
+### GIT
+Initialize-Config "$PScript\git"
 
 ### Include all scripts from function Directory
-ls $PSfunctions -Recurse | % {. (Join-Path $PSfunctions $_.Name)} | Out-Null
+Initialize-Config "${PScript}\functions"
+
+Initialize-Config "${PScript}\security"
 
 
 if($global:poshSettings.lastDirectory){
