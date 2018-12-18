@@ -1,3 +1,3 @@
-source c:\Dropbox\mysettings\Vim\_vimrc
-source c:\Dropbox\mysettings\Vim\_vimrc.plugins.config
-source c:\Dropbox\mysettings\Vim\_vimrc.vundle
+source c:/Dropbox/mysettings/Vim/_vimrc
+source c:/Dropbox/mysettings/Vim/_vimrc.plugins.config
+source c:/Dropbox/mysettings/Vim/_vimrc.vundle

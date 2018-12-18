@@ -1,0 +1,168 @@
+set commit-order   = date
+set ignore-space   = some
+set refresh-mode   = after-command
+set ignore-case    = true
+set mouse          = false
+set diff-highlight = false
+
+# set sort-order = descending
+# set sort-field = date
+
+set main-view-author-display = abbreviated
+set main-view-date-local = true
+set split-view-width = 70%
+set wrap-lines = yes
+
+bind generic Y view-stash
+bind generic Q none
+bind generic R none
+
+bind generic g  none
+bind generic gg move-first-line
+bind main    G  none
+bind generic G  move-last-line
+
+# bind generic <S-Space> move-page-up
+
+bind generic y none
+bind generic yh !@sh -c "echo -n %(commit) | clip"
+bind generic yy !@sh -c "echo -n %(text)   | clip"
+bind generic yb !@sh -c "echo -n %(branch) | clip"
+bind generic yt !@sh -c "git show -s --format=%s %(commit) | clip"
+bind generic yf !@sh -c "echo -n %(file) | clip"
+bind generic yd !@sh -c "echo -n %(directory) | clip"
+
+##########################
+###  MAIN ###
+##########################
+
+bind main q         none
+bind main Q         view-close
+bind main F         >git fetch --all
+bind main c         none
+bind main co        >git checkout %(branch)
+bind main cl        >git checkout %(branch)
+bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
+bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
+bind main MN        ?git merge %(branch) --no-commit --no-ff
+bind main Pc        ?git cherry-pick -n %(commit)
+bind main L         :!git for-each-ref --contains %(commit)
+bind main g;        :%(repo:head-id)
+bind main <F6>      @git tig-compare-commits %(commit)
+bind main Rl        !git rebase -i %(branch)
+bind main Rr        !git rebase -i "%(remote)/%(branch)"
+bind main Ril       !git rebase -i %(branch)
+bind main Rir       !git rebase -i "%(remote)/%(branch)"
+bind main Rml       !git rebase --preserve-merges %(branch)
+bind main Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
+bind main Rc        !git rebase --continue
+bind main RR        refresh
+bind main V         ?git revert %(commit)
+bind main S         !git grep --line-number %(prompt)
+bind main D         none
+bind main Dt        >TortoiseGitProc.exe /command:diff /revision1:{0} /revision2:%(commit)"
+
+# Slugify text 
+# sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z
+
+##########################
+###  REFS ###
+##########################
+
+bind refs B         @git checkout -b "%(prompt Enter new branch name: )"
+# bind refs B         !@sh -c "git checkout -b $(slugify %(prompt Enter new branch name: ))"
+
+bind refs p         none
+bind refs pl        ?git pull %(remote) %(branch)
+bind refs ph        ?git push %(remote) %(branch) 
+bind refs pd        ?git pull %(remote) develop-redesign 
+bind refs MN        ?git merge %(branch) --no-commit --no-ff
+bind refs MM        ?git merge %(branch)
+bind refs Md        ?git merge develop-redesign
+bind refs <F2>      @git branch -m %(branch) "%(prompt Enter new name for the branch: )"
+bind refs <F3>      @git push origin origin/%(branch):refs/heads/%(prompt) :%(branch)
+bind refs c         none
+bind refs co        ?git checkout %(branch)
+bind refs cl        ?git checkout %(branch)
+bind refs cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
+bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
+bind refs cd        >git checkout develop-redesign
+# bind refs D         !git difftool --no-prompt %(commit) develop-redesign  # -y - no prompt
+bind refs D     none
+bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)  
+bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)  
+bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:{0} /revision2:%(commit)"
+
+bind refs XL         ?git push %(remote) --delete %(branch)
+bind refs XP         ?git push %(remote) --delete %(branch)
+bind refs Rl        !git rebase -i %(branch)
+bind refs Rr        !git rebase -i "%(remote)/%(branch)"
+bind refs Ril       !git rebase -i %(branch)
+bind refs Rir       !git rebase -i "%(remote)/%(branch)"
+bind refs Rml       !git rebase --preserve-merges %(branch)
+bind refs Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
+
+bind refs F         >git fetch --all
+
+
+##########################
+###  STASH ###
+##########################
+
+bind stash D ?git stash drop %(stash)
+bind stash A ?git stash apply %(stash)
+bind stash P ?git stash pop %(stash)
+
+
+##########################
+###  STATUS ###
+##########################
+
+bind status gc :!git clean -nd
+bind status gC :!git clean -fd
+bind status gr :!git checkout %(file)
+bind status ga ?git checkout *
+bind status S none
+bind status s refresh
+bind status Sa  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )" 
+bind status Ss  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )"
+bind status Sf  @git stash push -m "%(prompt Enter stash name: )" "%(file)"
+bind status p  none
+bind status pp ?git push origin %(branch)
+bind status pf ?git push -f origin
+bind status pu ?git push --set-upstream origin %(repo:head)
+bind status B  @git checkout -b "%(prompt Enter new branch name: )"
+bind status I  :!git add -i %(file)
+bind status +  ?git commit --amend
+bind status yb !@sh -c "echo -n %(repo:head) | clip"
+bind status Rc >git rebase --continue
+bind status a. >git add .
+bind status aA >git add -A
+bind status au >git add -u
+bind status ar >git reset
+bind status Ma ?git merge --abort
+bind status Mc ?git merge --continue
+bind status Md ?git merge develop-redesign
+bind status Mr >TortoiseGitProc.exe /command:resolve
+bind status c >TortoiseGitProc.exe /command:diff /path:"%(file)"
+bind status X ?@sh -c "rm -f %(file)"
+bind status D >TortoiseGitProc.exe /command:diff /path:"%(file)"
+bind status E >gvim.exe "%(file)"
+bind status gH >TortoiseGitProc.exe /command:log /path:"%(file)"
+
+
+##########################
+###  DIFF ###
+##########################
+
+# bind diff    E !"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" -edit %(file)
+bind diff H >echo %(file) %(directory) %(repo:git-dir)
+bind diff E >TortoiseGitProc.exe /command:diff /path:"%(file)"
+# bind refs 
+
+color "error:" red default
+
+bind status H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+bind diff    H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+bind blame H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+bind blob  H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""

@@ -13,3 +13,19 @@ Function curlx([string] $url, [string]$user, [string]$pass){
 
     return $response
 }
+
+
+# Below code allows to make curl requests to site without valid SSL/TSL certificate
+# https://stackoverflow.com/questions/11696944/powershell-v3-invoke-webrequest-https-error
+add-type @"
+    using System.Net;
+    using System.Security.Cryptography.X509Certificates;
+    public class TrustAllCertsPolicy : ICertificatePolicy {
+        public bool CheckValidationResult(
+            ServicePoint srvPoint, X509Certificate certificate,
+            WebRequest request, int certificateProblem) {
+            return true;
+        }
+    }
+"@
+[System.Net.ServicePointManager]::CertificatePolicy = New-Object TrustAllCertsPolicy

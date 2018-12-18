@@ -45,7 +45,8 @@ set noswapfile " no .swp files :)
 " This will fold all blocks by default when file is open
 set foldmethod=indent
 " This will open folds to given level when file is open
-set foldlevel=3
+set foldlevel=10
+set nofoldenable    " disable folding
 " zc - close fold,
 " zC - close All faldings
 " zo - open fold,
@@ -73,13 +74,13 @@ nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
 " Settings for spell checking
-map <leader>ss :setlocal spell!<CR>
+noremap <leader>ss :setlocal spell!<CR>
 
-map <leader>sn ]s " Go to next misspelled word
-map <leader>sp [s " Go to previous misspelled word
+noremap <leader>sn ]s " Go to next misspelled word
+noremap <leader>sp [s " Go to previous misspelled word
 "map <leader>sa zg " Add word under cursor to the good words file
-map <leader>s? z=  " Suggest correct word for word under the cursor
-imap <C-Space> <C-n>
+noremap <leader>s? z=  " Suggest correct word for word under the cursor
+inoremap <C-Space> <C-n>
 
 
 " Only do this part when compiled with support for autocommands.
@@ -131,7 +132,7 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 " gU - make UPPERCASE
 " iw - the whole word
 " `]a - go to last position and append
-map! <C-F> <Esc>gUiw`]a
+" map! <C-F> <Esc>gUiw`]a
 
 " File operations
 nmap <leader>w :w!<cr>
@@ -172,12 +173,15 @@ au TabLeave * let g:lasttab=tabpagenr()
 nnoremap <Tab> gt
 nnoremap <S-Tab> gT
 
+:au BufAdd,BufNewFile * nested tab sball
+
 " auto formatting
-map <C-F> gg=G<C-O><C-O>
+" map <C-F> gg=G<C-O><C-O>
 
 " CTRL-Tab is Next window
 noremap <C-Tab> :tabnext<CR>
 noremap <C-S-Tab> :tabprevious<CR>
+noremap <C-N> :tabnew<CR>
 
 
 " GIT mapping
@@ -204,3 +208,5 @@ nmap <F9> :source ~\\vim_session <CR>        " Quick load session
 
 " refresh source files / vimrc "
 nmap <F7> :source $MYVIMRC <CR>
+
+cd C:/Projects
