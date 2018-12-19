@@ -1,5 +1,7 @@
 
 au GUIEnter * simalt ~x
+
+" Lunch NERDTree when new tab is opened
 " autocmd TabEnter * NERDTree
 
 " https://github.com/scrooloose/syntastic
@@ -8,8 +10,6 @@ au GUIEnter * simalt ~x
 " move a line of text using Alt + [jk]
 nmap <M-j> my:m+<cr>`y
 nmap <M-k> my:m-2<cr>`y
-
-map <F5> <Esc>:w<CR>:!%:p<CR>
 
 syntax on " turn on syntax high:wq
 

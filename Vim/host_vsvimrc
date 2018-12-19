@@ -1,5 +1,5 @@
-source C:\Dropbox\mysettings\vim\_vimrc
-source C:\Dropbox\mysettings\vim\_vsvimrc
+source C:\Dropbox\mysettings\vim\_vimrc.vimrc
+source C:\Dropbox\mysettings\vim\_vsvimrc.vimrc
 
 " REload source file for visual studio"
-nmap <Leader>ls :source C:\Users\Dawid\_vsvimrc<CR>
+nmap <Leader>lc :source C:\Users\Dawid\_vsvimrc<CR>

@@ -24,7 +24,7 @@ InitializeGlobals()
 ; L3 to limit the input to 3 keys.
 INPUT, command, T2 L2
 
-if (command = "tt")
+if (command = "tt" || command = "th")
     Run "https://test.merckmanuals.com/home"
 else if (command = "tp")
     Run "https://test.merckmanuals.com/professional"

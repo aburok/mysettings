@@ -72,6 +72,9 @@ vnoremap <S-Del> "+x
 " CTRL-C and CTRL-Insert are Copy
 vnoremap <C-C> "+y
 vnoremap <C-Insert> "+y
+nnoremap <leader>y" vi""+y
+nnoremap <leader>y' vi'"+y
+nnoremap <leader>y( vi("+y
 
 " CTRL-V and SHIFT-Insert are Paste
 noremap <S-Insert>		"+gp
@@ -79,6 +82,13 @@ noremap <S-Insert>		"+gp
 cnoremap <C-V>		<C-R>+
 cnoremap <S-Insert>		<C-R>+
 " nnoremap p i<C-R>0<Esc> - DELETED - to much confusion with default behavior
+
+""""""""""""""""""""""""""""""""""""""""
+"  Yank File Stuff
+""""""""""""""""""""""""""""""""""""""""
+nnoremap <leader>yn :let @+ = expand("%")<CR>
+nnoremap <leader>yp :let @+ = expand("%:p:h")<CR>
+nnoremap <leader>yf :let @+ = expand("%:p")<CR>
 
 
 " CTRL-A is Select all
@@ -101,19 +111,21 @@ noremap n nzz
 nnoremap zx :wq<CR>
 
 "Find and Replace Text
-vnoremap <C-R> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <leader>re "hy:%s/<C-R>h//gc<left><left><left>
 nnoremap <Leader>dw :%s/[ \n\t]//g
 
 " Find selected text / Search for visual selected text
-nnoremap // yiw/<C-R>"<CR>
-nnoremap /' yi'/<C-R>"<CR>
-nnoremap /" yi"/<C-R>"<CR>
-vnoremap // y/<C-R>"<CR>
+nnoremap <leader>ff yiw/<C-R>"<CR>
+nnoremap <leader>f' yi'/<C-R>"<CR>
+nnoremap <leader>f" yi"/<C-R>"<CR>
+" vnoremap // y/<C-R>"<CR>
+" FIND / SEARCH TEXT FROM CLIPBOARD
+nnoremap <leader>fc /<C-R>+<CR>zz
 
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
+
 
 nnoremap <leader>sc :set nohlsearch<CR>
     \Yp
@@ -155,3 +167,12 @@ vnoremap <leader>c/ <C-V>^I// <ESC>
 
 let g:syntastic_shell = "/usr/bin/bash"
 
+" REFRESH / RELOAD FILE 
+noremap <F5> :e!<CR>G
+noremap <C-R> :e!<CR>G
+noremap <leader><leader> :e!<CR>G
+" RELOAD THIS CONFIGURATION
+nnoremap <C-F5> :source $MYVIMRC<CR>
+nnoremap <leader>lc :source $MYVIMRC<CR>
+" Save and run current file
+noremap <S-F5> <Esc>:w<CR>:!%:p<CR>

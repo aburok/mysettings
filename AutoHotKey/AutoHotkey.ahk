@@ -257,6 +257,9 @@ if (command = "ia")
     gvim("C:\Windows\System32\inetsrv\Config\applicationHost.config")
 else if (command = "hh")
     gvim("C:\Windows\System32\drivers\etc\hosts")
+else if (command = "co"){
+    gvim(Clipboard)
+}
 return
 
 +!v::
