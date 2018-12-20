@@ -307,8 +307,8 @@ return
 
 #Include %A_ScriptDir%\Common.ahk
 #Include %A_ScriptDir%\Common.Web.ahk
+#Include %A_ScriptDir%\Common.Files.ahk
 #Include %A_ScriptDir%\slugify.ahk
-#Include %A_ScriptDir%\Merck.ahk
 #Include %A_ScriptDir%\ParseUrl.ahk
 #Include %A_ScriptDir%\GuidUtils.ahk
 
@@ -370,7 +370,8 @@ GetDirFromWindowTitle(){
 
 ;Reload script on Ctrl + S (Save)
 ~^s::
-IfWinActive, %A_ScriptName%
+; IfWinActive, %A_ScriptName%
+IfWinActive, .ahk
 {
     SplashTextOn,,,Updated script,
     Sleep, 200

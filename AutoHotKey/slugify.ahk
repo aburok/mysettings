@@ -17,9 +17,3 @@
     
 return
 
-SlugifyText(Text){
-    Slug := RegExReplace(Text, "[\]\[]" , "")
-    Slug := Trim(Slug)
-    Slug := RegExReplace(Slug, "\W+" , "-")
-    return Slug
-}

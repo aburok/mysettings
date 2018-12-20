@@ -20,3 +20,45 @@ RunWaitMany(commands) {
     ; Read and return the output of all commands
     return exec.StdOut.ReadAll()
 }
+
+SlugifyText(Text){
+    Slug := RegExReplace(Text, "[\]\[]" , "")
+    Slug := Trim(Slug)
+    Slug := RegExReplace(Slug, "\W+" , "-")
+    return Slug
+}
+
+
+StringJoin(array, delimiter = ";")
+{
+  Loop
+    If Not %array%%A_Index% Or Not t .= (t ? delimiter : "") %array%%A_Index%
+      Return t
+}
+
+InsertCharacterAtStart(vText, character){
+    result := ""
+
+    Loop, parse, vText, `n, `r
+    {
+        result := result . character . " " . %A_LoopField%
+    }
+
+    resultText := StringJoin(vText, "`n`r".character)
+    MsgBox, resultText
+
+    return resultText
+}
+
+Firefox(pageUrl){
+    Run, C:\Program Files\Mozilla Firefox\firefox.exe %pageUrl%
+}
+
+Edge(pageUrl){
+    Run, edge %pageUrl%
+}
+
+
+IE(pageUrl){
+    Run, C:\Program Files (x86)\Internet Explorer\iexplorer.exe %pageUrl%
+}
