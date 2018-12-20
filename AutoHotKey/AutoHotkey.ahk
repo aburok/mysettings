@@ -290,6 +290,23 @@ else if (command="u"){
 
 return
 
+
++!i::
+
+    INPUT, command, T2 L1
+    Url:=CopyBrowserUrl()
+    if (command="f"){
+        firefox(Url)
+    }
+    else if (command="e"){
+        Edge(Url)
+    }
+    else if (command="i"){
+        IE(Url)
+    }
+
+return
+
 #+a::
     WinActivate, ^.*(Microsoft Teams).*$
 return
@@ -367,19 +384,6 @@ GetDirFromWindowTitle(){
         return  Title
     return
 }
-
-;Reload script on Ctrl + S (Save)
-~^s::
-; IfWinActive, %A_ScriptName%
-IfWinActive, .ahk
-{
-    SplashTextOn,,,Updated script,
-    Sleep, 200
-    SplashTextOff
-    Reload
-}
-return
-
 
 ^+c::
 Send, ^c

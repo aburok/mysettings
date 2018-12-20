@@ -14,3 +14,33 @@ resetIISAndPing(url2Ping){
     ; )
     ; )
 }
+
+changeAddress(to, fromList){
+    LocalUrl:= CopyBrowserUrl()
+    for index, element in fromList
+    {
+        LocalUrl := StrReplace(LocalUrl, element, to)
+    }
+    Run % LocalUrl
+}
+
+CopyBrowserUrl(){
+    Send ^l
+    Sleep 100
+    Send ^c
+    Sleep 100
+    return Clipboard
+}
+
+Firefox(pageUrl){
+    Run, C:\Program Files\Mozilla Firefox\firefox.exe %pageUrl%
+}
+
+Edge(pageUrl){
+    Run microsoft-edge:%pageUrl%
+}
+
+
+IE(pageUrl){
+    Run, C:\Program Files (x86)\Internet Explorer\iexplorer.exe %pageUrl%
+}

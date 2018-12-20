@@ -25,6 +25,7 @@ SlugifyText(Text){
     Slug := RegExReplace(Text, "[\]\[]" , "")
     Slug := Trim(Slug)
     Slug := RegExReplace(Slug, "\W+" , "-")
+    Slug := Trim(Slug, " .,-!?")
     return Slug
 }
 
@@ -50,15 +51,15 @@ InsertCharacterAtStart(vText, character){
     return resultText
 }
 
-Firefox(pageUrl){
-    Run, C:\Program Files\Mozilla Firefox\firefox.exe %pageUrl%
-}
 
-Edge(pageUrl){
-    Run, edge %pageUrl%
+;Reload script on Ctrl + S (Save)
+~^s::
+; IfWinActive, %A_ScriptName%
+IfWinActive, .ahk
+{
+    SplashTextOn,,,Updated script,
+    Sleep, 200
+    SplashTextOff
+    Reload
 }
-
-
-IE(pageUrl){
-    Run, C:\Program Files (x86)\Internet Explorer\iexplorer.exe %pageUrl%
-}
+return
