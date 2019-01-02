@@ -1,10 +1,11 @@
 [user]
-    name=dkoruba
-    email=dawid.koruba@thecogworks.com
+    # name=dkoruba
+    # email=dawid.koruba@thecogworks.com
+    email=dawid.koruba@avanade.com
+    name=
 [core]
-    editor=gvim
+    editor=vim
     autocrlf=true
-    editor=gvim
 
 [alias]
     ci = commit

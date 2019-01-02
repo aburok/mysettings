@@ -27,12 +27,15 @@ function git-grep () {
         [switch] $includeRB
     )
     $gitGrepCmdResult = $gitGrepCmd
-    if (! $includeRB) {
-        $exclude = "*.css,rbdotcom*.js,dist/**"
+
+    if (!$exclude) { $exclude = ""}
+    if (!$includeRB) {
+        $exclude += ",*.css,rbdotcom*.js,dist/**"
     }
 
     if ($exclude) {
-        "$exclude".Split("{,}") | % { $gitGrepCmdResult += (" ':(exclude)*/{0}'" -f $_ ) }
+        "$exclude".Split(",") `
+            | % { $gitGrepCmdResult += " ':(exclude)*/$_'" }
     }
 
     git-execCommand ($gitGrepCmdResult -f $before, $after, $pattern, $include )

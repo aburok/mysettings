@@ -8,7 +8,7 @@
 ;	Run Notepad
 ; return
 
-; # - Win key
+; # - Win ke:
 ; ^ - Ctrl key
 ; ! - Alt key
 ; + - Shift key
@@ -36,80 +36,298 @@ ToolsDir := DropBoxDir . "\Tools"
 ;  SetWorkingDir, "."
 ;  retrn
 
+
+#LButton::
+#+q:: 
+#WheelDown::
+sendevent {LWin down}{LCtrl down}{Left down}
+Sleep 100
+SendEvent {Left up}{LCtrl up}{Lwin up}      ; switch to next virtual desktop
+Sleep 1000
+return
+
+#+w:: 
+#RButton::
+#WheelUp::
+sendevent {LWin down}{LCtrl down}{Right down}
+Sleep 100
+SendEvent {Right up}{LCtrl up}{Lwin up}      ; switch to next virtual desktop
+Sleep 1000
+return
+
+; !LButton::
+; Send, Browser_Back
+; return
+
+; !RButton::
+; Send, Browser_Forward
+; return
+
+
 #PgUp::Send {Volume_Up 1}
 #PgDn::Send {Volume_Down 1}
+; #j::Send {Volume_Up 1}
+; #k::Send {Volume_Down 1}
 
-!#v::
-+#v::
+; #+j::Send {Shift}+{LWin}+{Left}
+; #+h::Send #+{Left}
+#!h::Send #+{Left}
+#+l::Send #+{Right}
+#+j::Send #{Left}
+#+k::Send #{Right}
+#+u::Send #{Up}
+
+#+h::
+    SoundSet, 1, Microphone, mute, 2
+return
+
+#!v::
+#+v::
     WinActivate, ^.*( - Microsoft Visual Studio).*$
 return
 
-!#t::
-+#t::
-    WinActivate, ^.*(Total Commander).*$
+;================================================================================    
+; ================================== MERCK MANUALS =============================
+; ================================================================================ 
+
+#+m::
+    ; WinActivate, ^(Merck\.Manuals).*( - Microsoft Visual Studio).*$
+    WinActivate, ^.*(mysettings).*(Visual Studio Code)$
 return
 
-+#a::
-!#s::
-    WinActivate, Slack
+#+f::
+    WinActivate, ^(.*)(ffs_gui).*$
 return
 
-+#o::
-+#e::
-	WinActivate, .*( - OneNote)$
+; ================================================================================ 
+; ================================================================================ 
+; ================================================================================ 
+
+; #+q::
+#+t::
+; #+w::
+    ; WinActivate, ^.*(Total Commander).*$
+    WinActivate, ahk_exe TOTALCMD64.EXE
 return
 
-!#c::
-+#c::
-	WinActivate, .*( - Google Chrome)$
+; #+a::
+; #!s::
+;    WinActivate, Slack
+; return
+
+#+o::
+	; WinActivate, .*(dawid\.koruba@avanade\.com - Outlook).*$
+    WinActivate, ahk_exe OUTLOOK.EXE
 return
+
+
+#+e::
+	; WinActivate, .*(OneNote).*$
+    WinActivate, ahk_exe ONENOTE.EXE
+return
+
+#!c::
+#+c::
+	WinActivate, ^.*(Google Chrome)$
+return
+
+; #+h::
+;     WinActivate, ^.*(Google Hangouts).*$
 
 ; Visua Studio Code
-!#d::
-+#d::
+#!i::
+#+i::
 	WinActivate, ^(Todoist).*$
 return
 
-!#i::
-	WinActivate, ^(Internet Information Services).*$
+; Visua Studio Code
+#!d::
+#+d::
+	WinActivate, ^.*(Visual Studio Code)$
 return
 
-!#n::
-+#n::
-	WinActivate, ^.*(Notepad\+\+)$
+#!n::
+#+n::
+	WinActivate, ^.*(Notepad\+\+).*$
 return
 
-#!q::
-#+q::
-	WinActivate, ^.*(Microsoft SQL Server Management Studio).*$
-return
-
-#!r::
+; Powershell / Command line tool
 #+r::
-	WinActivate, ^PS::.*$
+	; WinActivate, ^PS::.*$
+    WinActivate, ahk_exe ConEmu64.exe
 return
 
-#!w::
-#+w::
-	WinActivate, ^.*(Tasks).*$
++!?::
+
+MsgBox, 
+    (
+        Shortcuts
+
+================================
+    Applications
+    SHIFT + ALT + D
+
+        a -> Teams
+        b -> Chrome (Browser)
+        c -> Command Line (ConEmu)
+        d -> Dev Tools Chrome
+        f -> Total Commander (Files)
+        h -> Hangouts
+        l -> Skype / Lync
+        m -> Visual Studio Code
+        n -> Notepad ++
+        r -> Fiddler
+        v -> Visual Studio 
+        w -> Vim
+
+================================
+    Commands
+    SHIFT + ALT + C
+
+        f -> Flush DNS
+    )
 return
 
-#!z::
++!d::
+
+INPUT, command, T2 L1
+
+if (command = "a")
+    WinActivate, ^.*(Microsoft Teams).*$
+else if (command = "b")
+	WinActivate, ^.*(Google Chrome)$
+else if (command = "c")
+    WinActivate, ahk_exe ConEmu64.exe
+else if (command = "d")
+    WinActivate, ^DevTools - .*$
+else if (command = "e")
+    WinActivate, ahk_exe ONENOTE.EXE
+else if (command = "f")
+    WinActivate, ahk_exe TOTALCMD64.EXE
+else if (command = "g")
+    WinActivate, ahk_exe mintty.exe
+else if (command = "h")
+    WinActivate, ^.*(Google Hangouts).*$
+else if (command = "k")
+    WinActivate, ^.*(Google Hangouts).*$
+else if (command = "l")
+    WinActivate, ahk_exe lync.exe
+else if (command = "m")
+    WinActivate, ^.*(mysettings).*(Visual Studio Code)$
+else if (command = "n")
+	WinActivate, ^.*(Notepad\+\+).*$
+else if (command = "r")
+    WinActivate, ahk_exe Fiddler.exe
+else if (command = "v")
+    WinActivate, ^.*( - Microsoft Visual Studio).*$
+else if (command = "w")
+    WinActivate, ^.*(- GVIM).*$
+else if (command = "9")
+    Run "https://9gag.com"
+
+return 
+
+
++!c::
+
+INPUT, command, T2 L2
+
+if (command = "f"){
+    MsgBox % RunWaitMany("
+    (
+        echo Flush DNS
+        echo ipconfig `/flushdns 
+        ipconfig `/flushdns 
+        echo nbtstat -r 
+        nbtstat -r 
+        echo netsh int ip reset
+        netsh int ip reset
+        echo netsh winsock reset
+        netsh winsock reset 
+    )")
+} else if (command = "a"){
+
+}
+return
+
++!f::
+INPUT, command, T2 L2
+
+if (command = "ia")
+    gvim("C:\Windows\System32\inetsrv\Config\applicationHost.config")
+else if (command = "hh")
+    gvim("C:\Windows\System32\drivers\etc\hosts")
+else if (command = "co"){
+    gvim(Clipboard)
+}
+return
+
++!v::
+
+INPUT, command, T2 L1
+
+if (command = "e"){
+    INPUT, command, T2 L1
+    LastNLetters := SubStr(Clipboard, -1 * command)
+    Send, %LastNLetters%
+}
+else if (command = "s"){
+    INPUT, command, T2 L1
+    FirstNLetters := SubStr(Clipboard, 1, command)
+    Send, %FirstNLetters%
+}
+
+return
+
++!g::
+INPUT, command, T2 L1
+if (command="g"){
+    Clipboard := CreateGUID()
+}
+else if (command="u"){
+    Clipboard := CreateUUID()
+}
+
+return
+
+
++!i::
+
+    INPUT, command, T2 L1
+    Url:=CopyBrowserUrl()
+    if (command="f"){
+        firefox(Url)
+    }
+    else if (command="e"){
+        Edge(Url)
+    }
+    else if (command="i"){
+        IE(Url)
+    }
+
+return
+
+#+a::
+    WinActivate, ^.*(Microsoft Teams).*$
+return
+
+#+x::
+   WinActivate, ^.*(xmind).*$
+return
+
+#+b::
 #+z::
-	WinActivate, ^IPOX.*$
+    WinActivate, ahk_exe mintty.exe
 return
 
-#!b::
-    Run "http://build.tools.tcwdigital.co.uk:8181" 
-return
 
-#!l::
-    Run "https://trello.com/b/E4Twkqe5/4-development"
-return
 
-#!m::
-    Run "C:\Program Files (x86)\Microsoft VS Code\code.exe" C:\Dropbox\mysettings\
-return
+#Include %A_ScriptDir%\Common.ahk
+#Include %A_ScriptDir%\Common.Web.ahk
+#Include %A_ScriptDir%\Common.Files.ahk
+#Include %A_ScriptDir%\slugify.ahk
+#Include %A_ScriptDir%\ParseUrl.ahk
+#Include %A_ScriptDir%\GuidUtils.ahk
 
 
 CAPSLOCK::Escape
@@ -117,6 +335,7 @@ CAPSLOCK::Escape
 ; -----------------------
 ; FUNCTIONS
 ; -----------------------
+
 RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
     OutputDebug, %WinTitle% %Target%
     If WinExist( WinTitle )
@@ -166,14 +385,8 @@ GetDirFromWindowTitle(){
     return
 }
 
-;Reload script on Ctrl + S (Save)
-~^s::
-IfWinActive, %A_ScriptName%
-{
-    SplashTextOn,,,Updated script,
-    Sleep, 200
-    SplashTextOff
-    Reload
-}
-return
-
+^+c::
+Send, ^c
+Sleep 50
+Run, http://www.google.com/search?q=%clipboard%
+Return

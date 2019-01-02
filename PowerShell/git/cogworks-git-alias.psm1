@@ -13,6 +13,12 @@ function git-pushStaging {
 }
 AddGitAlias "ggpstag"  $gitPushStagingCmd  "git-pushStaging" $gitPushStagingDesc
 
+function git-pushClientStaging {
+    $branchName = git-branchName
+    
+    git-pushOrigin $branchName "client-staging"
+}
+AddGitAlias "ggPushClientStag"  $gitPushStagingCmd  "git-pushClientStaging" $gitPushStagingDesc
 
 
 function git-mergeWorkToMaster(){

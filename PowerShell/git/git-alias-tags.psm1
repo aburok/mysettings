@@ -7,7 +7,7 @@ Function git-pushTags([string] $branchName) {
     }
     git-execCommand ($gitPushTagsCmd -f $branchName)
 }
-AddGitAlias "ggphtags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
+AddGitAlias "ggPushTags" $gitPushTagsCmd "git-pushTags" $gitPushTagsDesc
 
 
 $gitPullTagsCmd = "git pull origin {0} --tags"
@@ -18,16 +18,35 @@ Function git-pullTags([string] $branchName) {
     }
     git-execCommand ($gitPullTagsCmd -f $branchName)
 }
-AddGitAlias "ggpltags" $gitPullTagsCmd "git-pullTags" $gitPullTagsDesc
+AddGitAlias "ggPullTags" $gitPullTagsCmd "git-pullTags" $gitPullTagsDesc
+
+
+$gitShowAllTagsCmd = "git tag --sort=-version:refname | Select -First {0} "
+$gitShowAllTagsDesc = "Shows last n tags"
+Function git-showTags([int16] $number = 5) {
+    git-execCommand ($gitShowAllTagsCmd -f $number)
+}
+AddGitAlias "ggTags" $gitShowAllTagsCmd "git-showTags" $gitShowAllTagsDesc
 
 
 $gitCreateTagCmd = "git tag -a '{0}' -m '{1}'"
 $gitCreateTagDesc = "Create tag on current branch"
 Function git-createTag {
     param([string] $tagName, [string] $message)
+    if(!$tagname){
+        Write-Info "you need to provide tag name"
+        Write-Command $gitcreatetagcmd
+        git-showTags -number 10
+        return
+    }
+    if(!$message){
+        Write-Info "you need to provide message"
+        Write-Command $gitcreatetagcmd
+        return
+    }
     git-execCommand ($gitCreateTagCmd -f "$tagName", "$message" )
 }
-AddGitAlias "ggctag" $gitCreateTagCmd "git-createTag" $gitCreateTagDesc
+AddGitAlias "ggCreateTag" $gitCreateTagCmd "git-createTag" $gitCreateTagDesc
 
 
 $gitDeleteTagCmd = "git tag --delete '{0}'; git push --delete origin '{0}'"
@@ -36,7 +55,7 @@ Function git-deleteTag {
     param([string] $tagName)
     git-execCommand ($gitDeleteTagCmd -f "$tagName")
 }
-AddGitAlias "ggtagdelete" $gitDeleteTagCmd "git-deleteTag" $gitDeleteTagDesc
+AddGitAlias "ggDeleteTag" $gitDeleteTagCmd "git-deleteTag" $gitDeleteTagDesc
 
 
 function git-TagSetToCurrentCommit([string] $tagName, [string] $message) {
@@ -53,4 +72,4 @@ function git-TagSetToCurrentCommit([string] $tagName, [string] $message) {
     git-createTag -tagName $tagName -message $message
     git-pushTags 
 }
-AddGitAlias "ggtagreasign" "Reasign given tag to current commit" "git-TagSetToCurrentCommit"
+AddGitAlias "ggReasignTag" "Reasign given tag to current commit" "git-TagSetToCurrentCommit"

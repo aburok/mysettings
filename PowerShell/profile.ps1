@@ -75,7 +75,8 @@ Initialize-Config "${PScript}\functions"
 Initialize-Config "${PScript}\security"
 
 
-if($global:poshSettings.lastDirectory){
+if($global:poshSettings.lastDirectory `
+    -and (Test-Path -Path $global:poshSettings.lastDirectory )){
     Set-Location $global:poshSettings.lastDirectory
 }
 

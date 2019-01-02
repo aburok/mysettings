@@ -6,7 +6,6 @@
     nmap zX :vsc Edit.UndoClose<CR>
     nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc File.Close<CR>
 " }}}
-
 " Build {{{
     nnoremap <leader>B :vsc Build.BuildSolution<CR>
 
@@ -19,27 +18,48 @@
 	nmap <leader>bd :vsc Debug.DisableAllBreakpoints<CR>
 	nmap <leader>be :vsc Debug.EnableAllBreakpoints<CR>
 	nmap <leader>bi :vsc Debug.ToggleBreakpoint<CR>
+	nmap <leader>bb :vsc Debug.ToggleBreakpoint<CR>
 
     map <leader>dw :vsc Debug.AddWatch<CR>
+
+    nmap <leader>ra :vsc Debug.ReAttach<CR>
+    nmap <leader>r1 :vsc Debug.ReAttachHistoryItem1<CR>
 " }}}
 
 " TESTS {{{
 
-nmap gwt :vsc TestExplorer.ShowTestExplorer<CR>
+nnoremap gwt :vsc TestExplorer.ShowTestExplorer<CR>
 
-nmap <Leader>tr :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
-nmap <Leader>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
-nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
+nnoremap <Leader>tr :vsc ReSharper.ReSharper_UnitTestRunContext<CR>
+nnoremap <Leader>ta :vsc ReSharper.ReSharper_UnitTestRunSolution<CR>
+nnoremap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
 " }}}
 
 " Search Selected Text {{{
 	vnoremap // y/<C-R>"<CR>
+"    nmap gs :vsc 
 " }}}
 
 " Navigation {{{
 
-    nnoremap <Space> :vsc Edit.Find<CR>
+  "  nnoremap <Space> :vsc Edit.Find<CR>
+    nnoremap <Space><space> viw:vsc Resharper.Resharper_GotoType<CR>
+    nnoremap <Space>' vi':vsc Resharper.Resharper_GotoType<CR>
+    nnoremap <Space>" vi":vsc Resharper.Resharper_GotoType<CR>
+    nnoremap <Space>{ vi{:vsc Resharper.Resharper_GotoType<CR>
+    nnoremap <Space>9 vi(:vsc Resharper.Resharper_GotoType<CR>
+	" vnoremap <Space> y<ESC>/<C-R>"<CR>
+	vnoremap <Space> :vsc Resharper.Resharper_GotoType<CR>
+
+" nnoremap <C-P> :vsc Resharper.ReSharper_GotoFile<CR>
+
+    
+    " Visual Studio doesn't work well with switching to next document window
+    " It does nothing
+    " nnoremap <Tab> :vsc Window.NextDocumentWindowNav<CR>
+
+
 	vnoremap <Space> y/<C-R>"<CR>
 
     " Visual Studio doesn't work well with switching to next document window
@@ -49,18 +69,25 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
     "Find usages
     nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
+    nmap <Leader>ff :vsc ReSharper.ReSharper_FindUsages<CR>
 	nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+    nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
+    nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
+    nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 	
 	nmap <Leader>fl :vsc Favorites.Addalltofavorites<CR>
 	nmap <Leader>fd :vsc Favorites.Addtofavorites<CR>
 
 	nmap <leader>N :vsc ReSharper.ReSharper_NavigateTo<CR>
-    map gb :vsc View.NavigateBackward<CR>
-    map gB :vsc View.NavigateForward<CR>
-    nmap <C-O> :vsc View.NavigateBackward<CR>
-    nmap <C-I> :vsc View.NavigateForward<CR>
+    noremap gb :vsc View.NavigateBackward<CR>
+    noremap g; :vsc ReSharper.ReSharper_GotoLastEditLocation<CR>
+    noremap gB :vsc View.NavigateForward<CR>
+    noremap go :vsc View.NavigateForward<CR>
+    noremap g, :vsc View.NavigateForward<CR>
+    nnoremap <C-o> :vsc View.NavigateBackward<CR>
+    nnoremap <C-i> :vsc View.NavigateForward<CR>
 
-	nmap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
+	nnoremap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
 
 	" Go to Next/prev method"
     " In favor of go to member    
@@ -83,12 +110,10 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
     nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
 
-    nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
-    nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 
     " go to next/prev location"
-    nmap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
-    nmap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+    nnoremap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+    nnoremap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 
     " Go To Next Error in Solution"
     nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
@@ -97,7 +122,9 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
     "GO to Next/prev code issue"
     nmap gh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
+    nmap <C-;> :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
     nmap gH :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
+    nmap <C-S-;> :vsc ReSharper.ReSharper_GotoPrevHighlight<CR>
 
     nmap gt :vsc ReSharper.ReSharper_GotoType<CR>
 "}}}
@@ -114,6 +141,8 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 " Code Edit {{{
     nnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
     vnoremap <Leader>cc :vsc Edit.CommentSelection<CR>
+    vnoremap <Leader>cC :vsc Edit.UncommentSelection<CR>
+    nnoremap <Leader>cC :vsc Edit.UncommentSelection<CR>
     nnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
     vnoremap <Leader>cu :vsc Edit.UncommentSelection<CR>
 
@@ -128,10 +157,11 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
     nmap <leader>ef :vsc Edit.FormatDocument<CR>
 
+    nmap <leader>cp :vsc File.CopyFullPath<CR>
 " }}}
 
 " Refactorings {{{
-    nmap <leader>r :vsc ReSharper.ReSharper_Rename<CR>
+    nmap <leader>rr :vsc ReSharper.ReSharper_Rename<CR>
     nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
@@ -179,6 +209,7 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     nnoremap <Leader>wc :vsc Window.Split<cr>
     nnoremap <Leader>wC :vsc Window.CloseDocumentWindow<cr>
     nnoremap <Leader>wf :vsc Window.Float<cr>
+    nnoremap <Leader>wF :vsc Window.MoveToMainDocumentGroup<cr>
     nnoremap <Leader>wj :vsc Window.NextSplitPane<cr>
     nnoremap <Leader>wk :vsc Window.PreviousSplitPane<cr>
 
@@ -187,6 +218,7 @@ nmap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     nnoremap <Leader>wh :vsc Window.NewHorizontalTabGroup<CR>
     nnoremap <Leader>wv :vsc Window.NewVerticalTabGroup<CR>
 
+    nmap <leader>wd :vsc Window.NewWindow<CR>
 " }}}
 
 

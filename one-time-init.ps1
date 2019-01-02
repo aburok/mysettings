@@ -54,3 +54,5 @@ Set-ItemProperty $key ShowSuperHidden 1
 Stop-Process -processname explorer
 
 
+
+[Environment]::SetEnvironmentVariable("TIGRC_USER", "c:\Dropbox\mysettings\git\.tigrc", "Machine")

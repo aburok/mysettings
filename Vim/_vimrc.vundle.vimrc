@@ -2,11 +2,11 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=C:\Dropbox\mysettings\vim\vundle
-set rtp+=C:\Dropbox\mysettings\vim
+set rtp+=C:/Dropbox/mysettings/vim/vundle
+set rtp+=C:/Dropbox/mysettings/vim
 call vundle#rc()
 " alternatively, pass a path where Vundle should install bundles
-" "let path = 'C:\Dropbox\tools\vim\bundle\'
+" "let path = 'C:/Dropbox/tools/vim/bundle/'
 " "call vundle#rc(path)
 
 " let Vundle manage xVundle, required

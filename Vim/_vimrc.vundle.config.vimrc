@@ -57,14 +57,16 @@ let g:notes_suffix = '.note'
 " NERDTree {
 " Automatically open NERDTree when entering vim autocmd vimenter * NERDTree
 " close NERDTree if it's only window left
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
-map <C-n> :NERDTreeToggle<CR>
+map <C-g> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowBookmarks=1
 let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
+"let g:NERDTreeNodeDelimiter = "\u00a0"
 
 "
 " For Editing books with code"
@@ -138,9 +140,23 @@ au BufRead,BufNewFile *.less set filetype=less.css
 
 " CTRLP settings "
 " Ignoring directories from CTRLP path
-set wildignore+=*\\node_modules\\*
-set wildignore+=*\\.git\\*
-set wildignore+=*\\bower_components\\*
-set wildignore+=*\\packages\\*
-set wildignore+=*\\obj\\*
-set wildignore+=*\\bin\\*
+if has('win32')
+    set wildignore+=*\\node_modules\\*
+    set wildignore+=*\\.git\\*
+    set wildignore+=*\\bower_components\\*
+    set wildignore+=*\\packages\\*
+    set wildignore+=*\\obj\\*
+    set wildignore+=*\\bin\\*
+    set wildignore+=*\\Merck.Manuals.DevSitecore\\WebSite\\sitecore\\*
+    set wildignore+=*\\Merck.Manuals.DevSitecore\\Website\\sitecore_files\\*
+elseif has('unix')
+    set wildignore+=*/node_modules/*
+    set wildignore+=*/.git/*
+    set wildignore+=*/bower_components/*
+    set wildignore+=*/packages/*
+    set wildignore+=*/obj/*
+    set wildignore+=*/bin/*
+    set wildignore+=*/Merck.Manuals.DevSitecore/WebSite/sitecore/*
+    set wildignore+=*/Merck.Manuals.DevSitecore/Website/sitecore_files/*
+endif
+let g:ctrlp_cmd='CtrlP :pwd'

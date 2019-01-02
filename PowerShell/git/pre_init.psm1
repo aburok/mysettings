@@ -80,7 +80,8 @@ AddGitAlias "ggcs"  $gitCheckoutCmd  "git-checkoutStar" $gitCheckoutDesc
 
 
 function git-checkoutWork {
-    git-checkout "work"
+    # git-checkout "work"
+    git-checkout "develop-redesign"
 }
 AddGitAlias "ggwork" $gitCheckoutCmd "git-checkoutWork" $gitCheckoutDesc
 
@@ -92,7 +93,7 @@ AddGitAlias "ggmaster" $gitCheckoutCmd "git-checkoutMaster" $gitCheckoutDesc
 
 ################################################
 
-$gitCleanCmd = 'git clean -fd'
+$gitCleanCmd = 'git clean --force -d --exclude=''packages/'' --exclude=''media/'' '
 $gitCleanDescription = "Cleaning all untracked changes in files / directories / ignored."
 function git-clean {
     git-execCommand $gitCleanCmd $gitCleanDescription
@@ -100,6 +101,11 @@ function git-clean {
 AddGitAlias "ggcln" $gitCleanCmd "git-clean" $gitCleanDescription
 
 
+$gitRemoveUnstageFilesCmd = 'git ls-files --others --exclude-standard | % { rm $_ }'
+function git-RemoveUnstaged {
+    git-execCommand $gitRemoveUnstageFilesCmd
+}
+AddGitAlias "ggRemoveUnstaged" $gitRemoveUnstageFilesCmd "git-RemoveUnstaged" ""
 
 $gitRevertAllDesc = "Reverting all changes in current working directory (staged, unstaged, tracked, untracked, ignored)"
 function git-revertAll {
@@ -108,7 +114,7 @@ function git-revertAll {
     Write-Info $gitRevertAllDesc
     git-reset
     git-checkout
-    if ($clean) {
+    if (!$clean) {
         git-clean
     }
 }
@@ -121,6 +127,15 @@ function git-undoLastCommit {
     git-execCommand $gitUndoLastCommitCmd $gitUndoLastCommitDesc
 }
 AddGitAlias "ggundoLastCommit" $gitUndoLastCommitCmd  "git-undoLastCommit" $gitUndoLastCommitDesc
+
+
+# $gitAssignBranchToCommitCmd = "git branch -f {0} {1} "
+# $gitAssignBranchToCommitDesc = "Assign branch to commit after doing git reset"
+# function git-assignBranchToCommit([string] $) {
+#     git-execCommand $gitUndoLastCommitCmd $gitUndoLastCommitDesc
+# }
+# AddGitAlias "ggundoLastCommit" $gitUndoLastCommitCmd  "git-undoLastCommit" $gitUndoLastCommitDesc
+
 
 #
 # http://stackoverflow.com/questions/6934752/combining-multiple-commits-before-pushing-in-git
@@ -150,12 +165,12 @@ function git-push ([string] $branchName) {
         $branchName = git-branchName
     }
     git-execCommand ($gitPushCmd -f $branchName) $gitPushDesc
-    git-pushTags $branchName
+    # git-pushTags $branchName
 }
 AddGitAlias "ggph" $gitPushCmd  "git-push" $gitPushDesc
 
 
-$gitPullCmd = "git pull --rebase origin {0}"
+$gitPullCmd = "git pull origin {0}"
 $gitPullDesc = "Pulling changes from origin to current branch. This will update code from origin. Eqivalent to SVN update."
 function git-pull ([string] $branchName) {
     IF (!$branchName) {
@@ -183,6 +198,10 @@ Function git-savePush {
 }
 AddGitAlias "ggsave" $gitCommitCmd "git-savePush" $gitSavePushDesc
 
+
+Function git-clone([string] $repoAddress) {
+    git-execCommand "git clone $repoAddress"
+}
 
 $gitMergeDesc = "Merge branch '{0}' to current branch '{1}'"
 $gitMergeCmd = "git merge {0}"
