@@ -1,13 +1,6 @@
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
-; ^!n::
-; IfWinExist Untitled - Notepad
-;	WinActivate
-; else
-;	Run Notepad
-; return
-
 ; # - Win ke:
 ; ^ - Ctrl key
 ; ! - Alt key
@@ -16,7 +9,6 @@
 ; ---------------------
 ; WINDOWS KEY BINDINGS
 ; ---------------------
-; #n::Run Notepad
 
 ; Match window names by part of the title
 SetTitleMatchMode RegEx
@@ -38,7 +30,7 @@ ToolsDir := DropBoxDir . "\Tools"
 
 
 #LButton::
-#+q:: 
+#+q::
 #WheelDown::
 sendevent {LWin down}{LCtrl down}{Left down}
 Sleep 100
@@ -46,7 +38,7 @@ SendEvent {Left up}{LCtrl up}{Lwin up}      ; switch to next virtual desktop
 Sleep 1000
 return
 
-#+w:: 
+#+w::
 #RButton::
 #WheelUp::
 sendevent {LWin down}{LCtrl down}{Right down}
@@ -86,10 +78,6 @@ return
     WinActivate, ^.*( - Microsoft Visual Studio).*$
 return
 
-;================================================================================    
-; ================================== MERCK MANUALS =============================
-; ================================================================================ 
-
 #+m::
     ; WinActivate, ^(Merck\.Manuals).*( - Microsoft Visual Studio).*$
     WinActivate, ^.*(mysettings).*(Visual Studio Code)$
@@ -99,30 +87,17 @@ return
     WinActivate, ^(.*)(ffs_gui).*$
 return
 
-; ================================================================================ 
-; ================================================================================ 
-; ================================================================================ 
 
-; #+q::
 #+t::
-; #+w::
-    ; WinActivate, ^.*(Total Commander).*$
     WinActivate, ahk_exe TOTALCMD64.EXE
 return
 
-; #+a::
-; #!s::
-;    WinActivate, Slack
-; return
-
 #+o::
-	; WinActivate, .*(dawid\.koruba@avanade\.com - Outlook).*$
     WinActivate, ahk_exe OUTLOOK.EXE
 return
 
 
 #+e::
-	; WinActivate, .*(OneNote).*$
     WinActivate, ahk_exe ONENOTE.EXE
 return
 
@@ -131,10 +106,6 @@ return
 	WinActivate, ^.*(Google Chrome)$
 return
 
-; #+h::
-;     WinActivate, ^.*(Google Hangouts).*$
-
-; Visua Studio Code
 #!i::
 #+i::
 	WinActivate, ^(Todoist).*$
@@ -159,7 +130,7 @@ return
 
 +!?::
 
-MsgBox, 
+MsgBox,
     (
         Shortcuts
 
@@ -177,7 +148,7 @@ MsgBox,
         m -> Visual Studio Code
         n -> Notepad ++
         r -> Fiddler
-        v -> Visual Studio 
+        v -> Visual Studio
         w -> Vim
 
 ================================
@@ -192,60 +163,60 @@ return
 
 INPUT, command, T2 L1
 
-if (command = "a")
+if ("a" = command)
     WinActivate, ^.*(Microsoft Teams).*$
-else if (command = "b")
+else if ("b" = command)
 	WinActivate, ^.*(Google Chrome)$
-else if (command = "c")
+else if ("c" = command)
     WinActivate, ahk_exe ConEmu64.exe
-else if (command = "d")
+else if ("d" = command)
     WinActivate, ^DevTools - .*$
-else if (command = "e")
+else if ("e" = command)
     WinActivate, ahk_exe ONENOTE.EXE
-else if (command = "f")
+else if ("f" = command)
     WinActivate, ahk_exe TOTALCMD64.EXE
-else if (command = "g")
+else if ("g" = command)
     WinActivate, ahk_exe mintty.exe
-else if (command = "h")
+else if ("h" = command)
     WinActivate, ^.*(Google Hangouts).*$
-else if (command = "k")
+else if ("k" = command)
     WinActivate, ^.*(Google Hangouts).*$
-else if (command = "l")
+else if ("l" = command)
     WinActivate, ahk_exe lync.exe
-else if (command = "m")
+else if ("m" = command)
     WinActivate, ^.*(mysettings).*(Visual Studio Code)$
-else if (command = "n")
+else if ("n" = command)
 	WinActivate, ^.*(Notepad\+\+).*$
-else if (command = "r")
+else if ("r" = command)
     WinActivate, ahk_exe Fiddler.exe
-else if (command = "v")
+else if ("v" = command)
     WinActivate, ^.*( - Microsoft Visual Studio).*$
-else if (command = "w")
+else if ("w" = command)
     WinActivate, ^.*(- GVIM).*$
-else if (command = "9")
+else if ("9" = command)
     Run "https://9gag.com"
 
-return 
+return
 
 
 +!c::
 
 INPUT, command, T2 L2
 
-if (command = "f"){
+if ("f" = command){
     MsgBox % RunWaitMany("
     (
         echo Flush DNS
-        echo ipconfig `/flushdns 
-        ipconfig `/flushdns 
-        echo nbtstat -r 
-        nbtstat -r 
+        echo ipconfig `/flushdns
+        ipconfig `/flushdns
+        echo nbtstat -r
+        nbtstat -r
         echo netsh int ip reset
         netsh int ip reset
         echo netsh winsock reset
-        netsh winsock reset 
+        netsh winsock reset
     )")
-} else if (command = "a"){
+} else if ("a" = command){
 
 }
 return
@@ -253,11 +224,11 @@ return
 +!f::
 INPUT, command, T2 L2
 
-if (command = "ia")
+if ("ia" = command)
     gvim("C:\Windows\System32\inetsrv\Config\applicationHost.config")
-else if (command = "hh")
+else if ("hh" = command)
     gvim("C:\Windows\System32\drivers\etc\hosts")
-else if (command = "co"){
+else if ("co" = command){
     gvim(Clipboard)
 }
 return
@@ -266,12 +237,12 @@ return
 
 INPUT, command, T2 L1
 
-if (command = "e"){
+if ("e" = command){
     INPUT, command, T2 L1
     LastNLetters := SubStr(Clipboard, -1 * command)
     Send, %LastNLetters%
 }
-else if (command = "s"){
+else if ("s" = command){
     INPUT, command, T2 L1
     FirstNLetters := SubStr(Clipboard, 1, command)
     Send, %FirstNLetters%
@@ -281,10 +252,11 @@ return
 
 +!g::
 INPUT, command, T2 L1
-if (command="g"){
+
+if ("g" = command){
     Clipboard := CreateGUID()
 }
-else if (command="u"){
+else if ("u" = command){
     Clipboard := CreateUUID()
 }
 
@@ -295,13 +267,13 @@ return
 
     INPUT, command, T2 L1
     Url:=CopyBrowserUrl()
-    if (command="f"){
+    if ("f" = command){
         firefox(Url)
     }
-    else if (command="e"){
+    else if ("e" = command){
         Edge(Url)
     }
-    else if (command="i"){
+    else if ("i" = command){
         IE(Url)
     }
 
@@ -328,6 +300,8 @@ return
 #Include %A_ScriptDir%\slugify.ahk
 #Include %A_ScriptDir%\ParseUrl.ahk
 #Include %A_ScriptDir%\GuidUtils.ahk
+
+#Include %A_ScriptDir%\..\..\_Merck\Merck.ahk
 
 
 CAPSLOCK::Escape
@@ -385,7 +359,7 @@ GetDirFromWindowTitle(){
     return
 }
 
-^+c::
+!+q::
 Send, ^c
 Sleep 50
 Run, http://www.google.com/search?q=%clipboard%

@@ -1,0 +1,5 @@
+source c:/Dropbox/mysettings/Vim/_vim.vimrc
+source c:/Dropbox/mysettings/Vim/_vundle.vimrc
+source c:/Dropbox/mysettings/Vim/_vundle.config.vimrc
+source c:/Dropbox/_Merck/_merck.vimrc
+

@@ -315,10 +315,6 @@ Function git-tgStatus{
 }
 AddGitAlias "ggvst" $gitTortoiseStatusCmd "git-tgStatus"
 
-####### Import Cogworks specific commands  ####
-. ($PScriptConfig + "\cogworks-git-alias.ps1")
-################################################
-
 
 #################################################################################
 ################################# BLOG Scripts  #################################

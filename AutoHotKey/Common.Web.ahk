@@ -21,7 +21,7 @@ changeAddress(to, fromList){
     {
         LocalUrl := StrReplace(LocalUrl, element, to)
     }
-    Run % LocalUrl
+    Chrome(LocalUrl)
 }
 
 CopyBrowserUrl(){
@@ -30,6 +30,10 @@ CopyBrowserUrl(){
     Send ^c
     Sleep 100
     return Clipboard
+}
+
+Chrome(pageUrl){
+    Run, chrome.exe %pageUrl%
 }
 
 Firefox(pageUrl){
@@ -42,5 +46,5 @@ Edge(pageUrl){
 
 
 IE(pageUrl){
-    Run, C:\Program Files (x86)\Internet Explorer\iexplorer.exe %pageUrl%
+    Run, iexplore.exe %pageUrl%
 }

@@ -7,9 +7,6 @@ au GUIEnter * simalt ~x
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
 
-" move a line of text using Alt + [jk]
-nmap <M-j> my:m+<cr>`y
-nmap <M-k> my:m-2<cr>`y
 
 syntax on " turn on syntax high:wq
 
@@ -67,11 +64,6 @@ set nofoldenable    " disable folding
     nmap <leader>f9 :set foldlevel=9<CR>
 " }
 
-" + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
 
 " Settings for spell checking
 noremap <leader>ss :setlocal spell!<CR>
@@ -134,8 +126,6 @@ autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
 " `]a - go to last position and append
 " map! <C-F> <Esc>gUiw`]a
 
-" File operations
-nmap <leader>w :w!<cr>
 
 " Abbreviations
 iab cwl Console.WriteLine
@@ -147,10 +137,6 @@ iab lol Lought Out Loud
 
 
 
-" Execute command recorded in register a by pressing `
-nnoremap ` @a
-" Repeating command on each line of Visual Selection recorded into register a
-vnoremap ` :normal @a<CR>
 
 
 " Marks line with TODO as DONE
@@ -162,26 +148,12 @@ nnoremap <leader>tm jmlkdd/^DONE TASKS$/I<CR>p$a - <Esc><leader>it'l
 nnoremap <leader>it "=strftime("%c")<CR>p
 inoremap <leader>it <C-R>=strftime("%c")<CR>
 
-" go to last used tab
-" store last used tab number in global variable "
-let g:lasttab = 1
-" go to tab with number stored in lasttab"
-nmap gl :exe "tabn ".g:lasttab<CR>
-" on event TabLeave assing tab page number to lasttab"
-au TabLeave * let g:lasttab=tabpagenr()
-
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
 
 :au BufAdd,BufNewFile * nested tab sball
 
 " auto formatting
 " map <C-F> gg=G<C-O><C-O>
 
-" CTRL-Tab is Next window
-noremap <C-Tab> :tabnext<CR>
-noremap <C-S-Tab> :tabprevious<CR>
-noremap <C-N> :tabnew<CR>
 
 
 " GIT mapping
@@ -206,7 +178,10 @@ set guitablabel+=\ %M          " change indicator - *"
 nmap <F8> :mksession! ~\\vim_session <CR>    " Quick write session
 nmap <F9> :source ~\\vim_session <CR>        " Quick load session
 
-" refresh source files / vimrc "
-nmap <F7> :source $MYVIMRC <CR>
 
-cd C:/Projects
+if isdirectory("C:/Dropbox/mysettings")
+  cd C:/Dropbox/mysettings
+endif
+if isdirectory("C:/Projects")
+  cd C:/Projects
+endif

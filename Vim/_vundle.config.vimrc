@@ -160,3 +160,16 @@ elseif has('unix')
     set wildignore+=*/Merck.Manuals.DevSitecore/Website/sitecore_files/*
 endif
 let g:ctrlp_cmd='CtrlP :pwd'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"""""""""""""""""""""" ARDUINO IDE """""""""""""""""""""""""""""""""
+
+nnoremap <buffer> <leader>am :ArduinoVerify<CR>
+nnoremap <buffer> <leader>au :ArduinoUpload<CR>
+nnoremap <buffer> <leader>ad :ArduinoUploadAndSerial<CR>
+nnoremap <buffer> <leader>ab :ArduinoChooseBoard<CR>
+nnoremap <buffer> <leader>ap :ArduinoChooseProgrammer<CR>
+
+
+au BufRead,BufNewFile *.pde set filetype=arduino
+au BufRead,BufNewFile *.ino set filetype=arduino

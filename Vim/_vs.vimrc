@@ -52,6 +52,7 @@ nnoremap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 	" vnoremap <Space> y<ESC>/<C-R>"<CR>
 	vnoremap <Space> :vsc Resharper.Resharper_GotoType<CR>
 
+nnoremap % :vsc Resharper_GoToBrace<CR>
 " nnoremap <C-P> :vsc Resharper.ReSharper_GotoFile<CR>
 
     
@@ -60,7 +61,7 @@ nnoremap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
     " nnoremap <Tab> :vsc Window.NextDocumentWindowNav<CR>
 
 
-	vnoremap <Space> y/<C-R>"<CR>
+	" vnoremap <Space> y/<C-R>"<CR>
 
     " Visual Studio doesn't work well with switching to next document window
     " It does nothing

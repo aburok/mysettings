@@ -95,3 +95,6 @@ filetype plugin indent on     " required
 " see :h vundle for more details or wiki for FAQ
 " NOTE: comments after Bundle commands are not allowed.
 " Put your stuff after this line
+
+Bundle 'https://github.com/stevearc/vim-arduino'
+Bundle 'https://github.com/vim-scripts/Arduino-syntax-file'

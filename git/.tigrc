@@ -10,6 +10,7 @@ set diff-highlight = false
 
 set main-view-author-display = abbreviated
 set main-view-date-local = true
+set main-view-id-width = 12
 set split-view-width = 70%
 set wrap-lines = yes
 
@@ -166,3 +167,4 @@ bind status H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 bind diff    H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 bind blame H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
 bind blob  H !sh -c "tig \"$(git rev-parse --show-toplevel)/%(file)\""
+

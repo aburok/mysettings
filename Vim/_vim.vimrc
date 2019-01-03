@@ -43,6 +43,7 @@ set textwidth=0 wrapmargin=0
 
 set cursorline
 set autoread
+colorscheme desert
 
 let g:mapleader = ','
 let mapleader = ','
@@ -53,6 +54,9 @@ xnoremap - $
 " Movement of cursorline
 nnoremap <M-j> 10j
 nnoremap <M-k> 10k
+" move a line of text using Alt + [jk]
+nnoremap <M-j> my:m+<cr>`y
+nnoremap <M-k> my:m-2<cr>`y
 
 nnoremap <enter> i<cr><esc>
 
@@ -64,6 +68,29 @@ nnoremap zj :join<CR>
 " WINDOWS BINDINGS
 " backspace in Visual mode deletes selection
 vnoremap <BS> X
+
+" Tabs binding 
+" CTRL-Tab is Next window
+noremap <C-Tab> :tabnext<CR>
+noremap <C-S-Tab> :tabprevious<CR>
+noremap <C-N> :tabnew<CR>
+" go to last used tab
+" store last used tab number in global variable "
+let g:lasttab = 1
+" go to tab with number stored in lasttab"
+nmap gl :exe "tabn ".g:lasttab<CR>
+" on event TabLeave assing tab page number to lasttab"
+au TabLeave * let g:lasttab=tabpagenr()
+
+nnoremap <Tab> gt
+nnoremap <S-Tab> gT
+
+" + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
+" MOVE BETWEEN SPLITS
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
@@ -101,6 +128,14 @@ xnoremap <C-A> <C-C>ggVG
 
 " CTRL-S is Save File
 inoremap <C-S> <Esc>:w!<cr>a
+" File operations
+nmap <leader>ww :w!<cr>
+nmap <leader>wa :wall!<cr>
+
+" Execute command recorded in register a by pressing `
+nnoremap ` @a
+" Repeating command on each line of Visual Selection recorded into register a
+vnoremap ` :normal @a<CR>
 
 " after going to next find , center the screen on the finding "
 noremap N Nzz
@@ -113,6 +148,7 @@ nnoremap zx :wq<CR>
 "Find and Replace Text
 vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <leader>re "hy:%s/<C-R>h//gc<left><left><left>
+nnoremap <leader>rw viw"hy:%s/<C-R>h/<C-R>h/gc
 nnoremap <Leader>dw :%s/[ \n\t]//g
 
 " Find selected text / Search for visual selected text
@@ -172,7 +208,10 @@ noremap <F5> :e!<CR>G
 noremap <C-R> :e!<CR>G
 noremap <leader><leader> :e!<CR>G
 " RELOAD THIS CONFIGURATION
-nnoremap <C-F5> :source $MYVIMRC<CR>
+noremap <C-F5> :source $MYVIMRC<CR>
+noremap <F7> :source $MYVIMRC <CR>
 nnoremap <leader>lc :source $MYVIMRC<CR>
+nnoremap <leader>ls :scriptnames<CR>
+
 " Save and run current file
 noremap <S-F5> <Esc>:w<CR>:!%:p<CR>
