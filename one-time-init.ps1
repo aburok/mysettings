@@ -1,5 +1,5 @@
-﻿. C:\Dropbox\mysettings\PowerShell\modules.ps1
-. C:\Dropbox\mysettings\PowerShell\variables.ps1
+﻿. C:\mysettings\PowerShell\modules.ps1
+. C:\mysettings\PowerShell\variables.ps1
 
 $quickHelperLinkName ="QuickHelper.lnk"
 

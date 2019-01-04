@@ -7,7 +7,7 @@ if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
     return
 }
 
-. C:\Dropbox\mysettings\PowerShell\variables.ps1
+. C:\mysettings\PowerShell\variables.ps1
 
 Function Import-Functions ($Path) {
     Import-Module $Path -WarningAction @{}

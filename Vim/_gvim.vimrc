@@ -179,8 +179,8 @@ nmap <F8> :mksession! ~\\vim_session <CR>    " Quick write session
 nmap <F9> :source ~\\vim_session <CR>        " Quick load session
 
 
-if isdirectory("C:/Dropbox/mysettings")
-  cd C:/Dropbox/mysettings
+if isdirectory("C:/mysettings")
+  cd C:/mysettings
 endif
 if isdirectory("C:/Projects")
   cd C:/Projects
