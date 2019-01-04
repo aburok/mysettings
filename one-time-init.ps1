@@ -55,4 +55,4 @@ Stop-Process -processname explorer
 
 
 
-[Environment]::SetEnvironmentVariable("TIGRC_USER", "c:\Dropbox\mysettings\git\.tigrc", "Machine")
+[Environment]::SetEnvironmentVariable("TIGRC_USER", "c:\mysettings\git\.tigrc", "Machine")

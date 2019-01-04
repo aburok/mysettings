@@ -11,11 +11,12 @@ Function Edit-Vimrc
     vim $home\_vimrc
 }
 
-$editWithGVimOptions = " -p --remote-tab-silent "
+$editWithGVimOptions = 
 Function Edit-Gvim([string] $file){
-    gvim ($editWithGVimCmd -f $file)
+    $command = ("gvim.exe -p --remote-tab-silent '{0}' %*" -f $file)
+    Invoke-Expression -Command $command
 }
-Set-Alias gvim $env:GVim
+Set-Alias gvim Edit-Gvim
 
 Copy-IfMissing ($env:DropboxSettingsVim + "\host_vimrc") ($env:USERPROFILE + "\_vimrc")
 Copy-IfMissing ($env:DropboxSettingsVim + "\host_gvimrc") ($env:USERPROFILE + "\_gvimrc")
