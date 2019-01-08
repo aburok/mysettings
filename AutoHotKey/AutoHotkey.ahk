@@ -92,6 +92,7 @@ return
     WinActivate, ahk_exe TOTALCMD64.EXE
 return
 
+
 #+o::
     WinActivate, ahk_exe OUTLOOK.EXE
 return
@@ -364,3 +365,34 @@ Send, ^c
 Sleep 50
 Run, http://www.google.com/search?q=%clipboard%
 Return
+
+
+#IfWinActive, ahk_exe  TOTALCMD64.EXE
+{
+    !d::
+    Send {Home}
+    Send {Shift Down}
+    Sleep 10
+    Send {F6 Down}
+    Sleep 10
+    Send {F6 Up}{Shift Up}
+    return 
+}
+#IfWinActive
+
+#IfWinActive, ahk_exe  chrome.exe
+{
+    !+g::
+    oldClipboard:=Clipboard
+    url:= CopyBrowserUrl()
+    Clipboard := RegExReplace(url, "www\.youtube", "www.genyoutube")
+    Send ^t
+    sleep 10
+    Send ^v
+    Sleep 10
+    Send {Enter}
+    sleep 10
+    Clipboard:=oldClipboard
+    return 
+}
+#IfWinActive
