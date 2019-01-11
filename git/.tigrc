@@ -62,6 +62,9 @@ bind main V         ?git revert %(commit)
 bind main S         !git grep --line-number %(prompt)
 bind main D         none
 bind main Dt        >TortoiseGitProc.exe /command:diff /revision1:{0} /revision2:%(commit)"
+bind main Df        !sh -c "git log --name-only --pretty=oneline --full-index %(commit)..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq "
+bind main Ds        !sh -c "git log --name-only --pretty=oneline --full-index %(commit)..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq | grep 'sitecore'"
+
 
 # Slugify text 
 # sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z
