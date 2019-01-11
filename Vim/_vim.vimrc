@@ -163,6 +163,9 @@ nnoremap <leader>fc /<C-R>+<CR>zz
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
 
 
+" auto formatting
+map <leader>kd gg=G<C-O><C-O>
+
 nnoremap <leader>sc :set nohlsearch<CR>
     \Yp
     \V:s/[^\"\n]/=/g<CR>

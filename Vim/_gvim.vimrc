@@ -151,8 +151,6 @@ inoremap <leader>it <C-R>=strftime("%c")<CR>
 
 :au BufAdd,BufNewFile * nested tab sball
 
-" auto formatting
-" map <C-F> gg=G<C-O><C-O>
 
 
 
