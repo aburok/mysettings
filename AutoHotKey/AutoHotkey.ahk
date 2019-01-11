@@ -6,6 +6,8 @@
 ; ! - Alt key
 ; + - Shift key
 
+#SingleInstance, force
+
 ; ---------------------
 ; WINDOWS KEY BINDINGS
 ; ---------------------
