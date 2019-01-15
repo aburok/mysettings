@@ -129,8 +129,8 @@ xnoremap <C-A> <C-C>ggVG
 " CTRL-S is Save File
 inoremap <C-S> <Esc>:w!<cr>a
 " File operations
-nmap <leader>ww :w!<cr>
-nmap <leader>wa :wall!<cr>
+nnoremap <leader>ww :w!<cr>
+nnoremap <leader>wa :wall!<cr>
 
 " Execute command recorded in register a by pressing `
 nnoremap ` @a
@@ -146,10 +146,12 @@ noremap n nzz
 nnoremap zx :wq<CR>
 
 "Find and Replace Text
-vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 vnoremap <leader>re "hy:%s/<C-R>h//gc<left><left><left>
 nnoremap <leader>rw viw"hy:%s/<C-R>h/<C-R>h/gc
 nnoremap <Leader>dw :%s/[ \n\t]//g
+nnoremap <leader>rr "9yiW:%s/<C-R>9/<C-R>9/gc<LEFT><LEFT><LEFT>
+vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
+nnoremap <F3> "9yiW:%s/<C-R>9/<C-R>9/gc<LEFT><LEFT><LEFT>
 
 nnoremap <leader>rr viwP
 
@@ -161,12 +163,18 @@ nnoremap <leader>f" yi"/<C-R>"<CR>
 " FIND / SEARCH TEXT FROM CLIPBOARD
 nnoremap <leader>fc /<C-R>+<CR>zz
 
+nnoremap <leader>f' yi'/<C-R>"<CR>
+nnoremap <leader>f" yi"/<C-R>"<CR>
+
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
 
 " FORMAT document
 nnoremap <C-F> gg=G<C-O><C-O>zz
 nnoremap <leader>kd gg=G<C-O><C-O>zz
+
+" auto formatting
+nnoremap <leader>kd gg=G<C-O><C-O>
 
 nnoremap <leader>sc :set nohlsearch<CR>
     \Yp
@@ -205,13 +213,15 @@ vnoremap <leader>c# <C-V>^I# <ESC>
 vnoremap <leader>c' <C-V>^I' <ESC>
 vnoremap <leader>c" <C-V>^I" <ESC>
 vnoremap <leader>c/ <C-V>^I// <ESC>
+nnoremap <leader>c/ ^I// <ESC>
 
 let g:syntastic_shell = "/usr/bin/bash"
 
 " REFRESH / RELOAD FILE 
 noremap <F5> :e!<CR>G
 noremap <C-R> :e!<CR>G
-noremap <leader><leader> :e!<CR>G
+nnoremap <leader><leader> :e!<CR>G
+
 " RELOAD THIS CONFIGURATION
 noremap <C-F5> :source $MYVIMRC<CR>
 noremap <F7> :source $MYVIMRC <CR>
@@ -222,4 +232,5 @@ nnoremap <leader>ls :scriptnames<CR>
 " Save and run current file
 noremap <S-F5> <Esc>:w<CR>:!%:p<CR>
 
+" Open files"
 nnoremap <leader>or :browse :oldfiles!<CR>

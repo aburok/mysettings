@@ -8,6 +8,8 @@
 ; ! - Alt key
 ; + - Shift key
 
+#SingleInstance, force
+
 ; ---------------------
 ; WINDOWS KEY BINDINGS
 ; ---------------------
@@ -308,7 +310,11 @@ return
 #Include %A_ScriptDir%\GuidUtils.ahk
 #Include %A_ScriptDir%\LoremIpsum.ahk
 
-#Include %A_ScriptDir%\..\..\_Merck\Merck.ahk
+; The FileName parameter may optionally be preceded by *i and a single space,
+;   which causes the program to ignore any failure to load the included file. 
+; For example: #Include *i SpecialOptions.ahk. 
+; This option should be used only when the included file's contents are not essential to the main script's operation.
+#Include *i %A_ScriptDir%\..\..\_Merck\Merck.ahk
 
 
 CAPSLOCK::Escape

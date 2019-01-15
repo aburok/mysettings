@@ -66,12 +66,12 @@ set nofoldenable    " disable folding
 
 
 " Settings for spell checking
-noremap <leader>ss :setlocal spell!<CR>
+nnoremap <leader>ss :setlocal spell!<CR>
 
-noremap <leader>sn ]s " Go to next misspelled word
-noremap <leader>sp [s " Go to previous misspelled word
+nnoremap <leader>sn ]s " Go to next misspelled word
+nnoremap <leader>sp [s " Go to previous misspelled word
 "map <leader>sa zg " Add word under cursor to the good words file
-noremap <leader>s? z=  " Suggest correct word for word under the cursor
+nnoremap <leader>s? z=  " Suggest correct word for word under the cursor
 inoremap <C-Space> <C-n>
 
 
@@ -146,13 +146,11 @@ nnoremap <leader>tm jmlkdd/^DONE TASKS$/I<CR>p$a - <Esc><leader>it'l
 
 " Insert current date time
 nnoremap <leader>it "=strftime("%c")<CR>p
-inoremap <leader>it <C-R>=strftime("%c")<CR>
+" inoremap <leader>it <C-R>=strftime("%c")<CR>
 
 
 :au BufAdd,BufNewFile * nested tab sball
 
-" auto formatting
-" map <C-F> gg=G<C-O><C-O>
 
 
 
