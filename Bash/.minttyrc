@@ -1,0 +1,8 @@
+BoldAsFont=-1
+ThemeFile=flat-ui
+Font=Consolas
+FontHeight=11
+Locale=C
+Charset=UTF-8
+Transparency=low
+CursorType=block
