@@ -162,7 +162,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 " }}}
 
 " Refactorings {{{
-    nmap <leader>rr :vsc ReSharper.ReSharper_Rename<CR>
+    nmap <leader>re :vsc ReSharper.ReSharper_Rename<CR>
     nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
     vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>

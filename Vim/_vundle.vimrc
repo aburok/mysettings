@@ -98,3 +98,5 @@ filetype plugin indent on     " required
 
 Bundle 'https://github.com/stevearc/vim-arduino'
 Bundle 'https://github.com/vim-scripts/Arduino-syntax-file'
+
+Bundle 'https://github.com/hnamikaw/vim-autohotkey'

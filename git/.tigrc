@@ -1,7 +1,7 @@
 set commit-order   = date
 set ignore-space   = some
 set refresh-mode   = after-command
-set ignore-case    = true
+set ignore-case    = smart-case
 set mouse          = false
 set diff-highlight = false
 
@@ -20,11 +20,18 @@ bind generic R none
 
 bind generic g  none
 bind generic gg move-first-line
+bind main	gh	:toggle commit-title-graph # Toggle revision graph visualization
+bind main	gr	:toggle commit-title-refs  # Toggle reference display (tags/branches)
 bind main    G  none
 bind generic G  move-last-line
 
+bind generic <F12> :source $TIGRC_USER
+
 # bind generic <S-Space> move-page-up
 
+################################
+### YANK / COPY
+################################
 bind generic y none
 bind generic yh !@sh -c "echo -n %(commit) | clip"
 bind generic yy !@sh -c "echo -n %(text)   | clip"
@@ -47,7 +54,10 @@ bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
 bind main MN        ?git merge %(branch) --no-commit --no-ff
 bind main Pc        ?git cherry-pick -n %(commit)
+
+# Check which refs (branches) contains given commit
 bind main L         :!git for-each-ref --contains %(commit)
+
 bind main g;        :%(repo:head-id)
 bind main <F6>      @git tig-compare-commits %(commit)
 bind main Rl        !git rebase -i %(branch)
@@ -59,9 +69,14 @@ bind main Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
 bind main Rc        !git rebase --continue
 bind main RR        refresh
 bind main V         ?git revert %(commit)
+
+# Search given pattern with line-numbers
 bind main S         !git grep --line-number %(prompt)
+
 bind main D         none
 bind main Dt        >TortoiseGitProc.exe /command:diff /revision1:{0} /revision2:%(commit)"
+
+# Show CHANGED FILES between selected commit and current HEAD
 bind main Df        !sh -c "git log --name-only --pretty=oneline --full-index %(commit)..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq "
 bind main Ds        !sh -c "git log --name-only --pretty=oneline --full-index %(commit)..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq | grep 'sitecore'"
 
@@ -80,25 +95,32 @@ bind refs p         none
 bind refs pl        ?git pull %(remote) %(branch)
 bind refs ph        ?git push %(remote) %(branch) 
 bind refs pd        ?git pull %(remote) develop-redesign 
+
 bind refs MN        ?git merge %(branch) --no-commit --no-ff
 bind refs MM        ?git merge %(branch)
 bind refs Md        ?git merge develop-redesign
+bind refs Mr        >TortoiseGitProc.exe /command:resolve
+
 bind refs <F2>      @git branch -m %(branch) "%(prompt Enter new name for the branch: )"
 bind refs <F3>      @git push origin origin/%(branch):refs/heads/%(prompt) :%(branch)
 bind refs c         none
+
 bind refs co        ?git checkout %(branch)
 bind refs cl        ?git checkout %(branch)
 bind refs cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
 bind refs cd        >git checkout develop-redesign
+
 # bind refs D         !git difftool --no-prompt %(commit) develop-redesign  # -y - no prompt
 bind refs D     none
 bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)  
 bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)  
 bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:{0} /revision2:%(commit)"
 
+# Delete refs / branch from origin
 bind refs XL         ?git push %(remote) --delete %(branch)
 bind refs XP         ?git push %(remote) --delete %(branch)
+
 bind refs Rl        !git rebase -i %(branch)
 bind refs Rr        !git rebase -i "%(remote)/%(branch)"
 bind refs Ril       !git rebase -i %(branch)
@@ -135,6 +157,8 @@ bind status p  none
 bind status pp ?git push origin %(branch)
 bind status pf ?git push -f origin
 bind status pu ?git push --set-upstream origin %(repo:head)
+bind status ph        ?git push %(remote) %(branch) 
+bind status pl        ?git pull %(remote) %(branch)
 bind status B  @git checkout -b "%(prompt Enter new branch name: )"
 bind status I  :!git add -i %(file)
 bind status +  ?git commit --amend
@@ -144,10 +168,12 @@ bind status a. >git add .
 bind status aA >git add -A
 bind status au >git add -u
 bind status ar >git reset
+
 bind status Ma ?git merge --abort
 bind status Mc ?git merge --continue
 bind status Md ?git merge develop-redesign
 bind status Mr >TortoiseGitProc.exe /command:resolve
+
 bind status c >TortoiseGitProc.exe /command:diff /path:"%(file)"
 bind status X ?@sh -c "rm -f %(file)"
 bind status D >TortoiseGitProc.exe /command:diff /path:"%(file)"

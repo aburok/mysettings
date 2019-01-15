@@ -15,6 +15,11 @@ resetIISAndPing(url2Ping){
     ; )
 }
 
+resetAppPool(appPool){
+    command := Format("Restart-WebAppPool -Name '{1}'", appPool)
+    Run, powershell -NoExit -Command  %command%
+}
+
 changeAddress(to, fromList){
     LocalUrl:= CopyBrowserUrl()
     for index, element in fromList

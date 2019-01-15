@@ -1,6 +1,8 @@
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
+#singleInstance force
+
 ; # - Win ke:
 ; ^ - Ctrl key
 ; ! - Alt key
@@ -260,6 +262,9 @@ if ("g" = command){
 else if ("u" = command){
     Clipboard := CreateUUID()
 }
+else if ("l" = command){
+    GenerateLoremIpsum()
+}
 
 return
 
@@ -301,6 +306,7 @@ return
 #Include %A_ScriptDir%\slugify.ahk
 #Include %A_ScriptDir%\ParseUrl.ahk
 #Include %A_ScriptDir%\GuidUtils.ahk
+#Include %A_ScriptDir%\LoremIpsum.ahk
 
 #Include %A_ScriptDir%\..\..\_Merck\Merck.ahk
 

@@ -60,8 +60,8 @@ nnoremap <M-k> my:m-2<cr>`y
 
 nnoremap <enter> i<cr><esc>
 
-nnoremap <Leader>o mto<Esc>`t
-nnoremap <Leader>O mtO<Esc>`t
+" nnoremap <Leader>o mto<Esc>`t
+" nnoremap <Leader>O mtO<Esc>`t
 
 nnoremap zj :join<CR>
 
@@ -151,6 +151,8 @@ vnoremap <leader>re "hy:%s/<C-R>h//gc<left><left><left>
 nnoremap <leader>rw viw"hy:%s/<C-R>h/<C-R>h/gc
 nnoremap <Leader>dw :%s/[ \n\t]//g
 
+nnoremap <leader>rr viwP
+
 " Find selected text / Search for visual selected text
 nnoremap <leader>ff yiw/<C-R>"<CR>
 nnoremap <leader>f' yi'/<C-R>"<CR>
@@ -162,6 +164,9 @@ nnoremap <leader>fc /<C-R>+<CR>zz
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
 
+" FORMAT document
+nnoremap <C-F> gg=G<C-O><C-O>zz
+nnoremap <leader>kd gg=G<C-O><C-O>zz
 
 nnoremap <leader>sc :set nohlsearch<CR>
     \Yp
@@ -210,8 +215,11 @@ noremap <leader><leader> :e!<CR>G
 " RELOAD THIS CONFIGURATION
 noremap <C-F5> :source $MYVIMRC<CR>
 noremap <F7> :source $MYVIMRC <CR>
+noremap <F12> :source $MYVIMRC <CR>
 nnoremap <leader>lc :source $MYVIMRC<CR>
 nnoremap <leader>ls :scriptnames<CR>
 
 " Save and run current file
 noremap <S-F5> <Esc>:w<CR>:!%:p<CR>
+
+nnoremap <leader>or :browse :oldfiles!<CR>

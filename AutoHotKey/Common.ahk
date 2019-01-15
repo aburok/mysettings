@@ -61,5 +61,6 @@ IfWinActive, .ahk
     Sleep, 200
     SplashTextOff
     Reload
+    ; Reload "C:\mysettings\AutohotKey\Autohotkey.ahk"
 }
 return

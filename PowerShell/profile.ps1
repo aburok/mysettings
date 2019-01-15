@@ -67,7 +67,7 @@ Function Initialize-Config() {
 Initialize-Config "${PScript}\config"
 
 ### GIT
-Initialize-Config "$PScript\git"
+# Initialize-Config "$PScript\git"
 
 ### Include all scripts from function Directory
 Initialize-Config "${PScript}\functions"
