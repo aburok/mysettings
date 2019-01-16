@@ -53,3 +53,18 @@ Edge(pageUrl){
 IE(pageUrl){
     Run, iexplore.exe %pageUrl%
 }
+
+FlushAll(){
+    MsgBox % RunWaitMany("
+    (
+        echo Flush DNS
+        echo ipconfig `/flushdns
+        ipconfig `/flushdns
+        echo nbtstat -r
+        nbtstat -r
+        echo netsh int ip reset
+        netsh int ip reset
+        echo netsh winsock reset
+        netsh winsock reset
+    )")
+}

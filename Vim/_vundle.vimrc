@@ -35,7 +35,7 @@ Bundle 'https://github.com/xolox/vim-notes'
 " "Bundle 'https://github.com/lpenz/vimcommander'
 
 Bundle 'vim-scripts/sessionman.vim'
-Bundle 'scrooloose/nerdcommenter'
+Bundle 'https://github.com/scrooloose/nerdcommenter'
 
 Bundle 'spf13/vim-autoclose'
 "Bundle 'tpope/vim-fugitive'

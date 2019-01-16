@@ -10,6 +10,8 @@ augroup END
 nnoremap <Space> /
 
 map Q <nop>
+nnoremap Q @q
+vnoremap Q :norm @q<CR>
 nnoremap P "0p
 vnoremap P "0p
 
@@ -208,12 +210,15 @@ nnoremap <Leader>cd :cd %:p:h<CR>
 
 " This will add header comment with default # sign
 nnoremap <Leader>ch :center 80<CR>3hv0r#A<Space><Space><Esc>40A#<Esc>d80<Bar>YppVr#kk.
+
+" function! commentBlock(comment)
+"     return "\<C-V>^I" . comment . " \<ESC>"
+" endfunction
+
 vnoremap <leader>cx <C-V>lx<ESC>
 vnoremap <leader>c# <C-V>^I# <ESC>
 vnoremap <leader>c' <C-V>^I' <ESC>
-vnoremap <leader>c" <C-V>^I" <ESC>
-vnoremap <leader>c/ <C-V>^I// <ESC>
-nnoremap <leader>c/ ^I// <ESC>
+" vnoremap <leader>c' =commentBlock(<C-V>^I' <ESC>
 
 let g:syntastic_shell = "/usr/bin/bash"
 

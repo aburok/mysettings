@@ -131,10 +131,11 @@ return
     WinActivate, ahk_exe ConEmu64.exe
 return
 
-+!?::
 
-MsgBox,
-    (
+GetHelpText(){
+
+helpText = 
+(
         Shortcuts
 
 ================================
@@ -159,14 +160,27 @@ MsgBox,
     SHIFT + ALT + C
 
         f -> Flush DNS
-    )
+)
+
+return helpText
+}
+
++!?::
+ShowHelp()
+SplashTextOff
 return
+
+ShowHelp(){
+helpText:= GetHelpText()
+SplashTextOn, 500, 600 , Updated script, %helpText%
+}
 
 #+d::
 !+d::
 
-INPUT, command, T2 L1
-MsgBox, Running Command
+ShowHelp()
+INPUT, command, T10 L1, {Esc}{LShift}
+SplashTextOff
 
 if ("a" = command)
     WinActivate, ^.*(Microsoft Teams).*$
@@ -209,18 +223,7 @@ return
 INPUT, command, T2 L2
 
 if ("f" = command){
-    MsgBox % RunWaitMany("
-    (
-        echo Flush DNS
-        echo ipconfig `/flushdns
-        ipconfig `/flushdns
-        echo nbtstat -r
-        nbtstat -r
-        echo netsh int ip reset
-        netsh int ip reset
-        echo netsh winsock reset
-        netsh winsock reset
-    )")
+    FlushAll()
 } else if ("a" = command){
 
 }
