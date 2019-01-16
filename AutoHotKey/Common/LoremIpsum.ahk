@@ -2,7 +2,7 @@ GenerateLoremIpsum()
 {
     InputBox, paragraphNumber, Enter number of paragraphs you want to generate:
 
-    FileRead, LoremIpsumText, C:\mysettings\AutoHotKey\LoremIpsum.txt
+    FileRead, LoremIpsumText, C:\mysettings\AutoHotKey\Common\LoremIpsum.txt
 
     paragraphs:=StrSplit(LoremIpsumText, "`n")
 

@@ -1,3 +1,7 @@
+gvim(file){
+    Run, C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe -p --remote-tab-silent %file% `%*
+}
+
 FindLatestFileAndOpen(path, filePattern){
     global 
 
@@ -12,4 +16,15 @@ FindLatestFileAndOpen(path, filePattern){
         MsgBox, File found %File%
         gvim(File)
     }
+}
+
+ReturnFirstExistingFile(FileList){
+    Loop , parse, FileList, `,
+    {
+        isFile := FileExist(A_LoopField)
+        if (isFile){
+            return %A_LoopField%
+        }
+    }
+    return
 }

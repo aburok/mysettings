@@ -1,8 +1,6 @@
 ; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
 ; semicolon, such as this one, are comments.  They are not executed.
 
-#singleInstance force
-
 ; # - Win ke:
 ; ^ - Ctrl key
 ; ! - Alt key
@@ -117,10 +115,10 @@ return
 return
 
 ; Visua Studio Code
-#!d::
-#+d::
-	WinActivate, ^.*(Visual Studio Code)$
-return
+; #!d::
+; #+d::
+; 	WinActivate, ^.*(Visual Studio Code)$
+; return
 
 #!n::
 #+n::
@@ -164,9 +162,11 @@ MsgBox,
     )
 return
 
-+!d::
+#+d::
+!+d::
 
 INPUT, command, T2 L1
+MsgBox, Running Command
 
 if ("a" = command)
     WinActivate, ^.*(Microsoft Teams).*$
@@ -302,19 +302,20 @@ return
 
 
 
-#Include %A_ScriptDir%\Common.ahk
-#Include %A_ScriptDir%\Common.Web.ahk
-#Include %A_ScriptDir%\Common.Files.ahk
+#Include %A_ScriptDir%\Common\Common.ahk
+#Include %A_ScriptDir%\Common\Common.Text.ahk
+#Include %A_ScriptDir%\Common\Common.Web.ahk
+#Include %A_ScriptDir%\Common\Common.Files.ahk
 #Include %A_ScriptDir%\slugify.ahk
 #Include %A_ScriptDir%\ParseUrl.ahk
-#Include %A_ScriptDir%\GuidUtils.ahk
-#Include %A_ScriptDir%\LoremIpsum.ahk
+#Include %A_ScriptDir%\Common\Common.Guids.ahk
+#Include %A_ScriptDir%\Common\LoremIpsum.ahk
 
 ; The FileName parameter may optionally be preceded by *i and a single space,
 ;   which causes the program to ignore any failure to load the included file. 
 ; For example: #Include *i SpecialOptions.ahk. 
 ; This option should be used only when the included file's contents are not essential to the main script's operation.
-#Include *i %A_ScriptDir%\..\..\_Merck\Merck.ahk
+#Include *i C:\_Merck\Merck.ahk
 
 
 CAPSLOCK::Escape
@@ -331,12 +332,6 @@ RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
         Run, %Target%
 }
 
-UnEscape_Chars(string){
-    StringReplace string, string, file:///, , All
-    StringReplace string, string, `%20, `  , All
-    StringReplace string, string, `/, `\, All
-    return string
-}
 
 Explorer_GetWindow(hwnd = ""){
     hwnd := hwnd ? hwnd : WinExist("A")
@@ -350,24 +345,10 @@ Explorer_GetWindow(hwnd = ""){
     }
 }
 
-ReturnFirstExistingFile(FileList){
-    Loop , parse, FileList, `,
-    {
-        isFile := FileExist(A_LoopField)
-        if (isFile){
-            return %A_LoopField%
-        }
-    }
-    return
-}
-
-TryOpenApplicationOrDefault(appPath, LastChance, params = ""){
-}
-
 GetDirFromWindowTitle(){
     ID := WinExist("A")
     WinGetTitle, Title, ahk_ID %ID%
-    if( FileExist(Title))
+    if(FileExist(Title))
         return  Title
     return
 }
@@ -379,32 +360,32 @@ Run, http://www.google.com/search?q=%clipboard%
 Return
 
 
-#IfWinActive, ahk_exe  TOTALCMD64.EXE
-{
-    !d::
-    Send {Home}
-    Send {Shift Down}
-    Sleep 10
-    Send {F6 Down}
-    Sleep 10
-    Send {F6 Up}{Shift Up}
-    return 
-}
-#IfWinActive
+; #IfWinActive, ahk_exe  TOTALCMD64.EXE
+; {
+;     !d::
+;     Send {Home}
+;     Send {Shift Down}
+;     Sleep 10
+;     Send {F6 Down}
+;     Sleep 10
+;     Send {F6 Up}{Shift Up}
+;     return 
+; }
+; #IfWinActive
 
-#IfWinActive, ahk_exe  chrome.exe
-{
-    !+g::
-    oldClipboard:=Clipboard
-    url:= CopyBrowserUrl()
-    Clipboard := RegExReplace(url, "www\.youtube", "www.genyoutube")
-    Send ^t
-    sleep 10
-    Send ^v
-    Sleep 10
-    Send {Enter}
-    sleep 10
-    Clipboard:=oldClipboard
-    return 
-}
-#IfWinActive
+; #IfWinActive, ahk_exe  chrome.exe
+; {
+;     !+g::
+;     oldClipboard:=Clipboard
+;     url:= CopyBrowserUrl()
+;     Clipboard := RegExReplace(url, "www\.youtube", "www.genyoutube")
+;     Send ^t
+;     sleep 10
+;     Send ^v
+;     Sleep 10
+;     Send {Enter}
+;     sleep 10
+;     Clipboard:=oldClipboard
+;     return 
+; }
+; #IfWinActive

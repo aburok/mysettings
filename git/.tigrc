@@ -115,7 +115,13 @@ bind refs cd        >git checkout develop-redesign
 bind refs D     none
 bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)  
 bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)  
-bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:{0} /revision2:%(commit)"
+##########################################
+# Compare / Show changes / Diff  branches
+##########################################
+# selected branch with HEAD branch
+bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:"HEAD" /revision2:"%(branch)"
+# selected branch with develop-redesign branch
+bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"develop-redesign" /revision2:"%(branch)"
 
 # Delete refs / branch from origin
 bind refs XL         ?git push %(remote) --delete %(branch)

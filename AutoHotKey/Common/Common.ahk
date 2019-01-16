@@ -1,7 +1,3 @@
-gvim(file){
-    Run, C:\Dropbox\Tools\vim73-zlib-win32\gvim.exe -p --remote-tab-silent %file% `%*
-}
-
 RunWaitOne(command) {
     ; WshShell object: http://msdn.microsoft.com/en-us/library/aew9yb99
     shell := ComObjCreate("WScript.Shell")
@@ -21,35 +17,6 @@ RunWaitMany(commands) {
     return exec.StdOut.ReadAll()
 }
 
-SlugifyText(Text){
-    Slug := RegExReplace(Text, "[\]\[]" , "")
-    Slug := Trim(Slug)
-    Slug := RegExReplace(Slug, "\W+" , "-")
-    Slug := Trim(Slug, " .,-!?")
-    return Slug
-}
-
-
-StringJoin(array, delimiter = ";")
-{
-  Loop
-    If Not %array%%A_Index% Or Not t .= (t ? delimiter : "") %array%%A_Index%
-      Return t
-}
-
-InsertCharacterAtStart(vText, character){
-    result := ""
-
-    Loop, parse, vText, `n, `r
-    {
-        result := result . character . " " . %A_LoopField%
-    }
-
-    resultText := StringJoin(vText, "`n`r".character)
-    MsgBox, resultText
-
-    return resultText
-}
 
 
 ;Reload script on Ctrl + S (Save)
