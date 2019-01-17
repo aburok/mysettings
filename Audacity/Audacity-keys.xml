@@ -1,0 +1,348 @@
+<audacitykeyboard audacityversion="2.3.0">
+	<command name="New" label="Nowy" key="Ctrl+N"/>
+	<command name="Open" label="Otwórz..." key="Ctrl+O"/>
+	<command name="Close" label="Zamknij" key="Ctrl+W"/>
+	<command name="Save" label="Zapisz projekt" key="Ctrl+S"/>
+	<command name="SaveAs" label="Zapisz projekt jako..." key=""/>
+	<command name="SaveCopy" label="Zapisz bezstratną kopię projektu..." key=""/>
+	<command name="SaveCompressed" label="Zapisz skompresowaną kopię projektu..." key=""/>
+	<command name="ExportMp3" label="Eksportuj jako MP3" key=""/>
+	<command name="ExportWav" label="Eksportuj jako WAV" key=""/>
+	<command name="ExportOgg" label="Eksportuj jako OGG" key=""/>
+	<command name="Export" label="Eksportuj dźwięk..." key="Ctrl+Shift+E"/>
+	<command name="ExportSel" label="Eksportuj zaznaczony dźwięk..." key=""/>
+	<command name="ExportLabels" label="Eksportuj etykiety..." key=""/>
+	<command name="ExportMultiple" label="Eksportuj wiele plików..." key="Ctrl+Shift+L"/>
+	<command name="ExportMIDI" label="Eksportuj MIDI..." key=""/>
+	<command name="ImportAudio" label="Dźwięk..." key="Ctrl+Shift+I"/>
+	<command name="ImportLabels" label="Etykiety..." key=""/>
+	<command name="ImportMIDI" label="MIDI..." key=""/>
+	<command name="ImportRaw" label="Dane surowe..." key=""/>
+	<command name="PageSetup" label="Ustawienia strony..." key=""/>
+	<command name="Print" label="Drukuj..." key=""/>
+	<command name="Exit" label="Wyjście" key="Ctrl+Q"/>
+	<command name="Undo" label="Cofnij Importuj" key="Ctrl+Z"/>
+	<command name="Redo" label="Ponów" key="Ctrl+Y"/>
+	<command name="Cut" label="Wytnij" key="Ctrl+X"/>
+	<command name="Delete" label="Kasuj" key="Ctrl+K"/>
+	<command name="Copy" label="Kopiuj" key="Ctrl+C"/>
+	<command name="Paste" label="Wklej" key="Ctrl+V"/>
+	<command name="Duplicate" label="Powiel" key="Ctrl+D"/>
+	<command name="SplitCut" label="Rozdziel wytnij" key="Ctrl+Alt+X"/>
+	<command name="SplitDelete" label="Rozdziel usuń" key="Ctrl+Alt+K"/>
+	<command name="Silence" label="Wycisz dźwięk" key="Ctrl+L"/>
+	<command name="Trim" label="Przytnij dźwięk" key="Ctrl+T"/>
+	<command name="Split" label="Rozdziel" key=""/>
+	<command name="SplitNew" label="Rozdziel nowy" key=""/>
+	<command name="Join" label="Połącz" key=""/>
+	<command name="Disjoin" label="Odłącz przy ciszach" key=""/>
+	<command name="EditLabels" label="Edytuj etykiety..." key=""/>
+	<command name="AddLabel" label="Dodaj etykietę w miejscu zaznaczenia" key="Ctrl+B"/>
+	<command name="AddLabelPlaying" label="Dodaj etykietę w pozycji odtwarzania" key="Ctrl+M"/>
+	<command name="PasteNewLabel" label="Wklej tekst do nowej etykiety" key=""/>
+	<command name="TypeToCreateLabel" label="Wpisz, aby utworzyć etykietę (włącz/wyłącz)" key=""/>
+	<command name="CutLabels" label="Wytnij" key=""/>
+	<command name="DeleteLabels" label="Kasuj" key=""/>
+	<command name="SplitCutLabels" label="Rozdziel wytnij" key="Alt+Shift+X"/>
+	<command name="SplitDeleteLabels" label="Rozdziel usuń" key="Alt+Shift+K"/>
+	<command name="SilenceLabels" label="Wycisz dźwięk" key=""/>
+	<command name="CopyLabels" label="Kopiuj" key="Alt+Shift+C"/>
+	<command name="SplitLabels" label="Rozdziel" key=""/>
+	<command name="JoinLabels" label="Połącz" key=""/>
+	<command name="DisjoinLabels" label="Odłącz przy ciszach" key="Alt+Shift+J"/>
+	<command name="EditMetaData" label="Metadane..." key=""/>
+	<command name="Preferences" label="Ustawienia..." key="Ctrl+P"/>
+	<command name="SelectAll" label="Wszystko" key="Ctrl+A"/>
+	<command name="SelectNone" label="Nic" key=""/>
+	<command name="SelAllTracks" label="We wszystkich ścieżkach" key="Ctrl+Shift+K"/>
+	<command name="SelSyncLockTracks" label="We wszystkich zsynchronizowanych-zablokowanych ścieżkach" key="Ctrl+Shift+Y"/>
+	<command name="SetLeftSelection" label="Na lewo od miejsca odtwarzania" key="["/>
+	<command name="SetRightSelection" label="Na prawo od miejsca odtwarzania" key="]"/>
+	<command name="SelTrackStartToCursor" label="Od początku ścieżki do kursora" key="Shift+J"/>
+	<command name="SelCursorToTrackEnd" label="Od kursora do końca ścieżki" key="Shift+K"/>
+	<command name="SelTrackStartToEnd" label="Od początku ścieżki do końca" key=""/>
+	<command name="SelSave" label="Wybierz zaznaczenie" key=""/>
+	<command name="SelRestore" label="Odzyskaj zaznaczenie" key=""/>
+	<command name="ToggleSpectralSelection" label="Przełącz zaznaczenie widma" key=""/>
+	<command name="NextHigherPeakFrequency" label="Następny wysoki szczyt częstotliwości" key=""/>
+	<command name="NextLowerPeakFrequency" label="Następny niski szczyt częstotliwości" key=""/>
+	<command name="SelPrevClipBoundaryToCursor" label="Poprzednia granica przycięcia do kursora" key=""/>
+	<command name="SelCursorToNextClipBoundary" label="Kursor do następnej granicy przycięcia" key=""/>
+	<command name="SelPrevClip" label="Poprzednie przycięcie" key="Alt+,"/>
+	<command name="SelNextClip" label="Następne przycięcie" key="Alt+."/>
+	<command name="SelCursorStoredCursor" label="Kursor do przechwyconej pozycji" key=""/>
+	<command name="StoreCursorPosition" label="Uchwyć pozycję kursora" key=""/>
+	<command name="ZeroCross" label="Na miejscach przejść przez zero" key="Z"/>
+	<command name="ZoomIn" label="Powiększ" key="Ctrl+1"/>
+	<command name="ZoomNormal" label="Normalny rozmiar" key="Ctrl+2"/>
+	<command name="ZoomOut" label="Pomniejsz" key="Ctrl+3"/>
+	<command name="ZoomSel" label="Powiększ do zaznaczenia" key="Ctrl+E"/>
+	<command name="ZoomToggle" label="Przełącz powiększenie" key="Shift+Z"/>
+	<command name="FitInWindow" label="Dopasuj do szerokości" key="Ctrl+F"/>
+	<command name="FitV" label="Dopasuj do wysokości" key="Ctrl+Shift+F"/>
+	<command name="CollapseAllTracks" label="Zwiń wszystkie ścieżki" key="Ctrl+Shift+C"/>
+	<command name="ExpandAllTracks" label="Rozwiń zwinięte ścieżki" key="Ctrl+Shift+X"/>
+	<command name="SkipSelStart" label="Początek zaznaczenia" key=""/>
+	<command name="SkipSelEnd" label="Koniec zaznaczenia" key=""/>
+	<command name="UndoHistory" label="Historia..." key=""/>
+	<command name="Karaoke" label="Karaoke..." key=""/>
+	<command name="MixerBoard" label="Panel miksera..." key=""/>
+	<command name="ResetToolbars" label="Zresetuj paski narzędziowe" key=""/>
+	<command name="ShowTransportTB" label="Pasek narzędziowy transportu" key=""/>
+	<command name="ShowToolsTB" label="Pasek narzędziowy narzędzi" key=""/>
+	<command name="ShowRecordMeterTB" label="Pasek miernika nagrywania" key=""/>
+	<command name="ShowPlayMeterTB" label="Pasek miernika odtwarzania" key=""/>
+	<command name="ShowMixerTB" label="Pasek narzędziowy miksera" key=""/>
+	<command name="ShowEditTB" label="Pasek narzędziowy edycji" key=""/>
+	<command name="ShowTranscriptionTB" label="Pasek narzędziowy odtwarzania z prędkością" key=""/>
+	<command name="ShowScrubbingTB" label="Pasek narzędziowy przewijania" key=""/>
+	<command name="ShowDeviceTB" label="Pasek narzędziowy urządzenia" key=""/>
+	<command name="ShowSelectionTB" label="Pasek narzędziowy zaznaczania" key=""/>
+	<command name="ShowSpectralSelectionTB" label="Pasek narzędziowy widmowego zaznaczania" key=""/>
+	<command name="ShowExtraMenus" label="Dodatkowe menu (włącz/wyłącz)" key=""/>
+	<command name="ShowClipping" label="Pokaż obcinanie (włącz/wyłącz)" key=""/>
+	<command name="PlayStop" label="Odtwarzaj/zatrzymaj" key="Space"/>
+	<command name="PlayStopSelect" label="Odtwarzaj/zatrzymaj i ustaw kursor" key="X"/>
+	<command name="PlayLooped" label="Odtwarzaj w pętli" key="Shift+Space"/>
+	<command name="Pause" label="Wstrzymaj" key="P"/>
+	<command name="Record1stChoice" label="Nagrywaj" key="R"/>
+	<command name="Record2ndChoice" label="Nagrywaj nową ścieżkę" key="Shift+R"/>
+	<command name="TimerRecord" label="Nagrywaj czasowo..." key="Shift+T"/>
+	<command name="PunchAndRoll" label="Nagrywaj Punch and Roll" key="Shift+D"/>
+	<command name="Scrub" label="Przewijaj" key=""/>
+	<command name="Seek" label="Szukaj" key=""/>
+	<command name="ToggleScrubRuler" label="Linijka przewijania" key=""/>
+	<command name="CursSelStart" label="Początek zaznaczenia" key=""/>
+	<command name="CursSelEnd" label="Koniec zaznaczenia" key=""/>
+	<command name="CursTrackStart" label="Początek ścieżki" key="J"/>
+	<command name="CursTrackEnd" label="Koniec ścieżki" key="K"/>
+	<command name="CursPrevClipBoundary" label="Poprzednia granica przycięcia" key=""/>
+	<command name="CursNextClipBoundary" label="Następna granica przycięcia" key=""/>
+	<command name="CursProjectStart" label="Początek projektu" key="Home"/>
+	<command name="CursProjectEnd" label="Koniec projektu" key="End"/>
+	<command name="LockPlayRegion" label="Zablokuj" key=""/>
+	<command name="UnlockPlayRegion" label="Odblokuj" key=""/>
+	<command name="RescanDevices" label="Skanuj ponownie urządzenia dźwiękowe" key=""/>
+	<command name="SoundActivationLevel" label="Poziom aktywacji dźwięku" key=""/>
+	<command name="SoundActivation" label="Aktywacja nagrywania dźwięku (włącz/wyłącz)" key=""/>
+	<command name="PinnedHead" label="Podpięty do głowicy nagrywania/odtwarzania (włącz/wyłącz)" key=""/>
+	<command name="Overdub" label="Overdub (włącz/wyłącz)" key=""/>
+	<command name="SWPlaythrough" label="Oprogramowanie odtwarzania (włącz/wyłącz)" key=""/>
+	<command name="NewMonoTrack" label="Ścieżka mono" key=""/>
+	<command name="NewStereoTrack" label="Ścieżka stereo" key=""/>
+	<command name="NewLabelTrack" label="Etykieta ścieżki" key=""/>
+	<command name="NewTimeTrack" label="Ścieżka czasowa" key=""/>
+	<command name="Stereo to Mono" label="Miksuj stereo do mono" key=""/>
+	<command name="MixAndRender" label="Miksuj i renderuj" key=""/>
+	<command name="MixAndRenderToNewTrack" label="Miksuj i przetwarzaj do nowej ścieżki" key=""/>
+	<command name="Resample" label="Zmień próbkowanie..." key=""/>
+	<command name="RemoveTracks" label="Usuń ścieżki" key=""/>
+	<command name="MuteAllTracks" label="Wycisz wszystkie ścieżki" key="Ctrl+U"/>
+	<command name="UnmuteAllTracks" label="Zgłośnij wszystkie ścieżki" key="Ctrl+Shift+U"/>
+	<command name="PanLeft" label="Lewo" key=""/>
+	<command name="PanRight" label="Prawo" key=""/>
+	<command name="PanCenter" label="Środek" key=""/>
+	<command name="Align_EndToEnd" label="Wyrównaj koniec do końca" key=""/>
+	<command name="Align_Together" label="Wyrównaj razem" key=""/>
+	<command name="Align_StartToZero" label="Rozpocznij od zera" key=""/>
+	<command name="Align_StartToSelStart" label="Początku do kursora/początku zaznaczenia" key=""/>
+	<command name="Align_StartToSelEnd" label="Początku do końca zaznaczenia" key=""/>
+	<command name="Align_EndToSelStart" label="Końca do kursora/początku zaznaczenia" key=""/>
+	<command name="Align_EndToSelEnd" label="Końca do końca zaznaczenia" key=""/>
+	<command name="MoveSelectionWithTracks" label="Przesuń zaznaczenie ze ścieżkami (włącz/wyłącz)" key=""/>
+	<command name="SortByTime" label="Według czasu rozpoczęcia" key=""/>
+	<command name="SortByName" label="Według nazwy" key=""/>
+	<command name="SyncLock" label="Synchronizuj-zablokuj ścieżki (włącz/wyłącz)" key=""/>
+	<command name="ManageGenerators" label="Dodaj/usuń wtyczki..." key=""/>
+	<command name="Cisza..." label="Cisza..." key=""/>
+	<command name="Dźwięki DTMF..." label="Dźwięki DTMF..." key=""/>
+	<command name="Szum..." label="Szum..." key=""/>
+	<command name="Ton..." label="Ton..." key=""/>
+	<command name="Świergot..." label="Świergot..." key=""/>
+	<command name="Pluck..." label="Pluck..." key=""/>
+	<command name="Risset Drum..." label="Risset Drum..." key=""/>
+	<command name="Ścieżka rytmu..." label="Ścieżka rytmu..." key=""/>
+	<command name="ManageEffects" label="Dodaj/usuń wtyczki..." key=""/>
+	<command name="RepeatLastEffect" label="Powtórz ostatni efekt" key="Ctrl+R"/>
+	<command name="Auto Duck..." label="Auto Duck..." key=""/>
+	<command name="Bas i sopran..." label="Bas i sopran..." key=""/>
+	<command name="Cofnij w czasie" label="Cofnij w czasie" key=""/>
+	<command name="Echo..." label="Echo..." key=""/>
+	<command name="Fazer..." label="Fazer..." key=""/>
+	<command name="Kompresor..." label="Kompresor..." key=""/>
+	<command name="Korekcja graficzna..." label="Korekcja graficzna..." key=""/>
+	<command name="Napraw" label="Napraw" key=""/>
+	<command name="Normalizuj..." label="Normalizuj..." key=""/>
+	<command name="Obetnij ciszę..." label="Obetnij ciszę..." key=""/>
+	<command name="Odwróć" label="Odwróć" key=""/>
+	<command name="Paulstretch..." label="Paulstretch..." key=""/>
+	<command name="Pogłos..." label="Pogłos..." key=""/>
+	<command name="Powtórz..." label="Powtórz..." key=""/>
+	<command name="Redukcja szumu..." label="Redukcja szumu..." key=""/>
+	<command name="Rozciągnij..." label="Rozciągnij..." key=""/>
+	<command name="Usuwanie stukotu..." label="Usuwanie stukotu..." key=""/>
+	<command name="Wahwah..." label="Wahwah..." key=""/>
+	<command name="Wzmacniaj..." label="Wzmacniaj..." key=""/>
+	<command name="Zgłośnienie" label="Zgłośnienie" key=""/>
+	<command name="Zmień prędkość..." label="Zmień prędkość..." key=""/>
+	<command name="Zmień tempo..." label="Zmień tempo..." key=""/>
+	<command name="Zmień wysokość..." label="Zmień wysokość..." key=""/>
+	<command name="Zniekształcenie..." label="Zniekształcenie..." key=""/>
+	<command name="Ściszenie" label="Ściszenie" key=""/>
+	<command name="Filtr dolnoprzepustowy..." label="Filtr dolnoprzepustowy..." key=""/>
+	<command name="Filtr górnoprzepustowy..." label="Filtr górnoprzepustowy..." key=""/>
+	<command name="Filtr Notch..." label="Filtr Notch..." key=""/>
+	<command name="Limiter..." label="Limiter..." key=""/>
+	<command name="Multinarzędzie edycji widma" label="Multinarzędzie edycji widma" key=""/>
+	<command name="Napraw klip..." label="Napraw klip..." key=""/>
+	<command name="Narzędzie do usuwania wokalu..." label="Narzędzie do usuwania wokalu..." key=""/>
+	<command name="Opóźnienie..." label="Opóźnienie..." key=""/>
+	<command name="Parametryczna edycja EQ widma..." label="Parametryczna edycja EQ widma..." key=""/>
+	<command name="Przejście dające się regulować..." label="Przejście dające się regulować..." key=""/>
+	<command name="Przenikanie klipów" label="Przenikanie klipów" key=""/>
+	<command name="Przenikanie ścieżek..." label="Przenikanie ścieżek..." key=""/>
+	<command name="Półki edycji widma..." label="Półki edycji widma..." key=""/>
+	<command name="Redukcja i izolacja wokalu..." label="Redukcja i izolacja wokalu..." key=""/>
+	<command name="SC4..." label="SC4..." key=""/>
+	<command name="Studio ściszania" label="Studio ściszania" key=""/>
+	<command name="Tremolo..." label="Tremolo..." key=""/>
+	<command name="Wokoder..." label="Wokoder..." key=""/>
+	<command name="ManageAnalyzers" label="Dodaj/usuń wtyczki..." key=""/>
+	<command name="ContrastAnalyser" label="Kontrast..." key=""/>
+	<command name="PlotSpectrum" label="Narysuj widmo..." key=""/>
+	<command name="Znajdź obcinanie..." label="Znajdź obcinanie..." key=""/>
+	<command name="Szukaj ciszy..." label="Szukaj ciszy..." key=""/>
+	<command name="Szukaj dźwięku..." label="Szukaj dźwięku..." key=""/>
+	<command name="Szukaj uderzenia..." label="Szukaj uderzenia..." key=""/>
+	<command name="ManageTools" label="Dodaj/usuń wtyczki..." key=""/>
+	<command name="ManageMacros" label="Makra..." key=""/>
+	<command name="ApplyMacrosPalette" label="Paleta..." key=""/>
+	<command name="FancyScreenshot" label="Zrzut ekranu..." key=""/>
+	<command name="Benchmark" label="Uruchom benchmark..." key=""/>
+	<command name="Podpowiedź Nyquista..." label="Podpowiedź Nyquista..." key=""/>
+	<command name="Eksport przykładowych danych..." label="Eksport przykładowych danych..." key=""/>
+	<command name="Import przykładowych danych..." label="Import przykładowych danych..." key=""/>
+	<command name="Regularne przedziały etykiet..." label="Regularne przedziały etykiet..." key=""/>
+	<command name="Play" label="Odtwarzaj" key=""/>
+	<command name="Stop" label="Zatrzymaj" key=""/>
+	<command name="PlayOneSec" label="Odtwarzaj 1 sekundę" key=""/>
+	<command name="PlayToSelection" label="Odtwarzaj do zaznaczenia" key="B"/>
+	<command name="PlayBeforeSelectionStart" label="Odtwarzaj przed początkiem zaznaczenia" key=""/>
+	<command name="PlayAfterSelectionStart" label="Odtwarzaj po początku zaznaczenia" key=""/>
+	<command name="PlayBeforeSelectionEnd" label="Odtwarzaj przed końcem zaznaczenia" key=""/>
+	<command name="PlayAfterSelectionEnd" label="Odtwarzaj po końcu zaznaczenia" key=""/>
+	<command name="PlayBeforeAndAfterSelectionStart" label="Odtwarzaj przed i po początku zaznaczenia" key=""/>
+	<command name="PlayBeforeAndAfterSelectionEnd" label="Odtwarzaj przed i po końcu zaznaczenia" key=""/>
+	<command name="PlayCutPreview" label="Odtwarzaj wycięty podgląd" key="C"/>
+	<command name="SelectTool" label="Narzędzie zaznaczania" key="F1"/>
+	<command name="EnvelopeTool" label="Narzędzie obwiedni" key="F2"/>
+	<command name="DrawTool" label="Narzędzie rysowania" key="F3"/>
+	<command name="ZoomTool" label="Narzędzie powiększania" key="F4"/>
+	<command name="TimeShiftTool" label="Narzędzie do przesuwania w czasie" key="F5"/>
+	<command name="MultiTool" label="Multinarzędzie" key="F6"/>
+	<command name="PrevTool" label="Poprzednie narzędzie" key=""/>
+	<command name="NextTool" label="Następne narzędzie" key=""/>
+	<command name="OutputGain" label="Dostosuj głośność odtwarzania..." key=""/>
+	<command name="OutputGainInc" label="Zwiększ głośność odtwarzania" key=""/>
+	<command name="OutputGainDec" label="Zmniejsz głośność odtwarzania" key=""/>
+	<command name="InputGain" label="Dostosuj głośność nagrywania..." key=""/>
+	<command name="InputGainInc" label="Zwiększ głośność nagrywania" key=""/>
+	<command name="InputGainDec" label="Zmniejsz głośność nagrywania" key=""/>
+	<command name="DeleteKey" label="Klawisz kasowania­" key="Backspace"/>
+	<command name="DeleteKey2" label="Klawisz kasowania­ 2" key="Delete"/>
+	<command name="PlayAtSpeed" label="Odtwarzaj z normalną prędkością" key="Ctrl+NUMPAD_MULTIPLY"/>
+	<command name="PlayAtSpeedLooped" label="Odtwarzaj w pętli z prędkością" key=""/>
+	<command name="PlayAtSpeedCutPreview" label="Odtwarzaj wycięty podgląd z prędkością" key=""/>
+	<command name="SetPlaySpeed" label="Dostosuj prędkość odtwarzania..." key=""/>
+	<command name="PlaySpeedInc" label="Zwiększ prędkość odtwarzania" key="Ctrl+NUMPAD_ADD"/>
+	<command name="PlaySpeedDec" label="Zmniejsz prędkość odtwarzania" key="Ctrl+NUMPAD_SUBTRACT"/>
+	<command name="MoveToPrevLabel" label="Przesuń do poprzedniej etykiety" key="Alt+Left"/>
+	<command name="MoveToNextLabel" label="Przesuń do następnej etykiety" key="Alt+Right"/>
+	<command name="SeekLeftShort" label="Krótkie przesunięcie w lewo podczas odtwarzania" key="Left"/>
+	<command name="SeekRightShort" label="Krótkie przesunięcie w prawo podczas odtwarzania" key="Right"/>
+	<command name="SeekLeftLong" label="Długie przesunięcie w lewo podczas odtwarzania" key="Shift+Left"/>
+	<command name="SeekRightLong" label="Długie przesunięcie w prawo podczas odtwarzania" key="Shift+Right"/>
+	<command name="InputDevice" label="Zmień urządzenie nagrywające..." key=""/>
+	<command name="OutputDevice" label="Zmień urządzenie odtwarzające..." key=""/>
+	<command name="AudioHost" label="Zmień host dźwięku..." key=""/>
+	<command name="InputChannels" label="Zmień kanały nagrywania..." key=""/>
+	<command name="SnapToOff" label="Wyłącz" key=""/>
+	<command name="SnapToNearest" label="Przyczep do najbliższego" key=""/>
+	<command name="SnapToPrior" label="Przyczep do wcześniejszego" key=""/>
+	<command name="SelStart" label="Zaznaczenie do początku" key="Shift+Home"/>
+	<command name="SelEnd" label="Zaznaczenie do końca" key="Shift+End"/>
+	<command name="SelExtLeft" label="Powiększ zaznaczenie z lewej strony" key="Shift+Left"/>
+	<command name="SelExtRight" label="Powiększ zaznaczenie z prawej strony" key="Shift+Right"/>
+	<command name="SelSetExtLeft" label="Ustaw (lub rozszerz) lewe zaznaczenie" key=""/>
+	<command name="SelSetExtRight" label="Ustaw (lub rozszerz) prawe zaznaczenie" key=""/>
+	<command name="SelCntrLeft" label="Pomniejsz zaznaczenie z lewej strony" key="Ctrl+Shift+Right"/>
+	<command name="SelCntrRight" label="Pomniejsz zaznaczenie z prawej strony" key="Ctrl+Shift+Left"/>
+	<command name="PrevWindow" label="Przejdź do tyłu przez aktywne okna" key=""/>
+	<command name="NextWindow" label="Przejdź do przodu przez aktywne okna" key=""/>
+	<command name="PrevFrame" label="Przejdź do tyłu z pasków narzędzi do ścieżek" key="Ctrl+Shift+F6"/>
+	<command name="NextFrame" label="Przejdź do przodu z pasków narzędzi do ścieżek" key="Ctrl+F6"/>
+	<command name="PrevTrack" label="Przenieś uaktywnienie do poprzedniej ścieżki" key="Up"/>
+	<command name="NextTrack" label="Przenieś uaktywnienie do następnej ścieżki" key="Down"/>
+	<command name="FirstTrack" label="Przenieś uaktywnienie do pierwszej ścieżki" key=""/>
+	<command name="LastTrack" label="Przenieś uaktywnienie do ostatniej ścieżki" key=""/>
+	<command name="ShiftUp" label="Przenieś uaktywnienie do poprzedniej i zaznacz" key="Shift+Up"/>
+	<command name="ShiftDown" label="Przenieś uaktywnienie do następnej i zaznacz" key="Shift+Down"/>
+	<command name="Toggle" label="Przemieszczaj się między ścieżkami" key="Return"/>
+	<command name="ToggleAlt" label="Przemieszczaj się między ścieżkami" key="NUMPAD_ENTER"/>
+	<command name="CursorLeft" label="Lewy kursor" key="Left"/>
+	<command name="CursorRight" label="Prawy kursor" key="Right"/>
+	<command name="CursorShortJumpLeft" label="Kursor lekko w lewo" key=","/>
+	<command name="CursorShortJumpRight" label="Kursor lekko w prawo" key="."/>
+	<command name="CursorLongJumpLeft" label="Kursor mocno w lewo" key="Shift+,"/>
+	<command name="CursorLongJumpRight" label="Kursor mocno w prawo" key="Shift+."/>
+	<command name="ClipLeft" label="Obetnij z lewej" key=""/>
+	<command name="ClipRight" label="Obetnij z prawej" key=""/>
+	<command name="TrackPan" label="Zmień przesunięcie na zaznaczonej ścieżce..." key=""/>
+	<command name="TrackPanLeft" label="Przesuń w lewo na zaznaczonej ścieżce" key=""/>
+	<command name="TrackPanRight" label="Przesuń w prawo na zaznaczonej ścieżce" key=""/>
+	<command name="TrackGain" label="Zmień moc sygnału na zaznaczonej ścieżce..." key="Shift+G"/>
+	<command name="TrackGainInc" label="Zwiększ moc sygnału na zaznaczonej ścieżce" key=""/>
+	<command name="TrackGainDec" label="Zmniejsz moc sygnału na zaznaczonej ścieżce" key=""/>
+	<command name="TrackMenu" label="Otwórz menu na zaznaczonej ścieżce" key="Shift+M"/>
+	<command name="TrackMute" label="Wycisz/zgłośnij zaznaczoną ścieżkę" key="Shift+U"/>
+	<command name="TrackSolo" label="Oddziel/rozdziel zaznaczoną ścieżkę" key="Shift+S"/>
+	<command name="TrackClose" label="Zamknij zaznaczoną ścieżkę" key=""/>
+	<command name="TrackMoveUp" label="Przesuń zaznaczoną ścieżkę w górę" key=""/>
+	<command name="TrackMoveDown" label="Przesuń zaznaczoną ścieżkę w dół" key=""/>
+	<command name="TrackMoveTop" label="Przesuń zaznaczoną ścieżkę na samą górę" key=""/>
+	<command name="TrackMoveBottom" label="Przesuń zaznaczoną ścieżkę na sam dół" key=""/>
+	<command name="SelectTime" label="Zaznacz czas..." key=""/>
+	<command name="SelectFrequencies" label="Zaznacz częstotliwości..." key=""/>
+	<command name="SelectTracks" label="Zaznacz ścieżki..." key=""/>
+	<command name="SetTrackStatus" label="Ustaw status ścieżki..." key=""/>
+	<command name="SetTrackAudio" label="Ustaw ścieżkę dźwiękową..." key=""/>
+	<command name="SetTrackVisuals" label="Ustaw ślady ścieżki..." key=""/>
+	<command name="GetPreference" label="Uzyskaj ustawienia..." key=""/>
+	<command name="SetPreference" label="Ustaw ustawienia..." key=""/>
+	<command name="SetClip" label="Ustaw klip..." key=""/>
+	<command name="SetEnvelope" label="Ustaw obwiednię..." key=""/>
+	<command name="SetLabel" label="Ustaw etykietę..." key=""/>
+	<command name="SetProject" label="Ustaw projekt..." key=""/>
+	<command name="Select" label="Zaznacz..." key=""/>
+	<command name="SetTrack" label="Ustaw ścieżkę..." key=""/>
+	<command name="GetInfo" label="Uzyskaj informacje..." key=""/>
+	<command name="Message" label="Komunikat..." key=""/>
+	<command name="Help" label="Pomoc..." key=""/>
+	<command name="Import2" label="Importuj..." key=""/>
+	<command name="Export2" label="Eksportuj..." key=""/>
+	<command name="OpenProject2" label="Otwórz projekt..." key=""/>
+	<command name="SaveProject2" label="Zapisz projekt..." key=""/>
+	<command name="Drag" label="Przesuń kursor..." key=""/>
+	<command name="CompareAudio" label="Porównaj dźwięk..." key=""/>
+	<command name="Screenshot" label="Zrzut ekranu (mały format)..." key=""/>
+	<command name="FullScreenOnOff" label="Pełny ekran (włącz/wyłącz)" key="F11"/>
+	<command name="QuickHelp" label="Szybka pomoc..." key=""/>
+	<command name="Manual" label="Podręcznik..." key=""/>
+	<command name="DeviceInfo" label="Informacje o urządzeniu dźwiękowym..." key=""/>
+	<command name="MidiDeviceInfo" label="Informacje o urządzeniu MIDI..." key=""/>
+	<command name="Log" label="Pokaż dziennik..." key=""/>
+	<command name="CrashReport" label="Generuj dane pomocy..." key=""/>
+	<command name="CheckDeps" label="Sprawdź zależności..." key=""/>
+	<command name="Updates" label="Sprawdź aktualizacje..." key=""/>
+	<command name="About" label="O Audacity..." key=""/>
+</audacitykeyboard>
