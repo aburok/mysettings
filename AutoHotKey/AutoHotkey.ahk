@@ -12,6 +12,9 @@
 ; WINDOWS KEY BINDINGS
 ; ---------------------
 
+
+CAPSLOCK::Escape
+
 ; Match window names by part of the title
 SetTitleMatchMode RegEx
 
@@ -23,13 +26,6 @@ return
 
 DropBoxDir := "C:\Dropbox"
 ToolsDir := DropBoxDir . "\Tools"
-
-;  #+a::
-;  Run "..\..\window-layout\window-layout.ahk"
-;  Run autohotkey.exe "..\..\shortcut-assistant\shortcut-assistant.ahk"
-;  SetWorkingDir, "."
-;  retrn
-
 
 #LButton::
 #+q::
@@ -49,31 +45,16 @@ SendEvent {Right up}{LCtrl up}{Lwin up}      ; switch to next virtual desktop
 Sleep 1000
 return
 
-; !LButton::
-; Send, Browser_Back
-; return
-
-; !RButton::
-; Send, Browser_Forward
-; return
-
 
 #PgUp::Send {Volume_Up 1}
 #PgDn::Send {Volume_Down 1}
-; #j::Send {Volume_Up 1}
-; #k::Send {Volume_Down 1}
+#End::Send {Volume_Mute}
 
-; #+j::Send {Shift}+{LWin}+{Left}
-; #+h::Send #+{Left}
-#!h::Send #+{Left}
+#+h::Send #+{Left}
 #+l::Send #+{Right}
 #+j::Send #{Left}
 #+k::Send #{Right}
 #+u::Send #{Up}
-
-#+h::
-    SoundSet, 1, Microphone, mute, 2
-return
 
 #!v::
 #+v::
@@ -81,7 +62,6 @@ return
 return
 
 #+m::
-    ; WinActivate, ^(Merck\.Manuals).*( - Microsoft Visual Studio).*$
     WinActivate, ^.*(mysettings).*(Visual Studio Code)$
 return
 
@@ -129,92 +109,6 @@ return
 #+r::
 	; WinActivate, ^PS::.*$
     WinActivate, ahk_exe ConEmu64.exe
-return
-
-
-GetHelpText(){
-
-helpText = 
-(
-        Shortcuts
-
-================================
-    Applications
-    SHIFT + ALT + D
-
-        a -> Teams
-        b -> Chrome (Browser)
-        c -> Command Line (ConEmu)
-        d -> Dev Tools Chrome
-        f -> Total Commander (Files)
-        h -> Hangouts
-        l -> Skype / Lync
-        m -> Visual Studio Code
-        n -> Notepad ++
-        r -> Fiddler
-        v -> Visual Studio
-        w -> Vim
-
-================================
-    Commands
-    SHIFT + ALT + C
-
-        f -> Flush DNS
-)
-
-return helpText
-}
-
-+!?::
-ShowHelp()
-SplashTextOff
-return
-
-ShowHelp(){
-helpText:= GetHelpText()
-SplashTextOn, 500, 600 , Updated script, %helpText%
-}
-
-#+d::
-!+d::
-
-ShowHelp()
-INPUT, command, T10 L1, {Esc}{LShift}
-SplashTextOff
-
-if ("a" = command)
-    WinActivate, ^.*(Microsoft Teams).*$
-else if ("b" = command)
-	WinActivate, ^.*(Google Chrome)$
-else if ("c" = command)
-    WinActivate, ahk_exe ConEmu64.exe
-else if ("d" = command)
-    WinActivate, ^DevTools - .*$
-else if ("e" = command)
-    WinActivate, ahk_exe ONENOTE.EXE
-else if ("f" = command)
-    WinActivate, ahk_exe TOTALCMD64.EXE
-else if ("g" = command)
-    WinActivate, ahk_exe mintty.exe
-else if ("h" = command)
-    WinActivate, ^.*(Google Hangouts).*$
-else if ("k" = command)
-    WinActivate, ^.*(Google Hangouts).*$
-else if ("l" = command)
-    WinActivate, ahk_exe lync.exe
-else if ("m" = command)
-    WinActivate, ^.*(mysettings).*(Visual Studio Code)$
-else if ("n" = command)
-	WinActivate, ^.*(Notepad\+\+).*$
-else if ("r" = command)
-    WinActivate, ahk_exe Fiddler.exe
-else if ("v" = command)
-    WinActivate, ^.*( - Microsoft Visual Studio).*$
-else if ("w" = command)
-    WinActivate, ^.*(- GVIM).*$
-else if ("9" = command)
-    Run "https://9gag.com"
-
 return
 
 
@@ -313,40 +207,19 @@ return
 #Include %A_ScriptDir%\ParseUrl.ahk
 #Include %A_ScriptDir%\Common\Common.Guids.ahk
 #Include %A_ScriptDir%\Common\LoremIpsum.ahk
+#Include %A_ScriptDir%\KeyBindings\Applications.ahk
 
 ; The FileName parameter may optionally be preceded by *i and a single space,
-;   which causes the program to ignore any failure to load the included file. 
-; For example: #Include *i SpecialOptions.ahk. 
+;   which causes the program to ignore any failure to load the included file.
+; For example: #Include *i SpecialOptions.ahk.
 ; This option should be used only when the included file's contents are not essential to the main script's operation.
 #Include *i C:\_Merck\Merck.ahk
 
 
-CAPSLOCK::Escape
 
 ; -----------------------
 ; FUNCTIONS
 ; -----------------------
-
-RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
-    OutputDebug, %WinTitle% %Target%
-    If WinExist( WinTitle )
-        WinActivate, %WinTitle%
-    else
-        Run, %Target%
-}
-
-
-Explorer_GetWindow(hwnd = ""){
-    hwnd := hwnd ? hwnd : WinExist("A")
-    WinGetClass class, ahk_id %hwnd%
-	if (class="CabinetWClass" or class="ExploreWClass" or class="Progman") {
-        ;  for window in ComObjCreate("Shell.Application").Windows {
-        ;      if (window.hwnd==hwnd) {
-        ;          return window
-        ;      }
-        ;  }
-    }
-}
 
 GetDirFromWindowTitle(){
     ID := WinExist("A")
@@ -372,7 +245,7 @@ Return
 ;     Send {F6 Down}
 ;     Sleep 10
 ;     Send {F6 Up}{Shift Up}
-;     return 
+;     return
 ; }
 ; #IfWinActive
 
@@ -389,6 +262,6 @@ Return
 ;     Send {Enter}
 ;     sleep 10
 ;     Clipboard:=oldClipboard
-;     return 
+;     return
 ; }
 ; #IfWinActive

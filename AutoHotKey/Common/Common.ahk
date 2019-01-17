@@ -1,3 +1,25 @@
+
+RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
+    OutputDebug, %WinTitle% %Target%
+    If WinExist( WinTitle )
+        WinActivate, %WinTitle%
+    else
+        Run, %Target%
+}
+
+Explorer_GetWindow(hwnd = ""){
+    hwnd := hwnd ? hwnd : WinExist("A")
+    WinGetClass class, ahk_id %hwnd%
+	if (class="CabinetWClass" or class="ExploreWClass" or class="Progman") {
+        ;  for window in ComObjCreate("Shell.Application").Windows {
+        ;      if (window.hwnd==hwnd) {
+        ;          return window
+        ;      }
+        ;  }
+    }
+}
+
+
 RunWaitOne(command) {
     ; WshShell object: http://msdn.microsoft.com/en-us/library/aew9yb99
     shell := ComObjCreate("WScript.Shell")
@@ -25,7 +47,7 @@ RunWaitMany(commands) {
 IfWinActive, .ahk
 {
     SplashTextOn,,,Updated script,
-    Sleep, 200
+    Sleep, 1000
     SplashTextOff
     Reload
     ; Reload "C:\mysettings\AutohotKey\Autohotkey.ahk"
