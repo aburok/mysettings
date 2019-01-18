@@ -62,7 +62,7 @@ return
    WinActivate, ^.*(xmind).*$
 return
 
-#+b::
-#+z::
-    WinActivate, ahk_exe mintty.exe
-return
+; #+b::
+; #+z::
+;     WinActivate, ahk_exe mintty.exe
+; return

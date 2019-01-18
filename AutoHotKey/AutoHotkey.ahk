@@ -143,6 +143,7 @@ return
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
 #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
+#Include %A_ScriptDir%\KeyBindings\Yank.ahk
 
 ; The FileName parameter may optionally be preceded by *i and a single space,
 ;   which causes the program to ignore any failure to load the included file.

@@ -20,6 +20,7 @@ bind generic R none
 
 bind generic g  none
 bind generic gg move-first-line
+bind generic gp view-grep
 bind main	gh	:toggle commit-title-graph # Toggle revision graph visualization
 bind main	gr	:toggle commit-title-refs  # Toggle reference display (tags/branches)
 bind main    G  none
@@ -96,9 +97,10 @@ bind refs pl        ?git pull %(remote) %(branch)
 bind refs ph        ?git push %(remote) %(branch) 
 bind refs pd        ?git pull %(remote) develop-redesign 
 
-bind refs MN        ?git merge %(branch) --no-commit --no-ff
-bind refs MM        ?git merge %(branch)
-bind refs Md        ?git merge develop-redesign
+bind refs MM        ?git merge %(branch) --no-commit --no-ff
+bind refs Mf        ?git merge %(branch) --no-commit --no-ff
+bind refs Md        ?git merge develop-redesign --no-commit --no-ff
+bind refs Mo        ?git merge %(remote)/develop-redesign 
 bind refs Mr        >TortoiseGitProc.exe /command:resolve
 
 bind refs <F2>      @git branch -m %(branch) "%(prompt Enter new name for the branch: )"
@@ -176,6 +178,7 @@ bind status aA >git add -A
 bind status au >git add -u
 bind status ar >git reset
 
+bind status M none
 bind status Ma ?git merge --abort
 bind status Mc ?git merge --continue
 bind status Md ?git merge develop-redesign

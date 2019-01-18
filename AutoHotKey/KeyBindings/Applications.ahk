@@ -43,21 +43,21 @@ GetCommands(){
     Commands := []
 
     AddCommand( "a", "#+a",  "ahk_exe Teams.exe", "MS Teams" )
-    AddCommand( "b", "", "ahk_exe chrome.exe", "Chrome" )
-    AddCommand( "c", "", "ahk_exe ConEmu64.exe", "Console / Powershell " )
+    AddCommand( "b", "#+b", "ahk_exe chrome.exe", "Chrome" )
+    AddCommand( "c", "#+c", "ahk_exe ConEmu64.exe", "Console / Powershell " )
     AddCommand( "d", "", "DevTools -", "Dev Tools" )
-    AddCommand( "e", "", "ahk_exe ONENOTE.EXE", "One Note" )
-    AddCommand( "f", "", "ahk_exe TOTALCMD64.EXE", "Total Commander" )
-    AddCommand( "g", "", "ahk_exe mintty.exe", "Git \ Tig" )
+    AddCommand( "e", "#+e", "ahk_exe ONENOTE.EXE", "One Note" )
+    AddCommand( "f", "#+f", "ahk_exe TOTALCMD64.EXE", "Total Commander" )
+    AddCommand( "g", "#+g", "ahk_exe mintty.exe", "Git \ Tig" )
     AddCommand( "h", "", "Google Hangouts", "Hangouts" )
     AddCommand( "k", "", "Google Hangouts", "Hangouts" )
     AddCommand( "l", "", "ahk_exe lync.exe", "Skype" )
     AddCommand( "m", "", "ahk_exe Code.exe", "mySettings / VS Code" )
-    AddCommand( "n", "", "ahk_exe notepad++.exe", "Notepad ++" )
-    AddCommand( "o", "", "ahk_exe OUTLOOK.exe", "MS Outlook" )
+    AddCommand( "n", "#+n", "ahk_exe notepad++.exe", "Notepad ++" )
+    AddCommand( "o", "#+o", "ahk_exe OUTLOOK.exe", "MS Outlook" )
     AddCommand( "r", "", "ahk_exe Fiddler.exe" ,  "Fiddler")
-    AddCommand( "v", "", "ahk_exe devenv.exe", "MS Visual Studio" )
-    AddCommand( "w", "", "ahk_exe gvim.exe", "VIM / GVIM" )
+    AddCommand( "v", "#+v", "ahk_exe devenv.exe", "MS Visual Studio" )
+    AddCommand( "w", "#+w", "ahk_exe gvim.exe", "VIM / GVIM" )
 
     for index, element in Commands
     {
