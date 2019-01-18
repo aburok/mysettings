@@ -16,12 +16,16 @@
 CAPSLOCK::Escape
 
 ; Match window names by part of the title
-SetTitleMatchMode RegEx
+SetTitleMatchMode, RegEx
+SetTitleMatchMode, Slow
 
 ; Set Lock keys permanently
 SetNumlockState, AlwaysOn
 SetCapsLockState, AlwaysOff
 SetScrollLockState, AlwaysOff
+
+DetectHiddenText, On
+DetectHiddenWindows, On
 return
 
 DropBoxDir := "C:\Dropbox"
@@ -46,70 +50,11 @@ Sleep 1000
 return
 
 
-#PgUp::Send {Volume_Up 1}
-#PgDn::Send {Volume_Down 1}
-#End::Send {Volume_Mute}
-
 #+h::Send #+{Left}
 #+l::Send #+{Right}
 #+j::Send #{Left}
 #+k::Send #{Right}
 #+u::Send #{Up}
-
-#!v::
-#+v::
-    WinActivate, ^.*( - Microsoft Visual Studio).*$
-return
-
-#+m::
-    WinActivate, ^.*(mysettings).*(Visual Studio Code)$
-return
-
-#+f::
-    WinActivate, ^(.*)(ffs_gui).*$
-return
-
-
-#+t::
-    WinActivate, ahk_exe TOTALCMD64.EXE
-return
-
-
-#+o::
-    WinActivate, ahk_exe OUTLOOK.EXE
-return
-
-
-#+e::
-    WinActivate, ahk_exe ONENOTE.EXE
-return
-
-#!c::
-#+c::
-	WinActivate, ^.*(Google Chrome)$
-return
-
-#!i::
-#+i::
-	WinActivate, ^(Todoist).*$
-return
-
-; Visua Studio Code
-; #!d::
-; #+d::
-; 	WinActivate, ^.*(Visual Studio Code)$
-; return
-
-#!n::
-#+n::
-	WinActivate, ^.*(Notepad\+\+).*$
-return
-
-; Powershell / Command line tool
-#+r::
-	; WinActivate, ^PS::.*$
-    WinActivate, ahk_exe ConEmu64.exe
-return
 
 
 +!c::
@@ -184,21 +129,9 @@ return
 
 return
 
-#+a::
-    WinActivate, ^.*(Microsoft Teams).*$
-return
+#Include <Hotkeys>
 
-#+x::
-   WinActivate, ^.*(xmind).*$
-return
-
-#+b::
-#+z::
-    WinActivate, ahk_exe mintty.exe
-return
-
-
-
+#Include %A_ScriptDir%\Windows\Sound.ahk
 #Include %A_ScriptDir%\Common\Common.ahk
 #Include %A_ScriptDir%\Common\Common.Text.ahk
 #Include %A_ScriptDir%\Common\Common.Web.ahk
@@ -207,7 +140,9 @@ return
 #Include %A_ScriptDir%\ParseUrl.ahk
 #Include %A_ScriptDir%\Common\Common.Guids.ahk
 #Include %A_ScriptDir%\Common\LoremIpsum.ahk
+
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
+#Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 
 ; The FileName parameter may optionally be preceded by *i and a single space,
 ;   which causes the program to ignore any failure to load the included file.

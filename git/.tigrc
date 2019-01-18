@@ -110,6 +110,7 @@ bind refs cl        ?git checkout %(branch)
 bind refs cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
 bind refs cd        >git checkout develop-redesign
+bind refs ce        >git checkout %(remote)/develop-redesign
 
 # bind refs D         !git difftool --no-prompt %(commit) develop-redesign  # -y - no prompt
 bind refs D     none
@@ -186,6 +187,11 @@ bind status D >TortoiseGitProc.exe /command:diff /path:"%(file)"
 bind status E >gvim.exe "%(file)"
 bind status gH >TortoiseGitProc.exe /command:log /path:"%(file)"
 
+######## IGNORED ###########
+# Ignore changes in file without adding it to .gitignore
+bind status gI ?@sh -c "git update-index --assume-unchanged '%(file)'"
+# List all files ignored using the --assume-unchanged
+bind status gL ?!sh -c "git ls-files -v | grep '^[[:lower:]]'"
 
 ##########################
 ###  DIFF ###
