@@ -9,8 +9,8 @@
 " Build {{{
     nnoremap <leader>B :vsc Build.BuildSolution<CR>
 
-    nmap <leader>s :vsc Debug.Start<CR>
-    nmap <leader>S :vsc Debug.StopDebugging<CR>
+    nnoremap <leader>s :vsc Debug.Start<CR>
+    nnoremap <leader>S :vsc Debug.StopDebugging<CR>
 
 " }}}
 
@@ -38,7 +38,7 @@ nnoremap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 
 " Search Selected Text {{{
 	vnoremap // y/<C-R>"<CR>
-"    nmap gs :vsc 
+"    nmap gs :vsc
 " }}}
 
 " Navigation {{{
@@ -53,9 +53,8 @@ nnoremap <Leader>ts :vsc ReSharper.ReSharper_UnitTestRunCurrentSession<CR>
 	vnoremap <Space> :vsc Resharper.Resharper_GotoType<CR>
 
 nnoremap % :vsc Resharper_GoToBrace<CR>
-" nnoremap <C-P> :vsc Resharper.ReSharper_GotoFile<CR>
 
-    
+
     " Visual Studio doesn't work well with switching to next document window
     " It does nothing
     " nnoremap <Tab> :vsc Window.NextDocumentWindowNav<CR>
@@ -75,7 +74,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
     nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
     nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
     nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
-	
+
 	nmap <Leader>fl :vsc Favorites.Addalltofavorites<CR>
 	nmap <Leader>fd :vsc Favorites.Addtofavorites<CR>
 
@@ -91,7 +90,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 	nnoremap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
 
 	" Go to Next/prev method"
-    " In favor of go to member    
+    " In favor of go to member
 	nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
     nnoremap <M-j> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
 
@@ -107,6 +106,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 
     " Go to file / member
     nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
+    nnoremap <C-P> :vsc ReSharper.ReSharper_GotoFile<CR>
     nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
     nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
     nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
@@ -172,7 +172,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
     vmap <leader>if :vsc ReSharper.ReSharper_IntroduceField<CR>
     vmap <leader>ip :vsc ReSharper.ReSharper_IntroParameter<CR>
     vmap <leader>iv :vsc ReSharper.ReSharper_IntroVariable<CR>
-	
+
 	nmap <leader>if vaW:vsc ReSharper.ReSharper_IntroduceField<CR>
 	nmap <leader>iv vaW:vsc ReSharper.ReSharper_IntroVariable<CR>
 	nmap <leader>ip vaW:vsc ReSharper.ReSharper_IntroParameter<CR>
@@ -199,7 +199,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 	nmap gwo :vsc View.Output<CR>
 	nmap gwp :vsc View.PackageManagerConsole<CR>
 	nmap gws :vsc View.SolutionExplorer<CR>
-    
+
     nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
 
 " }}}
@@ -234,7 +234,8 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
     noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
     noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 
-    noremap <C-S-Space> :vsc Edit.ParameterInfo<CR>
+    " noremap <C-S-Space> :vsc Edit.ParameterInfo<CR>
+    nnoremap <S-Space> :vsc Resharper.Resharper_ParameterInfoShow<CR>
 " }}}
 
 " MVC {{{
@@ -252,5 +253,5 @@ nmap <leader>q :vsc Window.CloseDocumentWindow<CR>
 
 nmap gc :vsc View.ViewCode<CR>
 
-" ARDUINO 
+" ARDUINO
 nmap <Leader>mb :vsc VisualMicro.SketchCompileUpload<CR>

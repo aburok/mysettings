@@ -82,7 +82,7 @@ bind main Df        !sh -c "git log --name-only --pretty=oneline --full-index %(
 bind main Ds        !sh -c "git log --name-only --pretty=oneline --full-index %(commit)..HEAD | grep -vE '^[0-9a-f]{40} ' | sort | uniq | grep 'sitecore'"
 
 
-# Slugify text 
+# Slugify text
 # sed -e 's/[^[:alnum:]]/-/g' | tr -s '-' | tr A-Z a-z
 
 ##########################
@@ -94,13 +94,18 @@ bind refs B         @git checkout -b "%(prompt Enter new branch name: )"
 
 bind refs p         none
 bind refs pl        ?git pull %(remote) %(branch)
-bind refs ph        ?git push %(remote) %(branch) 
-bind refs pd        ?git pull %(remote) develop-redesign 
+bind refs pd        ?git pull %(remote) develop-redesign
 
+### PUSH ###
+bind refs U        ?git push %(remote) %(branch)
+
+### MERGE
 bind refs MM        ?git merge %(branch) --no-commit --no-ff
 bind refs Mf        ?git merge %(branch) --no-commit --no-ff
 bind refs Md        ?git merge develop-redesign --no-commit --no-ff
-bind refs Mo        ?git merge %(remote)/develop-redesign 
+bind refs MD        ?git merge develop-redesign
+bind refs MO        ?git merge %(remote)/%(branch)
+bind refs Mo        ?git merge %(remote)/%(branch) --no-commit --no-ff
 bind refs Mr        >TortoiseGitProc.exe /command:resolve
 
 bind refs <F2>      @git branch -m %(branch) "%(prompt Enter new name for the branch: )"
@@ -116,14 +121,15 @@ bind refs ce        >git checkout %(remote)/develop-redesign
 
 # bind refs D         !git difftool --no-prompt %(commit) develop-redesign  # -y - no prompt
 bind refs D     none
-bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)  
-bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)  
+bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)
+bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)
+bind refs Do         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(remote)/develop-redesign ":(exclude)*.item"
 ##########################################
 # Compare / Show changes / Diff  branches
 ##########################################
-# selected branch with HEAD branch
+# Compare / Diff selected branch with HEAD branch
 bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:"HEAD" /revision2:"%(branch)"
-# selected branch with develop-redesign branch
+# Compare / Diff selected branch with develop-redesign branch
 bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"develop-redesign" /revision2:"%(branch)"
 
 # Delete refs / branch from origin
@@ -136,6 +142,8 @@ bind refs Ril       !git rebase -i %(branch)
 bind refs Rir       !git rebase -i "%(remote)/%(branch)"
 bind refs Rml       !git rebase --preserve-merges %(branch)
 bind refs Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
+
+bind refs r     refresh
 
 bind refs F         >git fetch --all
 
@@ -159,14 +167,16 @@ bind status gr :!git checkout %(file)
 bind status ga ?git checkout *
 bind status S none
 bind status s refresh
-bind status Sa  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )" 
+bind status Sa  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )"
 bind status Ss  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )"
 bind status Sf  @git stash push -m "%(prompt Enter stash name: )" "%(file)"
+
 bind status p  none
-bind status pp ?git push origin %(branch)
-bind status pf ?git push -f origin
-bind status pu ?git push --set-upstream origin %(repo:head)
-bind status ph        ?git push %(remote) %(branch) 
+bind status UU ?git push %(remote) %(branch)
+bind status Uf ?git push -f origin
+bind status Un ?git push --set-upstream %(remote) %(repo:head)
+bind status Uh        ?git push %(remote) %(branch)
+
 bind status pl        ?git pull %(remote) %(branch)
 bind status B  @git checkout -b "%(prompt Enter new branch name: )"
 bind status I  :!git add -i %(file)
@@ -203,7 +213,7 @@ bind status gL ?!sh -c "git ls-files -v | grep '^[[:lower:]]'"
 # bind diff    E !"C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\devenv.exe" -edit %(file)
 bind diff H >echo %(file) %(directory) %(repo:git-dir)
 bind diff E >TortoiseGitProc.exe /command:diff /path:"%(file)"
-# bind refs 
+# bind refs
 
 color "error:" red default
 

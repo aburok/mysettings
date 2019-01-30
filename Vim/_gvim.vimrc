@@ -1,5 +1,5 @@
 
-au GUIEnter * simalt ~x
+autocmd GUIEnter * simalt ~x
 
 " Lunch NERDTree when new tab is opened
 " autocmd TabEnter * NERDTree
@@ -86,7 +86,7 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+  autocmd!
 
   "" For all text files set 'textwidth' to 78 characters.
   "autocmd FileType text setlocal textwidth=78
@@ -149,7 +149,7 @@ nnoremap <leader>it "=strftime("%c")<CR>p
 " inoremap <leader>it <C-R>=strftime("%c")<CR>
 
 
-:au BufAdd,BufNewFile * nested tab sball
+autocmd BufAdd,BufNewFile * nested tab sball
 
 
 
