@@ -70,7 +70,10 @@ let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packa
 "
 " "autocmd vimenter * if !argc() | NERDTree | endif
 " map :NERDTreeToggle | :silent NERDTreeMirror
-" "autocmd BufWinEnter * NERDTreeMirror
+autocmd BufWinEnter * NERDTreeMirror
+" Lunch NERDTree when new tab is opened
+" autocmd TabEnter * NERDTree
+
 
 
 " NERDCommenter {
