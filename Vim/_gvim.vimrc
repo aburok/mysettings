@@ -2,7 +2,7 @@
 au GUIEnter * simalt ~x
 
 " Lunch NERDTree when new tab is opened
-" autocmd TabEnter * NERDTree
+autocmd TabEnter * NERDTree
 
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
@@ -168,7 +168,7 @@ imap <C-Space> <Plug>snipMateNextOrTrigger
 " http://stackoverflow.com/questions/2468939/how-to-let-tab-display-only-file-name-rather-than-the-full-path-in-vim
 
 set guitablabel=\[%N\]         " number of current tab"
-set guitablabel+=\ %.30t       " trim to last 20 characters of file name"
+set guitablabel+=\ %t          " trim to last 20 characters of file name"
 set guitablabel+=\ %M          " change indicator - *"
 
 

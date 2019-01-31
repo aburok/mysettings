@@ -59,7 +59,7 @@ let g:notes_suffix = '.note'
 " close NERDTree if it's only window left
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
-map <C-g> :NERDTreeToggle<CR>
+noremap <C-g> :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowBookmarks=1

@@ -57,7 +57,7 @@ GetCommands(){
     AddCommand( "o", "#+o", "ahk_exe OUTLOOK.exe", "MS Outlook" )
     AddCommand( "r", "", "ahk_exe Fiddler.exe" ,  "Fiddler")
     AddCommand( "v", "#+v", "ahk_exe devenv.exe", "MS Visual Studio" )
-    AddCommand( "w", "#+w", "ahk_exe gvim.exe", "VIM / GVIM" )
+    AddCommand( "w", "#+m", "ahk_exe gvim.exe", "VIM / GVIM" )
 
     for index, element in Commands
     {
