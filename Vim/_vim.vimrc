@@ -7,7 +7,11 @@ augroup END
 	imap jj <esc>
 " }}}
 
-nnoremap <Space> /
+nnoremap <Space><Space> "9yiW/<C-R>9<CR>
+nnoremap <Space>( "9yi(/<C-R>9<CR>
+nnoremap <Space>" "9yi"/<C-R>9<CR>
+nnoremap <Space>' "9yi'/<C-R>9<CR>
+vnoremap <Space> "9y/<C-R>9<CR>
 
 map Q <nop>
 nnoremap Q @q
@@ -71,10 +75,13 @@ nnoremap zj :join<CR>
 " backspace in Visual mode deletes selection
 vnoremap <BS> X
 
-" Tabs binding 
+" Tabs binding
 " CTRL-Tab is Next window
 noremap <C-Tab> :tabnext<CR>
+nnoremap <Tab> gt
 noremap <C-S-Tab> :tabprevious<CR>
+nnoremap <S-Tab> gT
+
 noremap <C-N> :tabnew<CR>
 " go to last used tab
 " store last used tab number in global variable "
@@ -82,10 +89,7 @@ let g:lasttab = 1
 " go to tab with number stored in lasttab"
 nmap gl :exe "tabn ".g:lasttab<CR>
 " on event TabLeave assing tab page number to lasttab"
-au TabLeave * let g:lasttab=tabpagenr()
-
-nnoremap <Tab> gt
-nnoremap <S-Tab> gT
+autocmd TabLeave * let g:lasttab=tabpagenr()
 
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 " MOVE BETWEEN SPLITS
@@ -115,9 +119,14 @@ cnoremap <S-Insert>		<C-R>+
 """"""""""""""""""""""""""""""""""""""""
 "  Yank File Stuff
 """"""""""""""""""""""""""""""""""""""""
-nnoremap <leader>yn :let @+ = expand("%")<CR>
+" Directory relative path to the PWD (e.g. Vim\_vim.vimrc)
+nnoremap <leader>yr :let @+ = expand("%")<CR>
+" Directory absolute path (e.g. C:\mysettings\Vim)
 nnoremap <leader>yp :let @+ = expand("%:p:h")<CR>
+" File absolute path (e.g. C:\mysettings\Vim\_vim.vimrc)
 nnoremap <leader>yf :let @+ = expand("%:p")<CR>
+" File absolute path (e.g. _vim.vimrc)
+nnoremap <leader>yn :let @+ = expand("%:t")<CR>
 
 
 " CTRL-A is Select all
@@ -168,6 +177,8 @@ nnoremap <leader>fc /<C-R>+<CR>zz
 nnoremap <leader>f' yi'/<C-R>"<CR>
 nnoremap <leader>f" yi"/<C-R>"<CR>
 
+vnoremap * "sy/<C-R>s<CR>
+
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
 
@@ -187,7 +198,8 @@ nnoremap <leader>sc :set nohlsearch<CR>
     \:set hlsearch<CR>
 
 " Pasting & replacing from 0 yank register
-nnoremap <Leader>p "0p
+nnoremap <Leader>pp "0p
+nnoremap <Leader>pc "+p
 nnoremap <Leader>r viW"0p
 vnoremap rr "_dhP
 vnoremap ra "ddh"ap
@@ -222,7 +234,7 @@ vnoremap <leader>c' <C-V>^I' <ESC>
 
 let g:syntastic_shell = "/usr/bin/bash"
 
-" REFRESH / RELOAD FILE 
+" REFRESH / RELOAD FILE
 noremap <F5> :e!<CR>G
 noremap <C-R> :e!<CR>G
 nnoremap <leader><leader> :e!<CR>G
@@ -239,3 +251,7 @@ noremap <S-F5> <Esc>:w<CR>:!%:p<CR>
 
 " Open files"
 nnoremap <leader>or :browse :oldfiles!<CR>
+
+" Text decorations "
+onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
+

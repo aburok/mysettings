@@ -67,6 +67,14 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
 "let g:NERDTreeNodeDelimiter = "\u00a0"
+"
+" "autocmd vimenter * if !argc() | NERDTree | endif
+" map :NERDTreeToggle | :silent NERDTreeMirror
+autocmd BufWinEnter * NERDTreeMirror
+" Lunch NERDTree when new tab is opened
+" autocmd TabEnter * NERDTree
+
+
 
 " NERDCommenter {
 " Add spaces after comment delimiters by default
@@ -172,3 +180,4 @@ elseif has('unix')
     set wildignore+=*/Merck.Manuals.DevSitecore/Website/sitecore_files/*
 endif
 let g:ctrlp_cmd='CtrlP :pwd'
+let g:ctrlp_show_hidden = 1

@@ -1,8 +1,5 @@
 
-au GUIEnter * simalt ~x
-
-" Lunch NERDTree when new tab is opened
-autocmd TabEnter * NERDTree
+autocmd GUIEnter * simalt ~x
 
 " https://github.com/scrooloose/syntastic
 " :SyntasticInfo  -  see available syntax checkers
@@ -86,7 +83,7 @@ if has("autocmd")
 
   " Put these in an autocmd group, so that we can delete them easily.
   augroup vimrcEx
-  au!
+  autocmd!
 
   "" For all text files set 'textwidth' to 78 characters.
   "autocmd FileType text setlocal textwidth=78
@@ -136,9 +133,6 @@ iab imho In My Humble Opinion
 iab lol Lought Out Loud
 
 
-
-
-
 " Marks line with TODO as DONE
 nnoremap <leader>td V:s/TODO/DONE/I<CR>
 nnoremap <leader>tt A - TODO<Esc>
@@ -149,10 +143,8 @@ nnoremap <leader>it "=strftime("%c")<CR>p
 " inoremap <leader>it <C-R>=strftime("%c")<CR>
 
 
-:au BufAdd,BufNewFile * nested tab sball
-
-
-
+" Forcing Vim to open any file in new tab cause NERDTree to behave weird
+" "autocmd BufAdd,BufNewFile * nested tab sball
 
 " GIT mapping
 nnoremap <Leader>gd :!git diff %<CR><Space>

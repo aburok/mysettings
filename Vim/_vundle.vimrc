@@ -100,3 +100,5 @@ Bundle 'https://github.com/stevearc/vim-arduino'
 Bundle 'https://github.com/vim-scripts/Arduino-syntax-file'
 
 Bundle 'https://github.com/hnamikaw/vim-autohotkey'
+
+Bundle 'https://github.com/gcmt/taboo.vim'
