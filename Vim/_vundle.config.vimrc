@@ -59,7 +59,9 @@ let g:notes_suffix = '.note'
 " close NERDTree if it's only window left
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
-map <C-g> :NERDTreeToggle<CR>
+noremap <C-g> :NERDTreeToggle<CR>
+nnoremap <leader>vv :NERDTreeToggle<CR>
+nnoremap <silent> <leader>vf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
 let NERDTreeShowLineNumbers=1
 let NERDTreeShowBookmarks=1
@@ -73,6 +75,11 @@ let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packa
 autocmd BufWinEnter * NERDTreeMirror
 " Lunch NERDTree when new tab is opened
 " autocmd TabEnter * NERDTree
+"
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" Automatically close a tab if the only remaining window is NerdTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 

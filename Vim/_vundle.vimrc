@@ -14,6 +14,7 @@ call vundle#rc()
 "
 " NerdTree is replace by native gvim explorer
 Bundle 'https://github.com/scrooloose/nerdtree'
+Bundle 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 
 Bundle 'https://github.com/kshenoy/vim-signature'
 Bundle 'https://github.com/PProvost/vim-ps1'
