@@ -102,6 +102,7 @@ bind refs U        ?git push %(remote) %(branch)
 ### MERGE
 bind refs MM        ?git merge %(branch) --no-commit --no-ff
 bind refs Mf        ?git merge %(branch) --no-commit --no-ff
+bind refs Ms        ?git merge %(branch) --no-commit --no-ff --squash
 bind refs Md        ?git merge develop-redesign --no-commit --no-ff
 bind refs MD        ?git merge develop-redesign
 bind refs MO        ?git merge %(remote)/%(branch)
@@ -136,6 +137,7 @@ bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"develo
 bind refs XL         ?git push %(remote) --delete %(branch)
 bind refs XP         ?git push %(remote) --delete %(branch)
 
+# Squash commits on branch
 bind refs Rl        !git rebase -i %(branch)
 bind refs Rr        !git rebase -i "%(remote)/%(branch)"
 bind refs Ril       !git rebase -i %(branch)

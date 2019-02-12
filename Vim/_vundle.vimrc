@@ -24,6 +24,8 @@ Bundle 'https://github.com/bling/vim-airline'
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 "Bundle 'tpope/vim-fugitive'
+Bundle 'https://github.com/tpope/vim-fugitive'
+
 Bundle 'https://github.com/easymotion/vim-easymotion.git'
 Bundle 'https://github.com/vim-scripts/camelcasemotion'
 Bundle 'https://github.com/pangloss/vim-javascript'
@@ -39,7 +41,6 @@ Bundle 'vim-scripts/sessionman.vim'
 Bundle 'https://github.com/scrooloose/nerdcommenter'
 
 Bundle 'spf13/vim-autoclose'
-"Bundle 'tpope/vim-fugitive'
 Bundle 'https://github.com/tpope/vim-sensible'
 
 " Bundle 'Valloric/YouCompleteMe'

@@ -4,14 +4,8 @@ augroup filetype_vim
 augroup END
 
 " Vim ESCAPE Combinations{{{
-	imap jj <esc>
+	" imap jj <esc>
 " }}}
-
-nnoremap <Space><Space> "9yiW/<C-R>9<CR>
-nnoremap <Space>( "9yi(/<C-R>9<CR>
-nnoremap <Space>" "9yi"/<C-R>9<CR>
-nnoremap <Space>' "9yi'/<C-R>9<CR>
-vnoremap <Space> "9y/<C-R>9<CR>
 
 map Q <nop>
 nnoremap Q @q
@@ -27,7 +21,9 @@ set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-set number " Show line numbers
+" set number " Show line numbers
+" https://jeffkreeftmeijer.com/vim-number/
+set number relativenumber
 set ruler " Show position in file
 set history=100
 
@@ -174,8 +170,18 @@ nnoremap <leader>f" yi"/<C-R>"<CR>
 " FIND / SEARCH TEXT FROM CLIPBOARD
 nnoremap <leader>fc /<C-R>+<CR>zz
 
-nnoremap <leader>f' yi'/<C-R>"<CR>
-nnoremap <leader>f" yi"/<C-R>"<CR>
+nnoremap <leader>*' yi'/<C-R>"<CR>
+nnoremap <leader>*" yi"/<C-R>"<CR>
+nnoremap <leader>*0 yi(/<C-R>"<CR>
+
+nnoremap <Space><Space> "9yiW/<C-R>9<CR>
+nnoremap <Space>( "9yi(/<C-R>9<CR>
+nnoremap <Space>" "9yi"/<C-R>9<CR>
+nnoremap <Space>' "9yi'/<C-R>9<CR>
+nnoremap <Space>< "9yi</<C-R>9<CR>
+nnoremap <Space>c /<C-R>+<CR>zz
+vnoremap <Space> "9y/<C-R>9<CR>
+
 
 vnoremap * "sy/<C-R>s<CR>
 
