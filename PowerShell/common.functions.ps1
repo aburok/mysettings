@@ -43,3 +43,38 @@ Function Show-EnvVariables([string] $text){
     $variables = Get-ChildItem $Env | grep $text
     Write-Host $variables
 }
+
+Function Copy-ToFtp([string] $url, [string] $file, [string] $path, [string] $filter){
+#we specify the directory where all files that we want to upload
+
+#ftp server
+    $user = "user"
+    $pass = "Pass"
+
+    $webclient = New-Object System.Net.WebClient
+
+    # $webclient.Credentials = New-Object System.Net.NetworkCredential($user,$pass)
+
+#list every sql server trace file
+    foreach($item in (dir $path $filter)){
+        "Uploading $item..."
+        $uri = New-Object System.Uri($url + $item.Name)
+        $webclient.UploadFile($uri, $item.FullName)
+     }
+# # create the FtpWebRequest and configure it
+# $ftp = [System.Net.FtpWebRequest]::Create($url)
+# $ftp = [System.Net.FtpWebRequest]$ftp
+# $ftp.Method = [System.Net.WebRequestMethods+Ftp]::UploadFile
+# $ftp.Credentials = new-object System.Net.NetworkCredential("anonymous","anonymous@localhost")
+# $ftp.UseBinary = $true
+# $ftp.UsePassive = $true
+# # read in the file to upload as a byte array
+# $content = [System.IO.File]::ReadAllBytes($file)
+# $ftp.ContentLength = $content.Length
+# # get the request stream, and write the bytes into it
+# $rs = $ftp.GetRequestStream()
+# $rs.Write($content, 0, $content.Length)
+# # be sure to clean up after ourselves
+# $rs.Close()
+# $rs.Dispose()
+}
