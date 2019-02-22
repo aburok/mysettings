@@ -84,7 +84,6 @@ Bundle 'https://github.com/scrooloose/syntastic'
 
 syntax on
 filetype on
-filetype plugin indent on     " required
 " To ignore plugin indent changes, instead use:
 "filetype plugin on
 "
@@ -104,3 +103,7 @@ Bundle 'https://github.com/vim-scripts/Arduino-syntax-file'
 Bundle 'https://github.com/hnamikaw/vim-autohotkey'
 
 Bundle 'https://github.com/gcmt/taboo.vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
