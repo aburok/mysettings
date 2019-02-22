@@ -188,3 +188,8 @@ elseif has('unix')
 endif
 let g:ctrlp_cmd='CtrlP :pwd'
 let g:ctrlp_show_hidden = 1
+
+" https://github.com/gcmt/taboo.vim
+" %f: the name of the first buffer open in the tab
+" %m: the modified flag
+let g:taboo_tab_format = " %f%m (%N)"

@@ -1,4 +1,8 @@
 
+" set number " Show line numbers
+" https://jeffkreeftmeijer.com/vim-number/
+set nonumber
+
 " Ctrl + Alt + I - ReSharper generate file beside
 " Ctrl + Alt + S - Resharper surrand with template
 
@@ -159,6 +163,7 @@ vmap <Leader>ed :vsc ReSharper.ReSharper_DuplicateText<CR>
 nmap <leader>ef :vsc Edit.FormatDocument<CR>
 
 nmap <leader>cp :vsc File.CopyFullPath<CR>
+nnoremap <leader>yp :vsc File.CopyFullPath<CR>
 " }}}
 
 " Refactorings {{{

@@ -55,6 +55,7 @@ bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
 bind main MN        ?git merge %(branch) --no-commit --no-ff
 bind main Pc        ?git cherry-pick -n %(commit)
+bind main PC        ?git cherry-pick %(commit)
 
 # Check which refs (branches) contains given commit
 bind main L         :!git for-each-ref --contains %(commit)
@@ -187,6 +188,7 @@ bind status yb !@sh -c "echo -n %(repo:head) | clip"
 bind status Rc >git rebase --continue
 bind status a. >git add .
 bind status aA >git add -A
+bind status aa >git add -A
 bind status au >git add -u
 bind status ar >git reset
 
