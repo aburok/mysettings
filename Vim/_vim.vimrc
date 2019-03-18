@@ -174,13 +174,13 @@ nnoremap <leader>*' yi'/<C-R>"<CR>
 nnoremap <leader>*" yi"/<C-R>"<CR>
 nnoremap <leader>*0 yi(/<C-R>"<CR>
 
-nnoremap <Space><Space> "9yiW/<C-R>9<CR>
-nnoremap <Space>( "9yi(/<C-R>9<CR>
-nnoremap <Space>" "9yi"/<C-R>9<CR>
-nnoremap <Space>' "9yi'/<C-R>9<CR>
-nnoremap <Space>< "9yi</<C-R>9<CR>
+nnoremap <Space><Space> "tyiW:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+nnoremap <Space>( "tyi(:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+nnoremap <Space>" "tyi":let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+nnoremap <Space>' "tyi':let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+nnoremap <Space>< "tyi<:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
 nnoremap <Space>c /<C-R>+<CR>zz
-vnoremap <Space> "9y/<C-R>9<CR>
+vnoremap <Space> "ty:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
 
 
 vnoremap * "sy/<C-R>s<CR>

@@ -141,6 +141,8 @@ return
 #Include %A_ScriptDir%\Common\Common.Guids.ahk
 #Include %A_ScriptDir%\Common\LoremIpsum.ahk
 
+#Include %A_ScriptDir%\FastNavigation\Navigation.ahk
+
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
 #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 #Include %A_ScriptDir%\KeyBindings\Yank.ahk

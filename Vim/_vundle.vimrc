@@ -2,7 +2,7 @@ set nocompatible              " be iMproved, required
 filetype off                  " required
 
 " set the runtime path to include Vundle and initialize
-set rtp+=C:/mysettings/vim/vundle
+set rtp+=C:/mysettings/vim/vundle/
 set rtp+=C:/mysettings/vim
 call vundle#rc()
 " alternatively, pass a path where Vundle should install bundles
@@ -11,6 +11,10 @@ call vundle#rc()
 
 " let Vundle manage xVundle, required
 " Bundle 'gmarik/Vundle.vim'
+"
+
+Bundle 'https://github.com/VundleVim/Vundle.vim'
+
 "
 " NerdTree is replace by native gvim explorer
 Bundle 'https://github.com/scrooloose/nerdtree'
@@ -104,6 +108,7 @@ Bundle 'https://github.com/hnamikaw/vim-autohotkey'
 
 Bundle 'https://github.com/gcmt/taboo.vim'
 
+Bundle 'https://github.com/elzr/vim-json'
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required

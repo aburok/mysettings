@@ -53,3 +53,8 @@ IfWinActive, .ahk
     ; Reload "C:\mysettings\AutohotKey\Autohotkey.ahk"
 }
 return
+
+Log(formatText, params){
+    text:= Format(formatText . "`n", params*)
+    FileAppend, %text% , C:\autohotkey.log
+}

@@ -1,119 +1,31 @@
-+!?::
-    ShowHelp()
-    Sleep 2000
-    SplashTextOff
-return
+;+!?::
+;    ShowHelp()
+;    Sleep 2000
+;    SplashTextOff
+;return
 
-#+d::
 !+d::
 
-    ShowHelp()
-    ; INPUT, command, T10 L1, {Esc}{LShift}
-    INPUT, command, T10 L1 I
+    subItem := new AppMenuLevel( "a", "#+a",  "ahk_exe Teams.exe", "MS Teams" )
+    rootLevel := new AppMenuLevel("d", "+!d")
+        .AddItem(subItem)
+        .AddItem(new AppMenuLevel( "b", "#+b", "ahk_exe chrome.exe", "Chrome" ))
+        .AddItem(new AppMenuLevel( "c", "#+c", "ahk_exe ConEmu64.exe", "Console / Powershell " ))
+        .AddItem(new AppMenuLevel( "d", "", "DevTools -", "Dev Tools" ))
+        .AddItem(new AppMenuLevel( "e", "#+e", "ahk_exe ONENOTE.EXE", "One Note" ))
+        .AddItem(new AppMenuLevel( "f", "#+f", "ahk_exe TOTALCMD64.EXE", "Total Commander" ))
+        .AddItem(new AppMenuLevel( "g", "#+g", "ahk_exe mintty.exe", "Git \ Tig" ))
+        .AddItem(new AppMenuLevel( "h", "", "Google Hangouts", "Hangouts" ))
+        .AddItem(new AppMenuLevel( "k", "", "Google Hangouts", "Hangouts" ))
+        .AddItem(new AppMenuLevel( "l", "", "ahk_exe lync.exe", "Skype" ))
+        .AddItem(new AppMenuLevel( "m", "", "ahk_exe Code.exe", "mySettings / VS Code" ))
+        .AddItem(new AppMenuLevel( "n", "#+n", "ahk_exe notepad++.exe", "Notepad ++" ))
+        .AddItem(new AppMenuLevel( "o", "#+o", "ahk_exe OUTLOOK.exe", "MS Outlook" ))
+        .AddItem(new AppMenuLevel( "r", "", "ahk_exe Fiddler.exe" ,  "Fiddler"))
+        .AddItem(new AppMenuLevel( "v", "#+v", "ahk_exe devenv.exe", "MS Visual Studio" ))
+        .AddItem(new AppMenuLevel( "w", "#+m", "ahk_exe gvim.exe", "VIM / GVIM" ))
 
-    LaunchCommand(command)
-
-    SplashTextOff
+    rootLevel.ShowHelp()
 
 return
 
-ShowHelp(){
-    helpText:= GetHelpText()
-    SplashTextOn, 500, 600 , Updated script, %helpText%
-}
-
-SetGlobals(){
-    global
-
-}
-
-AddCommand(letter, winLetter, titlePattern, description){
-    global
-
-    Commands.Push({ Letter: letter, WinLetter: winLetter, Pattern: titlePattern, Desc: description })
-}
-
-GetCommands(){
-    global
-
-    if(Commands && Commands.Length() > 0){
-        return Commands
-    }
-
-    Commands := []
-
-    AddCommand( "a", "#+a",  "ahk_exe Teams.exe", "MS Teams" )
-    AddCommand( "b", "#+b", "ahk_exe chrome.exe", "Chrome" )
-    AddCommand( "c", "#+c", "ahk_exe ConEmu64.exe", "Console / Powershell " )
-    AddCommand( "d", "", "DevTools -", "Dev Tools" )
-    AddCommand( "e", "#+e", "ahk_exe ONENOTE.EXE", "One Note" )
-    AddCommand( "f", "#+f", "ahk_exe TOTALCMD64.EXE", "Total Commander" )
-    AddCommand( "g", "#+g", "ahk_exe mintty.exe", "Git \ Tig" )
-    AddCommand( "h", "", "Google Hangouts", "Hangouts" )
-    AddCommand( "k", "", "Google Hangouts", "Hangouts" )
-    AddCommand( "l", "", "ahk_exe lync.exe", "Skype" )
-    AddCommand( "m", "", "ahk_exe Code.exe", "mySettings / VS Code" )
-    AddCommand( "n", "#+n", "ahk_exe notepad++.exe", "Notepad ++" )
-    AddCommand( "o", "#+o", "ahk_exe OUTLOOK.exe", "MS Outlook" )
-    AddCommand( "r", "", "ahk_exe Fiddler.exe" ,  "Fiddler")
-    AddCommand( "v", "#+v", "ahk_exe devenv.exe", "MS Visual Studio" )
-    AddCommand( "w", "#+m", "ahk_exe gvim.exe", "VIM / GVIM" )
-
-    for index, element in Commands
-    {
-        winLetter:= element.WinLetter
-        name := element.Pattern
-        hasWinLetter := winLetter && StrLen(winLetter) > 0
-        ; MsgBox, Try Bind %winLetter% %name% %hasWinLetter%
-        if(hasWinLetter){
-            ; Custom hotkey register function
-            Hotkey(winLetter, "ActivateWindow", name)
-        }
-    }
-    return Commands
-}
-
-ActivateWindow(name){
-    exists := WinExist("" . name)
-    ;MsgBox, %name% %exists%
-    if exists
-        WinActivate
-    return
-}
-
-GetHelpText(){
-    global
-    if(helpText && helpText.Length() > 0){
-        return helpText
-    }
-
-    helpText := "Shortcuts`n"
-    helpText .= "Applications - > SHIFT + ALT + D`n`n"
-
-    for index, command in GetCommands()
-    {
-        helpText.= Format(" {1} -> {2}`n" , command.Letter, command.Desc)
-    }
-
-    return helpText
-}
-
-
-SetTitleMatchMode, 2
-SetTitleMatchMode, Slow
-
-LaunchCommand(command){
-    global
-
-    for index, cmd in Commands
-    {
-        letter:= cmd.Letter
-        ; MsgBox, %letter%  %command%
-        if(letter == command)   {
-            ActivateWindow(cmd.Pattern)
-        }
-    }
-}
-
-
-GetCommands()
