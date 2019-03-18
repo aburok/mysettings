@@ -141,6 +141,9 @@ return
 #Include %A_ScriptDir%\Common\Common.Guids.ahk
 #Include %A_ScriptDir%\Common\LoremIpsum.ahk
 
+#Include %A_ScriptDir%\FastNavigation\NavigationItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\AppNavigationItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Sitecore.ahk
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk

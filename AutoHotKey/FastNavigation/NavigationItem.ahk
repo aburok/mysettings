@@ -1,19 +1,10 @@
 class NavigationItem {
     SubItems := []
 
-    __New(letter, winShortcut, titlePattern, description){
+    __New(letter,  description){
         this.Letter := letter
-        this.WinShortcut := winShortcut
-        this.TitlePattern := titlePattern
         this.Description := description
         this.Level := 0
-
-        hasWinLetter := winShortcut  && StrLen(winShortcut) > 0
-        ; MsgBox, Try Bind %winLetter% %name% %hasWinLetter%
-        if(hasWinLetter){
-            ; Custom hotkey register function
-            Hotkey(this.WinShortcut, "ActivateWindow", this.TitlePattern)
-        }
     }
 
     AddItem(newItem){
@@ -33,8 +24,10 @@ class NavigationItem {
 
     ShowHelp(){
         this.helpText := this.GetHelpText()
-        SplashTextOn, 500, 600 , Updated script, % this.helpText
+        this.ShowSplash(this.helpText)
 
+        ; T2 to limit timout to 2 seconds
+        ; L3 to limit the input to 3 keys.
         INPUT, command, T10 L1 I
 
         SplashTextOff
@@ -42,22 +35,28 @@ class NavigationItem {
         this.LaunchCommand(command)
     }
 
+    ShowSplash(helpText){
+        SplashTextOn, 500, 600, Updated script, % helpText
+    }
+
     helpText := ""
 
     GetHelpText(){
-        if(this.helpText && this.helpText.Length() > 0){
-            return this.helpText
-        }
-
         this.helpText := "Shortcuts`n"
-        this.helpText .= Format(" {1} - > {2} `n`n", this.Description, this.Letter)
+        this.helpText .= this.FormatItemText() . "`n"
 
         For index, command in this.SubItems
         {
-            this.helpText.= Format(" {1} -> {2}`n" , command.Letter, command.Description)
+            text := command.FormatItemText()
+            this.helpText .= text . "`n"
         }
 
         return this.helpText
+    }
+
+    FormatItemText()
+    {
+        return Format(" {1} -> {2}" , this.Letter, this.Description)
     }
 
     LaunchCommand(command){
