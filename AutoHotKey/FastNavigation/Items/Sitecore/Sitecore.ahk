@@ -23,7 +23,7 @@ class SiteCoreUrlMenuItem extends WebsiteMenuItem {
 class SiteCoreUrlItemMenuItem extends WebsiteMenuItem {
     __New(name, description, itemId)
     {
-        base.__New(name, description, "{1}/sitecore/shell/Applications/Content`%20Editor.aspx?id={2}&sc_content=master")
+        base.__New(name, description, "{1}/sitecore/shell/Applications/Content`%20Editor.aspx?fo={2}&sc_content=master")
         this.ItemId := itemId
     }
 
@@ -33,6 +33,28 @@ class SiteCoreUrlItemMenuItem extends WebsiteMenuItem {
     }
 }
 
+class SolrUrlItemMenuItem extends WebsiteMenuItem {
+    __New(name, description)
+    {
+        base.__New(name, description, "{1}/solr/sitecore_master_index/select?q=*%3A*&fq=_uniqueid%3A*{2}*&wt=json&indent=true")
+    }
+
+    GetFormatArgs(){
+        InputBox, ItemId, Insert Id of Item
+        MsgBox, '%ItemId%'
+        if(ItemId =  ""){
+            this.Cancel := 1
+            return []
+        }
+        formatArgs := [this.Root.Environment.Solr, ItemId]
+        Return formatArgs
+    }
+}
+
+
+class CopyIdFromTitleNavigationItem extends NavigationItem{
+
+}
 
 
 ; https://doc.sitecore.com/developers/90/sitecore-experience-management/en/the-restful-api-for-the-itemservice.html

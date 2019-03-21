@@ -37,6 +37,9 @@ class WebsiteMenuItem extends NavigationItem {
 
     ActivateItem()
     {
+        if(this.Cancel > 0){
+            return
+        }
         formatArgs := this.GetFormatArgs()
         formatArgsJson := Json.Dump(formatArgs)
         Log("[WebsiteMenuItem] Format Args : {1}", [formatArgsJson])
@@ -88,6 +91,7 @@ class CmdNavigationItem extends NavigationItem
         Run, %cmdPath% /c %cmd%
     }
 }
+
 
 class ClipboardNavigationItem extends NavigationItem
 {

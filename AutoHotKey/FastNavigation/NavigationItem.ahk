@@ -73,6 +73,9 @@ class NavigationItem {
 
     ActivateItem()
     {
+        if(this.Cancel){
+            return
+        }
         this.ShowHelp()
     }
 
