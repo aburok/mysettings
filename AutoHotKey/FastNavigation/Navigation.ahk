@@ -1,10 +1,10 @@
-
 class FastNavigation extends NavigationItem{
-    __New(rootItem){
+    __New(shortcut, description){
+        base.__New(shortcut, description)
+
         this.rootItem := rootItem
-        rootItem.Root := this
+        this.Root := this
 
         this.Context := {}
     }
-
 }

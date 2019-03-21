@@ -25,16 +25,24 @@ class AppMenuLevel extends NavigationItem {
 
 
 class WebsiteMenuItem extends NavigationItem {
-    __New(letter, description, url)
+    __New(letter, description, urlFormat)
     {
         base.__New(letter, description)
-        this.Url := url
+        this.UrlFormat := urlFormat
+    }
+
+    GetFormatArgs(){
+        return [""]
     }
 
     ActivateItem()
     {
-        Log("[Merck] Address change Item {1} -> {2}", [this.Letter, this.Description])
-        chrome(this.Url)
+        formatArgs := this.GetFormatArgs()
+        formatArgsJson := Json.Dump(formatArgs)
+        Log("[WebsiteMenuItem] Format Args : {1}", [formatArgsJson])
+        this.Url := Format(this.UrlFormat, formatArgs*)
+        Log("[WebsiteMenuItem] [{1}] -> '{2}',  UrlFormat: {3}, Url: {4}, Args:{5}", [this.Letter, this.Description, this.UrlFormat, this.Url, formatArgsJson])
+        firefox(this.Url)
     }
 }
 

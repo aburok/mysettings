@@ -131,6 +131,9 @@ return
 
 #Include <Hotkeys>
 
+#Include <Jxon>
+#Include <JSON>
+
 #Include %A_ScriptDir%\Windows\Sound.ahk
 #Include %A_ScriptDir%\Common\Common.ahk
 #Include %A_ScriptDir%\Common\Common.Text.ahk
@@ -143,6 +146,7 @@ return
 
 #Include %A_ScriptDir%\FastNavigation\NavigationItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\AppNavigationItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\AddressChangeItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Sitecore.ahk
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
