@@ -1,3 +1,13 @@
+; TestAny(collection, predicate){
+;     any := 0
+;     For index, element in collection
+;     {
+;         if(%predicate%(element)){
+;             any := any + 1
+;         }
+;     }
+;     return any > 0
+; }
 
 RunOrActivate(WinTitle, Target) {	; RoA means "RunOrActivate"
     OutputDebug, %WinTitle% %Target%

@@ -146,8 +146,14 @@ return
 
 #Include %A_ScriptDir%\FastNavigation\NavigationItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\AppNavigationItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\Common.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Web.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Files.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Shell.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Iis.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\AddressChangeItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Sitecore.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Solr.ahk
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk

@@ -9,9 +9,15 @@ SlugifyText(Text){
 
 StringJoin(array, delimiter = ";")
 {
-  Loop
-    If Not %array%%A_Index% Or Not t .= (t ? delimiter : "") %array%%A_Index%
-      Return t
+    text := ""
+    for index, element in array
+    {
+        if(index < array.Length()){
+            text .= element . delimiter
+        }
+    }
+    text .= element
+    return text
 }
 
 InsertCharacterAtStart(vText, character){

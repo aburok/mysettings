@@ -56,7 +56,7 @@ class NavigationItem {
 
     FormatItemText()
     {
-        return Format(" {1} -> {2}" , this.Letter, this.Description)
+        return Format(" {1} -> {2}" , this.Description, this.Letter)
     }
 
     LaunchCommand(command){
@@ -71,11 +71,7 @@ class NavigationItem {
         }
     }
 
-    ActivateItem()
-    {
-        if(this.Cancel){
-            return
-        }
+    ActivateItem() {
         this.ShowHelp()
     }
 
@@ -85,7 +81,7 @@ class NavigationItem {
     AssignRoot(){
         for index, items in this.SubItems
         {
-            Log("[Item] This {1}, subItem: {2}, Root : {3}, Parent {4}, new Root: {5}", [this.Description, newItem.Description, this.Root.Description, newItem.Parent.Description, newItem.Root.Description])
+            ; Log("[Item] This {1}, subItem: {2}, Root : {3}, Parent {4}, new Root: {5}", [this.Description, newItem.Description, this.Root.Description, newItem.Parent.Description, newItem.Root.Description])
             items.Root := this.Root
         }
     }

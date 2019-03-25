@@ -164,11 +164,6 @@ set guitablabel+=\ %t          " trim to last 20 characters of file name"
 set guitablabel+=\ %M          " change indicator - *"
 
 
-" Sessions in vim "
-nmap <F8> :mksession! ~\\vim_session <CR>    " Quick write session
-nmap <F9> :source ~\\vim_session <CR>        " Quick load session
-
-
 if isdirectory("C:/mysettings")
   cd C:/mysettings
 endif

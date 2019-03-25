@@ -1,10 +1,15 @@
-class AddressNavigationItem extends NavigationItem{
+class AddressNavigationItem extends NavigationItem {
 
-
-    __New(name, description, environment)
-    {
-        base.__New(name, "", "", description)
-        this.DestinationEnv := environment
+    GetDomainRegexp(){
+        regexFormat := this.Root.Config.Browser.Patterns.Url
+        jsonConfig := Json.Dump(this.Root.Config)
+        jsondomains := Json.Dump(this.Root.Config.OtherDomains)
+        ; Log("[AddressChangeItem] config : {1} {2} ", [jsonConfig, jsondomains])
+        domains := this.Root.Config.OtherDomains
+        joinedDomains := StringJoin(domains, "|")
+        regex := Format(regexFormat, joinedDomains)
+        Log("[AddressChangeItem] Other domains : {1}, joined: {2}, regex: {3}", [domains[1], joinedDomains, regex])
+        return regex
     }
 
     ; https://autohotkey.com/docs/commands/RegExMatch.htm
@@ -17,17 +22,46 @@ class AddressNavigationItem extends NavigationItem{
     ;     urlPattern := this.DestinationEnv
     ;     domains:= this.Root.
     ; }
+    FormatUrl(CurrentUrl){
+        EnvRegex := "OiU)" . this.GetDomainRegexp()
+        Log("[AddressChangeItem] Regex pattern : '{1}', url : '{2}' ", [EnvRegex, CurrentUrl])
+        Position := RegExMatch(CurrentUrl, EnvRegex, MatchUrl)
+        format := this.Root.Environment.UrlPattern.Format
+
+        if(Position > 0){
+            UrlDomain:= MatchUrl.Value[1]
+            UrlPath:= MatchUrl.Value[2]
+            TargetUrl:= Format(format, UrlDomain, UrlPath)
+            Log("[AddressChangeItem] Target Url : '{1}' ", [TargetUrl])
+            return TargetUrl
+        }
+        Log("[AddressChangeItem] Unable to find mathing address ", [TargetUrl])
+        return ""
+    }
+
+    browsers := ["ahk_exe  chrome.exe", "ahk_exe firefox.exe"]
+
+    IsInBrowser()
+    {
+        isBRowser := 0
+        For index, winClass in this.browsers
+        {
+            isActive := WinActive(winClass)
+            if(isActive){
+                isBRowser := isBRowser + 1
+            }
+        }
+        return isBRowser > 0
+    }
 
     ActivateItem(){
         Log("[Merck] Address change Item {1} -> {2}", [this.Letter, this.Description])
 
-        if(not WinActive("ahk_exe  chrome.exe")) {
+        if(not this.IsInBrowser()) {
             Log("[Merck] Address change : Run this command in browser window", [])
             MsgBox, Run this command in browser window
             return
         }
-
-        DestinationEnv := "local"
 
         LocalUrl := CopyBrowserUrl()
         if(StrLen(LocalUrl) > 200){
@@ -36,24 +70,10 @@ class AddressNavigationItem extends NavigationItem{
             return
         }
 
-        for index, element in UrlFormats
-        {
-            if(element.Name == this.Name){
-                EnvRegex := "OiU)^" . element.Regex . "(.+)$"
-                Position:= RegExMatch(LocalUrl, EnvRegex, MatchUrl)
-                if(Position > 0){
-
-                    EnvFormat := element.Format
-                    UrlDomain:= MatchUrl.Value[1]
-                    UrlPath:= MatchUrl.Value[2]
-
-                    TargetUrl:= Format(EnvFormat, UrlDomain, UrlPath)
-                    ; MsgBox, %EnvFormat% %UrlDomain% %UrlPath% %TargetUrl%
-
-                    Chrome(TargetUrl)
-                    return
-                }
-            }
+        this.UrlFormat := this.FormatUrl(LocalUrl)
+        if(this.UrlFormat <> ""){
+            firefox(this.UrlFormat)
+            return
         }
 
         Log("[Merck] Address change : Could not match url to any Environment ", [])

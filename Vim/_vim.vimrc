@@ -185,6 +185,11 @@ vnoremap <Space> "ty:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
 
 vnoremap * "sy/<C-R>s<CR>
 
+" Sessions in vim "
+nmap <F8> :mksession! ~\\vim_session <CR>    " Quick write session
+nmap <F9> :source ~\\vim_session <CR>        " Quick load session
+
+
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
 
@@ -195,7 +200,7 @@ nnoremap <leader>kd gg=G<C-O><C-O>zz
 " auto formatting
 nnoremap <leader>kd gg=G<C-O><C-O>
 
-nnoremap <leader>sc :set nohlsearch<CR>
+nnoremap <leader>mc :set nohlsearch<CR>
     \Yp
     \V:s/[^\"\n]/=/g<CR>
     \kP
@@ -211,9 +216,10 @@ vnoremap rr "_dhP
 vnoremap ra "ddh"ap
 vnoremap a "ay
 
-nnoremap <Leader>s" bi"<esc>ea"<Esc>b
-nnoremap <Leader>s( bi(<esc>ea)<Esc>b
-nnoremap <Leader>s{ bi{<esc>ea}<Esc>b
+" Surround with  ( IS REPLACED WITH VIM-SURROUND )"
+" nnoremap <Leader>s" bi"<esc>ea"<Esc>b
+" nnoremap <Leader>s( bi(<esc>ea)<Esc>b
+" nnoremap <Leader>s{ bi{<esc>ea}<Esc>b
 
 "
 " Those lines need to be commented when you try to do BundleUpdate
