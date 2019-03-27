@@ -1,15 +1,4 @@
-class SolrUrlMenu extends WebsiteMenuItem {
-    __New(letter, description, solrPath = "/#/sitecore_master_index/query"){
-        format := "{1}/solr" . solrPath
-        base.__New(letter, description, format)
-    }
-
-    GetFormatArgs(){
-        return [this.Root.Environment.Solr]
-    }
-}
-
-class SolrUrlItemMenuItem extends SitecoreItemMenu {
+class SolrUrlItemMenuItem extends SitecoreItemMenuItem {
     __New(name, description, filter = "", query = "*:*")
     {
         jqArgs := "#broq-filter=.response.docs[]|{name:._name,name2: ._displayname,id:._uniqueid,path:._fullpath} "
@@ -27,4 +16,3 @@ class SolrUrlItemMenuItem extends SitecoreItemMenu {
         return this.Root.Environment.Solr
     }
 }
-

@@ -1,66 +1,26 @@
-class EnvironmentNavigationItem extends NavigationItem {
-    __New(environment){
-        letter := environment.titlePrefix
-        StringLower, letter, letter
-        base.__New(letter, environment.name)
-        this.Environment := environment
-    }
+#Include %A_ScriptDir%\FastNavigation\Items\Common\SeparatorMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\CopyPropertyMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\Guid\GuidMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\Guid\GuidFormatMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\EnvironmentNavigationItem.ahk
 
-    BeforeActivation() {
-        this.Root.Environment := this.Environment
-        Log("Setting Edit Environment to : {1}, Root Name {2}", [this.Root.Environment.EditDomain, this.Root.Description])
-    }
-}
-
-
-class CopyIdFromTitleNavigationItem extends NavigationItem{
-    Match(haystack, pattern){
-        pattern := "Oi)" . pattern
-        Position := RegExMatch(haystack, pattern, MatchVar)
-        Log("Pattern : {1} Match: {2} ", [pattern, MatchVar.Value[1]])
-        if(Position > 0){
-            return Trim(MatchVar.Value[1])
-        }
-        return ""
-    }
-
-    ActivateItem(){
-        browser := this.Root.Config.Browser.Patterns
-        WinGetTitle WinTitle, A
-
-        Log("Pattern : {1} `n Title: {2} ", [Json.Dump(browser), WinTitle])
-
-        item := {}
-        item.Id := this.Match(WinTitle, browser.id)
-        item.TemplateId := this.Match(WinTitle, browser.TemplateId)
-        item.Path := this.Match(WinTitle, browser.path)
-        item.Url := this.Match(WinTitle, browser.itemUrl)
-        item.Lang := this.Match(WinTitle, browser.lang)
-        item.Name := this.Match(WinTitle, browser.name)
-        this.Root.Item := item
-
-        Log("ItemID : {1} Template: {2} Path: [{3}], Media [{4}] ", [item.Id, item.TemplateId, item.Path, item.MediaId])
-
-        base.ActivateItem()
-    }
-}
 
 GetGuidFormat(){
-    guidMenu := new NavigationItem("g", "Format guid from clipboard")
-        .AddItem(new GuidMenuItem("b", "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}", "{{}{1}-{2}-{3}-{4}-{5}{}}"))
-        .AddItem(new GuidMenuItem("d", "XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", "{1}-{2}-{3}-{4}-{5}"))
-        .AddItem(new GuidMenuItem("n", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  "{1}{2}{3}{4}{5}"))
-        .AddItem(new GuidMenuItem("x", "XXXXXXXXxXXXXxXXXXxXXXXxXXXXXXXXXXX", GuidFormatter.XFormat))
+    guidMenu := new GuidMenuItem("g", "Format guid from clipboard")
+        .AddItem(new GuidFormatMenuItem("b", GuidFormatter.BFormat))
+        .AddItem(new GuidFormatMenuItem("d", GuidFormatter.DFormat))
+        .AddItem(new GuidFormatMenuItem("n", GuidFormatter.NFormat))
+        .AddItem(new GuidFormatMenuItem("x", GuidFormatter.XFormat))
         return guidMenu
 }
 
 GetYankMenu(){
     yankMenu := new CopyIdFromTitleNavigationItem("y", "Parse Ids from title")
-        .AddItem(new CopyPropertyMenuItem("i", "Copy id from title", "Id"))
-        .AddItem(new CopyPropertyMenuItem("t", "Copy Template Id from title", "TemplateId"))
-        .AddItem(new CopyPropertyMenuItem("p", "Copy Path from title", "Path"))
-        .AddItem(new CopyPropertyMenuItem("l", "Copy Language from title", "Lang"))
-        .AddItem(new CopyPropertyMenuItem("n", "Copy Item Name", "Name"))
+        .AddItem(new CopyPropertyMenuItem("i", "ID - Copy id from title", "Id"))
+        .AddItem(new CopyPropertyMenuItem("t", "Template ID - Copy template id from title", "TemplateId"))
+        .AddItem(new CopyPropertyMenuItem("p", "Path - Copy path from title", "Path"))
+        .AddItem(new CopyPropertyMenuItem("l", "Language - Copy language from title", "Lang"))
+        .AddItem(new CopyPropertyMenuItem("n", "Name - Copy item name", "Name"))
         .AddItem(new CopyPropertyMenuItem("m", "Copy Media Id from title", "MediaId"))
 
     return yankMenu

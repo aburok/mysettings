@@ -35,7 +35,7 @@ class CopyFilePathNavigationItem extends NavigationItem
         SplitPath, Clipboard, Clipboard, dir
         this.ContaingFolder := dir
 
-        this.ShowHelp()
+        this.ShowCommandsAndLaunchSelected()
     }
 }
 

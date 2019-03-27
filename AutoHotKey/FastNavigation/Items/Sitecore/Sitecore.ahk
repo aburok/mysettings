@@ -1,94 +1,36 @@
-class SitecoreEditItem extends WebsiteMenuItem {
-    __New(letter, description, page){
-        format := "{1}/sitecore/admin/" . page
-        base.__New(letter, description, format)
-    }
-
-    GetDomain(){
-        return this.Root.Environment.EditDomain
-    }
-
-    GetFormatArgs(){
-        formatArgs := [this.GetDomain()]
-        Return formatArgs
-    }
-}
-
-
-class SitecoreItemMenu extends WebsiteMenuItem {
-    __New(letter, description, url, itemId = ""){
-        base.__New(letter, description, url)
-        this.ItemId := itemId
-    }
-
-    GetItemId(){
-        if(this.Root.Item.Id){
-            return this.Root.Item.Id
-        } else if(this.ItemId){
-            return this.ItemId
-        } else {
-            InputBox, ItemId, Insert Id of Item
-            if(ItemId <> ""){
-                return ItemId
-            }
-        }
-        return ""
-    }
-
-    GetDomain(){
-        return this.Root.Environment.EditDomain
-    }
-
-    GetFormatArgs(){
-        formatArgs := [this.GetDomain(), this.GetItemId()]
-        Return formatArgs
-    }
-}
-
-class DatabaseViewerItem extends SitecoreItemMenu {
-    __New(letter, description) {
-        format := "{1}/sitecore/admin/dbbrowser.aspx?db=master&lang=en&id={2}"
-        base.__New(letter, description, format)
-    }
-}
-
-
-class ContenEditorItemMenu extends SitecoreItemMenu {
-    __New(name, description, itemId = "") {
-        format :=  "{1}/sitecore/shell/Applications/Content`%20Editor.aspx?sc_bw=1&sc_lang=en"
-        if(itemId){
-            format .=  "&fo={2}&sc_content=master"
-        }
-        base.__New(name, description, format, itemId)
-    }
-}
-
-class SitecoreLogsMenuItem extends WebsiteMenuItem {
-    __New(letter, description, type){
-        format := Format("/sitecore/admin/Logs.aspx?file={1}", type)
-        format := "{1}" . format . ".{2}.txt&lastBytes=0"
-        base.__New(letter, description, format)
-        this.Type := type
-    }
-
-    GetFormatArgs(){
-        ; InputBox, DaysBack, Insert numbers of days back
-        ; https://www.autohotkey.com/docs/commands/FormatTime.htm
-        FormatTime, TimeString,, yyyyMMdd
-        return [this.Root.Environment.EditDomain, TimeString]
-    }
-}
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\CopyIdFromTitleNavigationItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\SitecoreAdminItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\SitecoreLogsMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\SitecoreItemMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\DatabaseViewerItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\ContenEditorItemMenu.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Solr\Solr.ahk
 
 SiteCoreAdminMenu(){
     admin := new NavigationItem("a", "Admin panel items")
-        .AddItem(new SitecoreEditItem("c", "Cache", "cache.aspx"))
-        .AddItem(new SitecoreEditItem("g", "Show configuration", "ShowConfig.aspx"))
-        .AddItem(new SitecoreEditItem("j", "Show jobs ", "jobs.aspx?refresh=2"))
-        .AddItem(new SitecoreEditItem("q", "Ling Scratch Pad", "LinqScratchPad.aspx"))
-        .AddItem(new SitecoreItemMenu("e", "Content Editor", "{1}/sitecore/shell/Applications/Content`%20Editor.aspx?sc_bw=1"))
-        .AddItem(new SitecoreItemMenu("d", "Publishing Dashboard", "{1}/sitecore/client/Applications/Publishing/Dashboard"))
+        .AddItem(new SitecoreAdminItem("c", "Cache", "cache.aspx"))
+        .AddItem(new SitecoreAdminItem("g", "Show configuration", "ShowConfig.aspx"))
+        .AddItem(new SitecoreAdminItem("j", "Show jobs ", "jobs.aspx?refresh=2"))
+        .AddItem(new SitecoreAdminItem("q", "Ling Scratch Pad", "LinqScratchPad.aspx"))
 
     return admin
+}
+
+SiteCoreShellMenu(){
+    admin := new NavigationItem("c", "Shell items")
+        .AddItem(new SitecoreAdminItem("c", "Cache", "cache.aspx"))
+        .AddItem(new SitecoreAdminItem("g", "Show configuration", "ShowConfig.aspx"))
+        .AddItem(new SitecoreAdminItem("j", "Show jobs ", "jobs.aspx?refresh=2"))
+        .AddItem(new SitecoreAdminItem("q", "Ling Scratch Pad", "LinqScratchPad.aspx"))
+
+    return admin
+}
+
+OpenItemIn(){
+    openIn := new CopyIdFromTitleNavigationItem("o", "Open Item in")
+        .AddItem(new DatabaseViewerItem("d", "Open Item in DbViewer "))
+        .AddItem(new ContenEditorItemMenu("c", "Content Editor"))
+    return openIn
 }
 
 SiteCoreLogsMenu(){
@@ -98,16 +40,6 @@ SiteCoreLogsMenu(){
         .AddItem(new SiteCoreLogsMenuItem("s", "Search Logs", "search.log"))
         .AddItem(new SiteCoreLogsMenuItem("p", "Publishing Logs", "publishing.log"))
     return logs
-}
-
-OpenItemIn(){
-    openIn := new CopyIdFromTitleNavigationItem("o", "Open Item in")
-        .AddItem(new SolrUrlItemMenuItem("s", "Open ItemId In Solr", "_uniqueid:*{2}*"))
-        ; .AddItem(new SolrUrlItemMenuItem("p", "Open Item that have this item in Path"))
-        .AddItem(new SolrUrlItemMenuItem("p", "Open Item based on Templated ID (of this item)", "_template:{2}&fq=_language:en"))
-        .AddItem(new DatabaseViewerItem("d", "Open Item in DbViewer "))
-        .AddItem(new ContenEditorItemMenu("c", "Content Editor"))
-    return openIn
 }
 
 ; https://doc.sitecore.com/developers/90/sitecore-experience-management/en/the-restful-api-for-the-itemservice.html

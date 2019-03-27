@@ -22,40 +22,46 @@ class NavigationItem {
         return this
     }
 
-    ShowHelp(){
-        this.helpText := this.GetHelpText()
-        this.ShowSplash(this.helpText)
+    ShowCommandsAndLaunchSelected(){
+        this.ShowHelp()
 
-        ; T2 to limit timout to 2 seconds
-        ; L3 to limit the input to 3 keys.
         INPUT, command, T10 L1 I
 
-        SplashTextOff
-        ;MsgBox, Command %command% was selected.
+        this.HideHelp()
         this.LaunchCommand(command)
     }
 
-    ShowSplash(helpText){
-        SplashTextOn, 500, 600, Updated script, % helpText
+    ShowHelp(){
+        title := this.GetTitle()
+        text := this.GetCommandsList()
+        this.ShowSplash(title, text)
     }
 
-    helpText := ""
+    HideHelp(){
+        SplashTextOff
+    }
 
-    GetHelpText(){
-        this.helpText := "Shortcuts`n"
-        this.helpText .= this.FormatItemText() . "`n"
+    ShowSplash(title, text){
+        SplashTextOn, 500, 600, %title% , %text%
+    }
 
-        For index, command in this.SubItems
+    GetCommandsList(){
+        helpText := "Available Commands: `n"
+
+        For index, subItem in this.SubItems
         {
-            text := command.FormatItemText()
-            this.helpText .= text . "`n"
+            text := subItem.FormatItemText()
+            helpText .= text . "`n"
         }
 
-        return this.helpText
+        return helpText
     }
 
-    FormatItemText()
-    {
+    GetTitle(){
+        return this.Description
+    }
+
+    FormatItemText(){
         return Format(" {1} -> {2}" , this.Description, this.Letter)
     }
 
@@ -72,7 +78,7 @@ class NavigationItem {
     }
 
     ActivateItem() {
-        this.ShowHelp()
+        this.ShowCommandsAndLaunchSelected()
     }
 
     BeforeActivation(){
