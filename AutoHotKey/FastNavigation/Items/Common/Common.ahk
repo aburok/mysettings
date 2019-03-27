@@ -45,58 +45,13 @@ class CopyIdFromTitleNavigationItem extends NavigationItem{
     }
 }
 
-class GuidMenuItem extends NavigationItem {
-    static guidRegex := "Oi)^[{(]?([0-9A-Fa-f]{8})[-]([0-9A-Fa-f]{4})[-]([0-9A-Fa-f]{4})[-]([0-9A-Fa-f]{4})[-]([0-9A-Fa-f]{12})[)}]?$"
-    __New(letter, description, guidFormat){
-        base.__New(letter, description)
-        this.GuidFormat := guidFormat
-    }
-    ActivateItem(){
-        GuidToFormat := Clipboard
-        position := RegExMatch(GuidToFormat, this.guidRegex, guidMatch)
-        if(position = 0){
-            InputBox, GuidToFormat, Insert Guid you like to format
-            if( GuidToFormat = ""){
-                return
-            }
-
-            position := RegExMatch(GuidToFormat, this.guidRegex, guidMatch)
-            if(position = 0){
-                MsgBox, Pasted text is not a guid : %GuidToFormat%
-                return
-            }
-        }
-
-        formatted := Format(this.GuidFormat, guidMatch.Value[1], guidMatch.Value[2], guidMatch.Value[3], guidMatch.Value[4], guidMatch.Value[5])
-        ;MsgBox, % this.GuidFormat . " " . formatted
-        Clipboard:= formatted
-        ;SendInput {Raw}%formatted%
-    }
-}
-
 GetGuidFormat(){
     guidMenu := new NavigationItem("g", "Format guid from clipboard")
-        .AddItem(new GuidMenuItem("f", "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}", "{{}{1}-{2}-{3}-{4}-{5}{}}"))
-        .AddItem(new GuidMenuItem("n", "XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", "{1}-{2}-{3}-{4}-{5}"))
-        .AddItem(new GuidMenuItem("s", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  "{1}{2}{3}{4}{5}"))
-        .AddItem(new GuidMenuItem("x", "XXXXXXXXxXXXXxXXXXxXXXXxXXXXXXXXXXX", "{1}x{2}x{3}x{4}x{5}"))
+        .AddItem(new GuidMenuItem("b", "{XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX}", "{{}{1}-{2}-{3}-{4}-{5}{}}"))
+        .AddItem(new GuidMenuItem("d", "XXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", "{1}-{2}-{3}-{4}-{5}"))
+        .AddItem(new GuidMenuItem("n", "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",  "{1}{2}{3}{4}{5}"))
+        .AddItem(new GuidMenuItem("x", "XXXXXXXXxXXXXxXXXXxXXXXxXXXXXXXXXXX", GuidFormatter.XFormat))
         return guidMenu
-}
-
-class CopyPropertyMenuItem extends NavigationItem {
-    __New(letter, description, property){
-        base.__New(letter, description)
-        this.PropertyName := property
-    }
-
-    ActivateItem(){
-        property := this.PropertyName
-        obj := this.Root.Item
-        value := obj[property]
-        Log("Copying property [{1}] from Parent [{2}], Parent:{3}", [property, value, obj.Description])
-        Clipboard := value
-        MsgBox, % Format("{1} : {2}", this.Description, value)
-    }
 }
 
 GetYankMenu(){
@@ -112,17 +67,4 @@ GetYankMenu(){
 }
 
 
-class SeparatorMenuItem extends NavigationItem {
-    __New(){
-        base.__New("%", "Separator")
-    }
-
-    FormatItemText(){
-        return " ========================= "
-    }
-
-    AddItem(){
-        return
-    }
-}
 

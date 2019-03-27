@@ -12,7 +12,7 @@ class SolrUrlMenu extends WebsiteMenuItem {
 class SolrUrlItemMenuItem extends SitecoreItemMenu {
     __New(name, description, filter = "", query = "*:*")
     {
-        jqArgs := "#broq-filter=.response.docs[]|{name:._name,id:._uniqueid,path:._fullpath} "
+        jqArgs := "#broq-filter=.response.docs[]|{name:._name,name2: ._displayname,id:._uniqueid,path:._fullpath} "
         format := Format("/solr/sitecore_master_index/select?q={1}&fq={2}&wt=json&indent=true{3}", query, filter, jqArgs)
         format := "{1}" . format
         base.__New(name, description, format)
