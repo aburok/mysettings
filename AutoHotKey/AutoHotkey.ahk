@@ -12,6 +12,68 @@
 ; WINDOWS KEY BINDINGS
 ; ---------------------
 
+#Persistent
+OnClipboardChange("ClipChanged")
+return
+
+SitecoreItems := []
+
+ClipChanged(Type) {
+    global
+
+    Log("Logging Clipboard item {1}", [Clipboard])
+
+    ReadConfiguration()
+
+    pattern := "Oi)" . config.Browser.Patterns.Id
+    FileRead, filetext, C:/MerckItems.txt
+    Position := RegExMatch(Clipboard, pattern)
+    if(Position > 0) {
+        SitecoreItems.Push(Clipboard)
+        Postion := InStr(fileText, Clipboard)
+        if(Postion = 0){
+            FileAppend, %Clipboard% `n, C:/MerckItems.txt
+            Log("Merck Item : {1}, {2}", [Clipboard, Json.Dump(SitecoreItems)])
+        }
+    }
+
+    Sleep 1000
+    SplashTextOff  ; Turn off the tip.
+}
+
++^m::
+    text := Format("{{}{1}-{2}-{3}-{4}-{5}{}}", 1, 2, 3, 4, 5)
+
+    ReadConfiguration()
+
+    text := "Shortcuts`n"
+    FileRead, Content, C:/MerckItems.txt
+    Log("{1}", [config.Browser.Patterns.Path])
+
+    ContentLines := StrSplit(Content, "`r`n")
+    Items := []
+    For index, item in ContentLines
+    {
+        RegExMatch(item, "Oi)" . config.Browser.Patterns.Name, name)
+        RegExMatch(item, "Oi)" . config.Browser.Patterns.Id, id)
+        RegExMatch(item, "Oi)" . config.Browser.Patterns.TemplateId, templateId)
+        RegExMatch(item, "Oi)" . config.Browser.Patterns.Path, itemPath)
+        Items.Push({Id: id.Value[1], Name: name.Value[1], TemplateId: templateId.Value[1], Path: itemPath.Value[1]})
+        text .= index . " -> " . name.Value[1] . " -> '" . itemPath.Value[1] . "' `n"
+    }
+    SplashTextOn, 1200, 600, MerckItems, % text
+    INPUT, command, T10 L2, {Esc}
+    position := RegExMatch(command, "^\d+\s*$")
+    Log("Past id of Item number : {1}, positioon {2}", [command, position])
+    if(position > 0){
+        command:= Trim(command)
+        Clipboard := Items[command].Id
+    }
+
+    SplashTextOff
+
+return
+
 
 CAPSLOCK::Escape
 
@@ -216,3 +278,4 @@ Return
 ;     return
 ; }
 ; #IfWinActive
+

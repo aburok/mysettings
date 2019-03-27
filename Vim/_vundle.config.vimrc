@@ -188,6 +188,7 @@ elseif has('unix')
 endif
 let g:ctrlp_cmd='CtrlP :pwd'
 let g:ctrlp_show_hidden = 1
+let g:ctrlp_working_path_mode = 'ra'
 
 " https://github.com/gcmt/taboo.vim
 " %f: the name of the first buffer open in the tab

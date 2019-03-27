@@ -81,10 +81,10 @@ class SitecoreLogsMenuItem extends WebsiteMenuItem {
 
 SiteCoreAdminMenu(){
     admin := new NavigationItem("a", "Admin panel items")
-        .AddItem(new SitecoreEditMenu("c", "Cache", "cache.aspx"))
-        .AddItem(new SitecoreEditMenu("g", "Show configuration", "ShowConfig.aspx"))
-        .AddItem(new SitecoreEditMenu("j", "Show jobs ", "jobs.aspx?refresh=2"))
-        .AddItem(new SitecoreEditMenu("q", "Ling Scratch Pad", "LinqScratchPad.aspx"))
+        .AddItem(new SitecoreEditItem("c", "Cache", "cache.aspx"))
+        .AddItem(new SitecoreEditItem("g", "Show configuration", "ShowConfig.aspx"))
+        .AddItem(new SitecoreEditItem("j", "Show jobs ", "jobs.aspx?refresh=2"))
+        .AddItem(new SitecoreEditItem("q", "Ling Scratch Pad", "LinqScratchPad.aspx"))
         .AddItem(new SitecoreItemMenu("e", "Content Editor", "{1}/sitecore/shell/Applications/Content`%20Editor.aspx?sc_bw=1"))
         .AddItem(new SitecoreItemMenu("d", "Publishing Dashboard", "{1}/sitecore/client/Applications/Publishing/Dashboard"))
 
@@ -104,7 +104,7 @@ OpenItemIn(){
     openIn := new CopyIdFromTitleNavigationItem("o", "Open Item in")
         .AddItem(new SolrUrlItemMenuItem("s", "Open ItemId In Solr", "_uniqueid:*{2}*"))
         ; .AddItem(new SolrUrlItemMenuItem("p", "Open Item that have this item in Path"))
-        .AddItem(new SolrUrlItemMenuItem("p", "Open Item based on Templated ID (of this item)", "_template:{2}"))
+        .AddItem(new SolrUrlItemMenuItem("p", "Open Item based on Templated ID (of this item)", "_template:{2}&fq=_language:en"))
         .AddItem(new DatabaseViewerItem("d", "Open Item in DbViewer "))
         .AddItem(new ContenEditorItemMenu("c", "Content Editor"))
     return openIn
