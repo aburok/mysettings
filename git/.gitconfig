@@ -1,8 +1,3 @@
-[user]
-    # name=dkoruba
-    # email=dawid.koruba@thecogworks.com
-    email=dawid.koruba@avanade.com
-    name=
 [core]
     editor=vim
     autocrlf=true
