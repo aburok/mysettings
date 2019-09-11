@@ -54,6 +54,6 @@ handleCopying2(){
     }
     else if ("#" = command
     || "b" = command){
-        Clipboard:=GetIssueNumber()
+        ;Clipboard:=GetIssueNumber()
     }
 }

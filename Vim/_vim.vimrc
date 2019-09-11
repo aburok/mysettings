@@ -79,6 +79,9 @@ noremap <C-S-Tab> :tabprevious<CR>
 nnoremap <S-Tab> gT
 
 noremap <C-N> :tabnew<CR>
+noremap <C-T> :tabnew<CR>
+noremap <C-S-W> :tabclose<CR>
+
 " go to last used tab
 " store last used tab number in global variable "
 let g:lasttab = 1
@@ -93,6 +96,8 @@ nnoremap <C-h> <C-W>h
 nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
+
+
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
@@ -192,6 +197,8 @@ nmap <F9> :source ~\\vim_session <CR>        " Quick load session
 
 "Find a WORD under cursor with vimgrep"
 " "nnoremap <S-Space> "fyaW:vimgrep /\<<C-R>f\>/ *
+" Find / Search for word currently selected
+vnoremap <C-F> "fy:!findstr /s /i /c:<C-R>f ./*.*<CR>
 
 " FORMAT document
 nnoremap <C-F> gg=G<C-O><C-O>zz

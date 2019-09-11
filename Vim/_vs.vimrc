@@ -74,6 +74,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 "Find usages
 nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>ff :vsc ReSharper.ReSharper_FindUsages<CR>
+nmap gs :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
@@ -164,6 +165,7 @@ nmap <leader>ef :vsc Edit.FormatDocument<CR>
 
 nmap <leader>cp :vsc File.CopyFullPath<CR>
 nnoremap <leader>yp :vsc File.CopyFullPath<CR>
+nnoremap <leader>yt :vsc ReSharper.ReSharper_CopyFqn<CR>
 " }}}
 
 " Refactorings {{{
@@ -211,16 +213,16 @@ nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
 
 " Window Managment {{{
 
-nnoremap <Leader>ws :vsc Window.Split<cr>
-nnoremap <Leader>wc :vsc Window.Split<cr>
-nnoremap <Leader>wC :vsc Window.CloseDocumentWindow<cr>
-nnoremap <Leader>wf :vsc Window.Float<cr>
-nnoremap <Leader>wF :vsc Window.MoveToMainDocumentGroup<cr>
-nnoremap <Leader>wj :vsc Window.NextSplitPane<cr>
-nnoremap <Leader>wk :vsc Window.PreviousSplitPane<cr>
+nnoremap <Leader>ws :vsc Window.Split<CR>
+nnoremap <Leader>wc :vsc Window.Split<CR>
+nnoremap <Leader>wC :vsc Window.CloseDocumentWindow<CR>
+nnoremap <Leader>wf :vsc Window.Float<CR>
+nnoremap <Leader>wF :vsc Window.MoveToMainDocumentGroup<CR>
+nnoremap <Leader>wj :vsc Window.NextSplitPane<CR>
+nnoremap <Leader>wk :vsc Window.PreviousSplitPane<CR>
 
-nnoremap <Leader>wN :vsc Window.MovetoPreviousTabGroup<cr>
-nnoremap <Leader>wn :vsc Window.MovetoNextTabGroup<cr>
+nnoremap <Leader>wN :vsc Window.MovetoPreviousTabGroup<CR>
+nnoremap <Leader>wn :vsc Window.MovetoNextTabGroup<CR>
 nnoremap <Leader>wh :vsc Window.NewHorizontalTabGroup<CR>
 nnoremap <Leader>wv :vsc Window.NewVerticalTabGroup<CR>
 

@@ -1,4 +1,4 @@
-class SitecoreItemMenuItem extends WebsiteMenuItem {
+class SitecoreItemMenuItem extends SitecoreEditPageMenuItem {
     __New(letter, description, url, itemId = ""){
         base.__New(letter, description, url)
         this.ItemId := itemId
@@ -18,12 +18,18 @@ class SitecoreItemMenuItem extends WebsiteMenuItem {
         return ""
     }
 
-    GetDomain(){
-        return this.Root.Environment.EditDomain
-    }
-
     GetFormatArgs(){
         formatArgs := [this.GetDomain(), this.GetItemId()]
         Return formatArgs
+    }
+}
+
+class SitecoreItemJson extends SitecoreItemMenuItem {
+
+    static itemQueryFormat := "/-/item/v1/?sc_database={1}&sc_itemversion=1&language=en-US&payload=Min&scope=c%7cs&page=0&pageSize=100&fields={2}&query={3}"
+
+    FormatApiUrl(query, database = "master", fields = ""){
+        apiUrl := Format(itemQueryFormat, database, fields, query)
+        return apiUrl
     }
 }

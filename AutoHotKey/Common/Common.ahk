@@ -1,3 +1,10 @@
+#Include %A_ScriptDir%\Common\Common.Text.ahk
+#Include %A_ScriptDir%\Common\Common.Web.ahk
+#Include %A_ScriptDir%\Common\Common.Files.ahk
+#Include %A_ScriptDir%\Common\Common.Guids.ahk
+#Include %A_ScriptDir%\Common\Guid\GuidFormatter.ahk
+#Include %A_ScriptDir%\Common\LoremIpsum.ahk
+
 ; TestAny(collection, predicate){
 ;     any := 0
 ;     For index, element in collection

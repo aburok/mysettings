@@ -13,7 +13,7 @@ class GuidFormatter {
         return position > 0
     }
 
-    Format(guidAsText, outputFormat){
+    Format(guidAsText, outputFormat =  "{1}-{2}-{3}-{4}-{5}"){
         position := RegExMatch(guidAsText, this.guidRegex, guidMatch)
 
         if(position = 0){

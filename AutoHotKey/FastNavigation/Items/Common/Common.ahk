@@ -1,4 +1,5 @@
 #Include %A_ScriptDir%\FastNavigation\Items\Common\SeparatorMenuItem.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\WindowTitleParser.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\CopyPropertyMenuItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\Guid\GuidMenuItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\Guid\GuidFormatMenuItem.ahk
@@ -14,17 +15,18 @@ GetGuidFormat(){
         return guidMenu
 }
 
-GetYankMenu(){
-    yankMenu := new CopyIdFromTitleNavigationItem("y", "Parse Ids from title")
-        .AddItem(new CopyPropertyMenuItem("i", "ID - Copy id from title", "Id"))
-        .AddItem(new CopyPropertyMenuItem("t", "Template ID - Copy template id from title", "TemplateId"))
-        .AddItem(new CopyPropertyMenuItem("p", "Path - Copy path from title", "Path"))
-        .AddItem(new CopyPropertyMenuItem("l", "Language - Copy language from title", "Lang"))
-        .AddItem(new CopyPropertyMenuItem("n", "Name - Copy item name", "Name"))
-        .AddItem(new CopyPropertyMenuItem("m", "Copy Media Id from title", "MediaId"))
 
-    return yankMenu
+class TranslateItem extends NavigationItem {
+    __New(letter){
+        this.UrlFormat := "https://translate.google.com/?rlz=1C1CHBF_enPL813PL813&um=1&ie=UTF-8&hl=pl&client=tw-ob#view=home&op=translate&sl=en&tl={1}&text={2}"
+        base.__New(letter, "Translate word from english to ...")
+    }
+
+    ActivateItem(){
+        InputBox, WordToTranslate, Insert Word to translate
+        InputBox, Language, Insert destination language
+
+        url := Format(this.UrlFormat, Language, WordToTranslate)
+        Chrome(url)
+    }
 }
-
-
-

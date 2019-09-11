@@ -16,64 +16,23 @@
 OnClipboardChange("ClipChanged")
 return
 
-SitecoreItems := []
-
 ClipChanged(Type) {
-    global
-
-    Log("Logging Clipboard item {1}", [Clipboard])
-
-    ReadConfiguration()
-
-    pattern := "Oi)" . config.Browser.Patterns.Id
-    FileRead, filetext, C:/MerckItems.txt
-    Position := RegExMatch(Clipboard, pattern)
-    if(Position > 0) {
-        SitecoreItems.Push(Clipboard)
-        Postion := InStr(fileText, Clipboard)
-        if(Postion = 0){
-            FileAppend, %Clipboard% `n, C:/MerckItems.txt
-            Log("Merck Item : {1}, {2}", [Clipboard, Json.Dump(SitecoreItems)])
-        }
-    }
-
-    Sleep 1000
-    SplashTextOff  ; Turn off the tip.
+    recentItems := new RecentItemsViewer()
+    recentItems.ParseClipboardItem()
 }
 
-+^m::
-    text := Format("{{}{1}-{2}-{3}-{4}-{5}{}}", 1, 2, 3, 4, 5)
+; +^m::
+;     configPathFile := USERPROFILE . "\sitecore.navigation.ini"
+;     MsgBox, %configPathFile%
+;     Log("Ctrl Shigt M pressed", [])
+;     recentItems := new RecentItemsViewer()
+;     recentItems.ShowDialog()
+; return
 
-    ReadConfiguration()
-
-    text := "Shortcuts`n"
-    FileRead, Content, C:/MerckItems.txt
-    Log("{1}", [config.Browser.Patterns.Path])
-
-    ContentLines := StrSplit(Content, "`r`n")
-    Items := []
-    For index, item in ContentLines
-    {
-        RegExMatch(item, "Oi)" . config.Browser.Patterns.Name, name)
-        RegExMatch(item, "Oi)" . config.Browser.Patterns.Id, id)
-        RegExMatch(item, "Oi)" . config.Browser.Patterns.TemplateId, templateId)
-        RegExMatch(item, "Oi)" . config.Browser.Patterns.Path, itemPath)
-        Items.Push({Id: id.Value[1], Name: name.Value[1], TemplateId: templateId.Value[1], Path: itemPath.Value[1]})
-        text .= index . " -> " . name.Value[1] . " -> '" . itemPath.Value[1] . "' `n"
-    }
-    SplashTextOn, 1200, 600, MerckItems, % text
-    INPUT, command, T10 L2, {Esc}
-    position := RegExMatch(command, "^\d+\s*$")
-    Log("Past id of Item number : {1}, positioon {2}", [command, position])
-    if(position > 0){
-        command:= Trim(command)
-        Clipboard := Items[command].Id
-    }
-
-    SplashTextOff
-
++^!s::
+    ; https://autohotkey.com/docs/commands/SoundPlay.htm
+    SoundPlay, C:\Users\dawid.koruba\Downloads\thisissparta.swf.mp3
 return
-
 
 CAPSLOCK::Escape
 
@@ -198,26 +157,16 @@ return
 
 #Include %A_ScriptDir%\Windows\Sound.ahk
 #Include %A_ScriptDir%\Common\Common.ahk
-#Include %A_ScriptDir%\Common\Common.Text.ahk
-#Include %A_ScriptDir%\Common\Common.Web.ahk
-#Include %A_ScriptDir%\Common\Common.Files.ahk
 #Include %A_ScriptDir%\slugify.ahk
 #Include %A_ScriptDir%\ParseUrl.ahk
-#Include %A_ScriptDir%\Common\Common.Guids.ahk
-#Include %A_ScriptDir%\Common\Guid\GuidFormatter.ahk
-#Include %A_ScriptDir%\Common\LoremIpsum.ahk
+
 
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
+#Include %A_ScriptDir%\Time\Time.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
 #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 #Include %A_ScriptDir%\KeyBindings\Yank.ahk
-
-; The FileName parameter may optionally be preceded by *i and a single space,
-;   which causes the program to ignore any failure to load the included file.
-; For example: #Include *i SpecialOptions.ahk.
-; This option should be used only when the included file's contents are not essential to the main script's operation.
-#Include *i C:\_Merck\Merck.ahk
 
 
 

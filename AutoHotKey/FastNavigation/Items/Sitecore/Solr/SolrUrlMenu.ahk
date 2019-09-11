@@ -7,4 +7,8 @@ class SolrUrlMenu extends WebsiteMenuItem {
     GetFormatArgs(){
         return [this.Root.Environment.Solr]
     }
+
+    SetFilter(filter){
+
+    }
 }

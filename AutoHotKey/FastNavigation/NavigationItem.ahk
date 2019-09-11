@@ -23,6 +23,7 @@ class NavigationItem {
     }
 
     ShowCommandsAndLaunchSelected(){
+        this.AssignRoot()
         this.ShowHelp()
 
         INPUT, command, T10 L1 I
@@ -42,7 +43,7 @@ class NavigationItem {
     }
 
     ShowSplash(title, text){
-        SplashTextOn, 500, 600, %title% , %text%
+        SplashTextOn, 1200, 600, %title% , %text%
     }
 
     GetCommandsList(){
@@ -78,6 +79,7 @@ class NavigationItem {
     }
 
     ActivateItem() {
+        this.AssignRoot()
         this.ShowCommandsAndLaunchSelected()
     }
 
@@ -91,4 +93,6 @@ class NavigationItem {
             items.Root := this.Root
         }
     }
+
+
 }
