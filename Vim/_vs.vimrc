@@ -74,7 +74,7 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 "Find usages
 nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>ff :vsc ReSharper.ReSharper_FindUsages<CR>
-nmap gs :vsc ReSharper.ReSharper_FindUsages<CR>
+nnoremap gs :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
 nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
@@ -207,7 +207,7 @@ nmap gwo :vsc View.Output<CR>
 nmap gwp :vsc View.PackageManagerConsole<CR>
 nmap gws :vsc View.SolutionExplorer<CR>
 
-nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
+" nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
 
 " }}}
 
