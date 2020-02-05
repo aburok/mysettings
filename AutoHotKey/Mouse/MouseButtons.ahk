@@ -36,14 +36,6 @@ SetKeyDelay, 0, 100
 ; Mouse Top : 5 ( DPI- ' V ' ) -> Win + Numpad *
 ; Mouse Top : 6 ( DPI+ ' ^ ' ) -> Win + PageUp
 
-
-; Alt + Shift + Ctrl + 1 ->  
-^+!1::
-Send, ^c
-Sleep 50
-Run, http://www.google.com/search?q=%clipboard%
-Return
-
 ^WheelDown::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -103,12 +95,62 @@ If WinActive("ahk_exe devenv.exe")
 Return
 
 
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+; $$$$$$$$\  $$$$$$\  $$$$$$$\  
+; \__$$  __|$$  __$$\ $$  __$$\ 
+;    $$ |   $$ /  $$ |$$ |  $$ |
+;    $$ |   $$ |  $$ |$$$$$$$  |
+;    $$ |   $$ |  $$ |$$  ____/ 
+;    $$ |   $$ |  $$ |$$ |      
+;    $$ |    $$$$$$  |$$ |      
+;    \__|    \______/ \__|      
+                              
+
+; $$\   $$\ 
+; $$ |  $$ |
+; $$ |  $$ |
+; $$$$$$$$ |
+; \_____$$ |
+;       $$ |
+;       $$ |
+;       \__|
+          
+; Mouse Top : 4 (left to left click) -> Win + Numpad /
+
 #NumpadDiv::
-If WinActive("ahk_exe chrome.exe")
-{
+If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}{F5}{CtrlUp}
+} else if WinActive("ahk_exe doublecmd.exe"){
+	SendInput, {CtrlDown}D{CtrlUp}
 }
 Return
+
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+
+
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+;  $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ 
+; $$  __$$\ \_$$  _|$$  __$$\ $$  _____|
+; $$ /  \__|  $$ |  $$ |  $$ |$$ |      
+; \$$$$$$\    $$ |  $$ |  $$ |$$$$$\    
+;  \____$$\   $$ |  $$ |  $$ |$$  __|   
+; $$\   $$ |  $$ |  $$ |  $$ |$$ |      
+; \$$$$$$  |$$$$$$\ $$$$$$$  |$$$$$$$$\ 
+;  \______/ \______|\_______/ \________|
+                                      
+                                      
+
+;   $$\   
+; $$$$ |  
+; \_$$ |  
+;   $$ |  
+;   $$ |  
+;   $$ |  
+; $$$$$$\ 
+; \______|
 
 #numpad1::
 If WinActive("ahk_exe devenv.exe")
@@ -124,24 +166,18 @@ If WinActive("ahk_exe devenv.exe")
 } Else {
 	SendInput, {Browser_Back}
 }
-
-Return
-
-#NumpadMult::
-If WinActive("ahk_exe chrome.exe")
-{
-	SendInput, {CtrlDown}W{CtrlUp}
-}
-Return
-
-#PgUp::
-If WinActive("ahk_exe chrome.exe")
-{
-	SendInput, {CtrlDown}{ShiftDown}T{ShiftUp}{CtrlUp}
-}
 Return
 
 
+; $$\   $$\ 
+; $$ |  $$ |
+; $$ |  $$ |
+; $$$$$$$$ |
+; \_____$$ |
+;       $$ |
+;       $$ |
+;       \__|
+          
 #numpad4::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -158,6 +194,17 @@ If WinActive("ahk_exe devenv.exe")
 }
 Return
 
+
+;  $$$$$$\  
+; $$  __$$\ 
+; \__/  $$ |
+;  $$$$$$  |
+; $$  ____/ 
+; $$ |      
+; $$$$$$$$\ 
+; \________|
+          
+          
 #numpad2::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -172,15 +219,22 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}{Space}{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
-}  Else If WinActive("ahk_exe doublecmd.exe") {
-	SendInput, {Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}
-}
-If WinActive("ahk_exe chrome.exe")
-{
+}  Else {
 	SendInput, {Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}
 }
 Return
 
+
+; $$$$$$$\  
+; $$  ____| 
+; $$ |      
+; $$$$$$$\  
+; \_____$$\ 
+; $$\   $$ |
+; \$$$$$$  |
+;  \______/ 
+          
+          
 #numpad5::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -188,21 +242,26 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {AltDown}{ShiftDown}L{ShiftUp}{AltUp}
 	Sleep, 1000
 	SplashTextOff
-}
-If WinActive("ahk_exe gitextensions.exe")
-{
+} else If WinActive("ahk_exe gitextensions.exe") {
 	SplashTextOn, 400, 100, New Branch
 	SendInput, {CtrlDown}b{CtrlUp}
 	Sleep, 1000
 	SplashTextOff
-}  Else If WinActive("ahk_exe doublecmd.exe") {
-	SendInput, {Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}
-}
-If WinActive("ahk_exe chrome.exe")
-{
+}  Else {
 	SendInput, {Ctrl down}{Tab}{Ctrl up}
 }
 Return
+
+
+;  $$$$$$\  
+; $$  __$$\ 
+; $$ /  \__|
+; $$$$$$$\  
+; $$  __$$\ 
+; $$ /  $$ |
+;  $$$$$$  |
+;  \______/ 
+          
 
 #numpad6::
 If WinActive("ahk_exe devenv.exe")
@@ -213,6 +272,17 @@ If WinActive("ahk_exe devenv.exe")
 	SplashTextOff
 }
 Return
+
+
+;  $$$$$$\  
+; $$ ___$$\ 
+; \_/   $$ |
+;   $$$$$ / 
+;   \___$$\ 
+; $$\   $$ |
+; \$$$$$$  |
+;  \______/ 
+          
 
 #numpad3::
 If WinActive("ahk_exe devenv.exe")
@@ -231,6 +301,16 @@ If WinActive("ahk_exe gitextensions.exe")
 }
 Return
 
+; $$$$$$$$\ 
+; \____$$  |
+;     $$  / 
+;    $$  /  
+;   $$  /   
+;  $$  /    
+; $$  /     
+; \__/      
+          
+
 #numpad7::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -247,6 +327,17 @@ If WinActive("ahk_exe gitextensions.exe")
 	SplashTextOff
 }
 Return
+
+
+;   $$\   $$$$$$\  
+; $$$$ | $$$ __$$\ 
+; \_$$ | $$$$\ $$ |
+;   $$ | $$\$$\$$ |
+;   $$ | $$ \$$$$ |
+;   $$ | $$ |\$$$ |
+; $$$$$$\\$$$$$$  /
+; \______|\______/ 
+
 
 #numpad0::
 If WinActive("ahk_exe devenv.exe")
@@ -276,7 +367,23 @@ Return
 ;   - Search text everywhere
 ;   - Show in Solution Explorer
 
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
+
+#NumpadMult::
+If WinActive("ahk_exe chrome.exe")
+{
+	SendInput, {CtrlDown}W{CtrlUp}
+}
+Return
+
+#PgUp::
+If WinActive("ahk_exe chrome.exe")
+{
+	SendInput, {CtrlDown}{ShiftDown}T{ShiftUp}{CtrlUp}
+}
+
+Return
 WheelRight::
 If WinActive("ahk_exe devenv.exe")
 {
