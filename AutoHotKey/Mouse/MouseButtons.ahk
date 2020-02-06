@@ -36,6 +36,20 @@ SetKeyDelay, 0, 100
 ; Mouse Top : 5 ( DPI- ' V ' ) -> Win + Numpad *
 ; Mouse Top : 6 ( DPI+ ' ^ ' ) -> Win + PageUp
 
+
+
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
+; $$\      $$\ $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\       
+; $$ | $\  $$ |$$ |  $$ |$$  _____|$$  _____|$$ |      
+; $$ |$$$\ $$ |$$ |  $$ |$$ |      $$ |      $$ |      
+; $$ $$ $$\$$ |$$$$$$$$ |$$$$$\    $$$$$\    $$ |      
+; $$$$  _$$$$ |$$  __$$ |$$  __|   $$  __|   $$ |      
+; $$$  / \$$$ |$$ |  $$ |$$ |      $$ |      $$ |      
+; $$  /   \$$ |$$ |  $$ |$$$$$$$$\ $$$$$$$$\ $$$$$$$$\ 
+; \__/     \__|\__|  \__|\________|\________|\________|
+                                                     
+
 ^WheelDown::
 If WinActive("ahk_exe devenv.exe")
 {
@@ -94,6 +108,8 @@ If WinActive("ahk_exe devenv.exe")
 }
 Return
 
+; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+
 
 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
@@ -122,7 +138,7 @@ Return
 If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}{F5}{CtrlUp}
 } else if WinActive("ahk_exe doublecmd.exe"){
-	SendInput, {CtrlDown}D{CtrlUp}
+	SendInput, {CtrlDown}d{CtrlUp}
 }
 Return
 
