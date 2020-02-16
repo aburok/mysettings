@@ -3,6 +3,8 @@
 ;    Sleep 2000
 ;    SplashTextOff
 ;return
+#Include %A_ScriptDir%\Common\Common.ahk
+#Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
 !+d::
 
@@ -21,16 +23,15 @@
         .AddItem(new AppMenuLevel( "l", "Razl" , "", "ahk_exe Razl.exe"))
         .AddItem(new AppMenuLevel( "m", "mySettings / VS Code" , "", "ahk_exe Code.exe"))
         .AddItem(new AppMenuLevel( "n", "Notepad ++" , "#+n", "ahk_exe notepad++.exe"))
-        .AddItem(new AppMenuLevel( "z", "Notepad ++" , "", "ahk_exe notepad++.exe"))
         .AddItem(new AppMenuLevel( "o", "MS Outlook" , "#+o", "ahk_exe OUTLOOK.exe"))
-        .AddItem(new AppMenuLevel( "z", "Notepad ++" , "", "ahk_exe notepad++.exe"))
         .AddItem(new AppMenuLevel( "r", "mRemote - Remote desktop", "", "ahk_exe mRemoteNG.exe" ))
         .AddItem(new AppMenuLevel( "v", "MS Visual Studio" , "#+v", "ahk_exe devenv.exe"))
         .AddItem(new AppMenuLevel( "s", "Slack" , "", "ahk_exe slack.exe"))
-        .AddItem(new AppMenuLevel( "x", "Double Commander" , "#+f", "ahk_exe doublecmd.exe"))
+        .AddItem(GetGuidFormat("q"))
         .AddItem(new AppMenuLevel( "w", "VIM / GVIM" , "#+m", "ahk_exe gvim.exe"))
-        
+        .AddItem(new AppMenuLevel( "x", "Double Commander" , "#+f", "ahk_exe doublecmd.exe"))
         .AddItem(new CopyFilePathNavigationItem("y", "Yank Path"))
+        .AddItem(new AppMenuLevel( "z", "Notepad ++" , "", "ahk_exe notepad++.exe"))
 
     rootLevel.ShowCommandsAndLaunchSelected()
 

@@ -1,3 +1,4 @@
+#Include %A_ScriptDir%\Common\Guid\GuidFormatter.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\SeparatorMenuItem.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\WindowTitleParser.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Common\CopyPropertyMenuItem.ahk
@@ -6,13 +7,14 @@
 #Include %A_ScriptDir%\FastNavigation\Items\Common\EnvironmentNavigationItem.ahk
 
 
-GetGuidFormat(){
-    guidMenu := new GuidMenuItem("g", "Format guid from clipboard")
+GetGuidFormat(letter){
+    guidMenu := new GuidMenuItem(letter, "Format guid from clipboard")
         .AddItem(new GuidFormatMenuItem("b", GuidFormatter.BFormat))
         .AddItem(new GuidFormatMenuItem("d", GuidFormatter.DFormat))
         .AddItem(new GuidFormatMenuItem("n", GuidFormatter.NFormat))
         .AddItem(new GuidFormatMenuItem("x", GuidFormatter.XFormat))
-        return guidMenu
+        
+    return guidMenu
 }
 
 

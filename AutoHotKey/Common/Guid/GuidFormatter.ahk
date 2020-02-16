@@ -1,5 +1,5 @@
 class GuidFormatter {
-    static guidRegex := "Oi)^[{(]?([0-9A-Fa-f]{8})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{12})[)}]?$"
+    static guidRegex := "Oi)^[\s{(]*([0-9A-Fa-f]{8})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{12})[)}\s]*$"
     ; https://docs.microsoft.com/pl-pl/dotnet/api/system.guid.tostring?view=netframework-4.7.2
     static NFormat := "{1}{2}{3}{4}{5}"
     static BFormat := "{{}{1}-{2}-{3}-{4}-{5}{}}"

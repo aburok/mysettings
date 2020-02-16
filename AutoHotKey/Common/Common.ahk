@@ -72,6 +72,7 @@ IfWinActive, .ahk
 return
 
 Log(formatText, params){
-    text:= Format(formatText . "`n", params*)
+    FormatTime, CurrentDateTime,, yyyy-MM-dd HH:mm:ss
+    text:= CurrentDateTime . " - " . Format(formatText . "`n", params*)
     FileAppend, %text% , C:\autohotkey.log
 }

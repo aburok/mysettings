@@ -5,12 +5,15 @@ class NavigationItem {
         this.Letter := letter
         this.Description := description
         this.Level := 0
+        this.Root := this
     }
 
     AddItem(newItem){
         newItem.Parent := this
+        newItem.Root := this.Root
         newItem.Level := this.Level + 1
         this.SubItems.Push(newItem)
+
         return this
     }
 
@@ -87,12 +90,12 @@ class NavigationItem {
     }
 
     AssignRoot(){
-        for index, items in this.SubItems
+        Log("[Item] This {1}, Root : {2}. ", [this.Description, this.Root.Description])
+        newRoot := this.Root
+        for index, subItem in this.SubItems
         {
-            ; Log("[Item] This {1}, subItem: {2}, Root : {3}, Parent {4}, new Root: {5}", [this.Description, newItem.Description, this.Root.Description, newItem.Parent.Description, newItem.Root.Description])
-            items.Root := this.Root
+            subItem.Root := newRoot
+            Log("[SubItem] '{1}', Root : {2}, Parent {3}.", [subItem.Description,  subItem.Root.Description, subItem.Parent.Description])
         }
     }
-
-
 }

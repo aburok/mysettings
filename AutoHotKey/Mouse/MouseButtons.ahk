@@ -6,6 +6,8 @@
 ; ! - Alt key
 ; + - Shift key
 
+; https://www.autohotkey.com/docs/KeyList.htm
+
 #SingleInstance, force
 
 #InstallMouseHook
@@ -36,6 +38,8 @@ SetKeyDelay, 0, 100
 ; Mouse Top : 5 ( DPI- ' V ' ) -> Win + Numpad *
 ; Mouse Top : 6 ( DPI+ ' ^ ' ) -> Win + PageUp
 
+; ASCII art
+; http://patorjk.com/software/taag/#p=display&f=Big%20Money-nw&t=Wheel%0A
 
 
 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
@@ -137,8 +141,42 @@ Return
 #NumpadDiv::
 If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}{F5}{CtrlUp}
+} else if WinActive("ahk_exe notepad++.exe"){
+	SendInput, {CtrlDown}r{CtrlUp}
 } else if WinActive("ahk_exe doublecmd.exe"){
 	SendInput, {CtrlDown}d{CtrlUp}
+}
+Return
+
+
+; $$$$$$$\  $$$$$$$\ $$$$$$\                 
+; $$  __$$\ $$  __$$\\_$$  _|         $$\    
+; $$ |  $$ |$$ |  $$ | $$ |           $$ |   
+; $$ |  $$ |$$$$$$$  | $$ |        $$$$$$$$\ 
+; $$ |  $$ |$$  ____/  $$ |        \__$$  __|
+; $$ |  $$ |$$ |       $$ |           $$ |   
+; $$$$$$$  |$$ |     $$$$$$\          \__|   
+; \_______/ \__|     \______|                
+
+#PgUp::
+If WinActive("ahk_exe chrome.exe") {
+	SendInput, {CtrlDown}w{CtrlUp}
+}
+Return
+
+
+; $$$$$$$\  $$$$$$$\ $$$$$$\               
+; $$  __$$\ $$  __$$\\_$$  _|              
+; $$ |  $$ |$$ |  $$ | $$ |                
+; $$ |  $$ |$$$$$$$  | $$ |        $$$$$$\ 
+; $$ |  $$ |$$  ____/  $$ |        \______|
+; $$ |  $$ |$$ |       $$ |                
+; $$$$$$$  |$$ |     $$$$$$\               
+; \_______/ \__|     \______|              
+                                         
+#PgDn::
+If WinActive("ahk_exe chrome.exe") {
+	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
 Return
 
@@ -228,9 +266,9 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {AltDown}{F7}{AltUp}
 	Sleep, 1000
 	SplashTextOff
-}
-If WinActive("ahk_exe gitextensions.exe")
-{
+} Else If WinActive("ahk_exe Explorer.exe") {
+	SendInput, {AltDown}{Up}{AltUp}
+} Else If WinActive("ahk_exe gitextensions.exe") {
 	SplashTextOn, 400, 100, Commit
 	SendInput, {Ctrl down}{Space}{Ctrl up}
 	Sleep, 1000
@@ -270,27 +308,6 @@ Return
 
 
 ;  $$$$$$\  
-; $$  __$$\ 
-; $$ /  \__|
-; $$$$$$$\  
-; $$  __$$\ 
-; $$ /  $$ |
-;  $$$$$$  |
-;  \______/ 
-          
-
-#numpad6::
-If WinActive("ahk_exe devenv.exe")
-{
-	SplashTextOn, 200, 200, Go to implementaion
-	SendInput, {AltDown}{CtrlDown}B{CtrlUp}{AltUp}
-	Sleep, 1000
-	SplashTextOff
-}
-Return
-
-
-;  $$$$$$\  
 ; $$ ___$$\ 
 ; \_/   $$ |
 ;   $$$$$ / 
@@ -307,15 +324,42 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {Ctrl down}b{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
-}
-If WinActive("ahk_exe gitextensions.exe")
-{
+} Else If WinActive("ahk_exe Explorer.exe") {
+	SendInput, {LWinDown}{Left}{LWinUp}
+	Sleep, 500
+	SendInput, {Escape}
+} Else If WinActive("ahk_exe gitextensions.exe") {
 	SplashTextOn, 400, 100, Checkout Branch
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
 }
 Return
+
+;  $$$$$$\  
+; $$  __$$\ 
+; $$ /  \__|
+; $$$$$$$\  
+; $$  __$$\ 
+; $$ /  $$ |
+;  $$$$$$  |
+;  \______/ 
+          
+
+#numpad6::
+If WinActive("ahk_exe devenv.exe")
+{
+	SplashTextOn, 200, 200, Go to implementaion
+	SendInput, {AltDown}{CtrlDown}B{CtrlUp}{AltUp}
+	Sleep, 1000
+	SplashTextOff
+} Else If WinActive("ahk_exe Explorer.exe") {
+	SendInput, {LWinDown}{Right}{LWinUp}
+	Sleep, 500
+	SendInput, {Escape}
+}
+Return
+
 
 ; $$$$$$$$\ 
 ; \____$$  |
@@ -341,6 +385,8 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {CtrlDown}w{CtrlUp}
 }
 Return
 
@@ -369,6 +415,8 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
 Return
 
@@ -385,21 +433,6 @@ Return
 
 ; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
 
-
-#NumpadMult::
-If WinActive("ahk_exe chrome.exe")
-{
-	SendInput, {CtrlDown}W{CtrlUp}
-}
-Return
-
-#PgUp::
-If WinActive("ahk_exe chrome.exe")
-{
-	SendInput, {CtrlDown}{ShiftDown}T{ShiftUp}{CtrlUp}
-}
-
-Return
 WheelRight::
 If WinActive("ahk_exe devenv.exe")
 {
