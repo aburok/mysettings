@@ -333,6 +333,13 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} Else If WinActive("ahk_exe OUTLOOK.EXE") {
+	SplashTextOn, 400, 100, Delete Email
+	SendInput, {Del}
+	Sleep, 1000
+	SplashTextOff
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {CtrlDown}w{CtrlUp}
 }
 Return
 
@@ -357,6 +364,8 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {LWinDown}{Right}{LWinUp}
 	Sleep, 500
 	SendInput, {Escape}
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
 Return
 
@@ -385,8 +394,6 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
-} else if WinActive("ahk_exe chrome.exe"){
-	SendInput, {CtrlDown}w{CtrlUp}
 }
 Return
 
@@ -415,8 +422,6 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
-} else if WinActive("ahk_exe chrome.exe"){
-	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
 Return
 

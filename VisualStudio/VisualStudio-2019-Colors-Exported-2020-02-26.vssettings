@@ -1,0 +1,34 @@
+<UserSettings>
+	<ApplicationIdentity version="16.0"/>
+	<ToolsOptions>
+		<ToolsOptionsCategory name="Environment" RegisteredName="Environment"/>
+	</ToolsOptions>
+	<Category name="Environment_Group" RegisteredName="Environment_Group">
+		<Category name="Environment_FontsAndColors" Category="{1EDA5DD4-927A-43a7-810E-7FD247D0DA1D}" Package="{DA9FB551-C724-11d0-AE1F-00A0C90FFFC3}" RegisteredName="Environment_FontsAndColors" PackageName="Visual Studio Environment Package">
+			<PropertyValue name="Version">2</PropertyValue>
+			<FontsAndColors Version="2.0">
+				<Theme Id="{1DED0138-47CE-435E-84EF-9EC1F439B749}"/>
+				<Categories>
+					<Category GUID="{75A05685-00A8-4DED-BAE5-E7A50BFA929A}" FontIsDefault="Yes">
+						<Items>
+							<Item Name="Keyword" Foreground="0x00DEB17A" Background="0x02000000" BoldFont="Yes"/>
+							<Item Name="ReSharper C# Interface Identifier" Foreground="0x004080FF" Background="0x01000001" BoldFont="No"/>
+							<Item Name="ReSharper C# Static Class Identifier" Foreground="0x00FF00FF" Background="0x01000001" BoldFont="Yes"/>
+							<Item Name="ReSharper C# Class Identifier" Foreground="0x004080FF" Background="0x01000001" BoldFont="Yes"/>
+							<Item Name="ReSharper C# TypeScript Class Identifier" Foreground="0x00E6D8AD" Background="0x01000001" BoldFont="Yes"/>
+							<Item Name="ReSharper C# TypeScript Interface Identifier" Foreground="0x00E6D8AD" Background="0x01000001" BoldFont="Yes"/>
+							<Item Name="ReSharper C# JavaScript Parameter Identifier" Foreground="0x0000FFFF" Background="0x01000001" BoldFont="No"/>
+							<Item Name="ReSharper C# JavaScript Local Variable Identifier" Foreground="0x00BBD1FF" Background="0x01000001" BoldFont="No"/>
+							<Item Name="ReSharper C# Extension Method Identifier" Foreground="0x00FF00FF" Background="0x01000001" BoldFont="No"/>
+							<Item Name="ReSharper C# Parameter Identifier" Foreground="0x01000000" Background="0x01000001" BoldFont="Yes"/>
+							<Item Name="ReSharper C# Local Variable Identifier" Foreground="0x0060BF00" Background="0x01000001" BoldFont="No"/>
+							<Item Name="ReSharper C# Field Identifier" Foreground="0x0000FF00" Background="0x01000001" BoldFont="No"/>
+							
+							<Item Name="vsvim_highlightsearch" Foreground="0x01000000" Background="0x00525252" BoldFont="No"/>
+						</Items>
+					</Category>
+				</Categories>
+			</FontsAndColors>
+		</Category>
+	</Category>
+</UserSettings>
