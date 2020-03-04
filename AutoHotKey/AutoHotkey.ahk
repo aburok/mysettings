@@ -78,6 +78,29 @@ return
 #+u::Send #{Up}
 
 
+; -----------------------------------------------------
+; Emulate Home and End
+; HOME
+; Movement
+!PgUp:: Send {Home}
+!^PgUp:: Send {CtrlDown}{Home}{CtrlUp}
+
+; Selecting
+!+PgUp:: Send {ShiftDown}{Home}{ShiftUp}
+!^+PgUp:: Send {CtrlDown}{ShiftDown}{Home}{ShiftUp}{CtrlUp}
+
+; END
+; Movement
+!PgDn:: Send {End}
+!^PgDn:: Send {CtrlDown}{End}{CtrlUp}
+
+; Selecting
+!+PgDn:: Send {ShiftDown}{Home}{ShiftUp}
+!^+PgDn:: Send {CtrlDown}{ShiftDown}{End}{ShiftUp}{CtrlUp}
+
+; -----------------------------------------------------
+
+
 +!c::
 
 INPUT, command, T2 L2
@@ -134,22 +157,6 @@ else if ("l" = command){
 return
 
 
-+!i::
-
-    INPUT, command, T2 L1
-    Url:=CopyBrowserUrl()
-    if ("f" = command){
-        firefox(Url)
-    }
-    else if ("e" = command){
-        Edge(Url)
-    }
-    else if ("i" = command){
-        IE(Url)
-    }
-
-return
-
 #Include <Hotkeys>
 
 #Include <Jxon>
@@ -188,34 +195,4 @@ Sleep 50
 Run, http://www.google.com/search?q=%clipboard%
 Return
 
-
-; #IfWinActive, ahk_exe  TOTALCMD64.EXE
-; {
-;     !d::
-;     Send {Home}
-;     Send {Shift Down}
-;     Sleep 10
-;     Send {F6 Down}
-;     Sleep 10
-;     Send {F6 Up}{Shift Up}
-;     return
-; }
-; #IfWinActive
-
-; #IfWinActive, ahk_exe  chrome.exe
-; {
-;     !+g::
-;     oldClipboard:=Clipboard
-;     url:= CopyBrowserUrl()
-;     Clipboard := RegExReplace(url, "www\.youtube", "www.genyoutube")
-;     Send ^t
-;     sleep 10
-;     Send ^v
-;     Sleep 10
-;     Send {Enter}
-;     sleep 10
-;     Clipboard:=oldClipboard
-;     return
-; }
-; #IfWinActive
 
