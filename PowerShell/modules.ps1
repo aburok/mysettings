@@ -8,7 +8,7 @@ function ImportOrInstallModule([string] $moduleName){
     }
 }
 
-ImportOrInstallModule "Pscx"
+# ImportOrInstallModule "Pscx"
 
 ImportOrInstallModule "PsReadLine"
 

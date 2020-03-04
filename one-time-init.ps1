@@ -60,3 +60,12 @@ Stop-Process -processname explorer
 
 
 [Environment]::SetEnvironmentVariable("TIGRC_USER", "c:\mysettings\git\.tigrc", "Machine")
+
+
+Copy-Item "${env:DropboxSettings}\VisualStudioCode\settings.json" `
+    -Destination "${env:APPDATA}\Code\User\settings.json" `
+    -Verbose
+
+Copy-Item "${env:DropboxSettings}\VisualStudioCode\keybindings.json" `
+    -Destination "${env:APPDATA}\Code\User\keybindings.json" `
+    -Verbose
