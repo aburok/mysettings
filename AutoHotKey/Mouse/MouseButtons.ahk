@@ -394,6 +394,8 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {Home}
 }
 Return
 
@@ -422,6 +424,8 @@ If WinActive("ahk_exe gitextensions.exe")
 	SendInput, {Ctrl down}.{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} else if WinActive("ahk_exe chrome.exe"){
+	SendInput, {End}
 }
 Return
 

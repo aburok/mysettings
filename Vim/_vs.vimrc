@@ -77,8 +77,8 @@ nmap <Leader>ff :vsc ReSharper.ReSharper_FindUsages<CR>
 nnoremap gs :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
 nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
-nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
-nmap gi :vsc ReSharper.ReSharper_GotoImplementation<CR>
+nmap gi :vsc ReSharper.ReSharper_GotoInheritors<CR>
+nmap gI :vsc ReSharper.ReSharper_GotoImplementation<CR>
 
 nmap <Leader>fl :vsc Favorites.Addalltofavorites<CR>
 nmap <Leader>fd :vsc Favorites.Addtofavorites<CR>
