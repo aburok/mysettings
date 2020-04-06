@@ -12,5 +12,5 @@ function ImportOrInstallModule([string] $moduleName){
 
 ImportOrInstallModule "PsReadLine"
 
-ImportOrInstallModule "posh-git"
+# ImportOrInstallModule "posh-git"
 

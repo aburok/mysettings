@@ -116,6 +116,7 @@ nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
 nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
 
+nnoremap gp : vsc Edit.PeekDefinition <CR>
 
 " go to next/prev location"
 nnoremap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
@@ -262,3 +263,10 @@ nmap gc :vsc View.ViewCode<CR>
 
 " ARDUINO
 nmap <Leader>mb :vsc VisualMicro.SketchCompileUpload<CR>
+
+nnoremap gk :vsc ReSharper.ReSharper_BookmarksBookmarksMenu <CR>
+nnoremap g1 :vsc ReSharper.ReSharper_BookmarksGoToBookmark1 <CR>
+nnoremap g2 :vsc ReSharper.ReSharper_BookmarksGoToBookmark2 <CR>
+nnoremap g3 :vsc ReSharper.ReSharper_BookmarksGoToBookmark3 <CR>
+nnoremap g4 :vsc ReSharper.ReSharper_BookmarksGoToBookmark4 <CR>
+nnoremap g5 :vsc ReSharper.ReSharper_BookmarksGoToBookmark5 <CR>

@@ -273,6 +273,8 @@ If WinActive("ahk_exe devenv.exe")
 	SendInput, {Ctrl down}{Space}{Ctrl up}
 	Sleep, 1000
 	SplashTextOff
+} else if WinActive("ahk_exe teams.exe"){
+	SendInput, (yes)
 }  Else {
 	SendInput, {Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}
 }

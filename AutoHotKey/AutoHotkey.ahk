@@ -1,22 +1,4 @@
-; IMPORTANT INFO ABOUT GETTING STARTED: Lines that start with a
-; semicolon, such as this one, are comments.  They are not executed.
-
-; # - Win ke:
-; ^ - Ctrl key
-; ! - Alt key
-; + - Shift key
-
-#SingleInstance, force
-
-; ---------------------
-; WINDOWS KEY BINDINGS
-; ---------------------
-
-#Persistent
-OnClipboardChange("ClipChanged")
-return
-
-ClipChanged(Type) {
+; IMPORTANT INFO ABOUT GETTING STARTE{
     recentItems := new RecentItemsViewer()
     recentItems.ParseClipboardItem()
 }

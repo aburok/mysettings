@@ -59,20 +59,20 @@ Function Initialize-Config() {
 }
 
 . ($PScript + "\modules.ps1")
-. ($PScript + "\common.functions.ps1")
-. ($PScript + "\events.ps1")
-. ($PScript + "\clean-files.ps1")
+# . ($PScript + "\common.functions.ps1")
+# . ($PScript + "\events.ps1")
+# . ($PScript + "\clean-files.ps1")
 
 ### Varia 
-Initialize-Config "${PScript}\config"
+# Initialize-Config "${PScript}\config"
 
 ### GIT
 # Initialize-Config "$PScript\git"
 
 ### Include all scripts from function Directory
-Initialize-Config "${PScript}\functions"
+# Initialize-Config "${PScript}\functions"
 
-Initialize-Config "${PScript}\security"
+# Initialize-Config "${PScript}\security"
 
 
 if($global:poshSettings.lastDirectory `
