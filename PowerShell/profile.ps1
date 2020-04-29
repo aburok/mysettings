@@ -59,6 +59,7 @@ Function Initialize-Config() {
 }
 
 . ($PScript + "\modules.ps1")
+. ($PScript + "\config\ps-read-line-config.ps1")
 # . ($PScript + "\common.functions.ps1")
 # . ($PScript + "\events.ps1")
 # . ($PScript + "\clean-files.ps1")

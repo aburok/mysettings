@@ -4,11 +4,11 @@ function ImportOrInstallModule([string] $moduleName){
         Import-Module -Name $moduleName
     }
     else{
-        Install-Module -Name $moduleName -Force
+        Install-Module -Name $moduleName -Force -AllowClobber -Scope AllUsers
     }
 }
 
-# ImportOrInstallModule "Pscx"
+ImportOrInstallModule "Pscx"
 
 ImportOrInstallModule "PsReadLine"
 

@@ -1,7 +1,7 @@
 ; IMPORTANT INFO ABOUT GETTING STARTE{
-    recentItems := new RecentItemsViewer()
-    recentItems.ParseClipboardItem()
-}
+;     recentItems := new RecentItemsViewer()
+;     recentItems.ParseClipboardItem()
+; }
 
 ; +^m::
 ;     configPathFile := USERPROFILE . "\sitecore.navigation.ini"

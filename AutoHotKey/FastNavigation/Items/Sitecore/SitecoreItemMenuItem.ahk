@@ -23,13 +23,3 @@ class SitecoreItemMenuItem extends SitecoreEditPageMenuItem {
         Return formatArgs
     }
 }
-
-class SitecoreItemJson extends SitecoreItemMenuItem {
-
-    static itemQueryFormat := "/-/item/v1/?sc_database={1}&sc_itemversion=1&language=en-US&payload=Min&scope=c%7cs&page=0&pageSize=100&fields={2}&query={3}"
-
-    FormatApiUrl(query, database = "master", fields = ""){
-        apiUrl := Format(itemQueryFormat, database, fields, query)
-        return apiUrl
-    }
-}
