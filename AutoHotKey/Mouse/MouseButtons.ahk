@@ -139,6 +139,11 @@ Return
 ; Mouse Top : 4 (left to left click) -> Win + Numpad /
 
 #NumpadDiv::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}{F5}{CtrlUp}
 } else if WinActive("ahk_exe notepad++.exe"){
@@ -159,6 +164,11 @@ Return
 ; \_______/ \__|     \______|                
 
 #PgUp::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}w{CtrlUp}
 }
@@ -175,6 +185,11 @@ Return
 ; \_______/ \__|     \______|              
                                          
 #PgDn::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe chrome.exe") {
 	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
@@ -207,6 +222,10 @@ Return
 ; \______|
 
 #numpad1::
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 400, 100, Go To Prevoius Cursos Position
@@ -233,6 +252,10 @@ Return
 ;       \__|
           
 #numpad4::
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 400, 100, Go To Next Cursos Position
@@ -246,6 +269,7 @@ If WinActive("ahk_exe devenv.exe")
 } Else {
 	SendInput, {Browser_Forward}
 }
+
 Return
 
 
@@ -260,6 +284,10 @@ Return
           
           
 #numpad2::
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Find Usages
@@ -274,10 +302,11 @@ If WinActive("ahk_exe devenv.exe")
 	Sleep, 1000
 	SplashTextOff
 } else if WinActive("ahk_exe teams.exe"){
-	SendInput, (yes)
+	SendInput, (yes){Enter}
 }  Else {
 	SendInput, {Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}
 }
+
 Return
 
 
@@ -292,6 +321,10 @@ Return
           
           
 #numpad5::
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Show File in Solution Explorer
@@ -306,6 +339,7 @@ If WinActive("ahk_exe devenv.exe")
 }  Else {
 	SendInput, {Ctrl down}{Tab}{Ctrl up}
 }
+
 Return
 
 
@@ -320,6 +354,10 @@ Return
           
 
 #numpad3::
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Complete, Go To Declaration
@@ -343,6 +381,7 @@ If WinActive("ahk_exe devenv.exe")
 } else if WinActive("ahk_exe chrome.exe"){
 	SendInput, {CtrlDown}w{CtrlUp}
 }
+
 Return
 
 ;  $$$$$$\  
@@ -356,6 +395,11 @@ Return
           
 
 #numpad6::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Go to implementaion
@@ -369,6 +413,7 @@ If WinActive("ahk_exe devenv.exe")
 } else if WinActive("ahk_exe chrome.exe"){
 	SendInput, {CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}
 }
+
 Return
 
 
@@ -383,6 +428,11 @@ Return
           
 
 #numpad7::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Complete, Next Error
@@ -398,6 +448,8 @@ If WinActive("ahk_exe gitextensions.exe")
 	SplashTextOff
 } else if WinActive("ahk_exe chrome.exe"){
 	SendInput, {Home}
+} else if WinActive("ahk_exe teams.exe"){
+	SendInput, nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}
 }
 Return
 
@@ -413,6 +465,11 @@ Return
 
 
 #numpad0::
+
+; For some reason WIN key is still pressed when mouse sends the Win + anykey
+; So after each short cut, you need to send WIN UP 
+Send, {LWin up}{RWin up}
+
 If WinActive("ahk_exe devenv.exe")
 {
 	SplashTextOn, 200, 200, Complete, Prev Error
