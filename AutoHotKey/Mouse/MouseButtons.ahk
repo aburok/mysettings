@@ -351,7 +351,7 @@ If WinActive("ahk_exe devenv.exe")
 	WinGetActiveTitle, WindowTitle
 	If InStr(WindowTitle, "(Debugging)") {
 		; Stop Out of method
-		SendInput, {ShiftDown}{F10}{ShiftUp}
+		SendInput, {ShiftDown}{F11}{ShiftUp}
 		Return
 	}
 
