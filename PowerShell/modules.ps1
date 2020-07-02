@@ -12,5 +12,10 @@ ImportOrInstallModule "Pscx"
 
 ImportOrInstallModule "PsReadLine"
 
+ImportOrInstallModule "ComputerManagementDsc"
+
+ImportOrInstallModule "powershell-yaml"
+
+
 # ImportOrInstallModule "posh-git"
 

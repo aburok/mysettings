@@ -228,6 +228,13 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Step Over
+		SendInput, {F10}
+		Return
+	}
+
 	SplashTextOn, 400, 100, Go To Prevoius Cursos Position
 	SendInput, {Ctrl down}-{Ctrl up}
 	Sleep, 1000
@@ -258,6 +265,13 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Run to the Cursor
+		SendInput, {CtrlDown}{F10}{CtrlUp}
+		Return
+	}
+
 	SplashTextOn, 400, 100, Go To Next Cursos Position
 	SendInput, {Ctrl down}{ShiftDown}-{ShiftUp}{Ctrl up}
 	Sleep, 1000
@@ -290,6 +304,13 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Step Into
+		SendInput, {F11}
+		Return
+	}
+
 	SplashTextOn, 200, 200, Find Usages
 	SendInput, {AltDown}{F7}{AltUp}
 	Sleep, 1000
@@ -327,6 +348,13 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Stop Out of method
+		SendInput, {ShiftDown}{F10}{ShiftUp}
+		Return
+	}
+
 	SplashTextOn, 200, 200, Show File in Solution Explorer
 	SendInput, {AltDown}{ShiftDown}L{ShiftUp}{AltUp}
 	Sleep, 1000
@@ -360,6 +388,13 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Continue execution
+		SendInput, {F5}
+		Return
+	}
+
 	SplashTextOn, 200, 200, Complete, Go To Declaration
 	SendInput, {Ctrl down}b{Ctrl up}
 	Sleep, 1000
@@ -402,6 +437,12 @@ Send, {LWin up}{RWin up}
 
 If WinActive("ahk_exe devenv.exe")
 {
+	WinGetActiveTitle, WindowTitle
+	If InStr(WindowTitle, "(Debugging)") {
+		; Quick watch variable
+		SendInput, {ShiftDown}{F9}{ShiftUp}
+		Return
+	}
 	SplashTextOn, 200, 200, Go to implementaion
 	SendInput, {AltDown}{CtrlDown}B{CtrlUp}{AltUp}
 	Sleep, 1000
