@@ -11,7 +11,8 @@ nmap zX :vsc Edit.UndoClose<CR>
 nnoremap Q :vsc File.SaveSelectedItems<CR> :vsc File.Close<CR>
 " }}}
 " Build {{{
-nnoremap <leader>B :vsc Build.BuildSolution<CR>
+nnoremap <leader>Bs :vsc Build.BuildSolution<CR>
+nnoremap <leader>Bp :vsc Build.BuildSolution<CR>
 
 nnoremap <leader>s :vsc Debug.Start<CR>
 nnoremap <leader>S :vsc Debug.StopDebugging<CR>
@@ -24,7 +25,13 @@ nmap <leader>be :vsc Debug.EnableAllBreakpoints<CR>
 nmap <leader>bi :vsc Debug.ToggleBreakpoint<CR>
 nmap <leader>bb :vsc Debug.ToggleBreakpoint<CR>
 
-map <leader>dw :vsc Debug.AddWatch<CR>
+nmap <leader>dw :vsc Debug.AddWatch<CR>
+nmap <leader>dn :vsc Debug.StepOver<CR>
+nmap <leader>ds :vsc Debug.StepOver<CR>
+nmap <leader>di :vsc Debug.StepInto<CR>
+nmap <leader>do :vsc Debug.StepOut<CR>
+nmap <leader>dc :vsc Debug.CallStack<CR>
+nmap <leader>dr :vsc Debug.RunToCursor<CR>
 
 nmap <leader>ra :vsc Debug.ReAttach<CR>
 nmap <leader>r1 :vsc Debug.ReAttachHistoryItem1<CR>
@@ -58,6 +65,12 @@ vnoremap <leader><Space> :vsc Resharper.Resharper_GotoType<CR>
 
 nnoremap % :vsc Resharper_GoToBrace<CR>
 
+nnoremap <leader>Rs :vsc ReSharper_Suspend<CR>
+nnoremap <leader>Rd :vsc ReSharper_Suspend<CR>
+nnoremap <leader>Rr :vsc ReSharper_Resume<CR>
+nnoremap <leader>Re :vsc ReSharper_Resume<CR>
+nnoremap <leader>RD :vsc ReSharper_Resume<CR>
+
 
 " Visual Studio doesn't work well with switching to next document window
 " It does nothing
@@ -74,21 +87,21 @@ nnoremap % :vsc Resharper_GoToBrace<CR>
 "Find usages
 nmap <Leader>fu :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>ff :vsc ReSharper.ReSharper_FindUsages<CR>
-nnoremap gs :vsc ReSharper.ReSharper_FindUsages<CR>
+" nnoremap gs :vsc ReSharper.ReSharper_FindUsages<CR>
 nmap <Leader>fi :vsc ReSharper.ReSharper_GotoImplementation<CR>
-nmap gd :vsc ReSharper.ReSharper_GotoDeclaration<CR>
-nmap gi :vsc ReSharper.ReSharper_GotoInheritors<CR>
-nmap gI :vsc ReSharper.ReSharper_GotoImplementation<CR>
+nmap gd :vsc Edit.GoToDefinition<CR>
+nmap gi :vsc Edit.GoToImplementation<CR>
+nmap gI :vsc ReSharper.ReSharper_GotoInheritors<CR>
 
 nmap <Leader>fl :vsc Favorites.Addalltofavorites<CR>
 nmap <Leader>fd :vsc Favorites.Addtofavorites<CR>
 
 nmap <leader>N :vsc ReSharper.ReSharper_NavigateTo<CR>
 noremap gb :vsc View.NavigateBackward<CR>
+noremap gf :vsc View.NavigateForward<CR>
 noremap g; :vsc ReSharper.ReSharper_GotoLastEditLocation<CR>
 noremap gB :vsc View.NavigateForward<CR>
 noremap go :vsc View.NavigateForward<CR>
-noremap g, :vsc View.NavigateForward<CR>
 nnoremap <C-o> :vsc View.NavigateBackward<CR>
 nnoremap <C-i> :vsc View.NavigateForward<CR>
 
@@ -110,7 +123,7 @@ nnoremap K :vsc Window.NextTab<CR>
 nnoremap L :vsc window.NextDocumentWindowNav<CR>
 
 " Go to file / member
-nmap gf :vsc ReSharper.ReSharper_GotoFile<CR>
+nmap gl :vsc ReSharper.ReSharper_GotoFile<CR>
 nnoremap <C-P> :vsc ReSharper.ReSharper_GotoFile<CR>
 nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
@@ -126,6 +139,9 @@ nnoremap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
 noremap <C-E> :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
 nmap gE :vsc ReSharper.ReSharper_GotoPrevErrorInSolution<CR>
+
+nmap <leader>ge :vsc Edit.GoToNextIssueinFile<CR>
+nmap <leader>gE :vsc Edit.GoToPreviousIssueinFile<CR>
 
 "GO to Next/prev code issue"
 nmap gh :vsc ReSharper.ReSharper_GotoNextHighlight<CR>
@@ -235,7 +251,7 @@ nmap <leader>wd :vsc Window.NewWindow<CR>
 vnoremap at :vsc ReSharper.ReSharper_SelectContainingDeclaration<CR>
 "nmap zsw :vsc Edit.SelectCurrentWord<CR>
 
-nmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
+nmap <leader>w :vsc View.BlockSelection<CR>
 vmap <leader>w :vsc ReSharper.ReSharper_ExtendSelection<CR>
 nmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 vmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
