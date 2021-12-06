@@ -6,7 +6,7 @@
 #Include %A_ScriptDir%\Common\Common.ahk
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
-!+d::
+!^+d::
 
     subItem := 
     rootLevel := new AppMenuLevel("d", "+!d")

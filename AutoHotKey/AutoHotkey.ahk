@@ -13,7 +13,7 @@
 
 +^!s::
     ; https://autohotkey.com/docs/commands/SoundPlay.htm
-    SoundPlay, C:\Users\dawid.koruba\Downloads\thisissparta.swf.mp3
+    SoundPlay, C:\mysettings\AutoHotKey\Sounds\thisissparta.swf.mp3
 return
 
 CAPSLOCK::Escape

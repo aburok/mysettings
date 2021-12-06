@@ -33,7 +33,7 @@ nmap <leader>do :vsc Debug.StepOut<CR>
 nmap <leader>dc :vsc Debug.CallStack<CR>
 nmap <leader>dr :vsc Debug.RunToCursor<CR>
 
-nmap <leader>ra :vsc Debug.ReAttach<CR>
+nmap <leader>da :vsc Debug.ReattachtoProcess<CR>
 nmap <leader>r1 :vsc Debug.ReAttachHistoryItem1<CR>
 " }}}
 

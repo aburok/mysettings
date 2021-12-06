@@ -81,7 +81,7 @@ if($global:poshSettings.lastDirectory `
     Set-Location $global:poshSettings.lastDirectory
 }
 
-Start-SshAgent -Quiet
+# Start-SshAgent -Quiet
 
 Write-Host "Dropbox profile loaded..."
 $global:DropboxProfileLoaded=1
