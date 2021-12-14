@@ -16,6 +16,8 @@ ImportOrInstallModule "ComputerManagementDsc"
 
 ImportOrInstallModule "powershell-yaml"
 
+ImportOrInstallModule "oh-my-posh"
+
 
 # ImportOrInstallModule "posh-git"
 

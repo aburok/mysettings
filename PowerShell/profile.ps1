@@ -9,6 +9,7 @@ if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
 
 . C:\mysettings\PowerShell\variables.ps1
 
+
 Function Import-Functions ($Path) {
     Import-Module $Path -WarningAction @{}
 }
@@ -83,5 +84,10 @@ if($global:poshSettings.lastDirectory `
 
 # Start-SshAgent -Quiet
 
+
+oh-my-posh --init --shell pwsh --config "C:/mysettings/Powershell/.oh-my-posh.theme.omp.json" | Invoke-Expression
+Enable-PoshTooltips
+
 Write-Host "Dropbox profile loaded..."
 $global:DropboxProfileLoaded=1
+
