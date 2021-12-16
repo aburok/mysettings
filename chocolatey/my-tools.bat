@@ -41,19 +41,9 @@ cinst ConEmu
 
 cinst keepass
 
- cinst gimp
-
 cinst procexp
 
-cinst autohotkey.portable
-
-cinst xmind
-
-cinst truecrypt
-
 choco install sigil 
-
-choco install jing
 
 choco install autohotkey --confirm
 choco install microsoft-windows-terminal --confirm
@@ -61,7 +51,6 @@ choco install brave --confirm
 choco install tidal --confirm
 choco install onedrive --confirm
 choco install keepass --confirm
-choco install totalcommander --confirm
 choco install notepadplusplus --confirm
 choco install vim --confirm
 choco install copyq --confirm
