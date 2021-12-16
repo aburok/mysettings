@@ -157,6 +157,8 @@ return
 #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 #Include %A_ScriptDir%\KeyBindings\Yank.ahk
 
+#Include %A_ScriptDir%\Spotify.ahk
+
 
 
 ; -----------------------
@@ -176,5 +178,4 @@ Send, ^c
 Sleep 50
 Run, http://www.google.com/search?q=%clipboard%
 Return
-
 

@@ -109,11 +109,11 @@ nnoremap <Leader>gd :vsc ReSharper.ReSharper_GoToContainingDeclaration<CR>
 
 " Go to Next/prev method"
 " In favor of go to member
-nmap gm :vsc ReSharper.ReSharper_GotoNextMethod<CR>
-nnoremap <M-j> :vsc ReSharper.ReSharper_GotoNextMethod<CR>
+nmap gm :vsc ReSharper.ReSharper_GotoNextMember<CR>
+nnoremap <M-j> :vsc ReSharper.ReSharper_GotoNextMember<CR>
 
-nmap gM :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
-nnoremap <M-k> :vsc ReSharper.ReSharper_GotoPrevMethod<CR>
+nmap gM :vsc ReSharper.ReSharper_GotoPrevMember<CR>
+nnoremap <M-k> :vsc ReSharper.ReSharper_GotoPrevMember<CR>
 
 nnoremap gwd :vsc Window.NextDocumentWindow<CR>
 nnoremap gwD :vsc Window.PreviousDocumentWindow<CR>
@@ -131,9 +131,11 @@ nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
 
 nnoremap gp : vsc Edit.PeekDefinition <CR>
 
-" go to next/prev location"
+" SEARCH go to next/prev location"
+"" Search
 nnoremap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
 nnoremap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
+nmap gwf :vsc Resharper.Resharper_ShowFindResults<CR>
 
 " Go To Next Error in Solution"
 nmap ge :vsc ReSharper.ReSharper_GotoNextErrorInSolution<CR>
@@ -190,6 +192,7 @@ nmap <leader>re :vsc ReSharper.ReSharper_Rename<CR>
 nmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
 vmap <leader>R :vsc ReSharper.ReSharper_RefactorThis<CR>
 vmap <leader>em :vsc ReSharper.ReSharper_ExtractMethod<CR>
+
 " nmap <leader>ei :vsc ReSharper.ReSharper_ExtractInter<CR>
 nmap <leader>ei :vsc Refactor.ExtractInterface<CR>
 
@@ -217,7 +220,6 @@ nmap <leader>tf :vsc ReSharper.ReSharper_GenerateFileBesides<CR>
 nmap gwc :vsc Debug.CallStack<CR>
 " nmap gwd :vsc Debug.Watch1<CR> In favour of go to next document
 nmap gwe :vsc View.ErrorList<CR>
-nmap gwf :vsc View.FindResults1<CR>
 
 nmap gwn :vsc Project.ManageNuGetPackages<CR>
 nmap gwo :vsc View.Output<CR>
