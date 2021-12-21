@@ -18,6 +18,12 @@ ImportOrInstallModule "powershell-yaml"
 
 ImportOrInstallModule "oh-my-posh"
 
+ImportOrInstallModule "Terminal-Icons"
+
+ImportOrInstallModule "z"
+
+ImportOrInstallModule "PSFzf"
+
 
 # ImportOrInstallModule "posh-git"
 

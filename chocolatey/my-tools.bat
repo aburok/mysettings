@@ -91,3 +91,9 @@ choco install servicebusexplorer --confirm
 choco install k9s --confirm
 
 winget install JanDeDobbeleer.OhMyPosh
+
+" tool to switch between opened applications"
+choco install switcheroo
+
+" fuzzy search for windows powershell
+choco install fzf

@@ -91,3 +91,10 @@ Enable-PoshTooltips
 Write-Host "Dropbox profile loaded..."
 $global:DropboxProfileLoaded=1
 
+# Alias
+Set-Alias g git
+Set-Alias k k9s
+set-Alias d docker 
+Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
+

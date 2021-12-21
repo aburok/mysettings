@@ -39,9 +39,10 @@
           "properties": {
             "home_icon": "",
             "folder_icon": " \uf07b ",
-            "style": "folder",
+            "style": "agnoster_short",
             "prefix": " \uf07b\uf553",
-            "enable_hyperlink": true
+            "enable_hyperlink": true,
+            "max_depth": 5
           }
         },
         {
@@ -76,7 +77,20 @@
             "threshold": 0,
             "style": "roundrock"
           }
+        },
+        {
+          "type": "time",
+          "style": "diamond",
+          "leading_diamond": "\uE0B2",
+          "trailing_diamond": "\uE0B4",
+          "background": "#40c4ff",
+          "foreground": "#ffffff",
+          "properties": {
+            "prefix": " \uf5ef ",
+            "time_format": "_2,15:04"
         }
+        }
+
       ]
     },
     {
@@ -111,18 +125,6 @@
           }
         },
         {
-          "type": "java",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#ec2729",
-          "background": "#0e8ac8",
-          "properties": {
-            "prefix": "\uE738 ",
-            "postfix": ""
-          }
-        },
-        {
           "type": "dotnet",
           "style": "diamond",
           "leading_diamond": " \uE0B6",
@@ -131,78 +133,6 @@
           "background": "#0e0e0e",
           "properties": {
             "prefix": "\uE77F ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "go",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#06aad5",
-          "background": "#ffffff",
-          "properties": {
-            "prefix": "\uFCD1 ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "rust",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#925837",
-          "background": "#f3f0ec",
-          "properties": {
-            "prefix": "\uE7a8 ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "dart",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#055b9c",
-          "background": "#e1e8e9",
-          "properties": {
-            "prefix": "\uE798 ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "angular",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#ce092f",
-          "background": "#ffffff",
-          "properties": {
-            "prefix": "\uE753 ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "julia",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#359a25",
-          "background": "#945bb3",
-          "properties": {
-            "prefix": "<#ca3c34>\uE624</> ",
-            "postfix": ""
-          }
-        },
-        {
-          "type": "ruby",
-          "style": "diamond",
-          "leading_diamond": " \uE0B6",
-          "trailing_diamond": "\uE0B4",
-          "foreground": "#9c1006",
-          "background": "#ffffff",
-          "properties": {
-            "prefix": "\uE791 ",
             "postfix": ""
           }
         },
@@ -277,21 +207,7 @@
             "charged_icon": "\uf58e ",
             "postfix": " <#262626>\uE0B2</>"
           }
-        },
-        {
-          "type": "time",
-          "style": "diamond",
-          "invert_powerline": true,
-          "leading_diamond": "\uE0B2",
-          "trailing_diamond": "\uE0B4",
-          "background": "#40c4ff",
-          "foreground": "#ffffff",
-          "properties": {
-            "prefix": " \uf5ef ",
-            "time_format": "_2,15:04"
-        }
-        }
-      ]
+        }      ]
     },
     {
       "type": "prompt",

@@ -78,3 +78,9 @@ Function Copy-ToFtp([string] $url, [string] $file, [string] $path, [string] $fil
 # $rs.Close()
 # $rs.Dispose()
 }
+
+
+function which ($command){
+    Get-Command -Name $command -ErrorAction SilentlyContinue |
+        Select-Object -ExpandProperty Path -ErrorAction SilentlyContinue
+}
