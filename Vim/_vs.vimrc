@@ -54,15 +54,6 @@ vnoremap // y/<C-R>"<CR>
 
 " Navigation {{{
 
-"  nnoremap <Space> :vsc Edit.Find<CR>
-nnoremap <leader><Space><space> viw:vsc Resharper.Resharper_GotoType<CR>
-nnoremap <leader><Space>' vi':vsc Resharper.Resharper_GotoType<CR>
-nnoremap <leader><Space>" vi":vsc Resharper.Resharper_GotoType<CR>
-nnoremap <leader><Space>{ vi{:vsc Resharper.Resharper_GotoType<CR>
-nnoremap <leader><Space>9 vi(:vsc Resharper.Resharper_GotoType<CR>
-" vnoremap <Space> y<ESC>/<C-R>"<CR>
-vnoremap <leader><Space> :vsc Resharper.Resharper_GotoType<CR>
-
 nnoremap % :vsc Resharper_GoToBrace<CR>
 
 nnoremap <leader>Rs :vsc ReSharper_Suspend<CR>

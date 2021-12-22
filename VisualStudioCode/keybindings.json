@@ -1,30 +1,94 @@
 // Place your key bindings in this file to overwrite the defaults
-[{
-        "key": "ctrl+1",
-        "command": "workbench.action.focusFirstEditorGroup"
-    },
+[
+  {
+    "key": "ctrl+1",
+    "command": "workbench.action.focusFirstEditorGroup"
+  },
 
-    {
-        "key": "shift+l",
-        "command": "workbench.action.focusNextGroup",
-        "when": "editorTextFocus && vim.mode != 'Insert'"
-    },
-    {
-        "key": "shift+h",
-        "command": "workbench.action.focusPreviousGroup",
-        "when": "editorTextFocus && vim.mode != 'Insert'"
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "workbench.action.files.saveAll",
-        "when": ""
-    },
-    {
-        "key": "ctrl+shift+s",
-        "command": "-workbench.action.files.saveAs"
-    },
-    {
-        "key": "alt+shift+l",
-        "command": "workbench.files.action.showActiveFileInExplorer"
-    }
+  {
+    "key": "shift+l",
+    "command": "workbench.action.focusNextGroup",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "shift+h",
+    "command": "workbench.action.focusPreviousGroup",
+    "when": "editorTextFocus && vim.mode != 'Insert'"
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "workbench.action.files.saveAll",
+    "when": ""
+  },
+  {
+    "key": "ctrl+shift+s",
+    "command": "-workbench.action.files.saveAs"
+  },
+  {
+    "key": "alt+shift+l",
+    "command": "workbench.files.action.showActiveFileInExplorer"
+  },
+  // File explorer Vim-like shortcuts
+  {
+    "key": "g g",
+    "command": "list.focusFirst",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "Shift+G",
+    "command": "list.focusLast",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "h",
+    "command": "list.collapse",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "j",
+    "command": "list.focusDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "n",
+    "command": "explorer.newFile",
+    "when": "listFocus && !inputFocus"
+  },
+  { "key": "k", "command": "list.focusUp", "when": "listFocus && !inputFocus" },
+  { "key": "l", "command": "list.select", "when": "listFocus && !inputFocus" },
+  {
+    "key": "c",
+    "command": "settings.action.showContextMenu",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "o",
+    "command": "list.toggleExpand",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "r",
+    "command": "renameFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceIsRoot && !explorerResourceReadonly && !inputFocus"
+  },
+  {
+    "key": "y f",
+    "command": "copyFilePath",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "e",
+    "command": "revealFileInOS",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "p",
+    "command": "list.focusParent",
+    "when": "filesExplorerFocus && !inputFocus"
+  },
+  {
+    "key": "x",
+    "command": "deleteFile",
+    "when": "explorerViewletVisible && filesExplorerFocus && !explorerResourceMoveableToTrash && !explorerResourceReadonly && !inputFocus"
+  }
 ]

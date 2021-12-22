@@ -47,8 +47,8 @@ set cursorline
 set autoread
 colorscheme desert
 
-let g:mapleader = ','
-let mapleader = ','
+let g:mapleader = '<Space>'
+let mapleader = '<Space>'
 
 nnoremap - $
 xnoremap - $
@@ -179,13 +179,13 @@ nnoremap <leader>*' yi'/<C-R>"<CR>
 nnoremap <leader>*" yi"/<C-R>"<CR>
 nnoremap <leader>*0 yi(/<C-R>"<CR>
 
-nnoremap <Space><Space> "tyiW:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-nnoremap <Space>( "tyi(:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-nnoremap <Space>" "tyi":let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-nnoremap <Space>' "tyi':let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-nnoremap <Space>< "tyi<:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-nnoremap <Space>c /<C-R>+<CR>zz
-vnoremap <Space> "ty:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space><Space> "tyiW:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space>( "tyi(:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space>" "tyi":let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space>' "tyi':let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space>< "tyi<:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
+" nnoremap <Space>c /<C-R>+<CR>zz
+" vnoremap <Space> "ty:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
 
 
 vnoremap * "sy/<C-R>s<CR>

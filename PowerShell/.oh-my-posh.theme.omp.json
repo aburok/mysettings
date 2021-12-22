@@ -67,10 +67,9 @@
         {
           "type": "executiontime",
           "style": "diamond",
-          "leading_diamond": "",
-          "trailing_diamond": "\uE0B4",
           "foreground": "#ffffff",
           "background": "#83769c",
+          "powerline_symbol": "\uE0B0",
           "properties": {
             "prefix": "羽",
             "postfix": "\u2800",
@@ -81,16 +80,14 @@
         {
           "type": "time",
           "style": "diamond",
-          "leading_diamond": "\uE0B2",
           "trailing_diamond": "\uE0B4",
           "background": "#40c4ff",
           "foreground": "#ffffff",
           "properties": {
             "prefix": " \uf5ef ",
             "time_format": "_2,15:04"
+          }
         }
-        }
-
       ]
     },
     {
@@ -207,7 +204,8 @@
             "charged_icon": "\uf58e ",
             "postfix": " <#262626>\uE0B2</>"
           }
-        }      ]
+        }
+      ]
     },
     {
       "type": "prompt",
