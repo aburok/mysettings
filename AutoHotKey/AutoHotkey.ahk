@@ -4,7 +4,7 @@
 ; }
 
 ; +^m::
-;     configPathFile := USERPROFILE . "\sitecore.navigation.ini"
+;     configPathFile := USERPROFILE . "\sitecore.navigation.ini"/CAPS
 ;     MsgBox, %configPathFile%
 ;     Log("Ctrl Shigt M pressed", [])
 ;     recentItems := new RecentItemsViewer()
@@ -16,7 +16,18 @@
     SoundPlay, C:\mysettings\AutoHotKey\Sounds\thisissparta.swf.mp3
 return
 
-CAPSLOCK::Escape
+; Author: fwompner gmail com
+; https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_Windows#AutoHotkey 
+#InstallKeybdHook
+Capslock::
+Send {LControl Down}
+KeyWait, CapsLock
+Send {LControl Up}
+if ( A_PriorKey = "CapsLock" )
+{
+    Send {Esc}
+}
+return
 
 ; Match window names by part of the title
 SetTitleMatchMode, RegEx
@@ -158,8 +169,7 @@ return
 #Include %A_ScriptDir%\KeyBindings\Yank.ahk
 
 #Include %A_ScriptDir%\Spotify.ahk
-
-
+;#Include %A_ScriptDir%\Lib\CapsLockCtrlEscape.ahk
 
 ; -----------------------
 ; FUNCTIONS
@@ -178,4 +188,3 @@ Send, ^c
 Sleep 50
 Run, http://www.google.com/search?q=%clipboard%
 Return
-
