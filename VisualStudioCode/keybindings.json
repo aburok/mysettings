@@ -1,19 +1,27 @@
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// IMPORTANT
+//  This File is no longer needed as using Sync Setttings extension synch it with Gist on GitHub
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
 // Place your key bindings in this file to overwrite the defaults
 [
   {
     "key": "ctrl+1",
     "command": "workbench.action.focusFirstEditorGroup"
-  },
-
-  {
-    "key": "shift+l",
-    "command": "workbench.action.focusNextGroup",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
-  },
-  {
-    "key": "shift+h",
-    "command": "workbench.action.focusPreviousGroup",
-    "when": "editorTextFocus && vim.mode != 'Insert'"
   },
   {
     "key": "ctrl+shift+s",
@@ -28,6 +36,7 @@
     "key": "alt+shift+l",
     "command": "workbench.files.action.showActiveFileInExplorer"
   },
+
   // File explorer Vim-like shortcuts
   {
     "key": "g g",

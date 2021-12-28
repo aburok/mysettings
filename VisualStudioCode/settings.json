@@ -1,79 +1,141 @@
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// IMPORTANT
+//  This File is no longer needed as using Sync Setttings extension synch it with Gist on GitHub
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+// !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
 // Place your settings in this file to overwrite the default settings
 {
-    // Plugins settings
-    // Easy Motion
-    "vim.easymotion": true,
-  
-    // Hl Search
-    "vim.hlsearch": true,
-  
-    "vim.useSystemClipboard": true,
-  
-    "vim.leader": "<Space>",
-  
-      "vim.vimrc.enable": true,
-      "vim.vimrc.path": "C:\\mysettings\\VisualStudioCode\\_vscode.vimrc",
-  
-    "vim.otherModesKeyBindingsNonRecursive": [
-      {
-        "before": ["leader", "w", "n"],
-        "after": [],
-        "commands": [
-          {
-            "command": "workbench.action.moveEditorToNextGroup",
-            "args": []
-          }
-        ]
-      },
-      {
-        "before": ["leader", "e"],
-        "commands": [
-          {
-            "command": "workbench.action.moveEditorToNextGroup",
-            "args": []
-          }
-        ]
-      },
-      {
-        "before": ["leader", "w", "N"],
-        "after": [],
-        "commands": [
-          {
-            "command": "workbench.action.moveEditorToPreviousGroup",
-            "args": []
-          }
-        ]
-      }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<space>", "c"],
-        "commands": ["whichkey.show"]
-      }
-    ],
-    "vim.visualModeKeyBindingsNonRecursive": [
-      {
-        "before": ["<space>", "c"],
-        "commands": ["whichkey.show"]
-      }
-    ],
-    "editor.suggestSelection": "first",
-    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
-    "[typescript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+  // Plugins settings
+  // Easy Motion
+  "vim.easymotion": true,
+
+  // Hl Search
+  "vim.hlsearch": true,
+
+  "vim.useSystemClipboard": true,
+
+  "vim.leader": "<Space>",
+
+  "vim.vimrc.enable": true,
+  "vim.vimrc.path": "C:\\mysettings\\VisualStudioCode\\_vscode.vimrc",
+
+  "vim.otherModesKeyBindingsNonRecursive": [
+    {
+      "before": ["leader", "w", "n"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.moveEditorToNextGroup",
+          "args": []
+        }
+      ]
     },
-    "security.workspace.trust.untrustedFiles": "open",
-    "git.autofetch": true,
-    "[json]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "e"],
+      "commands": [
+        {
+          "command": "workbench.action.moveEditorToNextGroup",
+          "args": []
+        }
+      ]
     },
-    "window.zoomLevel": 1,
-  
-    "[javascript]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
-    },
-    "[jsonc]": {
-      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    {
+      "before": ["leader", "w", "N"],
+      "after": [],
+      "commands": [
+        {
+          "command": "workbench.action.moveEditorToPreviousGroup",
+          "args": []
+        }
+      ]
     }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>", "c"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<space>", "c"],
+      "commands": ["whichkey.show"]
+    }
+  ],
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "security.workspace.trust.untrustedFiles": "open",
+  "git.autofetch": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "window.zoomLevel": 1,
+
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vim.statusBarColorControl": true,
+  "vim.statusBarColors.normal": ["#8FBCBB", "#434C5E"],
+  "vim.statusBarColors.insert": "#BF616A",
+  "vim.statusBarColors.visual": "#B48EAD",
+  "vim.statusBarColors.visualline": "#B48EAD",
+  "vim.statusBarColors.visualblock": "#A3BE8C",
+  "vim.statusBarColors.replace": "#D08770",
+  "vim.statusBarColors.commandlineinprogress": "#007ACC",
+  "vim.statusBarColors.searchinprogressmode": "#007ACC",
+  "vim.statusBarColors.easymotionmode": "#007ACC",
+  "vim.statusBarColors.easymotioninputmode": "#007ACC",
+  "vim.statusBarColors.surroundinputmode": "#007ACC",
+  "background.enabled": true,
+  "background.loop": false,
+  "background.useDefault": false,
+  "background.useFront": false,
+  "background.style": {
+    "content": "''",
+    "pointer-events": "none",
+    "position": "absolute",
+    "z-index": "99999",
+    "width": "100%",
+    "height": "100%",
+    "margin-left": "0%",
+    "background-position": "right",
+    "background-size": "cover",
+    "background-repeat": "no-repeat",
+    "opacity": 0.1
+  },
+  "background.customImages": [
+    "https://images.pexels.com/photos/15286/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/1114690/pexels-photo-1114690.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/130621/pexels-photo-130621.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/807598/pexels-photo-807598.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260",
+    "https://images.pexels.com/photos/1379636/pexels-photo-1379636.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260"
+  ],
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#B48EAD",
+    "statusBar.noFolderBackground": "#B48EAD",
+    "statusBar.debuggingBackground": "#B48EAD",
+    "statusBar.foreground": "#434C5E",
+    "statusBar.debuggingForeground": "#434C5E"
   }
-  
+}
