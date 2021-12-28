@@ -1,0 +1,148 @@
+source C:/mysettings/Vim/_base.vimrc
+
+""" Map leader to space ---------------------
+
+" Reload Configuration
+nnoremap <leader>rc :source ~/.ideavimrc<CR>
+nnoremap \e :e ~/.ideavimrc<CR>
+nnoremap \r :action IdeaVim.ReloadVimRc.reload<CR>
+
+""" Plugins """
+set surround
+set multiple-cursors
+set commentary
+set argtextobj
+set easymotion
+set textobj-entire
+set ReplaceWithRegister
+set NERDTree
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs='[:],(:),<:>'
+
+""" Common settings -------------------------
+set showmode
+set so=5
+set nu
+
+""" IdeaVim specific settings ------------------
+set ideajoin
+set ideastatusicon=gray
+set idearefactormode=keep
+
+nmap Q :action ReopenClosedTab<CR>
+
+sethandler <C-B> i-v:vim
+sethandler <C-C> i-v:vim
+sethandler <C-D> i-v:vim
+sethandler <C-F> n-v:vim
+sethandler <C-H> n-v:vim
+sethandler <C-I> n-v:vim
+sethandler <C-J> n-v:vim
+sethandler <C-K> n-v:vim
+sethandler <C-L> n-v:vim
+sethandler <C-M> n-v:vim
+sethandler <C-O> i-v:vim
+sethandler <C-P> i-v:vim
+
+""" Mappings --------------------------------
+map <leader>f <Plug>(easymotion-s)
+map <leader>e <Plug>(easymotion-f)
+
+nmap <leader>d <Action>(Debug)
+nmap <leader>rr <Action>(RenameElement)
+nmap <leader>c <Action>(Stop)
+nmap <leader>z <Action>(ToggleDistractionFreeMode)
+
+" map <leader>s <Action>(SelectInProjectView)
+map <leader>ga <Action>(Annotate)
+map <leader>ga <Action>(Annotate)
+" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+
+map <S-Space> <Action>(GotoNextError)
+nmap ge <Action>(ReSharperGotoNextErrorInSolution)
+
+nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
+
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>os <Action>(FileStructurePopup)
+
+nmap <leader>u <Action>(FindUsages)
+nmap <leader>i <Action>(GotoImplementation)
+
+nmap <leader>k <Action>(Back)
+nmap <leader>j <Action>(Forward)
+
+map <C-o> <Action>(Back)
+map <C-i> <Action>(Forward)
+
+map <C-p> :action GoToFile<CR>
+nmap <leader>of :action GoToAction<CR>
+" nmap go <C-S-n>
+nmap go <Action>(GoToFile)
+nnoremap gn :action GoToFile<CR>
+vnoremap go :action GoToFile<CR>
+nnoremap <leader>y :action GoToSymbol<CR>
+nnoremap ga :action GoToAction<CR>
+vnoremap ga :action GoToAction<CR>
+nmap <leader>a :action GoToAction<CR>
+nmap <leader>oa :action GoToAction<CR>
+nmap <C-S-p> <Action>(GoToAction)
+nmap <C-a> :action GoToAction<CR>
+
+nmap <leader>h :action FindInPath<CR>
+
+" MOVE BETWEEN SPLITS
+nnoremap <A-h> <C-W>h
+nnoremap <A-j> <C-W>j
+nnoremap <A-k> <C-W>k
+nnoremap <A-l> <C-W>l
+
+nmap <leader>ws <Action>(SplitHorizontally)
+nmap <leader>wv <Action>(SplitVertically)
+nmap <leader>wu :action Unsplit<CR>
+nmap <leader>wc <Action>(ChangeSplitOrientation)
+nmap <leader>wr <Action>(MoveTabRight)
+nmap <leader>wd <Action>(MoveTabDown)
+nmap <leader>wn :action MoveEditorToOppositeTabGroup<CR>
+
+" Tab navigation
+nmap J <Action>(PreviousTab)
+nmap K <Action>(NextTab)
+
+nmap <C-j> <Action>(MethodDown)
+nmap <C-k> <Action>(MethodUp)
+
+map <S-A-j> <Action>(NextOccurence)
+map <S-A-k> <Action>(PreviousOccurence)
+
+nmap <A-p> <Action>(PinActiveTabToggle)
+nmap <leader>p <Action>(PinActiveTabToggle)
+
+nmap <leader>rl <Action>(RecentLocations)
+
+nmap <leader>u 	:action Run<CR>
+
+map <leader>va <Action>(AddToFavoritesPopup)
+map <leader>ve <Action>(EditFavorites)
+map <leader>vv <Action>(ActivateFavoritesToolWindow)
+map <leader>vw <Action>(ActivateFavoritesToolWindow)
+
+nmap <leader><leader>f{char}    <Plug>(easymotion-f) "  mapped to fn
+nmap <leader><leader>F{char}    <Plug>(easymotion-F) "  mapped to Fn
+nmap <leader><leader>t{char}    <Plug>(easymotion-t) "  mapped to tn
+nmap <leader><leader>T{char}    <Plug>(easymotion-T) "  mapped to Tn
+									"
+nmap <leader><leader>w <Plug>(easymotion-w) "
+nmap <leader><leader>W <Plug>(easymotion-W) "
+nmap <leader><leader>b <Plug>(easymotion-B) "
+nmap <leader><leader>B <Plug>(easymotion-B) "
+nmap <leader><leader>e <Plug>(easymotion-e) "
+nmap <leader><leader>E <Plug>(easymotion-E) "
+nmap <leader><leader>ge <Plug>(easymotion-ge) "
+nmap <leader><leader>gE <Plug>(easymotion-gE) "
+nmap <leader><leader>j <Plug>(easymotion-j) "
+nmap <leader><leader>k <Plug>(easymotion-k) "
+nmap <leader><leader>n <Plug>(easymotion-n) "
+nmap <leader><leader>N <Plug>(easymotion-N) "
+nmap <leader><leader>s <Plug>(easymotion-s) "  mapped to sn

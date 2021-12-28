@@ -1,0 +1,83 @@
+<scheme name="ReSharper Dark" version="142" parent_scheme="ReSharper Dark">
+  <metaInfo>
+    <property name="created">2021-12-27T13:14:47</property>
+    <property name="ide">Rider</property>
+    <property name="ideVersion">2021.2.2.0.0</property>
+    <property name="modified">2021-12-27T13:14:57</property>
+    <property name="originalScheme">_@user_ReSharper Dark</property>
+  </metaInfo>
+  <attributes>
+    <option name="DEFAULT_CLASS_NAME">
+      <value>
+        <option name="FOREGROUND" value="fd6617" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_FIELD">
+      <value>
+        <option name="FOREGROUND" value="49ea0b" />
+      </value>
+    </option>
+    <option name="DEFAULT_INSTANCE_METHOD">
+      <value>
+        <option name="FOREGROUND" value="ffff" />
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
+    <option name="DEFAULT_INTERFACE_NAME">
+      <value>
+        <option name="FOREGROUND" value="e26323" />
+        <option name="FONT_TYPE" value="2" />
+      </value>
+    </option>
+    <option name="DEFAULT_LOCAL_VARIABLE">
+      <value>
+        <option name="FOREGROUND" value="5a991e" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="DEFAULT_PARAMETER">
+      <value>
+        <option name="FOREGROUND" value="9cdcfe" />
+        <option name="FONT_TYPE" value="1" />
+        <option name="EFFECT_COLOR" value="51877f" />
+        <option name="EFFECT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="DEFAULT_STATIC_FIELD">
+      <value>
+        <option name="FOREGROUND" value="ee82ee" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="DEFAULT_STATIC_METHOD">
+      <value>
+        <option name="FOREGROUND" value="c729c7" />
+        <option name="FONT_TYPE" value="3" />
+      </value>
+    </option>
+    <option name="DEFAULT_STRING">
+      <value>
+        <option name="FOREGROUND" value="d69d85" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="ReSharper.CSHARP_EXTENSION_METHOD_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="ff38ff" />
+      </value>
+    </option>
+    <option name="ReSharper.CSHARP_STATIC_CLASS_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="c729c7" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+    <option name="ReSharper.PROPERTY_IDENTIFIER">
+      <value>
+        <option name="FOREGROUND" value="ee82ee" />
+        <option name="FONT_TYPE" value="1" />
+      </value>
+    </option>
+  </attributes>
+</scheme>
