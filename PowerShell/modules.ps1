@@ -24,6 +24,7 @@ ImportOrInstallModule "z"
 
 ImportOrInstallModule "PSFzf"
 
+ImportOrInstallModule "Bookmarks"
 
 # ImportOrInstallModule "posh-git"
 

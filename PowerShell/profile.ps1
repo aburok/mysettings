@@ -97,4 +97,5 @@ Set-Alias k k9s
 set-Alias d docker 
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
-
+Set-Alias zl "z -ListFiles"
+Set-Alias np 'C:\Program Files\Notepad++\notepad++.exe'
