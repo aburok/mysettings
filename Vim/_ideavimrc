@@ -46,32 +46,30 @@ sethandler <C-O> i-v:vim
 sethandler <C-P> i-v:vim
 
 """ Mappings --------------------------------
-map <leader>f <Plug>(easymotion-s)
-map <leader>e <Plug>(easymotion-f)
-
 nmap <leader>d <Action>(Debug)
 nmap <leader>rr <Action>(RenameElement)
 nmap <leader>c <Action>(Stop)
 nmap <leader>z <Action>(ToggleDistractionFreeMode)
 
 " map <leader>s <Action>(SelectInProjectView)
-map <leader>ga <Action>(Annotate)
-map <leader>ga <Action>(Annotate)
-" map <leader>h <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>ga <Action>(Annotate)
+nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
+nmap <leader>gd <Action>(Compare.SameVersion)
 
 map <S-Space> <Action>(GotoNextError)
-nmap ge <Action>(ReSharperGotoNextErrorInSolution)
 
-nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
+map <C-S-e> :action ActivateProjectToolWindow<CR>
+map <leader>we :action ActivateProjectToolWindow<CR>
+
+nmap ge :action ReSharperGotoNextErrorInSolution<CR>zz
+nmap gE :action ReSharperGotoPrevErrorInSolution<CR>zz
 
 map <leader>b <Action>(ToggleLineBreakpoint)
 map <leader>os <Action>(FileStructurePopup)
 
 nmap <leader>u <Action>(FindUsages)
 nmap <leader>i <Action>(GotoImplementation)
-
-nmap <leader>k <Action>(Back)
-nmap <leader>j <Action>(Forward)
+nmap gi <Action>(GotoImplementation)
 
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
@@ -85,18 +83,21 @@ vnoremap go :action GoToFile<CR>
 nnoremap <leader>y :action GoToSymbol<CR>
 nnoremap ga :action GoToAction<CR>
 vnoremap ga :action GoToAction<CR>
-nmap <leader>a :action GoToAction<CR>
+nmap gr :action RecentFiles<CR>
+nmap <leader>aa :action ShowIntentionActions<CR>
+nmap <C-a> :action ShowIntentionActions<CR>
+nmap <leader>ar :action RefactoringMenu<CR>
 nmap <leader>oa :action GoToAction<CR>
 nmap <C-S-p> <Action>(GoToAction)
-nmap <C-a> :action GoToAction<CR>
+nmap <C-e> :action RecentFiles<CR>
 
 nmap <leader>h :action FindInPath<CR>
 
 " MOVE BETWEEN SPLITS
-nnoremap <A-h> <C-W>h
-nnoremap <A-j> <C-W>j
-nnoremap <A-k> <C-W>k
-nnoremap <A-l> <C-W>l
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 nmap <leader>ws <Action>(SplitHorizontally)
 nmap <leader>wv <Action>(SplitVertically)
@@ -104,35 +105,100 @@ nmap <leader>wu :action Unsplit<CR>
 nmap <leader>wc <Action>(ChangeSplitOrientation)
 nmap <leader>wr <Action>(MoveTabRight)
 nmap <leader>wd <Action>(MoveTabDown)
-nmap <leader>wn :action MoveEditorToOppositeTabGroup<CR>
+
+nmap <leader>wt :action MoveEditorToOppositeTabGroup<CR>
+
+vmap <leader>ss :action SurroundWith<CR>
+vmap <leader>sl :action SurroundWithLiveTemplate<CR>
+
+nmap <leader>o :action ReformatCode<CR>
+
+"""""""""""""""""
+""" BOOKMARKS """
+nmap mm :action ToggleBookmarkWithMnemonic<CR>
+nmap ml :action ShowBookmarks<CR>
+nmap mx :action DeleteMnemonicFromBookmark<CR>
+nmap '' :action ShowBookmarks<CR>
+nmap 'j :action GotoNextBookmark<CR>
+nmap 'k :action GotoPreviousBookmark<CR>
+
+" Q W E R T
+nmap mq :action ToggleBookmarkQ<CR>
+nmap 'q :action GoToBookmarkQ<CR>
+nmap mw :action ToggleBookmarkW<CR>
+nmap 'w :action GoToBookmarkW<CR>
+nmap me :action ToggleBookmarkE<CR>
+nmap 'e :action GoToBookmarkE<CR>
+nmap mr :action ToggleBookmarkR<CR>
+nmap 'r :action GoToBookmarkR<CR>
+nmap mt :action ToggleBookmarkT<CR>
+nmap 't :action GoToBookmarkT<CR>
+
+" A S D F
+nmap ma :action ToggleBookmarkA<CR>
+nmap 'a :action GoToBookmarkA<CR>
+nmap ms :action ToggleBookmarkS<CR>
+nmap 's :action GoToBookmarkS<CR>
+nmap md :action ToggleBookmarkD<CR>
+nmap 'd :action GoToBookmarkD<CR>
+nmap mf :action ToggleBookmarkF<CR>
+nmap 'f :action GoToBookmarkF<CR>
+
+" Z C V
+nmap mz :action ToggleBookmarkZ<CR>
+nmap 'z :action GoToBookmarkZ<CR>
+
+""" END : BOOKMARKS """
+"""""""""""""""""""""""
+
+
+nmap <leader>tr :action RiderUnitTestRunContextAction<CR>
+nmap <leader>td :action RiderUnitTestDebugContextAction<CR>
+nmap <leader>tt :action RiderUnitTestQuickListPopupAction<CR>
+nmap <leader>ta :action RiderUnitTestRunSolutionAction<CR>
+
+vmap <leader>c :action CommentByLineComment<CR>
 
 " Tab navigation
 nmap J <Action>(PreviousTab)
 nmap K <Action>(NextTab)
 
-nmap <C-j> <Action>(MethodDown)
-nmap <C-k> <Action>(MethodUp)
+nmap <S-j> <Action>(MethodDown)
+nmap <S-k> <Action>(MethodUp)
 
 map <S-A-j> <Action>(NextOccurence)
+map gj <Action>(NextOccurence)
 map <S-A-k> <Action>(PreviousOccurence)
+map gk <Action>(PreviousOccurence)
 
 nmap <A-p> <Action>(PinActiveTabToggle)
 nmap <leader>p <Action>(PinActiveTabToggle)
 
 nmap <leader>rl <Action>(RecentLocations)
 
-nmap <leader>u 	:action Run<CR>
+nmap <leader>nn :action ChooseRunConfiguration<CR>
+nmap <leader>ns :action Stop<CR>
 
 map <leader>va <Action>(AddToFavoritesPopup)
 map <leader>ve <Action>(EditFavorites)
 map <leader>vv <Action>(ActivateFavoritesToolWindow)
 map <leader>vw <Action>(ActivateFavoritesToolWindow)
 
+nmap <leader>= <Action>(EditorIncreaseFontSize)
+nmap <leader>- <Action>(EditorDecreaseFontSize)
+nmap <leader>0 <Action>(EditorResetFontSize)
+
+
+nmap <leader>f <Plug>(easymotion-s)
+nmap <leader>e <Plug>(easymotion-f)
+nmap <leader>j <Plug>(easymotion-w)
+nmap <leader>k <Plug>(easymotion-B)
+
 nmap <leader><leader>f{char}    <Plug>(easymotion-f) "  mapped to fn
 nmap <leader><leader>F{char}    <Plug>(easymotion-F) "  mapped to Fn
 nmap <leader><leader>t{char}    <Plug>(easymotion-t) "  mapped to tn
 nmap <leader><leader>T{char}    <Plug>(easymotion-T) "  mapped to Tn
-									"
+
 nmap <leader><leader>w <Plug>(easymotion-w) "
 nmap <leader><leader>W <Plug>(easymotion-W) "
 nmap <leader><leader>b <Plug>(easymotion-B) "

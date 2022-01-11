@@ -18,15 +18,18 @@ bind generic Y view-stash
 bind generic Q none
 bind generic R none
 
+bind generic Esc back
+
 bind generic g  none
 bind generic gg move-first-line
 bind generic gp view-grep
 bind main	gh	:toggle commit-title-graph # Toggle revision graph visualization
 bind main	gr	:toggle commit-title-refs  # Toggle reference display (tags/branches)
 bind main    G  none
-bind generic G  move-last-line
+bind generic G      move-last-line
+bind generic <C-q>     quit
 
-bind generic <F12> :source $TIGRC_USER
+bind generic <F12> :source C:/mysettings/git/.tigrc
 
 # bind generic <S-Space> move-page-up
 
@@ -49,7 +52,7 @@ bind main q         none
 bind main Q         view-close
 bind main F         >git fetch --all
 bind main c         none
-bind main co        >git checkout %(branch)
+bind main co        >git checkout %(branch)  # Checkout selected branch
 bind main cl        >git checkout %(branch)
 bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
@@ -95,7 +98,6 @@ bind refs B         @git checkout -b "%(prompt Enter new branch name: )"
 
 bind refs p         none
 bind refs pl        ?git pull %(remote) %(branch)
-bind refs pd        ?git pull %(remote) develop-redesign
 
 ### PUSH ###
 bind refs U        ?git push %(remote) %(branch)
@@ -104,8 +106,7 @@ bind refs U        ?git push %(remote) %(branch)
 bind refs MM        ?git merge %(branch) --no-commit --no-ff
 bind refs Mf        ?git merge %(branch) --no-commit --no-ff
 bind refs Ms        ?git merge %(branch) --no-commit --no-ff --squash
-bind refs Md        ?git merge develop-redesign --no-commit --no-ff
-bind refs MD        ?git merge develop-redesign
+bind refs Mm        ?git merge %(remote)/main --no-commit --no-ff
 bind refs MO        ?git merge %(remote)/%(branch)
 bind refs Mo        ?git merge %(remote)/%(branch) --no-commit --no-ff
 bind refs Mr        >TortoiseGitProc.exe /command:resolve
@@ -118,21 +119,19 @@ bind refs co        ?git checkout %(branch)
 bind refs cl        ?git checkout %(branch)
 bind refs cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
-bind refs cd        >git checkout develop-redesign
-bind refs ce        >git checkout %(remote)/develop-redesign
 
-# bind refs D         !git difftool --no-prompt %(commit) develop-redesign  # -y - no prompt
 bind refs D     none
 bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)
-bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(branch)
-bind refs Do         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol develop-redesign..%(remote)/develop-redesign ":(exclude)*.item"
+bind refs Dd         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol main..%(branch)
+bind refs Do         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol main..%(remote)/main
+
 ##########################################
 # Compare / Show changes / Diff  branches
 ##########################################
 # Compare / Diff selected branch with HEAD branch
 bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:"HEAD" /revision2:"%(branch)"
-# Compare / Diff selected branch with develop-redesign branch
-bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"develop-redesign" /revision2:"%(branch)"
+# Compare / Diff selected branch with main branch
+bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"main" /revision2:"%(branch)"
 
 # Delete refs / branch from origin
 bind refs XL         ?git push %(remote) --delete %(branch)
@@ -148,7 +147,14 @@ bind refs Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
 
 bind refs r     refresh
 
-bind refs F         >git fetch --all
+bind refs F         none
+bind refs FF        >git fetch --all
+bind refs FR        >git fetch %(remote) %(branch):%(branch)
+bind refs FM        >git fetch %(remote) main:main
+
+##########################
+### END : REFS ###########
+##########################
 
 
 ##########################
@@ -195,7 +201,7 @@ bind status ar >git reset
 bind status M none
 bind status Ma ?git merge --abort
 bind status Mc ?git merge --continue
-bind status Md ?git merge develop-redesign
+bind status MM ?git merge %(remote)/main
 bind status Mr >TortoiseGitProc.exe /command:resolve
 
 bind status c >TortoiseGitProc.exe /command:diff /path:"%(file)"
