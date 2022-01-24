@@ -1,8 +1,8 @@
 class WindowTitleParser {
-    GetInfo(pattern = ""){
+    GetInfo(pattern := ""){
         WinGetTitle WinTitle, A
 
-        if(pattern <> ""){
+        if(pattern != ""){
             itemInfoText := this._Match(WinTitle, pattern)
         } else {
             itemInfoText := WinTitle

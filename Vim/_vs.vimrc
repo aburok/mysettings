@@ -114,8 +114,11 @@ nnoremap K :vsc Window.NextTab<CR>
 nnoremap L :vsc window.NextDocumentWindowNav<CR>
 
 " Go to file / member
+" Use same shortcuts as in VS Code
+nnoremap <C-p> :vsc Edit.GoToFile<CR>
+nnoremap <C-S-p> :vsc Edit.GoToAll<CR>
+
 nmap gl :vsc ReSharper.ReSharper_GotoFile<CR>
-nnoremap <C-P> :vsc ReSharper.ReSharper_GotoFile<CR>
 nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
 nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
@@ -125,6 +128,8 @@ nnoremap gp : vsc Edit.PeekDefinition <CR>
 " SEARCH go to next/prev location"
 "" Search
 nnoremap gl :vsc ReSharper.ReSharper_ResultList_GoToNextLocation<CR>
+nnoremap gn :vsc Edit.GoToNextLocation<CR>
+nnoremap gN :vsc Edit.GoToPrevLocation<CR>
 nnoremap gL :vsc ReSharper.ReSharper_ResultList_GoToPrevLocation<CR>
 nmap gwf :vsc Resharper.Resharper_ShowFindResults<CR>
 
@@ -251,8 +256,8 @@ vmap <leader>W :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 noremap <C-W> :vsc ReSharper.ReSharper_ExtendSelection<CR>
 noremap <C-S-W> :vsc ReSharper.ReSharper_ShrinkSelection<CR>
 
-" noremap <C-S-Space> :vsc Edit.ParameterInfo<CR>
-nnoremap <S-Space> :vsc Resharper.Resharper_ParameterInfoShow<CR>
+noremap <C-S-Space> :vsc Edit.ParameterInfo<CR>
+" nnoremap <S-Space> :vsc Resharper.Resharper_ParameterInfoShow<CR>
 " }}}
 
 " MVC {{{

@@ -38,7 +38,7 @@ class WebsiteMenuItem extends NavigationItem {
         if(this.Url){
             this.OpenUrl()
         } else {
-            MsgBox, Url is empty and cannot be opened.
+            MsgBox "Url is empty and cannot be opened."
         }
     }
 }

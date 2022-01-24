@@ -6,8 +6,7 @@ SlugifyText(Text){
     return Slug
 }
 
-
-StringJoin(array, delimiter = ";")
+StringJoin(array, delimiter := ";")
 {
     text := ""
     for index, element in array
@@ -23,20 +22,20 @@ StringJoin(array, delimiter = ";")
 InsertCharacterAtStart(vText, character){
     result := ""
 
-    Loop, parse, vText, `n, `r
+    Loop Parse, vText, "`n", "`r"
     {
         result := result . character . " " . %A_LoopField%
     }
 
     resultText := StringJoin(vText, "`n`r".character)
-    MsgBox, resultText
+    MsgBox( resultText )
 
     return resultText
 }
 
 UnEscape_Chars(string){
-    StringReplace string, string, file:///, , All
-    StringReplace string, string, `%20, `  , All
-    StringReplace string, string, `/, `\, All
+    string := StrReplace (string, "file:///", "")
+    string := StrReplace ( string, "`%20", "` " )
+    string := StrReplace ( string, "`/", "`\")
     return string
 }

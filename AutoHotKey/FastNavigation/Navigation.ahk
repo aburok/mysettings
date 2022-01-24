@@ -5,7 +5,6 @@
 #Include %A_ScriptDir%\FastNavigation\Items\Web\Web.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Files.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Shell.ahk
-#Include %A_ScriptDir%\FastNavigation\Items\Sitecore\Sitecore.ahk
 
 Log("script path {1}", [%A_ScriptDir%])
 
@@ -30,7 +29,7 @@ class FastNavigation extends NavigationItem{
         info := this.titleParse.GetInfo(pattern)
 
         ;Log("Search for current Env... [{1}] Config Dump {2}", [pattern, Jxon_Dump(this.Config)])
-        if(info <> "") {
+        if(info != "") {
             this.Environment := this.Config.GetEnvironment(info.domain, info.href)
         }
     }

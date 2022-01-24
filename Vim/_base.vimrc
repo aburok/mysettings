@@ -7,7 +7,7 @@ let g:mapleader = ' '
 let mapleader = ' '
 
 map Q <nop>
-nnoremap q :wq<CR>
+nnoremap qq :wq<CR>
 nnoremap P "0p
 vnoremap P "0p
 
@@ -97,5 +97,5 @@ vnoremap rr "_dhP
 vnoremap ra "ddh"ap
 vnoremap a "ay
 
-vnoremap <leader>d "dy'>p
+vnoremap <leader>d "dy'>o<Esc>p
 

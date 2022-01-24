@@ -25,8 +25,8 @@ class TranslateItem extends NavigationItem {
     }
 
     ActivateItem(){
-        InputBox, WordToTranslate, Insert Word to translate
-        InputBox, Language, Insert destination language
+        WordToTranslate := InputBox( "Insert Word to translate")
+        Language := InputBox (" Insert destination language ")
 
         url := Format(this.UrlFormat, Language, WordToTranslate)
         Chrome(url)

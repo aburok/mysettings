@@ -19,7 +19,7 @@ class CopyPropertyMenuItem extends NavigationItem {
 
     ActivateItem(){
         value := this.GetRootValue()
-        if(value <> ""){
+        if(value != ""){
             if(this.GuidFormatter.IsGuid(value)){
                 value:= this.GuidFormatter.Format(value)
             }
@@ -28,7 +28,7 @@ class CopyPropertyMenuItem extends NavigationItem {
             ;MsgBox, % Format("{1} : {2}", this.Description, value)
             return
         }
-        MsgBox, % "Unable to copy property " . this.PropertyName . " from Root"
+        MsgBox("Unable to copy property " . this.PropertyName . " from Root")
         Log("Unable to copy property {1} from Root", [this.PropertyName])
     }
 }

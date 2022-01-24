@@ -12,27 +12,27 @@ class CopyFilePathNavigationItem extends NavigationItem
     }
 
     ShowSplash(helpText){
-        SplashTextOn, 800, 600, Updated script, % helpText
+        ShowSplash("Updated script", helpText)
     }
 
     ActivateItem(){
         Sleep 100
-        if(WinActive("ahk_exe  gvim.exe")){
-            Send ,yf
+        if(WinActive("ahk_exe gvim.exe")){
+            Send ",yf"
         }
         if(WinActive("ahk_exe TOTALCMD64.EXE") or WinActive("ahk_exe devenv.exe") or WinActive("ahk_exe notepad++.exe")){
-            Send ^+y
+            Send "^+y"
         }
         if(WinActive("ahk_exe Code.exe")){
-            Send +!c
+            Send "+!c"
         }
         Sleep 100
 
         this.AbsolutPath := Clipboard
         this.RelativePath := StrReplace(Clipboard, this.RelativeRoot, "")
-        SplitPath, Clipboard, name, Clipboard
+        Clipboard := SplitPath( name, Clipboard)
         this.FileName := name
-        SplitPath, Clipboard, Clipboard, dir
+        Clipboard := SplitPath ( Clipboard, dir )
         this.ContaingFolder := dir
 
         this.ShowCommandsAndLaunchSelected()

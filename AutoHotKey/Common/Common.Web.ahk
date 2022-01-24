@@ -16,8 +16,8 @@ resetIISAndPing(url2Ping){
 }
 
 resetAppPool(appPool){
-    command := Format("Restart-WebAppPool -Name '{1}'", appPool)
-    Run, powershell -NoExit -Command  %command%
+    ; command := Format("Restart-WebAppPool -Name '{1}'", appPool)
+    ; Run, powershell -NoExit -Command  %command%
 }
 
 changeAddress(to, fromList){
@@ -30,41 +30,41 @@ changeAddress(to, fromList){
 }
 
 CopyBrowserUrl(){
-    Send ^l
-    Sleep 100
-    Send ^c
-    Sleep 100
-    return Clipboard
+    ; Send "^l"
+    ; Sleep 100
+    ; Send "^c"
+    ; Sleep 100
+    ; return Clipboard
 }
 
 Chrome(pageUrl){
-    Run, chrome.exe %pageUrl%
+    Run "chrome.exe " . pageUrl
 }
 
 Firefox(pageUrl){
-    Run, C:\Program Files\Mozilla Firefox\firefox.exe %pageUrl%
+    Run "C:\Program Files\Mozilla Firefox\firefox.exe " . pageUrl
 }
 
 Edge(pageUrl){
-    Run microsoft-edge:%pageUrl%
+    Run "microsoft-edge:" . pageUrl
 }
 
 
 IE(pageUrl){
-    Run, iexplore.exe %pageUrl%
+    Run "iexplore.exe " . pageUrl
 }
 
 FlushAll(){
-    MsgBox % RunWaitMany("
-    (
-        echo Flush DNS
-        echo ipconfig `/flushdns
-        ipconfig `/flushdns
-        echo nbtstat -r
-        nbtstat -r
-        echo netsh int ip reset
-        netsh int ip reset
-        echo netsh winsock reset
-        netsh winsock reset
-    )")
+    ; MsgBox % RunWaitMany("
+    ; (
+    ;     echo Flush DNS
+    ;     echo ipconfig `/flushdns
+    ;     ipconfig `/flushdns
+    ;     echo nbtstat -r
+    ;     nbtstat -r
+    ;     echo netsh int ip reset
+    ;     netsh int ip reset
+    ;     echo netsh winsock reset
+    ;     netsh winsock reset
+    ; )")
 }

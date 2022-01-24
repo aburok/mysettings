@@ -43,7 +43,7 @@ sethandler <C-K> n-v:vim
 sethandler <C-L> n-v:vim
 sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
-sethandler <C-P> i-v:vim
+" sethandler <C-P> i-v:vim
 
 """ Mappings --------------------------------
 nmap <leader>d <Action>(Debug)
@@ -55,17 +55,19 @@ nmap <leader>z <Action>(ToggleDistractionFreeMode)
 nmap <leader>ga <Action>(Annotate)
 nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 nmap <leader>gd <Action>(Compare.SameVersion)
+nmap <leader>gs <Action>(FileStructurePopup)
+
+map <A-K1> <Action>(Resume)
 
 map <S-Space> <Action>(GotoNextError)
 
 map <C-S-e> :action ActivateProjectToolWindow<CR>
 map <leader>we :action ActivateProjectToolWindow<CR>
 
-nmap ge :action ReSharperGotoNextErrorInSolution<CR>zz
-nmap gE :action ReSharperGotoPrevErrorInSolution<CR>zz
+nmap ge :action ReSharperGotoNextErrorInSolution<CR>
+nmap gE :action ReSharperGotoPrevErrorInSolution<CR>
 
 map <leader>b <Action>(ToggleLineBreakpoint)
-map <leader>os <Action>(FileStructurePopup)
 
 nmap <leader>u <Action>(FindUsages)
 nmap <leader>i <Action>(GotoImplementation)
@@ -74,8 +76,7 @@ nmap gi <Action>(GotoImplementation)
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
 
-map <C-p> :action GoToFile<CR>
-nmap <leader>of :action GoToAction<CR>
+" map <C-p> :action GoToFile<CR>
 " nmap go <C-S-n>
 nmap go <Action>(GoToFile)
 nnoremap gn :action GoToFile<CR>
@@ -87,8 +88,7 @@ nmap gr :action RecentFiles<CR>
 nmap <leader>aa :action ShowIntentionActions<CR>
 nmap <C-a> :action ShowIntentionActions<CR>
 nmap <leader>ar :action RefactoringMenu<CR>
-nmap <leader>oa :action GoToAction<CR>
-nmap <C-S-p> <Action>(GoToAction)
+" nmap <C-S-p> <Action>(GoToAction)
 nmap <C-e> :action RecentFiles<CR>
 
 nmap <leader>h :action FindInPath<CR>
@@ -99,6 +99,7 @@ nnoremap <C-j> <C-W>j
 nnoremap <C-k> <C-W>k
 nnoremap <C-l> <C-W>l
 
+
 nmap <leader>ws <Action>(SplitHorizontally)
 nmap <leader>wv <Action>(SplitVertically)
 nmap <leader>wu :action Unsplit<CR>
@@ -106,50 +107,79 @@ nmap <leader>wc <Action>(ChangeSplitOrientation)
 nmap <leader>wr <Action>(MoveTabRight)
 nmap <leader>wd <Action>(MoveTabDown)
 
+nmap <leader>ww :action MoveEditorToOppositeTabGroup<CR>
 nmap <leader>wt :action MoveEditorToOppositeTabGroup<CR>
 
 vmap <leader>ss :action SurroundWith<CR>
 vmap <leader>sl :action SurroundWithLiveTemplate<CR>
 
-nmap <leader>o :action ReformatCode<CR>
+nmap <leader>oo :action ReformatCode<CR>
 
 """""""""""""""""
 """ BOOKMARKS """
 nmap mm :action ToggleBookmarkWithMnemonic<CR>
-nmap ml :action ShowBookmarks<CR>
 nmap mx :action DeleteMnemonicFromBookmark<CR>
 nmap '' :action ShowBookmarks<CR>
 nmap 'j :action GotoNextBookmark<CR>
 nmap 'k :action GotoPreviousBookmark<CR>
 
-" Q W E R T
+" Q W E R T Y U I O P 
 nmap mq :action ToggleBookmarkQ<CR>
-nmap 'q :action GoToBookmarkQ<CR>
+nmap 'q :action GotoBookmarkQ<CR>
 nmap mw :action ToggleBookmarkW<CR>
-nmap 'w :action GoToBookmarkW<CR>
+nmap 'w :action GotoBookmarkW<CR>
 nmap me :action ToggleBookmarkE<CR>
-nmap 'e :action GoToBookmarkE<CR>
+nmap 'e :action GotoBookmarkE<CR>
 nmap mr :action ToggleBookmarkR<CR>
-nmap 'r :action GoToBookmarkR<CR>
+nmap 'r :action GotoBookmarkR<CR>
 nmap mt :action ToggleBookmarkT<CR>
-nmap 't :action GoToBookmarkT<CR>
+nmap 't :action GotoBookmarkT<CR>
+nmap my :action ToggleBookmarkY<CR>
+nmap 'y :action GotoBookmarkY<CR>
+nmap mu :action ToggleBookmarkU<CR>
+nmap 'u :action GotoBookmarkU<CR>
+nmap mi :action ToggleBookmarkI<CR>
+nmap 'i :action GotoBookmarkI<CR>
+nmap mo :action ToggleBookmarkO<CR>
+nmap 'o :action GotoBookmarkO<CR>
+nmap mp :action ToggleBookmarkP<CR>
+nmap 'p :action GotoBookmarkP<CR>
 
-" A S D F
+" A S D F G H J K
 nmap ma :action ToggleBookmarkA<CR>
-nmap 'a :action GoToBookmarkA<CR>
+nmap 'a :action GotoBookmarkA<CR>
 nmap ms :action ToggleBookmarkS<CR>
-nmap 's :action GoToBookmarkS<CR>
+nmap 's :action GotoBookmarkS<CR>
 nmap md :action ToggleBookmarkD<CR>
-nmap 'd :action GoToBookmarkD<CR>
+nmap 'd :action GotoBookmarkD<CR>
 nmap mf :action ToggleBookmarkF<CR>
-nmap 'f :action GoToBookmarkF<CR>
+nmap 'f :action GotoBookmarkF<CR>
+nmap mg :action ToggleBookmarkG<CR>
+nmap 'g :action GotoBookmarkG<CR>
+nmap mh :action ToggleBookmarkH<CR>
+nmap 'h :action GotoBookmarkH<CR>
+nmap mj :action ToggleBookmarkJ<CR>
+nmap 'j :action GotoBookmarkJ<CR>
+nmap mk :action ToggleBookmarkK<CR>
+nmap 'k :action GotoBookmarkK<CR>
+nmap ml :action ToggleBookmarkL<CR>
+nmap 'l :action GotoBookmarkL<CR>
 
 " Z C V
 nmap mz :action ToggleBookmarkZ<CR>
-nmap 'z :action GoToBookmarkZ<CR>
+nmap 'z :action GotoBookmarkZ<CR>
+nmap mc :action ToggleBookmarkC<CR>
+nmap 'c :action GotoBookmarkC<CR>
+nmap mv :action ToggleBookmarkV<CR>
+nmap 'v :action GotoBookmarkV<CR>
+nmap mb :action ToggleBookmarkB<CR>
+nmap 'b :action GotoBookmarkB<CR>
+nmap mn :action ToggleBookmarkN<CR>
+nmap 'n :action GoToBookmarkN<CR>
 
 """ END : BOOKMARKS """
 """""""""""""""""""""""
+
 
 
 nmap <leader>tr :action RiderUnitTestRunContextAction<CR>
@@ -166,9 +196,9 @@ nmap K <Action>(NextTab)
 nmap <S-j> <Action>(MethodDown)
 nmap <S-k> <Action>(MethodUp)
 
-map <S-A-j> <Action>(NextOccurence)
+map <C-A-j> <Action>(NextOccurence)
 map gj <Action>(NextOccurence)
-map <S-A-k> <Action>(PreviousOccurence)
+map <C-A-k> <Action>(PreviousOccurence)
 map gk <Action>(PreviousOccurence)
 
 nmap <A-p> <Action>(PinActiveTabToggle)
@@ -176,7 +206,10 @@ nmap <leader>p <Action>(PinActiveTabToggle)
 
 nmap <leader>rl <Action>(RecentLocations)
 
+nmap <leader>l :action LocateInSolutionView<CR>
+
 nmap <leader>nn :action ChooseRunConfiguration<CR>
+nmap <leader>nd :action ChooseDebugConfiguration<CR>
 nmap <leader>ns :action Stop<CR>
 
 map <leader>va <Action>(AddToFavoritesPopup)

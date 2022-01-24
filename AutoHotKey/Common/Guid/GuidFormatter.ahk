@@ -8,13 +8,13 @@ class GuidFormatter {
     static XFormat := "{1}x{2}x{3}x{4}x{5}"
 
     IsGuid(guidAsText){
-        position := RegExMatch(guidAsText, this.guidRegex, guidMatch)
+        position := RegExMatch(guidAsText, this.guidRegex)
 
         return position > 0
     }
 
-    Format(guidAsText, outputFormat =  "{1}-{2}-{3}-{4}-{5}"){
-        position := RegExMatch(guidAsText, this.guidRegex, guidMatch)
+    Format(guidAsText, outputFormat :=  "{1}-{2}-{3}-{4}-{5}"){
+        position := RegExMatch(guidAsText, this.guidRegex, &guidMatch)
 
         if(position = 0){
             return ""

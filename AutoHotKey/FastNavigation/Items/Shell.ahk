@@ -61,7 +61,7 @@ class CmdNavigationItem extends NavigationItem
 
     ActivateItem(){
         cmd := this.GetCommand()
-        Run, %cmdPath% /c %cmd%
+        Run cmdPath . " /c " . cmd
     }
 }
 

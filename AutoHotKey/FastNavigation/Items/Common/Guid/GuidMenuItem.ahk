@@ -18,7 +18,7 @@ class GuidMenuItem extends NavigationItem {
             return 1
         }
 
-        InputBox, GuidToFormat, Insert Guid you like to format
+        GuidToFormat:= InputBox("Insert Guid you like to format", "Guid")
         if(this.GuidFormatter.IsGuid(GuidToFormat)){
             Log("User pasted correct GUID = {1}, returning.", [GuidToFormat])
             this.GuidToFormat := GuidToFormat

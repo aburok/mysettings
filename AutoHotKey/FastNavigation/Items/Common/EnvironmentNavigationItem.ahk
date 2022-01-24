@@ -1,7 +1,7 @@
 class EnvironmentNavigationItem extends NavigationItem {
     __New(environment){
         letter := environment.titlePrefix
-        StringLower, letter, letter
+        letter := StrLower( letter)
         base.__New(letter, environment.name)
         this.Environment := environment
     }

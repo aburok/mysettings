@@ -99,3 +99,12 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias zl "z -ListFiles"
 Set-Alias np 'C:\Program Files\Notepad++\notepad++.exe'
+
+$AutoHotKeyBin = "C:\mysettings\AutoHotKey\bin\AutoHotkey_2.0-beta.3\AutoHotkey64.exe" ;
+function Run-Ahk (){
+    Start-Process "$AutoHotKeyBin" "C:\mysettings\AutoHotKey\AutoHotkey.ahk"
+}
+
+function Run-AhkMouse (){
+    Start-Process "$AutoHotKeyBin" "C:\mysettings\AutoHotKey\MouseButtons.ahk"
+}

@@ -52,7 +52,7 @@ class ConfigurationReader {
 
     _ReadConfiguration(){
         filePath := this.FileName
-        FileRead, FileContent, %filePath%
+        FileContent := FileRead(filePath)
         ;Log("Config {1}, FilePath {2}", [FileContent, filePath  ])
         this._Configuration := Jxon_Load(fileContent)
         this.Common := this._Configuration.Environments.Common

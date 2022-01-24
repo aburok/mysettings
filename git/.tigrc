@@ -28,6 +28,7 @@ bind main	gr	:toggle commit-title-refs  # Toggle reference display (tags/branche
 bind main    G  none
 bind generic G      move-last-line
 bind generic <C-q>     quit
+bind generic <C-r>      refresh
 
 bind generic <F12> :source C:/mysettings/git/.tigrc
 
@@ -52,11 +53,12 @@ bind main q         none
 bind main Q         view-close
 bind main F         >git fetch --all
 bind main c         none
-bind main co        >git checkout %(branch)  # Checkout selected branch
-bind main cl        >git checkout %(branch)
+bind main C         >git checkout %(branch)
+bind main co        >git checkout %(branch)
+bind main cc        >git checkout %(branch)
 bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
-bind main MN        ?git merge %(branch) --no-commit --no-ff
+bind main M         ?git merge %(branch) --no-commit --no-ff
 bind main Pc        ?git cherry-pick -n %(commit)
 bind main PC        ?git cherry-pick %(commit)
 
@@ -72,8 +74,10 @@ bind main Rir       !git rebase -i "%(remote)/%(branch)"
 bind main Rml       !git rebase --preserve-merges %(branch)
 bind main Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
 bind main Rc        !git rebase --continue
-bind main RR        refresh
 bind main V         ?git revert %(commit)
+
+bind main EE         ?git reset --mixed %(commit)
+bind main EH         ?git reset --hard %(commit)
 
 # Search given pattern with line-numbers
 bind main S         !git grep --line-number %(prompt)
@@ -118,7 +122,8 @@ bind refs c         none
 bind refs co        ?git checkout %(branch)
 bind refs cl        ?git checkout %(branch)
 bind refs cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
-bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
+# bind refs cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
+bind refs cm        ?git checkout -B "main" "%(remote)/main"
 
 bind refs D     none
 bind refs Dg         >git diff --ignore-blank-lines --ignore-cr-at-eol --ignore-space-at-eol ..%(commit)
@@ -145,11 +150,9 @@ bind refs Rir       !git rebase -i "%(remote)/%(branch)"
 bind refs Rml       !git rebase --preserve-merges %(branch)
 bind refs Rmr       !git rebase --preserve-merges "%(remote)/%(branch)"
 
-bind refs r     refresh
-
 bind refs F         none
-bind refs FF        >git fetch --all
-bind refs FR        >git fetch %(remote) %(branch):%(branch)
+bind refs FA        >git fetch --all
+bind refs FF        >git fetch %(remote) %(branch):%(branch)
 bind refs FM        >git fetch %(remote) main:main
 
 ##########################
@@ -175,14 +178,13 @@ bind status gC :!git clean -fd
 bind status gr :!git checkout %(file)
 bind status ga ?git checkout *
 bind status S none
-bind status s refresh
 bind status Sa  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )"
 bind status Ss  @git stash save --keep-index --include-untracked "%(prompt Enter stash name: )"
 bind status Sf  @git stash push -m "%(prompt Enter stash name: )" "%(file)"
 
 bind status p  none
 bind status UU ?git push %(remote) %(branch)
-bind status Uf ?git push -f origin
+bind status Uf ?git push -f %(remote) %(branch)
 bind status Un ?git push --set-upstream %(remote) %(repo:head)
 bind status Uh        ?git push %(remote) %(branch)
 

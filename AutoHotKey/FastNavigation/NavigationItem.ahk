@@ -1,7 +1,7 @@
 class NavigationItem {
     SubItems := []
 
-    __New(letter,  description){
+    __New(letter, description){
         this.Letter := letter
         this.Description := description
         this.Level := 0
@@ -29,7 +29,7 @@ class NavigationItem {
         this.AssignRoot()
         this.ShowHelp()
 
-        INPUT, command, T10 L1 I
+        command := KeyWaitAny("T10 L1 I")
 
         this.HideHelp()
         this.LaunchCommand(command)
@@ -42,12 +42,9 @@ class NavigationItem {
     }
 
     HideHelp(){
-        SplashTextOff
+        ; SplashTextOff
     }
 
-    ShowSplash(title, text){
-        SplashTextOn, 1200, 600, %title% , %text%
-    }
 
     GetCommandsList(){
         helpText := "Available Commands: `n"
@@ -75,7 +72,7 @@ class NavigationItem {
         for index, cmd in this.SubItems
         {
             letter:= cmd.Letter
-            if(letter == command)   {
+            if(letter == command) {
                 cmd.ActivateItem()
             }
         }
@@ -95,7 +92,7 @@ class NavigationItem {
         for index, subItem in this.SubItems
         {
             subItem.Root := newRoot
-            Log("[SubItem] '{1}', Root : {2}, Parent {3}.", [subItem.Description,  subItem.Root.Description, subItem.Parent.Description])
+            Log("[SubItem] '{1}', Root : {2}, Parent {3}.", [subItem.Description, subItem.Root.Description, subItem.Parent.Description])
         }
     }
 }

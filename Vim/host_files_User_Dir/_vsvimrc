@@ -2,4 +2,4 @@ source C:\mysettings\vim\_vim.vimrc
 source C:\mysettings\vim\_vs.vimrc
 
 " REload source file for visual studio"
-nmap <Leader>lc :source C:mysettings\vim\_vsvimrc<CR>
+nmap <Leader>lc :source C\:mysettings\vim\_vs.vimrc<CR>
