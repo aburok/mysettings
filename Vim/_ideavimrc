@@ -67,7 +67,9 @@ map <leader>we :action ActivateProjectToolWindow<CR>
 nmap ge :action ReSharperGotoNextErrorInSolution<CR>
 nmap gE :action ReSharperGotoPrevErrorInSolution<CR>
 
-map <leader>b <Action>(ToggleLineBreakpoint)
+map <leader>bb <Action>(ToggleLineBreakpoint)
+map <leader>be <Action>(EditBreakpoint)
+map <leader>bt <Action>(XDebugger.MuteBreakpoints)
 
 nmap <leader>u <Action>(FindUsages)
 nmap <leader>i <Action>(GotoImplementation)
@@ -208,9 +210,9 @@ nmap <leader>rl <Action>(RecentLocations)
 
 nmap <leader>l :action LocateInSolutionView<CR>
 
-nmap <leader>nn :action ChooseRunConfiguration<CR>
-nmap <leader>nd :action ChooseDebugConfiguration<CR>
-nmap <leader>ns :action Stop<CR>
+nmap <leader>ee :action ChooseRunConfiguration<CR>
+nmap <leader>ed :action ChooseDebugConfiguration<CR>
+nmap <leader>es :action Stop<CR>
 
 map <leader>va <Action>(AddToFavoritesPopup)
 map <leader>ve <Action>(EditFavorites)
@@ -223,7 +225,7 @@ nmap <leader>0 <Action>(EditorResetFontSize)
 
 
 nmap <leader>f <Plug>(easymotion-s)
-nmap <leader>e <Plug>(easymotion-f)
+" nmap <leader>e <Plug>(easymotion-f)
 nmap <leader>j <Plug>(easymotion-w)
 nmap <leader>k <Plug>(easymotion-B)
 

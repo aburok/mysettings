@@ -139,8 +139,8 @@ bind refs Dt        >TortoiseGitProc.exe /command:showcompare /revision1:"HEAD" 
 bind refs Dd        >TortoiseGitProc.exe /command:showcompare /revision1:"main" /revision2:"%(branch)"
 
 # Delete refs / branch from origin
-bind refs XL         ?git push %(remote) --delete %(branch)
-bind refs XP         ?git push %(remote) --delete %(branch)
+bind refs xx         ?git push %(remote) --delete %(branch)
+bind refs xx         ?git push %(remote) --delete %(branch)
 
 # Squash commits on branch
 bind refs Rl        !git rebase -i %(branch)

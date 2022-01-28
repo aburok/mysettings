@@ -14,11 +14,8 @@ InstallMouseHook
 InstallKeybdHook
 
 generalShortcuts := "General shortcuts`n"
-vsShortcuts := "Visual Studio shortcuts`n"
-chromeShortcuts := "Chrome shortcuts`n"
 gitShortcuts := "Git extensions shortcuts`n"
 explorerShortcuts := "Windows Explorer shortcuts`n"
-teamsShortcuts := "MS Teams shortcuts`n"
 
 ; https://www.autohotkey.com/docs/commands/SetKeyDelay.htm
 ; SetKeyDelay, 0, 100
@@ -45,437 +42,155 @@ teamsShortcuts := "MS Teams shortcuts`n"
 ; Mouse Top : 6 ( DPI+ ' ^ ' ) -> Win + PageUp
 
 ; ASCII art
-; http://patorjk.com/software/taag/#p=display&f=Big%20Money-nw&t=Wheel%0A
+; http://patorjk.com/software/taag/#p=display&f=Cybermedium&t=MS%20Teams
 
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+_ide := "Common `n"
+; Common shortcuts for rider and VS Code
+#HotIf WinActive("ahk_exe rider64.exe") or WinActive("ahk_exe Code.exe") or WinActive("ahk_exe devenv.exe")
 
-; $$\      $$\ $$\   $$\ $$$$$$$$\ $$$$$$$$\ $$\       
-; $$ | $\  $$ |$$ |  $$ |$$  _____|$$  _____|$$ |      
-; $$ |$$$\ $$ |$$ |  $$ |$$ |      $$ |      $$ |      
-; $$ $$ $$\$$ |$$$$$$$$ |$$$$$\    $$$$$\    $$ |      
-; $$$$  _$$$$ |$$  __$$ |$$  __|   $$  __|   $$ |      
-; $$$  / \$$$ |$$ |  $$ |$$ |      $$ |      $$ |      
-; $$  /   \$$ |$$ |  $$ |$$$$$$$$\ $$$$$$$$\ $$$$$$$$\ 
-; \__/     \__|\__|  \__|\________|\________|\________|
+!numpad2:: SendInput "gd" ; Go to declaration
+!numpad5:: SendInput "gi" ; Go to implementation
+_ide := _ide . " 2 - Go Declaration `t` 5 - Go Implementation `n"
 
-; #WheelDown::
-;     {
-;         SendInput "{AltDown}{F13}{AltUp}"
-;     }
+!numpad1:: SendInput "^o" ; Go back in code
+!numpad4:: SendInput "^i" ; Go Forward in code
+_ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
+#HotIf
 
-; #WheelUp::
-;     {
-;         SendInput "{CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}"
-;     }
 
-; +WheelDown::
-;     {
-;         If WinActive("ahk_exe devenv.exe")
-;         {
-;             SendInput "{CtrlDown}-{CtrlUp}"
-;         }
-;     }
+; ____ _ ___  ____ ____    _ ___  ____ 
+; |__/ | |  \ |___ |__/    | |  \ |___ 
+; |  \ | |__/ |___ |  \    | |__/ |___ 
 
-; +WheelUp::   {
-;         If WinActive("ahk_exe devenv.exe")
-;         {
-;             SendInput "{CtrlDown}{ShiftDown}-{ShiftUp}{CtrlUp}"
-;         }
-;     }
+#HotIf WinActive("ahk_exe rider64.exe")
+_r := "Rider IDE shortcuts`n"
 
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!numpad3:: SendInput "!{F7}" ; find results
+_r := _r . " 3 - Find Usages `n"
 
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!+numpad3:: SendInput "^+{Down}" ; Go to Next occurance (find results)
+!+numpad6:: SendInput "^+{Up}" ; Go to Next occurance (find results)
+_r := _r . "SHIFT `n  3 - Next Occurence `t 6 - Prev Occurence `n"
 
-; $$$$$$$$\  $$$$$$\  $$$$$$$\  
-; \__$$  __|$$  __$$\ $$  __$$\ 
-;    $$ |   $$ /  $$ |$$ |  $$ |
-;    $$ |   $$ |  $$ |$$$$$$$  |
-;    $$ |   $$ |  $$ |$$  ____/ 
-;    $$ |   $$ |  $$ |$$ |      
-;    $$ |    $$$$$$  |$$ |      
-;    \__|    \______/ \__|      
+_r := _r . _ide
+!numpad0:: MsgBox(_r, "Rider Help", "iconi T30")
+#HotIf 
 
-; $$\   $$\ 
-; $$ |  $$ |
-; $$ |  $$ |
-; $$$$$$$$ |
-; \_____$$ |
-;       $$ |
-;       $$ |
-;       \__|
 
-; Mouse Top : 4 (left to left click) -> Win + Numpad /
+; _  _ _ ____ _  _ ____ _       ____ ___ _  _ ___  _ ____    ____ ____ ___  ____ 
+; |  | | [__  |  | |__| |       [__   |  |  | |  \ | |  |    |    |  | |  \ |___ 
+;  \/  | ___] |__| |  | |___    ___]  |  |__| |__/ | |__|    |___ |__| |__/ |___ 
+                                                                               
+#HotIf WinActive("ahk_exe Code.exe") 
+!numpad2:: SendInput "^+{Down}" ; Go to Next occurance (find results)
+!numpad5:: SendInput "^+{Up}" ; Go to Next occurance (find results)
+#HotIf
 
-#NumpadDiv:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
 
-    If WinActive("ahk_exe chrome.exe") {
-        SendInput "{CtrlDown}{F5}{CtrlUp}"
-    } else if WinActive("ahk_exe notepad++.exe"){
-        SendInput "{CtrlDown}r{CtrlUp}"
-    } else if WinActive("ahk_exe doublecmd.exe"){
-        SendInput "{CtrlDown}d{CtrlUp}"
-    }
-}
+; _  _ _ ____ _  _ ____ _       ____ ___ _  _ ___  _ ____ 
+; |  | | [__  |  | |__| |       [__   |  |  | |  \ | |  | 
+;  \/  | ___] |__| |  | |___    ___]  |  |__| |__/ | |__| 
 
-; $$$$$$$\  $$$$$$$\ $$$$$$\                 
-; $$  __$$\ $$  __$$\\_$$  _|         $$\    
-; $$ |  $$ |$$ |  $$ | $$ |           $$ |   
-; $$ |  $$ |$$$$$$$  | $$ |        $$$$$$$$\ 
-; $$ |  $$ |$$  ____/  $$ |        \__$$  __|
-; $$ |  $$ |$$ |       $$ |           $$ |   
-; $$$$$$$  |$$ |     $$$$$$\          \__|   
-; \_______/ \__|     \______|                
+#HotIf WinActive("ahk_exe devenv.exe")
+_vs := "Visual Studio shortcuts`n"
 
-#PgUp:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+!numpad2:: SendInput "{AltDown}{F7}{AltUp}" ; Find usages
+_vs := _vs . " 4 - Go to next cursor position `n"
 
-    If WinActive("ahk_exe chrome.exe") {
-        SendInput "{CtrlDown}w{CtrlUp}"
-    }
-}
+!numpad0:: MsgBox(_vs, "VS Help", "iconi T30")
+#HotIf
 
-; $$$$$$$\  $$$$$$$\ $$$$$$\               
-; $$  __$$\ $$  __$$\\_$$  _|              
-; $$ |  $$ |$$ |  $$ | $$ |                
-; $$ |  $$ |$$$$$$$  | $$ |        $$$$$$\ 
-; $$ |  $$ |$$  ____/  $$ |        \______|
-; $$ |  $$ |$$ |       $$ |                
-; $$$$$$$  |$$ |     $$$$$$\               
-; \_______/ \__|     \______|              
 
-#PgDn:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+; _  _ _ ____ _  _ ____ _       ____ ___ _  _ ___  _ ____    ___  ____ ___  _  _ ____ 
+; |  | | [__  |  | |__| |       [__   |  |  | |  \ | |  |    |  \ |___ |__] |  | | __ 
+;  \/  | ___] |__| |  | |___    ___]  |  |__| |__/ | |__|    |__/ |___ |__] |__| |__] 
 
-    If WinActive("ahk_exe chrome.exe") {
-        SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}"
-    }
-}
+#HotIf WinActive("ahk_exe devenv.exe") and InStr(WinGetTitle("A"), "(Debugging)")
+_vsd := "Visual Studio Debugging shortcuts `n`n"
 
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!numpad3:: SendInput "{F5}" ; Continue debugging 
+!numpad6:: SendInput "{ShiftDown}{F9}{ShiftUp}" ; Quick Watch
+_vsd := _vsd . " 3 - Continue Debug `t`t 6 - Quick Watch `n"
 
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+!numpad2:: SendInput "{F11}" ; Step Into
+!numpad5:: SendInput "{ShiftDown}{F11}{ShiftUp}" ; Step Out
+_vsd := _vsd . " 2 - Step Into `t`t 5 - Step Out `n"
 
-;  $$$$$$\  $$$$$$\ $$$$$$$\  $$$$$$$$\ 
-; $$  __$$\ \_$$  _|$$  __$$\ $$  _____|
-; $$ /  \__|  $$ |  $$ |  $$ |$$ |      
-; \$$$$$$\    $$ |  $$ |  $$ |$$$$$\    
-;  \____$$\   $$ |  $$ |  $$ |$$  __|   
-; $$\   $$ |  $$ |  $$ |  $$ |$$ |      
-; \$$$$$$  |$$$$$$\ $$$$$$$  |$$$$$$$$\ 
-;  \______/ \______|\_______/ \________|
+!numpad1:: SendInput "{F10}" ; Step Over
+!numpad4:: SendInput "^{F10}" ; Run to the Cursor
+_vsd := _vsd . " 1 - Step Over `t`t 4 - Run to the Cursor `n"
 
-;   $$\   
-; $$$$ |  
-; \_$$ |  
-;   $$ |  
-;   $$ |  
-;   $$ |  
-; $$$$$$\ 
-; \______|
+!numpad0:: MsgBox(_vsd, "VS Debug Help", "iconi T30")
+#HotIf
 
-chromeShortcuts := chromeShortcuts . " 1 - Go back `n"
-!numpad1:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Step Over
-            SendInput "{F10}"
-            Return
-        }
+; ____ _  _ ____ ____ _  _ ____ 
+; |    |__| |__/ |  | |\/| |___ 
+; |___ |  | |  \ |__| |  | |___ 
 
-        SendInput "{Ctrl down}-{Ctrl up}"
-    } Else If WinActive("ahk_exe Code.exe") {
-        SendInput "{AltDown}{Left}{AltUp}"
-    } Else If WinActive("ahk_exe doublecmd.exe") {
-        SendInput "{AltDown}{Left}{AltUp}"
-    } Else {
-        SendInput "{Browser_Back}"
-    }
-}
+#HotIf WinActive("ahk_exe chrome.exe") 
+_c := "Chrome shortcuts `n`n"
 
-; $$\   $$\ 
-; $$ |  $$ |
-; $$ |  $$ |
-; $$$$$$$$ |
-; \_____$$ |
-;       $$ |
-;       $$ |
-;       \__|
+!*:: SendInput "^{F5}"
+_c := _c . " Top 4 - Refresh `n"
 
-chromeShortcuts := chromeShortcuts . " 4 - Go forward `n"
-vsShortcuts := vsShortcuts . " 4 - Go to next cursor position `n"
+_c := _c . " Side `n"
 
-!numpad4:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+!numpad3:: SendInput "^w"
+!numpad6:: SendInput "^+t"
+_c := _c . " 3 - Close tab `t`t`t 6 - Reopen closed tab `n"
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Run to the Cursor
-            SendInput "{CtrlDown}{F10}{CtrlUp}"
-            Return
-        }
+!numpad2:: SendInput "^+{Tab}"
+!numpad5:: SendInput "^{Tab}"
+_c := _c . " 2 - Go previous tab `t`t 5 - Go next tab `n"
 
-        SendInput "{Ctrl down}{ShiftDown}-{ShiftUp}{Ctrl up}"
-        ; SplashTextOn, 400, 100, Go To Next Cursos Position
-        ; SetTimer, Off, 2000
-    } Else If WinActive("ahk_exe Code.exe") {
-        SendInput "{AltDown}{Right}{AltUp}"
-    } Else If WinActive("ahk_exe doublecmd.exe") {
-        SendInput "{AltDown}{Right}{AltUp}"
-    } Else {
-        SendInput "{Browser_Forward}"
-    }
-}
+!numpad1:: SendInput "{Browser_Back}" 
+!numpad4:: SendInput "{Browser_Forward}"
+_c := _c . " 1 - Go back `t`t`t  4 - Go forward `n"
 
-;  $$$$$$\  
-; $$  __$$\ 
-; \__/  $$ |
-;  $$$$$$  |
-; $$  ____/ 
-; $$ |      
-; $$$$$$$$\ 
-; \________|
+!numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
+#HotIf
 
-!numpad2:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Step Into
-            SendInput "{F11}"
-            Return
-        }
+; ___  ____ _  _ ___  _    ____    ____ ____ _  _ _  _ ____ _  _ ___  ____ ____ 
+; |  \ |  | |  | |__] |    |___    |    |  | |\/| |\/| |__| |\ | |  \ |___ |__/ 
+; |__/ |__| |__| |__] |___ |___    |___ |__| |  | |  | |  | | \| |__/ |___ |  \ 
 
-        ; Find Usages
-        SendInput "{AltDown}{F7}{AltUp}"
-    } Else If WinActive("ahk_exe Explorer.exe") {
-        SendInput "{AltDown}{Up}{AltUp}"
-    } Else If WinActive("ahk_exe gitextensions.exe") {
-        SendInput "{Ctrl down}{Space}{Ctrl up}"
-    } else if WinActive("ahk_exe teams.exe"){
-        SendInput "(yes){Enter}"
-    } Else {
-        SendInput "{Ctrl down}{ShiftDown}{Tab}{ShiftUp}{Ctrl up}"
-    }
-}
+#HotIf WinActive("ahk_exe doublecmd.exe") 
+!numpad4:: SendInput "{AltDown}{Right}{AltUp}"
+#HotIf
 
-; $$$$$$$\  
-; $$  ____| 
-; $$ |      
-; $$$$$$$\  
-; \_____$$\ 
-; $$\   $$ |
-; \$$$$$$  |
-;  \______/ 
 
-!numpad5:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+; ____ _ ___    ____ _  _ ___ ____ _  _ ____ _ ____ _  _ ____ 
+; | __ |  |     |___  \/   |  |___ |\ | [__  | |  | |\ | [__  
+; |__] |  |     |___ _/\_  |  |___ | \| ___] | |__| | \| ___] 
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Stop Out of method
-            SendInput "{ShiftDown}{F11}{ShiftUp}"
-            Return
-        }
+#HotIf WinActive("ahk_exe gitextensions.exe") 
+_ge := "Git Extensions `n"
 
-        ;  Show File in Solution Explorer
-        SendInput "{AltDown}{ShiftDown}L{ShiftUp}{AltUp}"
-    } else If WinActive("ahk_exe gitextensions.exe") {
-        SendInput "{CtrlDown}b{CtrlUp}"
-    } Else {
-        SendInput "{Ctrl down}{Tab}{Ctrl up}"
-    }
-}
+!numpad3:: SendInput "{Ctrl down}.{Ctrl up}" ; Checkout Branch
+!numpad6:: SendInput "^{Space}" ; Commit
+_ge := _ge . "3 - Checkout branch `t`t 6 - Commit `n"
 
-;  $$$$$$\  
-; $$ ___$$\ 
-; \_/   $$ |
-;   $$$$$ / 
-;   \___$$\ 
-; $$\   $$ |
-; \$$$$$$  |
-;  \______/ 
+!numpad2:: SendInput "^p" 
+!numpad5:: SendInput "^n"
+_ge := _ge . "2 - Go to parent `t`t 5 - Go to child `n"
 
-!numpad3:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+!numpad1:: SendInput "!{Left}" ; ??
+!numpad4:: SendInput "!{Right}" ; New Branch
+_ge := _ge . "1 - Go back `t`t 4 - Go Forward `n"
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Continue execution
-            SendInput "{F5}"
-            Return
-        }
+!numpad0:: MsgBox(_ge, "Git Extension Help", "iconi T30")
+#HotIf
 
-        ; Go To Declaration
-        SendInput "{Ctrl down}b{Ctrl up}"
-    } Else If WinActive("ahk_exe Explorer.exe") {
-        SendInput "{LWinDown}{Left}{LWinUp}"
-        Sleep( 500 )
-        SendInput "{Escape}"
-    } Else If WinActive("ahk_exe gitextensions.exe") {
-        ; SplashTextOn, 400, 100, Checkout Branch
-        SendInput "{Ctrl down}.{Ctrl up}"
-    } Else If WinActive("ahk_exe OUTLOOK.EXE") {
-        SendInput "{Del}"
-    } else if WinActive("ahk_exe chrome.exe"){
-        SendInput "{CtrlDown}w{CtrlUp}"
-    }
-}
 
-;  $$$$$$\  
-; $$  __$$\ 
-; $$ /  \__|
-; $$$$$$$\  
-; $$  __$$\ 
-; $$ /  $$ |
-;  $$$$$$  |
-;  \______/ 
+; _  _ ____    ___ ____ ____ _  _ ____ 
+; |\/| [__      |  |___ |__| |\/| [__  
+; |  | ___]     |  |___ |  | |  | ___] 
 
-!numpad6:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
+#HotIf WinActive("ahk_exe teams.exe") 
+!numpad3:: SendInput "(yes){Enter}"
+!numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
 
-    If WinActive("ahk_exe devenv.exe")
-    {
-        WindowTitle := WinGetTitle("A")
-        If InStr(WindowTitle, "(Debugging)") {
-            ; Quick watch variable
-            SendInput "{ShiftDown}{F9}{ShiftUp}"
-            Return
-        }
-        ; Go to implementaion
-        SendInput "{AltDown}{CtrlDown}B{CtrlUp}{AltUp}"
-    } Else If WinActive("ahk_exe Explorer.exe") {
-        SendInput "{LWinDown}{Right}{LWinUp}"
-        Sleep ( 500 )
-        SendInput "{Escape}"
-    } else if WinActive("ahk_exe chrome.exe"){
-        SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}"
-    }
-}
-
-; $$$$$$$$\ 
-; \____$$  |
-;     $$  / 
-;    $$  /  
-;   $$  /   
-;  $$  /    
-; $$  /     
-; \__/      
-
-!numpad7:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
-
-    If WinActive("ahk_exe devenv.exe")
-    {
-        ;  Next Error
-        SendInput "{AltDown}{F12}{AltUp}"
-    }
-    If WinActive("ahk_exe gitextensions.exe")
-    {
-        ; Checkout Branch
-        SendInput "{Ctrl down}.{Ctrl up}"
-    } else if WinActive("ahk_exe chrome.exe"){
-        SendInput "{Home}"
-    } else if WinActive("ahk_exe teams.exe"){
-        SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
-    }
-}
-
-;   $$\   $$$$$$\  
-; $$$$ | $$$ __$$\ 
-; \_$$ | $$$$\ $$ |
-;   $$ | $$\$$\$$ |
-;   $$ | $$ \$$$$ |
-;   $$ | $$ |\$$$ |
-; $$$$$$\\$$$$$$  /
-; \______|\______/ 
-
-#numpad0:: {
-    ; For some reason WIN key is still pressed when mouse sends the Win + anykey
-    ; So after each short cut, you need to send WIN UP 
-    Send "{LWin up}{RWin up}"
-
-    If WinActive("ahk_exe devenv.exe")
-    {
-        ; Prev Error
-        SendInput "{AltDown}{ShiftDown}{F12}{ShiftUp}{AltUp}"
-    }
-    If WinActive("ahk_exe gitextensions.exe")
-    {
-        SendInput "{Ctrl down}.{Ctrl up}"
-    } else if WinActive("ahk_exe chrome.exe"){
-        SendInput "{End}"
-    }
-}
-
-#numpad9:: {
-    helpText := generalShortcuts
-    If WinActive("ahk_exe devenv.exe")
-    {
-        helpText := vsShortcuts
-    } Else If WinActive("ahk_exe Explorer.exe") {
-        helpText := explorerShortcuts
-    } Else If WinActive("ahk_exe gitextensions.exe") {
-        helpText := gitShortcuts
-    } else if WinActive("ahk_exe teams.exe"){
-        helpText := teamsShortcuts
-    } else if WinActive("ahk_exe chrome.exe"){
-        helpText := chromeShortcuts
-    }
-    MsgBox("" . helpText, "Shortcuts for : ", "O Icon? T10")
-}
-
-; $$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
-
-; WheelRight::
-;     {
-;         If WinActive("ahk_exe devenv.exe")
-;         {
-;             ;    Send {Ctrl}{NumpadSub}
-;             ;     Send !{F7}   ; Find Usages
-;             SendInput "^!b"
-;         }
-;         Else If WinActive("ahk_class Notepad")
-;         {
-;             Msg := "Notepad"
-;             MsgBox ( "Let's write something" )
-;         }
-;         Else If WinActive("ahk_class CalcFrame") 
-;         {
-;             Msg := "CalcFrame"
-;             MsgBox ( "let's calculate!" )
-;         }
-;     }
+!numpad1:: SendInput "^+H" ; Open History
+#HotIf
