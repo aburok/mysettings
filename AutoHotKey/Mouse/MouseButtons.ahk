@@ -44,16 +44,69 @@ explorerShortcuts := "Windows Explorer shortcuts`n"
 ; ASCII art
 ; http://patorjk.com/software/taag/#p=display&f=Cybermedium&t=MS%20Teams
 
+!numpad9:: SendInput "{CtrlDown}{F5}{CtrlUp}" 
+
+!numpad1:: SendInput "{Browser_Back}" 
+!numpad4:: SendInput "{Browser_Forward}"
+
+
+GroupAdd "IDE_GROUP", "ahk_exe rider64.exe"
+GroupAdd "IDE_GROUP", "ahk_exe Code.exe"
+GroupAdd "IDE_GROUP", "ahk_exe devenv.exe"
+
+; ____ _  _ ____ ____ _  _ ____ 
+; |    |__| |__/ |  | |\/| |___ 
+; |___ |  | |  \ |__| |  | |___ 
+
+#HotIf WinActive("ahk_exe chrome.exe") 
+_c := "Chrome shortcuts `n`n"
+
+!*:: SendInput "^{F5}"
+_c := _c . " Top 4 - Refresh `n"
+
+_c := _c . " Side `n"
+
+!numpad3:: SendInput "{CtrlDown}w{CtrlUp}{CtrlUp}"
+!numpad6:: SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}"
+_c := _c . " 3 - Close tab `t`t`t 6 - Reopen closed tab `n"
+
+!numpad2:: SendInput "{CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}"
+!numpad5:: SendInput "{CtrlDown}{Tab}{CtrlUp}"
+_c := _c . " 2 - Go previous tab `t`t 5 - Go next tab `n"
+
+!numpad1:: SendInput "{Browser_Back}" 
+!numpad4:: SendInput "{Browser_Forward}"
+_c := _c . " 1 - Go back `t`t`t  4 - Go forward `n"
+
+!numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
+#HotIf
+
+; _  _ ____    ___ ____ ____ _  _ ____ 
+; |\/| [__      |  |___ |__| |\/| [__  
+; |  | ___]     |  |___ |  | |  | ___] 
+
+#HotIf WinActive("ahk_exe teams.exe") 
+!numpad3:: SendInput "(yes){Enter}"
+!numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
+
+!numpad1:: SendInput "{Browser_Back}" 
+!numpad4:: SendInput "{Browser_Forward}"
+
+^o:: SendInput "{Browser_Back}" 
+^i:: SendInput "{Browser_Forward}"
+#HotIf
+
+
 _ide := "Common `n"
 ; Common shortcuts for rider and VS Code
-#HotIf WinActive("ahk_exe rider64.exe") or WinActive("ahk_exe Code.exe") or WinActive("ahk_exe devenv.exe")
+#HotIf WinActive("ahk_group IDE_GROUP") 
 
 !numpad2:: SendInput "gd" ; Go to declaration
 !numpad5:: SendInput "gi" ; Go to implementation
 _ide := _ide . " 2 - Go Declaration `t` 5 - Go Implementation `n"
 
-!numpad1:: SendInput "^o" ; Go back in code
-!numpad4:: SendInput "^i" ; Go Forward in code
+!numpad1:: SendInput "{CtrlDown}o{CtrlUp}" ; Go back in code
+!numpad4:: SendInput "{CtrlDown}i{CtrlUp}" ; Go Forward in code
 _ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 #HotIf
 
@@ -124,34 +177,6 @@ _vsd := _vsd . " 1 - Step Over `t`t 4 - Run to the Cursor `n"
 #HotIf
 
 
-; ____ _  _ ____ ____ _  _ ____ 
-; |    |__| |__/ |  | |\/| |___ 
-; |___ |  | |  \ |__| |  | |___ 
-
-#HotIf WinActive("ahk_exe chrome.exe") 
-_c := "Chrome shortcuts `n`n"
-
-!*:: SendInput "^{F5}"
-_c := _c . " Top 4 - Refresh `n"
-
-_c := _c . " Side `n"
-
-!numpad3:: SendInput "^w"
-!numpad6:: SendInput "^+t"
-_c := _c . " 3 - Close tab `t`t`t 6 - Reopen closed tab `n"
-
-!numpad2:: SendInput "^+{Tab}"
-!numpad5:: SendInput "^{Tab}"
-_c := _c . " 2 - Go previous tab `t`t 5 - Go next tab `n"
-
-!numpad1:: SendInput "{Browser_Back}" 
-!numpad4:: SendInput "{Browser_Forward}"
-_c := _c . " 1 - Go back `t`t`t  4 - Go forward `n"
-
-!numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
-#HotIf
-
-
 ; ___  ____ _  _ ___  _    ____    ____ ____ _  _ _  _ ____ _  _ ___  ____ ____ 
 ; |  \ |  | |  | |__] |    |___    |    |  | |\/| |\/| |__| |\ | |  \ |___ |__/ 
 ; |__/ |__| |__| |__] |___ |___    |___ |__| |  | |  | |  | | \| |__/ |___ |  \ 
@@ -184,13 +209,20 @@ _ge := _ge . "1 - Go back `t`t 4 - Go Forward `n"
 #HotIf
 
 
-; _  _ ____    ___ ____ ____ _  _ ____ 
-; |\/| [__      |  |___ |__| |\/| [__  
-; |  | ___]     |  |___ |  | |  | ___] 
+#HotIf WinActive("ahk_exe TortoiseGitMerge.exe") 
+_gd := "Git Extensions : Diff `n"
 
-#HotIf WinActive("ahk_exe teams.exe") 
-!numpad3:: SendInput "(yes){Enter}"
-!numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
+; !numpad3:: SendInput "{Ctrl down}.{Ctrl up}" ; Checkout Branch
+; !numpad6:: SendInput "^{Space}" ; Commit
+; _gd := _gd . "3 - Checkout branch `t`t 6 - Commit `n"
 
-!numpad1:: SendInput "^+H" ; Open History
+; !numpad2:: SendInput "^p" 
+; !numpad5:: SendInput "^n"
+; _gd := _gd . "2 - Go to parent `t`t 5 - Go to child `n"
+
+!numpad1:: SendInput "{F8}" ; ??
+!numpad4:: SendInput "+{F8}" ; New Branch
+_gd := _gd . "1 - Next conflict `t`t 4 - Prev Conflict `n"
+
+!numpad0:: MsgBox(_gd, "Git Extension Help", "iconi T30")
 #HotIf

@@ -1,9 +1,9 @@
 class GuidFormatMenuItem extends NavigationItem {
 
     __New(letter, guidFormat){
-        base.__New(letter, guidFormat)
+        super.__New(letter, guidFormat)
         this.GuidFormat := guidFormat
-        this.GuidFormatter := new GuidFormatter()
+        this.GuidFormatter := GuidFormatter()
     }
 
     FormatGuid(){
@@ -15,7 +15,7 @@ class GuidFormatMenuItem extends NavigationItem {
 
     ActivateItem(){
         formatted := this.FormatGuid()
-        Clipboard:= formatted
+        A_Clipboard:= formatted
         ;SendInput {Raw}%formatted%
     }
 

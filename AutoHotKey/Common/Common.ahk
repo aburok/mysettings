@@ -71,7 +71,7 @@ KeyWaitAny(Options:="")
 ;Reload script on Ctrl + S (Save)
 ~^s:: {
     ; IfWinActive, %A_ScriptName%
-    If(WinActive ".ahk")
+    If(WinActive( ".ahk"))
     {
         ; SplashTextOn,,,Updated script,
         ; Sleep, 1000
@@ -84,5 +84,5 @@ KeyWaitAny(Options:="")
 Log(formatText, params){
     CurrentDateTime := FormatTime( "yyyy-MM-dd HH:mm:ss")
     text:= CurrentDateTime . " - " . Format(formatText . "`n", params*)
-    FileAppend(text , "C:\autohotkey.log")
+    ; FileAppend(text , "C:\autohotkey.log")
 }

@@ -1,13 +1,13 @@
 class GuidMenuItem extends NavigationItem {
     __New(letter, description){
-        base.__New(letter, description)
-        this.GuidFormatter := new GuidFormatter()
+        super.__New(letter, description)
+        this.GuidFormatter := GuidFormatter()
 
         this.Root := this
     }
 
     GetGuid(){
-        GuidToFormat := Clipboard
+        GuidToFormat := A_Clipboard
         Log("Clipboard {1}", [GuidToFormat])
 
         if(this.GuidFormatter.IsGuid(GuidToFormat)){

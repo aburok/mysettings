@@ -1,7 +1,7 @@
 class WebsiteMenuItem extends NavigationItem {
     __New(letter, description, urlFormat)
     {
-        base.__New(letter, description)
+        super.__New(letter, description)
         this.UrlFormat := urlFormat
     }
 
@@ -19,11 +19,11 @@ class WebsiteMenuItem extends NavigationItem {
     }
 
     FormatUrl(){
-        formatArgs := this.GetFormatArgs()
-        url := Format(this.UrlFormat, formatArgs*)
-        formatArgsJson := Json.Dump(formatArgs)
-        Log("[WebsiteMenuItem] Format Args : {1}", [formatArgsJson])
-        return url
+        ; formatArgs := this.GetFormatArgs()
+        ; url := Format(this.UrlFormat, formatArgs*)
+        ; formatArgsJson := Json.Dump(formatArgs)
+        ; Log("[WebsiteMenuItem] Format Args : {1}", [formatArgsJson])
+        ; return url
     }
 
     ActivateItem()

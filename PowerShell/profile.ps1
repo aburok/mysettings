@@ -108,3 +108,5 @@ function Run-Ahk (){
 function Run-AhkMouse (){
     Start-Process "$AutoHotKeyBin" "C:\mysettings\AutoHotKey\MouseButtons.ahk"
 }
+
+# Run-Ahk

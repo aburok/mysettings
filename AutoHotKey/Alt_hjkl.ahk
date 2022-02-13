@@ -10,6 +10,14 @@ keyMap["k"] := "Up"
 __help := __help . "Up          -> LALT + K `n"
 keyMap["l"] := "Right"
 __help := __help . "Right       -> LALT + L `n"
+keyMap["w"] := "Up"
+__help := __help . "Up        -> LALT + W `n"
+keyMap["s"] := "Down"
+__help := __help . "Down        -> LALT + S `n"
+keyMap["a"] := "Left"
+__help := __help . "Left          -> LALT + A `n"
+keyMap["d"] := "Right"
+__help := __help . "Right       -> LALT + D `n"
 keyMap[","] := "PgUp"
 __help := __help . "Page Up     -> LALT + , `n"
 keyMap["."] := "PgDn"
@@ -18,10 +26,12 @@ keyMap[";"] := "Home"
 __help := __help . "Home        -> LALT + (`; - SEMICOLON) `n"
 keyMap["'"] := "End"
 __help := __help . "End         -> LALT + (' - SINGLE QUOTE) `n"
-keyMap["d"] := "Del"
-__help := __help . "Del         -> LALT + D `n"
 keyMap["x"] := "BackSpace"
 __help := __help . "BackSpace   -> LALT + X `n"
+keyMap["r"] := "Enter"
+__help := __help . "Enter   -> LALT + R `n"
+keyMap["e"] := "Escape"
+__help := __help . "Escape   -> LALT + E `n"
 
 <!/:: {
     MsgBox(__help, "Help","iconi T30")
@@ -31,13 +41,17 @@ __help := __help . "BackSpace   -> LALT + X `n"
 *<!j::
 *<!k::
 *<!l::
+*<!w::
+*<!s::
+*<!a::
+*<!d::
 *<!,::
 *<!.::
-*<!d::
 *<!x::
+*<!r::
+*<!e::
 *<!;::
 *<!':: {
-    MsgBox(GetKeyState("CapsLock", "T"))
     global keyMap
     PressedKey := SubStr(A_ThisHotkey, 4, 1)
     if(!keyMap.Has(PressedKey)){
@@ -51,14 +65,18 @@ __help := __help . "BackSpace   -> LALT + X `n"
     Send(KeyInput)
 }
 
+*<!+x::Del
+
 ; Media 
 <!\::Media_Play_Pause
 __help := __help . "`n LALT + \ `t`t`t -> MEDIA PLAYPPAUSE"
 
 <!]::Media_Next
+<!RButton::Media_Next
 __help := __help . "`n LALT + SHIFT + ] `t`t`t -> MEDIA NEXT"
 
 +<!]::Media_Prev
++<!RButton::Media_Prev
 __help := __help . "`n LALT + ] `t`t`t -> MEDIA PREVIOUS"
 
 <!F1::Volume_Mute

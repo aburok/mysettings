@@ -16,6 +16,14 @@
 ; https://vim.fandom.com/wiki/Map_caps_lock_to_escape_in_Windows#AutoHotkey 
 ; #InstallKeybdHook
 
+SetTimer( Modifier_Up, 5*60*1000)
+Modifier_Up()
+{
+For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
+	If GetKeyState(Modifier) And !GetKeyState(Modifier,"P")
+		Send "{" . Modifier . " Up}"
+}
+
 #Include %A_ScriptDir%\Alt_hjkl.ahk
 
 ; Match window names by part of the title
@@ -103,7 +111,7 @@ WinActivateOrOpen(winExe) {
 ; #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 ; #Include %A_ScriptDir%\Time\Time.ahk
 
-; #Include %A_ScriptDir%\KeyBindings\Applications.ahk
+#Include %A_ScriptDir%\KeyBindings\Applications.ahk
 ; #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 ; #Include %A_ScriptDir%\KeyBindings\Yank.ahk
 
@@ -124,8 +132,17 @@ WinActivateOrOpen(winExe) {
 <!i:: Send "-"
 
 ; <!m::RButton
-#m::AppsKey
+; #m::AppsKey
+#m:: Send "{ShiftDown}{F10}{ShiftUp}"
 __help := __help . "`n WIN + M `t -> APP MENU"
 
-<!m::AppsKey
+; <!m::AppsKey
 __help := __help . "`n LALT + M `t -> APP MENU"
+
+
+#HotIf WinActive("ahk_exe gitextensions.exe") 
+<!1:: Send "^1"
+<!2:: Send "^2"
+<!3:: Send "^3"
+<!4:: Send "^4"
+#HotIf

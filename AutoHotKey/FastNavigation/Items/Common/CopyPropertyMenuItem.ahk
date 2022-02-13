@@ -1,8 +1,8 @@
 class CopyPropertyMenuItem extends NavigationItem {
     __New(letter, description, property){
-        base.__New(letter, description)
+        super.__New(letter, description)
         this.PropertyName := property
-        this.GuidFormatter := new GuidFormatter()
+        this.GuidFormatter := GuidFormatter()
     }
 
     GetRootValue(){

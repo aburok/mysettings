@@ -2,17 +2,17 @@
 class CopyFilePathNavigationItem extends NavigationItem
 {
     __New(letter, name, relativeRoot := ""){
-        base.__New(letter, name)
+        super.__New(letter, name)
         this.RelativeRoot := relativeRoot
 
-        this.AddItem(new ClipboardNavigationItem("f", "Full path", "AbsolutPath"))
-        this.AddItem(new ClipboardNavigationItem("n", "File name", "FileName"))
-        this.AddItem(new ClipboardNavigationItem("r", "Relative file path", "RelativePath"))
-        this.AddItem(new ClipboardNavigationItem("d", "Containg folder path", "ContaingFolder"))
+        this.AddItem(ClipboardNavigationItem("f", "Full path", "AbsolutPath"))
+        this.AddItem(ClipboardNavigationItem("n", "File name", "FileName"))
+        this.AddItem(ClipboardNavigationItem("r", "Relative file path", "RelativePath"))
+        this.AddItem(ClipboardNavigationItem("d", "Containg folder path", "ContaingFolder"))
     }
 
     ShowSplash(helpText){
-        ShowSplash("Updated script", helpText)
+        ; ShowSplash("Updated script", helpText)
     }
 
     ActivateItem(){
@@ -28,11 +28,11 @@ class CopyFilePathNavigationItem extends NavigationItem
         }
         Sleep 100
 
-        this.AbsolutPath := Clipboard
-        this.RelativePath := StrReplace(Clipboard, this.RelativeRoot, "")
-        Clipboard := SplitPath( name, Clipboard)
-        this.FileName := name
-        Clipboard := SplitPath ( Clipboard, dir )
+        this.AbsolutPath := A_Clipboard
+        this.RelativePath := StrReplace(A_Clipboard, this.RelativeRoot, "")
+        this.name := SplitPath(A_Clipboard)
+        this.FileName := this.name
+        dir := SplitPath ( A_Clipboard)
         this.ContaingFolder := dir
 
         this.ShowCommandsAndLaunchSelected()

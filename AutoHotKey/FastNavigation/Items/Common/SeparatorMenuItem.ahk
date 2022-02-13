@@ -1,6 +1,6 @@
 class SeparatorMenuItem extends NavigationItem {
     __New(){
-        base.__New("%", "Separator")
+        super.__New("%", "Separator")
     }
 
     FormatItemText(){

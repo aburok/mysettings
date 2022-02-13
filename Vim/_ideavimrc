@@ -81,7 +81,6 @@ map <C-i> <Action>(Forward)
 " map <C-p> :action GoToFile<CR>
 " nmap go <C-S-n>
 nmap go <Action>(GoToFile)
-nnoremap gn :action GoToFile<CR>
 vnoremap go :action GoToFile<CR>
 nnoremap <leader>y :action GoToSymbol<CR>
 nnoremap ga :action GoToAction<CR>
@@ -199,9 +198,9 @@ nmap <S-j> <Action>(MethodDown)
 nmap <S-k> <Action>(MethodUp)
 
 map <C-A-j> <Action>(NextOccurence)
-map gj <Action>(NextOccurence)
+map gn <Action>(NextOccurence)
 map <C-A-k> <Action>(PreviousOccurence)
-map gk <Action>(PreviousOccurence)
+map gN <Action>(PreviousOccurence)
 
 nmap <A-p> <Action>(PinActiveTabToggle)
 nmap <leader>p <Action>(PinActiveTabToggle)
@@ -247,3 +246,8 @@ nmap <leader><leader>k <Plug>(easymotion-k) "
 nmap <leader><leader>n <Plug>(easymotion-n) "
 nmap <leader><leader>N <Plug>(easymotion-N) "
 nmap <leader><leader>s <Plug>(easymotion-s) "  mapped to sn
+
+map <C-M> <S-F10>
+
+map <A-C-S-L> <Action>(IncreaseColumnWidth)
+map <A-C-S-H> <Action>(DecreaseColumnWidth)
