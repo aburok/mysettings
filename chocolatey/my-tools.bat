@@ -1,6 +1,5 @@
  @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
 
-
 cinst git.install
 
 cinst notepadplusplus.install
@@ -16,16 +15,11 @@ cinst nodejs.install
 
 cinst vlc
 
-
 cinst python
-
 
 cinst ccleaner
 
-cinst console2
-
 cinst filezilla
-
 
 cinst paint.net
 
@@ -36,8 +30,6 @@ cinst phantomjs
 cinst DotNet4.5
 
 cinst windirstat
-
-cinst ConEmu
 
 cinst keepass
 

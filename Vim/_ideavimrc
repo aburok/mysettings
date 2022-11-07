@@ -1,3 +1,11 @@
+" ------------------------------
+" IdeaVim configuration for Rider
+" ------------------------------
+" 
+" To show list of actions available for Rider, type:
+"    :actionlist
+" 
+
 source C:/mysettings/Vim/_base.vimrc
 
 """ Map leader to space ---------------------
@@ -16,6 +24,10 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 set NERDTree
+
+"  set sneak " <- szukanie przy uzyciu klawisza s i S - wylaczone bo używam S do zamiany lini
+set which-key
+set notimeout
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs='[:],(:),<:>'
@@ -59,7 +71,8 @@ nmap <leader>gs <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
 
-map <S-Space> <Action>(GotoNextError)
+map <S-Space> <Action>(ShowErrorDescription)
+map <C-S-Space> <Action>(ParameterInfo)
 
 map <C-S-e> :action ActivateProjectToolWindow<CR>
 map <leader>we :action ActivateProjectToolWindow<CR>
@@ -189,6 +202,8 @@ nmap <leader>tt :action RiderUnitTestQuickListPopupAction<CR>
 nmap <leader>ta :action RiderUnitTestRunSolutionAction<CR>
 
 vmap <leader>c :action CommentByLineComment<CR>
+vmap <C-/> :action CommentByLineComment<CR>
+nmap <C-/> :action CommentByLineComment<CR>
 
 " Tab navigation
 nmap J <Action>(PreviousTab)

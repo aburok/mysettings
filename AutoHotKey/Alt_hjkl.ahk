@@ -26,8 +26,8 @@ keyMap[";"] := "Home"
 __help := __help . "Home        -> LALT + (`; - SEMICOLON) `n"
 keyMap["'"] := "End"
 __help := __help . "End         -> LALT + (' - SINGLE QUOTE) `n"
-keyMap["x"] := "BackSpace"
-__help := __help . "BackSpace   -> LALT + X `n"
+keyMap["x"] := "Delete"
+__help := __help . "Delete   -> LALT + X `n"
 keyMap["r"] := "Enter"
 __help := __help . "Enter   -> LALT + R `n"
 keyMap["e"] := "Escape"
@@ -58,14 +58,14 @@ __help := __help . "Escape   -> LALT + E `n"
         return
     }
     ThisHotKey := keyMap[PressedKey]
-    CtrlPressed := ((GetKeyState("Control", "D") or GetKeyState("CapsLock", "D")) ? "^" : "")
-    ShiftPressed := (GetKeyState("Shift", "D") ? "+" : "")
+    CtrlPressed := ((GetKeyState("Control") or GetKeyState("CapsLock")) ? "^" : "")
+    ShiftPressed := (GetKeyState("Shift") ? "+" : "")
     KeyInput := ShiftPressed . CtrlPressed . "{" . ThisHotKey . "}"
     ; MsgBox(KeyInput)
     Send(KeyInput)
 }
 
-*<!+x::Del
+*<!+x::BackSpace
 
 ; Media 
 <!\::Media_Play_Pause
@@ -81,10 +81,10 @@ __help := __help . "`n LALT + ] `t`t`t -> MEDIA PREVIOUS"
 
 <!F1::Volume_Mute
 __help := __help . "`n LALT + F1 `t`t -> VOLUME MUTE"
-<!0::Volume_Mute
-__help := __help . "`n LALT + 0 `t`t -> VOLUME MUTE"
-<!MButton::Volume_Mute
-__help := __help . "`n LALT + 0 `t`t -> VOLUME MUTE"
+; <!0::Volume_Mute
+; __help := __help . "`n LALT + 0 `t`t -> VOLUME MUTE"
+; <!MButton::Volume_Mute
+; __help := __help . "`n LALT + 0 `t`t -> VOLUME MUTE"
 
 <!F2::Volume_Down
 __help := __help . "`n LALT + F2 `t`t -> VOLUME DOWN"

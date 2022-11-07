@@ -28,7 +28,7 @@
     .AddItem(AppMenuLevel( "t", "Outlook" , "#+t", "ahk_exe OUTLOOK.exe"))
     .AddItem(AppMenuLevel( "a", "Teams" , "#+a", "ahk_exe Teams.exe"))
     .AddItem(AppMenuLevel( "v", "Visual Studio" , "#v", "ahk_exe devenv.exe"))
-    .AddItem( AppMenuLevel( "s", "Slack" , "", "ahk_exe slack.exe"))
+    .AddItem(AppMenuLevel( "s", "Slack" , "", "ahk_exe slack.exe"))
     .AddItem(GetGuidFormat("q"))
     .AddItem(AppMenuLevel( "w", "VIM / GVIM" , "#+m", "ahk_exe gvim.exe"))
     .AddItem(CopyFilePathNavigationItem("y", "Yank Path"))

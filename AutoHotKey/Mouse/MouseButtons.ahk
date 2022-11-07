@@ -13,6 +13,7 @@
 InstallMouseHook
 InstallKeybdHook
 
+
 generalShortcuts := "General shortcuts`n"
 gitShortcuts := "Git extensions shortcuts`n"
 explorerShortcuts := "Windows Explorer shortcuts`n"
@@ -44,21 +45,57 @@ explorerShortcuts := "Windows Explorer shortcuts`n"
 ; ASCII art
 ; http://patorjk.com/software/taag/#p=display&f=Cybermedium&t=MS%20Teams
 
-!numpad9:: SendInput "{CtrlDown}{F5}{CtrlUp}" 
+numpad9:: SendInput "{CtrlDown}{F5}{CtrlUp}" 
 
-!numpad1:: SendInput "{Browser_Back}" 
-!numpad4:: SendInput "{Browser_Forward}"
+numpad1:: SendInput "{Browser_Back}" 
+numpad4:: SendInput "{Browser_Forward}"
 
 
 GroupAdd "IDE_GROUP", "ahk_exe rider64.exe"
 GroupAdd "IDE_GROUP", "ahk_exe Code.exe"
 GroupAdd "IDE_GROUP", "ahk_exe devenv.exe"
 
+
+
+; ____ _  _ ____ ____ _  _ ____       ____ _  _ ____ ___ ____ _  _ _  _ ___  
+; |    |__| |__/ |  | |\/| |___       [__  |_/  |___  |  |    |__| |  | |__] 
+; |___ |  | |  \ |__| |  | |___       ___] | \_ |___  |  |___ |  | |__| |    
+
+#HotIf WinActive("ahk_exe chrome.exe") and WinActive("SketchUp")
+_cs := "Sketchup Chrome shortcuts `n`n"
+
+!*:: SendInput "^{F5}"
+_cs := _cs . " Top 4 - Refresh `n"
+
+_cs := _cs . " Side `n"
+
+numpad3:: SendInput "p"
+numpad6:: SendInput "m"
+_cs := _cs . " 3 - Push/Pull   `t`t`t 6 - Move `n"
+
+numpad2:: SendInput "o"
+numpad5:: SendInput "l"
+_cs := _cs . " 2 - Orbit `t`t 5 - Line `n"
+
+numpad1:: SendInput "{CtrlDown}z{CtrlUp}" 
+numpad4:: SendInput "{CtrlDown}y{CtrlUp}"
+_cs := _cs . " 1 - Undo `t`t`t  4 - Redo `n"
+
+
+numpad7:: SendInput "H"  ; New Tab
+numpad8:: SendInput "c"
+_cs := _cs . " 7 - Hide rest `t`t`t  8 - Circle `n"
+
+numpad0:: MsgBox(_cs, "Sketchup in Chrome Help", "iconi T30")
+#HotIf
+
+
+
 ; ____ _  _ ____ ____ _  _ ____ 
 ; |    |__| |__/ |  | |\/| |___ 
 ; |___ |  | |  \ |__| |  | |___ 
 
-#HotIf WinActive("ahk_exe chrome.exe") 
+#HotIf WinActive("ahk_exe chrome.exe") or WinActive("ahk_exe firefox.exe")
 _c := "Chrome shortcuts `n`n"
 
 !*:: SendInput "^{F5}"
@@ -66,31 +103,37 @@ _c := _c . " Top 4 - Refresh `n"
 
 _c := _c . " Side `n"
 
-!numpad3:: SendInput "{CtrlDown}w{CtrlUp}{CtrlUp}"
-!numpad6:: SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}"
+numpad3:: SendInput "{CtrlDown}w{CtrlUp}{CtrlUp}{AltUp}"
+numpad6:: SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}{AltUp}"
 _c := _c . " 3 - Close tab `t`t`t 6 - Reopen closed tab `n"
 
-!numpad2:: SendInput "{CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}"
-!numpad5:: SendInput "{CtrlDown}{Tab}{CtrlUp}"
+numpad2:: SendInput "{CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}"
+numpad5:: SendInput "{CtrlDown}{Tab}{CtrlUp}"
 _c := _c . " 2 - Go previous tab `t`t 5 - Go next tab `n"
 
-!numpad1:: SendInput "{Browser_Back}" 
-!numpad4:: SendInput "{Browser_Forward}"
+numpad1:: SendInput "{Browser_Back}" 
+numpad4:: SendInput "{Browser_Forward}"
 _c := _c . " 1 - Go back `t`t`t  4 - Go forward `n"
 
-!numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
+
+numpad7:: SendInput "^t"  ; New Tab
+numpad8:: SendInput "{Browser_Forward}"
+_c := _c . " 7 - New Tab `t`t`t  4 - Go forward `n"
+
+numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
 #HotIf
+
 
 ; _  _ ____    ___ ____ ____ _  _ ____ 
 ; |\/| [__      |  |___ |__| |\/| [__  
 ; |  | ___]     |  |___ |  | |  | ___] 
 
 #HotIf WinActive("ahk_exe teams.exe") 
-!numpad3:: SendInput "(yes){Enter}"
-!numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
+numpad3:: SendInput "(yes){Enter}"
+numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
 
-!numpad1:: SendInput "{Browser_Back}" 
-!numpad4:: SendInput "{Browser_Forward}"
+numpad1:: SendInput "{Browser_Back}" 
+numpad4:: SendInput "{Browser_Forward}"
 
 ^o:: SendInput "{Browser_Back}" 
 ^i:: SendInput "{Browser_Forward}"
@@ -101,12 +144,12 @@ _ide := "Common `n"
 ; Common shortcuts for rider and VS Code
 #HotIf WinActive("ahk_group IDE_GROUP") 
 
-!numpad2:: SendInput "gd" ; Go to declaration
-!numpad5:: SendInput "gi" ; Go to implementation
+numpad2:: SendInput "gd" ; Go to declaration
+numpad5:: SendInput "gi" ; Go to implementation
 _ide := _ide . " 2 - Go Declaration `t` 5 - Go Implementation `n"
 
-!numpad1:: SendInput "{CtrlDown}o{CtrlUp}" ; Go back in code
-!numpad4:: SendInput "{CtrlDown}i{CtrlUp}" ; Go Forward in code
+numpad1:: SendInput "{CtrlDown}o{CtrlUp}" ; Go back in code
+numpad4:: SendInput "{CtrlDown}i{CtrlUp}" ; Go Forward in code
 _ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 #HotIf
 
@@ -118,15 +161,18 @@ _ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 #HotIf WinActive("ahk_exe rider64.exe")
 _r := "Rider IDE shortcuts`n"
 
-!numpad3:: SendInput "!{F7}" ; find results
+numpad3:: SendInput "!{F7}" ; find results
 _r := _r . " 3 - Find Usages `n"
 
-!+numpad3:: SendInput "^+{Down}" ; Go to Next occurance (find results)
-!+numpad6:: SendInput "^+{Up}" ; Go to Next occurance (find results)
++numpad3:: SendInput "^+{Down}" ; Go to Next occurance (find results)
++numpad6:: SendInput "^+{Up}" ; Go to Next occurance (find results)
 _r := _r . "SHIFT `n  3 - Next Occurence `t 6 - Prev Occurence `n"
 
+numpad7:: SendInput "^+l"      ; Locate in Solution Explorer
+_r := _r . "`n  7 - Locate in Solution `t 6 - Prev Occurence `n"
+
 _r := _r . _ide
-!numpad0:: MsgBox(_r, "Rider Help", "iconi T30")
+numpad0:: MsgBox(_r, "Rider Help", "iconi T30")
 #HotIf 
 
 
@@ -135,8 +181,8 @@ _r := _r . _ide
 ;  \/  | ___] |__| |  | |___    ___]  |  |__| |__/ | |__|    |___ |__| |__/ |___ 
                                                                                
 #HotIf WinActive("ahk_exe Code.exe") 
-!numpad2:: SendInput "^+{Down}" ; Go to Next occurance (find results)
-!numpad5:: SendInput "^+{Up}" ; Go to Next occurance (find results)
+numpad2:: SendInput "^+{Down}" ; Go to Next occurance (find results)
+numpad5:: SendInput "^+{Up}" ; Go to Next occurance (find results)
 #HotIf
 
 
@@ -147,10 +193,10 @@ _r := _r . _ide
 #HotIf WinActive("ahk_exe devenv.exe")
 _vs := "Visual Studio shortcuts`n"
 
-!numpad2:: SendInput "{AltDown}{F7}{AltUp}" ; Find usages
+numpad2:: SendInput "{AltDown}{F7}{AltUp}" ; Find usages
 _vs := _vs . " 4 - Go to next cursor position `n"
 
-!numpad0:: MsgBox(_vs, "VS Help", "iconi T30")
+numpad0:: MsgBox(_vs, "VS Help", "iconi T30")
 #HotIf
 
 
@@ -161,19 +207,19 @@ _vs := _vs . " 4 - Go to next cursor position `n"
 #HotIf WinActive("ahk_exe devenv.exe") and InStr(WinGetTitle("A"), "(Debugging)")
 _vsd := "Visual Studio Debugging shortcuts `n`n"
 
-!numpad3:: SendInput "{F5}" ; Continue debugging 
-!numpad6:: SendInput "{ShiftDown}{F9}{ShiftUp}" ; Quick Watch
+numpad3:: SendInput "{F5}" ; Continue debugging 
+numpad6:: SendInput "{ShiftDown}{F9}{ShiftUp}" ; Quick Watch
 _vsd := _vsd . " 3 - Continue Debug `t`t 6 - Quick Watch `n"
 
-!numpad2:: SendInput "{F11}" ; Step Into
-!numpad5:: SendInput "{ShiftDown}{F11}{ShiftUp}" ; Step Out
+numpad2:: SendInput "{F11}" ; Step Into
+numpad5:: SendInput "{ShiftDown}{F11}{ShiftUp}" ; Step Out
 _vsd := _vsd . " 2 - Step Into `t`t 5 - Step Out `n"
 
-!numpad1:: SendInput "{F10}" ; Step Over
-!numpad4:: SendInput "^{F10}" ; Run to the Cursor
+numpad1:: SendInput "{F10}" ; Step Over
+numpad4:: SendInput "^{F10}" ; Run to the Cursor
 _vsd := _vsd . " 1 - Step Over `t`t 4 - Run to the Cursor `n"
 
-!numpad0:: MsgBox(_vsd, "VS Debug Help", "iconi T30")
+numpad0:: MsgBox(_vsd, "VS Debug Help", "iconi T30")
 #HotIf
 
 
@@ -182,7 +228,7 @@ _vsd := _vsd . " 1 - Step Over `t`t 4 - Run to the Cursor `n"
 ; |__/ |__| |__| |__] |___ |___    |___ |__| |  | |  | |  | | \| |__/ |___ |  \ 
 
 #HotIf WinActive("ahk_exe doublecmd.exe") 
-!numpad4:: SendInput "{AltDown}{Right}{AltUp}"
+numpad4:: SendInput "{AltDown}{Right}{AltUp}"
 #HotIf
 
 
@@ -193,19 +239,19 @@ _vsd := _vsd . " 1 - Step Over `t`t 4 - Run to the Cursor `n"
 #HotIf WinActive("ahk_exe gitextensions.exe") 
 _ge := "Git Extensions `n"
 
-!numpad3:: SendInput "{Ctrl down}.{Ctrl up}" ; Checkout Branch
-!numpad6:: SendInput "^{Space}" ; Commit
+numpad3:: SendInput "{Ctrl down}.{Ctrl up}" ; Checkout Branch
+numpad6:: SendInput "^{Space}" ; Commit
 _ge := _ge . "3 - Checkout branch `t`t 6 - Commit `n"
 
-!numpad2:: SendInput "^p" 
-!numpad5:: SendInput "^n"
+numpad2:: SendInput "^p" 
+numpad5:: SendInput "^n"
 _ge := _ge . "2 - Go to parent `t`t 5 - Go to child `n"
 
-!numpad1:: SendInput "!{Left}" ; ??
-!numpad4:: SendInput "!{Right}" ; New Branch
+numpad1:: SendInput "!{Left}" ; ??
+numpad4:: SendInput "!{Right}" ; New Branch
 _ge := _ge . "1 - Go back `t`t 4 - Go Forward `n"
 
-!numpad0:: MsgBox(_ge, "Git Extension Help", "iconi T30")
+numpad0:: MsgBox(_ge, "Git Extension Help", "iconi T30")
 #HotIf
 
 
@@ -220,9 +266,9 @@ _gd := "Git Extensions : Diff `n"
 ; !numpad5:: SendInput "^n"
 ; _gd := _gd . "2 - Go to parent `t`t 5 - Go to child `n"
 
-!numpad1:: SendInput "{F8}" ; ??
-!numpad4:: SendInput "+{F8}" ; New Branch
+numpad1:: SendInput "{F8}" ; ??
+numpad4:: SendInput "+{F8}" ; New Branch
 _gd := _gd . "1 - Next conflict `t`t 4 - Prev Conflict `n"
 
-!numpad0:: MsgBox(_gd, "Git Extension Help", "iconi T30")
+numpad0:: MsgBox(_gd, "Git Extension Help", "iconi T30")
 #HotIf

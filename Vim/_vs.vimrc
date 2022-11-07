@@ -119,6 +119,8 @@ nnoremap <C-p> :vsc Edit.GoToFile<CR>
 nnoremap <C-S-p> :vsc Edit.GoToAll<CR>
 
 nmap gl :vsc ReSharper.ReSharper_GotoFile<CR>
+nmap <C-P> :vsc ReSharper.ReSharper_GotoType<CR>
+nmap <C-S-P> :vsc ReSharper.ReSharper_GotoType<CR>
 nmap gm :vsc ReSharper.ReSharper_GotoFileMember<CR>
 nnoremap gr :vsc ReSharper.ReSharper_GotoRecentFiles <CR>
 nnoremap gR :vsc ReSharper.ReSharper_GotoRelatedFiles <return>
@@ -222,7 +224,7 @@ nmap gwo :vsc View.Output<CR>
 nmap gwp :vsc View.PackageManagerConsole<CR>
 nmap gws :vsc View.SolutionExplorer<CR>
 
-" nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
+nmap gs :vsc ReSharper.ReSharper_LocateInSolutionExplorer<CR>
 
 " }}}
 
