@@ -38,15 +38,17 @@ SetScrollLockState "AlwaysOff"
 DropBoxDir := "C:\Dropbox"
 ToolsDir := DropBoxDir . "\Tools"
 
-Capslock:: {
-    Send "{CtrlDown}"
-    KeyWait "CapsLock"
-    Send "{CtrlUp}"
-    if ( A_PriorKey = "CapsLock" )
-    {
-        Send "{Esc}"
-    }
-}
+; Control was not working fine on Azure Virtual Desktop
+; Capslock:: {
+;     Send "{CtrlDown}"
+;     KeyWait "CapsLock"
+;     Send "{CtrlUp}"
+;     if ( A_PriorKey = "CapsLock" )
+;     {
+;         Send "{Esc}"
+;     }
+; }
+CapsLock::Esc
 
 ; Prevent accidentaly turning CAPSLOCK on if pressed with Shift
 !CapsLock::Esc
