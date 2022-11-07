@@ -95,7 +95,7 @@ numpad0:: MsgBox(_cs, "Sketchup in Chrome Help", "iconi T30")
 ; |    |__| |__/ |  | |\/| |___ 
 ; |___ |  | |  \ |__| |  | |___ 
 
-#HotIf WinActive("ahk_exe chrome.exe") or WinActive("ahk_exe firefox.exe")
+#HotIf WinActive("ahk_exe chrome.exe") or WinActive("ahk_exe firefox.exe") or WinActive("ahk_exe msedge.exe")
 _c := "Chrome shortcuts `n`n"
 
 !*:: SendInput "^{F5}"
