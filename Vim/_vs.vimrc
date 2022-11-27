@@ -286,3 +286,28 @@ nnoremap g2 :vsc ReSharper.ReSharper_BookmarksGoToBookmark2 <CR>
 nnoremap g3 :vsc ReSharper.ReSharper_BookmarksGoToBookmark3 <CR>
 nnoremap g4 :vsc ReSharper.ReSharper_BookmarksGoToBookmark4 <CR>
 nnoremap g5 :vsc ReSharper.ReSharper_BookmarksGoToBookmark5 <CR>
+
+
+" PEASY MOTION - vim-easymotion plugin for Visual Studio
+" gS prefix is added for ViEmu, no use for VsVim AFAIK.
+"VsVim and ViEmu are disabled until PeasyMotion finishes
+
+"Whole viewport jump-to-word beginning mode:
+nnoremap <Space> gS:vsc Tools.InvokePeasyMotion<CR>
+
+"Select text from current caret position to desired jump label (fwd and reverse directions supported)
+nmap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>
+
+"Jump to word beginning in current line
+nmap zw gS:vsc Tools.InvokePeasyMotionLineJumpToWordBegining<CR>
+"Jump to word ending in current line
+nmap ze gS:vsc Tools.InvokePeasyMotionLineJumpToWordEnding<CR>
+
+"Jump to any open document tab
+nmap ;w gS:vsc Tools.InvokePeasyMotionJumpToDocumentTab<CR>
+
+"Jump to line beginning:
+nmap ;l gS:vsc Tools.InvokePeasyMotionJumpToLineBegining<CR>
+
+"Two char search mode:
+nmap ;c gS:vsc Tools.InvokePeasyMotionTwoCharJump<CR>

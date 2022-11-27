@@ -55,6 +55,7 @@ sethandler <C-K> n-v:vim
 sethandler <C-L> n-v:vim
 sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
+sethandler <C-Q> i-v:vim
 " sethandler <C-P> i-v:vim
 
 """ Mappings --------------------------------
