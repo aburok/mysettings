@@ -54,7 +54,8 @@ Bundle 'https://github.com/Shougo/neocomplete.vim'
 
 Bundle "MarcWeber/vim-addon-mw-utils"
 Bundle "tomtom/tlib_vim"
-Bundle "https://github.com/garbas/vim-snipmate"
+
+" Bundle "https://github.com/garbas/vim-snipmate" - is deprecated 
 
 Bundle 'https://github.com/honza/vim-snippets.git'
 " "Bundle 'https://github.com/kien/rainbow_parentheses.vim'
