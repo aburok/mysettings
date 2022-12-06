@@ -4,6 +4,7 @@ filetype off                  " required
 " set the runtime path to include Vundle and initialize
 set rtp+=C:/mysettings/vim/vundle/
 set rtp+=C:/mysettings/vim
+set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#rc()
 " alternatively, pass a path where Vundle should install bundles
 " "let path = 'C:/Dropbox/tools/vim/bundle/'
