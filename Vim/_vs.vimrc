@@ -278,7 +278,7 @@ nmap <leader>q :vsc Window.CloseDocumentWindow<CR>
 nmap gc :vsc View.ViewCode<CR>
 
 " ARDUINO
-nmap <Leader>mb :vsc VisualMicro.SketchCompileUpload<CR>
+" nmap <Leader>mb :vsc VisualMicro.SketchCompileUpload<CR>
 
 nnoremap gk :vsc ReSharper.ReSharper_BookmarksBookmarksMenu <CR>
 nnoremap g1 :vsc ReSharper.ReSharper_BookmarksGoToBookmark1 <CR>
@@ -293,7 +293,7 @@ nnoremap g5 :vsc ReSharper.ReSharper_BookmarksGoToBookmark5 <CR>
 "VsVim and ViEmu are disabled until PeasyMotion finishes
 
 "Whole viewport jump-to-word beginning mode:
-nnoremap <Space> gS:vsc Tools.InvokePeasyMotion<CR>
+nnoremap <leader><leader> gS:vsc Tools.InvokePeasyMotion<CR>
 
 "Select text from current caret position to desired jump label (fwd and reverse directions supported)
 nmap ;; gS:vsc Tools.InvokePeasyMotionTextSelect<CR>

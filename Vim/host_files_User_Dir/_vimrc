@@ -1,3 +1,4 @@
+source C:/mysettings/Vim/_base.vimrc
 source c:/mysettings/Vim/_vim.vimrc
 source c:/mysettings/Vim/_vundle.vimrc
 source c:/mysettings/Vim/_vundle.config.vimrc

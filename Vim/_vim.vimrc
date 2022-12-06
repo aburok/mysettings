@@ -1,4 +1,3 @@
-source C:/mysettings/Vim/_base.vimrc
 
 augroup filetype_vim
     autocmd!
