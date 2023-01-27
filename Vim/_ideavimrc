@@ -45,7 +45,7 @@ set idearefactormode=keep
 nmap Q :action ReopenClosedTab<CR>
 
 sethandler <C-B> i-v:vim
-sethandler <C-C> i-v:vim
+" sethandler <C-C> i-v:vim
 sethandler <C-D> i-v:vim
 sethandler <C-F> n-v:vim
 sethandler <C-H> n-v:vim
@@ -57,6 +57,10 @@ sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
 sethandler <C-Q> i-v:vim
 " sethandler <C-P> i-v:vim
+sethandler <C-v> n-v:vim
+sethandler <C-t> n-v:vim
+sethandler <C-s-t> i-v:vim
+sethandler <C-w> n-v:vim
 
 """ Mappings --------------------------------
 nmap <leader>d <Action>(Debug)
@@ -76,6 +80,8 @@ map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
 
 map <C-S-e> :action ActivateProjectToolWindow<CR>
+nmap <C-v> "+p
+imap <C-v> <C-r>+
 map <leader>we :action ActivateProjectToolWindow<CR>
 
 nmap ge :action ReSharperGotoNextErrorInSolution<CR>
@@ -132,7 +138,8 @@ nmap <leader>oo :action ReformatCode<CR>
 
 """""""""""""""""
 """ BOOKMARKS """
-nmap mm :action ToggleBookmarkWithMnemonic<CR>
+nmap mm :action ToggleBookmark<CR>
+nmap mn :action ToggleBookmarkWithMnemonic<CR>
 nmap mx :action DeleteMnemonicFromBookmark<CR>
 nmap '' :action ShowBookmarks<CR>
 nmap 'j :action GotoNextBookmark<CR>
@@ -207,6 +214,9 @@ vmap <C-/> :action CommentByLineComment<CR>
 nmap <C-/> :action CommentByLineComment<CR>
 
 " Tab navigation
+map <C-w> <Action>(CloseActiveTab)
+map <C-S-t> <Action>(ReopenClosedTab)
+map <C-t> <Action>(ReopenClosedTab)
 nmap J <Action>(PreviousTab)
 nmap K <Action>(NextTab)
 

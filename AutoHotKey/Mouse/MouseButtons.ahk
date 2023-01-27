@@ -130,7 +130,21 @@ numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
 
 #HotIf WinActive("ahk_exe teams.exe") 
 numpad3:: SendInput "(yes){Enter}"
-numpad6:: SendInput "nasi najlepsi inzynierowie nad tym pracuja (yes){Enter}"
+numpad6:: SendInput "Out best engineers are working on that (hammerandwrench)"
+
+numpad2:: 
+{
+    SendInput " (poop) on "
+    Sleep 500
+    SendInput " (fire) yo"
+}
+
+numpad5:: 
+{
+    SendInput "(poop) is about to hit the" 
+    Sleep 300
+    SendInput " (windturbine) yo"
+}
 
 numpad1:: SendInput "{Browser_Back}" 
 numpad4:: SendInput "{Browser_Forward}"
@@ -197,6 +211,34 @@ numpad2:: SendInput "{AltDown}{F7}{AltUp}" ; Find usages
 _vs := _vs . " 4 - Go to next cursor position `n"
 
 numpad0:: MsgBox(_vs, "VS Help", "iconi T30")
+#HotIf
+
+
+
+; ____ ___  ____ ___ _ ____ _   _ 
+; [__  |__] |  |  |  | |___  \_/  
+; ___] |    |__|  |  | |      |   
+                                
+
+#HotIf WinActive("ahk_exe spotify.exe")
+_spotify := "Spotify  shortcuts`n"
+
+numpad1:: SendInput "{AltDown}{Left}{AltUp}" 
+_spotify := _spotify . " 1 - Go back`n"
+
+numpad4:: SendInput "{AltDown}{Right}{AltUp}" 
+_spotify := _spotify . " 4 - Go forward`n"
+
+numpad2:: SendInput "{CtrlDown}{Right}{CtrlUp}" 
+_spotify := _spotify . " 2 - Go to next track `n"
+
+numpad5:: SendInput "{CtrlDown}{Left}{CtrlUp}" ; Find usages
+_spotify := _spotify . " 5 - Go to previous track `n"
+
+numpad3:: SendInput "{CtrlDown}{L}{CtrlUp}" ; Find usages
+_spotify := _spotify . " 3 - Go to search `n"
+
+numpad0:: MsgBox(_spotify, "VS Help", "iconi T30")
 #HotIf
 
 

@@ -32,6 +32,8 @@ keyMap["r"] := "Enter"
 __help := __help . "Enter   -> LALT + R `n"
 keyMap["e"] := "Escape"
 __help := __help . "Escape   -> LALT + E `n"
+keyMap["o"] := ["End", "Enter"]
+__help := __help . "Escape   -> LALT + O `n"
 
 <!/:: {
     MsgBox(__help, "Help","iconi T30")
@@ -60,9 +62,11 @@ __help := __help . "Escape   -> LALT + E `n"
     ThisHotKey := keyMap[PressedKey]
     CtrlPressed := ((GetKeyState("Control") or GetKeyState("CapsLock")) ? "^" : "")
     ShiftPressed := (GetKeyState("Shift") ? "+" : "")
-    KeyInput := ShiftPressed . CtrlPressed . "{" . ThisHotKey . "}"
-    ; MsgBox(KeyInput)
-    Send(KeyInput)
+
+    if (type(ThisHotKey) = "String"){
+        KeyInput := ShiftPressed . CtrlPressed . "{" . ThisHotKey . "}"
+        Send(KeyInput)
+    }     
 }
 
 *<!+x::BackSpace
