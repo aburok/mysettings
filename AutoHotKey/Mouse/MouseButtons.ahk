@@ -172,7 +172,8 @@ _ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 ; |__/ | |  \ |___ |__/    | |  \ |___ 
 ; |  \ | |__/ |___ |  \    | |__/ |___ 
 
-#HotIf WinActive("ahk_exe rider64.exe")
+#HotIf WinActive("ahk_exe rider64.exe") AND NOT(InStr(WinGetTitle("A"), "Debugger"))
+
 _r := "Rider IDE shortcuts`n"
 
 numpad3:: SendInput "!{F7}" ; find results
@@ -187,6 +188,26 @@ _r := _r . "`n  7 - Locate in Solution `t 6 - Prev Occurence `n"
 
 _r := _r . _ide
 numpad0:: MsgBox(_r, "Rider Help", "iconi T30")
+#HotIf 
+
+
+; ____ _ ___  ____ ____    _ ___  ____    ___  ____ ___  _  _ ____ ____ _ _  _ ____ 
+; |__/ | |  \ |___ |__/    | |  \ |___    |  \ |___ |__] |  | | __ | __ | |\ | | __ 
+; |  \ | |__/ |___ |  \    | |__/ |___    |__/ |___ |__] |__| |__] |__] | | \| |__] 
+
+#HotIf WinActive("ahk_exe rider64.exe") and InStr(WinGetTitle("A"), "Debugger")
+
+_r_d := "Rider IDE shortcuts (Debugging) `n"
+
+numpad2:: SendInput "{F10}" 
+numpad5:: SendInput "{F5}"      ; Locate in Solution Explorer
+_r_d := _r_d . " 2 - Step Over `t 5 - Continue `n"
+
+numpad3:: SendInput "{F11}" 
+numpad6:: SendInput "+{F11}" 
+_r_d := _r_d . " 3 - Step in `t 6 - Step Out `n"
+
+numpad0:: MsgBox(_r_d, "Rider [Debugger] Help", "iconi T30")
 #HotIf 
 
 

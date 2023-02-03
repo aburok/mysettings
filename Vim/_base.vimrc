@@ -7,7 +7,6 @@ let g:mapleader = ' '
 let mapleader = ' '
 
 map Q <nop>
-nnoremap qq :wq<CR>
 nnoremap P "0p
 vnoremap P "0p
 
@@ -56,7 +55,7 @@ nnoremap <leader>y( vi("+y
 " CTRL-V and SHIFT-Insert are Paste
 noremap <S-Insert>		"+gp
 
-cnoremap <C-V>		<C-R>+
+cnoremap <C-V>		    <C-R>+
 cnoremap <S-Insert>		<C-R>+
 
 " CTRL-S is Save File

@@ -1,3 +1,6 @@
+source C:/mysettings/Vim/_base.vimrc
+
+
 " ------------------------------
 " IdeaVim configuration for Rider
 " ------------------------------
@@ -97,6 +100,15 @@ nmap gi <Action>(GotoImplementation)
 
 map <C-o> <Action>(Back)
 map <C-i> <Action>(Forward)
+
+" EXPAND / COLLAPSE / FOLDING / UNFOLDING
+nnoremap zC :action CollapseRegionRecursively<CR>
+nnoremap zO :action ExpandRegionRecursively<CR>
+nnoremap z1 :action ExpandAllToLevel1<CR>
+nnoremap z2 :action ExpandAllToLevel2<CR>
+nnoremap z3 :action ExpandAllToLevel3<CR>
+nnoremap z4 :action ExpandAllToLevel4<CR>
+nnoremap z5 :action ExpandAllToLevel5<CR>
 
 " map <C-p> :action GoToFile<CR>
 " nmap go <C-S-n>
