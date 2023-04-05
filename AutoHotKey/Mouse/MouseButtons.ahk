@@ -24,36 +24,30 @@ explorerShortcuts := "Windows Explorer shortcuts`n"
 ; WINDOWS KEY BINDINGS
 ; ---------------------
 
-; Mouse Side : 1 -> Win + Numpad1
-; Mouse Side : 2 -> Win + Numpad2
-; Mouse Side : 3 -> Win + Numpad3
-; Mouse Side : 4 -> Win + Numpad4
-; Mouse Side : 5 -> Win + Numpad5
-; Mouse Side : 6 -> Win + Numpad6
-; Mouse Side : 7 -> Win + Numpad7
-; Mouse Side : 8 -> Win + Numpad8
-; Mouse Side : 9 -> Win + Numpad9
-; Mouse Side : 10 -> Win + Numpad0
-; Mouse Side : 11 -> Win + Numpad-
-; Mouse Side : 12 -> Win + Numpad+
+; IMPORTANT
+; NOTE :
+; Triggering action based on Win + NumPad keys cause some problems.
+; Mainly that Win key was stuck on DOWN status (Win key constantly pressed).
+; Instead of using combination of keys, just using Numpad
 
-; Mouse Top : 4 (left to left click) -> Win + Numpad /
-; Mouse Top : 5 ( DPI- ' V ' ) -> ALT + +
-; Mouse Top : 6 ( DPI+ ' ^ ' ) -> ALT + -
+; Mouse Side : 1 ->  Numpad1
+; Mouse Side : 2 ->  Numpad2
+; Mouse Side : 3 ->  Numpad3
+; Mouse Side : 4 ->  Numpad4
+; Mouse Side : 5 ->  Numpad5
+; Mouse Side : 6 ->  Numpad6
+; Mouse Side : 7 ->  Numpad7
+; Mouse Side : 8 ->  Numpad8
+; Mouse Side : 9 ->  Numpad9
+; Mouse Side : 10 ->  Numpad0
+; Mouse Side : 11 ->  Numpad-
+; Mouse Side : 12 ->  Numpad+
+
+; Mouse Top : 4 (left to left click) -> Numpad*
 
 ; ASCII art
 ; http://patorjk.com/software/taag/#p=display&f=Cybermedium&t=MS%20Teams
 
-WinActivateOrOpen(winExe) {
-    window := "ahk_exe " . winExe
-    if WinExist(window){
-        WinMaximize ; Maximize windows
-        ; MsgBox("Activating window" . winExe)
-        WinActivate ; Use the window found by WinExist.
-    }
-    else{
-    }
-}
 
 GetCurrentDesktop(){
     currentDesktop := RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops", "CurrentVirtualDesktop")
@@ -61,9 +55,6 @@ GetCurrentDesktop(){
     ix := floor(InStr(allDesktops,currentDesktop) / strlen(currentDesktop))
     return ix
 }
-
-#F9:: WinActivateOrOpen("vmconnect.exe")
-#F10:: WinActivateOrOpen("msrdc.exe")
 
 NumpadMult:: {
     ix := GetCurrentDesktop()
@@ -86,6 +77,11 @@ numpad4:: SendInput "{Browser_Forward}"
 GroupAdd "IDE_GROUP", "ahk_exe rider64.exe"
 GroupAdd "IDE_GROUP", "ahk_exe Code.exe"
 GroupAdd "IDE_GROUP", "ahk_exe devenv.exe"
+
+
+#HotIf WinActive("ahk_exe explorer.exe") 
+numpad3:: SendInput "{CtrlDown}w{CtrlUp}"
+#HotIf
 
 ; ____ _  _ ____ ____ _  _ ____       ____ _  _ ____ ___ ____ _  _ _  _ ___
 ; |    |__| |__/ |  | |\/| |___       [__  |_/  |___  |  |    |__| |  | |__]
