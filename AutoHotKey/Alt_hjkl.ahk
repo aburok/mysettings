@@ -38,7 +38,7 @@ __help := __help . "Escape   -> LALT + E `n"
 keyMap["o"] := ["End", "Enter"]
 __help := __help . "Escape   -> LALT + O `n"
 
-<!/:: {
++<!/:: {
     MsgBox(__help, "Help","iconi T30")
 }
 
