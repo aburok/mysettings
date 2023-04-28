@@ -25,6 +25,7 @@ For Each, Modifier in ["Shift","Control","LWin","RWin","Alt"]
 }
 
 #Include %A_ScriptDir%\Alt_hjkl.ahk
+#Include %A_ScriptDir%\Mouse\MouseButtons.ahk
 
 ; Match window names by part of the title
 SetTitleMatchMode "RegEx"

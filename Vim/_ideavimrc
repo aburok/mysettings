@@ -27,6 +27,7 @@ set easymotion
 set textobj-entire
 set ReplaceWithRegister
 set NERDTree
+set quickscope
 
 "  set sneak " <- szukanie przy uzyciu klawisza s i S - wylaczone bo używam S do zamiany lini
 set which-key

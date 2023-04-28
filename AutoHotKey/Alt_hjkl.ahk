@@ -10,14 +10,17 @@ keyMap["k"] := "Up"
 __help := __help . "Up          -> LALT + K `n"
 keyMap["l"] := "Right"
 __help := __help . "Right       -> LALT + L `n"
-keyMap["w"] := "Up"
-__help := __help . "Up        -> LALT + W `n"
-keyMap["s"] := "Down"
-__help := __help . "Down        -> LALT + S `n"
-keyMap["a"] := "Left"
-__help := __help . "Left          -> LALT + A `n"
-keyMap["d"] := "Right"
-__help := __help . "Right       -> LALT + D `n"
+; NOT USING WSAD vvvvvvv
+; keyMap["w"] := "Up"
+; __help := __help . "Up        -> LALT + W `n"
+; keyMap["s"] := "Down"
+; __help := __help . "Down        -> LALT + S `n"
+; keyMap["a"] := "Left"
+; __help := __help . "Left          -> LALT + A `n"
+; ALT + SHIFT + D was in clonflict with OneNote insert date
+; keyMap["d"] := "Right"
+; __help := __help . "Right       -> LALT + D `n"
+; NOT USING WSAD ^^^^^^^^
 keyMap[","] := "PgUp"
 __help := __help . "Page Up     -> LALT + , `n"
 keyMap["."] := "PgDn"
@@ -35,7 +38,7 @@ __help := __help . "Escape   -> LALT + E `n"
 keyMap["o"] := ["End", "Enter"]
 __help := __help . "Escape   -> LALT + O `n"
 
-<!/:: {
++<!/:: {
     MsgBox(__help, "Help","iconi T30")
 }
 
@@ -43,10 +46,10 @@ __help := __help . "Escape   -> LALT + O `n"
 *<!j::
 *<!k::
 *<!l::
-*<!w::
-*<!s::
-*<!a::
-*<!d::
+; *<!w::
+; *<!s::
+; *<!a::
+; *<!d::
 *<!,::
 *<!.::
 *<!x::
