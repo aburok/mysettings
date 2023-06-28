@@ -75,8 +75,8 @@ __help := __help . "Escape   -> LALT + O `n"
 *<!+x::BackSpace
 
 ; Media 
-<!\::Media_Play_Pause
-__help := __help . "`n LALT + \ `t`t`t -> MEDIA PLAYPPAUSE"
+; <!\::Media_Play_Pause
+; __help := __help . "`n LALT + \ `t`t`t -> MEDIA PLAYPPAUSE"
 
 ; <!]::Media_Next
 <!RButton::Media_Next
@@ -95,15 +95,15 @@ __help := __help . "`n LALT + ] `t`t`t -> MEDIA PREVIOUS"
 
 ; <!F2::Volume_Down
 ; __help := __help . "`n LALT + F2 `t`t -> VOLUME DOWN"
-<![::Volume_Down
-    __help := __help . "`n LALT + [ `t`t`t -> VOLUME DOWN"
+; <![::Volume_Down
+;     __help := __help . "`n LALT + [ `t`t`t -> VOLUME DOWN"
 
 <!WheelDown::Volume_Down
 __help := __help . "`n LALT + WHEEL DOWN `t`t -> VOLUME DOWN"
 
 ; <!F3::Volume_Up
 ; __help := __help . "`n LALT + F3 `t`t -> VOLUME UP"
-<!]::Volume_Up
-__help := __help . "`n LALT + SHIFT + [ `t`t -> VOLUME UP"
+; <!]::Volume_Up
+; __help := __help . "`n LALT + SHIFT + [ `t`t -> VOLUME UP"
 <!WheelUp::Volume_Up
 __help := __help . "`n LALT + WHEEL UP `t`t -> VOLUME UP"
