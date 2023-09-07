@@ -151,7 +151,7 @@ numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
 
 #HotIf WinActive("ahk_exe teams.exe")
 numpad3:: SendInput "(yes){Enter}"
-numpad6:: SendInput "Out best engineers are working on that (hammerandwrench)"
+numpad6:: SendInput "Our best engineers are working on that very hard (hammerandwrench)"
 
 numpad2::
     {

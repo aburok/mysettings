@@ -247,6 +247,7 @@ nmap <leader>p <Action>(PinActiveTabToggle)
 nmap <leader>rl <Action>(RecentLocations)
 
 nmap <leader>l :action LocateInSolutionView<CR>
+nmap <M-`> :action LocateInSolutionView<CR>
 
 nmap <leader>ee :action ChooseRunConfiguration<CR>
 nmap <leader>ed :action ChooseDebugConfiguration<CR>

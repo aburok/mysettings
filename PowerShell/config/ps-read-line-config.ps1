@@ -4,7 +4,8 @@
 Set-PSReadlineOption -HistoryNoDuplicates
 Set-PSReadlineOption -EditMode Vi
 
-Set-PSReadlineOption -PredictionSource History
+# Not Needed any more
+#Set-PSReadlineOption -PredictionSource History
 
 
 # ViModeIndicator was not working well with oh-my-posh (it was blinking and taking some time to reload)
