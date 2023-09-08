@@ -67,6 +67,8 @@ sethandler <C-w> n-v:vim
 sethandler <C-S-A> i-v:vim
 sethandler <C-S-P> a:vim
 sethandler <C-s-t> i-v:vim
+sethandler <A-_> a:vim
+sethandler <A-+> a:vim
 
 map <C-S-A> <Action>(EditorSelectWord)
 
@@ -138,7 +140,9 @@ nnoremap <C-l> <C-W>l
 
 
 nmap <leader>ws <Action>(SplitHorizontally)
+map <A-_> <Action>(SplitHorizontally)
 nmap <leader>wv <Action>(SplitVertically)
+map <A-+> <Action>(SplitVertically)
 nmap <leader>wu <Action>(Unsplit)
 nmap <leader>wc <Action>(ChangeSplitOrientation)
 nmap <leader>wr <Action>(MoveTabRight)
