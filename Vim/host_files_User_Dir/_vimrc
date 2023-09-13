@@ -3,7 +3,3 @@ source c:/mysettings/Vim/_vim.vimrc
 source c:/mysettings/Vim/_vundle.vimrc
 source c:/mysettings/Vim/_vundle.config.vimrc
 
-if isdirectory("C:/_Merck")
-    source c:/_Merck/_merck.vimrc
-endif
-
