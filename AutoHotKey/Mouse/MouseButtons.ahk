@@ -48,9 +48,12 @@ explorerShortcuts := "Windows Explorer shortcuts`n"
 ; ASCII art
 ; http://patorjk.com/software/taag/#p=display&f=Cybermedium&t=MS%20Teams
 
-
 GetCurrentDesktop(){
-    currentDesktop := RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops", "CurrentVirtualDesktop")
+    try{
+        currentDesktop := RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops", "CurrentVirtualDesktop")
+    } catch {
+        currentDesktop := RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\SessionInfo\1\VirtualDesktops", "CurrentVirtualDesktop")
+    }
     allDesktops := RegRead("HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\VirtualDesktops", "VirtualDesktopIDs")
     ix := floor(InStr(allDesktops,currentDesktop) / strlen(currentDesktop))
     return ix
@@ -78,8 +81,7 @@ GroupAdd "IDE_GROUP", "ahk_exe rider64.exe"
 GroupAdd "IDE_GROUP", "ahk_exe Code.exe"
 GroupAdd "IDE_GROUP", "ahk_exe devenv.exe"
 
-
-#HotIf WinActive("ahk_exe explorer.exe") 
+#HotIf WinActive("ahk_exe explorer.exe")
 numpad3:: SendInput "{CtrlDown}w{CtrlUp}"
 #HotIf
 
