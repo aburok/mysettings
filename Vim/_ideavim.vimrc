@@ -13,7 +13,7 @@ source C:/mysettings/Vim/_base.vimrc
 
 " Reload Configuration
 nmap <leader>rc :source ~/.ideavimrc<CR>
-nmap \e :e ~/.ideavimrc<CR>
+nmap \e :e C:/mysettings/Vim/_ideavim.vimrc<CR>
 nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
 
 """ Plugins """
@@ -54,7 +54,7 @@ sethandler <C-H> n-v:vim
 sethandler <C-I> n-v:vim
 sethandler <C-J> n-v:vim
 sethandler <C-K> n-v:vim
-sethandler <C-L> n-v:vim
+sethandler <C-L> a:vim
 sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
 sethandler <C-Q> i-v:vim
@@ -252,6 +252,7 @@ nmap <leader>p <Action>(PinActiveTabToggle)
 nmap <leader>rl <Action>(RecentLocations)
 
 nmap <leader>l <Action>(LocateInSolutionView)
+nmap <C-L> <Action>(LocateInSolutionView)
 
 nmap <leader>ee <Action>(ChooseRunConfiguration)
 nmap <leader>ed <Action>(ChooseDebugConfiguration)
