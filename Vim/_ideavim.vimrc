@@ -9,8 +9,6 @@ source C:/mysettings/Vim/_base.vimrc
 "    :actionlist
 " 
 
-source C:/mysettings/Vim/_base.vimrc
-
 """ Map leader to space ---------------------
 
 " Reload Configuration
@@ -46,7 +44,7 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-nmap Q <Action>(ReopenClosedTab)
+nmap Q <Action>(CloseActiveTab)
 
 sethandler <C-B> i-v:vim
 " sethandler <C-C> i-v:vim
@@ -133,10 +131,10 @@ nmap <C-e> <Action>(RecentFiles)
 nmap <leader>h <Action>(FindInPath)
 
 " MOVE BETWEEN SPLITS
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+nmap <C-h> <C-W>h
+nmap <C-j> <C-W>j
+nmap <C-k> <C-W>k
+nmap <C-l> <C-W>l
 
 
 nmap <leader>ws <Action>(SplitHorizontally)
@@ -235,7 +233,6 @@ vmap <C-/> <Action>(CommentByLineComment)
 nmap <C-/> <Action>(CommentByLineComment)
 
 " Tab navigation
-map <C-w> <Action>(CloseActiveTab)
 map <C-S-t> <Action>(ReopenClosedTab)
 map <C-t> <Action>(ReopenClosedTab)
 nmap J <Action>(PreviousTab)

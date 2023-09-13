@@ -59,27 +59,27 @@ let g:notes_suffix = '.note'
 " close NERDTree if it's only window left
 " autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
-noremap <C-g> :NERDTreeToggle<CR>
-nnoremap <leader>vv :NERDTreeToggle<CR>
-nnoremap <silent> <leader>vf :NERDTreeFind<CR>
-let NERDTreeShowHidden=1
-let NERDTreeShowLineNumbers=1
-let NERDTreeShowBookmarks=1
-let g:NERDTreeDirArrowExpandable = '▸'
-let g:NERDTreeDirArrowCollapsible = '▾'
-let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
+" noremap <C-g> :NERDTreeToggle<CR>
+" nnoremap <leader>vv :NERDTreeToggle<CR>
+" nnoremap <silent> <leader>vf :NERDTreeFind<CR>
+" let NERDTreeShowHidden=1
+" let NERDTreeShowLineNumbers=1
+" let NERDTreeShowBookmarks=1
+" let g:NERDTreeDirArrowExpandable = '▸'
+" let g:NERDTreeDirArrowCollapsible = '▾'
+" let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
 "let g:NERDTreeNodeDelimiter = "\u00a0"
 "
 " "autocmd vimenter * if !argc() | NERDTree | endif
 " map :NERDTreeToggle | :silent NERDTreeMirror
-autocmd BufWinEnter * NERDTreeMirror
+" autocmd BufWinEnter * NERDTreeMirror
 " Lunch NERDTree when new tab is opened
 " autocmd TabEnter * NERDTree
 "
-autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd StdinReadPre * let s:std_in=1
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 " Automatically close a tab if the only remaining window is NerdTree
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 
@@ -174,8 +174,6 @@ if has('win32')
     set wildignore+=*\\packages\\*
     set wildignore+=*\\obj\\*
     set wildignore+=*\\bin\\*
-    set wildignore+=*\\Merck.Manuals.DevSitecore\\WebSite\\sitecore\\*
-    set wildignore+=*\\Merck.Manuals.DevSitecore\\Website\\sitecore_files\\*
 elseif has('unix')
     set wildignore+=*/node_modules/*
     set wildignore+=*/.git/*
@@ -183,8 +181,6 @@ elseif has('unix')
     set wildignore+=*/packages/*
     set wildignore+=*/obj/*
     set wildignore+=*/bin/*
-    set wildignore+=*/Merck.Manuals.DevSitecore/WebSite/sitecore/*
-    set wildignore+=*/Merck.Manuals.DevSitecore/Website/sitecore_files/*
 endif
 let g:ctrlp_cmd='CtrlP :pwd'
 let g:ctrlp_show_hidden = 1
@@ -194,3 +190,13 @@ let g:ctrlp_working_path_mode = 'ra'
 " %f: the name of the first buffer open in the tab
 " %m: the modified flag
 let g:taboo_tab_format = " %f%m (%N)"
+
+
+" TODO plugin
+let g:VimTodoListsCustomKeyMapper = 'VimTodoListsCustomMappings'
+
+function! VimTodoListsCustomMappings()
+  nnoremap <buffer> s :VimTodoListsToggleItem<CR>
+  nnoremap <buffer> t :VimTodoListsToggleItem<CR>
+  noremap <buffer> <leader>e :silent call VimTodoListsSetItemMode()<CR>
+endfunction

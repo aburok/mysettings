@@ -24,8 +24,10 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-colorscheme desert
+" colorscheme desert
 
+" CTRL + Space for autocomplete/suggestions
+inoremap <C-Space> <C-N>
 
 cnoremap <C-A> <C-C>gggH<C-O>G
 onoremap <C-A> <C-C>gggH<C-O>G
@@ -84,14 +86,6 @@ nnoremap <leader>f" yi"/<C-R>"<CR>
 " FIND / SEARCH TEXT FROM CLIPBOARD
 nnoremap <leader>fc /<C-R>+<CR>zz
 
-" nnoremap <Space><Space> "tyiW:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-" nnoremap <Space>( "tyi(:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-" nnoremap <Space>" "tyi":let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-" nnoremap <Space>' "tyi':let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-" nnoremap <Space>< "tyi<:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-" nnoremap <Space>c /<C-R>+<CR>zz
-" vnoremap <Space> "ty:let @t = substitute(@t, "\/", '\\/', "g")<CR>/<C-R>t<CR>
-
 " Sessions in vim "
 nmap <F8> :mksession! ~\\vim_session <CR>    " Quick write session
 nmap <F9> :source ~\\vim_session <CR>        " Quick load session
@@ -106,20 +100,7 @@ nnoremap <C-F> gg=G<C-O><C-O>zz
 nnoremap <leader>kd gg=G<C-O><C-O>zz
 
 " auto formatting
-nnoremap <leader>kd gg=G<C-O><C-O>
-
-nnoremap <leader>mc :set nohlsearch<CR>
-    \Yp
-    \V:s/[^\"\n]/=/g<CR>
-    \kP
-    \V:s/[^\"\n]/=/g<CR>
-    \:let @/=""<CR>
-    \:set hlsearch<CR>
-
-" Pasting & replacing from 0 yank register
-nnoremap <Leader>pp "0p
-nnoremap <Leader>pc "+p
-nnoremap <Leader>r viW"0p
+" nnoremap <leader>kd gg=G<C-O><C-O>
 "
 " Those lines need to be commented when you try to do BundleUpdate
 " Other wise it will throw the vundle_last_status error
@@ -127,23 +108,6 @@ nnoremap <Leader>r viW"0p
 "set shell=powershell
 "set shellcmdflag=-command
 
-
-nnoremap <Leader>cd :cd %:p:h<CR>
-
-" This will add header comment with default # sign
-nnoremap <Leader>ch :center 80<CR>3hv0r#A<Space><Space><Esc>40A#<Esc>d80<Bar>YppVr#kk.
-
-" function! commentBlock(comment)
-"     return "\<C-V>^I" . comment . " \<ESC>"
-" endfunction
-
-vnoremap <leader>cx <C-V>lx<ESC>
-vnoremap <leader>c# <C-V>^I# <ESC>
-vnoremap <leader>c' <C-V>^I' <ESC>
-vnoremap <leader>c; <C-V>^I;<ESC>
-" vnoremap <leader>c' =commentBlock(<C-V>^I' <ESC>
-
-let g:syntastic_shell = "/usr/bin/bash"
 
 " REFRESH / RELOAD FILE
 noremap <F5> :e!<CR>G
@@ -156,12 +120,6 @@ noremap <F7> :source $MYVIMRC <CR>
 noremap <F12> :source $MYVIMRC <CR>
 nnoremap <leader>lc :source $MYVIMRC<CR>
 nnoremap <leader>ls :scriptnames<CR>
-
-" Save and run current file
-noremap <S-F5> <Esc>:w<CR>:!%:p<CR>
-
-" Open files"
-nnoremap <leader>or :browse :oldfiles!<CR>
 
 " Text decorations "
 onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>

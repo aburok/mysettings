@@ -1,14 +1,11 @@
-"--------------------------------------------------------------------------------  
-" Base VIM configuration used by VIM editor, Visual Studio VsVim and Rider IdeaVim
-"-------------------------------------------------------------------------------- 
 
-" Set leader to space
+"" Base VIM configuration used by VIM editor, Visual Studio VsVim and Rider
+" IdeaVim
+"-------------------------------------------------------------------------------- 
+"
+"" Set leader to space
 let g:mapleader = ' '
 let mapleader = ' '
-
-map Q <nop>
-nnoremap P "0p
-vnoremap P "0p
 
 " set number " Show line numbers
 " https://jeffkreeftmeijer.com/vim-number/
@@ -21,9 +18,13 @@ set hlsearch
 " Pressing * will select a word and serch for it in a file
 set ignorecase
 set showcmd
+set mouse=n
 
 " No Error sound during editing
 set visualbell
+
+let &t_SI = "\e[6 q"
+let &t_EI = "\e[2 q"
 
 nnoremap - $
 xnoremap - $
@@ -34,12 +35,15 @@ nnoremap <enter> i<cr><esc>
 " backspace in Visual mode deletes selection
 vnoremap <BS> X
 
+" "nnoremap <leader>cd :cd %:h:p<CR>
+set autochdir
+
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 " MOVE BETWEEN SPLITS
-nnoremap <M-h> <C-W>h
-nnoremap <M-j> <C-W>j
-nnoremap <M-k> <C-W>k
-nnoremap <M-l> <C-W>l
+nnoremap <C-h> <C-W>h
+nnoremap <C-j> <C-W>j
+nnoremap <C-k> <C-W>k
+nnoremap <C-l> <C-W>l
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
