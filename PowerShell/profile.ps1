@@ -59,7 +59,7 @@ Function Initialize-Config() {
     }
 }
 
-. ($PScript + "\modules.ps1")
+# . ($PScript + "\modules.ps1")
 . ($PScript + "\config\ps-read-line-config.ps1")
 # . ($PScript + "\common.functions.ps1")
 # . ($PScript + "\events.ps1")
@@ -85,8 +85,8 @@ if($global:poshSettings.lastDirectory `
 # Start-SshAgent -Quiet
 
 
-oh-my-posh --init --shell pwsh --config "C:/mysettings/Powershell/.oh-my-posh.theme.omp.json" | Invoke-Expression
-Enable-PoshTooltips
+# oh-my-posh --init --shell pwsh --config "C:/mysettings/Powershell/.oh-my-posh.theme.omp.json" | Invoke-Expression
+# Enable-PoshTooltips
 
 Write-Host "Dropbox profile loaded..."
 $global:DropboxProfileLoaded=1
@@ -99,6 +99,8 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias zl "z -ListFiles"
 Set-Alias np 'C:\Program Files\Notepad++\notepad++.exe'
+Function List_EnvVars { gci env:* | sort-object name }
+Set-Alias envs List_EnvVars 
 
 $AutoHotKeyBin = "C:\mysettings\AutoHotKey\bin\AutoHotkey_2.0-beta.3\AutoHotkey64.exe" ;
 function Run-Ahk (){
@@ -110,3 +112,9 @@ function Run-AhkMouse (){
 }
 
 # Run-Ahk
+
+Function Write_Header($text){
+    Write-Host "--------------------------------------------------"
+    Write-Host $text
+    Write-Host "--------------------------------------------------"
+}

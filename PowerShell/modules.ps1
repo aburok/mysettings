@@ -3,26 +3,24 @@ function ImportOrInstallModule([string] $moduleName){
     if($module){
         Import-Module -Name $moduleName
     }
-    else{
-        Install-Module -Name $moduleName -Force -AllowClobber -Scope AllUsers
-    }
+    # else{
+    #     Install-Module -Name $moduleName -Force -AllowClobber -Scope AllUsers
+    # }
 }
 
-ImportOrInstallModule "Pscx"
+# ImportOrInstallModule "Pscx"
 
 ImportOrInstallModule "PsReadLine"
 
-ImportOrInstallModule "ComputerManagementDsc"
-
 ImportOrInstallModule "powershell-yaml"
 
-ImportOrInstallModule "oh-my-posh"
+# ImportOrInstallModule "oh-my-posh"
 
 ImportOrInstallModule "Terminal-Icons"
 
 ImportOrInstallModule "z"
 
-ImportOrInstallModule "PSFzf"
+# ImportOrInstallModule "PSFzf"
 
 ImportOrInstallModule "Bookmarks"
 
