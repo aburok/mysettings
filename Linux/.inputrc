@@ -1,0 +1,25 @@
+$include /etc/inputrc
+
+set completion-ignore-case On
+
+set colored-stats On
+set completion-prefix-display-length 3
+set mark-symlinked-directories On
+set show-all-if-ambiguous On
+set show-all-if-unmodified On
+set visible-stats On
+set bell-style none
+
+## arrow up
+"\e[A":history-search-backward
+## arrow down
+"\e[B":history-search-forward
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word
+"\e[H": beginning-of-line
+"\e[F": end-of-line
+"\eOH": beginning-of-line
+"\eOF": end-of-line
+"\e[1~": beginning-of-line
+"\e[4~": end-of-line

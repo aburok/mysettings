@@ -1,0 +1,109 @@
+" ===========================
+" ===========================
+" ADD FOLLOWING TO vifmrc FILE 
+" ===========================
+" source C:\\mysettings\\Linux\\vifmrc
+" ===========================
+" to PATH_TO_TOOL\vifm-w64-se-0.13-binary\data\vifmrc
+" ===========================
+" ===========================
+
+" Following this setup https://abhirup-m.github.io/vifm/
+
+" enable ls colors in folder preview
+fileviewer */ ls --color=always
+fileviewer .*/ ls --color=always
+
+" preview text files using "man"
+fileviewer {*.[1-8]},<text/troff> man ./%c | col -b
+
+set viewcolumns=*{name}..,16{mtime},7{size}.
+
+" useful options
+set syscalls 
+" show dot files "
+set dotfiles 
+
+" Color of hte wild menu items
+set wildmenu
+" set menu as a popup"
+set wildstyle=popup
+
+" This is how many directories to store in the directory history.
+set history=1000 
+
+set undolevels=100 
+set followlinks 
+set norunexec
+set ignorecase smartcase nohlsearch incsearch
+set vifminfo=bmarks,bookmarks,dhistory,savedirs,chistory,ehistory,shistory,registers
+
+" yank current directory path to Windows clipboard with forward slashes
+nnoremap ypf :!echo %"d:gs!\!/!%i| clip<cr>
+
+" yank current directory path to Windows clipboard with backward slashes
+nnoremap ypb :!echo %"d%i| clip<cr>
+
+" yank path to current file to Windows clipboard with forward slashes
+nnoremap yf :!echo %"c:gs!\!/!%i| clip<cr>
+
+" yank path to current directory to Windows clipboard with backward slashes
+nnoremap yF :!echo %"c%i| clip<cr>
+
+" yank current filename without path to Windows clipboard
+nnoremap yn :!echo %"c%i| clip<cr>
+
+" yank root of current file's name to Windows clipboard
+nnoremap yr :!echo %"c:r%i| clip<cr>
+
+" open file preview
+nnoremap w :view<CR>
+
+" Bookmarks
+nnoremap B :bmarks<CR>
+
+""""""""""""""""""""""""
+"" TABS 
+" create new tab
+nnoremap <c-t> :tabnew<cr>:view!<cr>
+
+" switch to tab to the left
+nnoremap H :tabprevious<cr>:view!<cr>
+
+" switch to tab to the left
+nnoremap L :tabnext<cr>:view!<cr>
+
+" switch to tab to the left
+nnoremap Q :q<cr>
+
+"------------------------------------------------------------------------------------------ 
+" FZF INTEGRATION 
+command! FZFlocate : set noquickview
+                  \| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
+                  \| if $FZF_PICK != ''
+                  \|     execute 'goto' fnameescape($FZF_PICK)
+                  \| endif
+command! FZFfind : set noquickview
+                \| let $FZF_PICK = term('find | fzf --height 10 2>/dev/tty')
+                \| if $FZF_PICK != ''
+                \|     execute 'goto' fnameescape($FZF_PICK)
+                \| endif
+
+" variation that automatically enters directories
+command! FZFlocate : set noquickview
+                  \| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
+                  \| if $FZF_PICK != ''
+                  \|     execute system('[ -f "$FZF_PICK" ] && echo goto || echo cd') fnameescape($FZF_PICK)
+                  \| endif
+"------------------------------------------------------------------------------------------ 
+
+nnoremap <c-g> :FZFlocate<cr>
+nnoremap <c-f> :FZFfind<cr>
+
+" Example of standard two-panel file managers mappings
+nnoremap <f3> :!less %f<cr>
+nnoremap <f4> :edit<cr>
+nnoremap <f5> :copy<cr>
+nnoremap <f6> :move<cr>
+nnoremap <f7> :mkdir<space>
+nnoremap <f8> :delete<cr>
