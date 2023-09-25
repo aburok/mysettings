@@ -1,3 +1,10 @@
+; ! - ALT
+; + - SHIFT
+; ^ - CTRL
+; # - WIN
+; < - LEFT KEY e.g  <! - LEFT ALT
+; > - RIGHT KEY e.g  >! - RIGHT ALT
+
 ; #!v::
 ; #+v::
 ;     WinActivate, ^.*( - Microsoft Visual Studio).*$
@@ -7,29 +14,36 @@
 ;     WinActivate, ^.*(mysettings).*(Visual Studio Code)$
 ; return
 
-#+f::
-    WinActivate, ^(.*)(ffs_gui).*$
-return
-
-
-; #+t::
-;     WinActivate, ahk_exe TOTALCMD64.EXE
-; return
-
+; #+f:: {
+;     WinActivate("^(.*)(ffs_gui).*$")
+; }
 
 ; #+o::
 ;     WinActivate, ahk_exe OUTLOOK.EXE
 ; return
 
+<!+e::
+#+e:: {
+    WinActivate("ahk_exe msedge.exe") 
+}
 
-; #+e::
-;     WinActivate, ahk_exe ONENOTE.EXE
-; return
+<!+a::
+#+a:: {
+    WinActivate("ahk_exe ONENOTE.EXE") 
+}
 
-; #!c::
-; #+c::
-; 	WinActivate, ^.*(Google Chrome)$
-; return
+<!+c::
+#+c:: {
+	WinActivate("^.*(Google Chrome)$") 
+}
+
+<!+s:: {
+	WinActivate("ahk_exe slack.exe") 
+}
+
+<!+x:: {
+	WinActivate("ahk_exe WindowsTerminal.exe") 
+}
 
 ; #!i::
 ; #+i::
@@ -42,27 +56,21 @@ return
 ; 	WinActivate, ^.*(Visual Studio Code)$
 ; return
 
-; #!n::
-; #+n::
-; 	WinActivate, ^.*(Notepad\+\+).*$
-; return
+<!+d::
+#+d:: {
+	WinActivate("^.*(Notepad\+\+).*$") 
+    }
 
 ; Powershell / Command line tool
-#+r::
+#+r:: {
 	; WinActivate, ^PS::.*$
-    WinActivate, ahk_exe ConEmu64.exe
-return
-
+    WinActivate("ahk_exe ConEmu64.exe")
+}
 
 ; #+a::
 ;     WinActivate, ^.*(Microsoft Teams).*$
 ; return
 
-#+x::
-   WinActivate, ^.*(xmind).*$
-return
-
-; #+b::
-; #+z::
-;     WinActivate, ahk_exe mintty.exe
-; return
+#+x:: {
+   WinActivate("^.*(xmind).*$") 
+}

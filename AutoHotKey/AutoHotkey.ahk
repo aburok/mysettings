@@ -9,6 +9,7 @@
 ; ! - ALT
 ; + - SHIFT
 ; ^ - CTRL
+; # - WIN
 ; < - LEFT KEY e.g  <! - LEFT ALT
 ; > - RIGHT KEY e.g  >! - RIGHT ALT
 
@@ -115,7 +116,7 @@ WinActivateOrOpen(winExe) {
 ; #Include %A_ScriptDir%\Time\Time.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
-; #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
+#Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
 ; #Include %A_ScriptDir%\KeyBindings\Yank.ahk
 
 ; #Include %A_ScriptDir%\Spotify.ahk
@@ -149,3 +150,10 @@ __help := __help . "`n LALT + M `t -> APP MENU"
 <!3:: Send "^3"
 <!4:: Send "^4"
 #HotIf
+
+
+; Shift + Wheel for horizontal scrolling
+
++WheelDown:: WheelRight
+
++WheelUp:: WheelLeft
