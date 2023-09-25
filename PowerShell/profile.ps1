@@ -99,6 +99,7 @@ Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias zl "z -ListFiles"
 Set-Alias np 'C:\Program Files\Notepad++\notepad++.exe'
+Set-Alias gitext "C:\Program Files\GitExtensions\GitExtensions.exe"
 Function List_EnvVars { gci env:* | sort-object name }
 Set-Alias envs List_EnvVars 
 

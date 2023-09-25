@@ -58,15 +58,21 @@ sethandler <C-L> a:vim
 sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
 sethandler <C-Q> i-v:vim
-sethandler <C-P> a:vim
+sethandler <C-p> a:vim
 sethandler <C-v> n-v:vim
 sethandler <C-t> n-v:vim
 sethandler <C-w> n-v:vim
 sethandler <C-S-A> i-v:vim
 sethandler <C-S-P> a:vim
 sethandler <C-s-t> i-v:vim
+sethandler <C-s-l> a:vim
 sethandler <A-_> a:vim
+sethandler <S-j> n,v:vim
+sethandler <S-j> n,v:vim
 sethandler <A-+> a:vim
+sethandler <A-2> a:vim
+sethandler <A-3> a:vim
+sethandler <A-6> a:vim
 
 map <C-S-A> <Action>(EditorSelectWord)
 
@@ -83,6 +89,9 @@ nmap <leader>gd <Action>(Compare.SameVersion)
 nmap <leader>gs <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
+map <A-2> <Action>(ActivateUnitTestsToolWindow)
+map <A-6> <Action>(ActivateBookmarksToolWindow)
+map <A-3> <Action>(ActivateNuGetToolWindow)
 
 map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
@@ -95,9 +104,9 @@ map <leader>we <Action>(ActivateProjectToolWindow)
 nmap ge <Action>(ReSharperGotoNextErrorInSolution)
 nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
 
-map <leader>bb <Action>(ToggleLineBreakpoint)
-map <leader>be <Action>(EditBreakpoint)
-map <leader>bt <Action>(XDebugger.MuteBreakpoints)
+nmap <leader>bb <Action>(ToggleLineBreakpoint)
+nmap <leader>be <Action>(EditBreakpoint)
+nmap <leader>bt <Action>(XDebugger.MuteBreakpoints)
 
 nmap <leader>u <Action>(FindUsages)
 nmap <leader>i <Action>(GotoImplementation)
@@ -115,14 +124,16 @@ nmap z3 <Action>(ExpandAllToLevel3)
 nmap z4 <Action>(ExpandAllToLevel4)
 nmap z5 <Action>(ExpandAllToLevel5)
 
-map <C-p> <Action>(GotoFile)
+" Ctrl + P - Mapped in AutoHotKey ( mapping via idaevim is almost impossible )
+map <C-p> <Action>(GotoFile) 
 map <C-S-p> <Action>(GotoAction)
 " nmap go <C-S-n>
-nmap go <Action>(GotoFile)
-vmap go <Action>(GotoFile)
-nmap <leader>y <Action>(GoToSymbol)
+nmap gf <Action>(GotoFile)
+vmap gf <Action>(GotoFile)
+nmap gs <Action>(GotoSymbol)
+vmap gs <Action>(GotoSymbol)
 nmap ga <Action>(GotoAction)
-vnoremap ga <Action>(GotoAction)
+vmap ga <Action>(GotoAction)
 nmap gr <Action>(RecentFiles)
 nmap <leader>aa <Action>(ShowIntentionActions)
 nmap <leader>ar <Action>(RefactoringMenu)
@@ -252,7 +263,7 @@ nmap <leader>p <Action>(PinActiveTabToggle)
 nmap <leader>rl <Action>(RecentLocations)
 
 nmap <leader>l <Action>(LocateInSolutionView)
-nmap <C-L> <Action>(LocateInSolutionView)
+nmap <C-S-L> <Action>(LocateInSolutionView)
 
 nmap <leader>ee <Action>(ChooseRunConfiguration)
 nmap <leader>ed <Action>(ChooseDebugConfiguration)
