@@ -130,11 +130,17 @@ export FIND_BASE_CMD="find $PWD $EXCLUDE_DIRS"
 export FIND_DIRS_CMD="find $PWD $EXCLUDE_DIRS -type d"
 export FIND_FILES_CMD="find $PWD $EXCLUDE_DIRS -type f"
 
-alias find_files="eval $FIND_FILES_CMD"
 alias find_dirs="eval $FIND_DIRS_CMD"
 alias find_all="eval $FIND_BASE_CMD"
 
+
+# export FZF_DEFAULT_COMMAND="eval $FIND_BASE_CMD"
+
 # Creating FZF Option like this to have better visibility
+# string substitution
+#   ${<name_of_variable>/<pattern>/<replacement_WTIHOUT_QOUTES>}
+# e.g. 
+# https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
 export FZF_DEFAULT_OPTS=$(cat <<-END
     --prompt 'All> ' 
     --preview "bat --style=numbers --color=always --line-range :500 {}"
@@ -142,14 +148,16 @@ export FZF_DEFAULT_OPTS=$(cat <<-END
     --layout=reverse
     --border=rounded
     --header 'CTRL-D: Directories / CTRL-F: Files / CTRL-Y: Yank Path'
-    --bind 'ctrl-y:execute(temp=$(realpath {});echo $temp; clip.exe <<< $temp)+abort'
-    --bind 'ctrl-e:execute-silent(gvim.exe <<< $(realpath {}))+abort'
+    --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
     --bind 'ctrl-d:change-prompt(Directories> )+reload(eval $FIND_DIRS_CMD)'
     --bind 'ctrl-f:change-prompt(Files> )+reload(eval $FIND_FILES_CMD)'
+    --bind 'ctrl-y:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; clip.exe <<< \${winPath//\\//\\\\})+abort'
+    --bind 'enter:execute(less {})'
 END
 )
 
-alias f='eval $FIND_BASE_CMD | fzf '
+# alias f='eval $FIND_BASE_CMD | fzf '
+alias f='fd --absolute-path | fzf '
 alias ff='vim "$(cfzf)"'
 
 alias fdc='clip "$(find_dirs | fzf)"'
