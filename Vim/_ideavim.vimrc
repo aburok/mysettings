@@ -70,6 +70,8 @@ sethandler <A-_> a:vim
 sethandler <S-j> n,v:vim
 sethandler <S-j> n,v:vim
 sethandler <A-+> a:vim
+sethandler <A-`> a:vim
+sethandler <A-S-1> a:vim
 sethandler <A-2> a:vim
 sethandler <A-3> a:vim
 sethandler <A-6> a:vim
@@ -87,11 +89,13 @@ nmap <leader>ga <Action>(Annotate)
 nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
 nmap <leader>gd <Action>(Compare.SameVersion)
 nmap <leader>gs <Action>(FileStructurePopup)
+nmap <leader>m <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
+map <A-S-1> <Action>(ActivateTerminalToolWindow)
 map <A-2> <Action>(ActivateUnitTestsToolWindow)
-map <A-6> <Action>(ActivateBookmarksToolWindow)
 map <A-3> <Action>(ActivateNuGetToolWindow)
+map <A-6> <Action>(ActivateBookmarksToolWindow)
 
 map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
@@ -137,7 +141,7 @@ vmap ga <Action>(GotoAction)
 nmap gr <Action>(RecentFiles)
 nmap <leader>aa <Action>(ShowIntentionActions)
 nmap <leader>ar <Action>(RefactoringMenu)
-nmap <C-e> <Action>(RecentFiles)
+nmap <C-e> <Action>(EditorSelectWord)
 
 nmap <leader>h <Action>(FindInPath)
 

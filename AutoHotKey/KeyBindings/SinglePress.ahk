@@ -27,6 +27,11 @@
     WinActivate("ahk_exe msedge.exe") 
 }
 
+<!+w::
+#+w:: {
+    WinActivate("ahk_exe gvim.exe") 
+}
+
 <!+a::
 #+a:: {
     WinActivate("ahk_exe ONENOTE.EXE") 

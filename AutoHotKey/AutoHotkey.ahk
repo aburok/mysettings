@@ -65,13 +65,6 @@ CapsLock::Esc
     Sleep 1000
 }
 
-#+w:: { 
-    SendEvent "{LWin down}{LCtrl down}{Right down}"
-    Sleep 100
-    SendEvent "{Right up}{LCtrl up}{Lwin up}"
-    Sleep 1000
-}
-
 #+h:: Send "{LWinDown}{ShiftDown}{Left}{ShiftUp}{LWinUp}"
 #+l:: Send "{LWinDown}{ShiftDown}{Right}{ShiftUp}{LWinUp}"
 #+j:: Send "{LWinDown}{Right}{LWinUp}"

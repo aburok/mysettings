@@ -38,6 +38,8 @@ set norunexec
 set ignorecase smartcase nohlsearch incsearch
 set vifminfo=bmarks,bookmarks,dhistory,savedirs,chistory,ehistory,shistory,registers
 
+" set vicmd=gvim.exe -p --remote-tab-silent %1 %*
+
 " yank current directory path to Windows clipboard with forward slashes
 nnoremap ypf :!echo %"d:gs!\!/!%i| clip<cr>
 
@@ -62,29 +64,37 @@ nnoremap w :view<CR>
 " Bookmarks
 nnoremap B :bmarks<CR>
 
+nnoremap e :!gvim.exe --remote-tab-silent %"c%<CR>
+
+" filetype *.json,*.txt,*.xml,*.config gvim --remote-tab-silent %c &
+
+
 """"""""""""""""""""""""
 "" TABS 
 " create new tab
-nnoremap <c-t> :tabnew<cr>:view!<cr>
+nmap <c-t> :tabnew<cr>:view!<cr>
 
 " switch to tab to the left
-nnoremap H :tabprevious<cr>:view!<cr>
+nmap H :tabprevious<cr>:view!<cr>
 
 " switch to tab to the left
-nnoremap L :tabnext<cr>:view!<cr>
+nmap L :tabnext<cr>:view!<cr>
 
 " switch to tab to the left
-nnoremap Q :q<cr>
+nmap Q :q<cr>
 
 "------------------------------------------------------------------------------------------ 
 " FZF INTEGRATION 
 command! FZFlocate : set noquickview
-                  \| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
+                  \:view!<CR>| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
                   \| if $FZF_PICK != ''
                   \|     execute 'goto' fnameescape($FZF_PICK)
                   \| endif
+                
+" term() - execute command in terminal
 command! FZFfind : set noquickview
-                \| let $FZF_PICK = term('find | fzf --height 10 2>/dev/tty')
+                \| let $FZF_PICK = term('fzf --height 10 2>/dev/tty')
+                \| echo $FZF_PICK
                 \| if $FZF_PICK != ''
                 \|     execute 'goto' fnameescape($FZF_PICK)
                 \| endif

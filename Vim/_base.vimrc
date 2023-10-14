@@ -1,6 +1,9 @@
 
-"" Base VIM configuration used by VIM editor, Visual Studio VsVim and Rider
-" IdeaVim
+"" Base VIM configuration used by 
+" VIM CMD editor, 
+" gVIM editor,
+" Visual Studio VsVim and 
+" Rider IdeaVim
 "-------------------------------------------------------------------------------- 
 "
 "" Set leader to space
@@ -59,11 +62,15 @@ nnoremap <leader>y( vi("+y
 " CTRL-V and SHIFT-Insert are Paste
 noremap <S-Insert>		"+gp
 
-cnoremap <C-V>		    <C-R>+
+cnoremap <C-v>		    <C-R>+
+nnoremap <C-v>		    "+gp
+inoremap <C-v>		    <C-R>+
 cnoremap <S-Insert>		<C-R>+
+inoremap <S-Insert>	    <C-R>+
 
 " CTRL-S is Save File
 inoremap <C-S> <Esc>:w!<cr>a
+nnoremap <C-S> :w!<cr>
 
 " File operations
 nnoremap <leader>ss :w!<cr>
@@ -101,4 +108,7 @@ vnoremap ra "ddh"ap
 vnoremap a "ay
 
 vnoremap <leader>d "dy'>o<Esc>p
+
+nmap H :tabprevious<CR>
+nmap L :tabnext<CR>
 

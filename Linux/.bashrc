@@ -28,7 +28,7 @@ shopt -s checkwinsize
 #shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-#[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -79,13 +79,22 @@ if [ -x /usr/bin/dircolors ]; then
     #alias dir='dir --color=auto'
     #alias vdir='vdir --color=auto'
 
-    #alias grep='grep --color=auto'
-    #alias fgrep='fgrep --color=auto'
-    #alias egrep='egrep --color=auto'
+    alias grep='grep --color=auto'
+    alias fgrep='fgrep --color=auto'
+    alias egrep='egrep --color=auto'
 fi
 
 # colored GCC warnings and errors
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# some more ls aliases
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -CF'
+
+# Add an "alert" alias for long running commands.  Use like so:
+#   sleep 10; alert
+alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # Alias definitions.
 # You may want to put all your additions into a separate file like
@@ -106,83 +115,58 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-# ~/.bashrc: executed by bash(1) for non-login shells.
 
-# Note: PS1 and umask are already set in /etc/profile. You should not
-# need this unless you want different defaults for root.
-PS1='${debian_chroot:+($debian_chroot)}\h:\w\$ '
-umask 022
 
-# You may uncomment the following lines if you want `ls' to be colorized:
-export LS_OPTIONS='--color=auto -h'
-# eval "$(dircolors)"
-alias ls='ls $LS_OPTIONS'
-alias ll='ls $LS_OPTIONS -l'
-alias l='ls $LS_OPTIONS -lA'
-alias dirs="ls $LS_OPTIONS -al | grep '^d'"
+declare -a exclude=("/.git/" "/.nuget/" "/bin/" "/obj/" "/packages/" "/Sdk/" "/Microsoft.")
+EXCLUDE_DIRS=""
+for i in "${exclude[@]}"
+do
+    EXCLUDE_DIRS="$EXCLUDE_DIRS -not \( -path '*$i*' -prune \) "
+done
 
-# User specific aliases and functions
+# find $PWD will display full path 
+# https://superuser.com/questions/527535/how-do-i-list-files-with-full-paths-in-linux
+export FIND_BASE_CMD="find $PWD $EXCLUDE_DIRS"
+export FIND_DIRS_CMD="find $PWD $EXCLUDE_DIRS -type d"
+export FIND_FILES_CMD="find $PWD $EXCLUDE_DIRS -type f"
 
-alias rm='rm -i'
-alias cp='cp -i'
-alias mv='mv -i'
+alias find_files="eval $FIND_FILES_CMD"
+alias find_dirs="eval $FIND_DIRS_CMD"
+alias find_all="eval $FIND_BASE_CMD"
 
-# Source global definitions
-if [ -f /etc/bashrc ]; then
-	. /etc/bashrc
-fi
+# Creating FZF Option like this to have better visibility
+export FZF_DEFAULT_OPTS=$(cat <<-END
+    --prompt 'All> ' 
+    --preview "bat --style=numbers --color=always --line-range :500 {}"
+    --height 100%
+    --layout=reverse
+    --border=rounded
+    --header 'CTRL-D: Directories / CTRL-F: Files / CTRL-Y: Yank Path'
+    --bind 'ctrl-y:execute(temp=$(realpath {});echo $temp; clip.exe <<< $temp)+abort'
+    --bind 'ctrl-e:execute-silent(gvim.exe <<< $(realpath {}))+abort'
+    --bind 'ctrl-d:change-prompt(Directories> )+reload(eval $FIND_DIRS_CMD)'
+    --bind 'ctrl-f:change-prompt(Files> )+reload(eval $FIND_FILES_CMD)'
+END
+)
 
-# Disable Ctrl+Q shortcut in bash that unfreezes the output terminal, 
+alias f='eval $FIND_BASE_CMD | fzf '
+alias ff='vim "$(cfzf)"'
+
+alias fdc='clip "$(find_dirs | fzf)"'
+
+# Disable Ctrl+Q shortcut in bash that unfreezes the output terminal,
 # so Ctrl+Q can be used in VIM for block selection
 stty start undef
 
-# DISABLE freezing terminal output 
+# DISABLE freezing terminal output
 # https://unix.stackexchange.com/questions/72086/ctrl-s-hangs-the-terminal-emulator
 stty -ixon
 
 
-# Set bash to used VI like 
+# Set bash to used VI like
 set -o vi
 
 alias h="history"
+alias bat="/usr/bin/batcat"
 
-RebuildImageTmpl="(cd $PopDirectory && docker-compose down %s && docker rmi -f \$(docker-compose images %s --format json | jq -r '.[0].ID') && docker-compose up %s )" 
-Image="asterisk-provider"
-printf -v RemoteDockerImage "$RebuildImageTmpl" "$Image" "$Image" "$Image" 
-alias doc-rebuild-asterisk-provider="$RemoteDockerImage"
-
-Image="asterisk"
-printf -v RemoteDockerImage "$RebuildImageTmpl" "$Image" "$Image" "$Image" 
-alias doc-rebuild-asterisk="$RemoteDockerImage"
-
-alias dcredis="(cd $PopDirectory \
-    && docker-compose exec redis /bin/bash )"
-alias dcmysql="(cd $PopDirectory && docker-compose exec mysql /bin/bash )"
-alias dcast="(cd $PopDirectory && docker-compose exec asterisk /bin/bash )"
-alias dcastp="(cd $PopDirectory && docker-compose exec asterisk-provider /bin/bash )"
-alias dcu="(cd $PopDirectory && docker-compose up -d )"
-alias dcd="(cd $PopDirectory && docker-compose down )"
-
-alias dclap="(cd $PopDirectory &&  docker compose logs --follow asterisk-provider ) "
-alias dcla="(cd $PopDirectory &&  docker compose logs --follow asterisk ) "
-
-alias drp='docker ps --format "table {{.ID}}\t{{.Names}}\t{{.State}}\t{{.CreatedAt}}"'
-
-
-alias netr='systemctl restart networking.service'
-alias nets='systemctl status networking.service'
-
-alias ..="cd .."
-alias ...="cd ../.."
-
-alias ports='netstat -tulanp'
-
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
-[ -f ~/tools/z.sh ] && source ~/tools/z.sh
-# [ -f ~/tools/git-prompt.sh ] && source ~/tools/git-prompt.sh
-
-alias f='vim "$(fzf)"'
-
-alias fdc='clip "$(find . -type d -print | fzf)"'
-
-alias lzd='/home/dawkor/homebrew/Cellar/lazydocker/0.21.1/bin/lazydocker'
+# source /mnt/c/mysettings/Linux/.bashrc

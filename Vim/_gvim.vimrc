@@ -5,7 +5,7 @@ autocmd GUIEnter * simalt ~x
 " :SyntasticInfo  -  see available syntax checkers
 
 
-syntax on " turn on syntax high:wq
+" syntax on " turn on syntax high:wq
 
 "Status line gnarliness
 set laststatus=2
