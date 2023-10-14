@@ -141,6 +141,12 @@ alias find_all="eval $FIND_BASE_CMD"
 #   ${<name_of_variable>/<pattern>/<replacement_WTIHOUT_QOUTES>}
 # e.g. 
 # https://www.gnu.org/software/bash/manual/bash.html#Shell-Parameter-Expansion
+# FOPTS=" --prompt 'All> ' "
+# $FOPTS.=" --preview 'bat --style=numbers --color=always --line-range :500 {}'"
+# echo $FOPTS
+
+# FD 
+# https://github.com/sharkdp/fd
 export FZF_DEFAULT_OPTS=$(cat <<-END
     --prompt 'All> ' 
     --preview "bat --style=numbers --color=always --line-range :500 {}"
@@ -149,15 +155,15 @@ export FZF_DEFAULT_OPTS=$(cat <<-END
     --border=rounded
     --header 'CTRL-D: Directories / CTRL-F: Files / CTRL-Y: Yank Path'
     --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
-    --bind 'ctrl-d:change-prompt(Directories> )+reload(eval $FIND_DIRS_CMD)'
-    --bind 'ctrl-f:change-prompt(Files> )+reload(eval $FIND_FILES_CMD)'
+    --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -a -t d -H )'
+    --bind 'ctrl-f:change-prompt(Files> )+reload(fd -a -t f )'
     --bind 'ctrl-y:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; clip.exe <<< \${winPath//\\//\\\\})+abort'
     --bind 'enter:execute(less {})'
 END
 )
 
 # alias f='eval $FIND_BASE_CMD | fzf '
-alias f='fd --absolute-path | fzf '
+alias f='fd -a -H | fzf '
 alias ff='vim "$(cfzf)"'
 
 alias fdc='clip "$(find_dirs | fzf)"'
