@@ -26,6 +26,7 @@ set expandtab
 
 " colorscheme desert
 
+
 " CTRL + Space for autocomplete/suggestions
 inoremap <C-Space> <C-N>
 
@@ -119,9 +120,16 @@ noremap <C-F5> :source $MYVIMRC<CR>
 noremap <F7> :source $MYVIMRC <CR>
 noremap <F12> :source $MYVIMRC <CR>
 nnoremap <leader>lc :source $MYVIMRC<CR>
-nnoremap <leader>ls :scriptnames<CR>
 
 " Text decorations "
 onoremap ih :<c-u>execute "normal! ?^==\\+$\r:nohlsearch\rkvg_"<cr>
 
 " :%!python -m json.tool"
+
+" Syntax higlitning "
+syntax on
+
+" Loading color scheme using concrete file path
+" setting it via colorscheme gruvbox will not work (2023-10)
+source /mysettings/Vim/colors/gruvbox.vim
+" colorscheme gruvbox

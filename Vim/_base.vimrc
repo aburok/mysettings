@@ -29,8 +29,13 @@ set visualbell
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+set bg=dark
+
 nnoremap - $
 xnoremap - $
+
+nmap Q :q<cr>
+vmap Q <esc>:q<cr>
 
 nnoremap <enter> i<cr><esc>
 

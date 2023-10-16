@@ -200,3 +200,17 @@ function! VimTodoListsCustomMappings()
   nnoremap <buffer> t :VimTodoListsToggleItem<CR>
   noremap <buffer> <leader>e :silent call VimTodoListsSetItemMode()<CR>
 endfunction
+
+
+
+" ==============================================================================
+" FZF PLUGIN 
+" ==============================================================================
+" FZF key bindings
+nnoremap <C-p> :FZF<CR>
+let g:fzf_action = {
+  \ 'ctrl-t': 'tab split',
+  \ 'ctrl-i': 'split',
+  \ 'ctrl-v': 'vsplit' }
+
+" ==============================================================================

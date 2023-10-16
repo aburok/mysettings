@@ -16,8 +16,6 @@ set noerrorbells
 set novisualbell
 set tm=500
 
-
-colorscheme desert
 set guifont=Consolas:h11
 set guioptions-=m " remove menu bar
 set guioptions-=T " remove toolbar from window

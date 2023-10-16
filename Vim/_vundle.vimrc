@@ -19,7 +19,9 @@ Bundle 'https://github.com/VundleVim/Vundle.vim'
 " Kien version of this is not maintained any more.
 "Bundle 'https://github.com/kien/ctrlp.vim.git'
 " PLUGIN : used for files fuzzy search
-Bundle 'https://github.com/ctrlpvim/ctrlp.vim'
+" Bundle 'https://github.com/ctrlpvim/ctrlp.vim'
+" ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+" Replaced by FZF plugin 
 
 
 " NerdTree is replace by native gvim explorer
@@ -111,6 +113,10 @@ Bundle 'preservim/vim-markdown'
 "Bundle 'https://github.com/gcmt/taboo.vim'
 
 Bundle 'https://github.com/elzr/vim-json'
+
+Bundle 'flazz/vim-colorschemes'
+
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Bundle 'https://github.com/othree/xml.vim'
 " All of your Plugins must be added before the following line
