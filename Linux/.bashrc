@@ -134,7 +134,7 @@ fi
 # https://github.com/sharkdp/fd
 export FZF_DEFAULT_OPTS=$(cat <<-END
     --prompt 'All> ' 
-    --preview "([[ -f {} ]] && (bat --style=numbers,header,grid --color=always --line-range :500 {})) || ([[ -d {} ]] && (tree -C {})) || echo {} 2> /dev/null | head -200"
+    --preview "([[ -f {} ]] && (batcat --style=numbers,header,grid --color=always --line-range :500 {})) || ([[ -d {} ]] && (tree -C {})) || echo {} 2> /dev/null | head -200"
     --height 100%
     --layout=reverse
     --border=rounded
