@@ -23,3 +23,6 @@ set bell-style none
 "\eOF": end-of-line
 "\e[1~": beginning-of-line
 "\e[4~": end-of-line
+
+Control-p: "fd -a -H | fzf \n"
+Control-f: "fd -a -H | fzf \n"

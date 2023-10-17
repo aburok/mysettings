@@ -5,7 +5,10 @@ sudo apt-get install vifm --yes
 sudo apt-get install fd-find --yes
 # GPASTE is a UI clipboard
 # sudo apt-get install gpaste --yes
-sudo apt-get install xclip --yes  
+# sudo apt-get install xclip --yes  
+sudo apt-get install tree --yes  
+sudo apt-get install ripgrep --yes  
+sudo apt-get install powerline --yes  
 
 
 git clone https://github.com/aburok/mysettings.git /mysettings

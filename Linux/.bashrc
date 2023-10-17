@@ -117,24 +117,9 @@ if ! shopt -oq posix; then
 fi
 
 
-declare -a exclude=("/.git/" "/.nuget/" "/bin/" "/obj/" "/packages/" "/Sdk/" "/Microsoft.")
-EXCLUDE_DIRS=""
-for i in "${exclude[@]}"
-do
-    EXCLUDE_DIRS="$EXCLUDE_DIRS -not \( -path '*$i*' -prune \) "
-done
-
 # find $PWD will display full path 
 # https://superuser.com/questions/527535/how-do-i-list-files-with-full-paths-in-linux
-export FIND_BASE_CMD="find $PWD $EXCLUDE_DIRS"
-export FIND_DIRS_CMD="find $PWD $EXCLUDE_DIRS -type d"
-export FIND_FILES_CMD="find $PWD $EXCLUDE_DIRS -type f"
 
-alias find_dirs="eval $FIND_DIRS_CMD"
-alias find_all="eval $FIND_BASE_CMD"
-
-
-# export FZF_DEFAULT_COMMAND="eval $FIND_BASE_CMD"
 
 # Creating FZF Option like this to have better visibility
 # string substitution
@@ -149,24 +134,25 @@ alias find_all="eval $FIND_BASE_CMD"
 # https://github.com/sharkdp/fd
 export FZF_DEFAULT_OPTS=$(cat <<-END
     --prompt 'All> ' 
-    --preview "bat --style=numbers --color=always --line-range :500 {}"
+    --preview "([[ -f {} ]] && (bat --style=numbers,header,grid --color=always --line-range :500 {})) || ([[ -d {} ]] && (tree -C {})) || echo {} 2> /dev/null | head -200"
     --height 100%
     --layout=reverse
     --border=rounded
-    --header 'CTRL-D: Directories / CTRL-F: Files / CTRL-Y: Yank Path'
-    --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
+    --header 'C-D: Dirs / C-F: Files / C-Y: Yank Path / C-E: gVim'
     --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -a -t d -H )'
-    --bind 'ctrl-f:change-prompt(Files> )+reload(fd -a -t f )'
+    --bind 'ctrl-f:change-prompt(Files> )+reload(fd -a -t f -H)'
     --bind 'ctrl-y:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; clip.exe <<< \${winPath//\\//\\\\})+abort'
-    --bind 'enter:execute(less {})'
+    --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
+    --bind 'ctrl-d:execute(vim {} & )+abort'
+    --bind 'ctrl-f:execute(batcat {})+abort'
 END
 )
 
-# alias f='eval $FIND_BASE_CMD | fzf '
-alias f='fd -a -H | fzf '
-alias ff='vim "$(cfzf)"'
+export FZF_DEFAULT_COMMAND="fd -a -E '(bin|obj)' "
 
-alias fdc='clip "$(find_dirs | fzf)"'
+
+alias f=' fzf '
+alias fv='vim $(fd -a -H | fzf )'
 
 # Disable Ctrl+Q shortcut in bash that unfreezes the output terminal,
 # so Ctrl+Q can be used in VIM for block selection
@@ -184,3 +170,24 @@ alias h="history"
 alias bat="/usr/bin/batcat"
 
 # source /mnt/c/mysettings/Linux/.bashrc
+
+alias get='curl --location --remote-header-name --remote-name '
+
+# GIT
+
+alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
+
+
+### =============================
+# POWERLINE
+
+if [ -f /usr/share/powerline/bindings/bash/powerline.sh ]; then
+    powerline-daemon -q
+    POWERLINE_BASH_CONTINUATION=1
+    POWERLINE_BASH_SELECT=1
+    source /usr/share/powerline/bindings/bash/powerline.sh
+fi
+
+################################
+
+
