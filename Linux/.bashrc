@@ -190,3 +190,4 @@ fi
 ################################
 
 
+export INPUTRC="/mysettings/Linux/.inputrc
