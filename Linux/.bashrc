@@ -143,13 +143,11 @@ export FZF_DEFAULT_OPTS=$(cat <<-END
     --bind 'ctrl-f:change-prompt(Files> )+reload(fdfind -a -t f -H)'
     --bind 'ctrl-y:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; clip.exe <<< \${winPath//\\//\\\\})+abort'
     --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
-    --bind 'ctrl-d:execute(vim {} & )+abort'
     --bind 'ctrl-f:execute(batcat {})+abort'
 END
 )
 
 export FZF_DEFAULT_COMMAND="fdfind -a -E '(bin|obj)' "
-
 
 alias f=' fzf '
 alias fv='vim $( fzf )'
