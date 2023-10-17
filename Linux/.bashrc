@@ -139,8 +139,8 @@ export FZF_DEFAULT_OPTS=$(cat <<-END
     --layout=reverse
     --border=rounded
     --header 'C-D: Dirs / C-F: Files / C-Y: Yank Path / C-E: gVim'
-    --bind 'ctrl-d:change-prompt(Directories> )+reload(fd -a -t d -H )'
-    --bind 'ctrl-f:change-prompt(Files> )+reload(fd -a -t f -H)'
+    --bind 'ctrl-d:change-prompt(Directories> )+reload(fdfind -a -t d -H )'
+    --bind 'ctrl-f:change-prompt(Files> )+reload(fdfind -a -t f -H)'
     --bind 'ctrl-y:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; clip.exe <<< \${winPath//\\//\\\\})+abort'
     --bind 'ctrl-e:execute-silent(path={}; winPath=\${path/\/mnt\/c/C\:}; gvim.exe --remote-tab-silent  \${winPath//\\//\\\\} &)+abort'
     --bind 'ctrl-d:execute(vim {} & )+abort'
@@ -148,11 +148,11 @@ export FZF_DEFAULT_OPTS=$(cat <<-END
 END
 )
 
-export FZF_DEFAULT_COMMAND="fd -a -E '(bin|obj)' "
+export FZF_DEFAULT_COMMAND="fdfind -a -E '(bin|obj)' "
 
 
 alias f=' fzf '
-alias fv='vim $(fd -a -H | fzf )'
+alias fv='vim $(fdfind -a -H | fzf )'
 
 # Disable Ctrl+Q shortcut in bash that unfreezes the output terminal,
 # so Ctrl+Q can be used in VIM for block selection

@@ -498,27 +498,16 @@ nnoremap <c-u> <c-w>x
 "
 " let $VIFM_SERVER_NAME = v:servername
 
-command! FZFlocate : set noquickview
-                  \| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
-                  \| if $FZF_PICK != ''
-                  \|     execute 'goto' fnameescape($FZF_PICK)
-                  \| endif
+
+" FUZZY FIND 
 
 command! FZFfind : set noquickview
-                \| let $FZF_PICK = term('fd | fzf 2>/dev/tty ')
+                \| let $FZF_PICK = term('fdfind -a -H | fzf 2>/dev/tty ')
                 \| if $FZF_PICK != ''
 "                \|     execute 'goto' fnameescape($FZF_PICK)
                 \| endif
 
-" variation that automatically enters directories
-command! FZFlocate : set noquickview
-                  \| let $FZF_PICK = term('locate $HOME | fzf --height 10 2>/dev/tty')
-                  \| if $FZF_PICK != ''
-                  \|     execute system('[ -f "$FZF_PICK" ] && echo goto || echo cd') fnameescape($FZF_PICK)
-                  \| endif
-
-nnoremap <c-g> :FZFlocate<cr>
-nnoremap <c-f> :FZFfind<cr>
+nnoremap <c-p> :FZFfind<cr>
 
 
 " Example of standard two-panel file managers mappings
