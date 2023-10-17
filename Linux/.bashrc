@@ -152,7 +152,8 @@ export FZF_DEFAULT_COMMAND="fdfind -a -E '(bin|obj)' "
 
 
 alias f=' fzf '
-alias fv='vim $(fdfind -a -H | fzf )'
+alias fv='vim $( fzf )'
+alias fe='cd $( fzf )'
 
 # Disable Ctrl+Q shortcut in bash that unfreezes the output terminal,
 # so Ctrl+Q can be used in VIM for block selection
