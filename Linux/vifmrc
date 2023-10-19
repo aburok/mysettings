@@ -504,7 +504,7 @@ nnoremap <c-u> <c-w>x
 command! FZFfind : set noquickview
                 \| let $FZF_PICK = term(' fzf 2>/dev/tty ')
                 \| if $FZF_PICK != ''
-"                \|     execute 'goto' fnameescape($FZF_PICK)
+                \|     execute 'goto' fnameescape($FZF_PICK)
                 \| endif
 
 nnoremap <c-p> :FZFfind<cr>
