@@ -363,6 +363,10 @@ numpad0:: MsgBox(_gd, "Git Extension Help", "iconi T30")
 ^p:: SendInput "^g"
 ^o:: SendInput "!{Left}"
 ^i:: SendInput "!{Right}"
+!1:: SendInput "^+1"
+!2:: SendInput "^+2"
+!3:: SendInput "^+3"
+!4:: SendInput "^+4"
 
 #HotIf
 

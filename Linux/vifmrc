@@ -502,7 +502,7 @@ nnoremap <c-u> <c-w>x
 " FUZZY FIND 
 
 command! FZFfind : set noquickview
-                \| let $FZF_PICK = term('fdfind -a -H | fzf 2>/dev/tty ')
+                \| let $FZF_PICK = term(' fzf 2>/dev/tty ')
                 \| if $FZF_PICK != ''
 "                \|     execute 'goto' fnameescape($FZF_PICK)
                 \| endif

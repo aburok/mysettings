@@ -191,3 +191,5 @@ fi
 
 
 export INPUTRC="/mysettings/Linux/.inputrc"
+
+export MYVIFMRC="/mysettings/Linux/vifmrc" 
