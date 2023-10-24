@@ -1,4 +1,2 @@
-nmap <C-h> <C-W>h
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-l> <C-W>l
+source C:/mysettings/Vim/_base.vimrc
+source C:/mysettings/Vim/_vim.vimrc

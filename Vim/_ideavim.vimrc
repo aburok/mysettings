@@ -1,6 +1,5 @@
 source C:/mysettings/Vim/_base.vimrc
 
-
 " ------------------------------
 " IdeaVim configuration for Rider
 " ------------------------------
@@ -16,6 +15,10 @@ nmap <leader>rc :source ~/.ideavimrc<CR>
 nmap \e :e C:/mysettings/Vim/_ideavim.vimrc<CR>
 nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
 
+" https://github.com/AlexPl292/IdeaVim-EasyMotion#setup
+Plugin 'easymotion/vim-easymotion'
+Plug 'https://github.com/easymotion/vim-easymotion'
+Plug 'vim-easymotion'
 """ Plugins """
 set surround
 set multiple-cursors
@@ -26,6 +29,8 @@ set textobj-entire
 set ReplaceWithRegister
 set NERDTree
 set quickscope
+
+Plug 'easymotion/vim-easymotion'
 
 "  set sneak " <- szukanie przy uzyciu klawisza s i S - wylaczone bo używam S do zamiany lini
 set which-key
@@ -44,7 +49,8 @@ set ideajoin
 set ideastatusicon=gray
 set idearefactormode=keep
 
-nmap Q <Action>(CloseActiveTab)
+nmap Q <Action>(CloseEditor)
+nmap zx <Action>(CloseEditor)
 
 sethandler <C-B> i-v:vim
 " sethandler <C-C> i-v:vim
@@ -66,6 +72,8 @@ sethandler <C-S-A> i-v:vim
 sethandler <C-S-P> a:vim
 sethandler <C-s-t> i-v:vim
 sethandler <C-s-l> a:vim
+sethandler <C-s-j> a:vim
+sethandler <C-s-k> a:vim
 sethandler <A-_> a:vim
 sethandler <S-j> n,v:vim
 sethandler <S-j> n,v:vim
@@ -92,6 +100,7 @@ nmap <leader>gs <Action>(FileStructurePopup)
 nmap <leader>m <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
+map <A-`> <Action>(ActivateTerminalToolWindow)
 map <A-S-1> <Action>(ActivateTerminalToolWindow)
 map <A-2> <Action>(ActivateUnitTestsToolWindow)
 map <A-3> <Action>(ActivateNuGetToolWindow)
@@ -117,7 +126,12 @@ nmap <leader>i <Action>(GotoImplementation)
 nmap gi <Action>(GotoImplementation)
 
 map <C-o> <Action>(Back)
+nmap H <Action>(Back)
 map <C-i> <Action>(Forward)
+nmap L <Action>(Forward)
+
+map <C-S-j> <Action>(VcsShowNextChangeMarker)
+map <C-S-k> <Action>(VcsShowPrevChangeMarker)
 
 " EXPAND / COLLAPSE / FOLDING / UNFOLDING
 nmap zC <Action>(CollapseRegionRecursively)
@@ -131,26 +145,18 @@ nmap z5 <Action>(ExpandAllToLevel5)
 " Ctrl + P - Mapped in AutoHotKey ( mapping via idaevim is almost impossible )
 map <C-p> <Action>(GotoFile) 
 map <C-S-p> <Action>(GotoAction)
+
 " nmap go <C-S-n>
-nmap gf <Action>(GotoFile)
-vmap gf <Action>(GotoFile)
-nmap gs <Action>(GotoSymbol)
-vmap gs <Action>(GotoSymbol)
-nmap ga <Action>(GotoAction)
-vmap ga <Action>(GotoAction)
 nmap gr <Action>(RecentFiles)
 nmap <leader>aa <Action>(ShowIntentionActions)
 nmap <leader>ar <Action>(RefactoringMenu)
 nmap <C-e> <Action>(EditorSelectWord)
-
-nmap <leader>h <Action>(FindInPath)
 
 " MOVE BETWEEN SPLITS
 nmap <C-h> <C-W>h
 nmap <C-j> <C-W>j
 nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
-
 
 nmap <leader>ws <Action>(SplitHorizontally)
 map <A-_> <Action>(SplitHorizontally)
@@ -236,8 +242,6 @@ nmap 'n <Action>(GoToBookmarkN)
 """ END : BOOKMARKS """
 """""""""""""""""""""""
 
-
-
 nmap <leader>tr <Action>(RiderUnitTestRunContextAction)
 nmap <leader>td <Action>(RiderUnitTestDebugContextAction)
 nmap <leader>tt <Action>(RiderUnitTestQuickListPopupAction)
@@ -249,12 +253,9 @@ nmap <C-/> <Action>(CommentByLineComment)
 
 " Tab navigation
 map <C-S-t> <Action>(ReopenClosedTab)
-map <C-t> <Action>(ReopenClosedTab)
-nmap J <Action>(PreviousTab)
-nmap K <Action>(NextTab)
 
-nmap <S-j> <Action>(MethodDown)
-nmap <S-k> <Action>(MethodUp)
+map <C-j> <Action>(MethodDown)
+map <C-k> <Action>(MethodUp)
 
 map <C-A-j> <Action>(NextOccurence)
 map gn <Action>(NextOccurence)
@@ -273,19 +274,13 @@ nmap <leader>ee <Action>(ChooseRunConfiguration)
 nmap <leader>ed <Action>(ChooseDebugConfiguration)
 nmap <leader>es <Action>(Stop)
 
-map <leader>va <Action>(AddToFavoritesPopup)
-map <leader>ve <Action>(EditFavorites)
-map <leader>vv <Action>(ActivateFavoritesToolWindow)
-map <leader>vw <Action>(ActivateFavoritesToolWindow)
-
 nmap <leader>= <Action>(EditorIncreaseFontSize)
 nmap <leader>- <Action>(EditorDecreaseFontSize)
 nmap <leader>0 <Action>(EditorResetFontSize)
 
-
-nmap <leader>f <Plug>(easymotion-s)
+" nmap <leader>f <Plug>(easymotion-s)
 " nmap <leader>e <Plug>(easymotion-f)
-nmap <leader>j <Plug>(easymotion-w)
+nmap <leader>j <Plug>(easymotion-W)
 nmap <leader>k <Plug>(easymotion-B)
 
 nmap <leader><leader>f{char}    <Plug>(easymotion-f) "  mapped to fn
@@ -305,7 +300,7 @@ nmap <leader><leader>j <Plug>(easymotion-j) "
 nmap <leader><leader>k <Plug>(easymotion-k) "
 nmap <leader><leader>n <Plug>(easymotion-n) "
 nmap <leader><leader>N <Plug>(easymotion-N) "
-nmap <leader><leader>s <Plug>(easymotion-s) "  mapped to sn
+nmap <leader><leader>s <Plug>(easymotion-s) 
 
 map <C-M> <S-F10>
 

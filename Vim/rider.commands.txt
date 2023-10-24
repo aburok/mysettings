@@ -2,39 +2,58 @@
 $Copy                                              <C-C> <C-Ins>
 $Cut                                               <C-X> <S-Del>
 $Delete                                            <Del>
-$LRU
 $Paste                                             <C-V> <S-Ins>
 $Redo                                              <C-Y> <C-S-Z> <A-S-BS>
 $SearchWeb
 $SelectAll                                         <C-A>
 $Undo                                              <C-Z> <A-BS>
+<anonymous-group-0>
+<anonymous-group-1>
+<anonymous-group-2>
+<anonymous-group-3>
+<anonymous-group-4>
 About
-Actions.AzureCodeSamples
-Actions.AzureExplorerOpenAction
-ActivateAzureExplorerToolWindow
+AceAction                                          <C-;>
+AceBackwardAction
+AceDeclarationAction
+AceForwardAction
+AceLineAction                                      <C-S-;>
+AceLineEndsAction
+AceLineIndentsAction
+AceLineStartsAction
+AceReverseAction
+AceTargetAction                                    <A-C-;>
+AceWordAction
+AceWordBackwardsAction
+AceWordEndAction
+AceWordForwardAction
+AceWordStartAction
+ActivateBookmarksToolWindow                        <A-2>
+ActivateBuildToolWindow                            <A-0>
 ActivateCommitToolWindow
 ActivateDatabaseChangesToolWindow
 ActivateDatabaseToolWindow                         <A-C-3>
 ActivateDebugToolWindow                            <A-5>
+Activatedocumentation.v2ToolWindow
+ActivatedotMemoryProfilerToolWindow
 ActivatedotTraceProfilerToolWindow
 ActivateDynamicProgramAnalysisToolWindow
 ActivateEndpointsToolWindow
-ActivateErrorsInSolutionToolWindow                 <A-C-2>
-ActivateEventLogToolWindow
-ActivateFavoritesToolWindow                        <A-2>
 ActivateFileTransferToolWindow
-ActivateFindToolWindow                             <A-3> <A-C-F12> <A-C-U>
-ActivateFlowToolWindow
+ActivateFindToolWindow                             <A-3> <A-C-U>
 ActivateHierarchyToolWindow
 ActivateILViewerToolWindow
-ActivateInternalMethodTracingToolWindow
+ActivateMeetNewUIToolWindow
 ActivateNavBar
+ActivateNotificationsToolWindow
 ActivateNuGetToolWindow                            <A-7> <A-S-7>
-ActivateProjectToolWindow                          <A-C-L> <A-1>
+ActivateProblemsViewToolWindow                     <A-6>
+ActivateProjectToolWindow                          <A-1>
 ActivatePullRequestsToolWindow
 ActivateRunToolWindow                              <A-4>
 ActivateServicesToolWindow
-ActivateStructureToolWindow                        <A-C-F> <C-F11>
+ActivateSpaceCodeReviewsToolWindow
+ActivateStructureToolWindow                        <C-F11>
 ActivateTerminalToolWindow                         <A-C-1>
 ActivateTODOToolWindow
 ActivateToolWindowActions
@@ -43,16 +62,17 @@ ActivateUnitTestsCoverageToolWindow
 ActivateUnitTestsToolWindow                        <A-8> <A-S-8>
 ActivateVersionControlToolWindow                   <A-9>
 ActiveConfiguration
+ActiveConfigurationAndPlatformActionGroup
 ActiveDevice
 ActiveDeviceGroup
 ActiveRuntimeGroup
 ActiveToolwindowGroup
-AddAction
-AddAllToFavorites
+AddAnotherBookmark
 AddAttributeAction
 AddBom
 AddBom.Group
-AddNewFavoritesList
+AddBreakpoint
+AddConditionalBreakpoint
 AddNewPropertyFile
 AddReferenceAction
 AddRiderItem                                       <A-S-A>
@@ -60,8 +80,6 @@ AddRiderProject
 AddScaffoldedItem
 AddSourcesContentToSourceMap
 AddSubtagAction
-AddToFavorites
-AddToFavoritesPopup                                <A-S-F>
 AddWebReferenceAction
 AddXdtTransformationAction
 AdvancedBuildActions
@@ -77,10 +95,9 @@ angularCliGenerate
 AngularJS.Show.Ui.Router.States.Diagram.Action
 Annotate
 AnnotateStackTraceAction.show.files.modification.info
-AppendNewGroup
 Architecture
 ArchiveProjectAction
-Arrangement.Alias.Rule.Add                         <C-N> <A-Ins>
+Arrangement.Alias.Rule.Add                         <A-Ins>
 Arrangement.Alias.Rule.Context.Menu
 Arrangement.Alias.Rule.Edit                        <F2>
 Arrangement.Alias.Rule.Match.Condition.Move.Down   <A-Down>
@@ -88,7 +105,7 @@ Arrangement.Alias.Rule.Match.Condition.Move.Up     <A-Up>
 Arrangement.Alias.Rule.Remove                      <Del>
 Arrangement.Alias.Rule.ToolBar
 Arrangement.Custom.Token.Rule.Edit
-Arrangement.Rule.Add                               <C-N> <A-Ins>
+Arrangement.Rule.Add                               <A-Ins>
 Arrangement.Rule.Edit                              <F2>
 Arrangement.Rule.Group.Condition.Move.Down         <A-Down>
 Arrangement.Rule.Group.Condition.Move.Up           <A-Up>
@@ -100,46 +117,58 @@ Arrangement.Rule.Match.Control.ToolBar
 Arrangement.Rule.Remove                            <Del>
 Arrangement.Rule.Section.Add
 ArrangementRulesGroup
+AssemblyDiffAction                                 <C-D>
 AssemblyExplorerOpen
 AssemblyExplorerOpenFolder
 AssemblyExplorerOpenGAC
 AssemblyExplorerPopupMenu
+AssemblyExplorerPopupMenu.Add
 AssociateWithFileType
+AsyncDiagnosticGroup
+AsyncGroup
 AttachCurrentFolderAction
 AttachFolderAction
+AttachProfilerToLocalProcess
 AttachProject
+AttachToUnityEditorAction
+AttachToUnityProcessAction
 AutoIndentLines                                    <A-C-I>
 AutoShowProcessWindow
-AzureToolbarGroup
-AzureToolkit.AzureActionGroup
-AzureToolkit.AzureAd.RegisterApplication
-AzureToolkit.AzureAdGroup
-AzureToolkit.AzureCloudShell.WebPreview
-AzureToolkit.AzureCloudShell.WebPreview.ClosePortAction
-AzureToolkit.AzureCloudShell.WebPreview.OpenPortAction
-AzureToolkit.AzureCloudShellGroup
-AzureToolkit.AzureSignIn
-AzureToolkit.Azurite.StartAzurite
-AzureToolkit.Azurite.StopAzurite
-AzureToolkit.AzuriteGroup
-AzureToolkit.SelectSubscriptions
-AzureToolkit.StartAzureCloudShellAction
-AzureToolkit.UploadToAzureCloudShellAction
 Back                                               <C--> <C-m> button=4 clickCount=1 modifiers=0
 BackendEntityFrameworkActionGroup
 BackgroundTasks
 BasicEditorPopupMenu
 BlankDiffViewerEditorPopupMenu
+BookmarkOpenTabs
+BookmarkOpenTabsGroup
 Bookmarks
 Bookmarks.Goto
 Bookmarks.Toggle
+Bookmarks.ToolWindow.GearActions
+Bookmarks.ToolWindow.PopupMenu
+Bookmarks.ToolWindow.TitleActions
+BookmarksView.AskBeforeDeletingLists
+BookmarksView.AutoscrollFromSource
+BookmarksView.AutoscrollToSource
+BookmarksView.ChooseType
+BookmarksView.Create                               <A-Ins>
+BookmarksView.DefaultGroup
+BookmarksView.Delete                               <Del>
+BookmarksView.DeleteType
+BookmarksView.GroupLineBookmarks
+BookmarksView.MoveDown                             <A-C-Down>
+BookmarksView.MoveUp                               <A-C-Up>
+BookmarksView.OpenInPreviewTab
+BookmarksView.Rename                               <F2>
+BookmarksView.RewriteBookmarkType
+BookmarksView.ShowPreview
+BookmarksView.SortGroupBookmarks
 BraceOrQuoteOut                                    <Tab>
+BreakOnUserUnhandledExceptions
 BreakpointActionsGroup
-BrowseShelf
 BrowseSpecialPaths
 build
-BuildButton
-BuildCurrentProject                                <C-S-F7>
+BuildCurrentProject                                <C-S-F7> <C-S-F6>
 BuildMenu
 BuildOnlyCurrentProject
 BuildOnlyStartupProject
@@ -149,17 +178,20 @@ BuildSelectionWithDiagnosticsAction
 BuildSolutionAction                                <C-S-B>
 BuildSolutionWithDiagnosticsAction
 BuildStartupProject
-CallHierarchy                                      <A-C-H>
-CallHierarchy.BaseOnThisMethod                     <A-C-H>
+BuildWholeSolutionAction
+CacheRecovery
+CallHierarchy
+CallHierarchy.BaseOnThisMethod
 CallHierarchyPopupMenu
+CallSaul
 CancelBuildAction                                  <C-F9> <C->
 CaptureCPUUsageData
 CaptureMemorySnapShot
-CenterToolbarSideGroup
 ChangeAttributeValueAction
 ChangeCodeStyleScheme
 ChangeColorScheme
 ChangeFileEncodingAction
+ChangeIdeScale
 ChangeInspectionProfile
 ChangeKeymap
 ChangeLaf
@@ -167,7 +199,7 @@ ChangeLineSeparators
 ChangeProjectContext
 ChangesBrowser.FiltererGroup
 ChangeScheme
-ChangeSignature                                    <C-R> <C-R> <C-R> <C-R> <C-F6>
+ChangeSignature                                    <C-F6>
 ChangeSplitOrientation
 ChangesView.AddUnversioned                         <A-C-A>
 ChangesView.ApplyPatch
@@ -178,10 +210,9 @@ ChangesView.CommitToolbar
 ChangesView.CreatePatch
 ChangesView.CreatePatchFromChanges
 ChangesView.CreatePatchToClipboard
-ChangesView.Diff                                   <C-D>
 ChangesView.Edit
 ChangesView.GroupBy
-ChangesView.GroupBy.Directory                      <A-C-P>
+ChangesView.GroupBy.Directory
 ChangesView.GroupBy.Repository
 ChangesView.Move                                   <A-S-M>
 ChangesView.NewChangeList
@@ -196,7 +227,8 @@ ChangesView.SetDefault                             <C- >
 ChangesView.Shelve
 ChangesView.ShelveSilently                         <C-S-H>
 ChangesView.ShowCommitOptions
-ChangesView.ToggleCommitUi                         <A-C-K>
+ChangesView.SingleClickPreview
+ChangesView.ToggleCommitUi                         <C-K>
 ChangesView.UnshelveSilently                       <A-C-U>
 ChangesView.ViewOptions
 ChangesView.ViewOptions.ShowRelatedFiles
@@ -205,16 +237,54 @@ ChangesViewToolbar
 ChangeTargetFramework
 ChangeTemplateDataLanguage
 ChangeView
+chart-demo
 CheckForUpdate
 CheckIgnoredAndNotExcludedDirectories
 CheckinFiles
-CheckinProject                                     <A-C-K>
+CheckinProject                                     <C-K>
 CheckStatusForFiles
+CheckSuggestedPlugins
 ChooseDebugConfiguration                           <A-S-F9>
 ChooseRunConfiguration                             <A-C-S-R>
 ChooseRuntime
+CIDR.Debugger.AddWatchPoint
+CIDR.Debugger.CopyAddress                          <C-S-C>
+CIDR.Debugger.DisableFilteringValues
+CIDR.Debugger.DisableValueRenderers
+CIDR.Debugger.DisassembleFrame                     <C-D>
+CIDR.Debugger.EnableHexFormatting
+CIDR.Debugger.FramePresentation
+CIDR.Debugger.FramePresentation.Popup
+CIDR.Debugger.Frames.Tree.Popup
+CIDR.Debugger.FreezeOtherThreads
+CIDR.Debugger.FreezeThread
+CIDR.Debugger.FreezeThreadDebuggingActions.TopToolbar3.Extra
+CIDR.Debugger.FreezeThreadDebuggingActionsGroup
+CIDR.Debugger.FreezeThreadGroup
+CIDR.Debugger.FreezeThreadGroup.Popup
+CIDR.Debugger.JumpToDebuggerConsole                <C-S-F10>
+CIDR.Debugger.JumpToLine
+CIDR.Debugger.MuteVariables
+CIDR.Debugger.Settings.FramePresentation.Appender
+CIDR.Debugger.ShowFrameFunctionParameterTypes
+CIDR.Debugger.ShowFrameFunctionTemplateArguments
+CIDR.Debugger.ShowFrameModuleName
+CIDR.Debugger.ShowFunctionReturnValue
+CIDR.Debugger.ShowInMemoryView                     <C-CR>
+CIDR.Debugger.ShowMemoryViewInEditor
+CIDR.Debugger.ShowTypes
+CIDR.Debugger.ShowTypeTemplateArguments
+CIDR.Debugger.StripAuxiliaryNamespaces
+CIDR.Debugger.SugarizeCxxStlTypes
+CIDR.Debugger.UnfreezeAllThreads
+CIDR.Debugger.UnfreezeThread
+CIDR.Debugger.ValueGroup.DataViewSettings
+CIDR.Debugger.ValueGroup.DataViewSettings.Popup
+CIDR.Debugger.ValueGroup.DataViewSettings.Popup.Wrapper
+CIDR.Debugger.ValueGroup.WatchExpressions
+CIDR.Debugger.ViewAsArray
 CIDR.Util.Diagnostics
-ClassNameCompletion                                <A-S- > <A-C- >
+ClassNameCompletion                                <A-C- >
 CleanCurrentProject
 CleanOnlyCurrentProject
 CleanOnlyStartupProject
@@ -222,7 +292,8 @@ CleanSelectedProjectWithoutDependencies
 CleanSelectionAction
 CleanSolutionAction
 CleanStartupProject
-ClickLink                                          <F12> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
+ClearAllNotifications
+ClickLink                                          <C-B> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
 CloneCaretAboveWithVirtualSpace                    <A-S-Up>
 CloneCaretBelowWithVirtualSpace                    <A-S-Down>
 CloseActiveTab                                     <C-S-F4>
@@ -235,7 +306,7 @@ CloseAllToTheLeft
 CloseAllToTheRight
 CloseAllUnmodifiedEditors
 CloseAllUnpinnedEditors
-CloseContent                                       <C-F4>
+CloseContent                                       <C-F4> <C-W>
 CloseEditor
 CloseEditorsGroup
 CloseFirstNotification
@@ -250,8 +321,8 @@ CloudConfigSelfSettingsAction
 CloudConfigSilentlyAction
 CloudConfigUpdateApi
 ClusterArraysSettingAction
-CodeCleanup                                        <C-E> <C-E> <C-K> <A-C-F>
-CodeCompletion                                     <C- > <C-J>
+CodeCleanup                                        <A-C-F>
+CodeCompletion                                     <C- >
 CodeCompletionGroup
 CodeEditorBaseGroup
 CodeEditorViewGroup
@@ -259,6 +330,7 @@ CodeFormatGroup
 CodeInsightEditorActions
 CodeInspection.OnEditor                            <A-S-I>
 CodeMenu
+CodeVision.ShowMore
 CollapseAll                                        <C-m> <C-->
 CollapseAllRegions                                 <C-M> <C-M>
 CollapseBlock                                      <C-S-.>
@@ -268,12 +340,34 @@ CollapseRegion                                     <C-M> <C-M>
 CollapseRegionRecursively                          <A-C-m> <A-C-->
 CollapseSelection                                  <C-M> <C-M>
 CollapseTreeNode                                   <m>
+CollapsiblePanel-toggle                            < >
 CollectBackendThreadDumps
 CollectZippedLogs
 com.intellij.database.actions.ToDatabaseScriptTranslationCopyAction
 com.intellij.database.actions.ToDatabaseScriptTranslationPreviewAction
 com.intellij.httpClient.actions.ConvertCurlToHttpRequestAction
-com.intellij.httpClient.actions.microservices.HttpGenerateRequestFromEndpointsAction
+com.intellij.httpClient.microservices.actions.HttpGenerateRequestFromEndpointsAction
+com.intellij.ide.actions.searcheverywhere.ml.actions.OpenFeaturesInScratchFileAction <A-C-S-1>
+com.intellij.space.actions.SpaceLoginAction
+com.intellij.space.actions.SpaceLogoutAction
+com.intellij.space.vcs.actions.SpaceMainToolBarAction
+com.intellij.space.vcs.clone.SpaceCloneAction
+com.intellij.space.vcs.OpenChecklists
+com.intellij.space.vcs.OpenIssues
+com.intellij.space.vcs.review.create.SpaceCreateCommitSetReviewAction
+com.intellij.space.vcs.review.create.SpaceCreateMergeRequestAction
+com.intellij.space.vcs.review.details.SpaceReviewCheckoutBranchAction
+com.intellij.space.vcs.review.details.SpaceReviewUpdateBranchAction
+com.intellij.space.vcs.review.list.popup
+com.intellij.space.vcs.review.list.SpaceRefreshReviewsListAction
+com.intellij.space.vcs.review.list.SpaceReviewAuthorActionGroup
+com.intellij.space.vcs.review.list.SpaceReviewOpenInBrowserAction
+com.intellij.space.vcs.review.SpaceShowReviewsAction
+com.intellij.space.vcs.share.SpaceShareProjectAction
+com.intellij.space.vcs.SpaceCopyLinkActionGroup
+com.intellij.space.vcs.SpaceVcsOpenInBrowserActionGroup
+com.intellij.space.vcs.SpaceVcsRevealInActionGroup
+com.jetbrains.gateway.RemoteDevelopmentActions
 com.jetbrains.plugins.remotesdk.console.RunSshConsoleAction
 com.jetbrains.plugins.vagrant.actions.VagrantDestroyAction
 com.jetbrains.plugins.vagrant.actions.VagrantHaltAction
@@ -285,11 +379,16 @@ com.jetbrains.plugins.vagrant.actions.VagrantShareAction
 com.jetbrains.plugins.vagrant.actions.VagrantSuspendAction
 com.jetbrains.plugins.vagrant.actions.VagrantUpAction
 com.jetbrains.rider.debugger.actions.RiderAttachToRemoteProcessAction
+com.jetbrains.rider.diagrams.architecture.actions.ShowIdeaDiagramPopupProxyAction
+com.jetbrains.rider.diagrams.architecture.actions.ShowIdeaDiagramProxyAction
+com.jetbrains.rider.diagrams.architecture.actions.ShowIdeaDiagramProxyMenu
 com.jetbrains.rider.interactive.csi.SendToCSharpInteractive <C-\>
 com.jetbrains.rider.interactive.csi.StartCSharpInteractive
+com.jetbrains.rider.plugins.unity.actions.ShowFileInUnityAction
+com.jetbrains.rider.plugins.unity.actions.ShowFileInUnityFromExplorerAction
 CombinePropertiesFilesAction
 CommentByBlockComment                              <C-S-/> <C-S-o>
-CommentByLineComment                               <A-C-/> <A-C-o> <C-K> <C-K> <C-K> <C-K>
+CommentByLineComment                               <C-/> <C-o>
 CommentGroup
 CommittedChanges.Clear
 CommittedChanges.Details
@@ -313,24 +412,28 @@ CompareClipboardWithSelection
 CompareDirs                                        <C-D>
 CompareFileWithEditor
 CompareTwoFiles                                    <C-D>
-CompileCoffeeScript
+CompileFile                                        <C-F7>
 ComputeDiffWithPreviousRevisionAction
 ComputeSwaggerDiffBetweenPhysicalFiles
 ConfigureEditorTabs
 ConfigureIcs
+ConfigureProjectDependenciesAction
 ConfigureSoftWraps
 ConfigureSpecificationSources
 ConfigureSpecificationSourcesGroup
+Console.AggregateView.PopupGroup
 Console.DbmsOutput                                 <F9>
 Console.Dialect.SpecificGroup
 Console.EditorTableResult.Group
 Console.Execute                                    <CR>
 Console.Execute.Multiline                          <C-CR>
+Console.File.Resolve.Mode
 Console.History.Browse                             <A-C-E>
 Console.History.Next
 Console.History.Previous
 Console.HistoryActions
 Console.Jdbc.BrowseHistory                         <A-C-E>
+Console.Jdbc.Cancel                                <S-F5>
 Console.Jdbc.ChooseSchema
 Console.Jdbc.ChooseSession
 Console.Jdbc.Common
@@ -346,28 +449,33 @@ Console.Jdbc.ExplainPlan.Raw
 Console.Jdbc.Left
 Console.Jdbc.Right
 Console.Jdbc.RunContextGroup
-Console.Jdbc.Terminate                             <S-F5>
 Console.Jdbc.ToggleParameters
 Console.JdbcActions
 Console.Open                                       <C-S-F10>
 Console.SplitLine
 Console.TableResult.AddColumn                      <A-S-Ins>
 Console.TableResult.AddRow                         <A-Ins>
-Console.TableResult.Cancel                         <S-F5>
+Console.TableResult.AggregateView
+Console.TableResult.AutoRefresh
+Console.TableResult.BuiltInExtractor.Group
 Console.TableResult.CellEditor.Popup
 Console.TableResult.ChangeCellEditorFileEncoding
 Console.TableResult.ChangeCellEditorLanguage
 Console.TableResult.ChangeColumnLanguage
 Console.TableResult.ChangeIsolation
 Console.TableResult.ChangePageSize
+Console.TableResult.ChangeTableSample
+Console.TableResult.ChooseAggregators.Group
+Console.TableResult.ChooseAggregators.ScriptedGroup
 Console.TableResult.ChooseExtractor
 Console.TableResult.ChooseExtractor.Group
 Console.TableResult.ClearCell
 Console.TableResult.CloneColumn                    <A-C-S-D>
 Console.TableResult.CloneRow                       <C-D>
 Console.TableResult.ColumnActions
+Console.TableResult.ColumnDisplayTypeChange
 Console.TableResult.ColumnHeaderPopup
-Console.TableResult.ColumnsList                    <A-\>
+Console.TableResult.ColumnsList                    <C-F12>
 Console.TableResult.ColumnSortAddAsc
 Console.TableResult.ColumnSortAddDesc
 Console.TableResult.ColumnSortAsc
@@ -379,36 +487,43 @@ Console.TableResult.CompareCells                   <C-S-D>
 Console.TableResult.CompareWith
 Console.TableResult.Copy.Csv.Settings
 Console.TableResult.Copy.Csv.Settings.ForExport
+Console.TableResult.Copy.Csv.Settings.ForImport
+Console.TableResult.CopyAggregatorResult           <C-S-C>
 Console.TableResult.CopyColumnName
 Console.TableResult.CopyQueryToConsole
 Console.TableResult.CountRows
-Console.TableResult.Csv.PopupGroup
 Console.TableResult.Csv.PreviewColumnHeaderPopup
 Console.TableResult.Csv.PreviewPopupGroup
 Console.TableResult.Csv.SetFirstRowIsHeader
+Console.TableResult.CsvExtractors.Group
 Console.TableResult.Data
 Console.TableResult.DeleteColumns                  <A-S-Del>
 Console.TableResult.DeleteRows                     <C-L> <C-S-L>
+Console.TableResult.DisableAllAggregators
 Console.TableResult.EditFilterCriteria             <A-C-S-F>
+Console.TableResult.EditMaximized.Aggregates.Group
 Console.TableResult.EditMaximized.ChangeType
-Console.TableResult.EditMaximized.Group
 Console.TableResult.EditMaximized.MoveToBottom
 Console.TableResult.EditMaximized.MoveToRight
-Console.TableResult.EditMaximized.Options
 Console.TableResult.EditMaximized.ToggleFormattedMode
 Console.TableResult.EditMaximized.ToggleSoftWrap
+Console.TableResult.EditMaximized.Value.Group
 Console.TableResult.EditOrdering
 Console.TableResult.EditValue                      <F2> <CR> <A-CR>
 Console.TableResult.EditValueMaximized             <S-CR>
+Console.TableResult.EnableAllAggregators
 Console.TableResult.ExportToClipboard
 Console.TableResult.Filter.Custom
 Console.TableResult.FindInGrid                     <C-F> <A-F3>
 Console.TableResult.FirstPage
+Console.TableResult.GoToAggregatorsScriptsDirectory
+Console.TableResult.GoToExtractorsScriptsDirectory
 Console.TableResult.GoToGroup
-Console.TableResult.GoToScriptsDirectory
 Console.TableResult.Group
 Console.TableResult.Group.Common
+Console.TableResult.Group.Common.Last
 Console.TableResult.Group.Secondary
+Console.TableResult.Group.Secondary.Top
 Console.TableResult.Header.ChangeColumnLanguage
 Console.TableResult.HideColumn
 Console.TableResult.HideEditMaximized              <S-Esc>
@@ -417,27 +532,39 @@ Console.TableResult.ImportTable
 Console.TableResult.LastPage
 Console.TableResult.LoadFile
 Console.TableResult.MaximizeEditingCell            <A-C-S-M>
+Console.TableResult.Navigate.Group
 Console.TableResult.NavigateAction                 <F4>
-Console.TableResult.NavigateExportedAction         <S-F12> <A-F7>
-Console.TableResult.NavigateForeignAction          <F12> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
+Console.TableResult.NavigateExportedAction         <A-F7>
+Console.TableResult.NavigateForeignAction          <C-B> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
+Console.TableResult.NavigationAndEditing.ChangeSampleSize.Group
 Console.TableResult.NavigationAndEditing.Group
+Console.TableResult.NavigationAndEditing.JdbcCancel.Group
+Console.TableResult.NavigationAndEditing.Last.Group
 Console.TableResult.NextPage                       <A-C-Down>
 Console.TableResult.Options
+Console.TableResult.Options.Bottom
 Console.TableResult.PasteFormat
 Console.TableResult.PopupGroup
+Console.TableResult.PopupGroup.CellActions
+Console.TableResult.PopupGroup.DatabaseCellActions
+Console.TableResult.PopupGroup.OpenDataEditor
+Console.TableResult.PopupGroup.OtherDatabaseActions
 Console.TableResult.PreviewDml
 Console.TableResult.PreviousPage                   <A-C-Up>
-Console.TableResult.Reload                         <A-C-R>
+Console.TableResult.Reload
 Console.TableResult.RenameColumn
 Console.TableResult.RenameTab
 Console.TableResult.ResetView
 Console.TableResult.RevertSelected                 <A-C-Z>
 Console.TableResult.SaveLobAs
+Console.TableResult.ScriptedExtractors.Group
 Console.TableResult.SelectRow                      <S- >
 Console.TableResult.SetDefault                     <A-C-D>
 Console.TableResult.SetNull                        <A-C-N>
 Console.TableResult.ShowDumpDialogAction
 Console.TableResult.ShowQuery
+Console.TableResult.SkipComputedColumns
+Console.TableResult.SkipGeneratedColumns
 Console.TableResult.Submit                         <C-CR>
 Console.TableResult.SubmitAndCommit                <A-C-S-CR>
 Console.TableResult.ToggleFilterComponent
@@ -463,7 +590,10 @@ ConsoleView.ShowAsJsonAction
 context.clear                                      <A-S-X>
 context.load                                       <A-S-L>
 context.save                                       <A-S-S>
+ContextDebug
 ContextHelp                                        <F1>
+ContextRun
+ContrastRunToolbarMainActionGroup
 ConvertContentsToAttributeAction
 ConvertIndentsGroup
 ConvertIndentsToSpaces
@@ -493,6 +623,7 @@ CopyUrl
 Coverage
 CoverageMenu
 CoveragePlatformMenu
+CppIncludesHierarchy                               <A-S-H>
 CreateDesktopEntry
 CreateEditorConfigFile
 CreateLauncherScript
@@ -504,23 +635,142 @@ CreateRunConfiguration
 CreateVueSingleFileComp
 CSharpAutoNaming
 CSharpInteractive
-CustomizeToolbarAction
+CustomizeUI
 CutCopyPasteGroup
 Database.EditorTabPopupMenu
-Database.Settings
+Database.KeymapGroup
+Database.KeymapGroup.Console.Toolbar
+Database.KeymapGroup.DataEditor
+Database.KeymapGroup.EditMaximized
+Database.KeymapGroup.EditMaximized.Aggregates
+Database.KeymapGroup.EditMaximized.Value
+Database.KeymapGroup.Execution
+Database.KeymapGroup.General
+Database.KeymapGroup.Hidden
+Database.KeymapGroup.Session
+Database.KeymapGroup.TableResult
+DatabaseProjectOperations
+DatabaseView.AddActionGroup
+DatabaseView.AddActionGroupPopup
+DatabaseView.AddDataSourceFromPath
+DatabaseView.AddDataSourceFromThat
+DatabaseView.AddDataSourceFromUrl
+DatabaseView.AddDataSourceGroup
+DatabaseView.AddDataSourceHere
+DatabaseView.AddDriver
+DatabaseView.AddDriverAndDataSource
+DatabaseView.AddSchemasAction
+DatabaseView.AssignColor
+DatabaseView.BatchModifyIndices
+DatabaseView.ClearSrcStorage
+DatabaseView.Clipboard
+DatabaseView.Context.Templates
+DatabaseView.CopyAction                            <C-D>
+DatabaseView.CopyDdlAction                         <A-C-S-G> <C-S-C>
+DatabaseView.CopyDdlFromDbAction
+DatabaseView.CopyTable
+DatabaseView.CreateDataSourceFromSettings
+DatabaseView.CreateDdlMapping
+DatabaseView.DataSourceCopyAction                  <C-C> <C-Ins>
+DatabaseView.DataSourceCutAction                   <C-X> <S-Del>
+DatabaseView.DataSourcePasteAction                 <C-V> <S-Ins>
+DatabaseView.Ddl.AddColumn
+DatabaseView.Ddl.AddForeignKey
+DatabaseView.Ddl.AddIndex
+DatabaseView.Ddl.AddObject
+DatabaseView.Ddl.AddPrimaryKey
+DatabaseView.Ddl.AddTable
+DatabaseView.Ddl.AlterObject                       <C-F6>
+DatabaseView.Ddl.BatchAddIndices
+DatabaseView.Ddl.CommentOnObject
+DatabaseView.Ddl.DropForeignKey
+DatabaseView.Ddl.DropPrimaryKey
+DatabaseView.Ddl.ModifyGrants
+DatabaseView.DdlMapping.Actions
+DatabaseView.DeactivateAction                      <S-F5>
+DatabaseView.DebugRoutine
+DatabaseView.Diagnostics
+DatabaseView.Diagnostics.DiagnosticRefresh
+DatabaseView.Diagnostics.DumpModel
+DatabaseView.Diagnostics.JdbcLog
+DatabaseView.Diagnostics.PrepareIntrospectionDiagnostic
+DatabaseView.Diagrams
+DatabaseView.DropAction                            <Del>
+DatabaseView.Dump.Native
+DatabaseView.DumpToConfiguredSqlDataSource
+DatabaseView.DumpToSqlDataSource
+DatabaseView.EditExternalDataAction
+DatabaseView.ExecuteRoutine
+DatabaseView.Filter
+DatabaseView.FilterAction
+DatabaseView.FindUsagesActionGroup
+DatabaseView.Fix
+DatabaseView.ForceRefresh
+DatabaseView.ForgetSchemaAction
+DatabaseView.FullTextSearch                        <A-C-S-F>
+DatabaseView.GoToScriptsDirectory
+DatabaseView.HideSchemasAction
+DatabaseView.Import
+DatabaseView.ImportDataSources
+DatabaseView.ImportExport
+DatabaseView.ImportFromSql
+DatabaseView.ImportNew
+DatabaseView.LayoutSqlDataSource
+DatabaseView.LinkedDataSource.Actions
+DatabaseView.LinkedDataSource.ChooseDataSource
+DatabaseView.LinkedDataSource.ClearMapping
+DatabaseView.LinkedDataSource.CreateDataSource
+DatabaseView.LinkedDataSource.Navigate
+DatabaseView.MoveToGroup                           <F6>
+DatabaseView.Navigation.Actions
+DatabaseView.NewGroup
+DatabaseView.OpenDdlInConsole                      <A-C-S-B>
+DatabaseView.OpenFamilyAction                      <F4>
+DatabaseView.PropertiesAction                      <S-CR>
+DatabaseView.Refresh
+DatabaseView.RefreshFragment
+DatabaseView.Restore.Native
+DatabaseView.RunExtensionScriptGroup
+DatabaseView.Scripted.Extensions
+DatabaseView.SetInheritedIntrospectionLevelAction
+DatabaseView.SetIntrospectionLevel1Action
+DatabaseView.SetIntrospectionLevel2Action
+DatabaseView.SetIntrospectionLevel3Action
+DatabaseView.SetIntrospectionLevelActions
+DatabaseView.ShowContentDiff
+DatabaseView.ShowDiff                              <C-D>
+DatabaseView.ShowDiff.Configured
+DatabaseView.Sql.Scripts
+DatabaseView.SqlGenerator                          <A-C-G>
+DatabaseView.Tools                                 <A-CR> <C-.> <A-S-F10>
+DatabaseView.Tools.DisableConstraintsAction
+DatabaseView.Tools.EnableConstraintsAction
+DatabaseView.Tools.RecompileAction
+DatabaseView.Tools.RefreshMatViewAction
+DatabaseView.Tools.RevertChanges                   <A-C-Z>
+DatabaseView.Tools.ShowChanges
+DatabaseView.Tools.SubmitChanges                   <C-K>
+DatabaseView.Tools.TruncateTableAction
+DatabaseView.VcsWrapperGroup
+DatabaseViewPopupMenu
+DatabaseViewToolbar
+DataViews.Settings
+DbDiagrams.SourceActionsGroup.GoTo
 DDL.Editor.Regenerate
-DDL.Editor.Specific.LightFile
 DDL.Editor.Specific.StorageFile
-Debug                                              <A-F5> <F5>
+Debug                                              <A-F5>
 DebugClass
 DebugDump
+DebugExternalSources
 Debugger.AddInlineWatch
 Debugger.AddToWatch
 Debugger.CopyAllStacks
 Debugger.CopyStack
 Debugger.EvaluateInConsole
 Debugger.FocusOnBreakpoint
-Debugger.MarkObject                                <C-K> <C-K>
+Debugger.FocusOnFinish
+Debugger.MarkObject
+Debugger.PopFrame
 Debugger.RemoveAllBreakpoints
 Debugger.RemoveAllBreakpointsInFile
 Debugger.RestoreBreakpoint
@@ -535,16 +785,61 @@ DecompileAndShowIlViewerAction
 DecreaseColumnWidth                                <A-C-S-Left>
 DecrementWindowHeight                              <A-C-S-Up>
 DecrementWindowWidth                               <A-C-S-Left>
+DefaultProfilerExecutorGroupContextActionId
 DelegateMethods
 DeleteAttributeAction
 DeleteMnemonicFromBookmark
 DeleteOldAppDirs
+DeleteRecentFiles                                  <Del>
 DeleteTagAction
 DeploymentGroup.Basic
 DeploymentVcsActions
 DetachFolderAction
+Dev.PsiViewerActions
 DiagnoseReferenceAction
 DiagnosticGroup
+Diagram.AnalyzeGraph.AutoClustering
+Diagram.AnalyzeGraph.DropCentralityValues
+Diagram.AnalyzeGraph.DropClustering
+Diagram.AnalyzeGraph.DropFocus
+Diagram.AnalyzeGraph.FocusOnCycles
+Diagram.AnalyzeGraph.FocusOnNodeNeighbourhood
+Diagram.AnalyzeGraph.FocusOnPathsBetweenTwoNodes
+Diagram.AnalyzeGraph.FocusOnSelectedNodes
+Diagram.AnalyzeGraph.MeasureCentrality
+Diagram.AnalyzeGraph.ShowCharacteristics
+Diagram.AnalyzeGraphGroup
+Diagram.AppearanceGroup
+Diagram.CopyToClipboardGroup
+Diagram.CopyToClipboardGroup.Dot
+Diagram.CopyToClipboardGroup.DotWithPositions
+Diagram.CopyToClipboardGroup.Mermaid
+Diagram.CopyToClipboardGroup.Plantuml
+Diagram.DefaultGraphToolbar
+Diagram.DeleteSelection                            <Del>
+Diagram.DeselectAll                                <A-C-A>
+Diagram.ExportAndCopyGroup
+Diagram.ExportGroup
+Diagram.ExportToFileGroup
+Diagram.ExportToFileGroup.Dot
+Diagram.ExportToFileGroup.DotWithPositions
+Diagram.ExportToFileGroup.Graphml
+Diagram.ExportToFileGroup.Mermaid
+Diagram.ExportToFileGroup.Mxgraph
+Diagram.ExportToFileGroup.Plantuml
+Diagram.Layout.CustomLayouter
+Diagram.MergeEdgesGroup
+Diagram.OpenInOnlineEditorGroup
+Diagram.OpenInOnlineEditorGroup.Dot
+Diagram.OpenInOnlineEditorGroup.DotWithPositions
+Diagram.OpenInOnlineEditorGroup.Graphml
+Diagram.OpenInOnlineEditorGroup.Mermaid
+Diagram.OpenInOnlineEditorGroup.Mxgraph
+Diagram.OpenInOnlineEditorGroup.Plantuml
+Diagram.OpenSettings
+Diagram.RefreshDataModelManually
+Diagram.SearchItemOnWeb
+Diagram.SelectAll                                  <C-A>
 Diff.AppendLeftSide
 Diff.AppendRightSide
 Diff.ApplyLeftSide                                 <A-C-R>
@@ -556,6 +851,7 @@ Diff.Binary.Settings
 Diff.ComparePartial.Base.Left
 Diff.ComparePartial.Base.Right
 Diff.ComparePartial.Left.Right
+Diff.CompareWith.KeymapGroup
 Diff.CompareWithBase.Left
 Diff.CompareWithBase.Result
 Diff.CompareWithBase.Right
@@ -598,16 +894,30 @@ DirDiffMenu.SynchronizeDiff.All                    <C-CR>
 DirDiffMenu.WarnOnDeletion
 DirDiffOperationsMenu
 DisableCpp
+DisableDeclarativeInlayAction
 DisableInspection
+DisableMinimap
+DisableNewUi
+DisplayAttachProfileMenu
+DisplayWorkspaceCtxMenu
 DissociateResourceBundleAction
 DocCommentGutterIconContextMenu
 Docker.AddDockerConnection
+Docker.AddDockerRegistry
 Docker.ComposeEditorGroup.SyncWithServiceView
+Docker.EditRegistryConfigAction
 Docker.Filter
 Docker.FilterStoppedContainers
 Docker.FilterUntaggedImages
+Docker.ImportContexts
+Docker.RegistryPullAction
+Docker.RegistryRefreshAction
+Docker.RegistryViewToolbar
+Docker.RemoteServer.DisconnectServer
 Docker.RemoteServers.Attach2Container
+Docker.RemoteServers.CommitContainer
 Docker.RemoteServers.ComposeUp
+Docker.RemoteServers.ConnectServer                 <C-CR>
 Docker.RemoteServers.CopyContainerId
 Docker.RemoteServers.CopyContainerImageId
 Docker.RemoteServers.CopyImageId
@@ -623,9 +933,12 @@ Docker.RemoteServers.DeleteNetwork
 Docker.RemoteServers.DeleteService
 Docker.RemoteServers.DeleteVolume
 Docker.RemoteServers.DownComposeApp
+Docker.RemoteServers.EditDeploymentConfig
+Docker.RemoteServers.EditServerConfig              <S-F4>
 Docker.RemoteServers.ExecInContainer
 Docker.RemoteServers.InspectContainerOrImage
 Docker.RemoteServers.PauseContainer
+Docker.RemoteServers.Prune
 Docker.RemoteServers.PullImage
 Docker.RemoteServers.PushImage
 Docker.RemoteServers.Redeploy
@@ -634,40 +947,49 @@ Docker.RemoteServers.RestartComposeApp
 Docker.RemoteServers.RestartContainer
 Docker.RemoteServers.ScaleComposeService
 Docker.RemoteServers.SelectContainerImage
-Docker.RemoteServers.ShowContainerLog
+Docker.RemoteServers.ShowContainerFiles
 Docker.RemoteServers.ShowContainerProcesses
-Docker.RemoteServers.StartAllComposeApp
-Docker.RemoteServers.StartComposeService
-Docker.RemoteServers.StartContainer
-Docker.RemoteServers.StopComposeApp
-Docker.RemoteServers.StopComposeService
-Docker.RemoteServers.StopContainer
-Docker.RemoteServers.StopDeploy
+Docker.RemoteServers.StartAllComposeApp            <C-CR>
+Docker.RemoteServers.StartComposeService           <C-CR>
+Docker.RemoteServers.StartContainer                <C-CR>
+Docker.RemoteServers.StopComposeApp                <S-F5>
+Docker.RemoteServers.StopComposeService            <S-F5>
+Docker.RemoteServers.StopContainer                 <S-F5>
+Docker.RemoteServers.StopDeploy                    <S-F5>
+Docker.RemoteServers.TransferImage
 Docker.RemoteServers.UnpauseContainer
 Docker.RemoteServersViewPopup
+Docker.RemoteServersViewPopup.Image
 Docker.RemoteServersViewToolbar
 Docker.RemoteServersViewToolbar.Top
 DockPinnedMode
 DockToolWindow
 DockUnpinnedMode
 Document2XSD
+Documentation.Back                                 <C--> <C-m> button=4 clickCount=1 modifiers=0
+Documentation.EditSource                           <F4>
+Documentation.Forward                              <C-S--> <C-S-m> button=5 clickCount=1 modifiers=0
+Documentation.KeepTab
+Documentation.Navigation
+Documentation.PrimaryGroup
+Documentation.ToggleAutoShow
+Documentation.ToggleAutoUpdate
+Documentation.ToggleShowInPopup
+Documentation.ViewExternal                         <S-F1>
 DomCollectionControl
 DomCollectionControl.Add                           <Ins>
 DomCollectionControl.Edit                          <F4>
 DomCollectionControl.Remove                        <Del>
-DomElementsTreeView.AddElement                     <Ins>
-DomElementsTreeView.AddElementGroup
-DomElementsTreeView.DeleteElement                  <Del>
-DomElementsTreeView.GotoDomElementDeclarationAction <F4>
-DomElementsTreeView.TreePopup
+dotMemory Profiler
 DotNetProfiler.AttachGroup
 DotNetProfiler.AttachToLocalProcess
 DotNetProfiler.Profile
 DotNetProfiler.RunGroup
 dotTrace Profiler
+DoubleClickAttachAction
 DumpFocusableComponentHierarchyAction
 DumpLookupElementWeights                           <A-C-S-W>
-DumpMLCompletionFeatures                           <A-C-S-0>
+DumpMLCompletionFeatures                           <A-C-S-9>
 Dvcs.FileHistory.ContextMenu
 Dvcs.Log.ContextMenu
 Dvcs.Log.Toolbar
@@ -678,12 +1000,10 @@ EditCommitMessage
 EditCreateDeleteGroup
 EditCustomProperties
 EditCustomVmOptions
-EditFavorites
 EditInspectionSettings
 EditMacros
 EditMenu
 Editor.JSLibrariesMenu
-Editor.JSLibrariesMenu.LibraryList
 EditorActions
 EditorAddCaretPerSelectedLine                      <A-S-G>
 EditorAddOrRemoveCaret                             button=1 clickCount=1 modifiers=640
@@ -716,6 +1036,7 @@ EditorCut                                          <C-X> <S-Del>
 EditorCutLineBackward
 EditorCutLineEnd
 EditorDecreaseFontSize
+EditorDecreaseFontSizeGlobal
 EditorDelete                                       <Del>
 EditorDeleteLine                                   <C-L> <C-S-L>
 EditorDeleteToLineEnd
@@ -734,11 +1055,13 @@ EditorFocusGutter                                  <A-S-6>
 EditorForwardParagraph
 EditorForwardParagraphWithSelection
 EditorGutterPopupMenu
+EditorGutterPopupMenu.Appearance
 EditorGutterToggleGlobalIndentLines
 EditorGutterToggleGlobalLineNumbers
 EditorGutterVcsPopupMenu
 EditorHungryBackSpace
 EditorIncreaseFontSize
+EditorIncreaseFontSizeGlobal
 EditorIndentLineOrSelection
 EditorIndentSelection                              <Tab>
 EditorJoinLines                                    <C-S-J>
@@ -754,6 +1077,8 @@ EditorLineEndWithSelection                         <S-End>
 EditorLineStart                                    <Home>
 EditorLineStartWithSelection                       <S-Home>
 EditorLookupDown                                   <C-Down>
+EditorLookupSelectionDown
+EditorLookupSelectionUp
 EditorLookupUp                                     <C-Up>
 EditorMatchBrace                                   <C-]>
 EditorMoveDownAndScroll
@@ -764,7 +1089,7 @@ EditorMoveToPageTop                                <C-Pageup>
 EditorMoveToPageTopWithSelection                   <C-S-Pageup>
 EditorMoveUpAndScroll
 EditorMoveUpAndScrollWithSelection
-EditorNextWord                                     <C-Right> <Right>
+EditorNextWord                                     <C-Right>
 EditorNextWordInDifferentHumpsMode
 EditorNextWordInDifferentHumpsModeWithSelection
 EditorNextWordWithSelection                        <C-S-Right>
@@ -778,14 +1103,13 @@ EditorPasteSimple                                  <A-C-S-V>
 EditorPopupMenu
 EditorPopupMenu.GoTo
 EditorPopupMenu.Run
-EditorPopupMenu.Run.Rider
 EditorPopupMenu1
 EditorPopupMenu1.FindRefactor
 EditorPopupMenu1.RiderSection
 EditorPopupMenu2
 EditorPopupMenu3
 EditorPopupMenuDebug
-EditorPreviousWord                                 <C-Left> <Left>
+EditorPreviousWord                                 <C-Left>
 EditorPreviousWordInDifferentHumpsMode
 EditorPreviousWordInDifferentHumpsModeWithSelection
 EditorPreviousWordWithSelection                    <C-S-Left>
@@ -809,20 +1133,21 @@ EditorSearchSession.ToggleRegex
 EditorSearchSession.ToggleWholeWordsOnlyAction
 EditorSelectLine
 EditorSelectSingleLineAtCaret
-EditorSelectWord                                   <A-S-=> <A-C-Right> <C-W>
+EditorSelectWord
 EditorSetContentBasedBidiTextDirection
 EditorSetLtrBidiTextDirection
 EditorSetRtlBidiTextDirection
 EditorShowGutterIconTooltip                        <A-S-6>
 EditorSortLines
 EditorSplitLine
-EditorStartNewLine                                 <S-CR> <C-S-CR>
+EditorStartNewLine                                 <S-CR>
 EditorStartNewLineBefore                           <C-CR>
 EditorSwapSelectionBoundaries
 EditorTab                                          <Tab>
 EditorTabActionGroup
 EditorTabPopupMenu
 EditorTabPopupMenuEx
+EditorTabsEntryPoint
 EditorTabsGroup
 EditorTextEnd                                      <C-End>
 EditorTextEndWithSelection                         <C-S-End>
@@ -836,13 +1161,13 @@ EditorToggleShowBreadcrumbs
 EditorToggleShowGutterIcons
 EditorToggleShowIndentLines
 EditorToggleShowLineNumbers
-EditorToggleShowWhitespaces                        <C-R> <C-R>
+EditorToggleShowWhitespaces
 EditorToggleStickySelection
-EditorToggleUseSoftWraps                           <C-E> <C-E>
+EditorToggleUseSoftWraps
 EditorToggleUseSoftWrapsInPreview
 EditorTranspose
 EditorUnindentSelection                            <S-Tab>
-EditorUnSelectWord                                 <A-S--> <A-C-Left> <C-S-W>
+EditorUnSelectWord                                 <C-S-W>
 EditorUp                                           <Up>
 EditorUpWithSelection                              <S-Up>
 EditPropertiesAction                               <A-CR> <C-.> <A-S-F10>
@@ -863,7 +1188,10 @@ EmmetPreviousEditPoint                             <A-S-[>
 EmmetUpdateTag
 EmojiAndSymbols
 EnableDaemon                                       <A-C-S-8>
+EnableDesignTimeBuildLogging
+EnableDockerComposeSupportAction
 EnableDockerSupportAction
+EnableNewUi
 EnablePackageJsonMismatchedDependenciesNotification
 EncodingPanelActions
 EndpointsActions.ContextMenu
@@ -881,6 +1209,9 @@ EslintImportCodeStyle
 EvaluateExpression                                 <S-F9>
 ExcludeAction
 ExecuteT4Template
+ExecutionTargets
+ExecutionTargets.Additional
+ExecutionTargetsToolbarGroup
 Exit
 ExpandAll                                          <C-k> <C-=>
 ExpandAllRegions                                   <C-M> <C-M>
@@ -890,6 +1221,7 @@ ExpandAllToLevel2                                  <C-S-j> <C-S-j>
 ExpandAllToLevel3                                  <C-S-j> <C-S-j>
 ExpandAllToLevel4                                  <C-S-j> <C-S-j>
 ExpandAllToLevel5                                  <C-S-j> <C-S-j>
+ExpandCollapseToggleAction                         <C-M> <C-M>
 ExpandDocComments
 ExpandExpandableComponent                          <S-CR> <C-k> <C-=>
 ExpandLiveTemplateByTab                            <Tab>
@@ -922,6 +1254,9 @@ ExternalSystem.BeforeRun
 ExternalSystem.BeforeSync
 ExternalSystem.CollapseAll                         <C-m> <C-->
 ExternalSystem.CreateRunConfiguration
+ExternalSystem.DependencyAnalyzer.DependencyListGroup
+ExternalSystem.DependencyAnalyzer.DependencyTreeGroup
+ExternalSystem.DependencyAnalyzer.UsagesTreeGroup
 ExternalSystem.DetachProject                       <Del>
 ExternalSystem.EditRunConfiguration
 ExternalSystem.ExpandAll                           <C-k> <C-=>
@@ -948,6 +1283,7 @@ ExternalSystemView.ActionsToolbar.CenterPanel
 ExternalSystemView.ActionsToolbar.LeftPanel
 ExternalSystemView.ActionsToolbar.RightPanel
 ExternalSystemView.BaseProjectMenu
+ExternalSystemView.DependencyMenu
 ExternalSystemView.ModuleMenu
 ExternalSystemView.ProjectMenu
 ExternalSystemView.RunConfigurationMenu
@@ -957,22 +1293,24 @@ ExternalToolsGroup
 ExtractClass
 ExtractInclude
 ExtractInterface
-ExtractMethod                                      <C-R> <C-R> <A-C-M>
+ExtractMethod                                      <A-C-M>
 ExtractMethodToolWindow.TreePopup
 ExtractModule
 ExtractSuperclass
-FavoritesViewPopupMenu
-FileChooser
 FileChooser.Delete                                 <Del>
 FileChooser.GotoDesktop                            <C-D>
 FileChooser.GotoHome                               <C-1>
 FileChooser.GotoProject                            <C-2>
+FileChooser.GoToWslHome
 FileChooser.LightEditGotoOpenedFile
 FileChooser.NewFile
 FileChooser.NewFolder                              <A-Ins> <C-N>
 FileChooser.Refresh                                <A-C-Y>
-FileChooser.ShowHiddens
-FileChooser.TogglePathShowing                      <C-P>
+FileChooser.ShowHidden
+FileChooser.TogglePathBar
+FileChooserList
+FileChooserList.LevelUp                            <BS>
+FileChooserList.Root                               <C-\>
 FileChooserToolbar
 FileEditor.ImportToDatabase
 FileEditor.ImportToDatabase.Group
@@ -986,20 +1324,24 @@ FileOpenGroup
 FileOtherSettingsGroup
 FilePropertiesGroup
 FileSettingsGroup
-FileStructurePopup                                 <A-\>
+FileStructurePopup                                 <C-F12>
 FileTemplateSeparatorGroup
 FileWatcher.runForFiles
 FillParagraph
 Find                                               <C-F> <A-F3>
 FindDependantCodeAction
 FindDependantCodeInSolutionAction
+FindDuplicatedIndexedFilesInNodeModulesAction
+FindInFiles.Results.ContextMenu
 FindInPath                                         <C-S-F>
+FindInSolutionView
 FindMenuGroup
 FindNext                                           <F3> <C-S-Down> <A-C-Pagedown> <A-S-/>
 FindPrevious                                       <S-F3> <C-S-Up> <A-C-Pageup>
+FindPrevWordAtCaret                                <C-S-F3>
 FindSelectionInPath
-FindUsages                                         <S-F12> <A-F7>
-FindUsagesInFile                                   <A-S-F11>
+FindUsages                                         <A-F7>
+FindUsagesInFile                                   <C-S-F7>
 FindUsagesMenuGroup
 FindWordAtCaret                                    <C-F3>
 FixDocComment
@@ -1007,6 +1349,7 @@ FixWSLFirewall
 FlattenHierarchySettingAction
 FloatMode
 FlowJS.Restart.All.Servers
+FlowJSShowErrorDetailsAction
 FocusEditor                                        <Esc>
 FoldingGroup
 fontEditorPreview.ToggleBoldFont
@@ -1015,13 +1358,15 @@ ForceRunToCursor                                   <A-C-F9>
 ForceStepInto                                      <A-F11>
 ForceStepOver                                      <A-S-F8>
 Forward                                            <C-S--> <C-S-m> button=5 clickCount=1 modifiers=0
+ForwardPortAction
+ForwardPortAndNavigateInBrowser
 FullyExpandTreeNode                                <j>
 Generate                                           <A-Ins>
 Generate.Constructor.JavaScript
 Generate.GetAccessor.JavaScript
 Generate.GetSetAccessor.JavaScript
-Generate.Missing.Members.ES6                       <C-S-I>
-Generate.Missing.Members.TypeScript                <C-S-I>
+Generate.Missing.Members.ES6                       <C-I>
+Generate.Missing.Members.TypeScript                <C-I>
 Generate.SetAccessor.JavaScript
 GenerateCoverageReport
 GenerateDbObjectGroup
@@ -1029,10 +1374,13 @@ GenerateDTD
 GenerateFromTestCreatorsGroup
 GenerateGroup
 GenerateLaunchSettings
-GeneratePattern
 GenerateXmlTag
 Git.Add                                            <A-C-A>
+Git.Branch
 Git.Branches                                       <C-S-À>
+Git.Branches.List
+Git.Branches.Popup.Settings
+Git.Branches.Popup.SpeedSearch
 Git.BranchOperationGroup
 Git.BrowseRepoAtRevision
 Git.ChangesView.AcceptTheirs
@@ -1045,13 +1393,15 @@ Git.CheckoutRevision
 Git.CherryPick.Abort
 Git.Clone
 Git.Commit.And.Push.Executor                       <A-C-S-K>
-Git.Commit.Stage                                   <A-C-K>
+Git.Commit.Stage                                   <C-K>
 Git.CompareWithBranch
+Git.CompareWithTag
 Git.Configure.Remotes
 Git.ContextMenu
 Git.CreateNewBranch
 Git.CreateNewTag
 Git.Drop.Commits
+Git.Experimental.Branch.Popup.Actions
 Git.Fetch
 Git.FileActions
 Git.FileHistory.ContextMenu
@@ -1082,9 +1432,11 @@ Git.MainMenu.RebaseActions
 Git.Menu
 Git.Merge
 Git.Merge.Abort
+Git.New.Branch.In.Log                              <A-C-N>
 Git.Ongoing.Rebase.Actions
 Git.OpenExcludeFile
 Git.Pull
+Git.PushUpToCommit
 Git.Rebase
 Git.Rebase.Abort
 Git.Rebase.Continue
@@ -1099,6 +1451,7 @@ Git.Reword.Commit                                  <C-R>
 Git.SelectInGitLog
 Git.Show.Stage
 Git.Show.Stash
+Git.ShowBranches                                   <C-S-À>
 Git.Squash.Commits
 Git.Squash.Into.Commit
 Git.Stage.AcceptTheirs
@@ -1124,45 +1477,62 @@ Git.Stage.Tree.Menu
 Git.Stage.Ui.Settings
 Git.Stash
 Git.Stash.Apply
-Git.Stash.ContextMenu
-Git.Stash.Drop
+Git.Stash.ChangesBrowser.ContextMenu
+Git.Stash.Drop                                     <Del>
+Git.Stash.Operations.ContextMenu
 Git.Stash.Pop
 Git.Stash.Refresh
 Git.Stash.Silently
-Git.Stash.Toolbar
 Git.Stash.UnstashAs
 Git.Tag
+Git.Toolbar.ShowMoreActions
 Git.Uncommit
 Git.Unstash
-Github.Accounts.AddAccount
-Github.Accounts.AddGHAccount
-Github.Accounts.AddGHAccountWithToken
-Github.Accounts.AddGHEAccount
+GitBranchesTreePopupGroupByPrefixAction
+GitBranchesTreePopupResizeAction
+GitBranchesTreePopupTrackReposSynchronouslyAction
+GitCheckoutAction
+GitCheckoutAsNewBranch
+GitCheckoutFromInputAction
+GitCheckoutWithRebaseAction
+GitCompareWithBranchAction
+GitDeleteBranchAction
+Github.Copy.Link.To.GitHub
 Github.Create.Gist
 Github.Create.Pull.Request
 GitHub.MainMenu
 Github.Open.In.Browser
-Github.PullRequest.Branch.Create
-Github.PullRequest.Branch.Update
+Github.PullRequest.Changes.MarkNotViewed
+Github.PullRequest.Changes.MarkViewed
 Github.PullRequest.Changes.Popup
-Github.PullRequest.Changes.Reload                  <A-C-R>
 Github.PullRequest.Changes.Toolbar
-Github.PullRequest.Comments.Reload                 <A-C-R>
+Github.PullRequest.Comments.Reload
+Github.PullRequest.Details.Commit.Tree.ViewOptions
 Github.PullRequest.Details.Popup
-Github.PullRequest.Details.Reload                  <A-C-R>
+Github.PullRequest.Details.Reload
 Github.PullRequest.Diff.Comment.Create             <C-S-X>
-Github.PullRequest.List.Reload                     <A-C-R>
+Github.PullRequest.List.Reload
 Github.PullRequest.Review.Submit
 Github.PullRequest.Show
 Github.PullRequest.Timeline.Popup
 Github.PullRequest.Timeline.Show
-Github.PullRequest.Timeline.Update                 <A-C-R>
+Github.PullRequest.Timeline.Update
 Github.PullRequest.ToolWindow.List.Popup
 Github.Share
 Github.Sync.Fork
 Github.View.Pull.Request
+GithubCopyPathProvider
+GitMergeBranchAction
+GitNewBranchAction                                 <A-C-N>
+GitPullBranchAction$WithMerge
+GitPullBranchAction$WithRebase
+GitPushBranchAction
+GitRebaseBranchAction
+GitRenameBranchAction
 GitRepositoryActions
-GotoAction                                         <C-S-A>
+GitShowDiffWithBranchAction
+GitUpdateSelectedBranchAction
+GotoAction                                         <C-S-P>
 GotoBookmark0                                      <C-0>
 GotoBookmark1                                      <C-1>
 GotoBookmark2                                      <C-2>
@@ -1205,26 +1575,28 @@ GotoClass
 GoToCodeGroup
 GotoCustomRegion                                   <A-C-.>
 GotoDatabaseObject
-GotoDeclaration                                    <F12> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
+GotoDeclaration                                    <C-B> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
 GotoDeclarationOnly
 GoToEditPointGroup
 GoToErrorGroup
-GotoFile                                           <C-S-T> <C-S-N>
-GotoImplementation                                 <A-End>
+GotoFile                                           <C-S-N>
+GotoImplementation                                 <A-C-B>
 GoToLastTab
 GotoLine                                           <C-G>
 GoToLinkTarget
 GoToMenu
-GotoNextBookmark                                   <C-K> <C-K>
+GotoNextBookmark
+GotoNextBookmarkInEditor
 GotoNextElementUnderCaretUsage
-GotoNextError                                      <A-Pagedown> <F12>
+GotoNextError                                      <F12>
 GotoPrevElementUnderCaretUsage
-GotoPreviousBookmark                               <C-K> <C-K>
-GotoPreviousError                                  <A-Pageup> <S-F12>
-GotoRelated                                        <A-C-F7> <A-C-S-G>
+GotoPreviousBookmark
+GotoPreviousBookmarkInEditor
+GotoPreviousError                                  <S-F12>
+GotoRelated                                        <A-C-S-G>
 GotoRow                                            <C-G>
-GotoSuperMethod                                    <A-Home> <C-U>
-GotoSymbol                                         <A-C-S-T> <A-C-S-N>
+GotoSuperMethod                                    <C-U>
+GotoSymbol                                         <A-C-S-N> <A-C-P>
 GoToTab1
 GoToTab2
 GoToTab3
@@ -1236,17 +1608,28 @@ GoToTab8
 GoToTab9
 GoToTargetEx
 GotoTest
-GotoTypeDeclaration                                <C-S-F11> button=1 clickCount=1 modifiers=192 <C-K> <C-S-T>
+GotoTypeDeclaration                                <C-S-T> button=1 clickCount=1 modifiers=192
 GotoUrlAction                                      <C-S-\>
 Graph.ActualSize                                   <C-o> <C-/>
+Graph.AlignNodes.Bottom                            <S-B>
+Graph.AlignNodes.Center                            <S-C>
+Graph.AlignNodes.Left                              <S-L>
+Graph.AlignNodes.Middle                            <S-M>
+Graph.AlignNodes.Right                             <S-R>
+Graph.AlignNodes.Top                               <S-T>
+Graph.AlignNodesGroup
 Graph.AppearanceGroup
 Graph.ApplyCurrentLayout                           <S-F5>
+Graph.BehaviourGroup
 Graph.CommonLayoutGroup
 Graph.CopyDiagramSelectionToClipboard
 Graph.CopyEntireDiagramToClipboard
 Graph.Current.Node.Dependencies.Filter
 Graph.DefaultGraphPopup
 Graph.DefaultGraphToolbar
+Graph.DistributeNodes.Horizontally                 <S-H>
+Graph.DistributeNodes.Vertically                   <S-V>
+Graph.DistributeNodesGroup
 Graph.EdgeRealizer.ArcEdgeRealizer
 Graph.EdgeRealizer.BezierEdgeRealizer
 Graph.EdgeRealizer.QuadCurveEdgeRealizer
@@ -1254,6 +1637,7 @@ Graph.EdgeRealizer.SmoothedPolylineEdgeRealizer
 Graph.EdgeRealizer.SplineEdgeRealizer
 Graph.EdgeRealizer.StraightPolylineEdgeRealizer
 Graph.EdgeRealizerGroup
+Graph.ExportGroup
 Graph.ExportToFile
 Graph.FitContent
 Graph.Layout.ARTreeLayouter
@@ -1285,17 +1669,26 @@ Graph.LayoutOrientationGroup
 Graph.MergeEdges.BySources
 Graph.MergeEdges.ByTargets
 Graph.MergeEdgesGroup
+Graph.NeighborhoodViewPopup
+Graph.NeighborhoodViewPopup.AppearanceGroup
+Graph.NeighborhoodViewPopup.CompactMode
+Graph.NeighborhoodViewPopup.LayoutGroup
+Graph.NeighborhoodViewPopup.SameAsModelLayouter
 Graph.NetsLayoutGroup
 Graph.OrthogonalLayoutGroup
 Graph.RadialLayoutGroup
 Graph.RouteEdges                                   <F5>
 Graph.Show.Bridges
+Graph.Show.Edge.Labels
 Graph.ShowHideGrid
+Graph.ShowStructureViewForSelectedNode
 Graph.SnapToGrid
 Graph.TreeLayoutGroup
 Graph.ZoomIn                                       <k> <=>
 Graph.ZoomOut                                      <m> <->
+Graphs.KeymapGroup
 GridGeoViewer
+GridGeoViewerClose
 GroupNonPublicMembersSettingAction
 GuidGenerator
 Help.JetBrainsTV
@@ -1327,7 +1720,7 @@ hg4idea.QGoto
 hg4idea.QGotoFromPatches                           <A-S-G>
 hg4idea.QImport
 hg4idea.QPushAction                                <A-S-P>
-hg4idea.QRefresh                                   <A-C-R>
+hg4idea.QRefresh
 hg4idea.QRename
 hg4idea.Rebase.Abort
 hg4idea.Rebase.Continue
@@ -1340,9 +1733,11 @@ HideActiveWindow                                   <S-Esc>
 HideAllWindows                                     <C-S-F12>
 HideCoverage
 HideSideWindows
+HideUnityPlayActions
 HidpiInfo
 HierarchyGroup
-HighlightUsagesInFile                              <A-S-F11>
+HierarchyPopupMenu.Common
+HighlightUsagesInFile                              <C-S-F7>
 HippieBackwardCompletion
 HippieCompletion                                   <A-/>
 HtmlAddTableColumnAfter
@@ -1365,6 +1760,7 @@ IdeaVim.ReloadVimRc.group
 IdeaVim.ReloadVimRc.reload
 IdeScriptingConsole
 IgnoreChoicesGroup
+IlViewerCodeTypeComboBox
 Images.ChangeBackground
 Images.ConvertSvgToPng
 Images.EditExternalEditorPath
@@ -1381,7 +1777,7 @@ Images.SetBackgroundImage
 Images.ShowBorder
 Images.ShowThumbnails
 Images.Thumbnails.EnterAction                      <CR>
-Images.Thumbnails.Hide                             <C-F4>
+Images.Thumbnails.Hide                             <C-F4> <C-W>
 Images.Thumbnails.ToggleFileName
 Images.Thumbnails.ToggleFileSize
 Images.Thumbnails.ToggleRecursive                  <A-j>
@@ -1393,19 +1789,23 @@ Images.ThumbnailViewActions
 Images.ToggleTransparencyChessboard
 ImagesRootGroup
 ImmediateWindowOpen
-ImplementMethods                                   <C-S-I>
+ImplementMethods                                   <C-I>
+ImportProfilerResultsFromHistory
 ImportSettings
 ImportTests
 ImportTestsFromFile
+InactiveStopActionPlaceholder
 IncludeAction
 IncomingChanges.Refresh
 IncomingChangesToolbar
 IncreaseColumnWidth                                <A-C-S-Right>
-IncrementalSearch                                  <C-I>
+IncrementalSearch
 IncrementWindowHeight                              <A-C-S-Down>
 IncrementWindowWidth                               <A-C-S-Right>
-Inline                                             <C-R> <C-R> <A-C-N>
-InsertLiveTemplate                                 <C-K> <C-K> <C-E> <C-E> <C-J>
+IndexingDiagnosticGroup
+InlayMenu
+Inline                                             <A-C-N>
+InsertLiveTemplate                                 <C-J>
 InspectCode
 InspectCodeActionInPopupMenus
 InspectCodeGroup
@@ -1413,16 +1813,17 @@ InspectCodeInCodeMenuGroup
 InspectionToolWindow.TreePopup
 InspectOnProjectModelAction
 InspectThis                                        <A-C-S-A>
+InstallEditorPluginAction
 InstallNodeLocalDependencies
 InstallNodeLocalDependencies$Root
 IntegrateChangeSetAction
 IntegrateFiles
 IntroduceActionsGroup
 IntroduceConstant                                  <A-C-C>
-IntroduceField                                     <C-R> <C-R> <A-C-D>
-IntroduceParameter                                 <C-R> <C-R> <A-C-P>
+IntroduceField                                     <A-C-D>
+IntroduceParameter
 IntroduceParameterObject
-IntroduceVariable                                  <C-R> <C-R> <A-C-V>
+IntroduceVariable                                  <A-C-V>
 InvalidateCaches
 InvertBoolean
 JasmineGenerateAfterEachMethodAction
@@ -1441,8 +1842,9 @@ Jdbc.OpenConsole.New                               <C-S-Q>
 Jdbc.OpenConsole.New.Generate                      <C-S-Q>
 Jdbc.OpenEditor.Console                            <F4>
 Jdbc.OpenEditor.Data                               <F4>
-Jdbc.OpenEditor.DDL                                <F12> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
-Jdbc.OpenEditor.Grid.DDL                           <A-C-F7> <A-C-S-G>
+Jdbc.OpenEditor.DDL                                <C-B> button=1 clickCount=1 modifiers=128 button=2 clickCount=1 modifiers=0
+Jdbc.OpenEditor.Files
+Jdbc.OpenEditor.Grid.DDL                           <A-C-S-G>
 JS.TypeScript.Compile
 JS.TypeScript.Include.Generated.Declarations
 JsonCopyPointer
@@ -1454,9 +1856,11 @@ JumpToLastChange                                   <C-S-BS>
 JumpToLastWindow                                   <A-C-BS> <A-S-F6>
 JumpToNextChange
 JumpToStatement                                    <C-S-F10>
+KeepTabOpen
 LangCodeInsightActions
 LanguageSpecificFoldingGroup
 LeftToolbarSideGroup
+LeftToolbarSideGroupXamarin
 LightEditModePopup
 LightEditOpenFileInProject
 List-scrollDown                                    <Pagedown>
@@ -1482,6 +1886,7 @@ LocalChangesView.GearActions
 LocalChangesView.ShowOnDoubleClick
 LocalChangesView.ShowOnDoubleClick.EditorPreview
 LocalChangesView.ShowOnDoubleClick.Source
+LocalChangesView.SingleClickPreview
 LocalHistory
 LocalHistory.MainMenuGroup
 LocalHistory.PutLabel
@@ -1492,20 +1897,69 @@ LocalHistory.Vcs.Operations.Popup.Group
 LocateInSolutionView                               <A-S-L>
 Log.FileHistory.KeymapGroup
 Log.KeymapGroup
+Log.Unsorted.KeymapGroup
 LogDebugConfigure
 LogFocusRequests
 LogTraceScenarios
 LookupActions
 Macros
 MacrosGroup
+main.toolbar.Filename
+main.toolbar.git.Branches
+main.toolbar.Project
 MainMenu
+MainMenuButton.ShowMenu                            <A-.>
+mainRunToolbarDebugProcess
+mainRunToolbarRunProcess
 MaintenanceAction                                  <A-C-S-/>
 MaintenanceGroup
 MainToolBar
+MainToolbarCenter
+MainToolbarLeft
+MainToolbarPopupActions
+MainToolbarRight
 MainToolBarSettings
 ManageDotNetSdk
 ManageRecentProjects
 ManageTargets
+Markdown.ConfigurePandoc
+Markdown.EditorContextMenuGroup
+Markdown.Export
+Markdown.Extensions.CleanupExternalFiles
+Markdown.GenerateTableOfContents
+Markdown.GoogleDocsImport
+Markdown.ImportFromDocx
+Markdown.Insert                                    <A-Ins>
+Markdown.InsertEmptyTable
+Markdown.InsertGroup
+Markdown.Layout.EditorAndPreview
+Markdown.Layout.EditorOnly
+Markdown.Layout.PreviewOnly
+Markdown.OpenDevtools
+Markdown.Styling.CreateLink                        <C-S-U>
+Markdown.Styling.CreateOrChangeList
+Markdown.Styling.SetHeaderLevel
+Markdown.Table.ColumnAlignmentActions
+Markdown.Table.InsertRow.InsertAbove
+Markdown.Table.InsertRow.InsertBelow
+Markdown.Table.InsertTableColumn.InsertAfter
+Markdown.Table.InsertTableColumn.InsertBefore
+Markdown.Table.RemoveCurrentColumn
+Markdown.Table.RemoveCurrentRow
+Markdown.Table.SelectCurrentColumn.SelectContentCells
+Markdown.Table.SelectRow
+Markdown.Table.SetColumnAlignment.Center
+Markdown.Table.SetColumnAlignment.Left
+Markdown.Table.SetColumnAlignment.Right
+Markdown.Table.SwapColumns.SwapWithLeftColumn
+Markdown.Table.SwapColumns.SwapWithRightColumn
+Markdown.Table.SwapRows.SwapWithAbove
+Markdown.Table.SwapRows.SwapWithBelow
+Markdown.TableActions
+Markdown.TableColumnActions
+Markdown.TableColumnActions.ColumnAlignmentActions.Popup
+Markdown.TableContextMenuGroup
+Markdown.TableRowActions
 Markdown.Toolbar.Floating
 Markdown.Toolbar.Left
 Markdown.Toolbar.Right
@@ -1516,11 +1970,13 @@ MarkRootGroup
 MaximizeActiveDialog
 MaximizeEditorInSplit
 MaximizeToolWindow                                 <C-S-Þ>
+MeetNewUIAction
 MemberPushDown
 MembersPullUp
 MemoryView.SettingsPopupActionGroup
 MemoryView.ShowOnlyWithDiff
 MemoryView.SwitchUpdateMode
+MergeAllWindowsAction
 MergeSettings
 MethodDown                                         <A-Down>
 MethodHierarchy
@@ -1528,8 +1984,9 @@ MethodHierarchy.BaseOnThisMethod
 MethodHierarchyPopupMenu
 MethodUp                                           <A-Up>
 MinimizeCurrentWindow
-ModifyObject                                       <C-R> <C-R> <C-R> <C-R> <C-F6>
-Move                                               <C-R> <C-R> <F6>
+ModifyObject                                       <C-F6>
+MoreRunToolbarActions
+Move                                               <F6>
 MoveAttributeInAction
 MoveAttributeOutAction
 MoveEditorToOppositeTabGroup
@@ -1537,8 +1994,9 @@ MoveElementLeft                                    <A-C-S-Left>
 MoveElementRight                                   <A-C-S-Right>
 MoveLineDown
 MoveLineUp
-MoveStatementDown                                  <A-C-S-Down> <A-C-S-J>
-MoveStatementUp                                    <A-C-S-Up> <A-C-S-K>
+MoveMinimap
+MoveStatementDown                                  <A-C-S-Down>
+MoveStatementUp                                    <A-C-S-Up>
 MoveTabDown
 MoveTabRight
 Mq.Patches.ContextMenu
@@ -1553,20 +2011,28 @@ NavBar-selectLeft                                  <Left>
 NavBar-selectRight                                 <Right>
 NavBar-selectUp                                    <Up>
 NavBarActions
+NavBarLocationBottom
+NavbarLocationGroup
+NavBarLocationHide
+NavBarLocationTop
 NavbarPopupMenu
 NavBarToolBar
 NavBarToolBarOthers
 NavBarVcsGroup
+NavigateInBrowser
 NavigateInFileGroup
-NavigateToImmediateWindow                          <A-C-I>
-NewCoffeeScriptFile
+NavigateToImmediateWindow                          <A-I>
+NavigateToOpenedWorkspace
 newConfigurationDebugClass
+newConfigurationDefaultProfilerExecutorGroupContextActionId
 newConfigurationRunClass
 newConfigurationRunCoverage
+newConfigurationRunMemoryProfiling
 newConfigurationRunProfiling
 NewDir
+NewDockerfile
 NewEditorConfigFile
-NewElement                                         <C-N> <A-Ins>
+NewElement                                         <A-Ins>
 NewElementSamePlace                                <A-C-Ins>
 NewFile
 NewFromTemplate
@@ -1574,21 +2040,29 @@ NewGroup
 NewHtmlFile
 NewJavaScriptFile
 NewJSONFile
+NewMicroservices
 NewPackageJsonFile
 NewPrivateEnvironmentFile
 NewProjectOrModuleGroup
 NewPublicEnvironmentFile
 NewPubxmlFile
 NewPugFile
-NewRiderProject                                    <C-S-N>
+NewRiderProject
 NewRiderSolutionFolder
 NewScratchBuffer
 NewScratchFile                                     <A-C-S-Ins>
 NewStylesheetFile
 NewT4File
 NewToolbarActions
+NewToolbarActionsXamarin
 NewTypeScriptConfigFile
 NewTypeScriptFile
+NewUI_UnityToolbarActions
+NewUiRunWidget
+NewUnrealClassAction
+NewUnrealModuleAction
+NewUnrealPluginAction
+NewWebDevelopment
 NewXml
 NewXmlDescriptor
 NewXMLFile
@@ -1597,8 +2071,8 @@ NextEditorTab
 NextOccurence                                      <A-C-Down>
 NextParameter                                      <Tab>
 NextProjectWindow                                  <A-C-]>
-NextSplitter                                       <A-L>
-NextTab                                            <A-Right> <C-Pagedown>
+NextSplitter
+NextTab                                            <A-Right>
 NextTemplateParameter
 NextTemplateVariable                               <Tab> <CR>
 NextWindow
@@ -1609,6 +2083,7 @@ OnlineDocAction
 OpenApplicationHostConfig
 openAssertEqualsDiff                               <C-D>
 OpenBlankEditorInBlankDiffWindow
+OpenBookmarkGroup                                  <F4>
 OpenEditorInOppositeTabGroup
 OpenElementInNewWindow
 OpenExceptionSettings                              <A-C-E>
@@ -1619,25 +2094,24 @@ OpenInBrowser
 OpenInBrowserEditorContextBarGroupAction
 OpenInBrowserGroup
 OpenInRightSplit                                   <S-CR> button=1 clickCount=2 modifiers=512
+OpenMinimapSettings
 OpenMouseWheelSmoothScrollSettings
 OpenProjectDiagramFromFile
 OpenProjectWindows
 OpenRecentEditorInBlankDiffWindow
+OpenRemoteDevelopment
+OpenRiderDotMemoryToolWindow
+OpenSelectedSolution
 OpenSolutionApplicationHostConfig
 OpenWinFormsCodeAction                             <F7>
 OpenWinFormsDesignerAction                         <S-F7>
 OpenXCodeAction
 OptimizeImports                                    <A-C-O>
 org.editorconfig.configmanagement.generate.EditorConfigGenerateLanguagePropertiesAction
-org.intellij.plugins.markdown.fileActions.export.MarkdownExportAction
-org.intellij.plugins.markdown.fileActions.importFrom.docx.MarkdownImportFromDocxAction
-org.intellij.plugins.markdown.fileActions.importFrom.googleDocs.GoogleDocsImportAction
-org.intellij.plugins.markdown.ui.actions.ConfigurePandocAction
 org.intellij.plugins.markdown.ui.actions.scrolling.AutoScrollAction
 org.intellij.plugins.markdown.ui.actions.styling.HeaderDownAction
 org.intellij.plugins.markdown.ui.actions.styling.HeaderUpAction
 org.intellij.plugins.markdown.ui.actions.styling.InsertImageAction <C-U>
-org.intellij.plugins.markdown.ui.actions.styling.MarkdownCreateLinkAction <C-S-U>
 org.intellij.plugins.markdown.ui.actions.styling.MarkdownIntroduceLinkReferenceAction
 org.intellij.plugins.markdown.ui.actions.styling.ToggleBoldAction <C-B>
 org.intellij.plugins.markdown.ui.actions.styling.ToggleCodeSpanAction <C-S-C>
@@ -1650,23 +2124,29 @@ OverrideMethods
 PackageSelectionAction
 PackSelectionAction
 PairFileActions
-ParameterInfo                                      <C-S- >
-ParameterInfo.GoToPreviousSignature                <C-S-P>
+ParameterInfo                                      <C-S-A>
+ParameterInfo.GoToPreviousSignature
 ParameterNameHints
 PasteGroup
 PasteMultiple                                      <C-S-V> <C-S-Ins>
+PasteSpecialSeparatedGroup
 Patch.MainMenu
-Pause                                              <A-C-> <C-> <C-S-P>
+Pause                                              <A-C-> <C->
 PauseOutput
 Perforce.Force.Refresh
 Perforce.Shelve
 Perforce.SyncToRevision
+Perforce.Toolbar.PerforceToolbarWidgetAction
+Perforce.Toolbar.ShowMoreActions
+Perforce.Toolbar.WorkspaceAction
+Perforce.Unshelve
+Perforce.Unshelve.And.Delete
 PerforceDirect.Edit                                <A-C-E>
 PerforceDirect.Menu
 PerforceEnableIntegration
 Performance.ActivityMonitor
-performancePlugin.AttachInternalTracing
-performancePlugin.ConfigureTracingAction
+Performance.DumpThreads
+Performance.MemTester
 performancePlugin.ExecuteScriptAction
 performancePlugin.OpenIndexingDiagnosticsAction
 performancePlugin.ProfileIndexingAction
@@ -1683,6 +2163,7 @@ PlaybackLastMacro
 PlaySavedMacrosAction
 plugin.InstallFromDiskAction
 popup@BookmarkContextMenu
+popup@ExpandableBookmarkContextMenu
 PopupHector                                        <A-C-S-H>
 PopupMenu-cancel                                   <Esc>
 PopupMenu-return                                   <CR>
@@ -1691,6 +2172,8 @@ PopupMenu-selectNext                               <Down>
 PopupMenu-selectParent                             <Left>
 PopupMenu-selectPrevious                           <Up>
 PopupMenuActions
+PortForwardingPortGroup
+PortForwardingSuggestionGroup
 PowerSaveGroup
 PreprocessT4Template
 preview.actions.ActualSizeAction
@@ -1703,17 +2186,18 @@ PreviousDiff                                       <S-F7>
 PreviousEditorTab
 PreviousOccurence                                  <A-C-Up>
 PreviousProjectWindow                              <A-C-[>
-PreviousTab                                        <A-Left> <C-Pageup>
+PreviousTab                                        <A-Left>
 PreviousTemplateVariable                           <S-Tab>
 PreviousWindow
 PrevParameter                                      <S-Tab>
-PrevSplitter                                       <A-H>
+PrevSplitter
 PrevTemplateParameter
-Print                                              <C-P>
+Print
 PrintExportGroup
 ProblemsView.AutoscrollToSource
 ProblemsView.CopyProblemDescription                <C-C> <C-Ins>
 ProblemsView.GroupByToolId
+ProblemsView.OpenInPreviewTab
 ProblemsView.Options
 ProblemsView.QuickFixes                            <A-CR> <C-.> <A-S-F10>
 ProblemsView.SeverityFilters
@@ -1724,7 +2208,22 @@ ProblemsView.SortFoldersFirst
 ProblemsView.ToolWindow.SecondaryActions
 ProblemsView.ToolWindow.Toolbar
 ProblemsView.ToolWindow.TreePopup
+ProblemsViewReSharperReanalyzeAllFiles
+ProblemsViewReSharperReanalyzeFilesWithErrors
+ProductivityFeatures
 ProductivityGuide
+Profiler
+Profiler.ExcludeCallAction
+Profiler.ExcludeSubTreeAction
+Profiler.FocusOnCallAction
+Profiler.FocusOnSubtreeAction
+Profiler.OpenBackTracesAction
+Profiler.OpenMergedCalleesAction
+Profiler.OpenTreesInNewTabGroup
+Profiler.RevealSnapshotAction
+Profiler.TransformMainTreeGroup
+ProfilerActions
+ProfileRiderInternalDotnetProcess
 Profiling.Attach
 Profiling.Run
 ProjectView.AbbreviatePackageNames
@@ -1742,17 +2241,20 @@ ProjectView.ShowExcludedFiles
 ProjectView.ShowLibraryContents
 ProjectView.ShowMembers
 ProjectView.ShowModules
+ProjectView.ShowScratchesAndConsoles
 ProjectView.ShowVisibilityIcons
 ProjectView.SortByType
+ProjectView.ToolWindow.Appearance.Actions
 ProjectView.ToolWindow.SecondaryActions
-ProjectViewChangeView                              <A-F1>
 ProjectViewEditSource                              <F4>
 ProjectViewPopupMenu
 ProjectViewPopupMenuModifyGroup
 ProjectViewPopupMenuRefactoringGroup
 ProjectViewPopupMenuRunGroup
 ProjectViewPopupMenuSettingsGroup
+ProjectViewTabToolbar
 ProjectViewToolbar
+ProjectWidget.Actions
 PsiViewer
 PsiViewerForContext
 PublishGroup
@@ -1764,16 +2266,31 @@ PublishGroup.DownloadFrom
 PublishGroup.SyncLocalVsRemote
 PublishGroup.SyncLocalVsRemoteWith
 PublishGroup.Upload
+PublishGroup.UploadAllOpenFiles
+PublishGroup.UploadAllOpenFilesTo
 PublishGroup.UploadTo                              <A-C-S-X>
 PublishGroupPopupMenu
+Qodana.OpenQodanaCloudReportAction
+Qodana.OpenQodanaCloudSettingsAction
+Qodana.OpenReportAction
+Qodana.ProblemsView
+Qodana.ProblemsView.Link
+Qodana.ProblemsView.Login
+Qodana.ProblemsView.Options
+Qodana.ProblemsView.SeverityFilters
+Qodana.ProblemsView.SortByName
+Qodana.ProblemsView.SortBySeverity
+Qodana.SarifFileReportAction
+Qodana.ShowReportGroup
+QueryExecution.Settings
 QuickActionPopup
 QuickActions
 QuickChangeScheme
 QuickDocCopy                                       <C-C> <C-Ins>
 QuickEvaluateExpression                            <A-C-F8> button=1 clickCount=1 modifiers=512
 QuickFixes
-QuickImplementations                               <A-F12>
-QuickJavaDoc                                       <C-K> <C-K> <C-S-F1> <C-Q>
+QuickImplementations                               <C-S-I>
+QuickJavaDoc                                       <C-Q>
 QuickList.Deployment
 QuickPreview                                       < >
 QuickTypeDefinition
@@ -1785,10 +2302,12 @@ RdConflictDeclarationsNavigationAction
 RdExposingApiesNavigationAction
 RdExtensionMethodsNavigationAction
 RdFindReferencedCodeAction
+RdFindUnityUsagesAction
 RdFlowTargetNavigationAction
 RdFunctionExitsNavigationAction
 RdGoToMatchedTagsAction
 RdImplementingMembersNavigationAction
+RdJsonSelectSolution
 RdOverloadsNavigationAction
 RdParameterDeclarationNavigationAction
 RdSubstitutionNavigationAction
@@ -1806,16 +2325,17 @@ RebuildSelectionWithDiagnosticsAction
 RebuildSolutionAction
 RebuildSolutionWithDiagnosticsAction
 RebuildStartupProject
-RecentChangedFiles                                 <C-S-,> <A-C-S-BS>
+RecentChangedFiles                                 <A-C-S-BS>
 RecentChanges
-RecentFiles                                        <C-,> <C-E>
-RecentLocations                                    <C-S-E>
+RecentFiles                                        <C-E>
+RecentLocations
 RecentProjectListGroup
+RedesignedRunConfigurationSelector
 RefactoringMenu
 Refactorings.QuickListPopupAction                  <C-S-R>
 ReferenceInCSharpInteractive
-ReformatCode                                       <A-C-CR> <C-K> <C-K> <C-K> <C-K>
-Refresh                                            <A-C-R>
+ReformatCode                                       <A-C-L> <A-S-F>
+Refresh
 RefreshStackFrame                                  button=1 clickCount=2 modifiers=0
 Register
 RegistrationActions
@@ -1827,7 +2347,7 @@ RemoteHostView.CreateFile
 RemoteHostView.CreateFolder
 RemoteHostView.EditRemoteFile
 RemoteHostView.EditSource                          <F4>
-RemoteHostView.Rename                              <C-R> <C-R> <F2> <S-F6>
+RemoteHostView.Rename                              <F2>
 RemoteHostView.SetPermissions
 RemoteHostView.ToggleExclusion
 RemoteHostViewPopupMenu
@@ -1844,7 +2364,7 @@ RemoteServersViewToolbar.Top
 RemoveBom
 RemoveBom.Group
 RenameAttributeAction
-RenameElement                                      <C-R> <C-R> <F2> <S-F6>
+RenameElement                                      <F2>
 RenameElementInNavBar
 RenameFile
 RenameTagAction
@@ -1859,15 +2379,16 @@ Rerun                                              <C-S-F5>
 RerunFailedTests
 RerunTests
 ResetColumnsWidth                                  <A-C-S-Up>
+ResetIdeScaleAction                                <A-S-0>
 ResetLanguageLevel
 ResetToMySettings
 ResetToTheirsSettings
 ResetWindowsDefenderNotification
 ReSharperGotoContainingDeclaration                 <C-[>
-ReSharperGotoImplementation                        <C-F12>
-ReSharperGotoNextErrorInSolution                   <A-S-Pagedown>
-ReSharperGotoPrevErrorInSolution                   <A-S-Pageup>
-ReSharperNavigateTo                                <A-À> <A->
+ReSharperGotoImplementation                        <A-C-S-B>
+ReSharperGotoNextErrorInSolution                   <A-F12>
+ReSharperGotoPrevErrorInSolution                   <A-S-F12>
+ReSharperNavigateTo                                <C-S-G>
 ReSharperReanalyzeAllFiles
 ReSharperReanalyzeFilesWithErrors
 ReSharperSelectContainingDeclaration               <C-S-[>
@@ -1883,20 +2404,31 @@ RESTClient.ConvertToNew
 RESTClient.RequestFromLegacyFiles
 RESTClient.ShowHistory
 RestoreDefaultExtensionScripts
-RestoreDefaultLayout
 RestoreDefaultSettings
 RestoreFontPreviewTextAction
 Resume                                             <F5>
-RevealBaseDirectoryAction
+RevealBaseDirectoryIn
 RevealGroup
 RevealIn
+ReverteOverrideFileTypeAction
 RevertUnchanged
 RevisionGraph
-Rider.NewFileFromTemplate
+rider.ilViewer.IlViewerCodeTypeHighLevelCSharp
+rider.ilViewer.IlViewerCodeTypeIl
+rider.ilViewer.IlViewerCodeTypeLowLevelCSharp
 Rider.Plugins.FSharp.DebugInFsi                    <A-C-\>
 Rider.Plugins.FSharp.FsiGroup
 Rider.Plugins.FSharp.SendToFsi                     <C-\>
 Rider.Plugins.FSharp.StartFsi
+Rider.ProblemsView.CurrentFileShowPreview
+Rider.ProblemsView.ErrorsInSolution
+Rider.ProblemsView.ErrorsInToolset
+Rider.ProblemsView.ShowErrors
+Rider.ProblemsView.ShowGroups
+Rider.ProblemsView.ShowIgnored
+Rider.ProblemsView.ShowInfo
+Rider.ProblemsView.ShowPreview
+Rider.ProblemsView.ShowWarnings
 Rider.UnitTesting.ExplorerOptions
 Rider.UnitTesting.ExplorerPopup
 Rider.UnitTesting.ExportOptions
@@ -1935,10 +2467,17 @@ Rider.UnitTesting.TopExplorerToolbar
 Rider.UnitTesting.TopSessionToolbar
 Rider.UnitTesting.TopToolbar.GearOptions.Plugin
 Rider.UnitTesting.TopToolbar.MiscOptions.Plugin
+Rider.UnitTesting.TopToolbar.MiscOptions.Unity
 Rider.UnitTesting.UsageView.Popup
+Rider.Web.CreateIisVirtualDirectoryAction
+Rider.Web.DotNetUserSecrets
 Rider.Web.SetUpAspNetCoreCertificate
 Rider.Web.SetUpIisExpressCertificate
 Rider.WelcomeScreen.Documentation
+RiderAddProjectDependenciesToSolutionFilterAction
+RiderAddProjectDependencyTreeToSolutionFilterAction
+RiderAddToSolutionFilterProjectAction
+RiderAddToSolutionFilterProjectWithDependenciesAction
 RiderBackendAction-Abstract2Interface
 RiderBackendAction-Anonymous2Declared
 RiderBackendAction-ChangeNullability
@@ -1951,10 +2490,12 @@ RiderBackendAction-EncapsulateField                <C-R> <C-R>
 RiderBackendAction-Extension2StaticAction
 RiderBackendAction-ExtractClass
 RiderBackendAction-ExtractContentPlaceholder
+RiderBackendAction-ExtractGlobalUsing
 RiderBackendAction-Function2Indexer
 RiderBackendAction-Function2Property
 RiderBackendAction-Indexer2Function
 RiderBackendAction-InlineContent
+RiderBackendAction-InlineGlobalUsing
 RiderBackendAction-Interface2Abstract
 RiderBackendAction-InvertBool
 RiderBackendAction-MakeNonStatic
@@ -1968,27 +2509,53 @@ RiderBackendAction-TransformParameters
 RiderBackendAction-Type2Partial
 RiderBackendAction-UseBaseTypeAction
 RiderBackendProfiling
-RiderCodeLens.ShowMore
 RiderCollapseToDefinitions                         <C-M> <C-M>
+RiderCompactFormatCode
 RiderCopyRootPath
+RiderCoveringTestsPopupCoverAllTestsAction         <C-K>
+RiderCoveringTestsPopupCoverAllTestsSplitAction
+RiderCoveringTestsPopupCoverSelectedTestsAction    <C-C>
+RiderCoveringTestsPopupCoverSelectedTestsSplitAction
+RiderCoveringTestsPopupDebugSelectedTestsAction    <C-D>
+RiderCoveringTestsPopupNewSessionAndCoverSelectedTestsAction
+RiderCoveringTestsPopupNewSessionAndRunSelectedTestsAction
+RiderCoveringTestsPopupNewSessionSelectedTestsAction
+RiderCoveringTestsPopupNewSessionSelectedTestsSplitAction
+RiderCoveringTestsPopupRunAllTestsAction           <C-R>
+RiderCoveringTestsPopupRunSelectedTestsAction      <C-S>
 RiderDebuggerApplyEncChagnes                       <A-F10>
 RiderDebuggerDisableMethodToInvokeAction
 RiderDetachDebuggerAction
 RiderDiagram.DefaultGraphToolbar
+RiderDotCover.CoveringTestsPopup.NewSession.Split
+RiderDotCover.CoveringTestsPopup.RunAll.Plugin
+RiderDotCover.CoveringTestsPopup.RunAll.Split
+RiderDotCover.CoveringTestsPopup.RunSelected.Plugin
+RiderDotCover.CoveringTestsPopup.RunSelected.Split
 RiderDotCoverCoverageTreeContextMenu
 RiderDotCoverCoverageTreeExcludeAllNodesExceptSelectedAction
 RiderDotCoverCoverageTreeExcludeNodesAction
 RiderDotCoverCoverageTreeExcludeNodesAndCreateCoverageFilterAction
 RiderDotCoverCoverageTreeExportReportMenu
-RiderDotCoverCoverageTreeFilters
+RiderDotCoverDocumentSummaryMenu
+RiderDotCoverDocumentSummaryWithUnitTestsMenu
 RiderDotCoverDropSnapshotAction
 RiderDotCoverExportHtmlReportAction
 RiderDotCoverExportJsonReportAction
 RiderDotCoverExportXmlDetailsReportAction
 RiderDotCoverExportXmlNDependReportAction
 RiderDotCoverExportXmlReportAction
+RiderDotCoverGoToNextUncoveredStatementAction
+RiderDotCoverGoToPreviousUncoveredStatementAction
+RiderDotCoverNavigateToCoverageTreeAction
 RiderDotCoverShowContinuousTestingSettingsAction
+RiderDotCoverShowCoveringTestAction
+RiderDotCoverShowCoveringTestCoverageTreeAction
+RiderDotCoverShowFilteringSettingsAction
 RiderDotCoverTargetFrameworkFilterAction
+RiderDotCoverToggleCodeHighlightingAction
+RiderDotCoverTriggerContinuousTestingAction
+RiderDumpLookupAction                              <A-C-S-Q>
 RiderEditEditorConfig
 RiderEditSettingsLayerOptions
 RiderEditSource                                    <F4>
@@ -2002,9 +2569,45 @@ RiderFileNewGroup
 RiderFileOpenGroup
 RiderGoToSnapshotMethodAction
 RiderHelp
+RiderHideThreads
+RiderIlViewerToolbar
 RiderInspect
 RiderInspectSubsection1
 RiderIOS
+RiderLink.AttachToConnectedEditor
+RiderLink.CompileBeforeRun
+RiderLink.CurrentCamLoc
+RiderLink.DedicatedServer
+RiderLink.DefaultPlayerStart
+RiderLink.FourPlayers
+RiderLink.HidePlayActions
+RiderLink.MobilePreview
+RiderLink.Modes
+RiderLink.NewEditorWindow
+RiderLink.NumberOfPlayers
+RiderLink.OnePlayer
+RiderLink.OpenRiderLinkSettings
+RiderLink.OpenUnrealLinkSettings
+RiderLink.PauseUnreal
+RiderLink.ProtocolStatus
+RiderLink.RefreshProjects
+RiderLink.ResumeUnreal
+RiderLink.SelectedViewport
+RiderLink.Simulate
+RiderLink.SingleStepUnreal
+RiderLink.SpawnPlayerAt
+RiderLink.StandaloneGame
+RiderLink.StartUnreal
+RiderLink.StopUnreal
+RiderLink.ThreePlayers
+RiderLink.TwoPlayers
+RiderLink.UnrealPlaySettings
+RiderLink.VRPreview
+RiderLink.VulkanPreview
+RiderLoadProjectAction
+RiderLoadProjectWithDependenciesAction
+RiderManageRecentProjects
+RiderMoreDebuggerSettings
 RiderNewSolution
 RiderNuGetBrowseActionGroup
 RiderNuGetBrowseLicenseAction
@@ -2013,13 +2616,14 @@ RiderNuGetBrowseOnGoogleAction
 RiderNuGetBrowseProjectPageAction
 RiderNuGetContextPopupAction                       <A-CR> <C-.> <A-S-F10>
 RiderNuGetCopyPackageNameAction                    <C-C> <C-Ins>
+RiderNuGetGenerateBindingRedirectsAction
 RiderNuGetInstallPackageAction
 RiderNuGetManagePackagesForCurrentProjectAction
 RiderNuGetManagePackagesForProjectAction
 RiderNuGetMigrateForProjectAction
 RiderNuGetOpenPackagesFolderAction
 RiderNuGetOperationActionGroup
-RiderNuGetQuickDocAction                           <C-K> <C-K> <C-S-F1> <C-Q>
+RiderNuGetQuickDocAction                           <C-Q>
 RiderNuGetQuickListPopupAction                     <A-S-N>
 RiderNuGetRemovePackageAction
 RiderNuGetRestoreAction
@@ -2043,33 +2647,47 @@ RiderOnlineHelpAction                              <F1>
 RiderOpenSnapshotFromDialog
 RiderOpenSnapshotFromList
 RiderOpenSolution                                  <C-S-O>
+RiderPasteJsonAsClasses
+RiderPasteJsonAsRecords
+RiderPasteSpecialGroup
+RiderPasteSpecialPopupGroup
 RiderPrintGraphAction
 RiderPrintPreviewAction
+RiderProblemsView.ToolWindow.TreePopup
+RiderProblemsViewToolsetContextPopupAction         <A-CR> <C-.> <A-S-F10>
 RiderProjectDiagramApplyCurrentLayout              <F5>
 RiderProjectDiagramCalcCouplingAction
 RiderProjectDiagramShowGroupsAction
 RiderProjectDiagramShowNeighbours
 RiderProjectDiagramTransitiveRefsAction
 RiderPublish
-RiderPublishToAzureGroup
+RiderReattach                                      <A-S-P>
 RiderReloadProjectAction
 RiderRemoveAllLineBreakpoints                      <C-S-F9>
+RiderRemoveFromSolutionFilterProjectAction
 RiderRenameFile
-RiderRevealFile
+RiderRestoreDefaultLayout
 RiderRevealGroup
+RiderRunToolbarProfileMainMoreActionGroup
+RiderRunToolbarProfileMoreActionSubGroup
 RiderShowIlViewerAction
 RiderShowIncomingCalls
+RiderShowLibraryFrames
 RiderShowOutgoingCalls
 RiderShowResxEditorAction
 RiderShowValueDestination
 RiderShowValueOrigin
+RiderSpaciousFormatCode
 RiderStartIndexAction
 RiderStartSampling
 RiderStartTimeline
 RiderStopIndexAction
-RiderStopProfiling
+RiderStoreDefaultLayout
+RiderStrictFormatCode
 RiderTakeMemorySnapshot
-RiderTypeHierarchy.BaseOnThisType                  <C-E> <C-E> <A-C-H>
+RiderToolWindowPerIde
+RiderToolWindowPerProject
+RiderTypeHierarchy.BaseOnThisType                  <A-C-H>
 RiderTypeHierarchy.Class
 RiderTypeHierarchy.Subtypes
 RiderTypeHierarchy.Supertypes
@@ -2085,22 +2703,22 @@ RiderUnitTestCoverContextAction
 RiderUnitTestCoverContextTwAction
 RiderUnitTestCoverCurrentSessionAction
 RiderUnitTestCoverCurrentSessionTwAction
-RiderUnitTestCoverSolutionAction                   <C-U> <C-U>
+RiderUnitTestCoverSolutionAction                   <C-T> <C-T>
 RiderUnitTestCoverSolutionTwAction
 RiderUnitTestCoverTreeTwAction
 RiderUnitTestCurrentDocumentHelpAction
-RiderUnitTestDebugContextAction                    <C-R> <C-T> <C-T>
-RiderUnitTestDebugContextTwAction                  <C-R>
+RiderUnitTestDebugContextAction                    <C-T> <C-T>
+RiderUnitTestDebugContextTwAction                  <C-D>
 RiderUnitTestDebugContextUntilFailAction
 RiderUnitTestDebugContextUntilFailTwAction
 RiderUnitTestDiagnosticsActionGroup
 RiderUnitTestDotMemoryHelpAction
 RiderUnitTestDotMemoryRunTreeTwAction
-RiderUnitTestDotMemoryUnitContextAction            <C-U> <C-U>
+RiderUnitTestDotMemoryUnitContextAction            <C-T> <C-T>
 RiderUnitTestDotMemoryUnitContextTwAction
 RiderUnitTestDotMemoryUnitCurrentSessionAction
 RiderUnitTestDotMemoryUnitCurrentSessionTwAction
-RiderUnitTestDotMemoryUnitSolutionAction           <C-U> <C-U>
+RiderUnitTestDotMemoryUnitSolutionAction           <C-T> <C-T>
 RiderUnitTestDotMemoryUnitSolutionTwAction
 RiderUnitTestExecutingHelpAction
 RiderUnitTestExportSessionAction
@@ -2111,8 +2729,9 @@ RiderUnitTestFilterPositionAutomaticAction
 RiderUnitTestFilterPositionHideAction
 RiderUnitTestFilterPositionOnToolbarAction
 RiderUnitTestFilterPositionUnderToolbarAction
-RiderUnitTestFocusExplorerAction                   <A-C-T>
-RiderUnitTestFocusSessionAction                    <A-C-T>
+RiderUnitTestFocusExplorerAction                   <A-C-U> <A-C-T>
+RiderUnitTestFocusSessionAction                    <A-C-T> <A-C-R>
+RiderUnitTestFocusToolWindowAfterDebugAction
 RiderUnitTestGroupByAction
 RiderUnitTestIgnoredTestsFilterAction
 RiderUnitTestImportSessionAction
@@ -2123,10 +2742,8 @@ RiderUnitTestNavigateToExplorerAction
 RiderUnitTestNavigateToSessionAction
 RiderUnitTestNewSessionAction                      <C-T> <C-T>
 RiderUnitTestNewSessionTwAction                    <A-S-Ins>
-RiderUnitTestNextOccurenceAction                   <A-C-Down>
 RiderUnitTestOpenTestOutputInEditorAction
 RiderUnitTestPendingTestsFilterAction
-RiderUnitTestPreviousOccurenceAction               <A-C-Up>
 RiderUnitTestProfileContextAction
 RiderUnitTestProfileContextTwAction
 RiderUnitTestProfileCurrentSessionAction
@@ -2139,22 +2756,22 @@ RiderUnitTestQuickListPopupAction                  <A-S-U>
 RiderUnitTestRemoveElementsFromSessionAction
 RiderUnitTestRemoveElementsFromSessionTwAction     <Del>
 RiderUnitTestRenameSessionAction
-RiderUnitTestRepeatPreviousRunAction               <C-R> <C-T> <C-T>
+RiderUnitTestRepeatPreviousRunAction               <C-T> <C-T>
 RiderUnitTestRepeatPreviousRunTwAction
 RiderUnitTestRerunBrokenSplitAction
-RiderUnitTestRunContextAction                      <C-R> <C-T> <C-T>
+RiderUnitTestRunContextAction                      <C-T> <C-T>
 RiderUnitTestRunContextSplitAction
-RiderUnitTestRunContextTwAction                    <C-R>
-RiderUnitTestRunContextUntilFailAction             <C-U> <C-U>
+RiderUnitTestRunContextTwAction                    <S-CR> <C-R>
+RiderUnitTestRunContextUntilFailAction             <C-T> <C-T>
 RiderUnitTestRunContextUntilFailTwAction
 RiderUnitTestRunCurrentSessionAction               <C-T> <C-T>
 RiderUnitTestRunCurrentSessionTwAction             <C-Y>
 RiderUnitTestRunningTestsFilterAction
-RiderUnitTestRunSolutionAction                     <C-U> <C-U>
+RiderUnitTestRunSolutionAction                     <C-T> <C-T>
 RiderUnitTestRunSolutionTwAction                   <C-L>
 RiderUnitTestRunTreeSplitAction
 RiderUnitTestRunTreeTwAction                       <C-S-CR>
-RiderUnitTestSessionAbortAction                    <C-U> <C-U>
+RiderUnitTestSessionAbortAction                    <C-T> <C-T>
 RiderUnitTestSessionAbortTwAction
 RiderUnitTestSessionBuildPolicyActionGroup
 RiderUnitTestSessionBuildPolicyAutomaticAction
@@ -2168,13 +2785,15 @@ RiderUnitTestSessionPlatformMonoPreferenceActionGroup
 RiderUnitTestSessionPlatformMonoPreferenceClrAction
 RiderUnitTestSessionPlatformMonoPreferenceDefaultAction
 RiderUnitTestSessionPlatformMonoPreferenceMonoAction
+RiderUnitTestSessionPlatformTypeArm64Action
+RiderUnitTestSessionPlatformTypeArmAction
 RiderUnitTestSessionPlatformTypeAutomaticAction
 RiderUnitTestSessionPlatformTypeDefaultAction
 RiderUnitTestSessionPlatformTypeX64Action
 RiderUnitTestSessionPlatformTypeX86Action
 RiderUnitTestSessionRerunAbortedTestsAction
 RiderUnitTestSessionRerunBrokenTestsAction
-RiderUnitTestSessionRerunFailedTestsAction         <C-U> <C-U>
+RiderUnitTestSessionRerunFailedTestsAction         <C-T> <C-T>
 RiderUnitTestSessionRerunFailedTestsTwAction
 RiderUnitTestSessionRerunInconclusiveTestsAction
 RiderUnitTestSessionSelectedIdeActionGroup
@@ -2204,18 +2823,19 @@ RiderUnitTestSuccessTestsFilterAction
 RiderUnitTestTargetFrameworkFilterAction
 RiderUnitTestToggleHideEmptyTestFiltersAction
 RiderUnitTestToolWindowHelpAction
-RiderUnitTestTreeCollapseAllAction                 <C-m> <C-->
-RiderUnitTestTreeExpandAllAction                   <C-k> <C-=>
 RiderUnitTestTreeRefreshAction
 RiderUnitTestTreeSelectionPopupAction              <A-CR> <C-.> <A-S-F10>
 RiderUnitTestTreeTextFilterAction                  <C-F> <A-F3>
 RiderUnitTestUnknownTestsFilterAction
+RiderUnityOpenEditorLogAction
+RiderUnityOpenPlayerLogAction
 RiderUnloadProjectAction
 RiderWelcomeScreen
+RiderWindowLayoutActions
 RightToolbarSideGroup
-RoslynBackendProfiling
-RoslynStartSampling
-RoslynTakeMemorySnapshot
+RightToolbarSideGroupXamarin
+RoslynAnalyzerDiagnostic
+RoslynHelpLinkAction
 Run                                                <C-F5>
 RunAnything
 RunClass                                           <A-C-F5>
@@ -2249,6 +2869,7 @@ RunDashboardPopup
 RunInspection                                      <A-C-S-I>
 RunInspectionOn
 RunJsbtTask                                        <A-C-S-F11>
+RunMemoryProfiling
 RunMenu
 Runner.CloseAllUnpinnedViews
 Runner.CloseAllViews
@@ -2258,6 +2879,7 @@ Runner.Focus
 Runner.FocusOnStartup
 Runner.Layout
 Runner.RestoreLayout
+Runner.ToggleTabLabels
 Runner.View.Close.Group
 Runner.View.Popup
 Runner.View.Toolbar
@@ -2265,14 +2887,69 @@ RunnerActions
 RunnerActionsTouchbar
 RunnerLayoutActions
 RunProfiling
+runShellFileAction                                 <A-C-F5>
+RunTab.TopToolbar
+RunTab.TopToolbar.More
+RunTab.TopToolbar.Old
 RunTestGroup
 RunToCursor                                        <C-F10>
-SafeDelete                                         <C-R> <C-R> <A-Del>
+RunToolbarActionsGroup
+RunToolbarAdditionalProcessActions
+RunToolbarDebuggerAdditionalActions
+RunToolbarDebugMoreActionGroupName
+RunToolbarDebugMoreActionSubGroupName
+RunToolbarDebugProcess
+RunToolbarDotTraceProfilerAction
+RunToolbarDotTraceProfilerConfigurationChooser
+RunToolbarEditConfigurationAction
+RunToolbarMainActionGroup
+RunToolbarMainActionsGroup
+RunToolbarMainMoreActionGroup
+RunToolbarMainMultipleStopAction
+RunToolbarMainRunConfigurationsAction
+RunToolbarMainSlotActive
+RunToolbarMainSlotInfoAction
+RunToolbarMoreActionGroup
+RunToolbarMoveToTopAction
+RunToolbarPauseAction
+RunToolbarProcessActionGroup
+RunToolbarProcessMainActionGroup
+RunToolbarProcessStartedAction
+RunToolbarProfileMainMoreActionGroup
+RunToolbarProfileMoreActionGroupName
+RunToolbarProfileMoreActionSubGroupName
+RunToolbarProfileMoreActionSubGroupName_additionAction
+RunToolbarProfileMoreActionSubGroupName_additionActionChooserGroupId
+RunToolbarRemoveSlotAction
+RunToolbarRerunAction
+RunToolbarResumeAction
+RunToolbarRollbackToPrevious
+RunToolbarRunConfigurationsAction
+RunToolbarRunProcess
+RunToolbarShowHidePopupAction
+RunToolbarShowToolWindowTab
+RunToolbarSlotContextMenuGroup
+RunToolbarStopAction
+RunToolbarTopLevelExecutorActionGroup
+RunToolbarWidgetAction
+SafeDelete                                         <A-Del>
 SaveAll                                            <C-S-S>
 SaveAsTemplate
 SaveDocument                                       <C-S>
 SaveFileAsTemplate
 SaveProjectDiagram
+SchemaCompare.Cancel                               <A->
+SchemaCompare.ChangeEqualObjectsVisibility
+SchemaCompare.ChangeGrouping
+SchemaCompare.ChangeUnsupportedObjectsVisibility
+SchemaCompare.Compare                              <A-S-C>
+SchemaCompare.GenerateDeployScript                 <A-S-G>
+SchemaCompare.SaveScmpFile                         <C-S>
+SchemaCompare.ShowOptions
+SchemaCompare.UpdateTarget                         <A-S-U>
+SchemaCompareAction
+SchemaCompareActions
+SchemaCompareForDatabaseProjectAction
 ScopeView.EditScopes
 ScopeViewPopupMenu
 Scratch.ChangeLanguage
@@ -2290,7 +2967,7 @@ ScrollPane-unitScrollRight
 ScrollPane-unitScrollUp
 ScrollPaneActions
 ScrollTreeToCenter                                 <C-M> <C-M>
-SearchEverywhere                                   <C-T> <C-N>
+SearchEverywhere                                   <C-N>
 SearchEverywhere.CompleteCommand                   <Tab>
 SearchEverywhere.NavigateToNextGroup               <Pagedown> <C-Down>
 SearchEverywhere.NavigateToPrevGroup               <Pageup> <C-Up>
@@ -2299,8 +2976,8 @@ SearchEverywhere.PrevTab                           <S-Tab>
 SearchEverywhere.SelectItem                        <CR>
 SearchEverywhereActions
 SearchEverywhereNewToolbarAction
-SegmentedSearchEverywhereAction
-SegmentedSearchEverywhereGroup
+SegmentedButton-left                               <Left>
+SegmentedButton-right                              <Right>
 SegmentedVcsActionsBarGroup
 SegmentedVcsControlAction
 SelectAllOccurrences                               <A-S-;>
@@ -2312,22 +2989,21 @@ SelectVirtualTemplateElement                       <A-S-O>
 SendEOF                                            <C-D>
 SendFeedback
 SendFsiRefs
-SendToFavoritesGroup
 Servers.Deploy
 Servers.DeployWithDebug
 Servers.Undeploy
-ServiceView.ActivateAzuriteServiceViewContributor
 ServiceView.ActivateDatabaseServiceViewContributor
 ServiceView.ActivateDefaultRemoteServersServiceViewContributor
-ServiceView.ActivateDockerServiceViewContributor
+ServiceView.ActivateDockerMainServiceViewContributor
+ServiceView.ActivateDockerRegistryServiceViewContributor
 ServiceView.ActivateRunDashboardServiceViewContributor
 ServiceView.ActivateSshServiceViewContributor
-ServiceView.AddService                             <C-N> <A-Ins>
+ServiceView.AddService                             <A-Ins>
 ServiceView.Filter
 ServiceView.GroupBy
 ServiceView.GroupByContributor                     <A-C-T>
-ServiceView.GroupByServiceGroups                   <A-C-P>
-ServiceView.JumpToServices                         <C-F2>
+ServiceView.GroupByServiceGroups
+ServiceView.JumpToServices                         <A-Home>
 ServiceView.OpenEachInNewTab
 ServiceView.OpenInNewTab
 ServiceView.OpenInNewTabGroup
@@ -2338,10 +3014,9 @@ ServiceViewItemPopupGroup
 ServiceViewItemToolbar
 ServiceViewItemToolbarGroup
 ServiceViewTreeToolbar
-Session.Client.Detach
 Session.Close
 Session.CloseAll
-Session.Rename                                     <C-R> <C-R> <F2> <S-F6>
+Session.Rename                                     <F2>
 SetDataBreakpoint
 SetJobsForChangeList
 SetShortcutAction                                  <A-CR> <C-.> <A-S-F10>
@@ -2350,28 +3025,33 @@ SettingsEntryPointGroup
 SeverityEditorDialog
 Shelve.KeymapGroup
 ShelveChanges.UnshelveWithDialog                   <C-S-U>
-ShelvedChanges.CleanMarkedToDelete
 ShelvedChanges.ImportPatches
 ShelvedChanges.Rename                              <C-R>
 ShelvedChanges.Restore
 ShelvedChanges.ShowHideDeleted
-ShelvedChanges.ShowRecentlyDeleted
 ShelvedChangesPopupMenu
 ShelvedChangesToolbar
+ShelvedChangesToolbar.ViewOptions
+ShGenerateForLoop
+ShGenerateGroup
+ShGenerateUntilLoop
+ShGenerateWhileLoop
 Show.Current.Revision
 ShowAfterInstallDialogAction
+ShowAllInSolutionExplorer
+ShowAllInUnityExplorer
 ShowAnnotateOperationsPopupGroup
 ShowAppliedStylesAction
 ShowArchitectureDiagramAction
 ShowArchitectureDiagramFromSolutionExplorerAction
 ShowAtRootLevelAction
 ShowBlankDiffWindow
-ShowBookmarks                                      <C-À> <C-K> <C-K>
+ShowBookmarks                                      <C-À>
 ShowColorPicker
 ShowCompilerGeneratedMembersAction
 ShowContent                                        <A-Down>
 ShowDebuggerEventsOutputToggleAction
-ShowErrorDescription                               <A-T>
+ShowErrorDescription
 ShowExecutionPoint                                 <A-j>
 ShowExperiments
 ShowFilePath
@@ -2391,9 +3071,10 @@ ShowJsbtTasks
 ShowLayersDialog
 ShowLiveRunConfigurations
 ShowLog
+ShowMembersInNavigationBar
 ShowModulesAction
 ShowMsBuildConnectionDiagnostic
-ShowNavBar                                         <C-F2>
+ShowNavBar                                         <A-Home>
 ShowNpmScripts
 ShowParameterHintsSettings
 ShowPopupMenu                                      <S-F10> <ȍ>
@@ -2403,117 +3084,97 @@ ShowReformatFileDialog                             <A-C-S-L>
 ShowRegistry
 ShowSearchHistory                                  <A-Down>
 ShowSettings                                       <A-C-S>
-ShowSettingsAndFindUsages                          <A-C-S-F12> <A-S-F7>
+ShowSettingsAndFindUsages                          <A-S-F7>
 ShowSettingsWithAddedPattern
 ShowSidePanelAction
+ShowSolutionConfigurationOnToolbarAction
 ShowSolutionPropertiesAction
 ShowSQLLog
 ShowTips
+ShowTypeBookmarks
 ShowTypeVariables
 ShowUmlDiagram                                     <A-C-S-U>
 ShowUmlDiagramPopup                                <A-C-U>
-ShowUsages                                         <A-S-F12>
+ShowUnityLogInRiderAction
+ShowUnitySettingsInRider
+ShowUsages                                         <A-C-F7>
 ShowWholeProjectMicroservicesDiagram
-SilentCodeCleanup                                  <C-E> <C-E> <A-C-S-F>
+SilentCodeCleanup                                  <A-C-S-F>
 SliceBackward
 SliceForward
-SmartSelect                                        <A-S-=> <A-C-Right> <C-W>
+smart.update
+SmartSelect
 SmartStepInto                                      <S-F7>
-SmartTypeCompletion                                <A-C- > <C-S- >
-SmartUnSelect                                      <A-S--> <A-C-Left> <C-S-W>
+SmartTypeCompletion                                <C-S- >
+SmartUnSelect                                      <C-S-W>
 SmRunTestGroup
+SolutionExplorerEmptyPopupMenu
 SolutionExplorerPopupMenu
+SolutionExplorerPopupMenu.Database
+SolutionExplorerPopupMenu.Edit
 SolutionExplorerPopupMenu.NuGet
 SolutionExplorerPopupMenu.ProjectManagement
 SolutionExplorerPopupMenu.Repl
+SolutionExplorerPopupMenu.Tools
 SolutionExplorerPopupMenuForImports
-SolutionExplorerPopupMenuForImportsFolder
 SolutionExplorerPopupMenuForReference
 SolutionExplorerPopupMenuForReferenceFolder
+SolutionExplorerPopupMenuForSourceGenerators
 SolutionExplorerPopupMenuForWebReference
+SolutionFilterActions
+SolutionViewActiveConfigurationAndPlatform
+SolutionViewAddGroup
+SolutionViewAddGroup.ContainersSection
+SolutionViewAddGroup.PrimarySection
+SolutionViewAddGroup.SolutionSection
+SolutionViewAddGroup.SpecialSection
+SolutionViewAddGroup.TechnologySection
+SolutionViewContextMenu
+space.actions.MainToolbarActionGroup
+space.review.changes.popup
+space.review.changes.toolbar
+space.review.commits.popup
+Space.Review.CreateDiffComment                     <C-S-X>
+space.review.diff.settings.discussions.visibility
+Space.Review.MarkChangesRead
+Space.Review.MarkChangesUnread
+SpaceGroup
+SpaceVcsHistoryContextMenu
+SpaceVcsHistoryToolbar
+SpaceVcsLogContextMenu
 SplitHorizontally
 SplitVertically
-Spy-js.AddLabel
-Spy-js.CaptureOnlyEvent
-Spy-js.CaptureOnlyFile
-Spy-js.CaptureOnlyStackFile
-Spy-js.CloseDocument
-Spy-js.CloseTraceFiles
-Spy-js.Context.Tree
-Spy-js.Event.Tree
-Spy-js.FileDependencyGraph.LocateEvent
-Spy-js.FileDependencyGraph.SearchFunction
-Spy-js.FileDependencyGraph.Tree
-Spy-js.FindNextFunctionNextCallFromStack
-Spy-js.FindNextFunctionPreviousCallFromStack
-Spy-js.FindPrevFunctionNextCallFromStack
-Spy-js.FindPreviousFunctionPreviousCallFromStack
-Spy-js.FindThisFunctionNextCallFromStack
-Spy-js.FindThisFunctionPreviousCallFromStack
-Spy-js.GoToFirstFoundOccurence
-Spy-js.GoToLastFoundOccurence
-Spy-js.GoToNextFoundOccurence
-Spy-js.GoToPreviousFoundOccurence
-Spy-js.JumpToCaller
-Spy-js.JumpToMappedTrace
-Spy-js.JumpToPackageFile
-Spy-js.JumpToSource
-Spy-js.JumpToTrace
-Spy-js.MuteEvent
-Spy-js.MuteFile
-Spy-js.MuteNodeModuleAction
-Spy-js.MuteNodeModules
-Spy-js.MuteStackFile
-Spy-js.RefreshDocument
-Spy-js.RemoveAndCloseTraceFiles
-Spy-js.RemoveChildren
-Spy-js.RemoveNode
-Spy-js.SearchFunction
-Spy-js.SearchFunctionFromStack
-Spy-js.ShowAppDependencyGraph
-Spy-js.ShowEventDependencyGraph
-Spy-js.Stack.Toolbar
-Spy-js.Stack.Tree
-Spy-js.Stack.Tree.Navigate
-Spy-js.Stack.Tree.Navigate.Next
-Spy-js.Stack.Tree.Navigate.Previous
-Spy-js.Stack.Tree.Navigate.This
 sql.ChangeDialect
 sql.ChangeDialect.toolbar
 Sql.EditParameter                                  <F4>
-sql.ExtractFunctionAction                          <C-R> <C-R> <A-C-M>
+sql.ExtractFunctionAction                          <A-C-M>
 sql.ExtractNamedQueryAction
 sql.IntroduceAliasAction
 sql.SelectCurrentStatement
 sql.SelectInDatabaseView                           <A-S-B>
 SqlGenerateGroup
+SqlProjects.ProblemsView.ShowErrors
+SqlProjects.ProblemsView.ShowInfo
+SqlProjects.ProblemsView.ShowWarnings
+SqlProjProblemsViewSidebarActions
+SqlProjProblemsViewVisibilityActions
 StandardMacroActions
 start.stop.timer
 Start.Use.Vcs
+StartDotnetSelfProfiling
+StartProfileGroup
 StartStopMacroRecording
-StateWidgetAction
-StateWidgetActiveProcessesPillAction
-StateWidgetAdditionalActions
-StateWidgetBarGroup
-StateWidgetDebuggerAdditionalActions
-StateWidgetDebugMoreActionGroupName
-StateWidgetDebugMoreActionSubGroupName
-StateWidgetMoreActionGroup
-StateWidgetPauseAction
-StateWidgetPillActionGroup
-StateWidgetPillBarAction
-StateWidgetProcessesActionGroup
-StateWidgetRerunAction
-StateWidgetResumeAction
-StateWidgetRunConfigurationsAction
-StateWidgetStop
+StartUnityAction
+StartYourkitProfiler
+StatusTextModeAction
 StepInto                                           <F11>
 StepOut                                            <S-F11>
 StepOver                                           <F10>
 Stop                                               <S-F5>
 StopBackgroundProcesses                            <C-S-F2>
+StopForwardingAction
 StopOnException
-StoreDefaultLayout
+StopWithDropDown
 StretchSplitToBottom
 StretchSplitToLeft
 StretchSplitToRight
@@ -2522,6 +3183,8 @@ StructuralNavigationBackward
 StructuralNavigationForward
 StructureViewPopupMenu
 Stylelint.Fix
+SubsystemsTableCtxMenu
+SubsystemsTreeCtxMenu
 Subversion.BrowseSVNRepository
 Subversion.CleanupProject
 Subversion.Clenaup
@@ -2546,12 +3209,16 @@ SubversionUpdateActionGroup
 SuppressFixes
 SurroundWith
 SurroundWithEmmet
-SurroundWithLiveTemplate                           <C-E> <C-E> <A-C-J>
-Svn.RefreshWorkingCopies                           <A-C-R>
+SurroundWithLiveTemplate                           <A-C-J>
+Svn.RefreshWorkingCopies
 Svn.Show.Working.Copies
 Svn.WorkingCopiesView.Toolbar
 SwapSidesInDiffWindow
 SwapThreeWayColorModeInDiffWindow
+SwDynamicSwitchPreviewProviderAction
+SwEditorAutoScrollPreviewToggleAction
+SwEditorHoverActions
+SwEditorReloadPageAction
 SwGenerateJsonSelfContainedSpecificationAction
 SwGenerateYamlSelfContainedSpecificationAction
 SwitchBackendRuntime
@@ -2563,12 +3230,14 @@ SwitcherAndRecentFiles
 SwitcherBackward
 SwitcherForward
 SwitcherIterateItems                               <C-E>
-SwitcherNextProblem                                <A-Pagedown> <F12>
-SwitcherPreviousProblem                            <A-Pageup> <S-F12>
+SwitcherNextProblem                                <F12>
+SwitcherPreviousProblem                            <S-F12>
 SwitcherRecentEditedChangedToggleCheckBox          <C-E>
 SwitchFileBasedIndexStorageAction
-SwitchHeaderSource                                 <A-O> <C-K> <C-K>
+SwitchHeaderSource                                 <A-O>
+SwitchIdeScaleAction
 SwitchProfilingConfiguration
+SwitchUIModeAction
 Synchronize                                        <A-C-Y>
 SynchronizeCurrentFile
 SyncSettings
@@ -2588,11 +3257,12 @@ Table-selectPreviousColumn                         <Left>
 Table-selectPreviousColumnExtendSelection          <S-Left> <A-S-Left>
 Table-selectPreviousRow                            <Up>
 Table-selectPreviousRowExtendSelection             <S-Up>
+Table-startEditing                                 <F2>
 TableActions
-TableResult.GrowSelection                          <A-S-=> <A-C-Right> <C-W>
+TableResult.GrowSelection
 TableResult.SelectAllOccurrences                   <A-S-;>
 TableResult.SelectNextOccurrence                   <A-S-.>
-TableResult.ShrinkSelection                        <A-S--> <A-C-Left> <C-S-W>
+TableResult.ShrinkSelection                        <C-S-W>
 TableResult.UnselectPreviousOccurrence             <A-S-,>
 TabList
 TabsActions
@@ -2615,34 +3285,47 @@ TemplateParametersNavigation
 TemplateProjectProperties
 TemplateProjectPropertiesAction
 Terminal.ClearBuffer                               <C-L>
+Terminal.CloseTab                                  <C-F4> <C-W>
 Terminal.CopySelectedText                          <C-C> <C-Ins>
+Terminal.Find                                      <C-F> <A-F3>
 Terminal.MoveToEditor
 Terminal.MoveToolWindowTabLeft
 Terminal.MoveToolWindowTabRight
-Terminal.NextSplitter                              <A-L>
+Terminal.NewTab                                    <C-S-T>
+Terminal.NextSplitter
 Terminal.OpenInTerminal
 Terminal.Paste                                     <C-V> <S-Ins>
-Terminal.PrevSplitter                              <A-H>
+Terminal.PrevSplitter
 Terminal.RenameSession
 Terminal.SelectAll
+Terminal.Share
 Terminal.SmartCommandExecution.Debug               <C-S-CR>
 Terminal.SmartCommandExecution.Run                 <C-CR>
+Terminal.SplitHorizontally
+Terminal.SplitVertically
+Terminal.StopSharing
 Terminal.SwitchFocusToEditor                       <Esc>
 TerminalDecreaseFontSize
 TerminalIncreaseFontSize
+TerminalNewPredefinedSession
 TerminalResetFontSize
-TerminalSplitActionBase$Horizontal
-TerminalSplitActionBase$Vertical
+TerminalShareGroup
+TerminalToolwindowActionGroup
 TestTreePopupMenu
 TextComponent.ClearAction
+TextEditorWithPreview.SplitGroup
+TextEditorWithPreview.SplitHorizontally
+TextEditorWithPreview.SplitVertically
+TextSearchAction                                   <A-C-S-E>
+TextViewerEditorPopupMenu
 TimeLapseView
 TodoMainGroup
 TodoViewGroupByFlattenPackage                      <A-C-C>
 TodoViewGroupByGroup
 TodoViewGroupByShowModules                         <A-C-M>
-TodoViewGroupByShowPackages                        <A-C-P>
+TodoViewGroupByShowPackages
 TodoViewGroupByShowProjects
-ToggleBookmark                                     <C-K> <C-K>
+ToggleBookmark
 ToggleBookmark0                                    <C-S-0>
 ToggleBookmark1                                    <C-S-1>
 ToggleBookmark2                                    <C-S-2>
@@ -2676,12 +3359,13 @@ ToggleBookmarkT
 ToggleBookmarkU
 ToggleBookmarkV
 ToggleBookmarkW
-ToggleBookmarkWithMnemonic                         <C-F11>
+ToggleBookmarkWithMnemonic
 ToggleBookmarkX
 ToggleBookmarkY
 ToggleBookmarkZ
 ToggleBreakpointEnabled                            <C-F9>
 ToggleChromeTracingAction
+ToggleCompactMode
 ToggleCompletionHintsAction
 ToggleContentUiTypeMode
 ToggleDistractionFreeMode
@@ -2694,6 +3378,7 @@ ToggleHexOutput
 ToggleInlayHintsGloballyAction
 ToggleInlineHintsAction
 ToggleLineBreakpoint                               <F9>
+ToggleMinimap
 ToggleNodeCoreCodingAssistanceAction
 TogglePinnedMode
 TogglePopupHints
@@ -2728,6 +3413,7 @@ TouchBarDefault_shift
 TouchBarDefaultOptionalGroup
 TouchBarEditorSearch
 TouchBarEditorSearch_ctrl
+TrafficCallTreeCtxMenu
 Tree-scrollDownChangeSelection                     <Pagedown>
 Tree-scrollDownExtendSelection                     <S-Pagedown>
 Tree-scrollUpChangeSelection                       <Pageup>
@@ -2747,8 +3433,13 @@ Tree-selectParentNoCollapse
 Tree-selectPrevious                                <Up>
 Tree-selectPreviousExtendSelection                 <S-Up>
 Tree-selectPreviousSibling
+Tree-startEditing                                  <F2>
 TreeActions
 TreeNodeExclusion
+TriggerPauseInUnityEditor
+TriggerPlayInUnity
+TriggerRefreshInUnity
+TriggerStepInUnityEditor
 TsLintFileFixAction
 TslintImportCodeStyleAction
 TurnOffF10WinShortcut                              <F10>
@@ -2757,15 +3448,18 @@ TW.MoveToGroup
 TW.ViewModeGroup
 TWViewModes
 TWViewModesLegacy
-TypeHierarchy                                      <C-E> <C-E> <A-C-H>
+TypeHierarchy                                      <A-C-H>
 TypeHierarchy.Class
 TypeHierarchy.Subtypes
 TypeHierarchy.Supertypes
-TypeHierarchyBase.BaseOnThisType                   <C-E> <C-E> <A-C-H>
+TypeHierarchyBase.BaseOnThisType                   <A-C-H>
 TypeHierarchyPopupMenu
+TypesAndMethodsStacktraceCtxMenu
+TypesAndMethodsTableCtxMenu
 TypeScript.Enable.Service
 TypeScript.Include.Sources
 TypeScript.Restart.Service
+TypeScriptAddEnumTextInlayAction
 TypeScriptExtractTypeAlias
 UiDebugger
 UIToggleActions
@@ -2774,11 +3468,12 @@ UML.DefaultGraphPopup
 UML.EditorGroup
 Uml.ExpandNodes                                    <E>
 UML.Find                                           <C-F> <A-F3>
-UML.Group
 UML.Group.Simple
-Uml.NewElement                                     <C-N> <A-Ins>
+Uml.NewElement                                     <A-Ins>
 Uml.NewGroup
 Uml.NodeCellEditorPopup
+Uml.NodeCellEditorPopup.GoTo
+Uml.NodeCellEditorPopup.QuickActions
 Uml.NodeIntentions                                 <A-CR> <C-.> <A-S-F10>
 Uml.PsiElement.Actions
 Uml.Refactoring
@@ -2786,10 +3481,27 @@ UML.RiderDefaultGraphPopup
 UML.SaveDiagram
 UML.ShowChanges                                    <A-C-S-D>
 Uml.ShowDiff                                       <C-S-D>
-UML.ShowStructure                                  <A-\>
+UML.ShowStructure                                  <C-F12>
 UML.SourceActionsGroup
+Uml.SourceActionsGroup.GoTo
+Uml.SourceActionsGroup.QuickActions
+UnattendedHostDropdownGroup
+UnattendedHostImportantActionsGroup
 UndockMode
-Unscramble                                         <C-E> <C-E> <C-S-E>
+UnityDllShowImportantAction
+UnityProtocolStatusAction
+UnityShowImportantAction
+UnityTestLauncher
+UnityToolbarActions
+UnityToolbarLabel
+UnrealInteractionToolbar
+UnrealLink.CancelRiderLinkInstallAction
+UnrealLink.CopyEditorPluginToEngineAction
+UnrealLink.CopyEditorPluginToGameAction
+UnrealLink.EnableAutoUpdatePlugin
+UnrealLink.InstallEditorPluginToEngineAction
+UnrealLink.InstallEditorPluginToGameAction
+Unscramble                                         <C-S-E>
 UnselectPreviousOccurrence                         <A-S-,>
 Unsplit
 UnsplitAll
@@ -2801,7 +3513,12 @@ UpdateActionGroup
 UpdateFiles
 UpdateRunningApplication                           <C-F10>
 UpdateWebReferenceAction
-UsageGrouping.Directory                            <A-C-P>
+UsageFiltering.GeneratedCode
+UsageFiltering.Imports                             <C-I>
+UsageFiltering.ReadAccess                          <C-R>
+UsageFiltering.WriteAccess
+UsageFilteringActionGroup
+UsageGrouping.Directory
 UsageGrouping.DirectoryStructure                   <A-C-D>
 UsageGrouping.FileStructure                        <A-C-F>
 UsageGrouping.FlattenModules                       <A-C-O>
@@ -2824,13 +3541,19 @@ Vcs.Browse
 Vcs.CheckinProjectMenu
 Vcs.CheckinProjectToolbar
 Vcs.CherryPick
+Vcs.CherryPick.KeymapGroup
 Vcs.Commit.PrimaryCommitActions
 Vcs.CommitExecutor.Actions
+Vcs.CopyCommitSubjectAction
 Vcs.CopyRevisionNumberAction                       <A-C-S-C>
+Vcs.Diff.Commit.KeymapGroup
+Vcs.Diff.EditorTabs.Group
 Vcs.Diff.ExcludeChangedLinesFromCommit
 Vcs.Diff.IncludeOnlyChangedLinesIntoCommit
+Vcs.Diff.KeymapGroup
 Vcs.Diff.ShowDiffInEditorTab
 Vcs.Diff.ShowDiffInNewWindow
+Vcs.Diff.ToggleDiffAligningMode
 Vcs.EditSource                                     <F4>
 Vcs.FileHistory.ContextMenu
 Vcs.FileHistory.PresentationSettings
@@ -2843,6 +3566,7 @@ Vcs.KeymapGroup
 Vcs.Log.AlignLabels
 Vcs.Log.AnnotateRevisionAction
 Vcs.Log.ChangesBrowser.Popup
+Vcs.Log.ChangesBrowser.PresentationSettings
 Vcs.Log.ChangesBrowser.Toolbar
 Vcs.Log.CollapseAll
 Vcs.Log.CompactReferencesView
@@ -2852,7 +3576,6 @@ Vcs.Log.Diff.Preview.Location
 Vcs.Log.EnableFilterByRegexAction
 Vcs.Log.ExpandAll
 Vcs.Log.FocusTextFilter
-Vcs.Log.GetVersion
 Vcs.Log.GoToChild                                  <Left>
 Vcs.Log.GoToParent                                 <Right>
 Vcs.Log.GoToRef                                    <C-F> <A-F3>
@@ -2866,7 +3589,7 @@ Vcs.Log.OpenAnotherTab
 Vcs.Log.OpenRepositoryVersion
 Vcs.Log.PreferCommitDate
 Vcs.Log.PresentationSettings
-Vcs.Log.Refresh                                    <A-C-R>
+Vcs.Log.Refresh
 Vcs.Log.ResumeIndexing
 Vcs.Log.ShowAllAffected                            <A-S-A>
 Vcs.Log.ShowChangesFromParents
@@ -2877,7 +3600,7 @@ Vcs.Log.ShowOnlyAffectedChanges
 Vcs.Log.ShowOtherBranches
 Vcs.Log.ShowRootsColumnAction
 Vcs.Log.ShowTagNames
-Vcs.Log.ShowTooltip                                <C-K> <C-K> <C-S-F1> <C-Q>
+Vcs.Log.ShowTooltip                                <C-Q>
 Vcs.Log.TextFilterSettings
 Vcs.Log.ToggleColumns
 Vcs.Log.Toolbar
@@ -2897,31 +3620,44 @@ Vcs.Push                                           <C-S-K>
 Vcs.Push.Actions
 Vcs.Push.Force
 Vcs.Push.Simple
-Vcs.QuickListPopupAction                           <A-C-Q>
-Vcs.ReformatCommitMessage                          <A-C-CR> <C-K> <C-K> <C-K> <C-K>
-Vcs.RefreshFileHistory                             <A-C-R>
+Vcs.QuickListPopupAction                           <A-À>
+Vcs.ReformatCommitMessage                          <A-C-L> <A-S-F>
+Vcs.RefreshFileHistory
 Vcs.RepositoryChangesBrowserMenu
 Vcs.RepositoryChangesBrowserToolbar
 Vcs.RevertSelectedChanges
 Vcs.RollbackChangedLines                           <A-C-Z>
 Vcs.RunCommitChecks
+Vcs.SavedPatches.ChangesBrowser.ContextMenu
+Vcs.SavedPatches.ContextMenu
+Vcs.Shelf.Apply
+Vcs.Shelf.ChangesBrowser.ContextMenu
+Vcs.Shelf.Drop                                     <Del>
+Vcs.Shelf.Operations.ContextMenu
+Vcs.Shelf.Pop
+Vcs.Shelf.UnshelveChanges
+Vcs.Shelf.UnshelveChangesAndRemove
 Vcs.Show.Local.Changes
 Vcs.Show.Log
 Vcs.Show.Shelf
 Vcs.Show.Toolwindow.Tab
-Vcs.ShowBranches
+Vcs.ShowDiffChangedLines
 Vcs.ShowDiffWithLocal
 Vcs.ShowDiffWithLocal.Before
 Vcs.ShowHistoryForBlock
 Vcs.ShowHistoryForRevision
 Vcs.ShowMessageHistory                             <C-H>
-Vcs.ShowMoreActions
 Vcs.ShowTabbedFileHistory
 Vcs.Specific
 Vcs.ToggleAmendCommitMode                          <A-M>
+Vcs.Toolbar.ShowMoreActions
+Vcs.ToolbarWidget.CreateRepository
+Vcs.ToolbarWidget.ShareProject
+Vcs.ToolWindow.CreateRepository
 Vcs.UmlDiff
 Vcs.UpdateProject                                  <A-C-W>
 Vcs.VcsClone
+VcsActions.KeymapGroup
 VcsFileGroupPopup
 VcsGeneral.KeymapGroup
 VcsGlobalGroup
@@ -2935,15 +3671,15 @@ VcsHistoryInternalGroup.Toolbar
 VcsNavBarToolbarActions
 VcsSelectionHistoryDialog.Popup
 VcsShowCurrentChangeMarker
-VcsShowNextChangeMarker                            <A-C-S-N>
-VcsShowPrevChangeMarker                            <A-C-S-P>
+VcsShowNextChangeMarker
+VcsShowPrevChangeMarker
 VcsToolbarActions
 VcsToolbarLabelAction
 VcsTouchBarGroup
 VersionControlsGroup
 ViewAppearanceGroup
 ViewArchivesAction
-ViewBreakpoints                                    <A-C-B>
+ViewBreakpoints                                    <C-S-F8>
 ViewImportPopups
 ViewInAssemblyExplorer
 ViewInplaceComments
@@ -2962,7 +3698,6 @@ ViewStatusBar
 ViewStatusBarWidgetsGroup
 ViewToolBar
 ViewToolbarActionsGroup
-ViewToolbarNewGroup
 ViewToolButtons
 VimActions
 VimFindActionIdAction
@@ -2970,6 +3705,7 @@ VimPluginToggle
 VimShortcutKeyAction
 VisualizeSourceMap
 VueExtractComponentAction
+WD.RefreshCurrentRemoteFileAction
 WD.UploadCurrentRemoteFileAction                   <A-S-Q>
 WebDeployment.BrowseServers
 WebDeployment.Configuration
@@ -2985,6 +3721,7 @@ WelcomeScreen.Configure.RestoreDefault
 WelcomeScreen.CopyProjectPath                      <C-S-C>
 WelcomeScreen.Documentation
 WelcomeScreen.EditGroup
+WelcomeScreen.KeymapGroup
 WelcomeScreen.LearnIdeHelp
 WelcomeScreen.ManageLicense
 WelcomeScreen.MoveToGroup
@@ -3016,15 +3753,19 @@ XamarinAddXcAssetsGroup
 XamarinArchiveGroup
 XamarinIOSSessionConnection
 XamarinXcAssetItemPopupMenu
+XamarinXcAssetItemPopupMenu.Edit
 XamarinXcAssetsPopupMenu
+XamarinXcAssetsPopupMenu.Edit
 xaml.splitEditor.editorActions.ChangeEditorOrientationAction
 xaml.splitEditor.editorActions.EditorAndPreviewAction
 xaml.splitEditor.editorActions.EditorOnlyAction
 xaml.splitEditor.editorActions.PreviewOnlyAction
 xaml.splitEditor.editorActions.SwapPreviewAndTextEditor
 XDebugger.Actions
+XDebugger.Attach.Dialog.Settings
+XDebugger.Attach.Dialog.ShowOnlyMyProcessesToggleAction
 XDebugger.AttachGroup
-XDebugger.AttachToProcess                          <A-C-P>
+XDebugger.AttachToProcess                          <A-C-F5>
 XDebugger.CompareValueWithClipboard
 XDebugger.CopyName
 XDebugger.CopyValue                                <C-C> <C-Ins>
@@ -3034,6 +3775,7 @@ XDebugger.Evaluate.Code.Fragment.Editor.Popup
 XDebugger.Evaluation.Dialog.Tree.Popup
 XDebugger.Frames.TopToolbar
 XDebugger.Frames.Tree.Popup
+XDebugger.Hover.Breakpoint.Context.Menu
 XDebugger.Inline
 XDebugger.Inspect
 XDebugger.Inspect.Tree.Popup
@@ -3049,8 +3791,10 @@ XDebugger.RemoveAllWatches
 XDebugger.RemoveWatch                              <Del>
 XDebugger.Settings
 XDebugger.SetValue                                 <F2>
+XDebugger.Show.Breakpoints.Over.Line.Numbers
 XDebugger.SwitchWatchesInVariables
 XDebugger.Threads.Tree.Popup
+XDebugger.ToggleEvaluateExpressionField
 XDebugger.ToggleSortValues
 XDebugger.ToolWindow.LeftToolbar
 XDebugger.ToolWindow.TopToolbar
@@ -3075,4 +3819,8 @@ XPathView.EditorPopup
 XPathView.MainMenu.Search
 XPathView.XSLT.Associations
 XSD2Document
+YourKitGroup
+YourKitProfileGroup
 ZoomCurrentWindow
+ZoomInIdeAction
+ZoomOutIdeAction

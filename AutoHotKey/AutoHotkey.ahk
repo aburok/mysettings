@@ -84,7 +84,7 @@ CapsLock::Esc
 
 WinActivateOrOpen(winExe) {
     window := "ahk_exe " . winExe
-    MsgBox( window)
+    ; MsgBox( window)
     if WinExist(window){
         WinActivate ; Use the window found by WinExist.
     }
@@ -150,3 +150,38 @@ __help := __help . "`n LALT + M `t -> APP MENU"
 +WheelDown:: WheelRight
 
 +WheelUp:: WheelLeft
+
+KeyCombination(ExcludeKeys:="")
+{ ;All pressed keys and buttons will be listed
+	ExcludeKeys .= "{Shift}{Control}{Alt}{WheelUp}{WheelDown}"
+    KeyCombination := "Pressed keys"
+	Loop 0xFF
+	{
+		IF !GetKeyState(Key:=Format("VK{:02X}",0x100-A_Index))
+			Continue
+		If !InStr(ExcludeKeys,ey:="{" GetKeyName(Key) "}")
+			KeyCombination .= RegexReplace(Key,"Numpad(\D+)","$1")
+	}
+	Return KeyCombination
+}
+
+; F1::{
+;     MsgBox(KeyCombination())
+;     ;SetTimer, "{F1 Up}", (F1:=!F1) ? 100: 0
+;     SetTimer( SendF1Up, 100 )
+; }
+; SendF1Up(){
+;     SendInput("{F1 Up}")
+; }
+; F1 Up::{
+;     ToolTip KeyCombination(), 200, 300
+; }
+
+F2::{
+Loop 0xFF{
+    Key:=Format("VK{:X}",A_Index)
+	IF GetKeyState(Key){
+		SendInput( "{" Key " up}")
+    }
+}
+}

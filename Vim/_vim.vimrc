@@ -24,9 +24,6 @@ set shiftwidth=4
 set softtabstop=4
 set expandtab
 
-" colorscheme desert
-
-
 " CTRL + Space for autocomplete/suggestions
 inoremap <C-Space> <C-N>
 
@@ -40,17 +37,6 @@ xnoremap <C-A> <C-C>ggVG
 
 nnoremap zj :join<CR>
 
-" Tabs binding
-" CTRL-Tab is Next window
-noremap <C-Tab> :tabnext<CR>
-nnoremap <Tab> gt
-noremap <C-S-Tab> :tabprevious<CR>
-nnoremap <S-Tab> gT
-
-noremap <C-N> :tabnew<CR>
-noremap <C-T> :tabnew<CR>
-noremap <C-S-W> :tabclose<CR>
-
 " go to last used tab
 " store last used tab number in global variable "
 let g:lasttab = 1
@@ -59,19 +45,10 @@ nmap gl :exe "tabn ".g:lasttab<CR>
 " on event TabLeave assing tab page number to lasttab"
 autocmd TabLeave * let g:lasttab=tabpagenr()
 
-" nnoremap p i<C-R>0<Esc> - DELETED - to much confusion with default behavior
 
-""""""""""""""""""""""""""""""""""""""""
-"  Yank File Stuff
-""""""""""""""""""""""""""""""""""""""""
-" Directory relative path to the PWD (e.g. Vim\_vim.vimrc)
-nnoremap <leader>yr :let @+ = expand("%")<CR>
-" Directory absolute path (e.g. C:\mysettings\Vim)
-nnoremap <leader>yp :let @+ = expand("%:p:h")<CR>
-" File absolute path (e.g. C:\mysettings\Vim\_vim.vimrc)
-nnoremap <leader>yf :let @+ = expand("%:p")<CR>
-" File absolute path (e.g. _vim.vimrc)
-nnoremap <leader>yn :let @+ = expand("%:t")<CR>
+
+"- DELETED - to much confusion with default behavior
+" nnoremap p i<C-R>0<Esc> 
 
 " Close window"
 "============="
@@ -96,20 +73,6 @@ nmap <F9> :source ~\\vim_session <CR>        " Quick load session
 " Find / Search for word currently selected
 vnoremap <C-F> "fy:!findstr /s /i /c:<C-R>f ./*.*<CR>
 
-" FORMAT document
-nnoremap <C-F> gg=G<C-O><C-O>zz
-nnoremap <leader>kd gg=G<C-O><C-O>zz
-
-" auto formatting
-" nnoremap <leader>kd gg=G<C-O><C-O>
-"
-" Those lines need to be commented when you try to do BundleUpdate
-" Other wise it will throw the vundle_last_status error
-" https://github.com/VundleVim/Vundle.vim/wiki/Vundle-for-Windows
-"set shell=powershell
-"set shellcmdflag=-command
-
-
 " REFRESH / RELOAD FILE
 noremap <F5> :e!<CR>G
 noremap <C-R> :e!<CR>G
@@ -131,5 +94,12 @@ syntax on
 
 " Loading color scheme using concrete file path
 " setting it via colorscheme gruvbox will not work (2023-10)
-source /mysettings/Vim/colors/gruvbox.vim
+if filereadable("/mysettings/Vim/colors/gruvbox.vim")
+    source /mysettings/Vim/colors/gruvbox.vim
+endif
+
+if filereadable("C:/mysettings/Vim/colors/gruvbox.vim")
+    source C:/mysettings/Vim/colors/gruvbox.vim
+endif
+" NO NEED TO CALL :colorscheme gruvobx - Loading a file is enough
 " colorscheme gruvbox

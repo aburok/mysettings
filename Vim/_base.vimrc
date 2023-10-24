@@ -48,10 +48,24 @@ set autochdir
 
 " + http://robots.thoughtbot.com/vim-splits-move-faster-and-more-naturally
 " MOVE BETWEEN SPLITS
-nnoremap <C-h> <C-W>h
-nnoremap <C-j> <C-W>j
-nnoremap <C-k> <C-W>k
-nnoremap <C-l> <C-W>l
+map <C-h> <C-w>h
+map <C-j> <C-w>j
+map <C-k> <C-w>k
+map <C-l> <C-w>l
+
+" RESIZE SPLITS
+map <S-left> 5<C-w><
+map <S-up> 5<C-w>+
+map <S-down> 5<C-w>-
+map <S-right> 5<C-w>>
+
+" Tabs binding
+" J - PREVIOUS  TAB 
+" K - NEXT TAB
+" SAME AS IN CHROMIUM BROWSER EXTENSION
+nmap J :tabprevious<CR>
+nmap K :tabnext<CR>
+
 
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
@@ -116,4 +130,20 @@ vnoremap <leader>d "dy'>o<Esc>p
 
 nmap H :tabprevious<CR>
 nmap L :tabnext<CR>
+
+""""""""""""""""""""""""""""""""""""""""
+"  Yank File Stuff
+""""""""""""""""""""""""""""""""""""""""
+" Directory relative path to the PWD (e.g. Vim\_vim.vimrc)
+nnoremap <leader>yr :let @+ = expand("%")<CR>
+" Directory absolute path (e.g. C:\mysettings\Vim)
+nnoremap <leader>yp :let @+ = expand("%:p:h")<CR>
+" File absolute path (e.g. C:\mysettings\Vim\_vim.vimrc)
+nnoremap <leader>yf :let @+ = expand("%:p")<CR>
+" File absolute path (e.g. _vim.vimrc)
+nnoremap <leader>yn :let @+ = expand("%:t")<CR>
+
+""""""""""""""""""""""""""""
+" FORMAT document
+nnoremap <C-A-f> gg=G<C-O><C-O>zz
 

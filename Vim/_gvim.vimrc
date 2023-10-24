@@ -168,3 +168,7 @@ endif
 if isdirectory("C:/Projects")
   cd C:/Projects
 endif
+
+noremap <C-N> :tabnew<CR>
+noremap <C-T> :tabnew<CR>
+" noremap <C-S-W> :tabclose<CR>

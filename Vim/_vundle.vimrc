@@ -14,6 +14,18 @@ call vundle#rc()
 " Bundle 'gmarik/Vundle.vim'
 
 Bundle 'https://github.com/VundleVim/Vundle.vim'
+Bundle 'https://github.com/kshenoy/vim-signature'
+Bundle 'https://github.com/bling/vim-airline'
+Bundle 'https://github.com/tpope/vim-fugitive'
+
+Bundle 'https://github.com/easymotion/vim-easymotion.git'
+Bundle 'https://github.com/vim-scripts/camelcasemotion'
+Bundle 'https://github.com/tpope/vim-surround'
+Bundle 'https://github.com/scrooloose/nerdcommenter'
+Bundle 'vim-scripts/sessionman.vim'
+Bundle 'https://github.com/elzr/vim-json'
+Bundle 'flazz/vim-colorschemes'
+Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 "
 " Kien version of this is not maintained any more.
@@ -30,22 +42,14 @@ Bundle 'https://github.com/VundleVim/Vundle.vim'
 " Bundle 'https://github.com/scrooloose/nerdtree'
 "Bundle 'https://github.com/Xuyuanp/nerdtree-git-plugin'
 
-Bundle 'https://github.com/kshenoy/vim-signature'
 " Bundle 'https://github.com/PProvost/vim-ps1'
-Bundle 'https://github.com/bling/vim-airline'
-
 
 " The following are examples of different formats supported.
 " Keep bundle commands between here and filetype plugin indent on.
 " scripts on GitHub repos
 "Bundle 'tpope/vim-fugitive'
-Bundle 'https://github.com/tpope/vim-fugitive'
-
-Bundle 'https://github.com/easymotion/vim-easymotion.git'
-Bundle 'https://github.com/vim-scripts/camelcasemotion'
 " Bundle 'https://github.com/pangloss/vim-javascript'
 
-Bundle 'https://github.com/tpope/vim-surround'
 "Bundle 'https://github.com/yegappan/mru'
 
 Bundle 'https://github.com/aserebryakov/vim-todo-lists.git'
@@ -54,8 +58,6 @@ Bundle 'https://github.com/xolox/vim-misc'
 " Bundle 'https://github.com/xolox/vim-notes'
 " "Bundle 'https://github.com/lpenz/vimcommander'
 
-Bundle 'vim-scripts/sessionman.vim'
-Bundle 'https://github.com/scrooloose/nerdcommenter'
 
 " "Bundle 'spf13/vim-autoclose'
 " "Bundle 'https://github.com/tpope/vim-sensible'
@@ -112,11 +114,6 @@ Bundle 'preservim/vim-markdown'
 
 "Bundle 'https://github.com/gcmt/taboo.vim'
 
-Bundle 'https://github.com/elzr/vim-json'
-
-Bundle 'flazz/vim-colorschemes'
-
-Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
 " Bundle 'https://github.com/othree/xml.vim'
 " All of your Plugins must be added before the following line

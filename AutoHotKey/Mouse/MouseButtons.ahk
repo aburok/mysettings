@@ -208,11 +208,21 @@ numpad7:: SendInput "^+l" ; Locate in Solution Explorer
 _r := _r . "`n 7 - Locate in Solution `t 6 - Prev Occurence `n"
 
 _r := _r . _ide
+_r := _r . "`n ------------------------- "
+_r := _r . "`n zC - Collapse `t zO - Expand "
+_r := _r . "`n <l>ws - Split Horiz `t <l>wv - Split Vert"
+_r := _r . "`n <l>wu - UnSplit `t <l>wc - Change Split Orientation"
+_r := _r . "`n <l>ww - Move to Opposite Tabs "
+_r := _r . "`n -------------------------- "
+_r := _r . "`n mm - Toggle Bookmark `t '' - Show Bookmarks"
+_r := _r . "`n 'j - Next Bookmark `t 'k - Prev Bookmarks"
+_r := _r . "`n -------------------------- "
+_r := _r . "`n S-j - Next Method `t S-k - Prev Method"
+_r := _r . "`n C-A-j - Next Occurence `t C-A-k - Prev Occurence"
 numpad0:: MsgBox(_r, "Rider Help", "iconi T30")
-
+#/:: MsgBox(_r, "Rider Help", "iconi T30")
 
 ; ^p:: SendInput "^+n" ; Go to File
-
 
 #HotIf
 
