@@ -103,8 +103,8 @@ map <A-K1> <Action>(Resume)
 map <A-`> <Action>(ActivateTerminalToolWindow)
 map <A-S-1> <Action>(ActivateTerminalToolWindow)
 map <A-2> <Action>(ActivateUnitTestsToolWindow)
-map <A-3> <Action>(ActivateNuGetToolWindow)
-map <A-6> <Action>(ActivateBookmarksToolWindow)
+map <A-S-3> <Action>(ActivateNuGetToolWindow)
+map <A-S-2> <Action>(ActivateBookmarksToolWindow)
 
 map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
@@ -290,7 +290,7 @@ nmap <leader><leader>T{char}    <Plug>(easymotion-T) "  mapped to Tn
 
 nmap <leader><leader>w <Plug>(easymotion-w) "
 nmap <leader><leader>W <Plug>(easymotion-W) "
-nmap <leader><leader>b <Plug>(easymotion-B) "
+nmap <leader><leader>b <Plug>(easymotion-b) "
 nmap <leader><leader>B <Plug>(easymotion-B) "
 nmap <leader><leader>e <Plug>(easymotion-e) "
 nmap <leader><leader>E <Plug>(easymotion-E) "

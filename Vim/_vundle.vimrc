@@ -27,6 +27,7 @@ Bundle 'https://github.com/elzr/vim-json'
 Bundle 'flazz/vim-colorschemes'
 Bundle 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 
+Bundle 'preservim/nerdtree'
 "
 " Kien version of this is not maintained any more.
 "Bundle 'https://github.com/kien/ctrlp.vim.git'

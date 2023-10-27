@@ -57,18 +57,18 @@ let g:notes_suffix = '.note'
 " NERDTree {
 " Automatically open NERDTree when entering vim autocmd vimenter * NERDTree
 " close NERDTree if it's only window left
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
-" noremap <C-g> :NERDTreeToggle<CR>
+noremap <C-f> :NERDTreeToggle<CR>
 " nnoremap <leader>vv :NERDTreeToggle<CR>
 " nnoremap <silent> <leader>vf :NERDTreeFind<CR>
-" let NERDTreeShowHidden=1
-" let NERDTreeShowLineNumbers=1
-" let NERDTreeShowBookmarks=1
-" let g:NERDTreeDirArrowExpandable = '▸'
-" let g:NERDTreeDirArrowCollapsible = '▾'
-" let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
-"let g:NERDTreeNodeDelimiter = "\u00a0"
+let NERDTreeShowHidden=1
+let NERDTreeShowLineNumbers=1
+let NERDTreeShowBookmarks=1
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
+let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
+let g:NERDTreeNodeDelimiter = "\u00a0"
 "
 " "autocmd vimenter * if !argc() | NERDTree | endif
 " map :NERDTreeToggle | :silent NERDTreeMirror
@@ -78,8 +78,6 @@ let g:notes_suffix = '.note'
 "
 " autocmd StdinReadPre * let s:std_in=1
 " autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
-" Automatically close a tab if the only remaining window is NerdTree
-" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 
 
 
