@@ -193,3 +193,12 @@ fi
 export INPUTRC="/mysettings/Linux/.inputrc"
 
 export MYVIFMRC="/mysettings/Linux/vifmrc" 
+
+alias drps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}"'
+alias drlazy='/home/dawkor/homebrew/Cellar/lazydocker/0.21.1/bin/lazydocker'
+
+alias ping-web="ping google.com -c 1 -w 5 "
+alias ping-web-ip="ping 1.1.1.1 -c 1 -w 5 "
+alias ping-host="ping 192.168.255.1 -c 1 -w 5 "
+alias ping-vpn="ping 192.168.13.181 -c 1 -w 5 "
+alias ping-all=" ping-host && ping-vpn && ping-web "

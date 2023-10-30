@@ -147,3 +147,6 @@ nnoremap <leader>yn :let @+ = expand("%:t")<CR>
 " FORMAT document
 nnoremap <C-A-f> gg=G<C-O><C-O>zz
 
+" FORMAT 
+nnoremap <C-A-f> gg=G''
+
