@@ -198,10 +198,8 @@ export MYVIFMRC="/mysettings/Linux/vifmrc"
 alias drps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}"'
 alias drlazy='/home/dawkor/homebrew/Cellar/lazydocker/0.21.1/bin/lazydocker'
 
-export DOCKER_HUB_NAME=gringokromka
-alias dbuild='test -f ./dockertag && docker build . -t $(cat ./dockertag) || echo "./dockertag file does not exist"'
-alias dtag='test -f ./dockertag && docker image tag $(cat dockertag) $DOCKER_HUB_NAME/$(cat dockertag) || echo "./dockertag file does not exist" '
-alias dpub='test -f ./dockertag && docker image push $DOCKER_HUB_NAME/$(cat dockertag) ||  echo "./dockertag file does not exist" '
+chmod +x /mysettings/Linux/docker-push.sh
+alias dpub='/mysettings/Linux/docker-push.sh'
 
 
 ## PING

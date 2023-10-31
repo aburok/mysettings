@@ -165,19 +165,7 @@ KeyCombination(ExcludeKeys:="")
 	Return KeyCombination
 }
 
-; F1::{
-;     MsgBox(KeyCombination())
-;     ;SetTimer, "{F1 Up}", (F1:=!F1) ? 100: 0
-;     SetTimer( SendF1Up, 100 )
-; }
-; SendF1Up(){
-;     SendInput("{F1 Up}")
-; }
-; F1 Up::{
-;     ToolTip KeyCombination(), 200, 300
-; }
-
-F2::{
+F7::{
 Loop 0xFF{
     Key:=Format("VK{:X}",A_Index)
 	IF GetKeyState(Key){
