@@ -106,3 +106,7 @@ endif
 
 
 nnoremap <leader>db :! docker build . -t $(cat dockertag)<CR>
+nnoremap <leader>dt :! docker image tag $(cat dockertag) gringokromka/$(cat dockertag)<CR>
+nnoremap <leader>dp :! docker image push gringokromka/$(cat dockertag)<CR>
+
+nnoremap <leader>ka :! kubectl apply -f %<Tab> <CR>
