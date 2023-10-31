@@ -59,12 +59,15 @@ map <S-up> 5<C-w>+
 map <S-down> 5<C-w>-
 map <S-right> 5<C-w>>
 
+" Buffer bindings
+" J - NEXT  BUFFER 
+" K - PREVIOUS BUFFER
+nmap J :bnext<CR>
+nmap K :bprevious<CR>
+
 " Tabs binding
-" J - PREVIOUS  TAB 
-" K - NEXT TAB
-" SAME AS IN CHROMIUM BROWSER EXTENSION
-nmap J :tabprevious<CR>
-nmap K :tabnext<CR>
+nmap H :tabprevious<CR>
+nmap L :tabnext<CR>
 
 
 " CTRL-X and SHIFT-Del are Cut
@@ -128,8 +131,6 @@ vnoremap a "ay
 
 vnoremap <leader>d "dy'>o<Esc>p
 
-nmap H :tabprevious<CR>
-nmap L :tabnext<CR>
 
 """"""""""""""""""""""""""""""""""""""""
 "  Yank File Stuff

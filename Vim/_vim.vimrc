@@ -103,3 +103,6 @@ if filereadable("C:/mysettings/Vim/colors/gruvbox.vim")
 endif
 " NO NEED TO CALL :colorscheme gruvobx - Loading a file is enough
 " colorscheme gruvbox
+
+
+nnoremap <leader>db :! docker build . -t $(cat dockertag)<CR>
