@@ -60,7 +60,7 @@ let g:notes_suffix = '.note'
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
 " Map toggling NERDTree to Ctrl + n
 noremap <C-e> :NERDTreeFocus<CR>
-noremap <C-S-e> :NERDTreeToggle<CR>
+noremap <C-n> :NERDTreeToggle<CR>
 " nnoremap <leader>vv :NERDTreeToggle<CR>
 " nnoremap <silent> <leader>vf :NERDTreeFind<CR>
 let NERDTreeShowHidden=1
