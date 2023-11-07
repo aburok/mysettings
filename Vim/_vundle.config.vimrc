@@ -70,6 +70,8 @@ let g:NERDTreeDirArrowExpandable = '▸'
 let g:NERDTreeDirArrowCollapsible = '▾'
 let g:NERDTreeIgnore=['\~$', '^\.git$', 'vendor', '^\.nuget$', '^\.vs$', '^packages$']
 let g:NERDTreeNodeDelimiter = "\u00a0"
+
+let g:NERDTreeMapMenu='M'
 "
 " "autocmd vimenter * if !argc() | NERDTree | endif
 " map :NERDTreeToggle | :silent NERDTreeMirror

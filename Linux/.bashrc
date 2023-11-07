@@ -211,3 +211,4 @@ alias ping-all=" ping-host && ping-vpn && ping-web "
 
 ## KUBERNETES
 alias k9s='/home/linuxbrew/.linuxbrew/bin/k9s'
+alias helm='/home/linuxbrew/.linuxbrew/bin/helm'
