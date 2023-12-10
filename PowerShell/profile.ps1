@@ -22,7 +22,7 @@ Function Initialize-Config() {
         [string] $postInitFile)
 
     if(!$preInitFile){
-        $preInitFile = "pre_init.psm1"
+        $preInitFile = "pre_init.psm1"n
     }
     $preInitFilePath = [io.path]::combine($path ,$preInitFile)
 
@@ -98,7 +98,8 @@ set-Alias d docker
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias less 'C:\Program Files\Git\usr\bin\less.exe'
 Set-Alias zl "z -ListFiles"
-Set-Alias np 'C:\Program Files\Notepad++\notepad++.exe'
+Set-Alias npp 'C:\Program Files\Notepad++\notepad++.exe'
+Set-Alias edit 'C:\Program Files\Notepad++\notepad++.exe'
 Set-Alias gitext "C:\Program Files\GitExtensions\GitExtensions.exe"
 
 Function Open-Gvim([string]$file) {

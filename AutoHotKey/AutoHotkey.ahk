@@ -70,6 +70,7 @@ CapsLock::Esc
 #+j:: Send "{LWinDown}{Right}{LWinUp}"
 #+k:: Send "{LWinDown}{Right}{LWinUp}"
 #+u:: Send "{LWinDown}{Up}{LWinUp}"
+#z:: Send "{LWinDown}{PrintScreen}{LWinUp}"
 
 ; -----------------------------------------------------
 <!PgUp::Home

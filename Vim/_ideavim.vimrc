@@ -65,7 +65,6 @@ sethandler <C-M> n-v:vim
 sethandler <C-O> i-v:vim
 sethandler <C-Q> i-v:vim
 sethandler <C-p> a:vim
-sethandler <C-v> n-v:vim
 sethandler <C-t> n-v:vim
 sethandler <C-w> n-v:vim
 sethandler <C-S-A> i-v:vim
@@ -110,8 +109,6 @@ map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
 
 map <C-S-e> <Action>(ActivateProjectToolWindow)
-nmap <C-v> "+p
-imap <C-v> <C-r>+
 map <leader>we <Action>(ActivateProjectToolWindow)
 
 nmap ge <Action>(ReSharperGotoNextErrorInSolution)
