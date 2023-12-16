@@ -22,7 +22,7 @@ Function Initialize-Config() {
         [string] $postInitFile)
 
     if(!$preInitFile){
-        $preInitFile = "pre_init.psm1"n
+        $preInitFile = "pre_init.psm1"
     }
     $preInitFilePath = [io.path]::combine($path ,$preInitFile)
 

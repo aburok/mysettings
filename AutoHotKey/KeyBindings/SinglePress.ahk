@@ -34,7 +34,7 @@
 
 <!+a::
 #+a:: {
-    WinActivate("ahk_exe ONENOTE.EXE") 
+    WinActivate("^.*(OneNote for Windows 10)") 
 }
 
 <!+c::
