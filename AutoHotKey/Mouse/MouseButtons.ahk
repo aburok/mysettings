@@ -124,6 +124,8 @@ numpad0:: MsgBox(_cs, "Sketchup in Chrome Help", "iconi T30")
 _c := "Chrome shortcuts `n`n"
 
 !*:: SendInput "^{F5}"
+^p:: SendInput "+^A"
+^+p:: SendInput "+^O"
 _c := _c . " Top 4 - Refresh `n"
 
 _c := _c . " Side `n"
