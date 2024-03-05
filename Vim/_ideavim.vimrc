@@ -57,17 +57,18 @@ sethandler <C-B> i-v:vim
 sethandler <C-D> i-v:vim
 sethandler <C-F> n-v:vim
 sethandler <C-H> n-v:vim
-sethandler <C-I> n-v:vim
+sethandler <C-i> a:vim
 sethandler <C-J> n-v:vim
 sethandler <C-K> n-v:vim
 sethandler <C-L> a:vim
 sethandler <C-M> n-v:vim
-sethandler <C-O> i-v:vim
+sethandler <C-o> a:vim
 sethandler <C-Q> i-v:videvm
 sethandler <C-p> a:vim
 sethandler <C-t> n-v:vim
 sethandler <C-w> n-v:vim
 sethandler <C-S-A> i-v:vim
+sethandler <C-S-d> a:vim
 sethandler <C-S-P> a:vim
 sethandler <C-s-t> i-v:vim
 sethandler <C-s-l> a:vim
@@ -80,31 +81,35 @@ sethandler <A-+> a:vim
 sethandler <A-`> a:vim
 sethandler <A-S-1> a:vim
 sethandler <A-2> a:vim
+sethandler <A-S-2> a:vim
 sethandler <A-3> a:vim
 sethandler <A-6> a:vim
 
 map <C-S-A> <Action>(EditorSelectWord)
 
 """ Mappings --------------------------------
-nmap <leader>d <Action>(Debug)
+nmap <leader>d <Action>(QuickImplementations)
 nmap <leader>rr <Action>(RenameElement)
 nmap <leader>c <Action>(Stop)
 nmap <leader>z <Action>(ToggleDistractionFreeMode)
 
 " map <leader>s <Action>(SelectInProjectView)
-nmap <leader>ga <Action>(Annotate)
+" nmap <leader>ga <Action>(Annotate)
+nmap <leader>ga <Action>(QuickImplementations)
 nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
-nmap <leader>gd <Action>(Compare.SameVersion)
+" nmap <leader>gd <Action>(Compare.SameVersion)
 nmap <leader>gs <Action>(FileStructurePopup)
 nmap <leader>m <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
 map <A-`> <Action>(ActivateTerminalToolWindow)
-map <A-S-1> <Action>(ActivateTerminalToolWindow)
-map <A-2> <Action>(ActivateUnitTestsToolWindow)
+map <A-S-1> <Action>(ActivateBookmarksToolWindow)
+map <A-2> <Action>(Vcs.Show.Log)
+map <A-S-2> <Action>(ActivateUnitTestsToolWindow)
 map <A-S-3> <Action>(ActivateNuGetToolWindow)
-map <A-S-2> <Action>(ActivateBookmarksToolWindow)
+map <A-S-4> <Action>(ActivateTerminalToolWindow)
 
+map <C-S-d> <Action>(QuickTypeDefinition)
 map <S-Space> <Action>(ShowErrorDescription)
 map <C-S-Space> <Action>(ParameterInfo)
 
@@ -248,6 +253,7 @@ vmap <leader>c <Action>(CommentByLineComment)
 vmap <C-/> <Action>(CommentByLineComment)
 nmap <C-/> <Action>(CommentByLineComment)
 
+nmap gl <Action>(GitLab.Open.In.Browser)
 " Tab navigation
 map <C-S-t> <Action>(ReopenClosedTab)
 

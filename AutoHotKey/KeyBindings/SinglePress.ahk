@@ -5,22 +5,15 @@
 ; < - LEFT KEY e.g  <! - LEFT ALT
 ; > - RIGHT KEY e.g  >! - RIGHT ALT
 
-; #!v::
-; #+v::
-;     WinActivate, ^.*( - Microsoft Visual Studio).*$
-; return
-
 ; #+m::
 ;     WinActivate, ^.*(mysettings).*(Visual Studio Code)$
 ; return
 
-; #+f:: {
-;     WinActivate("^(.*)(ffs_gui).*$")
-; }
 
-; #+o::
-;     WinActivate, ahk_exe OUTLOOK.EXE
-; return
+<!+c::
+#+c:: {
+    WinActivate("ahk_exe OUTLOOK.EXE")
+}
 
 <!+e::
 #+e:: {
@@ -29,7 +22,12 @@
 
 <!+w::
 #+w:: {
-    WinActivate("ahk_exe gvim.exe") 
+    WinActivate("^WhatsApp$") 
+}
+
+<!+g::
+#+g:: {
+    WinActivate("ahk_exe GitExtensions.exe") 
 }
 
 <!+a::
@@ -37,8 +35,8 @@
     WinActivate("^.*(OneNote for Windows 10)") 
 }
 
-<!+c::
-#+c:: {
+<!+x::
+#+x:: {
 	WinActivate("^.*(Google Chrome)$") 
 }
 
@@ -46,8 +44,12 @@
 	WinActivate("ahk_exe slack.exe") 
 }
 
-<!+x:: {
+<!+q:: {
 	WinActivate("ahk_exe WindowsTerminal.exe") 
+}
+
+<!+z:: {
+	WinActivate("^YouTube Music") 
 }
 
 ; #!i::
@@ -66,16 +68,26 @@
 	WinActivate("^.*(Notepad\+\+).*$") 
     }
 
-; Powershell / Command line tool
-#+r:: {
+; Rider
+#+r:: 
+<!+r:: {
 	; WinActivate, ^PS::.*$
-    WinActivate("ahk_exe ConEmu64.exe")
+    WinActivate("ahk_exe rider64.exe")
 }
 
 ; #+a::
 ;     WinActivate, ^.*(Microsoft Teams).*$
 ; return
 
-#+x:: {
-   WinActivate("^.*(xmind).*$") 
-}
+; #+x:: {
+;    WinActivate("^.*(xmind).*$") 
+; }
+
+; #!v::
+; #+v::
+;     WinActivate, ^.*( - Microsoft Visual Studio).*$
+; return
+
+; #+f:: {
+;     WinActivate("^(.*)(ffs_gui).*$")
+; }

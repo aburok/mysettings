@@ -84,11 +84,11 @@ nnoremap <leader>y( vi("+y
 " CTRL-V and SHIFT-Insert are Paste
 noremap <S-Insert>		"+gp
 
-cnoremap <C-v>		    <C-R>+
-nnoremap <C-v>		    "+gp
-inoremap <C-v>		    <C-R>+
-cnoremap <S-Insert>		<C-R>+
-inoremap <S-Insert>	    <C-R>+
+" cnoremap <C-v>		    <C-R>+
+" nnoremap <C-v>		    "+gp
+" inoremap <C-v>		    <C-R>+
+" cnoremap <S-Insert>		<C-R>+
+" inoremap <S-Insert>	    <C-R>+
 
 " CTRL-S is Save File
 inoremap <C-S> <Esc>:w!<cr>a
@@ -114,7 +114,6 @@ noremap n nzz
 "Find and Replace Text
 vnoremap <leader>re "hy:%s/<C-R>h//gc<left><left><left>
 nnoremap <leader>rw viw"hy:%s/<C-R>h/<C-R>h/gc
-nnoremap <Leader>dw :%s/[ \n\t]//g
 nnoremap <leader>rr "9yiW:%s/<C-R>9/<C-R>9/gc<LEFT><LEFT><LEFT>
 vnoremap <F3> "hy:%s/<C-R>h//gc<left><left><left>
 nnoremap <F3> "9yiW:%s/<C-R>9/<C-R>9/gc<LEFT><LEFT><LEFT>
@@ -129,7 +128,6 @@ vnoremap rr "_dhP
 vnoremap ra "ddh"ap
 vnoremap a "ay
 
-vnoremap <leader>d "dy'>o<Esc>p
 
 
 """"""""""""""""""""""""""""""""""""""""

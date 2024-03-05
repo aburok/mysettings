@@ -199,8 +199,8 @@ _ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 
 _r := "Rider IDE shortcuts`n"
 
-numpad3:: SendInput "!{F7}" ; find results
-_r := _r . " 3 - Find Usages `n"
+numpad3:: SendInput "+{F4}" ; find results
+_r := _r . " 3 - Close Editor `n"
 
 +numpad3:: SendInput "^+{Down}" ; Go to Next occurance (find results)
 +numpad6:: SendInput "^+{Up}" ; Go to Next occurance (find results)

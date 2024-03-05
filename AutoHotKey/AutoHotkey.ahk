@@ -102,19 +102,11 @@ WinActivateOrOpen(winExe) {
 ; #Include <JSON>
 
 ; #Include %A_ScriptDir%\Windows\Sound.ahk
-; #Include %A_ScriptDir%\Common\Common.ahk
-; #Include %A_ScriptDir%\slugify.ahk
-; #Include %A_ScriptDir%\ParseUrl.ahk
-
-; #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
-; #Include %A_ScriptDir%\Time\Time.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
 #Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
-; #Include %A_ScriptDir%\KeyBindings\Yank.ahk
+#Include %A_ScriptDir%\Usefull-Small-Tools.ahk
 
-; #Include %A_ScriptDir%\Spotify.ahk
-;#Include %A_ScriptDir%\Lib\CapsLockCtrlEscape.ahk
 
 ; -----------------------
 ; FUNCTIONS

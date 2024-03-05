@@ -82,12 +82,3 @@ lsusb
 #############################################################
 
 
-
-#############################################################
-#################### Domoticz ###############################
-
-sudo curl -L install.domoticz.com | sudo bash
-
-#check domoticz status
-# https://diyprojects.io/domoticz-installation-configuration-raspberry-pi-3-2/
-sudo service domoticz.sh status
