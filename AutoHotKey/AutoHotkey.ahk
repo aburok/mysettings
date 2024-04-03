@@ -166,3 +166,13 @@ Loop 0xFF{
     }
 }
 }
+
+
+#^x::{
+    SendInput("^c")
+    Sleep 150
+    NewStr := StrReplace(A_Clipboard, "<", "&lt;")
+    NewStr := StrReplace(NewStr, ">", "&gt;")
+    A_Clipboard := "<code><pre>" . NewStr . "</pre></code>"
+    SendInput("^v")
+}

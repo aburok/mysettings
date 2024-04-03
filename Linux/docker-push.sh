@@ -7,4 +7,6 @@ export DOCKER_HUB_NAME=gringokromka
 
 docker build . -t $(cat ./dockertag)
 docker image tag $(cat dockertag) $DOCKER_HUB_NAME/$(cat dockertag)
+
+export DOCKER_HUB_NAME=gringokromka
 docker image push $DOCKER_HUB_NAME/$(cat dockertag) 

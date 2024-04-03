@@ -1,5 +1,7 @@
 # First thing in this file
 
+exit
+
 param([switch] $Force)
 
 if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {

@@ -196,7 +196,7 @@ export MYVIFMRC="/mysettings/Linux/vifmrc"
 
 ## DOCKER
 alias drps='docker ps --format "table {{.Names}}\t{{.Status}}\t{{.CreatedAt}}"'
-alias drlazy='/home/dawkor/homebrew/Cellar/lazydocker/0.21.1/bin/lazydocker'
+alias drlazy='/root/.local/bin/lazydocker'
 
 chmod +x /mysettings/Linux/docker-push.sh
 alias dpub='/mysettings/Linux/docker-push.sh'

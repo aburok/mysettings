@@ -88,17 +88,21 @@ sethandler <A-6> a:vim
 map <C-S-A> <Action>(EditorSelectWord)
 
 """ Mappings --------------------------------
-nmap <leader>d <Action>(QuickImplementations)
 nmap <leader>rr <Action>(RenameElement)
 nmap <leader>c <Action>(Stop)
 nmap <leader>z <Action>(ToggleDistractionFreeMode)
 
-" map <leader>s <Action>(SelectInProjectView)
-" nmap <leader>ga <Action>(Annotate)
-nmap <leader>ga <Action>(QuickImplementations)
 nmap <leader>gh <Action>(Vcs.ShowTabbedFileHistory)
-" nmap <leader>gd <Action>(Compare.SameVersion)
-nmap <leader>gs <Action>(FileStructurePopup)
+
+
+nmap gd <Action>(QuickImplementations)
+nmap gD <Action>(GotoDeclaration)
+nmap ga <Action>(GotoImplementation)
+nmap gi <Action>(GotoImplementation)
+nmap ge <Action>(ReSharperGotoNextErrorInSolution)
+nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
+nmap gs <Action>(FileStructurePopup)
+
 nmap <leader>m <Action>(FileStructurePopup)
 
 map <A-K1> <Action>(Resume)
@@ -116,16 +120,13 @@ map <C-S-Space> <Action>(ParameterInfo)
 map <C-S-e> <Action>(ActivateProjectToolWindow)
 map <leader>we <Action>(ActivateProjectToolWindow)
 
-nmap ge <Action>(ReSharperGotoNextErrorInSolution)
-nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
-
 nmap <leader>bb <Action>(ToggleLineBreakpoint)
 nmap <leader>be <Action>(EditBreakpoint)
 nmap <leader>bt <Action>(XDebugger.MuteBreakpoints)
 
 nmap <leader>u <Action>(FindUsages)
+nmap gf <Action>(FindUsages) 
 nmap <leader>i <Action>(GotoImplementation)
-nmap gi <Action>(GotoImplementation)
 
 map <C-o> <Action>(Back)
 nmap H <Action>(Back)
