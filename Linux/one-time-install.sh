@@ -20,3 +20,10 @@ fi
 mkdir -p ~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
 ln -s /usr/bin/batcat ~/.local/bin/bat
+
+cp /mysettings/git/.tigrc_host ~/.tigrc
+cp /mysettings/Vim/host_files_User_Dir/.vimrc ~/
+cp /mysettings/Linux/vifmrc ~/
+cp /mysettings/Linux/.inputrc ~/
+cp /mysettings/Linux/.fdignore ~/
+cp /mysettings/Linux/.bashrc ~/
