@@ -10,9 +10,12 @@ sudo apt-get install tree --yes
 sudo apt-get install ripgrep --yes  
 sudo apt-get install powerline --yes  
 
-
-git clone https://github.com/aburok/mysettings.git /mysettings
-git clone git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+if [ ! -d /mysettings ]; then
+    git clone https://github.com/aburok/mysettings.git /mysettings
+fi
+if [ ! -d ~/.vim/bundle/Vundle.vim ]; then
+    git clone git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+fi
 
 mkdir -p ~/.local/bin
 ln -s $(which fdfind) ~/.local/bin/fd
