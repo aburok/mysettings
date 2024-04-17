@@ -102,8 +102,7 @@ nmap gi <Action>(GotoImplementation)
 nmap ge <Action>(ReSharperGotoNextErrorInSolution)
 nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
 nmap gs <Action>(FileStructurePopup)
-
-nmap <leader>m <Action>(FileStructurePopup)
+nmap gr <Action>(RecentLocations)
 
 map <A-K1> <Action>(Resume)
 map <A-`> <Action>(ActivateTerminalToolWindow)
@@ -150,7 +149,6 @@ map <C-p> <Action>(GotoFile)
 map <C-S-p> <Action>(GotoAction)
 
 " nmap go <C-S-n>
-nmap gr <Action>(RecentFiles)
 nmap <leader>aa <Action>(ShowIntentionActions)
 nmap <leader>ar <Action>(RefactoringMenu)
 nmap <C-e> <Action>(EditorSelectWord)

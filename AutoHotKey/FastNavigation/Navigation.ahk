@@ -5,6 +5,7 @@
 #Include %A_ScriptDir%\FastNavigation\Items\Web\Web.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Files.ahk
 #Include %A_ScriptDir%\FastNavigation\Items\Shell.ahk
+#Include %A_ScriptDir%\FastNavigation\Items\Common\Text\HeaderFormat.ahk
 
 Log("script path {1}", [A_ScriptDir])
 

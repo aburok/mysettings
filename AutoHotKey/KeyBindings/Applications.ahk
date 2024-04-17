@@ -6,34 +6,44 @@
 #Include %A_ScriptDir%\Common\Common.ahk
 #Include %A_ScriptDir%\FastNavigation\Navigation.ahk
 
-!^+d:: {
-
-    subItem := 
-    rootLevel := AppMenuLevel("d", "+!d")
-    .AddItem(AppMenuLevel( "b", "Chrome", "#b", "ahk_exe chrome.exe"))
-    .AddItem(AppMenuLevel( "c", "Console / Powershell " , "#c", "ahk_exe ConEmu64.exe"))
-    .AddItem(AppMenuLevel( "d", "Dev Tools" , "", "DevTools -"))
-    .AddItem(AppMenuLevel( "x", "Double Commander" , "#f", "ahk_exe doublecmd.exe"))
+; subItem :=
+rootLevel := NavigationItem("d", "Test")
+    .AddItem(AppMenuLevel("b", "Chrome", "#b", "ahk_exe chrome.exe"))
+    .AddItem(AppMenuLevel("e", "Edge", "#b", "ahk_exe msedge.exe"))
+    .AddItem(AppMenuLevel("t", "Terminal", "<!+t", "ahk_exe WindowsTerminal.exe"))
+    ; .AddItem(AppMenuLevel( "x", "Double Commander" , "#f", "ahk_exe doublecmd.exe"))
     ;        .AddItem(AppMenuLevel( "f", "Firefox" , "#f", "ahk_exe firefox.exe"))
-    .AddItem(AppMenuLevel( "g", "Git \ Tig" , "#+g", "ahk_exe GitExtensions.exe"))
-    ; .AddItem(AppMenuLevel( "u", "Hangouts" , "", "Google Hangouts"))
-    ; .AddItem(AppMenuLevel( "h", "Host Files" , "", "ahk_exe HostsFileEditor.exe"))
-    ; .AddItem(AppMenuLevel( "k", "Hangouts" , "", "Google Hangouts"))
-    .AddItem(AppMenuLevel( "m", "mySettings / VS Code" , "", "ahk_exe Code.exe"))
-    .AddItem(AppMenuLevel( "r", "mRemote - Remote desktop", "", "ahk_exe mRemoteNG.exe" ))
-    .AddItem(AppMenuLevel( "n", "Notepad ++" , "#+n", "ahk_exe notepad++.exe"))
-    .AddItem(AppMenuLevel( "z", "Notepad ++" , "", "ahk_exe notepad++.exe"))
-    .AddItem(AppMenuLevel( "e", "One Note" , "#+e", "ahk_exe ONENOTE.EXE"))
-    .AddItem(AppMenuLevel( "o", "Outlook" , "#+o", "ahk_exe OUTLOOK.exe"))
-    .AddItem(AppMenuLevel( "t", "Outlook" , "#+t", "ahk_exe OUTLOOK.exe"))
-    .AddItem(AppMenuLevel( "a", "Teams" , "#+a", "ahk_exe Teams.exe"))
-    .AddItem(AppMenuLevel( "v", "Visual Studio" , "#v", "ahk_exe devenv.exe"))
-    .AddItem(AppMenuLevel( "s", "Slack" , "", "ahk_exe slack.exe"))
-    .AddItem(GetGuidFormat("q"))
-    .AddItem(AppMenuLevel( "w", "VIM / GVIM" , "#+m", "ahk_exe gvim.exe"))
+    .AddItem(AppMenuLevel("g", "Git \ Tig", "#+g", "ahk_exe GitExtensions.exe"))
+    ; .AddItem(AppMenuLevel( "m", "mySettings / VS Code" , "", "ahk_exe Code.exe"))
+    .AddItem(AppMenuLevel("d", "Notepad ++", "", "^.*(Notepad\+\+).*$"))
+    .AddItem(AppMenuLevel("a", "One Note", "<!^a", "^.*(OneNote for Windows 10)"))
+    .AddItem(AppMenuLevel("z", "Outlook", "#+o", "ahk_exe OUTLOOK.EXE"))
+    ; .AddItem(AppMenuLevel( "v", "Visual Studio" , "#v", "ahk_exe devenv.exe"))
+    .AddItem(AppMenuLevel("s", "Slack", "<!^s", "ahk_exe slack.exe"))
+    .AddItem(AppMenuLevel("w", "WhatsApp", "<!^w", "^WhatsApp$"))
+    ; .AddItem(AppMenuLevel("w", "VIM / GVIM", "#+m", "ahk_exe gvim.exe"))
     .AddItem(CopyFilePathNavigationItem("y", "Yank Path"))
+    .AddItem(NavigationItem("q", "Varia (Translate)")
+        .AddItem(GetGuidFormat("d"))
+        .AddItem(TranslateItem("1", "Translate"))
+        .AddItem(FlushDnsItem("2", ""))
+        .AddItem(CmdNavigationItem("3", "Aws Login", "pwsh.exe -NoExit -Command { aws-login } "))
+        .AddItem(CopyJiraTicketAsBranchNameItem("4", "Copy Branch Name"))
+        .AddItem(HeaderFormatNavigationItem("h", "Header Format")))
+    .AddItem(NavigationItem("1", "Sounds")
+        .AddItem(PlaySoundItem("1", "Wololo", "/Sounds/Wololo-9.mp3"))
+        .AddItem(PlaySoundItem("d", "Drum", "/Sounds/joke_drum_effect.mp3"))
+        .AddItem(PlaySoundItem("w", "Wow", "/Sounds/anime-wow.mp3"))
+        .AddItem(PlaySoundItem("2", "Downer", "/Sounds/downer_noise.mp3"))
+        .AddItem(PlaySoundItem("3", "Dun", "/Sounds/dun-dun-dun.mp3"))
+        .AddItem(PlaySoundItem("f", "Fart", "/Sounds/dry-fart.mp3"))
+        .AddItem(PlaySoundItem("s", "Scratch", "/Sounds/record-scratch-2.mp3"))
+        .AddItem(PlaySoundItem("t", "Trolo", "/Sounds/trollolol.swf.mp3")))
+
+<!Space::
+<!q::
+<!`:: {
 
     rootLevel.ShowCommandsAndLaunchSelected()
 
 }
-

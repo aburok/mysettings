@@ -1,5 +1,5 @@
 class GuidFormatter {
-    static guidRegex := "Oi)^[\s{(]*([0-9A-Fa-f]{8})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{4})[-]?([0-9A-Fa-f]{12})[)}\s]*$"
+    static guidRegex := "i)^[\s\{\(]*([\da-f]{8})-?([\da-f]{4})-?([\da-f]{4})-?([\da-f]{4})-?([\da-f]{12})[\)\}\s]*$"
     ; https://docs.microsoft.com/pl-pl/dotnet/api/system.guid.tostring?view=netframework-4.7.2
     static NFormat := "{1}{2}{3}{4}{5}"
     static BFormat := "{{}{1}-{2}-{3}-{4}-{5}{}}"
@@ -8,13 +8,13 @@ class GuidFormatter {
     static XFormat := "{1}x{2}x{3}x{4}x{5}"
 
     IsGuid(guidAsText){
-        position := RegExMatch(guidAsText, this.guidRegex)
+        position := RegExMatch(guidAsText, GuidFormatter.guidRegex)
 
         return position > 0
     }
 
     Format(guidAsText, outputFormat :=  "{1}-{2}-{3}-{4}-{5}"){
-        position := RegExMatch(guidAsText, this.guidRegex, &guidMatch)
+        position := RegExMatch(guidAsText, GuidFormatter.guidRegex, &guidMatch)
 
         if(position = 0){
             return ""

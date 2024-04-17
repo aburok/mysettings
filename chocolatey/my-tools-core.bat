@@ -1,14 +1,13 @@
 @powershell -NoProfile -ExecutionPolicy unrestricted -Command "iex ((new-object net.webclient).DownloadString('https://chocolatey.org/install.ps1'))" && SET PATH=%PATH%;%systemdrive%\chocolatey\bin
 winget install JanDeDobbeleer.OhMyPosh
 
-choco install autohotkey --confirm
-choco install microsoft-windows-terminal --confirm
-choco install tidal --confirm
+winget install autohotkey --confirm
+winget install microsoft-windows-terminal --confirm
 choco install onedrive --confirm
-choco install keepass --confirm
-choco install notepadplusplus --confirm
+winget install keepass --confirm
+winget install notepadplusplus --confirm
 choco install vim --confirm
-choco install copyq --confirm
+winget install hluk.CopyQ --confirm
 choco install vscode --confirm
 choco install pwsh --confirm
 choco install onenote --confirm

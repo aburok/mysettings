@@ -1,14 +1,15 @@
 class NavigationItem {
     SubItems := []
 
-    __New(letter, description){
+    __New(letter, description) {
         this.Letter := letter
         this.Description := description
         this.Level := 0
         this.Root := this
+        this.MyGui := Gui()
     }
 
-    AddItem(newItem){
+    AddItem(newItem) {
         newItem.Parent := this
         newItem.Root := this.Root
         newItem.Level := this.Level + 1
@@ -17,7 +18,7 @@ class NavigationItem {
         return this
     }
 
-    AddItemList(newItemList){
+    AddItemList(newItemList) {
         for index, newItem in newItemList
         {
             this.AddItem(newItem)
@@ -25,9 +26,10 @@ class NavigationItem {
         return this
     }
 
-    ShowCommandsAndLaunchSelected(){
+    ShowCommandsAndLaunchSelected() {
         this.AssignRoot()
-        this.ShowHelp()
+        ; this.ShowHelp()
+        this.ShowHelpV2()
 
         command := KeyWaitAny("T10 L1 I")
 
@@ -35,18 +37,40 @@ class NavigationItem {
         this.LaunchCommand(command)
     }
 
-    ShowHelp(){
+    ShowHelp() {
         title := this.GetTitle()
         text := this.GetCommandsList()
         this.ShowSplash(title, text)
     }
 
-    HideHelp(){
-        ; SplashTextOff
+    ShowHelpV2() {
+        title := this.GetTitle()
+
+        this.MyGui := Gui()
+        For index, subItem in this.SubItems
+        {
+            text := subItem.FormatItemText()
+            this.MyGui.SetFont("w800")
+            this.MyGui.Add("Text", "X10 " , subItem.Letter)
+            this.MyGui.SetFont("w1")
+            this.MyGui.Add("Text", "X+20 ", subItem.Description)
+            ; this.MyGui.Add("Text", "X+10 ", text)
+        }
+        this.MyGui.Show
     }
 
+    HideHelp() {
+        ; SplashTextOff
+        this.MyGui.Hide()
+    }
 
-    GetCommandsList(){
+    ShowSplash(title, text) {
+        this.MyGui := Gui()
+        this.MyGui.Add("Text", "R2", text)
+        this.MyGui.Show
+    }
+
+    GetCommandsList() {
         helpText := "Available Commands: `n"
 
         For index, subItem in this.SubItems
@@ -58,21 +82,21 @@ class NavigationItem {
         return helpText
     }
 
-    GetTitle(){
+    GetTitle() {
         return this.Description
     }
 
-    FormatItemText(){
-        return Format(" {1} -> {2}" , this.Description, this.Letter)
+    FormatItemText() {
+        return Format(" {1} -> {2}", this.Description, this.Letter)
     }
 
-    LaunchCommand(command){
+    LaunchCommand(command) {
         this.AssignRoot()
         this.BeforeActivation()
         for index, cmd in this.SubItems
         {
-            letter:= cmd.Letter
-            if(letter == command) {
+            letter := cmd.Letter
+            if (letter == command) {
                 cmd.ActivateItem()
             }
         }
@@ -83,10 +107,10 @@ class NavigationItem {
         this.ShowCommandsAndLaunchSelected()
     }
 
-    BeforeActivation(){
+    BeforeActivation() {
     }
 
-    AssignRoot(){
+    AssignRoot() {
         Log("[Item] This {1}, Root : {2}. ", [this.Description, this.Root.Description])
         newRoot := this.Root
         for index, subItem in this.SubItems

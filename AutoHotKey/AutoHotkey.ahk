@@ -104,9 +104,6 @@ WinActivateOrOpen(winExe) {
 ; #Include %A_ScriptDir%\Windows\Sound.ahk
 
 #Include %A_ScriptDir%\KeyBindings\Applications.ahk
-#Include %A_ScriptDir%\KeyBindings\SinglePress.ahk
-#Include %A_ScriptDir%\Usefull-Small-Tools.ahk
-
 
 ; -----------------------
 ; FUNCTIONS
@@ -140,9 +137,9 @@ __help := __help . "`n LALT + M `t -> APP MENU"
 
 ; Shift + Wheel for horizontal scrolling
 
-+WheelDown:: WheelRight
+; +WheelDown:: WheelRight
 
-+WheelUp:: WheelLeft
+; +WheelUp:: WheelLeft
 
 KeyCombination(ExcludeKeys:="")
 { ;All pressed keys and buttons will be listed
@@ -175,4 +172,14 @@ Loop 0xFF{
     NewStr := StrReplace(NewStr, ">", "&gt;")
     A_Clipboard := "<code><pre>" . NewStr . "</pre></code>"
     SendInput("^v")
+}
+
+#c::{
+    ; MsgBox WinGetTitle("A")
+    Found := RegExMatch(WinGetTitle("A"), "^\[([^\]]+)\]\s+(.+)\s+\- Jira", &Title)
+    if (Found > 0){
+        A_Clipboard := Title[1] "_" StrReplace(StrLower(Title[2]), A_Space, "_")
+    }else {
+        ; MsgBox Found WinGetTitle("A")
+    }
 }

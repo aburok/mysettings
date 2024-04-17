@@ -15,16 +15,6 @@
           "template": "\uf120 {{ .Name }} "
         },
         {
-          "type": "root",
-          "style": "diamond",
-          "foreground": "#FFFB38",
-          "background": "#ef5350",
-          "template": "<parentBackground>\ue0b0</> \uf0e7 ",
-          "properties": {
-            "root_icon": "\uf292"
-          }
-        },
-        {
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\ue0b0",

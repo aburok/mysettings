@@ -10,17 +10,6 @@ keyMap["k"] := "Up"
 __help := __help . "Up          -> LALT + K `n"
 keyMap["l"] := "Right"
 __help := __help . "Right       -> LALT + L `n"
-; NOT USING WSAD vvvvvvv
-; keyMap["w"] := "Up"
-; __help := __help . "Up        -> LALT + W `n"
-; keyMap["s"] := "Down"
-; __help := __help . "Down        -> LALT + S `n"
-; keyMap["a"] := "Left"
-; __help := __help . "Left          -> LALT + A `n"
-; ALT + SHIFT + D was in clonflict with OneNote insert date
-; keyMap["d"] := "Right"
-; __help := __help . "Right       -> LALT + D `n"
-; NOT USING WSAD ^^^^^^^^
 keyMap[","] := "PgUp"
 __help := __help . "Page Up     -> LALT + , `n"
 keyMap["."] := "PgDn"
@@ -46,10 +35,6 @@ __help := __help . "Escape   -> LALT + O `n"
 *<!j::
 *<!k::
 *<!l::
-; *<!w::
-; *<!s::
-; *<!a::
-; *<!d::
 *<!,::
 *<!.::
 *<!x::
@@ -98,12 +83,12 @@ __help := __help . "`n LALT + ] `t`t`t -> MEDIA PREVIOUS"
 ; <![::Volume_Down
 ;     __help := __help . "`n LALT + [ `t`t`t -> VOLUME DOWN"
 
-<!WheelDown::Volume_Down
-__help := __help . "`n LALT + WHEEL DOWN `t`t -> VOLUME DOWN"
+; <!WheelDown::Volume_Down
+; __help := __help . "`n LALT + WHEEL DOWN `t`t -> VOLUME DOWN"
 
 ; <!F3::Volume_Up
 ; __help := __help . "`n LALT + F3 `t`t -> VOLUME UP"
 ; <!]::Volume_Up
 ; __help := __help . "`n LALT + SHIFT + [ `t`t -> VOLUME UP"
-<!WheelUp::Volume_Up
-__help := __help . "`n LALT + WHEEL UP `t`t -> VOLUME UP"
+; <!WheelUp::Volume_Up
+; __help := __help . "`n LALT + WHEEL UP `t`t -> VOLUME UP"

@@ -120,8 +120,53 @@ numpad0:: MsgBox(_cs, "Sketchup in Chrome Help", "iconi T30")
 ; |    |__| |__/ |  | |\/| |___
 ; |___ |  | |  \ |__| |  | |___
 
+class KeyboardShortcutInfo {
+    __New(shortcut, description) {
+        this.ShortCut := shortcut
+        this.Description := description
+    }
+}
+
+class HelpMenu {
+    __New(title) {
+        this.Title := title
+        this.Items := Array()
+        this.timer := ObjBindMethod(this, "Hide")
+    }
+
+    Add(shortcut, desc) {
+        this.Items.Push(KeyboardShortcutInfo(shortcut, desc))
+    }
+
+    Build() {
+        this.Gui := Gui()
+        for item in this.Items {
+            this.Gui.Opt("+LastFound +AlwaysOnTop +Resize")
+            this.Gui.SetFont("w800")
+            this.Gui.Add("Text", "X10", item.ShortCut)
+            this.Gui.SetFont("w1")
+            this.Gui.Add("Text", "X+20", item.Description)
+        }
+    }
+
+    Show() {
+        this.Gui.Show()
+        SetTimer(this.timer, 5000)
+    }
+
+    Hide(){
+        this.Gui.Hide()
+        SetTimer(this.timer, 0)
+    }
+
+}
+
+ChromeHelp := HelpMenu("Chrome")
+
 #HotIf WinActive("ahk_exe chrome.exe") or WinActive("ahk_exe firefox.exe") or WinActive("ahk_exe msedge.exe")
+
 _c := "Chrome shortcuts `n`n"
+ChromeHelp.Add("4", "Refresh")
 
 !*:: SendInput "^{F5}"
 ^p:: SendInput "+^A"
@@ -132,11 +177,15 @@ _c := _c . " Side `n"
 
 numpad3:: SendInput "{CtrlDown}w{CtrlUp}{CtrlUp}{AltUp}"
 numpad6:: SendInput "{CtrlDown}{ShiftDown}t{ShiftUp}{CtrlUp}{AltUp}"
-_c := _c . " 3 - Close tab `t`t`t 6 - Reopen closed tab `n"
+_c := _c . " 3 - Close tab `t`t`t 6 - `n"
+ChromeHelp.Add("3", "Close tab")
+ChromeHelp.Add("6", "Reopen closed tab")
 
 numpad2:: SendInput "{CtrlDown}{ShiftDown}{Tab}{ShiftUp}{CtrlUp}"
 numpad5:: SendInput "{CtrlDown}{Tab}{CtrlUp}"
 _c := _c . " 2 - Go previous tab `t`t 5 - Go next tab `n"
+ChromeHelp.Add("2", "Go previous tab")
+ChromeHelp.Add("5", "Go next tab ")
 
 numpad1:: SendInput "{Browser_Back}"
 numpad4:: SendInput "{Browser_Forward}"
@@ -146,7 +195,9 @@ numpad7:: SendInput "^t" ; New Tab
 numpad8:: SendInput "{Browser_Forward}"
 _c := _c . " 7 - New Tab `t`t`t 4 - Go forward `n"
 
-numpad0:: MsgBox(_c, "Chrome Help", "iconi T30")
+numpad0:: ChromeHelp.Show()
+
+ChromeHelp.Build()
 #HotIf
 
 ; _  _ ____    ___ ____ ____ _  _ ____
@@ -254,6 +305,10 @@ numpad0:: MsgBox(_r_d, "Rider [Debugger] Help", "iconi T30")
 #HotIf WinActive("ahk_exe Code.exe")
 numpad2:: SendInput "^+{Down}" ; Go to Next occurance (find results)
 numpad5:: SendInput "^+{Up}" ; Go to Next occurance (find results)
+
+numpad1:: SendInput "{AltDown}{Left}{AltUp}" ; Go back in code
+numpad4:: SendInput "{AltDown}{Right}{AltUp}" ; Go Forward in code
+_ide := _ide . " 1 - Go Back `t`t 4 - Go Forward `n"
 #HotIf
 
 ; _  _ _ ____ _  _ ____ _       ____ ___ _  _ ___  _ ____
@@ -365,11 +420,10 @@ numpad0:: MsgBox(_gd, "Git Extension Help", "iconi T30")
 #HotIf
 
 
+; ____ _    ____ ____ _  _
+; [__  |    |__| |    |_/
+; ___] |___ |  | |___ | \_
 
-; ____ _    ____ ____ _  _ 
-; [__  |    |__| |    |_/  
-; ___] |___ |  | |___ | \_ 
-                         
 #HotIf WinActive("ahk_exe slack.exe")
 
 ^p:: SendInput "^g"

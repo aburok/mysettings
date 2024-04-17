@@ -11,10 +11,6 @@ class CopyFilePathNavigationItem extends NavigationItem
         this.AddItem(ClipboardNavigationItem("d", "Containg folder path", "ContaingFolder"))
     }
 
-    ShowSplash(helpText){
-        ; ShowSplash("Updated script", helpText)
-    }
-
     ActivateItem(){
         Sleep 100
         if(WinActive("ahk_exe gvim.exe")){
@@ -28,12 +24,12 @@ class CopyFilePathNavigationItem extends NavigationItem
         }
         Sleep 100
 
-        this.AbsolutPath := A_Clipboard
-        this.RelativePath := StrReplace(A_Clipboard, this.RelativeRoot, "")
-        this.name := SplitPath(A_Clipboard)
-        this.FileName := this.name
-        dir := SplitPath ( A_Clipboard)
-        this.ContaingFolder := dir
+        this.MyMap := Map()
+        this.MyMap["AbsolutPath"] := A_Clipboard
+        this.MyMap["RelativePath"] := StrReplace(A_Clipboard, this.RelativeRoot, "")
+        SplitPath(A_Clipboard, &name, &dir)
+        this.MyMap["FileName"] := name
+        this.MyMap["ContaingFolder"] := dir
 
         this.ShowCommandsAndLaunchSelected()
     }

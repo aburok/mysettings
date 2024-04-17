@@ -23,12 +23,6 @@ choco install notepadplusplus
 
 choco install vlc
 
-choco install skype
-
-choco install powershell
-
-choco install putty
-
 choco install dropbox
 
 choco install curl
@@ -39,18 +33,12 @@ choco install paint.net
 
 choco install fiddler
 
-choco install sourcetree
-
 choco install foxitreader
 
 choco install tortoisegit
 
-choco install googledrive
-
-choco install linqpad4
+choco install linqpad7
 
 choco install slack
-
-choco install qbittorrent
 
 choco install foobar2000

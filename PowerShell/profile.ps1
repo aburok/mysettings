@@ -1,8 +1,12 @@
 # First thing in this file
 
-exit
+# exit
 
 param([switch] $Force)
+
+
+oh-my-posh init pwsh --config 'C:/mysettings/PowerShell/.oh-my-posh.theme.omp.json' | Invoke-Expression
+
 
 if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
     Write-Verbose "Profile Already loaded."
@@ -63,31 +67,12 @@ Function Initialize-Config() {
 
 # . ($PScript + "\modules.ps1")
 . ($PScript + "\config\ps-read-line-config.ps1")
-# . ($PScript + "\common.functions.ps1")
-# . ($PScript + "\events.ps1")
-# . ($PScript + "\clean-files.ps1")
-
-### Varia 
-# Initialize-Config "${PScript}\config"
-
-### GIT
-# Initialize-Config "$PScript\git"
-
-### Include all scripts from function Directory
-# Initialize-Config "${PScript}\functions"
-
-# Initialize-Config "${PScript}\security"
-
 
 if($global:poshSettings.lastDirectory `
     -and (Test-Path -Path $global:poshSettings.lastDirectory )){
     Set-Location $global:poshSettings.lastDirectory
 }
 
-# Start-SshAgent -Quiet
-
-
-# oh-my-posh --init --shell pwsh --config "C:/mysettings/Powershell/.oh-my-posh.theme.omp.json" | Invoke-Expression
 # Enable-PoshTooltips
 
 Write-Host "Dropbox profile loaded..."
@@ -111,17 +96,6 @@ Set-Alias gvim Open-Gvim
 
 Function List_EnvVars { gci env:* | sort-object name }
 Set-Alias envs List_EnvVars 
-
-$AutoHotKeyBin = "C:\mysettings\AutoHotKey\bin\AutoHotkey_2.0-beta.3\AutoHotkey64.exe" ;
-function Run-Ahk (){
-    Start-Process "$AutoHotKeyBin" "C:\mysettings\AutoHotKey\AutoHotkey.ahk"
-}
-
-function Run-AhkMouse (){
-    Start-Process "$AutoHotKeyBin" "C:\mysettings\AutoHotKey\MouseButtons.ahk"
-}
-
-# Run-Ahk
 
 Function Write_Header($text){
     Write-Host "--------------------------------------------------"
