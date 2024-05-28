@@ -174,7 +174,7 @@
     <GoToRoot>False</GoToRoot>
     <ShowCurDirTitleBar>False</ShowCurDirTitleBar>
     <ActiveRight>False</ActiveRight>
-    <RunInTerminalStayOpenCmd>cmd.exe</RunInTerminalStayOpenCmd>
+    <RunInTerminalStayOpenCmd>test</RunInTerminalStayOpenCmd>
     <RunInTerminalStayOpenParams>/K {command}</RunInTerminalStayOpenParams>
     <RunInTerminalCloseCmd>"C:\Program Files\PowerShell\7\pwsh.exe"</RunInTerminalCloseCmd>
     <RunInTerminalCloseParams>-command {command}</RunInTerminalCloseParams>
@@ -224,8 +224,8 @@
     <DriveBlackListUnmounted>False</DriveBlackListUnmounted>
   </Behaviours>
   <Tools>
-    <Viewer Enabled="False">
-      <Path/>
+    <Viewer Enabled="True">
+      <Path>C:\Program Files\Notepad++\notepad++.exe</Path>
       <Parameters/>
       <RunInTerminal>False</RunInTerminal>
       <KeepTerminalOpen>False</KeepTerminalOpen>
@@ -406,9 +406,9 @@
   <Keyboard>
     <Typing>
       <Actions>
-        <NoModifier>2</NoModifier>
-        <Alt>0</Alt>
-        <CtrlAlt>3</CtrlAlt>
+        <NoModifier>3</NoModifier>
+        <Alt>2</Alt>
+        <CtrlAlt>1</CtrlAlt>
       </Actions>
     </Typing>
   </Keyboard>
@@ -562,12 +562,14 @@
     <IgnoreListFile>%DC_CONFIG_PATH%\ignorelist.txt</IgnoreListFile>
   </IgnoreList>
   <DirectoryHotList>
-    <HotDir Name="DoubleCommander_settings" Path="C:\_tools\doublecmd-1.1.12.x86_64-win64\doublecmd\settings\"/>
-    <HotDir Name="mysettings" Path="C:\mysettings\"/>
+    <HotDir Name="DoubleCommander_settings" Path="C:\_tools\doublecmd-1.1.12.x86_64-win64\doublecmd\settings"/>
+    <HotDir Name="&amp;mysettings" Path="C:\mysettings"/>
+    <HotDir Name="&amp;sinch" Path="C:\sinch"/>
     <HotDir Name="calling-main-pop" Path="C:\sinch\code\core-calling\calling-main-pop"/>
-    <HotDir Name="calling-v1-system-tests" Path="C:\sinch\code\core-calling\calling-v1-system-tests"/>
+    <HotDir Name="calling-v1-system-tests" Path="C:\sinch\code\core-calling\calling-v1-system-&amp;tests"/>
     <HotDir Name="system-tests" Path="C:\sinch\config\system-tests"/>
     <HotDir Name="calling-v1-&amp;k8s-manifests" Path="C:\sinch\infra\calling-v1-k8s-manifests"/>
+    <HotDir Name="sinch-&amp;utils" Path="C:\sinch\varia\sinch-utils\"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>

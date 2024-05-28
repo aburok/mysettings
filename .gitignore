@@ -1,3 +1,7 @@
 *~
 *.swp
 *.bak
+
+DoubleCommander/*
+!doublecmd.xml
+!shortcuts.scf
