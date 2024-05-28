@@ -91,7 +91,7 @@ class CopyJiraTicketAsBranchNameItem extends NavigationItem
         ; MsgBox WinGetTitle("A")
         Found := RegExMatch(WinGetTitle("A"), "^\[([^\]]+)\]\s+(.+)\s+\- Jira", &Title)
         if (Found > 0) {
-            A_Clipboard := Title[1] "_" StrReplace(StrLower(Title[2]), A_Space, "_")
+            A_Clipboard := Title[1] "_" RegExReplace(StrLower(Title[2]), "[ \/-]", "_")
         } else {
             ; MsgBox Found WinGetTitle("A")
         }

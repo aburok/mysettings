@@ -174,6 +174,8 @@ alias get='curl --location --remote-header-name --remote-name '
 
 # GIT
 
+export GIT_EDITOR=vim
+
 alias multipull="find . -mindepth 1 -maxdepth 1 -type d -print -exec git -C {} pull \;"
 
 

@@ -29,6 +29,7 @@ rootLevel := NavigationItem("d", "Test")
         .AddItem(FlushDnsItem("2", ""))
         .AddItem(CmdNavigationItem("3", "Aws Login", "pwsh.exe -NoExit -Command { aws-login } "))
         .AddItem(CopyJiraTicketAsBranchNameItem("4", "Copy Branch Name"))
+        .AddItem(GetExchangeRatesMenuItem("e"))
         .AddItem(HeaderFormatNavigationItem("h", "Header Format")))
     .AddItem(NavigationItem("1", "Sounds")
         .AddItem(PlaySoundItem("1", "Wololo", "/Sounds/Wololo-9.mp3"))
@@ -41,8 +42,7 @@ rootLevel := NavigationItem("d", "Test")
         .AddItem(PlaySoundItem("t", "Trolo", "/Sounds/trollolol.swf.mp3")))
 
 <!Space::
-<!q::
-<!`:: {
+<!q:: {
 
     rootLevel.ShowCommandsAndLaunchSelected()
 

@@ -7,14 +7,6 @@
       "alignment": "left",
       "segments": [
         {
-          "type": "shell",
-          "style": "diamond",
-          "foreground": "#ffffff",
-          "background": "#0077c2",
-          "leading_diamond": "\u256d\u2500\ue0b6",
-          "template": "\uf120 {{ .Name }} "
-        },
-        {
           "type": "path",
           "style": "powerline",
           "powerline_symbol": "\ue0b0",
@@ -88,83 +80,6 @@
             "fetch_package_manager": true,
             "npm_icon": " <#cc3a3a>\ue5fa</> ",
             "yarn_icon": " <#348cba>\uf61a</>"
-          }
-        },
-        {
-          "type": "python",
-          "style": "diamond",
-          "foreground": "#FFE873",
-          "background": "#306998",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}"
-        },
-        {
-          "type": "dotnet",
-          "style": "diamond",
-          "foreground": "#0d6da8",
-          "background": "#0e0e0e",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ue77f {{ if .Unsupported }}\uf071{{ else }}{{ .Full }}{{ end }}"
-        },
-        {
-          "type": "azfunc",
-          "style": "diamond",
-          "foreground": "#5398c2",
-          "background": "#ffffff",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\uf104<#f5bf45>\uf0e7</>\uf105 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }}{{ end }}"
-        },
-        {
-          "type": "aws",
-          "style": "diamond",
-          "foreground": "#faa029",
-          "background": "#565656",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ue7ad {{.Profile}}{{if .Region}}@{{.Region}}{{end}}"
-        },
-        {
-          "type": "kubectl",
-          "style": "diamond",
-          "foreground": "#ffffff",
-          "background": "#316ce4",
-          "leading_diamond": " \ue0b6",
-          "trailing_diamond": "\ue0b4",
-          "template": "\ufd31 {{.Context}}{{if .Namespace}} :: {{.Namespace}}{{end}}"
-        },
-        {
-          "type": "os",
-          "style": "diamond",
-          "foreground": "#222222",
-          "background": "#b2bec3",
-          "leading_diamond": " \ue0b6",
-          "template": " {{ if .WSL }}WSL at {{ end }}{{.Icon}}<#262626> \ue0b2</>",
-          "properties": {
-            "linux": "\ue27f",
-            "macos": "\ue27f",
-            "windows": "\ue27f"
-          }
-        },
-        {
-          "type": "battery",
-          "style": "diamond",
-          "invert_powerline": true,
-          "foreground": "#262626",
-          "background": "#f36943",
-          "background_templates": [
-            "{{if eq \"Charging\" .State.String}}#b8e994{{end}}",
-            "{{if eq \"Discharging\" .State.String}}#fff34e{{end}}",
-            "{{if eq \"Full\" .State.String}}#33DD2D{{end}}"
-          ],
-          "leading_diamond": "\ue0b2",
-          "template": " {{ if not .Error }}{{ .Icon }}{{ .Percentage }}{{ end }}{{ .Error }}\uf295 <#262626>\ue0b2</>",
-          "properties": {
-            "charged_icon": "\uf58e ",
-            "charging_icon": "\uf1e6 ",
-            "discharging_icon": "\ue234 "
           }
         }
       ]

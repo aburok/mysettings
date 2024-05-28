@@ -98,7 +98,7 @@ WinActivateOrOpen(winExe) {
 
 ; #Include <Hotkeys>
 
-; #Include <Jxon>
+#Include <_Jxon>
 ; #Include <JSON>
 
 ; #Include %A_ScriptDir%\Windows\Sound.ahk

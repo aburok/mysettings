@@ -59,18 +59,19 @@ GetCurrentDesktop() {
     return ix
 }
 
-NumpadMult:: {
-    ix := GetCurrentDesktop()
-    if (ix = 0) {
-        ; SendInput "#^{Right}"
-        ; msgbox("current desktop index " . ix )
-        SendInput "{LWinDown}{CtrlDown}{Right}{CtrlUp}{LWinUp}"
-    }
-    if (ix = 1) {
-        ; msgbox("current desktop index " . ix )
-        SendInput "{LWinDown}{CtrlDown}{Left}{CtrlUp}{LWinUp}"
-    }
-}
+; NumpadMult:: {
+;     ix := GetCurrentDesktop()
+;     if (ix = 0) {
+;         ; SendInput "#^{Right}"
+;         ; msgbox("current desktop index " . ix )
+;         SendInput "{LWinDown}{CtrlDown}{Right}{CtrlUp}{LWinUp}"
+;     }
+;     if (ix = 1) {
+;         ; msgbox("current desktop index " . ix )
+;         SendInput "{LWinDown}{CtrlDown}{Left}{CtrlUp}{LWinUp}"
+;     }
+; }
+NumpadMult:: SendInput "{Enter}"
 
 numpad9:: SendInput "{CtrlDown}{F5}{CtrlUp}"
 
@@ -140,21 +141,27 @@ class HelpMenu {
 
     Build() {
         this.Gui := Gui()
+        this.Gui.Opt("+LastFound +AlwaysOnTop +Resize")
+
         for item in this.Items {
-            this.Gui.Opt("+LastFound +AlwaysOnTop +Resize")
-            this.Gui.SetFont("w800")
-            this.Gui.Add("Text", "X10", item.ShortCut)
-            this.Gui.SetFont("w1")
-            this.Gui.Add("Text", "X+20", item.Description)
+            this.RenderItem(item)
         }
     }
 
-    Show() {
-        this.Gui.Show()
-        SetTimer(this.timer, 5000)
+    RenderItem(item) {
+        this.Gui.SetFont("w800")
+        this.Gui.Add("Text", "X10", item.ShortCut)
+        this.Gui.SetFont("w1")
+        this.Gui.Add("Text", "X+20", item.Description)
     }
 
-    Hide(){
+    Show(timeout := 5000) {
+        this.Build()
+        this.Gui.Show()
+        SetTimer(this.timer, timeout)
+    }
+
+    Hide() {
         this.Gui.Hide()
         SetTimer(this.timer, 0)
     }
@@ -376,6 +383,7 @@ numpad0:: MsgBox(_vsd, "VS Debug Help", "iconi T30")
 ; |__/ |__| |__| |__] |___ |___    |___ |__| |  | |  | |  | | \| |__/ |___ |  \
 
 #HotIf WinActive("ahk_exe doublecmd.exe")
+numpad1:: SendInput "{AltDown}{Left}{AltUp}"
 numpad4:: SendInput "{AltDown}{Right}{AltUp}"
 #HotIf
 

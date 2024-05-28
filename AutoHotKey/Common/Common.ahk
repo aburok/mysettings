@@ -86,3 +86,15 @@ Log(formatText, params){
     text:= CurrentDateTime . " - " . Format(formatText . "`n", params*)
     ; FileAppend(text , "C:\autohotkey.log")
 }
+
+
+getFirst(haystack, predicate) {
+    if(!isObject(haystack))
+        return 
+    if(haystack.Length==0)
+        return 
+    for k,v in haystack
+        if(predicate(v))
+            return v
+    return 
+}

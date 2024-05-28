@@ -160,9 +160,11 @@ nmap <C-k> <C-W>k
 nmap <C-l> <C-W>l
 
 nmap <leader>ws <Action>(SplitHorizontally)
+" map <A-S--> <Action>(SplitHorizontally)
 map <A-_> <Action>(SplitHorizontally)
 nmap <leader>wv <Action>(SplitVertically)
 map <A-+> <Action>(SplitVertically)
+" map <S-A-=> <Action>(SplitVertically)
 nmap <leader>wu <Action>(Unsplit)
 nmap <leader>wc <Action>(ChangeSplitOrientation)
 nmap <leader>wr <Action>(MoveTabRight)
