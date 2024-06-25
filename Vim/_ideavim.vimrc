@@ -55,7 +55,7 @@ nmap zx <Action>(CloseEditor)
 sethandler <C-B> i-v:vim
 " sethandler <C-C> i-v:vim
 sethandler <C-D> i-v:vim
-sethandler <C-F> n-v:vim
+" sethandler <C-F> n-v:vim
 sethandler <C-H> n-v:vim
 sethandler <C-i> a:vim
 sethandler <C-J> n-v:vim

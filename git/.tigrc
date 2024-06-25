@@ -58,6 +58,7 @@ bind main co        >git checkout %(branch)
 bind main cc        >git checkout %(branch)
 bind main cr        ?git checkout -B "%(branch)" "%(remote)/%(branch)"
 bind main cm        ?git checkout --merge -B "%(branch)" "%(remote)/%(branch)"
+bind main ch        ?git reset --hard "%(remote)/%(branch)"
 bind main M         ?git merge %(branch) --no-commit --no-ff
 bind main Pc        ?git cherry-pick -n %(commit)
 bind main PC        ?git cherry-pick %(commit)

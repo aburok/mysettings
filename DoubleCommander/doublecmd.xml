@@ -569,7 +569,7 @@
     <HotDir Name="calling-v1-system-tests" Path="C:\sinch\code\core-calling\calling-v1-system-&amp;tests"/>
     <HotDir Name="system-tests" Path="C:\sinch\config\system-tests"/>
     <HotDir Name="calling-v1-&amp;k8s-manifests" Path="C:\sinch\infra\calling-v1-k8s-manifests"/>
-    <HotDir Name="sinch-&amp;utils" Path="C:\sinch\varia\sinch-utils\"/>
+    <HotDir Name="sinch-&amp;utils" Path="C:\sinch\varia\sinch-utils"/>
   </DirectoryHotList>
   <Viewer>
     <PreviewVisible>False</PreviewVisible>
