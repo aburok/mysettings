@@ -15,11 +15,20 @@ nmap <leader>rc :source ~/.ideavimrc<CR>
 nmap \e :e C:/mysettings/Vim/_ideavim.vimrc<CR>
 nmap \r <Action>(IdeaVim.ReloadVimRc.reload)
 
+"""" PLUGINS
 " https://github.com/AlexPl292/IdeaVim-EasyMotion#setup
-Plugin 'easymotion/vim-easymotion'
-Plug 'https://github.com/easymotion/vim-easymotion'
-Plug 'vim-easymotion'
+" Plug 'easymotion/vim-easymotion'
+Plug 'preservim/nerdtree'
+
+" https://github.com/TheBlob42/idea-which-key?tab=readme-ov-file#installation
+set which-key
+let g:WhichKey_ShowVimActions = "true"
+let g:WhichKey_FontSize = 16
+g:WhichKey_CommandStyle = bold
+
+set peekaboo
 """ Plugins """
+
 set surround
 set multiple-cursors
 set commentary
@@ -29,8 +38,6 @@ set textobj-entire
 set ReplaceWithRegister
 set NERDTree
 set quickscope
-
-Plug 'easymotion/vim-easymotion'
 
 "  set sneak " <- szukanie przy uzyciu klawisza s i S - wylaczone bo używam S do zamiany lini
 set which-key
@@ -67,6 +74,7 @@ sethandler <C-Q> i-v:videvm
 sethandler <C-p> a:vim
 sethandler <C-t> n-v:vim
 sethandler <C-w> n-v:vim
+sethandler <C-A-F> a:vim
 sethandler <C-S-A> i-v:vim
 sethandler <C-S-d> a:vim
 sethandler <C-S-P> a:vim
@@ -82,6 +90,7 @@ sethandler <A-`> a:vim
 sethandler <A-S-1> a:vim
 sethandler <A-2> a:vim
 sethandler <A-S-2> a:vim
+sethandler <A-S-4> a:vim
 sethandler <A-3> a:vim
 sethandler <A-6> a:vim
 
@@ -125,7 +134,6 @@ nmap <leader>bt <Action>(XDebugger.MuteBreakpoints)
 
 nmap <leader>u <Action>(FindUsages)
 nmap gf <Action>(FindUsages) 
-nmap <leader>i <Action>(GotoImplementation)
 
 map <C-o> <Action>(Back)
 nmap H <Action>(Back)
@@ -177,6 +185,7 @@ vmap <leader>ss <Action>(SurroundWith)
 vmap <leader>sl <Action>(SurroundWithLiveTemplate)
 
 nmap <leader>oo <Action>(ReformatCode)
+vmap <leader>f <Action>(ReformatCode)
 map <C-A-F> <Action>(ReformatCode)
 
 """""""""""""""""
@@ -272,6 +281,7 @@ nmap <leader>p <Action>(PinActiveTabToggle)
 nmap <leader>rl <Action>(RecentLocations)
 
 nmap <leader>l <Action>(LocateInSolutionView)
+nmap <leader>1 <Action>(LocateInSolutionView)
 nmap <C-S-L> <Action>(LocateInSolutionView)
 
 nmap <leader>ee <Action>(ChooseRunConfiguration)
@@ -284,16 +294,16 @@ nmap <leader>0 <Action>(EditorResetFontSize)
 
 " nmap <leader>f <Plug>(easymotion-s)
 " nmap <leader>e <Plug>(easymotion-f)
-nmap <leader>j <Plug>(easymotion-W)
-nmap <leader>k <Plug>(easymotion-B)
+" nmap <leader>j <Plug>(easymotion-W)
+" nmap <leader>k <Plug>(easymotion-B)
 
-nmap <leader><leader>f{char}    <Plug>(easymotion-f) "  mapped to fn
-nmap <leader><leader>F{char}    <Plug>(easymotion-F) "  mapped to Fn
-nmap <leader><leader>t{char}    <Plug>(easymotion-t) "  mapped to tn
-nmap <leader><leader>T{char}    <Plug>(easymotion-T) "  mapped to Tn
+" nmap <leader><leader>f{char}    <Plug>(easymotion-f) "  mapped to fn
+" nmap <leader><leader>F{char}    <Plug>(easymotion-F) "  mapped to Fn
+" nmap <leader><leader>t{char}    <Plug>(easymotion-t) "  mapped to tn
+" nmap <leader><leader>T{char}    <Plug>(easymotion-T) "  mapped to Tn
 
-nmap <leader><leader>w <Plug>(easymotion-w) "
-nmap <leader><leader>W <Plug>(easymotion-W) "
+nmap <leader><leader>w <Plug>(easymotion-w) 
+nmap <leader><leader>W <Plug>(easymotion-W) 
 nmap <leader><leader>b <Plug>(easymotion-b) "
 nmap <leader><leader>B <Plug>(easymotion-B) "
 nmap <leader><leader>e <Plug>(easymotion-e) "

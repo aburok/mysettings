@@ -99,8 +99,9 @@ nnoremap <leader>ss :w!<cr>
 nnoremap <leader>sa :wall!<cr>
 
 " CTRL-A is Select all
-noremap <C-A> gggH<C-O>G
-inoremap <C-A> <C-O>gg<C-O>gH<C-O>G
+nnoremap <C-A> [{V%
+xnoremap <C-A> "_y[{V%
+" noremap <C-A> [{V%
 
 " Execute command recorded in register a by pressing `
 nnoremap ` @a
@@ -144,8 +145,12 @@ nnoremap <leader>yn :let @+ = expand("%:t")<CR>
 
 """"""""""""""""""""""""""""
 " FORMAT document
-nnoremap <C-A-f> gg=G<C-O><C-O>zz
+" nnoremap <C-A-f> gg=G<C-O><C-O>zz
 
 " FORMAT 
-nnoremap <C-A-f> gg=G''
+" nnoremap <C-A-f> gg=G''
 
+
+colorscheme desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40

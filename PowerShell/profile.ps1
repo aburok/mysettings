@@ -7,6 +7,8 @@ param([switch] $Force)
 
 oh-my-posh init pwsh --config 'C:/mysettings/PowerShell/.oh-my-posh.theme.omp.json' | Invoke-Expression
 
+# LazyGit configuration file
+$env:LG_CONFIG_FILE="C:/mysettings/git/lazygit.yml"
 
 if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
     Write-Verbose "Profile Already loaded."
@@ -14,6 +16,7 @@ if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
 }
 
 . C:\mysettings\PowerShell\variables.ps1
+. C:\mysettings\PowerShell\common.functions.ps1
 
 
 Function Import-Functions ($Path) {
@@ -88,6 +91,11 @@ Set-Alias zl "z -ListFiles"
 Set-Alias npp 'C:\Program Files\Notepad++\notepad++.exe'
 Set-Alias edit 'C:\Program Files\Notepad++\notepad++.exe'
 Set-Alias gitext "C:\Program Files\GitExtensions\GitExtensions.exe"
+Set-Alias whereis Get-Command
+
+Function get-access () {
+    Get-Acl | Format-Table -Wrap
+}
 
 Function Open-Gvim([string]$file) {
     . "C:\Program Files\Vim\vim90\gvim.exe" --remote-tab-silent $file 
@@ -103,4 +111,23 @@ Function Write_Header($text){
     Write-Host "--------------------------------------------------"
 }
 
-Set-Alias find "C:\Users\dawkor\AppData\Local\Programs\Git\usr\bin\find.exe"
+Set-Alias find "~\AppData\Local\Programs\Git\usr\bin\find.exe"
+
+function Start-ProcessIfStopped([string] $name, [string] $command){
+if(-not $(Get-Process -Name $name -ea SilentlyContinue)){
+#    $command = $command -replace ' ','` '
+    Invoke-Expression "$command"
+}
+}
+
+Start-ProcessIfStopped -name "AutoHotkey64" -command "C:/mysettings/AutoHotKey/AutoHotKey.ahk"
+Start-ProcessIfStopped -name "chrome" -command 'C:\Program` Files\Google\Chrome\Application\chrome.exe'
+Start-ProcessIfStopped -name "doublecmd" -command 'C:\Program` Files\Double` Commander\doublecmd.exe'
+Start-ProcessIfStopped -name "onenote" -command 'C:\Program` Files\Microsoft` Office\root\Office16\onenote.exe'
+
+function Refresh-Podman {
+    Write-Host "Stopping all containers in Podman"
+    podman stop --all | Out-Null
+    Write-Host "Removing all images from podman"
+    podman system prune --all --force && podman rmi --all | Out-Null
+}

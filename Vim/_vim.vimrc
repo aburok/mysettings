@@ -103,8 +103,13 @@ if filereadable("C:/mysettings/Vim/colors/gruvbox.vim")
 endif
 " NO NEED TO CALL :colorscheme gruvobx - Loading a file is enough
 " colorscheme gruvbox
+" colorscheme sol <CR>
 
 
 nnoremap <leader>dp :! dbuild && dtag && dpub <CR>
 
 nnoremap <leader>ka :! kubectl apply -f %<Tab> <CR>
+
+" colorscheme desert
+set cursorline
+hi CursorLine term=bold cterm=bold guibg=Grey40

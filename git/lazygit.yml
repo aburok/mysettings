@@ -1,0 +1,42 @@
+# os:
+  # editPreset: 'vim'
+gui:
+  nerdFontsVersion: "3"
+  splitDiff: always
+services:
+  'awsgitlab.tpondemand.net': 'gitlab:awsgitlab.tpondemand.net'
+git:
+  commitPrefix:
+    pattern: "^feature/(us|bug)(\\d+).*"
+    replace: 'feat: $1#$2 '
+  mainBranches:
+    - master
+    - main
+    - develop
+  branchPrefix: "feature/"
+# to skip without creating a new repo
+notARepository: 'skip'
+
+customCommands:
+  - key: 'n'
+    context: 'localBranches'
+    prompts:
+      - type: 'menu'
+        title: 'What kind of branch is it?'
+        key: 'BranchType'
+        options:
+          - name: 'User Story'
+            description: 'a feature branch'
+            value: 'feature/us'
+          - name: 'Bug'
+            description: 'a bugfix branch'
+            value: 'feature/fix'
+          - name: 'Release'
+            description: 'a release branch'
+            value: 'release'
+      - type: 'input'
+        title: 'What is the new branch name?'
+        key: 'BranchName'
+        initialValue: ''
+    command: "git checkout -b {{.Form.BranchType}}{{.Form.BranchName}}"
+    loadingText: 'Creating branch'
