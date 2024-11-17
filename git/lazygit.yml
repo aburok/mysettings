@@ -40,3 +40,8 @@ customCommands:
         initialValue: ''
     command: "git checkout -b {{.Form.BranchType}}{{.Form.BranchName}}"
     loadingText: 'Creating branch'
+  - key: "M"
+    command: "git mergetool {{ .SelectedFile.Name }}"
+    context: "files"
+    loadingText: "opening git mergetool"
+    subprocess: true
