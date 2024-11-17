@@ -3,29 +3,27 @@ winget install JanDeDobbeleer.OhMyPosh
 
 winget install autohotkey --confirm
 winget install microsoft-windows-terminal --confirm
-choco install onedrive --confirm
+@REM choco install onedrive --confirm
 winget install keepass --confirm
 winget install notepadplusplus --confirm
-choco install vim --confirm
+winget install vim --confirm
 winget install hluk.CopyQ --confirm
-choco install vscode --confirm
-choco install pwsh --confirm
-choco install onenote --confirm
-choco install git --confirm
-choco install gitextensions --confirm
-choco install tortoisegit --confirm
-choco install firefox --confirm
-choco install 7zip --confirm
+winget install -e --id Stretchly.Stretchly
+winget install vscode --confirm
+@REM choco install pwsh --confirm
+@REM choco install onenote --confirm
+winget install git --confirm
+@REM choco install gitextensions --confirm
+@REM choco install tortoisegit --confirm
+winget install firefox --confirm
+winget install 7zip --confirm
 
-choco install seq --confirm
-choco install mc --confirm
-choco install postman --confirm
+@REM choco install seq --confirm
+@REM choco install mc --confirm
+@REM choco install postman --confirm
 
 " tool to switch between opened applications"
-choco install switcheroo --confirm
+@REM choco install switcheroo --confirm
 
 " fuzzy search for windows powershell
-choco install fzf --confirm
-
-" App that remins about breaks from work"
-choco install stretchly --confirm
+winget install fzf --confirm
