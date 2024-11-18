@@ -1,3 +1,5 @@
+; Multiple criterias 
+; https://www.autohotkey.com/docs/v2/misc/WinTitle.htm#multi
 ;+!?::
 ;    ShowHelp()
 ;    Sleep 2000
@@ -10,9 +12,9 @@
 rootLevel := NavigationItem("d", "Test")
     .AddItem(AppMenuLevel("b", "Chrome", "#b", "ahk_exe chrome.exe"))
     .AddItem(AppMenuLevel("e", "Edge", "#b", "ahk_exe msedge.exe"))
-    .AddItem(AppMenuLevel("q", "Terminal", "<!+t", "ahk_exe WindowsTerminal.exe"))
+    .AddItem(AppMenuLevel("q", "Terminal", "<!``", "ahk_exe WindowsTerminal.exe"))
     ; .AddItem(AppMenuLevel("t", "Terminal", "<!+t", "^Administrator: PowerShell$"))
-    .AddItem(AppMenuLevel("r", "Rider", "<!+r", "ahk_exe rider64.exe"))
+    .AddItem(AppMenuLevel("r", "Rider", "<!+r", "Tp\.All ahk_exe rider64.exe"))
     ; .AddItem(AppMenuLevel( "x", "Double Commander" , "#f", "ahk_exe doublecmd.exe"))
     ;        .AddItem(AppMenuLevel( "f", "Firefox" , "#f", "ahk_exe firefox.exe"))
     .AddItem(AppMenuLevel("g", "Git \ Tig", "#+g", "ahk_exe GitExtensions.exe"))
@@ -21,6 +23,7 @@ rootLevel := NavigationItem("d", "Test")
     .AddItem(AppMenuLevel("a", "One Note", "<!^a", "ahk_exe ONENOTE.EXE"))
     .AddItem(AppMenuLevel("z", "Outlook", "#+o", "ahk_exe OUTLOOK.EXE"))
     ; .AddItem(AppMenuLevel( "v", "Visual Studio" , "#v", "ahk_exe devenv.exe"))
+    .AddItem(AppMenuLevel( "c", "Visual Studio Code tp" , "", "^tp ahk_exe Code.exe"))
     .AddItem(AppMenuLevel("s", "Slack", "<!^s", "ahk_exe slack.exe"))
     .AddItem(AppMenuLevel("w", "Double Commander", "<!^w", "^Double Commander"))
     ; .AddItem(AppMenuLevel("w", "VIM / GVIM", "#+m", "ahk_exe gvim.exe"))

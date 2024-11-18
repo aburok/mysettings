@@ -183,3 +183,7 @@ Loop 0xFF{
         ; MsgBox Found WinGetTitle("A")
     }
 }
+
+<!`::{
+    WinActivate("ahk_exe WindowsTerminal.exe")
+}

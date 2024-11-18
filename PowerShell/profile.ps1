@@ -76,6 +76,10 @@ if($global:poshSettings.lastDirectory `
     Set-Location $global:poshSettings.lastDirectory
 }
 
+function podman-pruneImages([int] $minutes = 60){
+    podman image prune -a --force --filter "until=$((Get-Date).AddMinutes(-1 * $minutes).ToString("s"))"
+}
+
 # Enable-PoshTooltips
 
 Write-Host "Dropbox profile loaded..."

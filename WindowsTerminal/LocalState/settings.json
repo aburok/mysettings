@@ -190,6 +190,7 @@
             "type": "remainingProfiles"
         }
     ],
+    "newTabPosition": "afterCurrentTab",
     "profiles": 
     {
         "defaults": 
@@ -232,13 +233,14 @@
                 "commandline": "pwsh",
                 "guid": "{0dc0fa0c-8488-41b3-b4a6-32acb64d67ed}",
                 "hidden": false,
-                "name": "Profile 12",
+                "name": "pwsh",
                 "startingDirectory": "/tp"
             }
         ]
     },
     "schemes": [],
     "startOnUserLogin": true,
+    "tabWidthMode": "titleLength",
     "themes": [],
-    "windowingBehavior": "useNew"
+    "windowingBehavior": "useAnyExisting"
 }
