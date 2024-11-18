@@ -27,3 +27,8 @@ winget install 7zip --confirm
 
 " fuzzy search for windows powershell
 winget install fzf --confirm
+
+
+@REM config
+@REM https://superuser.com/questions/1667853/how-to-change-the-location-of-settings-json-file-in-windows-terminal
+mklink /d %LocalAppData%\Packages\Microsoft.WindowsTerminal_8wekyb3d8bbwe\LocalState C:\mysettings\WindowsTerminal\LocalState

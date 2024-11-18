@@ -63,18 +63,18 @@ sethandler <C-B> i-v:vim
 " sethandler <C-C> i-v:vim
 sethandler <C-D> i-v:vim
 " sethandler <C-F> n-v:vim
-sethandler <C-H> n-v:vim
+sethandler <C-h> a:vim
 sethandler <C-i> a:vim
-sethandler <C-J> n-v:vim
-sethandler <C-K> n-v:vim
-sethandler <C-L> a:vim
+sethandler <C-j> a:vim
+sethandler <C-k> a:vim
+sethandler <C-l> a:vim
 sethandler <C-M> n-v:vim
 sethandler <C-o> a:vim
 sethandler <C-Q> i-v:videvm
 sethandler <C-p> a:vim
 sethandler <C-t> n-v:vim
 sethandler <C-w> n-v:vim
-sethandler <C-A-F> a:vim
+sethandler <C-A-f> a:vim
 sethandler <C-S-A> i-v:vim
 sethandler <C-S-d> a:vim
 sethandler <C-S-P> a:vim
@@ -140,8 +140,8 @@ nmap H <Action>(Back)
 map <C-i> <Action>(Forward)
 nmap L <Action>(Forward)
 
-map <C-S-j> <Action>(VcsShowNextChangeMarker)
-map <C-S-k> <Action>(VcsShowPrevChangeMarker)
+map <C-S-j> <Action>(MethodDown)
+map <C-S-k> <Action>(MethodUp)
 
 " EXPAND / COLLAPSE / FOLDING / UNFOLDING
 nmap zC <Action>(CollapseRegionRecursively)
@@ -186,7 +186,7 @@ vmap <leader>sl <Action>(SurroundWithLiveTemplate)
 
 nmap <leader>oo <Action>(ReformatCode)
 vmap <leader>f <Action>(ReformatCode)
-map <C-A-F> <Action>(ReformatCode)
+map <C-A-f> <Action>(ReformatCode)
 
 """""""""""""""""
 """ BOOKMARKS """
@@ -196,60 +196,6 @@ nmap mx <Action>(DeleteMnemonicFromBookmark)
 nmap '' <Action>(ShowBookmarks)
 nmap 'j <Action>(GotoNextBookmark)
 nmap 'k <Action>(GotoPreviousBookmark)
-
-" Q W E R T Y U I O P 
-nmap mq <Action>(ToggleBookmarkQ)
-nmap 'q <Action>(GotoBookmarkQ)
-nmap mw <Action>(ToggleBookmarkW)
-nmap 'w <Action>(GotoBookmarkW)
-nmap me <Action>(ToggleBookmarkE)
-nmap 'e <Action>(GotoBookmarkE)
-nmap mr <Action>(ToggleBookmarkR)
-nmap 'r <Action>(GotoBookmarkR)
-nmap mt <Action>(ToggleBookmarkT)
-nmap 't <Action>(GotoBookmarkT)
-nmap my <Action>(ToggleBookmarkY)
-nmap 'y <Action>(GotoBookmarkY)
-nmap mu <Action>(ToggleBookmarkU)
-nmap 'u <Action>(GotoBookmarkU)
-nmap mi <Action>(ToggleBookmarkI)
-nmap 'i <Action>(GotoBookmarkI)
-nmap mo <Action>(ToggleBookmarkO)
-nmap 'o <Action>(GotoBookmarkO)
-nmap mp <Action>(ToggleBookmarkP)
-nmap 'p <Action>(GotoBookmarkP)
-
-" A S D F G H J K
-nmap ma <Action>(ToggleBookmarkA)
-nmap 'a <Action>(GotoBookmarkA)
-nmap ms <Action>(ToggleBookmarkS)
-nmap 's <Action>(GotoBookmarkS)
-nmap md <Action>(ToggleBookmarkD)
-nmap 'd <Action>(GotoBookmarkD)
-nmap mf <Action>(ToggleBookmarkF)
-nmap 'f <Action>(GotoBookmarkF)
-nmap mg <Action>(ToggleBookmarkG)
-nmap 'g <Action>(GotoBookmarkG)
-nmap mh <Action>(ToggleBookmarkH)
-nmap 'h <Action>(GotoBookmarkH)
-nmap mj <Action>(ToggleBookmarkJ)
-nmap 'j <Action>(GotoBookmarkJ)
-nmap mk <Action>(ToggleBookmarkK)
-nmap 'k <Action>(GotoBookmarkK)
-nmap ml <Action>(ToggleBookmarkL)
-nmap 'l <Action>(GotoBookmarkL)
-
-" Z C V
-nmap mz <Action>(ToggleBookmarkZ)
-nmap 'z <Action>(GotoBookmarkZ)
-nmap mc <Action>(ToggleBookmarkC)
-nmap 'c <Action>(GotoBookmarkC)
-nmap mv <Action>(ToggleBookmarkV)
-nmap 'v <Action>(GotoBookmarkV)
-nmap mb <Action>(ToggleBookmarkB)
-nmap 'b <Action>(GotoBookmarkB)
-nmap mn <Action>(ToggleBookmarkN)
-nmap 'n <Action>(GoToBookmarkN)
 
 """ END : BOOKMARKS """
 """""""""""""""""""""""
@@ -266,9 +212,6 @@ nmap <C-/> <Action>(CommentByLineComment)
 nmap gl <Action>(GitLab.Open.In.Browser)
 " Tab navigation
 map <C-S-t> <Action>(ReopenClosedTab)
-
-map <C-j> <Action>(MethodDown)
-map <C-k> <Action>(MethodUp)
 
 map <C-A-j> <Action>(NextOccurence)
 map gn <Action>(NextOccurence)
