@@ -6,6 +6,16 @@
         {
             "command": 
             {
+                "action": "splitPane",
+                "split": "auto",
+                "splitMode": "duplicate"
+            },
+            "id": "User.splitPane.A6751878",
+            "keys": "alt+shift+d"
+        },
+        {
+            "command": 
+            {
                 "action": "newTab"
             },
             "id": "User.newTab.5DEADB41",
@@ -19,25 +29,6 @@
             },
             "id": "User.moveFocus.F747588A",
             "keys": "ctrl+j"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878",
-            "keys": "alt+shift+d"
-        },
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2",
-            "keys": "ctrl+c"
         },
         {
             "command": "unbound",
@@ -70,20 +61,33 @@
         {
             "command": 
             {
-                "action": "switchToTab",
-                "index": 3
+                "action": "copy",
+                "singleLine": false
             },
-            "id": "User.switchToTab.6CD791B",
-            "keys": "alt+4"
+            "id": "User.copy.644BA8F2",
+            "keys": "ctrl+c"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "direction": "forward"
+            },
+            "id": "User.moveTab.793E2350",
+            "keys": "ctrl+shift+l"
         },
         {
             "command": "paste",
             "id": "User.paste"
         },
         {
-            "command": "find",
-            "id": "User.find",
-            "keys": "ctrl+shift+f"
+            "command": 
+            {
+                "action": "switchToTab",
+                "index": 3
+            },
+            "id": "User.switchToTab.6CD791B",
+            "keys": "alt+4"
         },
         {
             "command": 
@@ -93,6 +97,11 @@
             },
             "id": "User.resizePane.2A0DA8E0",
             "keys": "ctrl+comma"
+        },
+        {
+            "command": "find",
+            "id": "User.find",
+            "keys": "ctrl+shift+f"
         },
         {
             "command": 
@@ -178,6 +187,15 @@
             },
             "id": "User.switchToTab.F747588A",
             "keys": "alt+5"
+        },
+        {
+            "command": 
+            {
+                "action": "moveTab",
+                "direction": "backward"
+            },
+            "id": "User.moveTab.EF07D31B",
+            "keys": "ctrl+shift+h"
         }
     ],
     "copyFormatting": "none",
@@ -202,7 +220,7 @@
             "font": 
             {
                 "face": "MesloLGS NF",
-                "size": 11
+                "size": 12
             },
             "intenseTextStyle": "bold",
             "opacity": 100,
@@ -215,6 +233,24 @@
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
                 "hidden": false,
                 "name": "Windows PowerShell"
+            },
+            {
+                "closeOnExit": "never",
+                "commandline": "wsl -u root -d Debian /root",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 12
+                },
+                "guid": "{78e390db-1bff-4533-9d7c-20f53d8bafa1}",
+                "historySize": 9001,
+                "name": "WSL",
+                "opacity": 75,
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "useAcrylic": true
             },
             {
                 "backgroundImageOpacity": 0.04,
@@ -235,6 +271,12 @@
                 "hidden": false,
                 "name": "pwsh",
                 "startingDirectory": "/tp"
+            },
+            {
+                "guid": "{58ad8b0c-3ef8-5f4d-bc6f-13e4c00f2530}",
+                "hidden": false,
+                "name": "Debian",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },

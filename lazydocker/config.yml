@@ -1,0 +1,8 @@
+gui:
+    returnImmediately: true
+    theme:
+        activeBorderColor:
+            - red
+            - bold
+logs:
+    timestamps: true

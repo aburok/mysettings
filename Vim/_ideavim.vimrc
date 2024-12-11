@@ -110,6 +110,8 @@ nmap ga <Action>(GotoImplementation)
 nmap gi <Action>(GotoImplementation)
 nmap ge <Action>(ReSharperGotoNextErrorInSolution)
 nmap gE <Action>(ReSharperGotoPrevErrorInSolution)
+nmap gh <Action>(GotoNextError)
+nmap gH <Action>(GotoPreviousError)
 nmap gs <Action>(FileStructurePopup)
 nmap gr <Action>(RecentLocations)
 
@@ -162,10 +164,10 @@ nmap <leader>ar <Action>(RefactoringMenu)
 nmap <C-e> <Action>(EditorSelectWord)
 
 " MOVE BETWEEN SPLITS
-nmap <C-h> <C-W>h
-nmap <C-j> <C-W>j
-nmap <C-k> <C-W>k
-nmap <C-l> <C-W>l
+map <C-h> <C-W>h
+map <C-j> <C-W>j
+map <C-k> <C-W>k
+map <C-l> <C-W>l
 
 nmap <leader>ws <Action>(SplitHorizontally)
 " map <A-S--> <Action>(SplitHorizontally)

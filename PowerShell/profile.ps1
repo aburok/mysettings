@@ -8,7 +8,7 @@ param([switch] $Force)
 oh-my-posh init pwsh --config 'C:/mysettings/PowerShell/.oh-my-posh.theme.omp.json' | Invoke-Expression
 
 # LazyGit configuration file
-$env:LG_CONFIG_FILE="C:/mysettings/git/lazygit.yml"
+# $env:LG_CONFIG_FILE="C:/mysettings/git/lazygit.yml"
 
 if ($global:DropboxProfileLoaded -eq 1 -and !$Force) {
     Write-Verbose "Profile Already loaded."

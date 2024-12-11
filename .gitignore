@@ -7,3 +7,6 @@ DoubleCommander/*
 !shortcuts.scf
 WindowsTerminal/LocalState/state.json
 WindowsTerminal/LocalState/elevated-state.json
+
+lazygit/*
+!lazygit/lazygit.yml

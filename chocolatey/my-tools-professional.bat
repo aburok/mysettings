@@ -43,3 +43,9 @@ choco install k9s --confirm
 
 @REM " tool to switch between opened applications"
 @REM choco install switcheroo
+
+rmdir /q /s %AppData%\lazydocker
+mklink /d %AppData%\lazydocker C:\mysettings\lazydocker
+
+rmdir /q /s %LocalAppData%\lazygit
+mklink /d %LocalAppData%\lazygit C:\mysettings\lazygit
